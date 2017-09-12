@@ -1,0 +1,2769 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="X-Csrf-Token" content="e0954433c2cad524c94a0eb65a910a59"/>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=0.01"/>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery-1.8.3.js"></script>
+    <script type="application/javascript">
+        window.standaloneContest = false;
+        function adjustViewport() {
+            var screenWidthPx = Math.min($(window).width(), window.screen.width);
+            var siteWidthPx = 1100; // min width of site
+            var ratio = Math.min(screenWidthPx / siteWidthPx, 1.0);
+            var viewport = "width=device-width, initial-scale=" + ratio;
+            $('#viewport').attr('content', viewport);
+            var style = $('<style>html * { max-height: 1000000px; }</style>');
+            $('html > head').append(style);
+        }
+
+        if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+            adjustViewport();
+        }
+    </script>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="profileName" content="c4">
+    <meta name="google-site-verification" content="OTd2dN5x4nS4OPknPI9JFg36fKxjqY0i1PSfFPv_J90"/>
+    <meta property="fb:admins" content="100001352546622" />
+    <meta property="og:image" content="http://st.codeforces.com/s/71216/images/codeforces-telegram-square.png" />
+    <link rel="image_src" href="http://st.codeforces.com/s/71216/images/codeforces-telegram-square.png" />
+    <meta property="og:title" content="Zlobober - Codeforces"/>
+    <meta property="og:description" content=""/>
+    
+    <meta property="og:site_name" content="Codeforces"/>
+    
+    
+    
+    
+    
+    <meta name="utc_offset" content="+03:00"/>
+    <meta name="verify-reformal" content="f56f99fd7e087fb6ccb48ef2" />
+    <title>Zlobober - Codeforces</title>
+        <meta name="description" content="Codeforces. Programming competitions and contests, programming community" />
+        <meta name="keywords" content="programming algorithm contest competition informatics olympiads c++ java graphs vkcup" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/font-awesome.min.css" type="text/css" charset="utf-8" />
+
+        <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Cuprum&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+
+    <link rel="shortcut icon" type="image/png" href="http://st.codeforces.com/s/71216/favicon.png">
+
+    <!--CombineResourcesFilter-->
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/prettify.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/clear.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/ttypography.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/problem-statement.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/second-level-menu.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/roundbox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/datatable.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/table-form.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/topic.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/jquery.jgrowl.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/facebox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/jquery.wysiwyg.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/jquery.autocomplete.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/codeforces.datepick.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/colorbox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/jquery.drafts.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/community.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/prettify/prettify.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/moment.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/pushstream.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.lavalamp.min.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.jgrowl.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.swipe.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/facebox.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.wysiwyg.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/controls/wysiwyg.colorpicker.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/controls/wysiwyg.table.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/controls/wysiwyg.image.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/controls/wysiwyg.link.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.autocomplete.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.datepick.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.ie6blocker.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.ba-bbq.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.drafts.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/sjcl.js"></script>
+    <script type="text/javascript" src="/scripts/e0a03286103f205dc07daf2bab9284ca/en/codeforces-options.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/codeforces.js?v=20160131"></script>
+    <!--/CombineResourcesFilter-->
+
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/markitup/skins/markitup/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/markitup/sets/markdown/style.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/markitup/jquery.markitup.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/markitup/sets/markdown/set.js"></script>
+
+    <!--[if IE]>
+    <style>
+        #sidebar {
+            padding-left: 1em;
+            margin: 1em 1em 1em 0;
+        }
+    </style>
+    <![endif]-->
+
+
+</head>
+<body><span style='display:none;' class='csrf-token' data-csrf='e0954433c2cad524c94a0eb65a910a59'>&nbsp;</span>
+
+<div class="button-up" style="display: none; opacity: 0.7; width: 50px; height:100%; position: fixed; left: 0; top: 0; cursor: pointer; text-align: center; line-height: 35px; color: #d3dbe4; font-weight: bold; font-size: 3.0rem;"><i class="icon-circle-arrow-up"></i></div>
+
+<!-- Codeforces JavaScripts. -->
+<script type="text/javascript">
+    var queryMobile = Codeforces.queryString.mobile;
+    if (queryMobile === "true" || queryMobile === "false") {
+        Codeforces.putToStorage("useMobile", queryMobile == "true");
+    } else {
+        var useMobile = Codeforces.getFromStorage("useMobile");
+        if (useMobile === true || useMobile === false) {
+            if (useMobile != false) {
+                Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", useMobile));
+            }
+        }
+    }
+</script>
+<script type="text/javascript">
+    if (window.parent.frames.length > 0) {
+        window.stop();
+    }
+</script>
+<script type="text/javascript">
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '554666954583323',
+            xfbml      : true,
+            version    : 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+    (function () {
+        jQuery.expr[':'].containsCI = function(elem, index, match) {
+            return !match || !match.length || match.length < 4 || !match[3] || (
+                    elem.textContent || elem.innerText || jQuery(elem).text() || ''
+            ).toLowerCase().indexOf(match[3].toLowerCase()) >= 0;
+        }
+    }(jQuery));
+
+    $.ajaxPrefilter(function(options, originalOptions, xhr) {
+        var csrf = Codeforces.getCsrfToken();
+
+        if (csrf) {
+            var data = originalOptions.data;
+            if (originalOptions.data !== undefined) {
+                if (Object.prototype.toString.call(originalOptions.data) === '[object String]') {
+                    data = $.deparam(originalOptions.data);
+                }
+            } else {
+                data = {};
+            }
+            options.data = $.param($.extend(data, { csrf_token: csrf }));
+        }
+    });
+
+    window.getCodeforcesServerTime = function(callback) {
+        $.post("/data/time", {}, callback, "json");
+    }
+
+    window.updateTypography = function () {
+        $("div.ttypography code").addClass("tt");
+        $("div.ttypography pre>code").addClass("prettyprint").removeClass("tt");
+        $("div.ttypography table").addClass("bordertable");
+        prettyPrint();
+    }
+
+    $.ajaxSetup({ scriptCharset: "utf-8" ,contentType: "application/x-www-form-urlencoded; charset=UTF-8", headers: {
+        'X-Csrf-Token': Codeforces.getCsrfToken()
+    }});
+
+    window.updateTypography();
+
+    Codeforces.signForms();
+
+    setTimeout(function() {
+        $(".second-level-menu-list").lavaLamp({
+            fx: "backout",
+            speed: 1000
+        });
+    }, 0);
+
+
+    Codeforces.countdown();
+    $("a[rel='photobox']").colorbox();
+
+
+    function showAnnouncements(json) {
+        //info("j=" + JSON.stringify(json));
+
+        if (json.t != "a") {
+            return;
+        }
+        // console.log("Got announcement from channel");
+        setTimeout(function() {
+            Codeforces.showAnnouncements(json.d, "en");
+        }, Math.random() * 500);
+    }
+    if (Codeforces.getParticipantChannel()) {
+        Codeforces.subscribe(Codeforces.getParticipantChannel(), function(json) {
+            showAnnouncements(json);
+        });
+    }
+
+    if (Codeforces.getContestChannel()) {
+        Codeforces.subscribe(Codeforces.getContestChannel(), function(json) {
+            showAnnouncements(json);
+        });
+    }
+
+    if (Codeforces.getGlobalChannel()) {
+        Codeforces.subscribe(Codeforces.getGlobalChannel(), function(json) {
+            showAnnouncements(json);
+        });
+    }
+
+    if (Codeforces.getUserChannel()) {
+        Codeforces.subscribe(Codeforces.getUserChannel(), function(json) {
+            showAnnouncements(json);
+        });
+    }
+
+    $(".clickable-title").click(function() {
+        Codeforces.alert($(this).attr("title"));
+    }).css("position", "relative").css("bottom", "3px");
+
+
+    Codeforces.reformatTimes();
+    Codeforces.initializePubSub();
+
+    Codeforces.setupSpoilers();
+    Codeforces.setupTutorials("/data/problemTutorial");
+        });
+    </script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-743380-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = (document.location.protocol == 'https:' ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<div id="body">
+        
+
+<div class="side-bell" style="visibility: hidden; display: none; opacity: 0.7; width: 40px; position: fixed; right: 0; top: 0; cursor: pointer; text-align: center; line-height: 35px; color: #d3dbe4; font-weight: bold; font-size: 1.5rem;">
+    <span class="icon-stack" style="width: 100%;">
+        <i class="icon-circle icon-stack-base"></i>
+        <i class="icon-bell-alt icon-light"></i>
+    </span>
+    <br/>
+    <span class="side-bell__count" style="position: relative; top: -10px;"></span>
+</div>
+
+
+<div id="header" style="position: relative;">
+    <div style="float:left;">
+            
+            <a href="/"><img src="http://st.codeforces.com/s/71216/images/codeforces-logo-with-telegram.png"/></a>
+    </div>
+    <div class="lang-chooser">
+        <div style="text-align: right;">
+            <a href="?locale=en"><img src="http://st.codeforces.com/s/71216/images/flags/24/gb.png" title="In English" alt="In English"/></a>
+            <a href="?locale=ru"><img src="http://st.codeforces.com/s/71216/images/flags/24/ru.png" title="По-русски" alt="По-русски"/></a>
+        </div>
+
+        <div >
+                        <a href="/enter?back=%2Fprofile%2FZlobober">Enter</a>
+                     | 
+                        <a href="/register">Register</a>
+                    
+        </div>
+
+
+
+    </div>
+    <br style="clear: both;"/>
+</div>
+        
+
+    <div class="roundbox menu-box" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+            <div class="roundbox-lb">&nbsp;</div>
+            <div class="roundbox-rb">&nbsp;</div>
+    <div class="menu-list-container">
+    <ul class="menu-list main-menu-list">
+                <li class=""><a href="/">Home</a></li>
+                <li class=""><a href="/contests">Contests</a></li>
+                <li class=""><a href="/gyms">Gym</a></li>
+                <li class=""><a href="/problemset">Problemset</a></li>
+                <li class=""><a href="/groups">Groups</a></li>
+                <li class=""><a href="/ratings">Rating</a></li>
+                <li class=""><a href="/api/help">API</a></li>
+                <li class=""><a href="/rcc2017">RCC <img class="icon" src="http://st.codeforces.com/images/icons/cup.png"/></a></li>
+                <li class=""><a href="/aimtech2017">AIM Tech Round <img class="icon" src="http://st.codeforces.com/images/icons/cup.png"/></a></li>
+                <li class=""><a href="/calendar">Calendar</a></li>
+    </ul>
+        <form method="post" action="/search"><input type='hidden' name='csrf_token' value='e0954433c2cad524c94a0eb65a910a59'/>
+            <input class="search" name="query" data-isPlaceholder="true" value=""/>
+        </form>
+    <br style="clear: both;"/>
+</div>
+
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input.search").focus(function () {
+                if ($(this).attr("data-isPlaceholder") === "true") {
+                    $(this).val("");
+                    $(this).removeAttr("data-isPlaceholder");
+                }
+            });
+        });
+    </script>
+            <br style="height: 3em; clear: both;"/>
+
+        <div style="position: relative;">
+                        <div id="sidebar">
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">&rarr; Pay attention
+            <div class="top-links">
+            </div>
+        </div>
+<div style="padding: 0.5em;">
+        <div style="text-align:center;border-bottom: 1px solid rgb(185, 185, 185);margin:0 -0.5em 0.5em -0.5em;padding: 0 1em 0.5em 1em;">
+            <span class='contest-state-phase'>Before contest</span><br/><a href="/contests/859">Codeforces Round #434</a><br/><span class='countdown' home='http://st.codeforces.com/s/71216' noRedirection='true' textBeforeRedirect=''><span title="94:54:42">4 days</span></span>
+        </div>
+        <div style="text-align:center;">
+            <div class="socials" style="text-align: left;">
+                <div style="margin-top: 0.85em;position: relative;">
+
+        <div id="fb-root"></div>
+        <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "http://connect.facebook.net/en_EN/all.js#appId=554666954583323&xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <div class="fb-like" data-href="http://codeforces.com/contests/859" data-send="false" data-width="256" data-show-faces="false" data-font="arial" data-ref='55516'></div>
+
+        </div>
+</div>
+
+        </div>
+</div>
+    </div>
+<div class="roundbox sidebox top-contributed" style="">
+<div class="roundbox-lt">&nbsp;</div>
+<div class="roundbox-rt">&nbsp;</div>
+<div class="caption titled">&rarr; Top rated
+<div class="top-links">
+</div>
+</div>
+<table class="rtable ">
+<tbody>
+<tr>
+<th class="left" style="width:2.25em;">#</th>
+<th class="">User</th>
+<th class="" style="width:5em;">Rating</th>
+</tr>
+<tr>
+<td class="left dark">1</td>
+<td class=" dark"><a href="/profile/tourist" title="Legendary grandmaster tourist" class="rated-user user-legendary"><span class="legendary-user-first-letter">t</span>ourist</a></td>
+<td class=" dark">3488</td>
+</tr>
+<tr>
+<td class="left ">2</td>
+<td class=""><a href="/profile/LHiC" title="Legendary grandmaster LHiC" class="rated-user user-legendary"><span class="legendary-user-first-letter">L</span>HiC</a></td>
+<td class="">3238</td>
+</tr>
+<tr>
+<td class="left dark">3</td>
+<td class=" dark"><a href="/profile/W4yneb0t" title="Legendary grandmaster W4yneb0t" class="rated-user user-legendary"><span class="legendary-user-first-letter">W</span>4yneb0t</a></td>
+<td class=" dark">3218</td>
+</tr>
+<tr>
+<td class="left ">4</td>
+<td class=""><a href="/profile/TakanashiRikka" title="Legendary grandmaster TakanashiRikka" class="rated-user user-legendary"><span class="legendary-user-first-letter">T</span>akanashiRikka</a></td>
+<td class="">3178</td>
+</tr>
+<tr>
+<td class="left dark">5</td>
+<td class=" dark"><a href="/profile/Um_nik" title="Legendary grandmaster Um_nik" class="rated-user user-legendary"><span class="legendary-user-first-letter">U</span>m_nik</a></td>
+<td class=" dark">3157</td>
+</tr>
+<tr>
+<td class="left ">6</td>
+<td class=""><a href="/profile/moejy0viiiiiv" title="Legendary grandmaster moejy0viiiiiv" class="rated-user user-legendary"><span class="legendary-user-first-letter">m</span>oejy0viiiiiv</a></td>
+<td class="">3146</td>
+</tr>
+<tr>
+<td class="left dark">7</td>
+<td class=" dark"><a href="/profile/izrak" title="Legendary grandmaster izrak" class="rated-user user-legendary"><span class="legendary-user-first-letter">i</span>zrak</a></td>
+<td class=" dark">3109</td>
+</tr>
+<tr>
+<td class="left ">8</td>
+<td class=""><a href="/profile/ershov.stanislav" title="Legendary grandmaster ershov.stanislav" class="rated-user user-legendary"><span class="legendary-user-first-letter">e</span>rshov.stanislav</a></td>
+<td class="">3105</td>
+</tr>
+<tr>
+<td class="left dark">9</td>
+<td class=" dark"><a href="/profile/I_love_Tanya_Romanova" title="Legendary grandmaster I_love_Tanya_Romanova" class="rated-user user-legendary"><span class="legendary-user-first-letter">I</span>_love_Tanya_Romanova</a></td>
+<td class=" dark">3063</td>
+</tr>
+<tr>
+<td class="left bottom">10</td>
+<td class="bottom"><a href="/profile/Petr" title="Legendary grandmaster Petr" class="rated-user user-legendary"><span class="legendary-user-first-letter">P</span>etr</a></td>
+<td class="bottom">3048</td>
+</tr>
+</tbody>
+</table>
+<div class="bottom-links">
+<table style="width:100%;">
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="/ratings/countries">Countries</a> |
+<a href="/ratings/cities">Cities</a> |
+<a href="/ratings/organizations">Organizations</a>
+</td>
+<td style="text-align:right;">
+<a href="/ratings">View all &rarr;</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div class="roundbox sidebox top-contributed" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">&rarr; Top contributors
+            <div class="top-links">
+            </div>
+        </div>
+        <table class="rtable ">
+            <tbody>
+                <tr>
+                            <th class="left" style="width:2.25em;">#</th>
+                            <th class="">User</th>
+                            <th class="" style="width:5em;">Contrib.</th>
+                </tr>
+                    <tr>
+                                <td class="left  dark">1</td>
+                                <td class=" dark"><a href="/profile/rng_58" title="International Grandmaster rng_58" class="rated-user user-red">rng_58</a></td>
+                                <td class=" dark">180</td>
+                    </tr>
+                    <tr>
+                                <td class="left ">2</td>
+                                <td class=""><a href="/profile/csacademy" title="Unrated, csacademy" class="rated-user user-black">csacademy</a></td>
+                                <td class="">171</td>
+                    </tr>
+                    <tr>
+                                <td class="left  dark">2</td>
+                                <td class=" dark"><a href="/profile/tourist" title="Legendary grandmaster tourist" class="rated-user user-legendary"><span class="legendary-user-first-letter">t</span>ourist</a></td>
+                                <td class=" dark">171</td>
+                    </tr>
+                    <tr>
+                                <td class="left ">4</td>
+                                <td class=""><a href="/profile/Petr" title="Legendary grandmaster Petr" class="rated-user user-legendary"><span class="legendary-user-first-letter">P</span>etr</a></td>
+                                <td class="">163</td>
+                    </tr>
+                    <tr>
+                                <td class="left  dark">5</td>
+                                <td class=" dark"><a href="/profile/Errichto" title="International Grandmaster Errichto" class="rated-user user-red">Errichto</a></td>
+                                <td class=" dark">160</td>
+                    </tr>
+                    <tr>
+                                <td class="left ">6</td>
+                                <td class=""><a href="/profile/Swistakk" title="International Grandmaster Swistakk" class="rated-user user-red">Swistakk</a></td>
+                                <td class="">158</td>
+                    </tr>
+                    <tr>
+                                <td class="left  dark">7</td>
+                                <td class=" dark"><a href="/profile/Zlobober" title="Legendary grandmaster Zlobober" class="rated-user user-legendary"><span class="legendary-user-first-letter">Z</span>lobober</a></td>
+                                <td class=" dark">152</td>
+                    </tr>
+                    <tr>
+                                <td class="left ">7</td>
+                                <td class=""><a href="/profile/matthew99" title="International Grandmaster matthew99" class="rated-user user-red">matthew99</a></td>
+                                <td class="">152</td>
+                    </tr>
+                    <tr>
+                                <td class="left  dark">9</td>
+                                <td class=" dark"><a href="/profile/zscoder" title="Grandmaster zscoder" class="rated-user user-red">zscoder</a></td>
+                                <td class=" dark">139</td>
+                    </tr>
+                    <tr>
+                                <td class="left bottom">10</td>
+                                <td class="bottom"><a href="/profile/Endagorion" title="International Grandmaster Endagorion" class="rated-user user-red">Endagorion</a></td>
+                                <td class="bottom">136</td>
+                    </tr>
+            </tbody>
+        </table>
+            <div class="bottom-links">
+                <table style="width:100%;">
+                    <tbody>
+                        <tr>
+                            <td style="text-align:left;">
+                            </td>
+                            <td style="text-align:right;">
+                                    <a href="/top-contributed">View all &rarr;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+        });
+    </script>
+
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">&rarr; Find user
+            <div class="top-links">
+            </div>
+        </div>
+        <form class="handleForm" method="post"><input type='hidden' name='csrf_token' value='e0954433c2cad524c94a0eb65a910a59'/>
+            <div style="padding:1em;text-align:right;">
+                <label style="padding-right:1em;">Handle:
+                    <input style="width:12em;" type="text" class="handleBox"/>
+                </label>
+            </div>
+            <div style="padding: 0 1em 1em 1em;text-align:right;">
+                <input style="height:1.65em;padding:0 0.75em;" type="submit" value="Find"/>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+    $(".handleBox").autocomplete("/data/handles", {
+        delay: 200,
+        width: 200,
+        selectFirst: false,
+        matchContains: true,
+        minChars: 3
+    });
+    $(".handleForm").attr("autocomplete", "off").submit(function () {
+        var link = "/profile/userHandle".replace(
+            "userHandle", $(this).find(".handleBox").val()
+        );
+        window.location = link;
+        return false;
+    });
+        });
+    </script>
+
+
+<div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">&rarr; Recent actions
+            <div class="top-links">
+            </div>
+        </div>
+        <div class="recent-actions">
+            <ul>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/chouti" title="Expert chouti" class="rated-user user-blue">chouti</a>        &rarr;
+        <a href="/blog/entry/54479">How to solve this problem BAEKJOON Online Judge 8452</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/jonathanirvings" title="Grandmaster jonathanirvings" class="rated-user user-red">jonathanirvings</a>        &rarr;
+        <a href="/blog/entry/53326">New screencast : AtCoder Regular Contest 078</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/AminAnvari" title="Expert AminAnvari" class="rated-user user-blue">AminAnvari</a>        &rarr;
+        <a href="/blog/entry/22616">Segment Tree Problems</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/I_love_Tanya_Romanova" title="Legendary grandmaster I_love_Tanya_Romanova" class="rated-user user-legendary"><span class="legendary-user-first-letter">I</span>_love_Tanya_Romanova</a>        &rarr;
+        <a href="/blog/entry/43226">Invitation to February Clash 2016 </a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/rng_58" title="International Grandmaster rng_58" class="rated-user user-red">rng_58</a>        &rarr;
+        <a href="/blog/entry/54455">TCO 2017 Finalists</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/RoyalWyvern" title="Specialist RoyalWyvern" class="rated-user user-cyan">RoyalWyvern</a>        &rarr;
+        <a href="/blog/entry/54486">Trouble</a>
+&nbsp;&nbsp;<img alt="Text created or updated" title="Text created or updated" src="http://st.codeforces.com/s/71216/images/icons/x-update-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/Rajan_sust" title="Pupil Rajan_sust" class="rated-user user-green">Rajan_sust</a>        &rarr;
+        <a href="/blog/entry/53839">Safest way for comparing double numbers.</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/UNBEATEN_CODER" title="Specialist UNBEATEN_CODER" class="rated-user user-cyan">UNBEATEN_CODER</a>        &rarr;
+        <a href="/blog/entry/54481">SPOJ : FREEQUENT</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/wittyskull" title="Candidate Master wittyskull" class="rated-user user-violet">wittyskull</a>        &rarr;
+        <a href="/blog/entry/53999">Invitation to Insomnia 2017 Qualifier (3 hour Team programming contest)</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/RussianCodeCup" title="Unrated, RussianCodeCup" class="rated-user user-black">RussianCodeCup</a>        &rarr;
+        <a href="/blog/entry/54425">RCC 2017 — Finals + CF Round</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/anveshi" title="Expert anveshi" class="rated-user user-blue">anveshi</a>        &rarr;
+        <a href="/blog/entry/53789">Google Code Jam World Finals 2017</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/aaman_rahman" title="Newbie aaman_rahman" class="rated-user user-gray">aaman_rahman</a>        &rarr;
+        <a href="/blog/entry/54483">Merge/Quick Sort or STL sort which is better?</a>
+&nbsp;&nbsp;<img alt="Text created or updated" title="Text created or updated" src="http://st.codeforces.com/s/71216/images/icons/x-update-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/Ahmed" title="Candidate Master Ahmed" class="rated-user user-violet">Ahmed</a>        &rarr;
+        <a href="/blog/entry/54436">My graduation project: Badminton Playing Robot</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/RussianCodeCup" title="Unrated, RussianCodeCup" class="rated-user user-black">RussianCodeCup</a>        &rarr;
+        <a href="/blog/entry/54452">Russian Code Cup 2017 Finals — Results and Editorial</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/csacademy" title="Unrated, csacademy" class="rated-user user-black">csacademy</a>        &rarr;
+        <a href="/blog/entry/54482">Round #48 (Div. 2)</a>
+&nbsp;&nbsp;<img alt="Text created or updated" title="Text created or updated" src="http://st.codeforces.com/s/71216/images/icons/x-update-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/SirirNicheBirirDokan" title="Expert SirirNicheBirirDokan" class="rated-user user-blue">SirirNicheBirirDokan</a>        &rarr;
+        <a href="/blog/entry/54471">Why does this solution work?</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/vamaddur" title="Specialist vamaddur" class="rated-user user-cyan">vamaddur</a>        &rarr;
+        <a href="/blog/entry/54311">USACO Airplane Boarding Problem: Sol Using Segment Tree?</a>
+&nbsp;&nbsp;<img alt="Text created or updated" title="Text created or updated" src="http://st.codeforces.com/s/71216/images/icons/x-update-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/tvirussust" title="Pupil tvirussust" class="rated-user user-green">tvirussust</a>        &rarr;
+        <a href="/blog/entry/54472">find all divisors 1 to 10^18 </a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/Endagorion" title="International Grandmaster Endagorion" class="rated-user user-red">Endagorion</a>        &rarr;
+        <a href="/blog/entry/54476">ATSP constant approximation: great job, dj3500!</a>
+&nbsp;&nbsp;<img alt="Text created or updated" title="Text created or updated" src="http://st.codeforces.com/s/71216/images/icons/x-update-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/square1001" title="Candidate Master square1001" class="rated-user user-violet">square1001</a>        &rarr;
+        <a href="/blog/entry/54442">TCO Wildcard Round / Fun SRM / They collides with RCC online mirror</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/red_coder" title="Expert red_coder" class="rated-user user-blue">red_coder</a>        &rarr;
+        <a href="/blog/entry/7867">Number Theory</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/Vasiljko" title="Specialist Vasiljko" class="rated-user user-cyan">Vasiljko</a>        &rarr;
+        <a href="/blog/entry/52273">Maximum number of divisors</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/hloya_ygrt" title="International master hloya_ygrt" class="rated-user user-orange">hloya_ygrt</a>        &rarr;
+        <a href="/blog/entry/52031">Codeforces Round #415</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/BledDest" title="Candidate Master BledDest" class="rated-user user-violet">BledDest</a>        &rarr;
+        <a href="/blog/entry/52383">Educational Codeforces Round 22</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+                        <li><div style="font-size:0.9em;padding:0.5em 0;">
+<a href="/profile/x3n" title="Candidate Master x3n" class="rated-user user-violet">x3n</a>        &rarr;
+        <a href="/blog/entry/53525">Codeforces Round #426 announcement</a>
+&nbsp;&nbsp;<img alt="New comment(s)" title="New comment(s)" src="http://st.codeforces.com/s/71216/images/icons/comment-12x12.png" style="vertical-align:middle;"/>
+</div>
+</li>
+            </ul>
+        </div>
+            <div class="bottom-links">
+                <table style="width:100%;">
+                    <tbody>
+                        <tr>
+                            <td style="text-align:left;">
+                            </td>
+                            <td style="text-align:right;">
+                                    <a href="/recent-actions">Detailed &rarr;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div></div>
+                        <div id="pageContent" class="content-with-sidebar">
+                    <div class="second-level-menu">
+<ul class="second-level-menu-list">
+        <li><a
+                                        href="/profile/Zlobober">Zlobober</a></li>
+        <li><a
+                                        href="/blog/Zlobober">Blog</a></li>
+        <li><a
+                                        href="/teams/with/Zlobober">Teams</a></li>
+        <li><a
+                                        href="/submissions/Zlobober">Submissions</a></li>
+        <li><a
+                                        href="/groups/with/Zlobober">Groups</a></li>
+        <li><a
+                                        href="/contests/with/Zlobober">Contests</a></li>
+        <li><a
+                                        href="/contests/writer/Zlobober">Problemsetting</a></li>
+</ul>
+</div>
+
+<style>
+    .userbox {
+        overflow: hidden;
+    }
+    .userbox .info {
+        margin-right: 375px;
+        /*padding-top: 1em;*/
+        min-height: 20em;
+    }
+    .userbox .info li {
+        margin: 0.5em 0 1em 0;
+    }
+    .userbox input {
+        color: black;
+        height: 2em;
+        line-height: 1.5em;
+        font-size: 0.75em;
+        margin: 0.5em 0.5em 0.5em 0;
+    }
+
+    .userbox .main-info {
+        margin-bottom: 1em;
+    }
+
+    .userbox h1 {
+        font-size: 2.5rem;
+    }
+
+    .userbox .user-rank {
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    .userbox .friendStar {
+        position: relative;
+        top: 4px !important;
+    }
+</style>
+
+
+    <div class="roundbox " style="padding:1em 1em 0 1em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+            <div class="roundbox-lb">&nbsp;</div>
+            <div class="roundbox-rb">&nbsp;</div>
+    <div class="userbox">
+
+<style>
+    .title-photo input.upload-photo {
+        color: black;
+        height: 2em;
+        line-height: 1.5em;
+        font-size: 0.75em;
+        margin: 0.5em 0.5em 0.5em 0;
+    }
+    .title-photo .badge {
+        position: absolute;
+        right: 24px;
+        bottom: -26px;
+    }
+</style>
+
+<div class="title-photo">
+    <div style="float:right;border:1px solid #B9B9B9;width:300px;min-height:150px;padding:12.5px;position: relative;margin-bottom: 2em;">
+    <div>
+        <div style="min-height:200px;line-height:200px;text-align:center;">
+<img style="margin:auto;vertical-align:middle;display:inline;"src='http://userpic.codeforces.com/4808/title/a97f7db00ff70657.jpg'/>        </div>
+    </div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+    function showChangeTitlePhotoForm() {
+        $("#change-title-photo").hide();
+        $(".change-title-photo-form").slideDown();
+    }
+
+    $("input.upload-photo").click(function () {
+        return confirm("Image can't contain offensive, rough or uncultured things. Also it can't contain anyone photo except you.\n\nDo you confirm that the image meets these criteria?");
+    });
+
+    $("#change-title-photo").click(function () {
+        showChangeTitlePhotoForm();
+    });
+
+        });
+    </script>
+        <div class="info" style="position: relative;">
+            <div class="main-info">
+                <div class="user-rank">
+                    <span class="user-legendary">Legendary grandmaster </span>
+                </div>
+                <h1>
+<a href="/profile/Zlobober" title="Legendary grandmaster Zlobober" class="rated-user user-legendary"><span class="legendary-user-first-letter">Z</span>lobober</a>                </h1>
+
+            <div style="margin-top: 0.5em;">
+                <div style="font-size: 0.8em; color: #777;">Max Akhmedov, <a href="/ratings/country/Russia/city/Moscow">Moscow</a>, <a href="/ratings/country/Russia">Russia</a></div>
+                <div style="font-size: 0.8em; color: #777;">From <a href="/ratings/organization/39">Moscow State University</a></div>
+            </div>
+            </div>
+            <ul>
+                    <li>
+                            <img
+                                style="vertical-align:middle;margin-right:0.5em;"
+                                src="http://st.codeforces.com/s/71216/images/icons/rating-24x24.png" alt="User''s contest rating in Codeforces community"
+                                title="User''s contest rating in Codeforces community"/>
+                        
+                            Contest rating:
+
+                        <span style="font-weight:bold;" class="user-legendary">2996</span> <span class="smaller"> (max. <span style="font-weight:bold;" class="user-legendary">legendary grandmaster, </span> <span style="font-weight:bold;" class="user-legendary">3026</span>)</span>                    </li>
+                    <li>
+                            <img
+                                style="vertical-align:middle;margin-right:0.5em;"
+                                src="http://st.codeforces.com/s/71216/images/icons/star_blue_24.png" alt="User''s contribution into Codeforces community"
+                                title="User''s contribution into Codeforces community"/>
+                        
+                            Contribution:
+
+                        <span style="color:green;font-weight:bold;">+152</span>                    </li>
+                    <li>
+                            <img
+                                style="vertical-align:middle;margin-right:0.5em;"
+                                src="http://st.codeforces.com/s/71216/images/icons/star_yellow_24.png" />
+                        
+
+                        Friend of: 1,053 users                    </li>
+                    <li>
+                        
+                            Last visit:
+
+                        <span class="format-humantime" title="Sep/12/2017 20:11">89 minutes ago</span>                    </li>
+                    <li>
+                        
+                            Registered:
+
+                        <span class="format-humantime" title="Jul/07/2010 19:51">7 years ago</span>                    </li>
+                    <li>
+                            <a href="/blog/Zlobober"><img
+                                style="vertical-align:middle;margin-right:0.5em;"
+                                src="http://st.codeforces.com/s/71216/images/icons/blog.png" alt="Zlobober's blog"
+                                title="Zlobober's blog"/></a>
+                        
+
+                        <a href="/blog/Zlobober">Blog entries (70)</a>,
+                                    <a href="/comments/with/Zlobober">comments</a>
+                    </li>
+                    <li>
+                            <a href="/usertalk/with/Zlobober"><img
+                                style="vertical-align:middle;margin-right:0.5em;"
+                                src="http://st.codeforces.com/s/71216/images/actions/mail_generic.png" alt="Your talks with Zlobober"
+                                title="Your talks with Zlobober"/></a>
+                        
+
+                        <a href="/usertalk/with/Zlobober">Talks</a> |
+                                    <a href="/usertalk?other=Zlobober">Send message</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+    function updateFriendClickListeners() {
+        $("img.removeFriend").click(function () {
+            //alert("remove");
+            var img = $(this);
+            var friendUserId = img.attr("friendUserId");
+
+            $.post("/data/friend", {friendUserId: friendUserId, isAdd: "false"});
+            
+            var newImg = img.clone().removeClass("removeFriend").addClass("addFriend");
+            newImg.attr("src", "http://st.codeforces.com/s/71216/images/icons/star_gray_24.png");
+            newImg.attr("title", "Click to add to friends");
+
+            img.css("display", "none");
+            img.after(newImg);
+
+            updateFriendClickListeners();
+        });
+
+        $("img.addFriend").click(function () {
+            //alert("add");
+            var img = $(this);
+            var friendUserId = img.attr("friendUserId");
+
+            $.post("/data/friend", {friendUserId: friendUserId, isAdd: "true"});
+
+            var newImg = img.clone().removeClass("addFriend").addClass("removeFriend");
+            newImg.attr("src", "http://st.codeforces.com/s/71216/images/icons/star_yellow_24.png");
+            newImg.attr("title", "Click to remove from friends");
+
+            img.css("display", "none");
+            img.after(newImg);
+
+            updateFriendClickListeners();
+        });
+    }
+
+    updateFriendClickListeners();
+        });
+    </script>
+
+
+    </div>
+
+
+    
+<!--[if IE]><script type="text/javascript" src="http://st.codeforces.com/s/71216/js/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.flot.min.js"></script>
+
+    <div class="roundbox " style="padding:1em 1em 0 1em;margin-top:1em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+            <div class="roundbox-lb">&nbsp;</div>
+            <div class="roundbox-rb">&nbsp;</div>
+<div id="placeholder" style="width:100%;height:300px;"></div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+var data = new Array();
+
+    data.push([
+        [
+             1288440000000,
+             1715,
+             38,
+             "School Personal Contest #1 (Winter Computer School 2010/11)&lt;br/&gt;-&lt;br/&gt;Codeforces Beta Round #38 (ACM-ICPC Rules)",
+             "Школьная индивидуальная олимпиада #1 (ЗКШ 2010/11)&lt;br/&gt;-&lt;br&gt;Codeforces Beta Round #38 (ACM-ICPC Rules)",
+             215,
+             0,
+            "/contest/38/standings/participant/41467#p41467",
+            "expert",
+            "expert",
+            "15115",
+            "School Personal Contest #1 (Winter Computer School 2010/11)<br/>-<br/>Codeforces Beta Round #38 (ACM-ICPC Rules)"
+        ]
+        ,
+        [
+             1291536000000,
+             1806,
+             46,
+             "School Personal Contest #2 (Winter Computer School 2010/11)&lt;br&gt;-&lt;br&gt;Codeforces Beta Round #43 (ACM-ICPC Rules)",
+             "Школьная индивидуальная олимпиада #2 (ЗКШ 2010/11)&lt;br&gt;-&lt;br&gt;Codeforces Beta Round #43 (ACM-ICPC Rules)",
+             91,
+             105,
+            "/contest/46/standings/participant/49697#p49697",
+            "expert",
+            "expert",
+            "18027",
+            "School Personal Contest #2 (Winter Computer School 2010/11)<br>-<br>Codeforces Beta Round #43 (ACM-ICPC Rules)"
+        ]
+        ,
+        [
+             1292140800000,
+             1745,
+             48,
+             "School Personal Contest #3 (Winter Computer School 2010/11)&lt;br&gt;-&lt;br&gt;Codeforces Beta Round #45 (ACM-ICPC Rules)",
+             "Школьная индивидуальная олимпиада #3 (ЗКШ 2010/11)&lt;br&gt;-&lt;br&gt;Codeforces Beta Round #45 (ACM-ICPC Rules)",
+             -61,
+             127,
+            "/contest/48/standings/participant/51831#p51831",
+            "expert",
+            "expert",
+            "19071",
+            "School Personal Contest #3 (Winter Computer School 2010/11)<br>-<br>Codeforces Beta Round #45 (ACM-ICPC Rules)"
+        ]
+        ,
+        [
+             1293552000000,
+             1724,
+             51,
+             "Codeforces Beta Round #48",
+             "Codeforces Beta Round #48",
+             -21,
+             177,
+            "/contest/51/standings/participant/56390#p56390",
+            "expert",
+            "expert",
+            "20565",
+            "Codeforces Beta Round #48"
+        ]
+        ,
+        [
+             1295971200000,
+             1925,
+             57,
+             "Codeforces Beta Round #53",
+             "Codeforces Beta Round #53",
+             201,
+             27,
+            "/contest/57/standings/participant/67361#p67361",
+            "candidate master",
+            "candidate master",
+            "24172",
+            "Codeforces Beta Round #53"
+        ]
+        ,
+        [
+             1298131200000,
+             1802,
+             60,
+             "Codeforces Beta Round #56",
+             "Codeforces Beta Round #56",
+             -123,
+             273,
+            "/contest/60/standings/participant/77560#p77560",
+            "expert",
+            "expert",
+            "26689",
+            "Codeforces Beta Round #56"
+        ]
+        ,
+        [
+             1300033800000,
+             1919,
+             67,
+             "Manthan 2011",
+             "Manthan 2011",
+             117,
+             41,
+            "/contest/67/standings/participant/93556#p93556",
+            "candidate master",
+            "candidate master",
+            "29798",
+            "Manthan 2011"
+        ]
+        ,
+        [
+             1300464000000,
+             1854,
+             68,
+             "Codeforces Beta Round #62",
+             "Codeforces Beta Round #62",
+             -65,
+             177,
+            "/contest/68/standings/participant/97522#p97522",
+            "expert",
+            "expert",
+            "32315",
+            "Codeforces Beta Round #62"
+        ]
+        ,
+        [
+             1301155200000,
+             1969,
+             70,
+             "Codeforces Beta Round #64",
+             "Codeforces Beta Round #64",
+             115,
+             77,
+            "/contest/70/standings/participant/104124#p104124",
+            "candidate master",
+            "candidate master",
+            "36447",
+            "Codeforces Beta Round #64"
+        ]
+        ,
+        [
+             1302422400000,
+             1954,
+             73,
+             "Codeforces Beta Round #66",
+             "Codeforces Beta Round #66",
+             -15,
+             106,
+            "/contest/73/standings/participant/111034#p111034",
+            "candidate master",
+            "candidate master",
+            "39293",
+            "Codeforces Beta Round #66"
+        ]
+        ,
+        [
+             1304694000000,
+             2039,
+             82,
+             "Yandex.Algorithm 2011&lt;br&gt;Qualification 2",
+             "Яндекс.Алгоритм 2011&lt;br&gt;Квалификация 2",
+             85,
+             119,
+            "/contest/82/standings/participant/132914#p132914",
+            "candidate master",
+            "candidate master",
+            "44960",
+            "Yandex.Algorithm 2011<br>Qualification 2"
+        ]
+        ,
+        [
+             1305299400000,
+             2031,
+             83,
+             "Codeforces Beta Round #72 (Div. 1 Only)",
+             "Codeforces Beta Round #72 (Div. 1 Only)",
+             -8,
+             104,
+            "/contest/83/standings/participant/136947#p136947",
+            "candidate master",
+            "candidate master",
+            "47412",
+            "Codeforces Beta Round #72 (Div. 1 Only)"
+        ]
+        ,
+        [
+             1305903600000,
+             1958,
+             85,
+             "Yandex.Algorithm 2011&lt;br&gt;Round 1",
+             "Яндекс.Алгоритм 2011&lt;br&gt;Раунд 1",
+             -73,
+             280,
+            "/contest/85/standings/participant/141152#p141152",
+            "candidate master",
+            "candidate master",
+            "48879",
+            "Yandex.Algorithm 2011<br>Round 1"
+        ]
+        ,
+        [
+             1308236400000,
+             1925,
+             89,
+             "Codeforces Beta Round #74 (Div. 1 Only)",
+             "Codeforces Beta Round #74 (Div. 1 Only)",
+             -33,
+             150,
+            "/contest/89/standings/participant/151664#p151664",
+            "candidate master",
+            "candidate master",
+            "51965",
+            "Codeforces Beta Round #74 (Div. 1 Only)"
+        ]
+        ,
+        [
+             1312390800000,
+             1991,
+             101,
+             "Codeforces Beta Round #79 (Div. 1 Only)",
+             "Codeforces Beta Round #79 (Div. 1 Only)",
+             66,
+             53,
+            "/contest/101/standings/participant/183391#p183391",
+            "candidate master",
+            "candidate master",
+            "56565",
+            "Codeforces Beta Round #79 (Div. 1 Only)"
+        ]
+        ,
+        [
+             1312714800000,
+             1968,
+             103,
+             "Codeforces Beta Round #80 (Div. 1 Only)",
+             "Codeforces Beta Round #80 (Div. 1 Only)",
+             -23,
+             104,
+            "/contest/103/standings/participant/187374#p187374",
+            "candidate master",
+            "candidate master",
+            "57543",
+            "Codeforces Beta Round #80 (Div. 1 Only)"
+        ]
+        ,
+        [
+             1313247600000,
+             2049,
+             105,
+             "Codeforces Beta Round #81",
+             "Codeforces Beta Round #81",
+             81,
+             53,
+            "/contest/105/standings/participant/192677#p192677",
+            "candidate master",
+            "candidate master",
+            "58971",
+            "Codeforces Beta Round #81"
+        ]
+        ,
+        [
+             1314111600000,
+             2095,
+             107,
+             "Codeforces Beta Round #83 (Div. 1 Only)",
+             "Codeforces Beta Round #83 (Div. 1 Only)",
+             46,
+             58,
+            "/contest/107/standings/participant/200373#p200373",
+            "candidate master",
+            "candidate master",
+            "60869",
+            "Codeforces Beta Round #83 (Div. 1 Only)"
+        ]
+        ,
+        [
+             1314633600000,
+             2089,
+             109,
+             "Codeforces Beta Round #84 (Div. 1 Only)",
+             "Codeforces Beta Round #84 (Div. 1 Only)",
+             -6,
+             108,
+            "/contest/109/standings/participant/205336#p205336",
+            "candidate master",
+            "candidate master",
+            "63036",
+            "Codeforces Beta Round #84 (Div. 1 Only)"
+        ]
+        ,
+        [
+             1315051200000,
+             2185,
+             111,
+             "Codeforces Beta Round #85 (Div. 1 Only)",
+             "Codeforces Beta Round #85 (Div. 1 Only)",
+             96,
+             20,
+            "/contest/111/standings/participant/210016#p210016",
+            "candidate master",
+            "candidate master",
+            "63350",
+            "Codeforces Beta Round #85 (Div. 1 Only)"
+        ]
+        ,
+        [
+             1324728000000,
+             2277,
+             138,
+             "Codeforces Beta Round #99 (Div. 1)",
+             "Codeforces Beta Round #99 (Div. 1)",
+             92,
+             12,
+            "/contest/138/standings/participant/324909#p324909",
+            "master",
+            "master",
+            "81886",
+            "Codeforces Beta Round #99 (Div. 1)"
+        ]
+        ,
+        [
+             1326380700000,
+             2254,
+             142,
+             "Codeforces Round #102 (Div. 1)",
+             "Codeforces Round #102 (Div. 1)",
+             -23,
+             83,
+            "/contest/142/standings/participant/346818#p346818",
+            "master",
+            "master",
+            "86583",
+            "Codeforces Round #102 (Div. 1)"
+        ]
+        ,
+        [
+             1327215600000,
+             2167,
+             145,
+             "Codeforces Round #104 (Div. 1)",
+             "Codeforces Round #104 (Div. 1)",
+             -87,
+             211,
+            "/contest/145/standings/participant/363225#p363225",
+            "candidate master",
+            "candidate master",
+            "91110",
+            "Codeforces Round #104 (Div. 1)"
+        ]
+        ,
+        [
+             1329490800000,
+             2279,
+             150,
+             "Codeforces Round #107 (Div. 1)",
+             "Codeforces Round #107 (Div. 1)",
+             112,
+             12,
+            "/contest/150/standings/participant/390374#p390374",
+            "master",
+            "master",
+            "96256",
+            "Codeforces Round #107 (Div. 1)"
+        ]
+        ,
+        [
+             1330536600000,
+             2352,
+             156,
+             "Codeforces Round #110 (Div. 1)",
+             "Codeforces Round #110 (Div. 1)",
+             73,
+             18,
+            "/contest/156/standings/participant/411855#p411855",
+            "international master",
+            "international master",
+            "99744",
+            "Codeforces Round #110 (Div. 1)"
+        ]
+        ,
+        [
+             1331478300000,
+             2297,
+             161,
+             "VK Cup 2012 Round 1",
+             "VK Cup 2012 Раунд 1",
+             -55,
+             126,
+            "/contest/161/standings/participant/440763#p440763",
+            "master",
+            "master",
+            "102849",
+            "VK Cup 2012 Round 1"
+        ]
+        ,
+        [
+             1332687900000,
+             2180,
+             163,
+             "VK Cup 2012 Round 2",
+             "VK Cup 2012 Раунд 2",
+             -117,
+             559,
+            "/contest/163/standings/participant/465467#p465467",
+            "candidate master",
+            "candidate master",
+            "108484",
+            "VK Cup 2012 Round 2"
+        ]
+        ,
+        [
+             1333724400000,
+             2233,
+             173,
+             "Croc Champ 2012 - Round 1",
+             "Чемпионат КРОК 2012 - Раунд 1",
+             53,
+             47,
+            "/contest/173/standings/participant/489118#p489118",
+            "master",
+            "master",
+            "110371",
+            "Croc Champ 2012 - Round 1"
+        ]
+        ,
+        [
+             1338132600000,
+             2188,
+             191,
+             "Codeforces Round #121 (Div. 1)",
+             "Codeforces Round #121 (Div. 1)",
+             -45,
+             74,
+            "/contest/191/standings/participant/552176#p552176",
+            "candidate master",
+            "candidate master",
+            "120012",
+            "Codeforces Round #121 (Div. 1)"
+        ]
+        ,
+        [
+             1338737400000,
+             2230,
+             193,
+             "Codeforces Round #122 (Div. 1)",
+             "Codeforces Round #122 (Div. 1)",
+             42,
+             32,
+            "/contest/193/standings/participant/562712#p562712",
+            "master",
+            "master",
+            "120274",
+            "Codeforces Round #122 (Div. 1)"
+        ]
+        ,
+        [
+             1339506000000,
+             2317,
+             196,
+             "Codeforces Round #124 (Div. 1)",
+             "Codeforces Round #124 (Div. 1)",
+             87,
+             6,
+            "/contest/196/standings/participant/573152#p573152",
+            "international master",
+            "international master",
+            "122605",
+            "Codeforces Round #124 (Div. 1)"
+        ]
+        ,
+        [
+             1342020600000,
+             2283,
+             204,
+             "Codeforces Round #129 (Div. 1)",
+             "Codeforces Round #129 (Div. 1)",
+             -34,
+             53,
+            "/contest/204/standings/participant/608865#p608865",
+            "master",
+            "master",
+            "130226",
+            "Codeforces Round #129 (Div. 1)"
+        ]
+        ,
+        [
+             1346427000000,
+             2356,
+             220,
+             "Codeforces Round #136 (Div. 1)",
+             "Codeforces Round #136 (Div. 1)",
+             73,
+             8,
+            "/contest/220/standings/participant/676480#p676480",
+            "international master",
+            "international master",
+            "140097",
+            "Codeforces Round #136 (Div. 1)"
+        ]
+        ,
+        [
+             1347809400000,
+             2285,
+             223,
+             "Codeforces Round #138 (Div. 1)",
+             "Codeforces Round #138 (Div. 1)",
+             -71,
+             107,
+            "/contest/223/standings/participant/702228#p702228",
+            "master",
+            "master",
+            "143566",
+            "Codeforces Round #138 (Div. 1)"
+        ]
+        ,
+        [
+             1349105400000,
+             2219,
+             229,
+             "Codeforces Round #142 (Div. 1)",
+             "Codeforces Round #142 (Div. 1)",
+             -66,
+             116,
+            "/contest/229/standings/participant/736584#p736584",
+            "master",
+            "master",
+            "154654",
+            "Codeforces Round #142 (Div. 1)"
+        ]
+        ,
+        [
+             1355671800000,
+             2266,
+             256,
+             "Codeforces Round #156 (Div. 1)",
+             "Codeforces Round #156 (Div. 1)",
+             47,
+             30,
+            "/contest/256/standings/participant/908103#p908103",
+            "master",
+            "master",
+            "181575",
+            "Codeforces Round #156 (Div. 1)"
+        ]
+        ,
+        [
+             1356190200000,
+             2262,
+             258,
+             "Codeforces Round #157 (Div. 1)",
+             "Codeforces Round #157 (Div. 1)",
+             -4,
+             64,
+            "/contest/258/standings/participant/921664#p921664",
+            "master",
+            "master",
+            "183515",
+            "Codeforces Round #157 (Div. 1)"
+        ]
+        ,
+        [
+             1358091000000,
+             2317,
+             261,
+             "Codeforces Round #160 (Div. 1)",
+             "Codeforces Round #160 (Div. 1)",
+             55,
+             21,
+            "/contest/261/standings/participant/957224#p957224",
+            "international master",
+            "international master",
+            "191031",
+            "Codeforces Round #160 (Div. 1)"
+        ]
+        ,
+        [
+             1359732600000,
+             2312,
+             269,
+             "Codeforces Round #165 (Div. 1)",
+             "Codeforces Round #165 (Div. 1)",
+             -5,
+             63,
+            "/contest/269/standings/participant/1010837#p1010837",
+            "international master",
+            "international master",
+            "204893",
+            "Codeforces Round #165 (Div. 1)"
+        ]
+        ,
+        [
+             1362065400000,
+             2318,
+             277,
+             "Codeforces Round #170 (Div. 1)",
+             "Codeforces Round #170 (Div. 1)",
+             6,
+             56,
+            "/contest/277/standings/participant/1075944#p1075944",
+            "international master",
+            "international master",
+            "219179",
+            "Codeforces Round #170 (Div. 1)"
+        ]
+        ,
+        [
+             1362929400000,
+             2265,
+             280,
+             "Codeforces Round #172 (Div. 1)",
+             "Codeforces Round #172 (Div. 1)",
+             -53,
+             92,
+            "/contest/280/standings/participant/1099965#p1099965",
+            "master",
+            "master",
+            "219845",
+            "Codeforces Round #172 (Div. 1)"
+        ]
+        ,
+        [
+             1364025600000,
+             2351,
+             286,
+             "Codeforces Round #176 (Div. 1)",
+             "Codeforces Round #176 (Div. 1)",
+             86,
+             6,
+            "/contest/286/standings/participant/1138460#p1138460",
+            "international master",
+            "international master",
+            "228248",
+            "Codeforces Round #176 (Div. 1)"
+        ]
+        ,
+        [
+             1366385400000,
+             2407,
+             297,
+             "Codeforces Round #180 (Div. 1)",
+             "Codeforces Round #180 (Div. 1)",
+             56,
+             21,
+            "/contest/297/standings/participant/1211216#p1211216",
+            "grandmaster",
+            "grandmaster",
+            "238228",
+            "Codeforces Round #180 (Div. 1)"
+        ]
+        ,
+        [
+             1371223800000,
+             2440,
+             317,
+             "Codeforces Round #188 (Div. 1)",
+             "Codeforces Round #188 (Div. 1)",
+             33,
+             31,
+            "/contest/317/standings/participant/1330952#p1330952",
+            "grandmaster",
+            "grandmaster",
+            "252775",
+            "Codeforces Round #188 (Div. 1)"
+        ]
+        ,
+        [
+             1371992400000,
+             2370,
+             319,
+             "Codeforces Round #189 (Div. 1)",
+             "Codeforces Round #189 (Div. 1)",
+             -70,
+             102,
+            "/contest/319/standings/participant/1350017#p1350017",
+            "international master",
+            "international master",
+            "254928",
+            "Codeforces Round #189 (Div. 1)"
+        ]
+        ,
+        [
+             1372433400000,
+             2308,
+             321,
+             "Codeforces Round #190 (Div. 1)",
+             "Codeforces Round #190 (Div. 1)",
+             -62,
+             105,
+            "/contest/321/standings/participant/1367820#p1367820",
+            "international master",
+            "international master",
+            "258976",
+            "Codeforces Round #190 (Div. 1)"
+        ]
+        ,
+        [
+             1376668800000,
+             2362,
+             338,
+             "Codeforces Round #196 (Div. 1)",
+             "Codeforces Round #196 (Div. 1)",
+             54,
+             15,
+            "/contest/338/standings/participant/1486541#p1486541",
+            "international master",
+            "international master",
+            "281237",
+            "Codeforces Round #196 (Div. 1)"
+        ]
+        ,
+        [
+             1377876600000,
+             2380,
+             341,
+             "Codeforces Round #198 (Div. 1)",
+             "Codeforces Round #198 (Div. 1)",
+             18,
+             35,
+            "/contest/341/standings/participant/1519650#p1519650",
+            "international master",
+            "international master",
+            "283842",
+            "Codeforces Round #198 (Div. 1)"
+        ]
+        ,
+        [
+             1379172600000,
+             2419,
+             343,
+             "Codeforces Round #200 (Div. 1)",
+             "Codeforces Round #200 (Div. 1)",
+             39,
+             26,
+            "/contest/343/standings/participant/1555347#p1555347",
+            "grandmaster",
+            "grandmaster",
+            "287914",
+            "Codeforces Round #200 (Div. 1)"
+        ]
+        ,
+        [
+             1379691000000,
+             2472,
+             346,
+             "Codeforces Round #201 (Div. 1)",
+             "Codeforces Round #201 (Div. 1)",
+             53,
+             9,
+            "/contest/346/standings/participant/1570735#p1570735",
+            "grandmaster",
+            "grandmaster",
+            "290269",
+            "Codeforces Round #201 (Div. 1)"
+        ]
+        ,
+        [
+             1380295800000,
+             2441,
+             348,
+             "Codeforces Round #202 (Div. 1)",
+             "Codeforces Round #202 (Div. 1)",
+             -31,
+             38,
+            "/contest/348/standings/participant/1593558#p1593558",
+            "grandmaster",
+            "grandmaster",
+            "292847",
+            "Codeforces Round #202 (Div. 1)"
+        ]
+        ,
+        [
+             1381678200000,
+             2451,
+             354,
+             "Codeforces Round #206 (Div. 1)",
+             "Codeforces Round #206 (Div. 1)",
+             10,
+             29,
+            "/contest/354/standings/participant/1655420#p1655420",
+            "grandmaster",
+            "grandmaster",
+            "302530",
+            "Codeforces Round #206 (Div. 1)"
+        ]
+        ,
+        [
+             1381838400000,
+             2506,
+             356,
+             "Codeforces Round #207 (Div. 1)",
+             "Codeforces Round #207 (Div. 1)",
+             55,
+             6,
+            "/contest/356/standings/participant/1664040#p1664040",
+            "grandmaster",
+            "grandmaster",
+            "304841",
+            "Codeforces Round #207 (Div. 1)"
+        ]
+        ,
+        [
+             1385479800000,
+             2544,
+             367,
+             "Codeforces Round #215 (Div. 1)",
+             "Codeforces Round #215 (Div. 1)",
+             38,
+             10,
+            "/contest/367/standings/participant/1800056#p1800056",
+            "grandmaster",
+            "grandmaster",
+            "323767",
+            "Codeforces Round #215 (Div. 1)"
+        ]
+        ,
+        [
+             1387893600000,
+             2578,
+             375,
+             "Codeforces Round #221 (Div. 1)",
+             "Codeforces Round #221 (Div. 1)",
+             34,
+             6,
+            "/contest/375/standings/participant/1883282#p1883282",
+            "grandmaster",
+            "grandmaster",
+            "333149",
+            "Codeforces Round #221 (Div. 1)"
+        ]
+        ,
+        [
+             1388331000000,
+             2626,
+             377,
+             "Codeforces Round #222 (Div. 1)",
+             "Codeforces Round #222 (Div. 1)",
+             48,
+             4,
+            "/contest/377/standings/participant/1901446#p1901446",
+            "international grandmaster",
+            "international grandmaster",
+            "336960",
+            "Codeforces Round #222 (Div. 1)"
+        ]
+        ,
+        [
+             1388417400000,
+             2613,
+             379,
+             "Good Bye 2013",
+             "Good Bye 2013",
+             -13,
+             18,
+            "/contest/379/standings/participant/1906541#p1906541",
+            "international grandmaster",
+            "international grandmaster",
+            "339467",
+            "Good Bye 2013"
+        ]
+        ,
+        [
+             1389540600000,
+             2616,
+             380,
+             "Codeforces Round #223 (Div. 1)",
+             "Codeforces Round #223 (Div. 1)",
+             3,
+             16,
+            "/contest/380/standings/participant/1944333#p1944333",
+            "international grandmaster",
+            "international grandmaster",
+            "342223",
+            "Codeforces Round #223 (Div. 1)"
+        ]
+        ,
+        [
+             1390231800000,
+             2615,
+             383,
+             "Codeforces Round #225 (Div. 1)",
+             "Codeforces Round #225 (Div. 1)",
+             -1,
+             17,
+            "/contest/383/standings/participant/1969590#p1969590",
+            "international grandmaster",
+            "international grandmaster",
+            "347061",
+            "Codeforces Round #225 (Div. 1)"
+        ]
+        ,
+        [
+             1391442000000,
+             2508,
+             388,
+             "Codeforces Round #228 (Div. 1)",
+             "Codeforces Round #228 (Div. 1)",
+             -107,
+             283,
+            "/contest/388/standings/participant/2019864#p2019864",
+            "grandmaster",
+            "grandmaster",
+            "356650",
+            "Codeforces Round #228 (Div. 1)"
+        ]
+        ,
+        [
+             1396162800000,
+             2404,
+             407,
+             "Codeforces Round #239 (Div. 1)",
+             "Codeforces Round #239 (Div. 1)",
+             -104,
+             437,
+            "/contest/407/standings/participant/2125163#p2125163",
+            "grandmaster",
+            "grandmaster",
+            "372169",
+            "Codeforces Round #239 (Div. 1)"
+        ]
+        ,
+        [
+             1396798800000,
+             2474,
+             414,
+             "Codeforces Round #240 (Div. 1)",
+             "Codeforces Round #240 (Div. 1)",
+             70,
+             12,
+            "/contest/414/standings/participant/2164335#p2164335",
+            "grandmaster",
+            "grandmaster",
+            "373592",
+            "Codeforces Round #240 (Div. 1)"
+        ]
+        ,
+        [
+             1402673400000,
+             2421,
+             436,
+             "Zepto Code Rush 2014",
+             "Zepto Code Rush 2014",
+             -53,
+             96,
+            "/contest/436/standings/participant/2497532#p2497532",
+            "grandmaster",
+            "grandmaster",
+            "404249",
+            "Zepto Code Rush 2014"
+        ]
+        ,
+        [
+             1403191800000,
+             2477,
+             442,
+             "Codeforces Round #253 (Div. 1)",
+             "Codeforces Round #253 (Div. 1)",
+             56,
+             11,
+            "/contest/442/standings/participant/2525599#p2525599",
+            "grandmaster",
+            "grandmaster",
+            "406312",
+            "Codeforces Round #253 (Div. 1)"
+        ]
+        ,
+        [
+             1406480400000,
+             2557,
+             452,
+             "MemSQL Start[c]UP 2.0 - Round 1",
+             "MemSQL Start[c]UP 2.0 - Round 1",
+             80,
+             6,
+            "/contest/452/standings/participant/2699980#p2699980",
+            "grandmaster",
+            "grandmaster",
+            "425875",
+            "MemSQL Start[c]UP 2.0 - Round 1"
+        ]
+        ,
+        [
+             1407690000000,
+             2521,
+             457,
+             "MemSQL Start[c]UP 2.0 - Round 2",
+             "MemSQL Start[c]UP 2.0 - Round 2",
+             -36,
+             16,
+            "/contest/457/standings/participant/2778565#p2778565",
+            "grandmaster",
+            "grandmaster",
+            "435581",
+            "MemSQL Start[c]UP 2.0 - Round 2"
+        ]
+        ,
+        [
+             1409061600000,
+             2420,
+             461,
+             "Codeforces Round #263 (Div. 1)",
+             "Codeforces Round #263 (Div. 1)",
+             -101,
+             177,
+            "/contest/461/standings/participant/2860390#p2860390",
+            "grandmaster",
+            "grandmaster",
+            "441717",
+            "Codeforces Round #263 (Div. 1)"
+        ]
+        ,
+        [
+             1448984100000,
+             2636,
+             603,
+             "Codeforces Round #334 (Div. 1)",
+             "",
+             216,
+             3,
+            "/contest/603/standings/participant/6396099#p6396099",
+            "international grandmaster",
+            "international grandmaster",
+            "728030",
+            "Codeforces Round #334 (Div. 1)"
+        ]
+        ,
+        [
+             1454087400000,
+             2643,
+             618,
+             "Wunder Fund Round 2016 (Div. 1 + Div. 2 combined)",
+             "",
+             7,
+             45,
+            "/contest/618/standings/participant/6913365#p6913365",
+            "international grandmaster",
+            "international grandmaster",
+            "765743",
+            "Wunder Fund Round 2016 (Div. 1 + Div. 2 combined)"
+        ]
+        ,
+        [
+             1454605500000,
+             2652,
+             623,
+             "AIM Tech Round (Div. 1)",
+             "",
+             9,
+             42,
+            "/contest/623/standings/participant/6983585#p6983585",
+            "international grandmaster",
+            "international grandmaster",
+            "777326",
+            "AIM Tech Round (Div. 1)"
+        ]
+        ,
+        [
+             1455384900000,
+             2731,
+             626,
+             "8VC Venture Cup 2016 - Elimination Round",
+             "",
+             79,
+             16,
+            "/contest/626/standings/participant/7069598#p7069598",
+            "international grandmaster",
+            "international grandmaster",
+            "784008",
+            "8VC Venture Cup 2016 - Elimination Round"
+        ]
+        ,
+        [
+             1456506900000,
+             2736,
+             633,
+             "Manthan, Codefest 16",
+             "",
+             5,
+             27,
+            "/contest/633/standings/participant/7228181#p7228181",
+            "international grandmaster",
+            "international grandmaster",
+            "789944",
+            "Manthan, Codefest 16"
+        ]
+        ,
+        [
+             1456683000000,
+             2711,
+             627,
+             "8VC Venture Cup 2016 - Final Round",
+             "",
+             -25,
+             40,
+            "/contest/627/standings/participant/7245494#p7245494",
+            "international grandmaster",
+            "international grandmaster",
+            "792927",
+            "8VC Venture Cup 2016 - Final Round"
+        ]
+        ,
+        [
+             1458318900000,
+             2757,
+             645,
+             "CROC 2016 - Elimination Round",
+             "Чемпионат КРОК 2016 - Отборочный Раунд",
+             46,
+             14,
+            "/contest/645/standings/participant/7452721#p7452721",
+            "international grandmaster",
+            "international grandmaster",
+            "804430",
+            "CROC 2016 - Elimination Round"
+        ]
+        ,
+        [
+             1458376500000,
+             2718,
+             653,
+             "IndiaHacks 2016 - Online Edition (Div. 1 + Div. 2)",
+             "",
+             -39,
+             39,
+            "/contest/653/standings/participant/7459342#p7459342",
+            "international grandmaster",
+            "international grandmaster",
+            "805310",
+            "IndiaHacks 2016 - Online Edition (Div. 1 + Div. 2)"
+        ]
+        ,
+        [
+             1459182900000,
+             2776,
+             639,
+             "VK Cup 2016 - Round 1",
+             "VK Cup 2016 - Раунд 1",
+             58,
+             7,
+            "/contest/639/standings/participant/7552657#p7552657",
+            "international grandmaster",
+            "international grandmaster",
+            "808455",
+            "VK Cup 2016 - Round 1"
+        ]
+        ,
+        [
+             1460729700000,
+             2743,
+             662,
+             "CROC 2016 - Final Round [Private, For Onsite Finalists Only]",
+             "КРОК 2016 - Финальный Раунд [только для онсайт-финалистов]",
+             -33,
+             18,
+            "/contest/662/standings/participant/7723861#p7723861",
+            "international grandmaster",
+            "international grandmaster",
+            "817100",
+            "CROC 2016 - Final Round [Private, For Onsite Finalists Only]"
+        ]
+        ,
+        [
+             1461515700000,
+             2880,
+             641,
+             "VK Cup 2016 - Round 2",
+             "VK Cup 2016 - Раунд 2",
+             137,
+             2,
+            "/contest/641/standings/participant/7795053#p7795053",
+            "international grandmaster",
+            "international grandmaster",
+            "820582",
+            "VK Cup 2016 - Round 2"
+        ]
+        ,
+        [
+             1462633500000,
+             2828,
+             643,
+             "VK Cup 2016 - Round 3",
+             "VK Cup 2016 - Раунд 3",
+             -52,
+             15,
+            "/contest/643/standings/participant/7897689#p7897689",
+            "international grandmaster",
+            "international grandmaster",
+            "827710",
+            "VK Cup 2016 - Round 3"
+        ]
+        ,
+        [
+             1465403700000,
+             2813,
+             679,
+             "Codeforces Round #356 (Div. 1)",
+             "",
+             -15,
+             28,
+            "/contest/679/standings/participant/8161189#p8161189",
+            "international grandmaster",
+            "international grandmaster",
+            "845428",
+            "Codeforces Round #356 (Div. 1)"
+        ]
+        ,
+        [
+             1467534000000,
+             2889,
+             695,
+             "VK Cup 2016 - Finals",
+             "VK Cup 2016 - Финал",
+             76,
+             3,
+            "/contest/695/standings/participant/8414426#p8414426",
+            "international grandmaster",
+            "international grandmaster",
+            "869146",
+            "VK Cup 2016 - Finals"
+        ]
+        ,
+        [
+             1468514100000,
+             2964,
+             696,
+             "Codeforces Round #362 (Div. 1)",
+             "",
+             75,
+             5,
+            "/contest/696/standings/participant/8524419#p8524419",
+            "legendary grandmaster",
+            "legendary grandmaster",
+            "871804",
+            "Codeforces Round #362 (Div. 1)"
+        ]
+        ,
+        [
+             1470578700000,
+             2747,
+             704,
+             "Codeforces Round #366 (Div. 1)",
+             "",
+             -217,
+             336,
+            "/contest/704/standings/participant/8765992#p8765992",
+            "international grandmaster",
+            "international grandmaster",
+            "885380",
+            "Codeforces Round #366 (Div. 1)"
+        ]
+        ,
+        [
+             1472056500000,
+             2781,
+             708,
+             "AIM Tech Round 3 (Div. 1)",
+             "",
+             34,
+             21,
+            "/contest/708/standings/participant/8961255#p8961255",
+            "international grandmaster",
+            "international grandmaster",
+            "903766",
+            "AIM Tech Round 3 (Div. 1)"
+        ]
+        ,
+        [
+             1473784500000,
+             2851,
+             713,
+             "Codeforces Round #371 (Div. 1)",
+             "",
+             70,
+             9,
+            "/contest/713/standings/participant/9175177#p9175177",
+            "international grandmaster",
+            "international grandmaster",
+            "921223",
+            "Codeforces Round #371 (Div. 1)"
+        ]
+        ,
+        [
+             1475330700000,
+             2861,
+             722,
+             "Intel Code Challenge Elimination Round (Div. 1 + Div. 2, combined)",
+             "",
+             10,
+             19,
+            "/contest/722/standings/participant/9433550#p9433550",
+            "international grandmaster",
+            "international grandmaster",
+            "937552",
+            "Intel Code Challenge Elimination Round (Div. 1 + Div. 2, combined)"
+        ]
+        ,
+        [
+             1475928900000,
+             2914,
+             724,
+             "Intel Code Challenge Final Round (Div. 1 + Div. 2, Combined)",
+             "",
+             53,
+             8,
+            "/contest/724/standings/participant/9527411#p9527411",
+            "legendary grandmaster",
+            "legendary grandmaster",
+            "949095",
+            "Intel Code Challenge Final Round (Div. 1 + Div. 2, Combined)"
+        ]
+        ,
+        [
+             1477148700000,
+             2823,
+             725,
+             "Canada Cup 2016",
+             "",
+             -91,
+             75,
+            "/contest/725/standings/participant/9712139#p9712139",
+            "international grandmaster",
+            "international grandmaster",
+            "962085",
+            "Canada Cup 2016"
+        ]
+        ,
+        [
+             1481992500000,
+             2867,
+             744,
+             "Codeforces Round #385 (Div. 1)",
+             "",
+             44,
+             10,
+            "/contest/744/standings/participant/10368262#p10368262",
+            "international grandmaster",
+            "international grandmaster",
+            "996054",
+            "Codeforces Round #385 (Div. 1)"
+        ]
+        ,
+        [
+             1483107300000,
+             2886,
+             750,
+             "Good Bye 2016",
+             "",
+             19,
+             23,
+            "/contest/750/standings/participant/10560634#p10560634",
+            "international grandmaster",
+            "international grandmaster",
+            "1013598",
+            "Good Bye 2016"
+        ]
+        ,
+        [
+             1484235300000,
+             2883,
+             757,
+             "Codecraft-17 and Codeforces Round #391 (Div. 1 + Div. 2, combined)",
+             "",
+             -3,
+             21,
+            "/contest/757/standings/participant/10701766#p10701766",
+            "international grandmaster",
+            "international grandmaster",
+            "1024147",
+            "Codecraft-17 and Codeforces Round #391 (Div. 1 + Div. 2, combined)"
+        ]
+        ,
+        [
+             1489851300000,
+             3026,
+             771,
+             "VK Cup 2017 - Round 1",
+             "VK Cup 2017 - Раунд 1",
+             143,
+             1,
+            "/contest/771/standings/participant/11567662#p11567662",
+            "legendary grandmaster",
+            "legendary grandmaster",
+            "1095759",
+            "VK Cup 2017 - Round 1"
+        ]
+        ,
+        [
+             1492356900000,
+             2919,
+             772,
+             "VK Cup 2017 - Round 2",
+             "VK Cup 2017 - Раунд 2",
+             -107,
+             21,
+            "/contest/772/standings/participant/11957947#p11957947",
+            "legendary grandmaster",
+            "legendary grandmaster",
+            "1115159",
+            "VK Cup 2017 - Round 2"
+        ]
+        ,
+        [
+             1492965900000,
+             2884,
+             793,
+             "Tinkoff Challenge - Elimination Round",
+             "",
+             -35,
+             33,
+            "/contest/793/standings/participant/12060270#p12060270",
+            "international grandmaster",
+            "international grandmaster",
+            "1123445",
+            "Tinkoff Challenge - Elimination Round"
+        ]
+        ,
+        [
+             1494171900000,
+             3021,
+             773,
+             "VK Cup 2017 - Round 3",
+             "VK Cup 2017 - Раунд 3",
+             137,
+             1,
+            "/contest/773/standings/participant/12191685#p12191685",
+            "legendary grandmaster",
+            "legendary grandmaster",
+            "1130560",
+            "VK Cup 2017 - Round 3"
+        ]
+        ,
+        [
+             1499587500000,
+             2996,
+             823,
+             "VK Cup 2017 - Finals",
+             "VK Cup 2017 - Финал",
+             -25,
+             4,
+            "/contest/823/standings/participant/12896680#p12896680",
+            "legendary grandmaster",
+            "legendary grandmaster",
+            "1183816",
+            "VK Cup 2017 - Finals"
+        ]
+        
+    ]);
+    data.push([
+        [
+            1489851300000, 3026
+        ]
+    ]);
+
+var datas = [
+    {label: "Zlobober", data: data[0]},
+    {clickable: false, hoverable: false, color: "red", data: data[1]}
+    
+];
+
+var markings = [
+    { color: '#a00', lineWidth: 1, yaxis: { from: 2900 } },
+    { color: '#f33', lineWidth: 1, yaxis: { from: 2600, to: 2899 } },
+    { color: '#f77', lineWidth: 1, yaxis: { from: 2400, to: 2599 } },
+    { color: '#ffbb55', lineWidth: 1, yaxis: { from: 2300, to: 2399 } },
+    { color: '#ffcc88', lineWidth: 1, yaxis: { from: 2200, to: 2299 } },
+    { color: '#f8f', lineWidth: 1, yaxis: { from: 1900, to: 2199 } },
+    { color: '#aaf', lineWidth: 1, yaxis: { from: 1600, to: 1899 } },
+    { color: '#77ddbb', lineWidth: 1, yaxis: { from: 1400, to: 1599 } },
+    { color: '#7f7', lineWidth: 1, yaxis: { from: 1200, to: 1399 } },
+    { color: '#ccc', lineWidth: 1, yaxis: { from: 0, to: 1199 } },
+];
+
+var options = {
+    lines: { show: true },
+    points: { show: true },
+    //xaxis: { tickDecimals: 0, tickSize: 1 },
+    xaxis: { mode: "time" },
+    yaxis: { min: 1000, max: 3226, ticks: [1200, 1400, 1600, 1900, 2200, 2300, 2400, 2600, 2900] },
+    grid: { hoverable: true, markings: markings }
+};
+
+var plot = $.plot($("#placeholder"), datas, options);
+
+function showTooltip(x, y, contents) {
+    $('<div id="tooltip">' + contents + '</div>').css( {
+        position: 'absolute',
+        display: 'none',
+        top: y - 20,
+        left: x + 10,
+        border: '1px solid #fdd',
+        padding: '2px',
+        'font-size' : '11px',
+        'background-color': '#fee',
+        opacity: 0.80
+    }).appendTo("body").fadeIn(200);
+}
+
+var ctx = plot.getCanvas().getContext("2d");
+
+var prev = -1;
+$("#placeholder").bind("plothover", function (event, pos, item) {
+    if (item) {
+        if (prev != item.dataIndex) {
+            $("#tooltip").remove();
+            var params = data[item.seriesIndex][item.dataIndex];
+
+            var total = params[1];
+            var change = params[5] > 0 ? "+" + params[5] : params[5];
+            var contestName = params[11];
+            var contestId = params[2];
+            var contestUrl = params[7];
+            var rank = params[6];
+            var title = params[8];
+            var html = "= " + total + " (" + change + "), " + title + "<br/>"
+                            + "Rank: " + rank + "<br/>"
+                            + "<a href='" + contestUrl + "'>" + contestName + "</a>";
+            if (change > 0)
+                html += "<br/><a style='font-weight: bold;' href=\"/bestRatingChanges/" + params[10] + "\">Share it!</a>";
+            showTooltip(item.pageX, item.pageY, html);
+            setTimeout(function () {
+                $("#tooltip").fadeOut(200);
+                prev = -1;
+            }, 4000);
+            prev = item.dataIndex;
+        }
+    }
+});
+
+        });
+    </script>
+
+                </div>
+        </div>
+            <br style="clear: both;"/>
+            <div id="footer">
+                <div><a href="http://codeforces.com/">Codeforces</a> (c) Copyright 2010-2017 Mike Mirzayanov</div>
+                <div>The only programming contests Web 2.0 platform</div>
+                    <div>Server time: <span class="format-timewithseconds" data-locale="en">Sep/12/2017 21:40:19</span> (c4).</div>
+                    <div>Desktop version, switch to <a rel="nofollow" class="switchToMobile" href="?mobile=true">mobile version</a>.</div>
+                <div class="smaller"><a href="/privacy">Privacy Policy</a></div>
+
+            </div>
+        <script type="text/javascript">
+            $(function() {
+                $(".switchToMobile").click(function() {
+                    Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", "true"));
+                    return false;
+                });
+                $(".switchToDesktop").click(function() {
+                    Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", "false"));
+                    return false;
+                });
+            });
+        </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if ($(window).width() < 1600) {
+                $('.button-up').css('width', '30px').css('line-height', '30px').css('font-size', '20px');
+            }
+
+            if ($(window).width() >= 1200) {
+                $ (window).scroll (function () {
+                    if ($ (this).scrollTop () > 100) {
+                        $ ('.button-up').fadeIn();
+                    } else {
+                        $ ('.button-up').fadeOut();
+                    }
+                });
+
+                $('.button-up').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500);
+                    return false;
+                });
+
+                $('.button-up').hover(function () {
+                    $(this).animate({
+                        'opacity':'1'
+                    }).css({'background-color':'#e7ebf0','color':'#6a86a4'});
+                }, function () {
+                    $(this).animate({
+                        'opacity':'0.7'
+                    }).css({'background':'none','color':'#d3dbe4'});;
+                });
+            }
+            Codeforces.focusOnError();
+        });
+    </script>
+
+        <div class="userListsFacebox" style="display:none;">
+            <div style="padding: 0.5em; width: 600px; max-height: 200px; overflow-y: auto">
+<div class="datatable"
+     
+     style="background-color: #E1E1E1; padding-bottom: 3px;">
+            <div class="lt">&nbsp;</div>
+            <div class="rt">&nbsp;</div>
+            <div class="lb">&nbsp;</div>
+            <div class="rb">&nbsp;</div>
+
+            <div style="padding: 4px 0 0 6px;font-size:1.4rem;position:relative;">
+                User lists
+
+                <div style="position:absolute;right:0.25em;top:0.35em;">
+                    <span style="padding:0;position:relative;bottom:2px;" class="rowCount"></span>
+
+                    <img class="closed" src="http://st.codeforces.com/s/71216/images/icons/control.png"/>
+
+                    <span class="filter" style="display:none;">
+                        <img class="opened" src="http://st.codeforces.com/s/71216/images/icons/control-270.png"/>
+                        <input style="padding:0;position:relative;bottom:2px;border:1px solid #aaa;height:17px;font-size:1.3rem;"/>
+                    </span>
+                </div>
+            </div>
+            <div style="background-color: white;margin:0.3em 3px 0 3px;position:relative;">
+            <div class="ilt">&nbsp;</div>
+            <div class="irt">&nbsp;</div>
+            <table class="">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+            </table>
+            </div>
+        </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+                // Create new ':containsIgnoreCase' selector for search
+                jQuery.expr[':'].containsIgnoreCase = function(a, i, m) {
+                    return jQuery(a).text().toUpperCase()
+                            .indexOf(m[3].toUpperCase()) >= 0;
+                };
+
+                if (window.updateDatatableFilter == undefined) {
+                    window.updateDatatableFilter = function(i) {
+                        var parent = $(i).parent().parent().parent().parent();
+                        $("tr.no-items", parent).remove();
+                        $("tr", parent).hide().removeClass('visible');
+                        var text = $(i).val();
+                        if (text) {
+                            $("tr" + ":containsIgnoreCase('" + text + "')", parent).show().addClass('visible');
+                        } else {
+                            parent.find(".rowCount").text("");
+                            $("tr", parent).show().addClass('visible');
+                        }
+
+                        var found = false;
+                        var visibleRowCount = 0;
+                        $("tr", parent).each(function () {
+                            if (!found) {
+                                if ($(this).find("th").size() > 0) {
+                                    $(this).show().addClass('visible');
+                                    found = true;
+                                }
+                            }
+                            if ($(this).hasClass('visible')) {
+                                visibleRowCount++;
+                            }
+                        });
+                        if (text) {
+                            parent.find(".rowCount").text("Matches: " + (visibleRowCount - (found ? 1 : 0)));
+                        }
+                        if (visibleRowCount == (found ? 1 : 0)) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo($(parent).find('table'));
+                        }
+                        $(parent).find("tr td").removeClass("dark");
+                        $(parent).find("tr.visible:odd td").addClass("dark");
+                    }
+
+                    $(".datatable .closed").click(function () {
+                        var parent = $(this).parent();
+                        $(this).hide();
+                        $(".filter", parent).fadeIn(function () {
+                            $("input", parent).val("").focus().css("border", "1px solid #aaa");
+                        });
+                    });
+
+                    $(".datatable .opened").click(function () {
+                        var parent = $(this).parent().parent();
+                        $(".filter", parent).fadeOut(function () {
+                            $(".closed", parent).show();
+                            $("input", parent).val("").each(function () {
+                                window.updateDatatableFilter(this);
+                            });
+                        });
+                    });
+
+                    $(".datatable .filter input").keyup(function(e) {
+                        window.updateDatatableFilter(this);
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+
+                    $(".datatable table").each(function () {
+                        var found = false;
+                        $("tr", this).each(function () {
+                            if (!found && $(this).find("th").size() == 0) {
+                                found = true;
+                            }
+                        });
+                        if (!found) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo(this);
+                        }
+                    });
+
+                    // Applies styles to datatables.
+                    $(".datatable").each(function () {
+                        $(this).find("tr:first th").addClass("top");
+                        $(this).find("tr:last td").addClass("bottom");
+                        $(this).find("tr:odd td").addClass("dark");
+                        $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                        $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                    });
+
+                    $(".datatable table.tablesorter").each(function () {
+                        $(this).bind("sortEnd", function () {
+                            $(".datatable").each(function () {
+                                $(this).find("th, td")
+                                    .removeClass("top").removeClass("bottom")
+                                    .removeClass("left").removeClass("right")
+                                    .removeClass("dark");
+                                $(this).find("tr:first th").addClass("top");
+                                $(this).find("tr:last td").addClass("bottom");
+                                $(this).find("tr:odd td").addClass("dark");
+                                $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                                $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                            });
+                        });
+                    });
+                }
+        });
+    </script>
+            </div>
+        </div>
+        <script type="application/javascript">
+            $(function() {
+                $(".userListMarker").click(function() {
+                    $.post("/data/lists", {action: "findTouched"}, function(json) {
+                        Codeforces.facebox(".userListsFacebox");
+                        var tbody = $("#facebox tbody");
+                        tbody.empty();
+                        for (var i in json) {
+                            tbody.append(
+                                    $("<tr></tr>").append(
+                                            $("<td></td>").attr("data-readKey", json[i].readKey).text(json[i].name)
+                                    )
+                            );
+                        }
+                        Codeforces.updateDatatables();
+                        tbody.find("td").css("cursor", "pointer").click(function() {
+                            document.location = Codeforces.updateUrlParameter(document.location.href, "list", $(this).attr("data-readKey"));
+                        });
+                    }, "json");
+                });
+            });
+        </script>
+</body>
+</html>
