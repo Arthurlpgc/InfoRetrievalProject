@@ -2,7 +2,7 @@ import scrapy
 
 
 class QuotesSpider(scrapy.Spider):
-    name = "questions-bfs"
+    name = "questions"
 
     start_urls = [
         'http://codeforces.com/',
