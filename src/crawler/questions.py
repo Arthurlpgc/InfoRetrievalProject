@@ -1,13 +1,18 @@
 import scrapy
 
 
-class QuotesSpider(scrapy.Spider):
-    name = "questions"
-
+class QuestionSpider(scrapy.Spider):
+    name = 'questions'
+    custom_settings = {
+        'USER_AGENT': 'coding-questions-bot (https://github.com/Arthurlpgc/InfoRetrievalProject)',
+        'DOWNLOAD_DELAY': '0.25',
+        'DOWNLOAD_TIMEOUT': '5',
+        'DOWNLOAD_MAXSIZE': '1000000',
+        'ROBOTSTXT_OBEY': 'True',
+    }
     start_urls = [
         'http://codeforces.com/',
     ]
-
     allowed_domains = [
         'codeforces.com',
     ]
