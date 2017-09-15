@@ -6,7 +6,9 @@ from sklearn.pipeline import make_pipeline
 import math
 
 def svm(attributes, target):
-    scoring = ['accuracy', 'precision', 'recall', 'f1']
+    #Macro ou micro?
+    #Separar em teste treino e cross validation no treino?
+    scoring = ['precision_macro', 'f1_macro', 'recall_macro', 'accuracy']
     clf = make_pipeline(Normalizer(), SVC(C=math.pow(10,5), gamma="auto",
                                             kernel='rbf', decision_function_shape="ovo"))
     scores = cross_validate(clf, attributes, target, scoring=scoring,
