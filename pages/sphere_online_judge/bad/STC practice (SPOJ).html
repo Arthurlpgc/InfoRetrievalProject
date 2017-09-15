@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	<!-- contest header -->
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+	
+	
+		<title>STC practice (SPOJ)</title>
+		
+	<meta name="keywords" content="programming, language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<meta property="og:image" content="//stx1.spoj.com/gfx/spoj-fb.jpg"/>
+	<meta property="og:description" content="SPOJ (Sphere Online Judge) is an online judge system with over 315,000 registered users and over 20000 problems. The solution to problems can be submitted in over 60 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+	<meta name="description" content="SPOJ (Sphere Online Judge) is an online judge system with over 315,000 registered users and over 20000 problems. The solution to problems can be submitted in over 60 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+	<!-- Favicon -->
+	<link href="//stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon" />
+	
+	<!-- RSS -->
+  	<link href="/SVMC08/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed" />
+
+	<!-- Web Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+	
+	<link href="//stx1.spoj.com/themes/common.css?4" rel="stylesheet" type="text/css" id="theme">
+	<link href="//stx1.spoj.com/themes/contest_new.css?4" rel="stylesheet" type="text/css" id="theme">
+	<!-- <link href="//www.spoj.com/style.css" rel="stylesheet" type="text/css" id="theme"> -->
+	
+	<!-- JS -->
+	<script type="text/javascript" src='//code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.timers.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.cookie.js"></script> 
+	  
+
+<script type="text/javascript" language="javascript">
+function UnCryptMailto(s) {
+	var n=0;
+	var r="";
+	for(var i=0;i<s.length;i++) {		
+		n=s.charCodeAt(i); 
+		if (n>=8364) {n = 128;}
+		r += String.fromCharCode(n+(2));	
+	}
+	return r;
+}
+function linkTo_UnCryptMailto(s)	{
+	location.href=UnCryptMailto(s);
+}
+</script>
+
+
+<script type="text/javascript">
+function recordOutboundLink(link, category, action) {
+  try {
+    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+    pageTracker._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100)
+  }catch(err){}
+}
+</script>
+
+    <script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shBrushCpp.js"></script>
+	<script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shBrushCSharp.js"></script>
+    <script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="/gfx/SyntaxHighlighter/scripts/shBrushPython.js"></script>
+	<link type="text/css" rel="stylesheet" href="/gfx/SyntaxHighlighter/styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="/gfx/SyntaxHighlighter/styles/shThemeDefault.css"/>
+	
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+	
+
+
+</head>
+<body>
+
+
+
+<div class="container maintable" id="maintable2">
+	<div class="row">
+		<div class="col-md-12" id="header">
+	        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		        <tr>
+					<td class="headerleft"/>
+					<td class="headercenter">
+						<h1>STC practice</h1>
+					</td>
+					<td class="headerright"/>
+				</tr>
+			</table>
+			<a href="//www.spoj.com/" class="navbar-brand ">
+				<img src="/gfx/2015e.png" style="height: 40px;">
+			</a>
+									<div class="name pull-right">
+				<!-- <h2 style="display: inline-block;">STC practice</h2> -->
+				
+				<ul class="nav navbar-nav" style="margin-top: 10px; float: right;">
+					<li>
+						<a href="/SVMC08/" style="margin-right: 20px;">STC practice</a>
+					</li>
+				
+									
+					<li >
+			        	<a href="//www.spoj.com/login/Ly93d3cuc3Bvai5jb20vU1ZNQzA4Lw=="><i class="fa fa-sign-in"></i> sign in</a>
+			        </li>
+			        
+								</ul>
+			</div>
+			
+			<div class="submenu">
+			</div>
+	    </div>
+	</div>
+	<div class="row"><div class="col-md-2 menu" id="leftmenu" valign="top">
+
+<div class="well">
+
+			
+		<ul class="list-unstyled">
+									<li class="active"><a href="/SVMC08/" class=""><i class="fa fa-home"></i> News</a></li>
+										
+									<li ><a href="/SVMC08/problems/main/" class=""><i class="fa fa-puzzle-piece"></i> Problems</a></li>
+										
+									<li ><a href="/SVMC08/status" class=""><i class="fa fa-circle"></i> Status</a></li>
+										
+									<li ><a href="/SVMC08/ranks" class=""><i class="fa fa-trophy"></i> Ranking</a></li>
+										
+									<li>&nbsp;</li>
+						
+									<li ><a href="http://discuss.spoj.com" class=""><i class="fa fa-comments-o"></i> Forum</a></li>
+										
+				</ul>
+		
+			
+		
+					<div class="c200x200">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- spoj_all_200x200_left -->
+	<ins class="adsbygoogle"
+			style="display:inline-block;width:200px;height:200px"
+					data-ad-client="ca-pub-4453360425583535"
+							data-ad-slot="1301830631"></ins>
+							<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+	</script></div>
+				
+					<div class="time">
+<a href="/">SPOJ </a> time:
+</div>
+<div class="time">
+	<p>2017-09-15</p>
+	<p><b>17 : 12 : 29</b></p>
+</div>				
+			
+</div>
+
+</div><div class="col-md-10 content0" id="content0">
+	<div class="row">
+		<div class="col-md-12 content" id="content">
+		
+		
+
+
+<table width="100%">
+<tr>
+<td valign="top">
+
+
+</td>
+</tr>
+</table>
+	        					
+				
+				<div style="clear: both"></div>
+	        </div><!-- end #content -->
+	        <div class="col-md-2 hidden" id="subcont">
+								
+								
+				
+				<script type="text/javascript">
+				
+				$(function(){
+					setTimeout(function(){
+						$('.no_a_info').css('visibility', 'visible');
+					}, 5000);
+				});
+				</script>
+				
+					        </div>
+		</div><!-- endof row in #content0 -->
+	</div><!-- endof #content0 -->
+</div><!-- endof div.row -->
+
+<div class="row">
+	<div class="col-md-12 footer" id="footer">
+	<div class="a-footer"></div>
+	<script language="javascript" type="text/javascript">
+	
+	
+	
+	
+	
+	
+		</script>
+	    	    <table width="100%">
+	    <tr>
+		<td align="left" width=10% class="cfooter">
+		<a href="/info/">About SPOJ</a>
+		</td>
+		<td align="center" class="cfooter">
+		    
+		</td>
+				<td width=10% class="cfooter" style="text-align:right">
+			<a href="/SVMC08/rss/" ><img src="/gfx/rss10x10.gif" border=0>&nbsp;RSS</a>&nbsp;
+		</div>
+		</td>
+	    </tr>
+	    </table>
+	    	</div>
+</div>
+
+
+</div><!-- end of #maintable -->
+
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+
+<div class="a-header"></div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1&appId=321676846207";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--<div id="fb-root"></div>
+<script src="//connect.facebook.net/en_US/all.js#xfbml=1"></script>-->
+
+
+<div style="font-size:10px; margin-top:4px; color: rgb(85,80,95); text-align: center">
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com" style="color:black">Sphere Research Labs</a>.
+</div>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10507872-1']);
+    _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                      })();
+                      </script>
+<!-- Hotjar Tracking Code for http://www.spoj.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:334656,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<!-- 
+<script type="text/javascript">
+(function() {
+	var wrc = document.createElement('script'); wrc.type = 'text/javascript'; wrc.async = true; window.rc_utm_source='spoj';
+	wrc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'recruitcoders.com/w4loader.js';
+	var s = document.getElementsByTagName('body')[0]; s.appendChild(wrc);
+})();
+</script>
+ -->
+
+</body>
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	<!-- main header -->
+	<meta charset="utf-8">
+	
+				<title>Sphere Online Judge (SPOJ)</title>
+	  
+	<meta name="keywords" content="language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  		<meta property="og:image" content="//stx1.spoj.com/gfx/spoj-fb.jpg"/>
+	<meta property="og:description" content="SPOJ (Sphere Online Judge) is an online judge system with over 315,000 registered users and over 20000 problems. The solution to problems can be submitted in over 60 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+	<meta name="description" content="SPOJ (Sphere Online Judge) is an online judge system with over 315,000 registered users and over 20000 problems. The solution to problems can be submitted in over 60 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+  <!--[if (gte IE 9)|!(IE)]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+  <![endif]--> 
+
+	  <!-- Favicon -->
+	  <link href="//stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon" />
+	  
+	  <!-- RSS -->
+	  <link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+	
+	  <!-- Web Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
+
+	<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  	<link href="//stx1.spoj.com/gfx/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet" />
+  	<link href="//stx1.spoj.com/themes/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  	
+	<link href="//stx1.spoj.com/themes/common.css?4" rel="stylesheet" type="text/css" id="theme0" />
+	<link href="//stx1.spoj.com/themes/en_new.css?4" rel="stylesheet" type="text/css" id="theme" />
+	
+	<!-- JS -->
+	<script type="text/javascript" src='//code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	
+		
+		
+	<script type="text/javascript" language="javascript">
+	$(function () { 
+		$("#profile-menu").popover();
+	});
+	function UnCryptMailto(s) {
+		var n=0;
+		var r="";
+		for(var i=0;i<s.length;i++) {		
+			n=s.charCodeAt(i); 
+			if (n>=8364) {n = 128;}
+			r += String.fromCharCode(n+(2));	
+		}
+		return r;
+	}
+	function linkTo_UnCryptMailto(s)	{
+		location.href=UnCryptMailto(s);
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action) {
+	  try {
+	    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+	    pageTracker._trackEvent(category, action);
+	    setTimeout('document.location = "' + link.href + '"', 100)
+	  }catch(err){}
+	}
+	</script>
+	
+</head>
+
+<body>
+
+	
+	<!-- <div class="space30"></div> -->
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-md-12 text-right">
+										<form method="post" style="display: none;" action="/login/" id="login-form">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-2">
+								<input type="hidden" name="next_raw" value="/"/>
+								<input type="hidden" name="autologin" value="1"/>
+								<input type="text" name="login_user" placeholder="Username" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+								<input type="password" name="password" placeholder="Password" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+																<button type="submit" class="btn btn-default btn-sm" style="display: inline-block; margin-right: 10px;"><span class="fa fa-sign-in fa-lg"></span> <strong>sign in</strong></button>
+																<a href="/register"><i class="fa fa-user-plus"></i> sign up</a> 
+								<a href="/forgot"><i class="fa fa-question-circle"></i> forgot</a>
+				        									</div>
+						</div>
+					</form>
+										
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-4">
+					<a href="/" class="navbar-brand">
+						<img src="//stx1.spoj.com/gfx/2015e.png" style="height: 40px;"/>
+					</a>
+					<div class="navbar-header">
+				      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fa fa-bars"></i>
+				      </button>
+				    </div>
+				</div>
+				<div class="col-md-8" id="menu">
+				
+					
+					<div class="row">
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"  style="border: 0px;">
+				      <ul class="nav navbar-nav" style="  float: right; margin-top: 10px;">
+				      						        <li >
+					          <a href="/problems"><i class="fa fa-puzzle-piece"></i> PROBLEMS</a>
+					        </li>
+					        					        <li >
+					          <a href="/status"><i class="fa fa-circle"></i> STATUS</a>
+					        </li>
+					        <li >
+					          <a href="/ranks"><i class="fa fa-trophy"></i> RANKS</a>
+					        </li>
+					        <li >
+					          <a href="http://spoj.com/forum"><i class="fa fa-comments-o"></i> DISCUSS</a>
+					        </li>
+					        <li >
+					          <a href="/contests">CONTESTS</a>
+					        </li>
+											        					        <li >
+					        	<a href="/login" class="text-success" onclick="$('#login-form').show(); $('input[name=login_user]').focus(); return false;"><i class="fa fa-sign-in"></i> sign in</a>
+					        </li>
+					        						
+				        
+				      </ul>
+				    </nav>
+				    </div>
+				    
+				    
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container" id="menu">
+			
+		</div>
+		
+		<div class="container" id="content">
+		<h1 class="text-center"><strong>SPOJ exists thanks to</strong></h1>
+<br/>
+
+
+<h3 class="text-center">Editorial Board Members</h3>
+<table class="problems table">
+<tr>
+	<th>LOGIN</th>
+	<th>USER NAME</th>
+	<th>COUNTRY</th>
+</tr>
+	<tr>
+		<td>cyclops</td>
+		<td><a href="/users/cyclops">Mitch Schwartz</a></td>
+		<td>HOLY SEE (VATICAN CITY STATE)</td>
+	</tr>
+	<tr>
+		<td>defrager</td>
+		<td><a href="/users/defrager">Oleg</a></td>
+		<td>RUSSIAN FEDERATION</td>
+	</tr>
+	<tr>
+		<td>francky</td>
+		<td><a href="/users/francky">Francky</a></td>
+		<td>FRANCE</td>
+	</tr>
+	<tr>
+		<td>min_25</td>
+		<td><a href="/users/min_25">Min_25</a></td>
+		<td>JAPAN</td>
+	</tr>
+	<tr>
+		<td>sourspinach</td>
+		<td><a href="/users/sourspinach">Jacob Plachta</a></td>
+		<td>UNITED STATES</td>
+	</tr>
+	<tr>
+		<td>tjandra</td>
+		<td><a href="/users/tjandra">(Tjandra Satria Gunawan)(æ›¾æ¯…æ˜†)</a></td>
+		<td>INDONESIA</td>
+	</tr>
+</table>
+
+
+
+
+
+<h3 class="text-center">All problem setters</h3>
+<h4 class="text-center">Top 10 problem setters: (<a href="/ranks/psetters">click here</a> to view full list)</h4>
+<table class="problems" width="100%">
+<tr>
+<th width="10%">RANK</th>
+<th width="10%">CC</th>
+<th width="70%">NAME</th>
+<th width="10%">ADDED</th>
+</tr>
+	<tr>
+	<td>1</td>
+	<td>CN</td>
+	<td><a href="/search/'[Trichromatic] XilinX'/problems=on">[Trichromatic] XilinX<a></td>
+	<td>264</td>
+	</tr>
+	<tr>
+	<td>2</td>
+	<td>CO</td>
+	<td><a href="/search/''/problems=on"><a></td>
+	<td>229</td>
+	</tr>
+	<tr>
+	<td>3</td>
+	<td>FR</td>
+	<td><a href="/search/'Adrian Kosowski'/problems=on">Adrian Kosowski<a></td>
+	<td>104</td>
+	</tr>
+	<tr>
+	<td>4</td>
+	<td>VN</td>
+	<td><a href="/search/'~!(*(@*!@^&'/problems=on">~!(*(@*!@^&<a></td>
+	<td>102</td>
+	</tr>
+	<tr>
+	<td>5</td>
+	<td>IN</td>
+	<td><a href="/search/'cegprakash'/problems=on">cegprakash<a></td>
+	<td>96</td>
+	</tr>
+	<tr>
+	<td>6</td>
+	<td>VN</td>
+	<td><a href="/search/'Race with time'/problems=on">Race with time<a></td>
+	<td>94</td>
+	</tr>
+	<tr>
+	<td>7</td>
+	<td>DE</td>
+	<td><a href="/search/'Adrian Kuegel'/problems=on">Adrian Kuegel<a></td>
+	<td>84</td>
+	</tr>
+	<tr>
+	<td>8</td>
+	<td>AR</td>
+	<td><a href="/search/'Coach UTN FRSF'/problems=on">Coach UTN FRSF<a></td>
+	<td>81</td>
+	</tr>
+	<tr>
+	<td>9</td>
+	<td>IN</td>
+	<td><a href="/search/'dce coders'/problems=on">dce coders<a></td>
+	<td>75</td>
+	</tr>
+	<tr>
+	<td>9</td>
+	<td>FR</td>
+	<td><a href="/search/'Francky'/problems=on">Francky<a></td>
+	<td>75</td>
+	</tr>
+</table>
+
+
+<h3 class="text-center">Special credits</h3>
+<table class="table">
+<tr>
+<th>AMERICA</th><th>ASIA</th><th>AUSTRALIA AND OCEANIA</th><th>EUROPE</th>
+</tr>
+<tr>
+
+<td style="width:25%;vertical-align:top">
+
+<table style="width:100%">
+<tr><th>BR</th></tr>
+<tr><td><a href="http://www.spoj.com/users/wanderley/" target="_blank">Wanderley Guimarães</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/andrehp/" target="_blank">Andre Hahn Pereira</a></td></tr>
+</table>
+
+<table style="width:100%">
+<tr><th>US</th></tr>
+<tr><td><a href="http://www.spoj.com/users/minilek/" target="_blank">Jelani Nelson</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/kawigi/" target="_blank">Matthew Reeder</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/super_z/" target="_blank">Pascal Zimmer</a></td></tr>
+</table>
+
+</td>
+
+<td style="width:25%;vertical-align:top">
+
+<table style="width:100%">
+<tr><th>AM</th></tr>
+<tr><td><a href="http://www.spoj.com/users/armand/" target="_blank">Armen Andreasyan</a></td></tr>
+</table>
+
+<table style="width:100%">
+<tr><th>CN</th></tr>
+<tr><td><a href="http://www.spoj.com/users/xilinx/" target="_blank">Blue Mary</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/nealzane/" target="_blank">Neal Zane</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/zhuzeyuan/" target="_blank">Zeyuan Zhu</a></td></tr>
+
+</table>
+
+<table style="width:100%">
+<tr><th>VN</th></tr>
+<tr><td><a href="http://www.spoj.com/users/thanhvy/" target="_blank">Thanh Vy Hua Le</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/paulmcvn/" target="_blank">Duc Ngo Minh</a></td></tr>
+</table>
+
+<table style="width:100%">
+<tr><th>IN</th></tr>
+<tr><td>Smit Kotadiya</td></tr>
+<tr><td><a href="http://www.spoj.com/users/gaurav_agarval/" target="_blank">Gaurav Agarwal</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/syco/" target="_blank">Varun Jalan</a></td></tr>
+</table>
+
+</td>
+
+<td style="width:25%;vertical-align:top">
+
+<table style="width:100%">
+<tr><th>NZ</th></tr>
+<tr><td><a href="http://www.spoj.com/users/triplem/" target="_blank">Stephen Merriman</a></td></tr>
+</table>
+
+</td>
+
+<td style="width:25%;vertical-align:top">
+
+<table style="width:100%">
+<tr><th>BE</th></tr>
+<tr><td>An Coorevits</td></tr>
+<tr><td><a href="http://www.spoj.com/users/pdawyndt/" target="_blank">Peter Dawyndt</a></td></tr>
+</table>
+
+<table style="width:100%">
+<tr><th>DE</th></tr>
+<tr><td><a href="http://www.spoj.com/users/sgog/" target="_blank">Simon Gog</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/ak15/" target="_blank">Adrian Kuegel</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/overwise/" target="_blank">Robin Nittka</a></td></tr>
+</table>
+
+<table style="width:100%">
+<tr><th>HR</th></tr>
+<tr><td><a href="http://www.spoj.com/users/stjepang/" target="_blank">Stjepan Glavina</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/ikatanic/" target="_blank">Ivan Katanić</a></td></tr>
+</table>
+
+<table style="width:100%">
+<tr><th>HU</th></tr>
+<tr><td><a href="http://www.spoj.com/users/gerrob/" target="_blank">Robert Gerbicz</a></td></tr>
+</table>
+
+<table style="width:100%">
+<tr><th>PL</th></tr>   
+<tr><td><a href="http://www.spoj.com/users/zukow/" target="_blank">Jakub Byczkowski</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/tomek/" target="_blank">Tomek Czajka</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/kfas/" target="_blank">Adam Dzedzej</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/gawry/" target="_blank">Paweł Gawrychowski</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/qbolec/" target="_blank">Jakub Łopuszański</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/roxy/" target="_blank">Rafał Nowak</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/pomyk/" target="_blank">Patryk Pomykalski</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/m_sasinowski/" target="_blank">Marcin Sasinowski</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/izulin/" target="_blank">Przemysław Uznański</a></td></tr>
+</table>
+
+<table style="width:100%">
+<tr><th>RU</th></tr>
+<tr><td><a href="http://www.spoj.com/users/defrager/" target="_blank">Oleg Chernyakhovskiy</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/turbo/" target="_blank">Roman Sol</a></td></tr>
+<tr><td><a href="http://www.spoj.com/users/maxsu/" target="_blank">Maxim A. Sukhov</a></td></tr>
+</table>
+
+<table style="width:100%">
+<tr><th>UA</th></tr>
+<tr><td><a href="http://www.spoj.com/users/kai/" target="_blank">Alexander Kozlov</a></td></tr>
+</table>
+
+</td>
+
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+	<br/>
+</div>
+		
+		
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 text-center">
+					<a href="/info">About</a> | <a href="/tutorials">Tutorial</a> | <a href="/tools">Tools</a> | <a href="/clusters">Clusters</a> | <a href="/credits">Credits</a> | <a href="/jobs">Jobs</a> | <a href="/sphereengine">API</a> | <a href="/gfx/spoj-terms.pdf" target="_blank">Terms</a>
+				</div>
+				<div class="col-md-2 text-right">
+					<a href="/rss/" ><img src="//stx1.spoj.com/gfx/rss10x10.gif" border=0>&nbsp;RSS</a>&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center" id="footer-srl">
+			
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Research Labs</a>.
+
+		</div> 
+	</div>
+
+	<!-- JavaScripts -->
+	
+		
+	
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('.no_a_info').css('visibility', 'visible');
+		}, 5000);
+		
+		if(!$('.aProblemTop').length && !$('.aProblemsTop').length && !$('.aSubmitTop').length && !$('.aStatusTop').length && !$('.aMainRight').length){
+			ga('send', 'event', 'ads', 'no-ads', 'main-contest');
+		}
+		if ($('.aProblemTop').height() == 0){
+			$('.aProblemTop').css({'border': '1px solid #ddd', 'background': '#f0f4e3', 'height': 90});
+			$('.aProblemTop').html($('<p class="text-center">using adblock?</p><h4 class="text-center">Online ads help us to maintain site.</h4><p class="text-center"><strong>please whitelist *.spoj.com</strong></p>'));
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemTop');
+		}
+		if ($('.aProblemsTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemsTop');
+		}
+		if ($('.aSubmitTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aSubmitTop');
+		}
+		if ($('.aStatusTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aStatusTop');
+		}
+		if ($('.aMainRight').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aMainRight');
+		}
+	});
+	</script>
+	
+	
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.timers.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.cookie.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<script src="//stx1.spoj.com/gfx/md5.js"></script>
+	<script src="//stx1.spoj.com/gfx/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+	<script src="//stx1.spoj.com/gfx/scripts/tour.js"></script>
+	
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=321676846207&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-10507872-1', 'auto');
+	  ga('require', 'linkid', 'linkid.js');
+	  ga('send', 'pageview');
+	</script>
+<!-- Hotjar Tracking Code for http://www.spoj.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:334656,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click', '.track', function(){
+			var event = $(this).attr('data-event');
+			var action = $(this).attr('data-action');
+			var value = $(this).attr('data-value');
+			ga('send', 'event', event, action, value);
+		});
+	});
+	//window.open('http://incoming.hotjar.com/s/7366', '_blank');
+	</script>
+
+
+</body>
+</html>

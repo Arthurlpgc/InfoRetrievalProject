@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	<!-- main header -->
+	<meta charset="utf-8">
+	
+				<title>SPOJ.com - Problem ACMAKER</title>
+		  
+	<meta name="keywords" content="language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  		<meta property="og:title" content="SPOJ.com - Problem ACMAKER"/>
+    <meta property="fb:app_id"      content="321676846207" />
+	<meta property="og:type" content="spoj-pl:problem"/>
+	<meta property="og:url" content="http://www.spoj.com/problems/ACMAKER/"/>
+	<meta property="og:image" content="//stx1.spoj.com/gfx/logo-cr.png"/>
+	<meta property="og:description" content="..."/>
+	<meta name="description" content="..."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+  <!--[if (gte IE 9)|!(IE)]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+  <![endif]--> 
+
+	  <!-- Favicon -->
+	  <link href="//stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon" />
+	  
+	  <!-- RSS -->
+	  <link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+	
+	  <!-- Web Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
+
+	<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  	<link href="//stx1.spoj.com/gfx/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet" />
+  	<link href="//stx1.spoj.com/themes/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  	
+	<link href="//stx1.spoj.com/themes/common.css?4" rel="stylesheet" type="text/css" id="theme0" />
+	<link href="//stx1.spoj.com/themes/en_new.css?4" rel="stylesheet" type="text/css" id="theme" />
+	
+	<!-- JS -->
+	<script type="text/javascript" src='//code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	
+		
+		
+	<script type="text/javascript" language="javascript">
+	$(function () { 
+		$("#profile-menu").popover();
+	});
+	function UnCryptMailto(s) {
+		var n=0;
+		var r="";
+		for(var i=0;i<s.length;i++) {		
+			n=s.charCodeAt(i); 
+			if (n>=8364) {n = 128;}
+			r += String.fromCharCode(n+(2));	
+		}
+		return r;
+	}
+	function linkTo_UnCryptMailto(s)	{
+		location.href=UnCryptMailto(s);
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action) {
+	  try {
+	    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+	    pageTracker._trackEvent(category, action);
+	    setTimeout('document.location = "' + link.href + '"', 100)
+	  }catch(err){}
+	}
+	</script>
+	
+</head>
+
+<body>
+
+	
+	<!-- <div class="space30"></div> -->
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-md-12 text-right">
+										<form method="post" style="display: none;" action="/login/" id="login-form">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-2">
+								<input type="hidden" name="next_raw" value="/"/>
+								<input type="hidden" name="autologin" value="1"/>
+								<input type="text" name="login_user" placeholder="Username" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+								<input type="password" name="password" placeholder="Password" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+																<button type="submit" class="btn btn-default btn-sm" style="display: inline-block; margin-right: 10px;"><span class="fa fa-sign-in fa-lg"></span> <strong>sign in</strong></button>
+																<a href="/register"><i class="fa fa-user-plus"></i> sign up</a> 
+								<a href="/forgot"><i class="fa fa-question-circle"></i> forgot</a>
+				        									</div>
+						</div>
+					</form>
+										
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-4">
+					<a href="/" class="navbar-brand">
+						<img src="//stx1.spoj.com/gfx/2015e.png" style="height: 40px;"/>
+					</a>
+					<div class="navbar-header">
+				      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fa fa-bars"></i>
+				      </button>
+				    </div>
+				</div>
+				<div class="col-md-8" id="menu">
+				
+					
+					<div class="row">
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"  style="border: 0px;">
+				      <ul class="nav navbar-nav" style="  float: right; margin-top: 10px;">
+				      						        <li class="active">
+					          <a href="/problems"><i class="fa fa-puzzle-piece"></i> PROBLEMS</a>
+					        </li>
+					        					        <li >
+					          <a href="/status"><i class="fa fa-circle"></i> STATUS</a>
+					        </li>
+					        <li >
+					          <a href="/ranks"><i class="fa fa-trophy"></i> RANKS</a>
+					        </li>
+					        <li >
+					          <a href="http://spoj.com/forum"><i class="fa fa-comments-o"></i> DISCUSS</a>
+					        </li>
+					        <li >
+					          <a href="/contests">CONTESTS</a>
+					        </li>
+											        					        <li >
+					        	<a href="/login" class="text-success" onclick="$('#login-form').show(); $('input[name=login_user]').focus(); return false;"><i class="fa fa-sign-in"></i> sign in</a>
+					        </li>
+					        						
+				        
+				      </ul>
+				    </nav>
+				    </div>
+				    
+				    
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container" id="menu">
+			
+		</div>
+		
+		<div class="container" id="content">
+		<script type='text/javascript' src='/gfx/jquery.cxhelp2.js'></script>
+
+
+
+ <!-- wykorzystywane w pcontent.html (by wiele) -->
+
+<div class="submenu">
+	
+		<ol class="breadcrumb">
+	  <li><a href="/problems">Problems</a></li>
+	  <li><a href="/problems/classical">classical</a></li>
+	  <li class="active">ACM (ACronymMaker)</li>
+	</ol>
+		
+	<ol class="navbar-right">
+						
+				<li><a href="/status/ACMAKER/" class="">Status</li></a>
+		<li><a href="/ranks/ACMAKER/" class="">Ranking</li></a>
+	</ol>
+</div>
+
+
+	<script type="text/javascript">
+		var number_of_voteboxes = "";
+	</script>
+
+
+<div class="row first-row">
+	<div class="col-lg-8 col-md-8">
+		<div class="prob" style="position: relative">
+
+			<!-- google_ad_section_start -->
+			<!-- plik z pomoca kontekstowa (cxhelp_*) dziedziczony po pindex.html -->
+
+
+
+<script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciimath/js/ASCIIMathMLwFallback.js"></script>
+<!--script type="text/javascript" src="/gfx/jscripts/tiny_mce/plugins/asciisvg/js/ASCIIsvgPI.js"></script-->
+<script type="text/javascript">
+<!--
+var AScgiloc = 'http://www.imathas.com/imathas/filter/graph/svgimg.php';
+var AMTcgiloc = "/files/gif/";
+-->
+</script>
+
+
+<div class="text-center"><center>
+	<div class="aProblemTop c728x90"><div class="no_a_info"></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="1073332635"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+	</center>
+</div>
+<br/>
+
+<h2 id="problem-name" class="text-center">ACMAKER - ACM (ACronymMaker)</h2>
+
+
+<div class="row">
+	<div id="problem-tags" class="col-lg-12 text-center">
+												
+					<a href="/problems/tag/dynamic-programming"><span class=" tag-algorithm-datastructure- tag-link problem-tag" data-tagid="45">#dynamic-programming<span class="fa fa-times manage-tag-ar" style="display: none"></span></span></a>
+						</div>
+</div>
+<br/>
+
+<div id="problem-body">
+	<p>
+The sadists who design problems for ACM programming contests often like to include the abbre-
+viation &#8220;ACM&#8221; somewhere in their problem descriptions. Thus, in years past, the World Finals
+has had problems involving &#8220;Apartment Construction Management,&#8221; the &#8220;Atheneum of Culture and
+Movies,&#8221; the &#8220;Association of Cover Manufacturers,&#8221; &#8220;ACM Airlines,&#8221; the &#8220;Association for Computa-
+tional Marinelife,&#8221; and even an insect named &#8220;Amelia Cheese Mite.&#8221; However, the number of word
+combinations beginning with A, C, and M that make sense is finite and the problem writers are starting
+to run out of ideas (it&#8217;s hard to think of problems about &#8220;Antidisestablishmentarianistic Chthonian
+Metalinguistics&#8221;). Fortunately, modern culture allows more flexibility in designing abbreviations &#8212;
+consider, for example:
+
+<p><p>
+<pre>
+GDB &#8212; Gnu DeBugger
+LINUX &#8212; either &#8220;LINus&#8217;s UniX&#8221; or &#8220;LINUs&#8217;s miniX&#8221; or &#8220;Linux Is Not UniX&#8221;
+SNOBOL &#8212; StriNg Oriented symBOlic Language
+SPITBOL &#8212; SPeedy ImplemenTation of snoBOL
+</pre>
+
+<p><p>
+The rules used in these examples seem to be:
+
+<p><p>
+<ul>
+<li> Insignificant words (such as &#8220;of&#8221;, &#8220;a&#8221;, &#8220;the&#8221;, etc.) are ignored.
+<li> The letters of the abbreviation must appear, in the correct order, as an ordered sublist of the
+letters in the significant words of the phrase to be abbreviated.
+<li> At least one letter of the abbreviation must come from every significant word (multiple occurrences
+of a letter are, of course, treated as distinct).
+</ul>
+
+<p><p>
+Of course these rules are often broken in real life. For instance, RADAR is an abbreviation for &#8220;RAdio
+Detecting And Ranging&#8221;. Under our rules (assuming that &#8220;and&#8221; is an insignificant word), this would
+not be a valid abbreviation (however, RADR or RADRAN or DODGING would be valid). You have
+been asked to take a list of insignificant words and a list of abbreviations and phrases and to determine
+in how many ways each abbreviation can be formed from the corresponding phrase according to the
+rules above.
+
+<h3>Input</h3>
+<p>
+The input file consists of multiple scenarios. Each scenario begins with an integer 100 >= <i>n</i> >= 1 followed
+by <i>n</i> insignificant words, all in lower case, one per line with no extra white space. (A line containing
+0 indicates end of input.) Following this are one or more test cases for this scenario, one per line,
+followed by a line containing the phrase &#8220;LAST CASE&#8221;. Each line containing a test case begins with
+an abbreviation (uppercase letters only) followed by a phrase (lowercase letters and spaces only). The
+abbreviation has length at least 1 and the phrase contains at least one significant word. No input line
+(including abbreviation, phrase, and spaces) will contain more than 150 characters. Within these limits,
+however, abbreviations and phrase words may be any length.
+
+<h3>Output</h3>
+<p>
+For each test case, output the abbreviation followed by either
+
+<i>
+<p><p>
+is not a valid abbreviation
+
+<p><p>
+or
+
+<p><p>
+can be formed in i ways</i>
+
+<p><p>
+where <i>i</i> is the number of different ways in which the letters of the abbreviation may be assigned to the
+letters in the phrase according to the rules above. The value of <i>i</i> will not exceed the range of a 32-bit
+signed integer.
+
+<h3>Example</h3>
+
+<pre>
+<b>Input:</b>
+2
+and
+of
+ACM academy of computer makers
+RADAR radio detection and ranging
+LAST CASE
+2
+a
+an
+APPLY an apple a day
+LAST CASE
+0
+
+<b>Output:</b>
+ACM can be formed in 2 ways
+RADAR is not a valid abbreviation
+APPLY can be formed in 1 ways
+</pre>
+
+</div>
+
+<div class="text-center">
+	<a href="/submit/ACMAKER/" class="btn btn-primary btn-lg"><i class="fa fa-send"></i> Submit solution!</a>
+</div>
+			<!-- google_ad_section_end -->
+			
+			<div id="ccontent">
+			<!-- google_ad_section_start -->
+			
+<hr style="clear:both;"/>
+<a href="#" onclick="toggleComments(); return false;"><span id="comments_sh">hide</span> comments</a><br/>
+
+<a id="comments"></a>
+<table id="comments_table" width="100%">
+		<tr>
+		<td colspan="2">
+		<ul class="pagination" style="">
+			<li class="disabled"><span>&lt;</span></li>
+		<li class="disabled"><span>Previous</span></li>
+						<li class="active"><span>1</span></li> 
+							<li><a href="/problems/ACMAKER/cstart=10" class="pager_link">2</a></li> 
+							<li><a href="/problems/ACMAKER/cstart=20" class="pager_link">3</a></li> 
+						<li><a href="/problems/ACMAKER/cstart=10" class="pager_link">Next</a></li>
+		<li><a href="/problems/ACMAKER/cstart=20" class="pager_link">&gt;</a></li>
+	</ul>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	
+	<script language="JavaScript">
+	<!--
+	$(document).ready(function(){
+        $('.pager_link').bind('click', function(me){
+                var href=$(me.currentTarget).attr('href');
+		$('#ccontent').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('#ccontent').html(data);
+				$('#ccontent').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                alert('error');
+                        }
+                });
+                return false;
+        });
+	});
+	-->
+	</script>
+	
+
+
+
+			
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/d972d59f63d529ab05f221ec240cab10?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/akt_1998">akt_1998</a>: 
+								<span style="font-size: 10px; color: #666;">2017-07-06 22:02:35</span>
+		<br/>
+				<p>Recurrsion works.<br/>very easy ;)</p>
+				<b>Last edit: 2017-07-06 22:06:21</b>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/9a32dd8f21a48db5089bffeaa4f3634c?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/bit_coder2k14">SUBHAM SANGHAI</a>: 
+								<span style="font-size: 10px; color: #666;">2017-06-14 21:33:51</span>
+		<br/>
+				<p>Nice question .Just take care of :<br/>1)Input Format<br/>2)The words to be removed.<br/>3)constraints of the DP </p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/5d43257c2193489b26d43a2fe13a5db4?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/subho30666">subho30666</a>: 
+								<span style="font-size: 10px; color: #666;">2017-05-28 13:41:59</span>
+		<br/>
+				<p>can anyone help with ,approach of this problem . i am stuck how to solve this DP problem. </p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/c003324826e7e11e11e0b03d9b753153?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/siamcr7">Jamil Siam</a>: 
+								<span style="font-size: 10px; color: #666;">2017-04-23 16:20:54</span>
+		<br/>
+				<p>those who are getting TLE, do not use memset. do it manually. </p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/5771a14d2f139ff0100d93b4f32b109d?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/lotus_guy">lotus_guy</a>: 
+								<span style="font-size: 10px; color: #666;">2017-04-15 12:13:23</span>
+		<br/>
+				<p>0.08 sec / 30M</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/b2591451abe94dccc1d83742c028370b?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/sarthakshah30">sarthakshah30</a>: 
+								<span style="font-size: 10px; color: #666;">2017-02-26 19:07:28</span>
+		<br/>
+				<p>AC in 1 go :)<br/>very nice question</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/72bb7b04bbafd402680d31496c1a7a2a?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/prasoonbatham">prasoonbatham</a>: 
+								<span style="font-size: 10px; color: #666;">2017-01-20 17:04:03</span>
+		<br/>
+				<p></p>
+				<b>Last edit: 2017-01-20 17:04:39</b>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/72bb7b04bbafd402680d31496c1a7a2a?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/prasoonbatham">prasoonbatham</a>: 
+								<span style="font-size: 10px; color: #666;">2017-01-20 17:03:42</span>
+		<br/>
+				<p>ac in one go :)</p>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/f8cdec8ef1559bf887ea54afbd5fe4c5?s=40&20150116"/>
+		</td>
+		<td class="comm comm_odd">
+			<a href="/users/herkeyrefugee">herkeyrefugee</a>: 
+								<span style="font-size: 10px; color: #666;">2016-12-06 06:33:09</span>
+		<br/>
+				<p>very easy take care while removing the insignificant words costed me 3 WA</p>
+				<b>Last edit: 2016-12-06 06:33:28</b>
+						</td>
+	</tr>
+				
+	<tr>
+		<td width="50" style="vertical-align:top;">
+			<img src="http://www.gravatar.com/avatar/b37bf524ec697760cb8204a2db37d888?s=40&20150116"/>
+		</td>
+		<td class="comm comm_even">
+			<a href="/users/raushanraj88">raushanraj88</a>: 
+								<span style="font-size: 10px; color: #666;">2016-09-09 06:45:49</span>
+		<br/>
+				<p>I am very beginner, takes 1.5 days to think and do this question,accepted in 1 go.Loved it.</p>
+						</td>
+	</tr>
+			
+</table>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+function getCookieVal (offset) {
+        var endstr = document.cookie.indexOf (";", offset);
+        if (endstr == -1) { 
+                endstr = document.cookie.length; 
+        }
+        return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg) {
+      return getCookieVal (j);
+      }
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+    }
+  return null;
+}
+
+function toggleComments() {
+        var a = document.getElementById('comments_table');
+        var d = a.style.display;
+        if( d == "" || d == "block" ){
+                d = "none";
+                document.getElementById('comments_sh').innerHTML = 'show';
+        } else {
+                d = "block";
+                document.getElementById('comments_sh').innerHTML = 'hide';
+        }
+        a.style.display = d;
+        document.cookie="comments_table="+d+"; path=/;";
+}
+
+if( GetCookie('comments_table') == 'none' ){
+        document.getElementById('comments_sh').innerHTML = 'show';
+        document.getElementById('comments_table').style.display = 'hide';
+}
+
+-->
+</script>
+
+
+			<!-- google_ad_section_end -->
+			</div>
+			<table width="100%">
+        </table>
+<br/>
+		</div>
+	</div><!-- endof col-lg-8 col-md-8 -->
+	
+	<div class="col-lg-4 col-md-4">
+	
+				<div id="problem-btn-submit-box">
+			<a href="/submit/ACMAKER/" id="problem-btn-submit" class="btn btn-primary" style="width: 100%; margin-bottom: 20px;"><i class="fa fa-send"></i> Submit solution!</a>
+		</div>
+				
+		<table border=0 cellspacing=0 cellpadding=0 style="margin-bottom:10px" class="probleminfo" id="problem-meta">
+			<colgroup>
+				<col width="120"/>
+				<col/>
+			</colgroup>
+			<tbody>
+			<tr><td>Added by:</td><td><a href="/users/steinersp">Camilo Andrés Varela León</a></td></tr>
+			<tr><td>Date:</td><td>2007-07-26</td></tr>
+			<tr><td>Time limit:</td><td>0.100s
+			</td></tr>
+			<tr><td>Source limit:</td><td>50000B</td></tr>
+						<tr><td>Memory limit:</td><td>1536MB</td></tr>
+										<tr>
+					<td>Cluster:</td>
+					<td>
+													<a href="/clusters/" target="_blank">Cube (Intel G860)</a>
+								
+					</td>
+				</tr>
+						<tr><td>Languages:</td><td>All except: ERL JS-RHINO NODEJS PERL6 VB.NET </td></tr>
+			<tr><td>Resource:</td><td>East Central North America 2005</td></tr>													</tbody>
+		</table>
+
+		<div class="right-box-hehe">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- spoj_problem_336x280_right2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="3836605032"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		</div>
+	
+		<!-- BEGIN: Voting for problem -->
+		
+				
+		<!-- END: Voting the problem -->
+		
+		<div class="right-box-hehe">
+							<div class="c336x280"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- spoj_problem_336x280_right -->
+	<ins class="adsbygoogle"
+			style="display:inline-block;width:336px;height:280px"
+					data-ad-client="ca-pub-4453360425583535"
+							data-ad-slot="7873511834"></ins>
+							<script>
+							(adsbygoogle = window.adsbygoogle || []).push({});
+	</script></div>
+						<br/>
+		</div>
+		
+				
+		
+		<script type="text/javascript">
+			function callback_after_vote(type, data)
+			{
+				var response = $.parseJSON(data);
+				manage_vote_interface(type);
+				//.html('<div class="vote-thank-you">Thank you!</div>');
+				
+
+				if (type == "problem" || type == "implementation") {
+					var progressBarValue = Math.round(2 + 98 * response.avg / 3);
+					var progressBarType;
+					if (progressBarValue < 25) progressBarType = "progress-bar-primary";
+					else if (progressBarValue < 50) progressBarType = "progress-bar-success";
+					else if (progressBarValue < 75) progressBarType = "progress-bar-warning";
+					else progressBarType = "progress-bar-danger";
+					
+					$("#rate-" + type + "-box .progress-bar").css("width", progressBarValue.toString() +"%");
+					$("#rate-" + type + "-box .progress-bar").attr("aria-valuenow", progressBarValue.toString());
+					$("#rate-" + type + "-box .progress-bar").attr("class", "progress-bar " + progressBarType);
+					$("#rate-" + type + "-box .progress-value").html(progressBarValue.toString() +"%");
+				}
+				else if (type == "quality") {
+					var quality_plus = response.sum_plus;
+					var quality_minus = response.sum_minus;
+
+					var box_content = '';
+
+					if (quality_plus > 0 || quality_minus > 0) {
+						if (quality_plus > 0) {
+							box_content += '<font size="+2"><span class="label label-success">' +
+								quality_plus.toString() + 
+								' <span class="fa fa-thumbs-o-up"></span></span></font>';
+						}
+						if (quality_minus > 0) {
+							box_content += '<font size="+2"><span class="label label-danger">' +
+								quality_minus.toString() + 
+								' <span class="fa fa-thumbs-o-down"></span></span></font>';
+						}
+					}
+
+					$( "#rate-" + type + "-box" ).empty().html(box_content);
+				}
+
+				// update count
+				if (response.update_count == 1) {
+					var count = parseInt($("#votes_count").html(), 10);
+					count++;
+					var votes_word = " vote";
+					if (count > 1) votes_word += "s";
+					$("#votes_count").empty().html(count.toString() + votes_word);
+				}
+			}
+			$( ".rate-btn" ).click(function() {
+				var rate_type = $(this).attr('data-rate-type').toString();
+				var rate_type_full = "";
+				var rate = $(this).attr('data-rate').toString();
+				if (rate_type == "p") rate_type_full = "problem";
+				else if (rate_type == "i") rate_type_full = "implementation";
+				else if (rate_type == "q") rate_type_full = "quality";
+				$.get( '/?a=vote&pid=1703&t=' + rate_type + '&r=' + rate, function( data ) {
+				  callback_after_vote(rate_type_full, data);
+				});
+			});
+			function manage_vote_interface(type) {
+				number_of_voteboxes--;
+				/*
+				if (number_of_voteboxes == 0) {
+					$( "#vote-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				} else {
+					$( "#vote-" + type + "-box" ).fadeOut(1500, function() {
+						$(this).remove();
+					});
+				}
+				*/
+				var n = $('.vote-thank-you').length;
+				var offset = (n * 60).toString() + "px";
+				$(document.body).append(
+					'<div class="vote-thank-you" style="margin: 40%;">' +
+					'<div class="alert alert-success" style="position: fixed; top: '+offset+';">' +
+					'<strong>Thank you for voting!</strong>' +				
+					'</div></div>');
+				setTimeout(function(){$( ".vote-thank-you" ).fadeOut(1500, function() {
+					$(this).remove();
+				});},2000);
+			}
+		</script>
+		
+		
+	</div><!-- endof col-lg-4 col-md-4 -->
+</div>
+
+
+
+
+
+
+<style>
+ul.list-unstyled li{
+	margin-bottom: 5px;
+}
+ul.list-unstyled li a.btn{
+	width: 100%;
+}
+ul.ui-autocomplete{
+	z-index: 10000;
+	width: 200px !important;
+}
+</style>
+	<br/>
+</div>
+		
+		
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 text-center">
+					<a href="/info">About</a> | <a href="/tutorials">Tutorial</a> | <a href="/tools">Tools</a> | <a href="/clusters">Clusters</a> | <a href="/credits">Credits</a> | <a href="/jobs">Jobs</a> | <a href="/sphereengine">API</a> | <a href="/gfx/spoj-terms.pdf" target="_blank">Terms</a>
+				</div>
+				<div class="col-md-2 text-right">
+					<a href="/rss/" ><img src="//stx1.spoj.com/gfx/rss10x10.gif" border=0>&nbsp;RSS</a>&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center" id="footer-srl">
+			
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Research Labs</a>.
+
+		</div> 
+	</div>
+
+	<!-- JavaScripts -->
+	
+		
+	
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('.no_a_info').css('visibility', 'visible');
+		}, 5000);
+		
+		if(!$('.aProblemTop').length && !$('.aProblemsTop').length && !$('.aSubmitTop').length && !$('.aStatusTop').length && !$('.aMainRight').length){
+			ga('send', 'event', 'ads', 'no-ads', 'main-contest');
+		}
+		if ($('.aProblemTop').height() == 0){
+			$('.aProblemTop').css({'border': '1px solid #ddd', 'background': '#f0f4e3', 'height': 90});
+			$('.aProblemTop').html($('<p class="text-center">using adblock?</p><h4 class="text-center">Online ads help us to maintain site.</h4><p class="text-center"><strong>please whitelist *.spoj.com</strong></p>'));
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemTop');
+		}
+		if ($('.aProblemsTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemsTop');
+		}
+		if ($('.aSubmitTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aSubmitTop');
+		}
+		if ($('.aStatusTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aStatusTop');
+		}
+		if ($('.aMainRight').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aMainRight');
+		}
+	});
+	</script>
+	
+	
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.timers.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.cookie.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<script src="//stx1.spoj.com/gfx/md5.js"></script>
+	<script src="//stx1.spoj.com/gfx/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+	<script src="//stx1.spoj.com/gfx/scripts/tour.js"></script>
+	
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=321676846207&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-10507872-1', 'auto');
+	  ga('require', 'linkid', 'linkid.js');
+	  ga('send', 'pageview');
+	</script>
+<!-- Hotjar Tracking Code for http://www.spoj.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:334656,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click', '.track', function(){
+			var event = $(this).attr('data-event');
+			var action = $(this).attr('data-action');
+			var value = $(this).attr('data-value');
+			ga('send', 'event', event, action, value);
+		});
+	});
+	//window.open('http://incoming.hotjar.com/s/7366', '_blank');
+	</script>
+
+
+</body>
+</html>

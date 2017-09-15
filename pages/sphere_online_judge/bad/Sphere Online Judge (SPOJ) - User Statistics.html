@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	<!-- main header -->
+	<meta charset="utf-8">
+	
+				<title>Sphere Online Judge (SPOJ)  - User Statistics</title>
+	  
+	<meta name="keywords" content="language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  		<meta property="og:image" content="//stx1.spoj.com/gfx/spoj-fb.jpg"/>
+	<meta property="og:description" content="SPOJ (Sphere Online Judge) is an online judge system with over 315,000 registered users and over 20000 problems. The solution to problems can be submitted in over 60 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+	<meta name="description" content="SPOJ (Sphere Online Judge) is an online judge system with over 315,000 registered users and over 20000 problems. The solution to problems can be submitted in over 60 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+  <!--[if (gte IE 9)|!(IE)]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" id="metatag">
+  <![endif]--> 
+
+	  <!-- Favicon -->
+	  <link href="//stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon" />
+	  
+	  <!-- RSS -->
+	  <link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+	
+	  <!-- Web Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
+
+	<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  	<link href="//stx1.spoj.com/gfx/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet" />
+  	<link href="//stx1.spoj.com/themes/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  	
+	<link href="//stx1.spoj.com/themes/common.css?4" rel="stylesheet" type="text/css" id="theme0" />
+	<link href="//stx1.spoj.com/themes/en_new.css?4" rel="stylesheet" type="text/css" id="theme" />
+	
+	<!-- JS -->
+	<script type="text/javascript" src='//code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	
+		
+		
+	<script type="text/javascript" language="javascript">
+	$(function () { 
+		$("#profile-menu").popover();
+	});
+	function UnCryptMailto(s) {
+		var n=0;
+		var r="";
+		for(var i=0;i<s.length;i++) {		
+			n=s.charCodeAt(i); 
+			if (n>=8364) {n = 128;}
+			r += String.fromCharCode(n+(2));	
+		}
+		return r;
+	}
+	function linkTo_UnCryptMailto(s)	{
+		location.href=UnCryptMailto(s);
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action) {
+	  try {
+	    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+	    pageTracker._trackEvent(category, action);
+	    setTimeout('document.location = "' + link.href + '"', 100)
+	  }catch(err){}
+	}
+	</script>
+	
+</head>
+
+<body>
+
+	
+	<!-- <div class="space30"></div> -->
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-md-12 text-right">
+										<form method="post" style="display: none;" action="/login/" id="login-form">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-2">
+								<input type="hidden" name="next_raw" value="/"/>
+								<input type="hidden" name="autologin" value="1"/>
+								<input type="text" name="login_user" placeholder="Username" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+								<input type="password" name="password" placeholder="Password" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+																<button type="submit" class="btn btn-default btn-sm" style="display: inline-block; margin-right: 10px;"><span class="fa fa-sign-in fa-lg"></span> <strong>sign in</strong></button>
+																<a href="/register"><i class="fa fa-user-plus"></i> sign up</a> 
+								<a href="/forgot"><i class="fa fa-question-circle"></i> forgot</a>
+				        									</div>
+						</div>
+					</form>
+										
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-4">
+					<a href="/" class="navbar-brand">
+						<img src="//stx1.spoj.com/gfx/2015e.png" style="height: 40px;"/>
+					</a>
+					<div class="navbar-header">
+				      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fa fa-bars"></i>
+				      </button>
+				    </div>
+				</div>
+				<div class="col-md-8" id="menu">
+				
+					
+					<div class="row">
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"  style="border: 0px;">
+				      <ul class="nav navbar-nav" style="  float: right; margin-top: 10px;">
+				      						        <li >
+					          <a href="/problems"><i class="fa fa-puzzle-piece"></i> PROBLEMS</a>
+					        </li>
+					        					        <li >
+					          <a href="/status"><i class="fa fa-circle"></i> STATUS</a>
+					        </li>
+					        <li class="active">
+					          <a href="/ranks"><i class="fa fa-trophy"></i> RANKS</a>
+					        </li>
+					        <li >
+					          <a href="http://spoj.com/forum"><i class="fa fa-comments-o"></i> DISCUSS</a>
+					        </li>
+					        <li >
+					          <a href="/contests">CONTESTS</a>
+					        </li>
+											        					        <li >
+					        	<a href="/login" class="text-success" onclick="$('#login-form').show(); $('input[name=login_user]').focus(); return false;"><i class="fa fa-sign-in"></i> sign in</a>
+					        </li>
+					        						
+				        
+				      </ul>
+				    </nav>
+				    </div>
+				    
+				    
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container" id="menu">
+			
+		</div>
+		
+		<div class="container" id="content">
+		<div class="submenu">
+	<ol>
+	  <li class="active"><a href="/ranks">Users</a></li>
+	  <li><a href="/ranks/countries">Countries</a></li>
+	  <li><a href="/ranks/psetters">Problem setters</a></li>
+	  <li><a href="/ranks/languages">Languages</a></li>
+	  <li><a href="/ranks/institutions">Institutions</a></li>
+	</ol>
+</div>
+
+<div class="row">
+	<div class="col-lg-9 col-md-8">
+	
+
+
+<h2 class="text-center">
+Problem Solvers' Hall of Fame
+</h2>
+
+<div class="text-center">
+<ul class="pagination" style="">
+			<li class="disabled"><span>&lt;</span></li>
+		<li class="disabled"><span>Previous</span></li>
+						<li class="active"><span>1</span></li> 
+							<li><a href="start=100" class="pager_link">2</a></li> 
+							<li><a href="start=200" class="pager_link">3</a></li> 
+							<li><a href="start=300" class="pager_link">4</a></li> 
+							<li><a href="start=400" class="pager_link">5</a></li> 
+							<li><a href="start=500" class="pager_link">6</a></li> 
+							<li><a href="start=600" class="pager_link">7</a></li> 
+							<li><a href="start=700" class="pager_link">8</a></li> 
+							<li><a href="start=800" class="pager_link">9</a></li> 
+							<li><a href="start=900" class="pager_link">10</a></li> 
+							<li><a href="start=1000" class="pager_link">11</a></li> 
+						<li><a href="start=100" class="pager_link">Next</a></li>
+		<li><a href="start=60600" class="pager_link">&gt;</a></li>
+	</ul>
+</div>
+
+
+
+<table class="table table-condensed">
+	<thead>
+		<tr class="">
+		<th width="10%" class="headerrowleft">RANK </th>
+				<th width="10%">CC</th>
+				<th width="40%">NAME</th>
+		<th width="15%" class="text-center" title="Classical problems: weighted score (solved count)">CLASSICAL</th>
+		<th width="15%" class="text-center" title="Challenge problems: weighted score (1st place count)">CHALLENGE</th>
+		<th width="10%" class="text-right">SCORE</th>
+		</tr>
+	</thead>
+
+<tr>
+	<td>1</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/xilinx">[Rampage] Blue.Mary</a></td>
+	<td class="text-center">2417.0 (3451)</td>
+	<td class="text-center">41.5 (11)</td>
+	<td class="text-right">2458.5&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>2</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/pl.png" title="PL"/></td>
+		<td><a href="/users/zukow">:D</a></td>
+	<td class="text-center">1107.0 (1908)</td>
+	<td class="text-center">11.0 (2)</td>
+	<td class="text-right">1118.0&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>3</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/us.png" title="US"/></td>
+		<td><a href="/users/sourspinach">SourSpinach</a></td>
+	<td class="text-center">1064.1 (2037)</td>
+	<td class="text-center">5.7 (0)</td>
+	<td class="text-right">1069.8&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>4</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/ru.png" title="RU"/></td>
+		<td><a href="/users/defrager">Oleg</a></td>
+	<td class="text-center">1013.8 (2168)</td>
+	<td class="text-center">4.3 (1)</td>
+	<td class="text-right">1018.1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>5</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/hu.png" title="HU"/></td>
+		<td><a href="/users/gerrob">Robert Gerbicz</a></td>
+	<td class="text-center">448.0 (1212)</td>
+	<td class="text-center">96.3 (17)</td>
+	<td class="text-right">544.3&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>6</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/xfastx">Lox</a></td>
+	<td class="text-center">516.2 (796)</td>
+	<td class="text-center">3.7 (0)</td>
+	<td class="text-right">519.9&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>7</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/va.png" title="VA"/></td>
+		<td><a href="/users/cyclops">Mitch Schwartz</a></td>
+	<td class="text-center">235.5 (616)</td>
+	<td class="text-center">283.4 (81)</td>
+	<td class="text-right">518.9&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>8</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/sk.png" title="SK"/></td>
+		<td><a href="/users/hodobox">Hodobox</a></td>
+	<td class="text-center">472.1 (1143)</td>
+	<td class="text-center">4.3 (0)</td>
+	<td class="text-right">476.5&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>9</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/jp.png" title="JP"/></td>
+		<td><a href="/users/min_25">Min_25</a></td>
+	<td class="text-center">420.0 (705)</td>
+	<td class="text-center">39.4 (12)</td>
+	<td class="text-right">459.4&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>10</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/gingkgo">shihanyuan</a></td>
+	<td class="text-center">442.8 (869)</td>
+	<td class="text-center">0.0 (0)</td>
+	<td class="text-right">442.8&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>11</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/tr.png" title="TR"/></td>
+		<td><a href="/users/mehmetinal">Mehmet Inal</a></td>
+	<td class="text-center">410.9 (1125)</td>
+	<td class="text-center">16.2 (0)</td>
+	<td class="text-right">427.1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>12</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/hr.png" title="HR"/></td>
+		<td><a href="/users/ikatanic">Ivan Katanic</a></td>
+	<td class="text-center">409.7 (963)</td>
+	<td class="text-center">1.2 (0)</td>
+	<td class="text-right">410.8&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>13</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/id.png" title="ID"/></td>
+		<td><a href="/users/tjandra">Tjandra Satria Gunawan</a></td>
+	<td class="text-center">345.4 (933)</td>
+	<td class="text-center">36.1 (2)</td>
+	<td class="text-right">381.5&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>14</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/hr.png" title="HR"/></td>
+		<td><a href="/users/stjepang">Stjepan Glavina</a></td>
+	<td class="text-center">379.5 (933)</td>
+	<td class="text-center">0.4 (0)</td>
+	<td class="text-right">379.8&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>15</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/th.png" title="TH"/></td>
+		<td><a href="/users/thanatipanonda">Thotsaphon Thanatipanonda</a></td>
+	<td class="text-center">374.5 (1301)</td>
+	<td class="text-center">1.1 (0)</td>
+	<td class="text-right">375.7&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>16</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/us.png" title="US"/></td>
+		<td><a href="/users/bd1916">ebd</a></td>
+	<td class="text-center">363.0 (1206)</td>
+	<td class="text-center">1.5 (0)</td>
+	<td class="text-right">364.5&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>17</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/gb.png" title="GB"/></td>
+		<td><a href="/users/bozzball">Luke Pebody</a></td>
+	<td class="text-center">348.7 (1029)</td>
+	<td class="text-center">7.0 (2)</td>
+	<td class="text-right">355.6&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>18</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/id.png" title="ID"/></td>
+		<td><a href="/users/stacia">Stacia Edina Johanna</a></td>
+	<td class="text-center">331.6 (567)</td>
+	<td class="text-center">0.2 (0)</td>
+	<td class="text-right">331.9&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>19</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/balroginfire">Erjin Zhou</a></td>
+	<td class="text-center">314.7 (482)</td>
+	<td class="text-center">2.6 (0)</td>
+	<td class="text-right">317.3&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>20</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/in.png" title="IN"/></td>
+		<td><a href="/users/rafah_24">SWOOSH!!!</a></td>
+	<td class="text-center">303.1 (1009)</td>
+	<td class="text-center">4.4 (0)</td>
+	<td class="text-right">307.5&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>21</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/ua.png" title="UA"/></td>
+		<td><a href="/users/anton_lunyov">Anton Lunyov</a></td>
+	<td class="text-center">289.4 (687)</td>
+	<td class="text-center">9.0 (0)</td>
+	<td class="text-right">298.3&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>22</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/in.png" title="IN"/></td>
+		<td><a href="/users/sherlock_holms">Rishav Goyal</a></td>
+	<td class="text-center">294.2 (819)</td>
+	<td class="text-center">1.7 (0)</td>
+	<td class="text-right">295.9&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>23</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/gs.png" title="GS"/></td>
+		<td><a href="/users/sgtlaugh">sgtlaugh</a></td>
+	<td class="text-center">290.4 (856)</td>
+	<td class="text-center">3.2 (0)</td>
+	<td class="text-right">293.6&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>24</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/rs.png" title="RS"/></td>
+		<td><a href="/users/alex_the_great">Aleksandar Kostadinov</a></td>
+	<td class="text-center">266.0 (735)</td>
+	<td class="text-center">13.5 (1)</td>
+	<td class="text-right">279.5&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>25</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cu.png" title="CU"/></td>
+		<td><a href="/users/uci_015">Shaka Shadows</a></td>
+	<td class="text-center">274.7 (731)</td>
+	<td class="text-center">1.3 (0)</td>
+	<td class="text-right">276.0&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>26</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/xujie">Eternal Answer</a></td>
+	<td class="text-center">270.5 (469)</td>
+	<td class="text-center">0.9 (0)</td>
+	<td class="text-right">271.4&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>27</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/us.png" title="US"/></td>
+		<td><a href="/users/eigenray">Eigenray</a></td>
+	<td class="text-center">268.8 (763)</td>
+	<td class="text-center">0.1 (0)</td>
+	<td class="text-right">268.9&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>28</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/us.png" title="US"/></td>
+		<td><a href="/users/gaurav_agarval">Gaurav Agarwal</a></td>
+	<td class="text-center">254.4 (940)</td>
+	<td class="text-center">5.7 (1)</td>
+	<td class="text-right">260.0&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>29</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/eg.png" title="EG"/></td>
+		<td><a href="/users/abdou_93">abdou_93</a></td>
+	<td class="text-center">251.5 (680)</td>
+	<td class="text-center">7.4 (1)</td>
+	<td class="text-right">258.8&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>30</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/id.png" title="ID"/></td>
+		<td><a href="/users/andypertamax">Andy</a></td>
+	<td class="text-center">242.9 (723)</td>
+	<td class="text-center">14.8 (2)</td>
+	<td class="text-right">257.7&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>31</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/pl.png" title="PL"/></td>
+		<td><a href="/users/damians">Damian Straszak</a></td>
+	<td class="text-center">256.0 (586)</td>
+	<td class="text-center">1.3 (0)</td>
+	<td class="text-right">257.3&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>32</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/by.png" title="BY"/></td>
+		<td><a href="/users/sk_001">Tooru Ichii</a></td>
+	<td class="text-center">248.1 (482)</td>
+	<td class="text-center">8.7 (0)</td>
+	<td class="text-right">256.8&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>33</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/ca.png" title="CA"/></td>
+		<td><a href="/users/azneye">Andy Y.F. Huang</a></td>
+	<td class="text-center">252.5 (936)</td>
+	<td class="text-center">1.1 (0)</td>
+	<td class="text-right">253.7&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>34</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/de.png" title="DE"/></td>
+		<td><a href="/users/sergej_t">Sergej</a></td>
+	<td class="text-center">247.5 (905)</td>
+	<td class="text-center">3.3 (0)</td>
+	<td class="text-right">250.8&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>35</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/by.png" title="BY"/></td>
+		<td><a href="/users/tourist">Gennady Korotkevich</a></td>
+	<td class="text-center">232.2 (704)</td>
+	<td class="text-center">15.2 (0)</td>
+	<td class="text-right">247.4&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>36</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/br.png" title="BR"/></td>
+		<td><a href="/users/rgoya">Rodolfo Riyoei Goya [USJT]</a></td>
+	<td class="text-center">239.3 (1099)</td>
+	<td class="text-center">5.5 (0)</td>
+	<td class="text-right">244.9&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>37</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/pl.png" title="PL"/></td>
+		<td><a href="/users/bardek">Bartek Dudek</a></td>
+	<td class="text-center">242.1 (497)</td>
+	<td class="text-center">0.9 (0)</td>
+	<td class="text-right">243.0&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>38</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/in.png" title="IN"/></td>
+		<td><a href="/users/coders1122">Ravi Kiran</a></td>
+	<td class="text-center">239.9 (906)</td>
+	<td class="text-center">3.0 (0)</td>
+	<td class="text-right">242.9&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>39</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/in.png" title="IN"/></td>
+		<td><a href="/users/devilwolverine">Vipul Srivastava</a></td>
+	<td class="text-center">235.0 (888)</td>
+	<td class="text-center">7.7 (0)</td>
+	<td class="text-right">242.7&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>40</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/id.png" title="ID"/></td>
+		<td><a href="/users/astadarryl">darryl</a></td>
+	<td class="text-center">235.1 (488)</td>
+	<td class="text-center">0.0 (0)</td>
+	<td class="text-right">235.1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>41</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/zhangyide">zhangyide</a></td>
+	<td class="text-center">233.5 (798)</td>
+	<td class="text-center">0.0 (0)</td>
+	<td class="text-right">233.5&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>42</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/in.png" title="IN"/></td>
+		<td><a href="/users/laveshkaushik">Lavesh Kaushik (.:frUstrAteD:.)</a></td>
+	<td class="text-center">224.8 (723)</td>
+	<td class="text-center">7.4 (0)</td>
+	<td class="text-right">232.3&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>43</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/id.png" title="ID"/></td>
+		<td><a href="/users/azure97">M Ayaz Dzulfikar</a></td>
+	<td class="text-center">231.5 (387)</td>
+	<td class="text-center">0.7 (0)</td>
+	<td class="text-right">232.2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>44</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/huanghansheng">huanghansheng</a></td>
+	<td class="text-center">230.7 (794)</td>
+	<td class="text-center">0.0 (0)</td>
+	<td class="text-right">230.7&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>45</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/mamengqi">mamengqi</a></td>
+	<td class="text-center">227.2 (799)</td>
+	<td class="text-center">0.0 (0)</td>
+	<td class="text-right">227.2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>46</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/hk.png" title="HK"/></td>
+		<td><a href="/users/fitcat">fitcat</a></td>
+	<td class="text-center">219.0 (855)</td>
+	<td class="text-center">8.1 (0)</td>
+	<td class="text-right">227.1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>47</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/sk.png" title="SK"/></td>
+		<td><a href="/users/odemacek">demacek</a></td>
+	<td class="text-center">212.5 (326)</td>
+	<td class="text-center">14.5 (0)</td>
+	<td class="text-right">227.0&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>48</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/sevenk">sevenkplus</a></td>
+	<td class="text-center">217.1 (350)</td>
+	<td class="text-center">7.6 (1)</td>
+	<td class="text-right">224.7&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>49</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/in.png" title="IN"/></td>
+		<td><a href="/users/rivudas">Rivu Das</a></td>
+	<td class="text-center">192.8 (529)</td>
+	<td class="text-center">25.9 (1)</td>
+	<td class="text-right">218.6&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>50</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/suhang">suhang</a></td>
+	<td class="text-center">217.6 (403)</td>
+	<td class="text-center">0.0 (0)</td>
+	<td class="text-right">217.6&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>51</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/zhaozilong">zhaozilong</a></td>
+	<td class="text-center">216.4 (776)</td>
+	<td class="text-center">0.0 (0)</td>
+	<td class="text-right">216.4&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>52</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/hr.png" title="HR"/></td>
+		<td><a href="/users/kalinov">Luka Kalinovcic</a></td>
+	<td class="text-center">213.8 (547)</td>
+	<td class="text-center">1.3 (0)</td>
+	<td class="text-right">215.2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>53</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/in.png" title="IN"/></td>
+		<td><a href="/users/pranet">Pranet Verma</a></td>
+	<td class="text-center">208.4 (784)</td>
+	<td class="text-center">3.8 (0)</td>
+	<td class="text-right">212.2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>54</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/de.png" title="DE"/></td>
+		<td><a href="/users/numerix">numerix</a></td>
+	<td class="text-center">169.8 (678)</td>
+	<td class="text-center">40.9 (4)</td>
+	<td class="text-right">210.6&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>55</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/dhh1995">dhh1995</a></td>
+	<td class="text-center">208.6 (321)</td>
+	<td class="text-center">0.0 (0)</td>
+	<td class="text-right">208.6&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>56</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/az.png" title="AZ"/></td>
+		<td><a href="/users/mahmud2690">mahmud2690 </a></td>
+	<td class="text-center">207.4 (505)</td>
+	<td class="text-center">0.0 (0)</td>
+	<td class="text-right">207.4&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>57</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/jp.png" title="JP"/></td>
+		<td><a href="/users/himei">kunio himei</a></td>
+	<td class="text-center">186.6 (1017)</td>
+	<td class="text-center">13.7 (1)</td>
+	<td class="text-right">200.2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>58</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cu.png" title="CU"/></td>
+		<td><a href="/users/emoralesp">Eddy R. Morales Perez</a></td>
+	<td class="text-center">199.3 (733)</td>
+	<td class="text-center">0.4 (0)</td>
+	<td class="text-right">199.7&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>59</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/bobchennan">ymGXX</a></td>
+	<td class="text-center">196.0 (493)</td>
+	<td class="text-center">2.4 (0)</td>
+	<td class="text-right">198.4&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>60</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/gb.png" title="GB"/></td>
+		<td><a href="/users/viplov">Viplov Jain</a></td>
+	<td class="text-center">171.8 (334)</td>
+	<td class="text-center">23.0 (5)</td>
+	<td class="text-right">194.8&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>61</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/t__nt">Jialin Ouyang</a></td>
+	<td class="text-center">194.5 (1091)</td>
+	<td class="text-center">0.0 (0)</td>
+	<td class="text-right">194.5&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>62</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/ve.png" title="VE"/></td>
+		<td><a href="/users/sam721">Samuel Nacache</a></td>
+	<td class="text-center">191.2 (520)</td>
+	<td class="text-center">0.1 (0)</td>
+	<td class="text-right">191.3&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>63</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/nl.png" title="NL"/></td>
+		<td><a href="/users/wisfaq">wisfaq</a></td>
+	<td class="text-center">181.4 (521)</td>
+	<td class="text-center">9.4 (1)</td>
+	<td class="text-right">190.8&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>64</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/us.png" title="US"/></td>
+		<td><a href="/users/michael_egorov">Michael Egorov</a></td>
+	<td class="text-center">182.1 (820)</td>
+	<td class="text-center">7.8 (0)</td>
+	<td class="text-right">189.9&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>65</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cz.png" title="CZ"/></td>
+		<td><a href="/users/morass">Morass</a></td>
+	<td class="text-center">187.4 (447)</td>
+	<td class="text-center">2.2 (0)</td>
+	<td class="text-right">189.6&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>66</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/asklzxn2">Xuzheng J</a></td>
+	<td class="text-center">185.1 (324)</td>
+	<td class="text-center">0.2 (0)</td>
+	<td class="text-right">185.3&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>67</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/leoyu">Xusha J</a></td>
+	<td class="text-center">180.8 (282)</td>
+	<td class="text-center">0.0 (0)</td>
+	<td class="text-right">180.8&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>68</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/pt.png" title="PT"/></td>
+		<td><a href="/users/mogers">Miguel Oliveira</a></td>
+	<td class="text-center">178.7 (705)</td>
+	<td class="text-center">1.3 (0)</td>
+	<td class="text-right">179.9&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>69</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/hr.png" title="HR"/></td>
+		<td><a href="/users/syntax_error">gustav</a></td>
+	<td class="text-center">174.7 (411)</td>
+	<td class="text-center">0.5 (0)</td>
+	<td class="text-right">175.2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>70</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/vn.png" title="VN"/></td>
+		<td><a href="/users/mr_invincible">RR</a></td>
+	<td class="text-center">168.4 (602)</td>
+	<td class="text-center">4.5 (0)</td>
+	<td class="text-right">173.0&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>71</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/id.png" title="ID"/></td>
+		<td><a href="/users/leonspirit">Arianto Wibowo</a></td>
+	<td class="text-center">171.7 (461)</td>
+	<td class="text-center">0.1 (0)</td>
+	<td class="text-right">171.7&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>72</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/pl.png" title="PL"/></td>
+		<td><a href="/users/jaaro">Jarosław Gomułka</a></td>
+	<td class="text-center">169.3 (660)</td>
+	<td class="text-center">2.1 (0)</td>
+	<td class="text-right">171.4&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>72</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/de.png" title="DE"/></td>
+		<td><a href="/users/ak15">Adrian Kuegel</a></td>
+	<td class="text-center">153.3 (495)</td>
+	<td class="text-center">18.0 (2)</td>
+	<td class="text-right">171.4&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>74</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/in.png" title="IN"/></td>
+		<td><a href="/users/luckymastermin">[Lakshman]</a></td>
+	<td class="text-center">161.2 (535)</td>
+	<td class="text-center">9.8 (0)</td>
+	<td class="text-right">171.0&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>75</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/us.png" title="US"/></td>
+		<td><a href="/users/shangjingbo">shangjingbo</a></td>
+	<td class="text-center">170.2 (381)</td>
+	<td class="text-center">0.0 (0)</td>
+	<td class="text-right">170.2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>75</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/zhj1997">zhj</a></td>
+	<td class="text-center">167.8 (351)</td>
+	<td class="text-center">2.4 (0)</td>
+	<td class="text-right">170.2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>77</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/id.png" title="ID"/></td>
+		<td><a href="/users/yusufsholeh">Yusuf Sholeh</a></td>
+	<td class="text-center">168.5 (216)</td>
+	<td class="text-center">0.3 (0)</td>
+	<td class="text-right">168.8&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>78</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/pl.png" title="PL"/></td>
+		<td><a href="/users/booleanx">Dominik Kempa</a></td>
+	<td class="text-center">167.8 (758)</td>
+	<td class="text-center">0.0 (0)</td>
+	<td class="text-right">167.8&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>78</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/fr.png" title="FR"/></td>
+		<td><a href="/users/update222">legrand</a></td>
+	<td class="text-center">130.3 (663)</td>
+	<td class="text-center">37.5 (1)</td>
+	<td class="text-right">167.8&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>80</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/stilwell">Stilwell</a></td>
+	<td class="text-center">156.7 (247)</td>
+	<td class="text-center">10.4 (2)</td>
+	<td class="text-right">167.1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>81</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/in.png" title="IN"/></td>
+		<td><a href="/users/streetfi8er">Pranay</a></td>
+	<td class="text-center">148.9 (830)</td>
+	<td class="text-center">12.8 (0)</td>
+	<td class="text-right">161.7&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>82</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/in.png" title="IN"/></td>
+		<td><a href="/users/deepakrocks">Deepak Mishra</a></td>
+	<td class="text-center">160.0 (657)</td>
+	<td class="text-center">1.0 (0)</td>
+	<td class="text-right">161.0&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>83</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/ru.png" title="RU"/></td>
+		<td><a href="/users/shkoorah">Ruslan Sennov</a></td>
+	<td class="text-center">142.6 (656)</td>
+	<td class="text-center">18.0 (1)</td>
+	<td class="text-right">160.6&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>84</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/br.png" title="BR"/></td>
+		<td><a href="/users/carlosralv">Carlos Eduardo Rodrigues Alves [USJT]</a></td>
+	<td class="text-center">154.4 (445)</td>
+	<td class="text-center">4.4 (0)</td>
+	<td class="text-right">158.9&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>85</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/pl.png" title="PL"/></td>
+		<td><a href="/users/buko1">Wojciech Bukowicki</a></td>
+	<td class="text-center">155.6 (745)</td>
+	<td class="text-center">0.8 (0)</td>
+	<td class="text-right">156.4&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>86</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/fr.png" title="FR"/></td>
+		<td><a href="/users/arrakis">Dune</a></td>
+	<td class="text-center">112.1 (396)</td>
+	<td class="text-center">41.6 (2)</td>
+	<td class="text-right">153.7&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>87</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/equation314">=====e^(i&#960;)+1=0=====</a></td>
+	<td class="text-center">150.0 (318)</td>
+	<td class="text-center">2.5 (0)</td>
+	<td class="text-right">152.5&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>88</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/in.png" title="IN"/></td>
+		<td><a href="/users/vectar31">Piyush Kumar</a></td>
+	<td class="text-center">150.0 (733)</td>
+	<td class="text-center">2.1 (0)</td>
+	<td class="text-right">152.0&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>89</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/in.png" title="IN"/></td>
+		<td><a href="/users/suraj">Suraj D</a></td>
+	<td class="text-center">150.9 (677)</td>
+	<td class="text-center">0.8 (0)</td>
+	<td class="text-right">151.7&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>90</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/davidsun">Sun Zheng</a></td>
+	<td class="text-center">149.3 (245)</td>
+	<td class="text-center">0.1 (0)</td>
+	<td class="text-right">149.4&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>91</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/ua.png" title="UA"/></td>
+		<td><a href="/users/spookycookie">Spooky</a></td>
+	<td class="text-center">142.7 (723)</td>
+	<td class="text-center">5.5 (0)</td>
+	<td class="text-right">148.2&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>92</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/in.png" title="IN"/></td>
+		<td><a href="/users/deepakgupta131">Deepak Gupta</a></td>
+	<td class="text-center">145.9 (1048)</td>
+	<td class="text-center">0.2 (0)</td>
+	<td class="text-right">146.1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>93</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/ua.png" title="UA"/></td>
+		<td><a href="/users/lebron">LeBron</a></td>
+	<td class="text-center">137.8 (606)</td>
+	<td class="text-center">6.4 (0)</td>
+	<td class="text-right">144.3&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>94</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/in.png" title="IN"/></td>
+		<td><a href="/users/sunny59">rainy jain </a></td>
+	<td class="text-center">135.9 (612)</td>
+	<td class="text-center">8.0 (1)</td>
+	<td class="text-right">143.9&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>95</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cu.png" title="CU"/></td>
+		<td><a href="/users/kaga2">Jose Carlos Gonzalez Fernandez[UCI2ndTWF]</a></td>
+	<td class="text-center">137.0 (596)</td>
+	<td class="text-center">3.7 (0)</td>
+	<td class="text-right">140.7&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>96</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/jp.png" title="JP"/></td>
+		<td><a href="/users/laycurse">fortune cookie</a></td>
+	<td class="text-center">139.0 (508)</td>
+	<td class="text-center">1.1 (0)</td>
+	<td class="text-right">140.1&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>97</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/hr.png" title="HR"/></td>
+		<td><a href="/users/budabudimir">Buda IM</a></td>
+	<td class="text-center">137.9 (398)</td>
+	<td class="text-center">0.7 (0)</td>
+	<td class="text-right">138.6&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>98</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/de.png" title="DE"/></td>
+		<td><a href="/users/k_amtrix">Damir Ferizovic</a></td>
+	<td class="text-center">135.8 (549)</td>
+	<td class="text-center">2.1 (0)</td>
+	<td class="text-right">137.9&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>99</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/cn.png" title="CN"/></td>
+		<td><a href="/users/zzy">Xusuo J</a></td>
+	<td class="text-center">137.3 (268)</td>
+	<td class="text-center">0.0 (0)</td>
+	<td class="text-right">137.3&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>100</td>
+		<td><img src="//stx1.spoj.com/gfx/flags/us.png" title="US"/></td>
+		<td><a href="/users/nealzane">Neal Zane</a></td>
+	<td class="text-center">135.3 (454)</td>
+	<td class="text-center">0.2 (0)</td>
+	<td class="text-right">135.5&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+
+
+
+<!-- google_ad_section_start -->
+<div align="justify">
+<p>
+These are the official SPOJ standings. <i>Please note that the formulae used for
+calculating the scores are currently evolving.</i> At present points are awarded to each user as follows:
+<ul>
+<li>for solving classical problem <i>p</i>: 80/(40+<i>number_of_people_who_have_solved</i> <i>p</i>) points
+<li>for a top score in any challenge: 3 points,
+<li>for any lower score in a challenge: (<i>user's_score relative_to_the top_score</i>) points.
+</ul>
+<p>
+Numbers given in brackets beside the scores correspond to the number of solved classical problems
+and the number of challenges for which the user's best score is also the top score, respectively.
+<p>
+All feedback concerning the methods used for generating statistics is most welcome. Please post remarks in the forum, or mail them directly to our contact address.
+</div>
+<!-- google_ad_section_end -->
+
+
+
+
+	<script language="JavaScript">
+	<!--
+
+	function checkAll() {
+		$("[name*=_chk]").each(function() {
+			$(this).attr("checked", $("#chkall").attr("checked") );
+		});
+	}
+	
+	-->
+	</script>
+
+	
+	</div>
+	
+	<div class="col-lg-3 col-md-4 text-right">
+		<div class="right-box-hehe2">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- spoj_status_160x600_right -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="4370255839"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		</div>
+	</div>
+</div>	<br/>
+</div>
+		
+		
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 text-center">
+					<a href="/info">About</a> | <a href="/tutorials">Tutorial</a> | <a href="/tools">Tools</a> | <a href="/clusters">Clusters</a> | <a href="/credits">Credits</a> | <a href="/jobs">Jobs</a> | <a href="/sphereengine">API</a> | <a href="/gfx/spoj-terms.pdf" target="_blank">Terms</a>
+				</div>
+				<div class="col-md-2 text-right">
+					<a href="/rss/" ><img src="//stx1.spoj.com/gfx/rss10x10.gif" border=0>&nbsp;RSS</a>&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center" id="footer-srl">
+			
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Research Labs</a>.
+
+		</div> 
+	</div>
+
+	<!-- JavaScripts -->
+	
+		
+	
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('.no_a_info').css('visibility', 'visible');
+		}, 5000);
+		
+		if(!$('.aProblemTop').length && !$('.aProblemsTop').length && !$('.aSubmitTop').length && !$('.aStatusTop').length && !$('.aMainRight').length){
+			ga('send', 'event', 'ads', 'no-ads', 'main-contest');
+		}
+		if ($('.aProblemTop').height() == 0){
+			$('.aProblemTop').css({'border': '1px solid #ddd', 'background': '#f0f4e3', 'height': 90});
+			$('.aProblemTop').html($('<p class="text-center">using adblock?</p><h4 class="text-center">Online ads help us to maintain site.</h4><p class="text-center"><strong>please whitelist *.spoj.com</strong></p>'));
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemTop');
+		}
+		if ($('.aProblemsTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemsTop');
+		}
+		if ($('.aSubmitTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aSubmitTop');
+		}
+		if ($('.aStatusTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aStatusTop');
+		}
+		if ($('.aMainRight').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aMainRight');
+		}
+	});
+	</script>
+	
+	
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.timers.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.cookie.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<script src="//stx1.spoj.com/gfx/md5.js"></script>
+	<script src="//stx1.spoj.com/gfx/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+	<script src="//stx1.spoj.com/gfx/scripts/tour.js"></script>
+	
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=321676846207&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-10507872-1', 'auto');
+	  ga('require', 'linkid', 'linkid.js');
+	  ga('send', 'pageview');
+	</script>
+<!-- Hotjar Tracking Code for http://www.spoj.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:334656,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click', '.track', function(){
+			var event = $(this).attr('data-event');
+			var action = $(this).attr('data-action');
+			var value = $(this).attr('data-value');
+			ga('send', 'event', event, action, value);
+		});
+	});
+	//window.open('http://incoming.hotjar.com/s/7366', '_blank');
+	</script>
+
+
+</body>
+</html>
