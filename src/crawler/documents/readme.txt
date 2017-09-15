@@ -1,0 +1,1 @@
+This is a default folder for storing crawler downloaded content.

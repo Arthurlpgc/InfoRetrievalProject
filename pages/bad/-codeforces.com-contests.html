@@ -1,0 +1,5023 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="X-Csrf-Token" content="e0954433c2cad524c94a0eb65a910a59"/>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=0.01"/>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery-1.8.3.js"></script>
+    <script type="application/javascript">
+        window.standaloneContest = false;
+        function adjustViewport() {
+            var screenWidthPx = Math.min($(window).width(), window.screen.width);
+            var siteWidthPx = 1100; // min width of site
+            var ratio = Math.min(screenWidthPx / siteWidthPx, 1.0);
+            var viewport = "width=device-width, initial-scale=" + ratio;
+            $('#viewport').attr('content', viewport);
+            var style = $('<style>html * { max-height: 1000000px; }</style>');
+            $('html > head').append(style);
+        }
+
+        if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+            adjustViewport();
+        }
+    </script>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="profileName" content="c4">
+    <meta name="google-site-verification" content="OTd2dN5x4nS4OPknPI9JFg36fKxjqY0i1PSfFPv_J90"/>
+    <meta property="fb:admins" content="100001352546622" />
+    <meta property="og:image" content="http://st.codeforces.com/s/71216/images/codeforces-telegram-square.png" />
+    <link rel="image_src" href="http://st.codeforces.com/s/71216/images/codeforces-telegram-square.png" />
+    <meta property="og:title" content="Contests - Codeforces"/>
+    <meta property="og:description" content=""/>
+    
+    <meta property="og:site_name" content="Codeforces"/>
+    
+    
+    
+    
+    
+    <meta name="utc_offset" content="+03:00"/>
+    <meta name="verify-reformal" content="f56f99fd7e087fb6ccb48ef2" />
+    <title>Contests - Codeforces</title>
+        <meta name="description" content="Codeforces. Programming competitions and contests, programming community" />
+        <meta name="keywords" content="programming algorithm contest competition informatics olympiads c++ java graphs vkcup" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/font-awesome.min.css" type="text/css" charset="utf-8" />
+
+        <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Cuprum&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+
+    <link rel="shortcut icon" type="image/png" href="http://st.codeforces.com/s/71216/favicon.png">
+
+    <!--CombineResourcesFilter-->
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/prettify.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/clear.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/ttypography.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/problem-statement.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/second-level-menu.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/roundbox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/datatable.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/table-form.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/topic.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/jquery.jgrowl.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/facebox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/jquery.wysiwyg.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/jquery.autocomplete.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/codeforces.datepick.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/colorbox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/jquery.drafts.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="http://st.codeforces.com/s/71216/css/community.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/prettify/prettify.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/moment.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/pushstream.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.lavalamp.min.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.jgrowl.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.swipe.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/facebox.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.wysiwyg.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/controls/wysiwyg.colorpicker.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/controls/wysiwyg.table.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/controls/wysiwyg.image.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/controls/wysiwyg.link.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.autocomplete.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.datepick.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.ie6blocker.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.ba-bbq.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/jquery.drafts.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/sjcl.js"></script>
+    <script type="text/javascript" src="/scripts/e0a03286103f205dc07daf2bab9284ca/en/codeforces-options.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/js/codeforces.js?v=20160131"></script>
+    <!--/CombineResourcesFilter-->
+
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/markitup/skins/markitup/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/71216/markitup/sets/markdown/style.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/markitup/jquery.markitup.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/71216/markitup/sets/markdown/set.js"></script>
+
+    <!--[if IE]>
+    <style>
+        #sidebar {
+            padding-left: 1em;
+            margin: 1em 1em 1em 0;
+        }
+    </style>
+    <![endif]-->
+
+
+</head>
+<body><span style='display:none;' class='csrf-token' data-csrf='e0954433c2cad524c94a0eb65a910a59'>&nbsp;</span>
+
+<div class="button-up" style="display: none; opacity: 0.7; width: 50px; height:100%; position: fixed; left: 0; top: 0; cursor: pointer; text-align: center; line-height: 35px; color: #d3dbe4; font-weight: bold; font-size: 3.0rem;"><i class="icon-circle-arrow-up"></i></div>
+
+<!-- Codeforces JavaScripts. -->
+<script type="text/javascript">
+    var queryMobile = Codeforces.queryString.mobile;
+    if (queryMobile === "true" || queryMobile === "false") {
+        Codeforces.putToStorage("useMobile", queryMobile == "true");
+    } else {
+        var useMobile = Codeforces.getFromStorage("useMobile");
+        if (useMobile === true || useMobile === false) {
+            if (useMobile != false) {
+                Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", useMobile));
+            }
+        }
+    }
+</script>
+<script type="text/javascript">
+    if (window.parent.frames.length > 0) {
+        window.stop();
+    }
+</script>
+<script type="text/javascript">
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '554666954583323',
+            xfbml      : true,
+            version    : 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+    (function () {
+        jQuery.expr[':'].containsCI = function(elem, index, match) {
+            return !match || !match.length || match.length < 4 || !match[3] || (
+                    elem.textContent || elem.innerText || jQuery(elem).text() || ''
+            ).toLowerCase().indexOf(match[3].toLowerCase()) >= 0;
+        }
+    }(jQuery));
+
+    $.ajaxPrefilter(function(options, originalOptions, xhr) {
+        var csrf = Codeforces.getCsrfToken();
+
+        if (csrf) {
+            var data = originalOptions.data;
+            if (originalOptions.data !== undefined) {
+                if (Object.prototype.toString.call(originalOptions.data) === '[object String]') {
+                    data = $.deparam(originalOptions.data);
+                }
+            } else {
+                data = {};
+            }
+            options.data = $.param($.extend(data, { csrf_token: csrf }));
+        }
+    });
+
+    window.getCodeforcesServerTime = function(callback) {
+        $.post("/data/time", {}, callback, "json");
+    }
+
+    window.updateTypography = function () {
+        $("div.ttypography code").addClass("tt");
+        $("div.ttypography pre>code").addClass("prettyprint").removeClass("tt");
+        $("div.ttypography table").addClass("bordertable");
+        prettyPrint();
+    }
+
+    $.ajaxSetup({ scriptCharset: "utf-8" ,contentType: "application/x-www-form-urlencoded; charset=UTF-8", headers: {
+        'X-Csrf-Token': Codeforces.getCsrfToken()
+    }});
+
+    window.updateTypography();
+
+    Codeforces.signForms();
+
+    setTimeout(function() {
+        $(".second-level-menu-list").lavaLamp({
+            fx: "backout",
+            speed: 1000
+        });
+    }, 0);
+
+
+    Codeforces.countdown();
+    $("a[rel='photobox']").colorbox();
+
+
+    function showAnnouncements(json) {
+        //info("j=" + JSON.stringify(json));
+
+        if (json.t != "a") {
+            return;
+        }
+        // console.log("Got announcement from channel");
+        setTimeout(function() {
+            Codeforces.showAnnouncements(json.d, "en");
+        }, Math.random() * 500);
+    }
+    if (Codeforces.getParticipantChannel()) {
+        Codeforces.subscribe(Codeforces.getParticipantChannel(), function(json) {
+            showAnnouncements(json);
+        });
+    }
+
+    if (Codeforces.getContestChannel()) {
+        Codeforces.subscribe(Codeforces.getContestChannel(), function(json) {
+            showAnnouncements(json);
+        });
+    }
+
+    if (Codeforces.getGlobalChannel()) {
+        Codeforces.subscribe(Codeforces.getGlobalChannel(), function(json) {
+            showAnnouncements(json);
+        });
+    }
+
+    if (Codeforces.getUserChannel()) {
+        Codeforces.subscribe(Codeforces.getUserChannel(), function(json) {
+            showAnnouncements(json);
+        });
+    }
+
+    $(".clickable-title").click(function() {
+        Codeforces.alert($(this).attr("title"));
+    }).css("position", "relative").css("bottom", "3px");
+
+
+    Codeforces.reformatTimes();
+    Codeforces.initializePubSub();
+
+    Codeforces.setupSpoilers();
+    Codeforces.setupTutorials("/data/problemTutorial");
+        });
+    </script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-743380-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = (document.location.protocol == 'https:' ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<div id="body">
+        
+
+<div class="side-bell" style="visibility: hidden; display: none; opacity: 0.7; width: 40px; position: fixed; right: 0; top: 0; cursor: pointer; text-align: center; line-height: 35px; color: #d3dbe4; font-weight: bold; font-size: 1.5rem;">
+    <span class="icon-stack" style="width: 100%;">
+        <i class="icon-circle icon-stack-base"></i>
+        <i class="icon-bell-alt icon-light"></i>
+    </span>
+    <br/>
+    <span class="side-bell__count" style="position: relative; top: -10px;"></span>
+</div>
+
+
+<div id="header" style="position: relative;">
+    <div style="float:left;">
+            
+            <a href="/"><img src="http://st.codeforces.com/s/71216/images/codeforces-logo-with-telegram.png"/></a>
+    </div>
+    <div class="lang-chooser">
+        <div style="text-align: right;">
+            <a href="?locale=en"><img src="http://st.codeforces.com/s/71216/images/flags/24/gb.png" title="In English" alt="In English"/></a>
+            <a href="?locale=ru"><img src="http://st.codeforces.com/s/71216/images/flags/24/ru.png" title="По-русски" alt="По-русски"/></a>
+        </div>
+
+        <div >
+                        <a href="/enter?back=%2Fcontests">Enter</a>
+                     | 
+                        <a href="/register">Register</a>
+                    
+        </div>
+
+
+
+    </div>
+    <br style="clear: both;"/>
+</div>
+        
+
+    <div class="roundbox menu-box" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+            <div class="roundbox-lb">&nbsp;</div>
+            <div class="roundbox-rb">&nbsp;</div>
+    <div class="menu-list-container">
+    <ul class="menu-list main-menu-list">
+                <li class=""><a href="/">Home</a></li>
+                <li class="current"><a href="/contests">Contests</a></li>
+                <li class=""><a href="/gyms">Gym</a></li>
+                <li class=""><a href="/problemset">Problemset</a></li>
+                <li class=""><a href="/groups">Groups</a></li>
+                <li class=""><a href="/ratings">Rating</a></li>
+                <li class=""><a href="/api/help">API</a></li>
+                <li class=""><a href="/rcc2017">RCC <img class="icon" src="http://st.codeforces.com/images/icons/cup.png"/></a></li>
+                <li class=""><a href="/aimtech2017">AIM Tech Round <img class="icon" src="http://st.codeforces.com/images/icons/cup.png"/></a></li>
+                <li class=""><a href="/calendar">Calendar</a></li>
+    </ul>
+        <form method="post" action="/search"><input type='hidden' name='csrf_token' value='e0954433c2cad524c94a0eb65a910a59'/>
+            <input class="search" name="query" data-isPlaceholder="true" value=""/>
+        </form>
+    <br style="clear: both;"/>
+</div>
+
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input.search").focus(function () {
+                if ($(this).attr("data-isPlaceholder") === "true") {
+                    $(this).val("");
+                    $(this).removeAttr("data-isPlaceholder");
+                }
+            });
+        });
+    </script>
+            <br style="height: 3em; clear: both;"/>
+
+        <div style="position: relative;">
+                        <div id="sidebar">
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">&rarr; Pay attention
+            <div class="top-links">
+            </div>
+        </div>
+<div style="padding: 0.5em;">
+        <div style="text-align:center;border-bottom: 1px solid rgb(185, 185, 185);margin:0 -0.5em 0.5em -0.5em;padding: 0 1em 0.5em 1em;">
+            <span class='contest-state-phase'>Before contest</span><br/><a href="/contests/859">Codeforces Round #434</a><br/><span class='countdown' home='http://st.codeforces.com/s/71216' noRedirection='true' textBeforeRedirect=''><span title="94:58:30">4 days</span></span>
+        </div>
+        <div style="text-align:center;">
+            <div class="socials" style="text-align: left;">
+                <div style="margin-top: 0.85em;position: relative;">
+
+        <div id="fb-root"></div>
+        <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "http://connect.facebook.net/en_EN/all.js#appId=554666954583323&xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <div class="fb-like" data-href="http://codeforces.com/contests/859" data-send="false" data-width="256" data-show-faces="false" data-font="arial" data-ref='55516'></div>
+
+        </div>
+</div>
+
+        </div>
+</div>
+    </div>
+</div>
+                        <div id="pageContent" class="content-with-sidebar">
+
+<div class="contestList">
+
+
+<script type="application/javascript">
+    $(function() {
+        $(".closeUserList").click(function() {
+            document.location = Codeforces.updateUrlParameter(document.location.href, "list", "");
+            return false;
+        });
+    })
+</script>
+<div class="datatable"
+     
+     style="background-color: #E1E1E1; padding-bottom: 3px;">
+            <div class="lt">&nbsp;</div>
+            <div class="rt">&nbsp;</div>
+            <div class="lb">&nbsp;</div>
+            <div class="rb">&nbsp;</div>
+
+            <div style="padding: 4px 0 0 6px;font-size:1.4rem;position:relative;">
+                Current or upcoming contests
+
+                <div style="position:absolute;right:0.25em;top:0.35em;">
+                    <span style="padding:0;position:relative;bottom:2px;" class="rowCount"></span>
+
+                    <img class="closed" src="http://st.codeforces.com/s/71216/images/icons/control.png"/>
+
+                    <span class="filter" style="display:none;">
+                        <img class="opened" src="http://st.codeforces.com/s/71216/images/icons/control-270.png"/>
+                        <input style="padding:0;position:relative;bottom:2px;border:1px solid #aaa;height:17px;font-size:1.3rem;"/>
+                    </span>
+                </div>
+            </div>
+            <div style="background-color: white;margin:0.3em 3px 0 3px;position:relative;">
+            <div class="ilt">&nbsp;</div>
+            <div class="irt">&nbsp;</div>
+            <table class="">
+<tr>
+    <th style="width:20em;">Name</th>
+        <th style="width: 10em;">Writers</th>
+    <th style="width:5em;">Start</th>
+    <th style="width:4em;">Length</th>
+    <th style="width:10em;">&nbsp;</th>
+        <th style="width:15em;">&nbsp;</th>
+</tr>
+<tr
+    
+    data-contestId="859"
+>
+    <td>
+Codeforces Round #434    </td>
+
+        <td class="small">
+        </td>
+
+    <td>
+                <a href="http://www.timeanddate.com/worldclock/fixedtime.html?day=16&month=9&year=2017&hour=20&min=35&sec=0&p1=166" target="_blank">
+                <span class="format-time" data-locale="en">Sep/16/2017 20:35</span>
+                </a>
+    </td>
+    <td>
+        02:30
+    </td>
+    <td class="state">
+                Before start <span home="http://st.codeforces.com/s/71216" noRedirection="true" class="countdown"><span title="94:58:30">4 days</span></span>
+    </td>
+    <td style="font-size:0.8em;">
+                        Before registration
+                    <span class="countdown"><span title="70:58:30">3 days</span></span>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="847"
+>
+    <td>
+2017-2018 ACM-ICPC, NEERC, Southern Subregional Contest, qualification stage (Online Mirror, ACM-ICPC Rules, Teams Preferred)    </td>
+
+        <td class="small">
+        </td>
+
+    <td>
+                <a href="http://www.timeanddate.com/worldclock/fixedtime.html?day=18&month=9&year=2017&hour=16&min=5&sec=0&p1=166" target="_blank">
+                <span class="format-time" data-locale="en">Sep/18/2017 16:05</span>
+                </a>
+    </td>
+    <td>
+        04:00
+    </td>
+    <td class="state">
+                Before start <span home="http://st.codeforces.com/s/71216" noRedirection="true" class="countdown"><span title="138:28:30">6 days</span></span>
+    </td>
+    <td style="font-size:0.8em;">
+                        Before registration
+                    <span class="countdown"><span title="122:23:30">5 days</span></span>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="855"
+>
+    <td>
+Manthan, Codefest 17    </td>
+
+        <td class="small">
+        </td>
+
+    <td>
+                <a href="http://www.timeanddate.com/worldclock/fixedtime.html?day=24&month=9&year=2017&hour=17&min=35&sec=0&p1=166" target="_blank">
+                <span class="format-time" data-locale="en">Sep/24/2017 17:35</span>
+                </a>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+                Before start <span home="http://st.codeforces.com/s/71216" noRedirection="true" class="countdown"><span title="283:58:30">12 days</span></span>
+    </td>
+    <td style="font-size:0.8em;">
+                        Before registration
+                    <span class="countdown"><span title="259:58:30">11 days</span></span>
+    </td>
+
+</tr>
+            </table>
+            </div>
+        </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+                // Create new ':containsIgnoreCase' selector for search
+                jQuery.expr[':'].containsIgnoreCase = function(a, i, m) {
+                    return jQuery(a).text().toUpperCase()
+                            .indexOf(m[3].toUpperCase()) >= 0;
+                };
+
+                if (window.updateDatatableFilter == undefined) {
+                    window.updateDatatableFilter = function(i) {
+                        var parent = $(i).parent().parent().parent().parent();
+                        $("tr.no-items", parent).remove();
+                        $("tr", parent).hide().removeClass('visible');
+                        var text = $(i).val();
+                        if (text) {
+                            $("tr" + ":containsIgnoreCase('" + text + "')", parent).show().addClass('visible');
+                        } else {
+                            parent.find(".rowCount").text("");
+                            $("tr", parent).show().addClass('visible');
+                        }
+
+                        var found = false;
+                        var visibleRowCount = 0;
+                        $("tr", parent).each(function () {
+                            if (!found) {
+                                if ($(this).find("th").size() > 0) {
+                                    $(this).show().addClass('visible');
+                                    found = true;
+                                }
+                            }
+                            if ($(this).hasClass('visible')) {
+                                visibleRowCount++;
+                            }
+                        });
+                        if (text) {
+                            parent.find(".rowCount").text("Matches: " + (visibleRowCount - (found ? 1 : 0)));
+                        }
+                        if (visibleRowCount == (found ? 1 : 0)) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo($(parent).find('table'));
+                        }
+                        $(parent).find("tr td").removeClass("dark");
+                        $(parent).find("tr.visible:odd td").addClass("dark");
+                    }
+
+                    $(".datatable .closed").click(function () {
+                        var parent = $(this).parent();
+                        $(this).hide();
+                        $(".filter", parent).fadeIn(function () {
+                            $("input", parent).val("").focus().css("border", "1px solid #aaa");
+                        });
+                    });
+
+                    $(".datatable .opened").click(function () {
+                        var parent = $(this).parent().parent();
+                        $(".filter", parent).fadeOut(function () {
+                            $(".closed", parent).show();
+                            $("input", parent).val("").each(function () {
+                                window.updateDatatableFilter(this);
+                            });
+                        });
+                    });
+
+                    $(".datatable .filter input").keyup(function(e) {
+                        window.updateDatatableFilter(this);
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+
+                    $(".datatable table").each(function () {
+                        var found = false;
+                        $("tr", this).each(function () {
+                            if (!found && $(this).find("th").size() == 0) {
+                                found = true;
+                            }
+                        });
+                        if (!found) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo(this);
+                        }
+                    });
+
+                    // Applies styles to datatables.
+                    $(".datatable").each(function () {
+                        $(this).find("tr:first th").addClass("top");
+                        $(this).find("tr:last td").addClass("bottom");
+                        $(this).find("tr:odd td").addClass("dark");
+                        $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                        $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                    });
+
+                    $(".datatable table.tablesorter").each(function () {
+                        $(this).bind("sortEnd", function () {
+                            $(".datatable").each(function () {
+                                $(this).find("th, td")
+                                    .removeClass("top").removeClass("bottom")
+                                    .removeClass("left").removeClass("right")
+                                    .removeClass("dark");
+                                $(this).find("tr:first th").addClass("top");
+                                $(this).find("tr:last td").addClass("bottom");
+                                $(this).find("tr:odd td").addClass("dark");
+                                $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                                $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                            });
+                        });
+                    });
+                }
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+if (!window.hasContestDescriptionLinkHandler) {
+    window.hasContestDescriptionLinkHandler = true;
+    $(".contest-description-link").click(function () {
+        var contestId = $(this).attr("data-contestId");
+        $.post("/data/contestInfo", {action: "getDescription", contestId: contestId}, function(result) {
+            if (result["success"] == "true")
+                Codeforces.alert(result["description"]);
+        }, "json");
+        return false;
+    });
+}
+
+$(".toggle-mashup-manager").click(function () {
+    $(this).attr("disabled", "disabled");
+    var contestId = $(this).attr("data-contestId");
+    var newValue = $(this).is(":checked");
+    $.post("/data/mashup",
+        {contestId: contestId, action: "toggleMashupContestManagerMode", newValue: newValue},
+        function(response) {
+            if (response["success"] === "true") {
+                Codeforces.reload();
+            } else {
+                Codeforces.showMessage("Unable to toggle mashup contest manager mode");
+                $(this).removeAttr("disabled");
+            }
+        },
+        "json"
+    );
+    return false;
+});
+        });
+    </script>
+
+
+
+
+<div class="contests-table" style="margin-top:2em;">
+    Contest history
+
+<script type="application/javascript">
+    $(function() {
+        $(".closeUserList").click(function() {
+            document.location = Codeforces.updateUrlParameter(document.location.href, "list", "");
+            return false;
+        });
+    })
+</script>
+<div class="datatable"
+     
+     style="background-color: #E1E1E1; padding-bottom: 3px;">
+            <div class="lt">&nbsp;</div>
+            <div class="rt">&nbsp;</div>
+            <div class="lb">&nbsp;</div>
+            <div class="rb">&nbsp;</div>
+
+            <div style="padding: 4px 0 0 6px;font-size:1.4rem;position:relative;">
+                Past contests
+                    <i style="cursor: pointer; font-size: 1.5rem; position: relative; top: 2px;" class="icon-list userListMarker"></i>
+
+                <div style="position:absolute;right:0.25em;top:0.35em;">
+                    <span style="padding:0;position:relative;bottom:2px;" class="rowCount"></span>
+
+                    <img class="closed" src="http://st.codeforces.com/s/71216/images/icons/control.png"/>
+
+                    <span class="filter" style="display:none;">
+                        <img class="opened" src="http://st.codeforces.com/s/71216/images/icons/control-270.png"/>
+                        <input style="padding:0;position:relative;bottom:2px;border:1px solid #aaa;height:17px;font-size:1.3rem;"/>
+                    </span>
+                </div>
+            </div>
+            <div style="background-color: white;margin:0.3em 3px 0 3px;position:relative;">
+            <div class="ilt">&nbsp;</div>
+            <div class="irt">&nbsp;</div>
+            <table class="">
+<tr>
+    <th style="width:20em;">Name</th>
+        <th style="width: 10em;">Writers</th>
+    <th style="width:5em;">Start</th>
+    <th style="width:4em;">Length</th>
+    <th style="width:10em;">&nbsp;</th>
+        <th style="width:4em;">&nbsp;</th>
+</tr>
+<tr
+    
+    data-contestId="856"
+>
+    <td>
+Russian Code Cup 2017 - Finals [Unofficial Mirror, Div. 1 Only Recommended, Teams Allowed]                <br/>
+                <a style="font-size: 0.8em;" href="/contest/856">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/856/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Sep/10/2017 16:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Sep/10/2017 16:35</span>
+    </td>
+    <td>
+        03:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/856/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/856"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x1516</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="853"
+>
+    <td>
+Codeforces Round #433 (Div. 1, based on Olympiad of Metropolises)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/853">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/853/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Sep/06/2017 15:55</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Sep/06/2017 15:55</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/853/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/853"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x769</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="854"
+>
+    <td>
+Codeforces Round #433 (Div. 2, based on Olympiad of Metropolises)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/854">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/854/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Sep/06/2017 15:55</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Sep/06/2017 15:55</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/854/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/854"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5538</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="846"
+>
+    <td>
+Educational Codeforces Round 28                <br/>
+                <a style="font-size: 0.8em;" href="/contest/846">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/846/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/0n25" title="Candidate Master 0n25" class="rated-user user-violet">0n25</a><br/>
+                <a href="/profile/BledDest" title="Candidate Master BledDest" class="rated-user user-violet">BledDest</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/PikMike" title="Candidate Master PikMike" class="rated-user user-violet">PikMike</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Sep/05/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Sep/05/2017 18:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/846/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/846"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x4507</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="850"
+>
+    <td>
+Codeforces Round #432 (Div. 1, based on IndiaHacks Final Round 2017)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/850">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/850/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Arpa" title="Candidate Master Arpa" class="rated-user user-violet">Arpa</a><br/>
+                <a href="/profile/Arterm" title="International Grandmaster Arterm" class="rated-user user-red">Arterm</a><br/>
+                <a href="/profile/lewin" title="Grandmaster lewin" class="rated-user user-red">lewin</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Sep/04/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Sep/04/2017 17:35</span>
+    </td>
+    <td>
+        02:30
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/850/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/850"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x717</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="851"
+>
+    <td>
+Codeforces Round #432 (Div. 2, based on IndiaHacks Final Round 2017)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/851">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/851/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Arpa" title="Candidate Master Arpa" class="rated-user user-violet">Arpa</a><br/>
+                <a href="/profile/lewin" title="Grandmaster lewin" class="rated-user user-red">lewin</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Sep/04/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Sep/04/2017 17:35</span>
+    </td>
+    <td>
+        02:30
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/851/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/851"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5986</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="852"
+>
+    <td>
+Bubble Cup X - Finals [Online Mirror]                <br/>
+                <a style="font-size: 0.8em;" href="/contest/852">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/852/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/BubbleCup" title="Unrated, BubbleCup" class="rated-user user-black">BubbleCup</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Sep/03/2017 13:00</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Sep/03/2017 13:00</span>
+    </td>
+    <td>
+        05:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/852/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/852"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x2212</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="848"
+>
+    <td>
+Codeforces Round #431 (Div. 1)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/848">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/848/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/adedalic" title="Master adedalic" class="rated-user user-orange">adedalic</a><br/>
+                <a href="/profile/cyand1317" title="Grandmaster cyand1317" class="rated-user user-red">cyand1317</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Sep/01/2017 16:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Sep/01/2017 16:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/848/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/848"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x880</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="849"
+>
+    <td>
+Codeforces Round #431 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/849">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/849/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/cyand1317" title="Grandmaster cyand1317" class="rated-user user-red">cyand1317</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Sep/01/2017 16:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Sep/01/2017 16:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/849/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/849"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6675</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="842"
+>
+    <td>
+Codeforces Round #430 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/842">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/842/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Ilua" title="Expert Ilua" class="rated-user user-blue">Ilua</a><br/>
+                <a href="/profile/glebodin" title="Expert glebodin" class="rated-user user-blue">glebodin</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Aug/29/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Aug/29/2017 18:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/842/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/842"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x8188</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="843"
+>
+    <td>
+AIM Tech Round 4 (Div. 1)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/843">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/843/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/AlexDmitriev" title="International Grandmaster AlexDmitriev" class="rated-user user-red">AlexDmitriev</a><br/>
+                <a href="/profile/Edvard" title="Master Edvard" class="rated-user user-orange">Edvard</a><br/>
+                <a href="/profile/Kostroma" title="International Grandmaster Kostroma" class="rated-user user-red">Kostroma</a><br/>
+                <a href="/profile/VadymKa" title="Candidate Master VadymKa" class="rated-user user-violet">VadymKa</a><br/>
+                <a href="/profile/ValenKof" title="International master ValenKof" class="rated-user user-orange">ValenKof</a><br/>
+                <a href="/profile/gchebanov" title="Master gchebanov" class="rated-user user-orange">gchebanov</a><br/>
+                <a href="/profile/malcolm" title="International master malcolm" class="rated-user user-orange">malcolm</a><br/>
+                <a href="/profile/yarrr" title="Master yarrr" class="rated-user user-orange">yarrr</a><br/>
+                <a href="/profile/zeliboba" title="Grandmaster zeliboba" class="rated-user user-red">zeliboba</a><br/>
+                <a href="/profile/zemen" title="International Grandmaster zemen" class="rated-user user-red">zemen</a><br/>
+                <a href="/profile/zloyplace35" title="Master zloyplace35" class="rated-user user-orange">zloyplace35</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Aug/24/2017 19:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Aug/24/2017 19:35</span>
+    </td>
+    <td>
+        02:30
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/843/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/843"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x737</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="844"
+>
+    <td>
+AIM Tech Round 4 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/844">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/844/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/AlexDmitriev" title="International Grandmaster AlexDmitriev" class="rated-user user-red">AlexDmitriev</a><br/>
+                <a href="/profile/Edvard" title="Master Edvard" class="rated-user user-orange">Edvard</a><br/>
+                <a href="/profile/Kostroma" title="International Grandmaster Kostroma" class="rated-user user-red">Kostroma</a><br/>
+                <a href="/profile/VadymKa" title="Candidate Master VadymKa" class="rated-user user-violet">VadymKa</a><br/>
+                <a href="/profile/ValenKof" title="International master ValenKof" class="rated-user user-orange">ValenKof</a><br/>
+                <a href="/profile/gchebanov" title="Master gchebanov" class="rated-user user-orange">gchebanov</a><br/>
+                <a href="/profile/malcolm" title="International master malcolm" class="rated-user user-orange">malcolm</a><br/>
+                <a href="/profile/yarrr" title="Master yarrr" class="rated-user user-orange">yarrr</a><br/>
+                <a href="/profile/zeliboba" title="Grandmaster zeliboba" class="rated-user user-red">zeliboba</a><br/>
+                <a href="/profile/zemen" title="International Grandmaster zemen" class="rated-user user-red">zemen</a><br/>
+                <a href="/profile/zloyplace35" title="Master zloyplace35" class="rated-user user-orange">zloyplace35</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Aug/24/2017 19:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Aug/24/2017 19:35</span>
+    </td>
+    <td>
+        02:30
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/844/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/844"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5258</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="845"
+>
+    <td>
+Educational Codeforces Round 27                <br/>
+                <a style="font-size: 0.8em;" href="/contest/845">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/845/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/0n25" title="Candidate Master 0n25" class="rated-user user-violet">0n25</a><br/>
+                <a href="/profile/BledDest" title="Candidate Master BledDest" class="rated-user user-violet">BledDest</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/PikMike" title="Candidate Master PikMike" class="rated-user user-violet">PikMike</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Aug/21/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Aug/21/2017 18:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/845/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/845"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5067</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="840"
+>
+    <td>
+Codeforces Round #429 (Div. 1)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/840">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/840/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Fedosik" title="Master Fedosik" class="rated-user user-orange">Fedosik</a><br/>
+                <a href="/profile/ZZzzZZzzzZzzzZZzz38" title="Candidate Master ZZzzZZzzzZzzzZZzz38" class="rated-user user-violet">ZZzzZZzzzZzzzZZzz38</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Aug/18/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Aug/18/2017 18:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/840/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/840"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x803</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="841"
+>
+    <td>
+Codeforces Round #429 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/841">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/841/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Fedosik" title="Master Fedosik" class="rated-user user-orange">Fedosik</a><br/>
+                <a href="/profile/ZZzzZZzzzZzzzZZzz38" title="Candidate Master ZZzzZZzzzZzzzZZzz38" class="rated-user user-violet">ZZzzZZzzzZzzzZZzz38</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Aug/18/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Aug/18/2017 18:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/841/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/841"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x7309</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="839"
+>
+    <td>
+Codeforces Round #428 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/839">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/839/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/MaGaroo" title="Candidate Master MaGaroo" class="rated-user user-violet">MaGaroo</a><br/>
+                <a href="/profile/smahdavi4" title="Candidate Master smahdavi4" class="rated-user user-violet">smahdavi4</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Aug/12/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Aug/12/2017 17:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/839/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/839"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x8146</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="838"
+>
+    <td>
+IndiaHacks 2nd Elimination 2017 (unofficial, unrated mirror, ICPC rules)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/838">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/838/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/lewin" title="Grandmaster lewin" class="rated-user user-red">lewin</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Aug/07/2017 09:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Aug/07/2017 09:05</span>
+    </td>
+    <td>
+        03:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/838/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/838"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x2041</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="837"
+>
+    <td>
+Educational Codeforces Round 26                <br/>
+                <a style="font-size: 0.8em;" href="/contest/837">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/837/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/BledDest" title="Candidate Master BledDest" class="rated-user user-violet">BledDest</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/Perforator" title="Grandmaster Perforator" class="rated-user user-red">Perforator</a><br/>
+                <a href="/profile/PikMike" title="Candidate Master PikMike" class="rated-user user-violet">PikMike</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Aug/03/2017 18:15</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Aug/03/2017 18:15</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/837/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/837"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5073</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="835"
+>
+    <td>
+Codeforces Round #427 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/835">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/835/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/qoo2p5" title="Master qoo2p5" class="rated-user user-orange">qoo2p5</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jul/31/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jul/31/2017 17:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/835/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/835"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6642</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="833"
+>
+    <td>
+Codeforces Round #426 (Div. 1)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/833">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/833/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/GreenGrape" title="Candidate Master GreenGrape" class="rated-user user-violet">GreenGrape</a><br/>
+                <a href="/profile/x3n" title="Candidate Master x3n" class="rated-user user-violet">x3n</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jul/30/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jul/30/2017 17:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/833/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/833"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x740</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="834"
+>
+    <td>
+Codeforces Round #426 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/834">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/834/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/GreenGrape" title="Candidate Master GreenGrape" class="rated-user user-violet">GreenGrape</a><br/>
+                <a href="/profile/x3n" title="Candidate Master x3n" class="rated-user user-violet">x3n</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jul/30/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jul/30/2017 17:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/834/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/834"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6826</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="832"
+>
+    <td>
+Codeforces Round #425 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/832">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/832/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Loud_Scream" title="Expert Loud_Scream" class="rated-user user-blue">Loud_Scream</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jul/24/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jul/24/2017 17:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/832/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/832"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x7411</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="825"
+>
+    <td>
+Educational Codeforces Round 25                <br/>
+                <a style="font-size: 0.8em;" href="/contest/825">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/825/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/BledDest" title="Candidate Master BledDest" class="rated-user user-violet">BledDest</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/PikMike" title="Candidate Master PikMike" class="rated-user user-violet">PikMike</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jul/16/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jul/16/2017 18:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/825/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/825"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x4825</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="830"
+>
+    <td>
+Codeforces Round #424 (Div. 1, rated, based on VK Cup Finals)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/830">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/830/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/KAN" title="Grandmaster KAN" class="rated-user user-red">KAN</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/PavelKunyavskiy" title="International Grandmaster PavelKunyavskiy" class="rated-user user-red">PavelKunyavskiy</a><br/>
+                <a href="/profile/Perforator" title="Grandmaster Perforator" class="rated-user user-red">Perforator</a><br/>
+                <a href="/profile/akvasha" title="Expert akvasha" class="rated-user user-blue">akvasha</a><br/>
+                <a href="/profile/fcspartakm" title="Candidate Master fcspartakm" class="rated-user user-violet">fcspartakm</a><br/>
+                <a href="/profile/ilya_the_lamer" title="Specialist ilya_the_lamer" class="rated-user user-cyan">ilya_the_lamer</a><br/>
+                <a href="/profile/send_nodes" title="Expert send_nodes" class="rated-user user-blue">send_nodes</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jul/13/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jul/13/2017 18:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/830/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/830"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x721</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="831"
+>
+    <td>
+Codeforces Round #424 (Div. 2, rated, based on VK Cup Finals)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/831">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/831/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/KAN" title="Grandmaster KAN" class="rated-user user-red">KAN</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/PavelKunyavskiy" title="International Grandmaster PavelKunyavskiy" class="rated-user user-red">PavelKunyavskiy</a><br/>
+                <a href="/profile/Perforator" title="Grandmaster Perforator" class="rated-user user-red">Perforator</a><br/>
+                <a href="/profile/fcspartakm" title="Candidate Master fcspartakm" class="rated-user user-violet">fcspartakm</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jul/13/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jul/13/2017 18:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/831/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/831"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6208</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="827"
+>
+    <td>
+Codeforces Round #423 (Div. 1, rated, based on VK Cup Finals)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/827">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/827/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/KAN" title="Grandmaster KAN" class="rated-user user-red">KAN</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/PavelKunyavskiy" title="International Grandmaster PavelKunyavskiy" class="rated-user user-red">PavelKunyavskiy</a><br/>
+                <a href="/profile/Perforator" title="Grandmaster Perforator" class="rated-user user-red">Perforator</a><br/>
+                <a href="/profile/demon1999" title="International master demon1999" class="rated-user user-orange">demon1999</a><br/>
+                <a href="/profile/fcspartakm" title="Candidate Master fcspartakm" class="rated-user user-violet">fcspartakm</a><br/>
+                <a href="/profile/gritukan" title="International Grandmaster gritukan" class="rated-user user-red">gritukan</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jul/11/2017 19:45</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jul/11/2017 19:45</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/827/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/827"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x700</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="828"
+>
+    <td>
+Codeforces Round #423 (Div. 2, rated, based on VK Cup Finals)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/828">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/828/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/KAN" title="Grandmaster KAN" class="rated-user user-red">KAN</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/PavelKunyavskiy" title="International Grandmaster PavelKunyavskiy" class="rated-user user-red">PavelKunyavskiy</a><br/>
+                <a href="/profile/Perforator" title="Grandmaster Perforator" class="rated-user user-red">Perforator</a><br/>
+                <a href="/profile/fcspartakm" title="Candidate Master fcspartakm" class="rated-user user-violet">fcspartakm</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jul/11/2017 19:45</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jul/11/2017 19:45</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/828/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/828"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5753</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="823"
+>
+    <td>
+VK Cup 2017 - Finals                <br/>
+                <a style="font-size: 0.8em;" href="/contest/823">
+                    Enter &raquo;
+                </a>
+            <br/>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/KAN" title="Grandmaster KAN" class="rated-user user-red">KAN</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/PavelKunyavskiy" title="International Grandmaster PavelKunyavskiy" class="rated-user user-red">PavelKunyavskiy</a><br/>
+                <a href="/profile/akvasha" title="Expert akvasha" class="rated-user user-blue">akvasha</a><br/>
+                <a href="/profile/demon1999" title="International master demon1999" class="rated-user user-orange">demon1999</a><br/>
+                <a href="/profile/gritukan" title="International Grandmaster gritukan" class="rated-user user-red">gritukan</a><br/>
+                <a href="/profile/ilya_the_lamer" title="Specialist ilya_the_lamer" class="rated-user user-cyan">ilya_the_lamer</a><br/>
+                <a href="/profile/send_nodes" title="Expert send_nodes" class="rated-user user-blue">send_nodes</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jul/09/2017 11:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jul/09/2017 11:05</span>
+    </td>
+    <td>
+        03:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/823/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/823"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x20</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="826"
+>
+    <td>
+VK Cup 2017 - Finals (practice session)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/826">
+                    Enter &raquo;
+                </a>
+            <br/>
+            <br/>
+    </td>
+
+        <td class="small">
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jul/08/2017 11:20</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jul/08/2017 11:20</span>
+    </td>
+    <td>
+        01:20
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/826/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/826"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x20</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="822"
+>
+    <td>
+Codeforces Round #422 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/822">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/822/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Melnik" title="Candidate Master Melnik" class="rated-user user-violet">Melnik</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jul/02/2017 19:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jul/02/2017 19:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/822/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/822"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6485</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="818"
+>
+    <td>
+Educational Codeforces Round 24                <br/>
+                <a style="font-size: 0.8em;" href="/contest/818">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/818/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/BledDest" title="Candidate Master BledDest" class="rated-user user-violet">BledDest</a><br/>
+                <a href="/profile/Perforator" title="Grandmaster Perforator" class="rated-user user-red">Perforator</a><br/>
+                <a href="/profile/PikMike" title="Candidate Master PikMike" class="rated-user user-violet">PikMike</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jun/29/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jun/29/2017 18:05</span>
+    </td>
+    <td>
+        02:15
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/818/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/818"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x4442</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="819"
+>
+    <td>
+Codeforces Round #421 (Div. 1)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/819">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/819/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/adedalic" title="Master adedalic" class="rated-user user-orange">adedalic</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jun/27/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jun/27/2017 17:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/819/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/819"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x776</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="820"
+>
+    <td>
+Codeforces Round #421 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/820">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/820/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/adedalic" title="Master adedalic" class="rated-user user-orange">adedalic</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jun/27/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jun/27/2017 17:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/820/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/820"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6008</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="821"
+>
+    <td>
+Codeforces Round #420 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/821">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/821/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/send_nodes" title="Expert send_nodes" class="rated-user user-blue">send_nodes</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jun/25/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jun/25/2017 17:35</span>
+    </td>
+    <td>
+        02:15
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/821/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/821"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6195</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="815"
+>
+    <td>
+Codeforces Round #419 (Div. 1)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/815">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/815/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/robinyu" title="Grandmaster robinyu" class="rated-user user-red">robinyu</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jun/17/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jun/17/2017 17:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/815/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/815"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x870</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="816"
+>
+    <td>
+Codeforces Round #419 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/816">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/816/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/robinyu" title="Grandmaster robinyu" class="rated-user user-red">robinyu</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jun/17/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jun/17/2017 17:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/816/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/816"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6066</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="817"
+>
+    <td>
+Educational Codeforces Round 23                <br/>
+                <a style="font-size: 0.8em;" href="/contest/817">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/817/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/0n25" title="Candidate Master 0n25" class="rated-user user-violet">0n25</a><br/>
+                <a href="/profile/BledDest" title="Candidate Master BledDest" class="rated-user user-violet">BledDest</a><br/>
+                <a href="/profile/PikMike" title="Candidate Master PikMike" class="rated-user user-violet">PikMike</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jun/15/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jun/15/2017 18:05</span>
+    </td>
+    <td>
+        02:15
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/817/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/817"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x4516</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="814"
+>
+    <td>
+Codeforces Round #418 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/814">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/814/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/cyand1317" title="Grandmaster cyand1317" class="rated-user user-red">cyand1317</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jun/07/2017 15:15</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jun/07/2017 15:15</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/814/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/814"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6428</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="813"
+>
+    <td>
+Educational Codeforces Round 22                <br/>
+                <a style="font-size: 0.8em;" href="/contest/813">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/813/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/0n25" title="Candidate Master 0n25" class="rated-user user-violet">0n25</a><br/>
+                <a href="/profile/BledDest" title="Candidate Master BledDest" class="rated-user user-violet">BledDest</a><br/>
+                <a href="/profile/PikMike" title="Candidate Master PikMike" class="rated-user user-violet">PikMike</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jun/05/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jun/05/2017 18:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/813/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/813"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x4634</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="812"
+>
+    <td>
+Codeforces Round #417 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/812">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/812/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Ahmad_Elsagheer" title="Master Ahmad_Elsagheer" class="rated-user user-orange">Ahmad_Elsagheer</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jun/01/2017 17:15</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jun/01/2017 17:15</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/812/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/812"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6556</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="802"
+>
+    <td>
+Helvetic Coding Contest 2017 online mirror (teams allowed, unrated)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/802">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/802/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/DamianS" title="International master DamianS" class="rated-user user-orange">DamianS</a><br/>
+                <a href="/profile/boba5551" title="Candidate Master boba5551" class="rated-user user-violet">boba5551</a><br/>
+                <a href="/profile/ckauth" title="Unrated, ckauth" class="rated-user user-black">ckauth</a><br/>
+                <a href="/profile/dj3500" title="Grandmaster dj3500" class="rated-user user-red">dj3500</a><br/>
+                <a href="/profile/meret" title="International Grandmaster meret" class="rated-user user-red">meret</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">May/28/2017 11:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">May/28/2017 11:05</span>
+    </td>
+    <td>
+        04:30
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/802/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/802"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x2013</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="811"
+>
+    <td>
+Codeforces Round #416 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/811">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/811/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Valerich" title="Candidate Master Valerich" class="rated-user user-violet">Valerich</a><br/>
+                <a href="/profile/Vladik" title="Master Vladik" class="rated-user user-orange">Vladik</a><br/>
+                <a href="/profile/hloya_ygrt" title="International master hloya_ygrt" class="rated-user user-orange">hloya_ygrt</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">May/27/2017 12:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">May/27/2017 12:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/811/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/811"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6357</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="809"
+>
+    <td>
+Codeforces Round #415 (Div. 1)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/809">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/809/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Melnik" title="Candidate Master Melnik" class="rated-user user-violet">Melnik</a><br/>
+                <a href="/profile/hloya_ygrt" title="International master hloya_ygrt" class="rated-user user-orange">hloya_ygrt</a><br/>
+                <a href="/profile/kefaa" title="Master kefaa" class="rated-user user-orange">kefaa</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">May/20/2017 21:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">May/20/2017 21:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/809/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/809"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x564</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="810"
+>
+    <td>
+Codeforces Round #415 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/810">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/810/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Melnik" title="Candidate Master Melnik" class="rated-user user-violet">Melnik</a><br/>
+                <a href="/profile/hloya_ygrt" title="International master hloya_ygrt" class="rated-user user-orange">hloya_ygrt</a><br/>
+                <a href="/profile/kefaa" title="Master kefaa" class="rated-user user-orange">kefaa</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">May/20/2017 21:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">May/20/2017 21:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/810/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/810"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x4573</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="808"
+>
+    <td>
+Educational Codeforces Round 21                <br/>
+                <a style="font-size: 0.8em;" href="/contest/808">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/808/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/BledDest" title="Candidate Master BledDest" class="rated-user user-violet">BledDest</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/PikMike" title="Candidate Master PikMike" class="rated-user user-violet">PikMike</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">May/15/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">May/15/2017 18:05</span>
+    </td>
+    <td>
+        02:30
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/808/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/808"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x4181</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="794"
+>
+    <td>
+Tinkoff Challenge - Final Round (Codeforces Round #414, rated, Div. 1 + Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/794">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/794/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/AnonymousBunny" title="Candidate Master AnonymousBunny" class="rated-user user-violet">AnonymousBunny</a><br/>
+                <a href="/profile/hloya_ygrt" title="International master hloya_ygrt" class="rated-user user-orange">hloya_ygrt</a><br/>
+                <a href="/profile/zscoder" title="Grandmaster zscoder" class="rated-user user-red">zscoder</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">May/13/2017 12:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">May/13/2017 12:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/794/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/794"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x4230</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="799"
+>
+    <td>
+Playrix Codescapes Cup (Codeforces Round #413, rated, Div. 1 + Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/799">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/799/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Al.Cash" title="Grandmaster Al.Cash" class="rated-user user-red">Al.Cash</a><br/>
+                <a href="/profile/KAN" title="Grandmaster KAN" class="rated-user user-red">KAN</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">May/11/2017 18:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">May/11/2017 18:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/799/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/799"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5889</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="773"
+>
+    <td>
+VK Cup 2017 - Round 3                <br/>
+                <a style="font-size: 0.8em;" href="/contest/773">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/773/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/tourist" title="Legendary grandmaster tourist" class="rated-user user-legendary"><span class="legendary-user-first-letter">t</span>ourist</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">May/07/2017 18:45</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">May/07/2017 18:45</span>
+    </td>
+    <td>
+        03:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/773/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/773"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x112</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="806"
+>
+    <td>
+Codeforces Round #412 (rated, Div. 1, based on VK Cup 2017 Round 3)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/806">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/806/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/tourist" title="Legendary grandmaster tourist" class="rated-user user-legendary"><span class="legendary-user-first-letter">t</span>ourist</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">May/07/2017 18:45</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">May/07/2017 18:45</span>
+    </td>
+    <td>
+        03:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/806/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/806"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x635</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="807"
+>
+    <td>
+Codeforces Round #412 (rated, Div. 2, base on VK Cup 2017 Round 3)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/807">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/807/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/tourist" title="Legendary grandmaster tourist" class="rated-user user-legendary"><span class="legendary-user-first-letter">t</span>ourist</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">May/07/2017 18:45</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">May/07/2017 18:45</span>
+    </td>
+    <td>
+        03:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/807/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/807"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x4420</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="804"
+>
+    <td>
+Codeforces Round #411 (Div. 1)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/804">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/804/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/ChamrAn" title="Candidate Master ChamrAn" class="rated-user user-violet">ChamrAn</a><br/>
+                <a href="/profile/Folorn" title="Master Folorn" class="rated-user user-orange">Folorn</a><br/>
+                <a href="/profile/Hifdah" title="Candidate Master Hifdah" class="rated-user user-violet">Hifdah</a><br/>
+                <a href="/profile/MohammadJA" title="Candidate Master MohammadJA" class="rated-user user-violet">MohammadJA</a><br/>
+                <a href="/profile/Navick" title="Candidate Master Navick" class="rated-user user-violet">Navick</a><br/>
+                <a href="/profile/Sa1378" title="International master Sa1378" class="rated-user user-orange">Sa1378</a><br/>
+                <a href="/profile/kastarika" title="Expert kastarika" class="rated-user user-blue">kastarika</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">May/04/2017 17:50</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">May/04/2017 17:50</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/804/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/804"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x783</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="805"
+>
+    <td>
+Codeforces Round #411 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/805">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/805/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/ChamrAn" title="Candidate Master ChamrAn" class="rated-user user-violet">ChamrAn</a><br/>
+                <a href="/profile/Folorn" title="Master Folorn" class="rated-user user-orange">Folorn</a><br/>
+                <a href="/profile/Hifdah" title="Candidate Master Hifdah" class="rated-user user-violet">Hifdah</a><br/>
+                <a href="/profile/MohammadJA" title="Candidate Master MohammadJA" class="rated-user user-violet">MohammadJA</a><br/>
+                <a href="/profile/Navick" title="Candidate Master Navick" class="rated-user user-violet">Navick</a><br/>
+                <a href="/profile/Sa1378" title="International master Sa1378" class="rated-user user-orange">Sa1378</a><br/>
+                <a href="/profile/kastarika" title="Expert kastarika" class="rated-user user-blue">kastarika</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">May/04/2017 17:50</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">May/04/2017 17:50</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/805/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/805"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5430</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="803"
+>
+    <td>
+Educational Codeforces Round 20                <br/>
+                <a style="font-size: 0.8em;" href="/contest/803">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/803/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/BledDest" title="Candidate Master BledDest" class="rated-user user-violet">BledDest</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/PikMike" title="Candidate Master PikMike" class="rated-user user-violet">PikMike</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Apr/28/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Apr/28/2017 18:05</span>
+    </td>
+    <td>
+        02:15
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/803/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/803"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x3796</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="775"
+>
+    <td>
+VK Cup 2017 - Wild Card Round 2                <br/>
+                <a style="font-size: 0.8em;" href="/contest/775">
+                    Enter &raquo;
+                </a>
+            <br/>
+            <br/>
+    </td>
+
+        <td class="small">
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Apr/26/2017 18:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Apr/26/2017 18:35</span>
+    </td>
+    <td>
+        7:00:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/775/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/775"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x1715</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="793"
+>
+    <td>
+Tinkoff Challenge - Elimination Round                <br/>
+                <a style="font-size: 0.8em;" href="/contest/793">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/793/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/KAN" title="Grandmaster KAN" class="rated-user user-red">KAN</a><br/>
+                <a href="/profile/alkurmtl" title="Expert alkurmtl" class="rated-user user-blue">alkurmtl</a><br/>
+                <a href="/profile/gainullin.ildar" title="Grandmaster gainullin.ildar" class="rated-user user-red">gainullin.ildar</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Apr/23/2017 19:45</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Apr/23/2017 19:45</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/793/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/793"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5294</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="798"
+>
+    <td>
+Codeforces Round #410 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/798">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/798/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/reality" title="Master reality" class="rated-user user-orange">reality</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Apr/21/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Apr/21/2017 17:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/798/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/798"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6773</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="772"
+>
+    <td>
+VK Cup 2017 - Round 2                <br/>
+                <a style="font-size: 0.8em;" href="/contest/772">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/772/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/lewin" title="Grandmaster lewin" class="rated-user user-red">lewin</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Apr/16/2017 18:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Apr/16/2017 18:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/772/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/772"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x402</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="800"
+>
+    <td>
+Codeforces Round #409 (rated, Div. 1, based on VK Cup 2017 Round 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/800">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/800/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/lewin" title="Grandmaster lewin" class="rated-user user-red">lewin</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Apr/16/2017 18:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Apr/16/2017 18:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/800/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/800"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x498</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="801"
+>
+    <td>
+Codeforces Round #409 (rated, Div. 2, based on VK Cup 2017 Round 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/801">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/801/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/lewin" title="Grandmaster lewin" class="rated-user user-red">lewin</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Apr/16/2017 18:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Apr/16/2017 18:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/801/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/801"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x4422</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="797"
+>
+    <td>
+Educational Codeforces Round 19                <br/>
+                <a style="font-size: 0.8em;" href="/contest/797">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/797/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/BledDest" title="Candidate Master BledDest" class="rated-user user-violet">BledDest</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/Perforator" title="Grandmaster Perforator" class="rated-user user-red">Perforator</a><br/>
+                <a href="/profile/PikMike" title="Candidate Master PikMike" class="rated-user user-violet">PikMike</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Apr/15/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Apr/15/2017 17:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/797/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/797"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x4575</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="796"
+>
+    <td>
+Codeforces Round #408 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/796">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/796/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/zoomswk" title="International master zoomswk" class="rated-user user-orange">zoomswk</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Apr/10/2017 19:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Apr/10/2017 19:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/796/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/796"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6520</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="774"
+>
+    <td>
+VK Cup 2017 - Wild Card Round 1                <br/>
+                <a style="font-size: 0.8em;" href="/contest/774">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/774/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/KAN" title="Grandmaster KAN" class="rated-user user-red">KAN</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/fcspartakm" title="Candidate Master fcspartakm" class="rated-user user-violet">fcspartakm</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Apr/05/2017 18:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Apr/05/2017 18:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/774/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/774"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x352</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="795"
+>
+    <td>
+VK Cup 2017 - Wild Card Round 1 (Unofficial Public Mirror)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/795">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/795/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/KAN" title="Grandmaster KAN" class="rated-user user-red">KAN</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/fcspartakm" title="Candidate Master fcspartakm" class="rated-user user-violet">fcspartakm</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Apr/05/2017 18:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Apr/05/2017 18:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/795/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/795"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x3087</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="784"
+>
+    <td>
+April Fools Contest 2017                <br/>
+                <a style="font-size: 0.8em;" href="/contest/784">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/784/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Nickolas" title="Expert Nickolas" class="rated-user user-blue">Nickolas</a><br/>
+                <a href="/profile/kit1980" title="Specialist kit1980" class="rated-user user-cyan">kit1980</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Mar/31/2017 18:00</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Mar/31/2017 18:00</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/784/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/784"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6407</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="788"
+>
+    <td>
+Codeforces Round #407 (Div. 1)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/788">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/788/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/I_love_Maria_Ivanova" title="Candidate Master I_love_Maria_Ivanova" class="rated-user user-violet">I_love_Maria_Ivanova</a><br/>
+                <a href="/profile/Stastomash" title="Candidate Master Stastomash" class="rated-user user-violet">Stastomash</a><br/>
+                <a href="/profile/arsijo" title="Grandmaster arsijo" class="rated-user user-red">arsijo</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Mar/29/2017 19:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Mar/29/2017 19:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/788/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/788"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x709</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="789"
+>
+    <td>
+Codeforces Round #407 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/789">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/789/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/I_love_Maria_Ivanova" title="Candidate Master I_love_Maria_Ivanova" class="rated-user user-violet">I_love_Maria_Ivanova</a><br/>
+                <a href="/profile/Stastomash" title="Candidate Master Stastomash" class="rated-user user-violet">Stastomash</a><br/>
+                <a href="/profile/arsijo" title="Grandmaster arsijo" class="rated-user user-red">arsijo</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Mar/29/2017 19:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Mar/29/2017 19:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/789/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/789"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6880</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="792"
+>
+    <td>
+Educational Codeforces Round 18                <br/>
+                <a style="font-size: 0.8em;" href="/contest/792">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/792/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/BledDest" title="Candidate Master BledDest" class="rated-user user-violet">BledDest</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/PikMike" title="Candidate Master PikMike" class="rated-user user-violet">PikMike</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Mar/27/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Mar/27/2017 17:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/792/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/792"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5695</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="786"
+>
+    <td>
+Codeforces Round #406 (Div. 1)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/786">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/786/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/PrinceOfPersia" title="International master PrinceOfPersia" class="rated-user user-orange">PrinceOfPersia</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Mar/23/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Mar/23/2017 18:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/786/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/786"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x795</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="787"
+>
+    <td>
+Codeforces Round #406 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/787">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/787/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/PrinceOfPersia" title="International master PrinceOfPersia" class="rated-user user-orange">PrinceOfPersia</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Mar/23/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Mar/23/2017 18:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/787/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/787"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x7190</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="771"
+>
+    <td>
+VK Cup 2017 - Round 1                <br/>
+                <a style="font-size: 0.8em;" href="/contest/771">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/771/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Errichto" title="International Grandmaster Errichto" class="rated-user user-red">Errichto</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Mar/18/2017 18:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Mar/18/2017 18:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/771/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/771"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x952</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="790"
+>
+    <td>
+Codeforces Round #405 (rated, Div. 1, based on VK Cup 2017 Round 1)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/790">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/790/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Errichto" title="International Grandmaster Errichto" class="rated-user user-red">Errichto</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Mar/18/2017 18:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Mar/18/2017 18:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/790/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/790"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x689</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="791"
+>
+    <td>
+Codeforces Round #405 (rated, Div. 2, based on VK Cup 2017 Round 1)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/791">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/791/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Errichto" title="International Grandmaster Errichto" class="rated-user user-red">Errichto</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Mar/18/2017 18:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Mar/18/2017 18:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/791/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/791"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5900</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="785"
+>
+    <td>
+Codeforces Round #404 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/785">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/785/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/alex256" title="International master alex256" class="rated-user user-orange">alex256</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Mar/15/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Mar/15/2017 18:05</span>
+    </td>
+    <td>
+        02:10
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/785/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/785"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x7704</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="770"
+>
+    <td>
+VK Cup 2017 - Qualification 2                <br/>
+                <a style="font-size: 0.8em;" href="/contest/770">
+                    Enter &raquo;
+                </a>
+            <br/>
+            <br/>
+    </td>
+
+        <td class="small">
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Mar/11/2017 15:00</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Mar/11/2017 15:00</span>
+    </td>
+    <td>
+        1:00:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/770/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/770"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x1633</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="781"
+>
+    <td>
+Codeforces Round #403 (Div. 1, based on Technocup 2017 Finals)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/781">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/781/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Alladdin" title="Candidate Master Alladdin" class="rated-user user-violet">Alladdin</a><br/>
+                <a href="/profile/Amethyst1" title="Candidate Master Amethyst1" class="rated-user user-violet">Amethyst1</a><br/>
+                <a href="/profile/Endagorion" title="International Grandmaster Endagorion" class="rated-user user-red">Endagorion</a><br/>
+                <a href="/profile/KAN" title="Grandmaster KAN" class="rated-user user-red">KAN</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/WHITE2302" title="Grandmaster WHITE2302" class="rated-user user-red">WHITE2302</a><br/>
+                <a href="/profile/fcspartakm" title="Candidate Master fcspartakm" class="rated-user user-violet">fcspartakm</a><br/>
+                <a href="/profile/ifsmirnov" title="Grandmaster ifsmirnov" class="rated-user user-red">ifsmirnov</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Mar/05/2017 16:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Mar/05/2017 16:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/781/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/781"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x805</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="782"
+>
+    <td>
+Codeforces Round #403 (Div. 2, based on Technocup 2017 Finals)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/782">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/782/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Alladdin" title="Candidate Master Alladdin" class="rated-user user-violet">Alladdin</a><br/>
+                <a href="/profile/Amethyst1" title="Candidate Master Amethyst1" class="rated-user user-violet">Amethyst1</a><br/>
+                <a href="/profile/Endagorion" title="International Grandmaster Endagorion" class="rated-user user-red">Endagorion</a><br/>
+                <a href="/profile/KAN" title="Grandmaster KAN" class="rated-user user-red">KAN</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/WHITE2302" title="Grandmaster WHITE2302" class="rated-user user-red">WHITE2302</a><br/>
+                <a href="/profile/fcspartakm" title="Candidate Master fcspartakm" class="rated-user user-violet">fcspartakm</a><br/>
+                <a href="/profile/ifsmirnov" title="Grandmaster ifsmirnov" class="rated-user user-red">ifsmirnov</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Mar/05/2017 16:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Mar/05/2017 16:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/782/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/782"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5728</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="769"
+>
+    <td>
+VK Cup 2017 - Qualification 1                <br/>
+                <a style="font-size: 0.8em;" href="/contest/769">
+                    Enter &raquo;
+                </a>
+            <br/>
+            <br/>
+    </td>
+
+        <td class="small">
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Mar/04/2017 15:00</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Mar/04/2017 15:00</span>
+    </td>
+    <td>
+        1:00:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/769/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/769"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x1836</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="778"
+>
+    <td>
+Codeforces Round #402 (Div. 1)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/778">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/778/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/FireZi" title="Expert FireZi" class="rated-user user-blue">FireZi</a><br/>
+                <a href="/profile/VArtem" title="Grandmaster VArtem" class="rated-user user-red">VArtem</a><br/>
+                <a href="/profile/YakutovDmitriy" title="International master YakutovDmitriy" class="rated-user user-orange">YakutovDmitriy</a><br/>
+                <a href="/profile/burakov28" title="Candidate Master burakov28" class="rated-user user-violet">burakov28</a><br/>
+                <a href="/profile/niyaznigmatul" title="International Grandmaster niyaznigmatul" class="rated-user user-red">niyaznigmatul</a><br/>
+                <a href="/profile/pashka" title="Grandmaster pashka" class="rated-user user-red">pashka</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Feb/26/2017 11:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Feb/26/2017 11:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/778/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/778"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x784</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="779"
+>
+    <td>
+Codeforces Round #402 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/779">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/779/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/FireZi" title="Expert FireZi" class="rated-user user-blue">FireZi</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/YakutovDmitriy" title="International master YakutovDmitriy" class="rated-user user-orange">YakutovDmitriy</a><br/>
+                <a href="/profile/burakov28" title="Candidate Master burakov28" class="rated-user user-violet">burakov28</a><br/>
+                <a href="/profile/niyaznigmatul" title="International Grandmaster niyaznigmatul" class="rated-user user-red">niyaznigmatul</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Feb/26/2017 11:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Feb/26/2017 11:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/779/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/779"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5399</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="777"
+>
+    <td>
+Codeforces Round #401 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/777">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/777/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/GlebsHP" title="International Grandmaster GlebsHP" class="rated-user user-red">GlebsHP</a><br/>
+                <a href="/profile/ch_egor" title="International master ch_egor" class="rated-user user-orange">ch_egor</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Feb/24/2017 13:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Feb/24/2017 13:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/777/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/777"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5673</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="776"
+>
+    <td>
+ICM Technex 2017 and Codeforces Round #400 (Div. 1 + Div. 2, combined)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/776">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/776/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Prateek1996" title="Expert Prateek1996" class="rated-user user-blue">Prateek1996</a><br/>
+                <a href="/profile/dark_n8" title="Candidate Master dark_n8" class="rated-user user-violet">dark_n8</a><br/>
+                <a href="/profile/ishank011" title="Expert ishank011" class="rated-user user-blue">ishank011</a><br/>
+                <a href="/profile/vikhs_96" title="Expert vikhs_96" class="rated-user user-blue">vikhs_96</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Feb/23/2017 17:45</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Feb/23/2017 17:45</span>
+    </td>
+    <td>
+        02:10
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/776/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/776"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6819</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="768"
+>
+    <td>
+Divide by Zero 2017 and Codeforces Round #399 (Div. 1 + Div. 2, combined)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/768">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/768/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/AakashHanda" title="Expert AakashHanda" class="rated-user user-blue">AakashHanda</a><br/>
+                <a href="/profile/apoorv_kulsh" title="Candidate Master apoorv_kulsh" class="rated-user user-violet">apoorv_kulsh</a><br/>
+                <a href="/profile/arnabsamanta" title="Expert arnabsamanta" class="rated-user user-blue">arnabsamanta</a><br/>
+                <a href="/profile/killer_bee" title="Expert killer_bee" class="rated-user user-blue">killer_bee</a><br/>
+                <a href="/profile/sidprasad" title="Expert sidprasad" class="rated-user user-blue">sidprasad</a><br/>
+                <a href="/profile/vntshh" title="Expert vntshh" class="rated-user user-blue">vntshh</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Feb/20/2017 19:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Feb/20/2017 19:05</span>
+    </td>
+    <td>
+        02:40
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/768/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/768"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x7186</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="767"
+>
+    <td>
+Codeforces Round #398 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/767">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/767/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/KAN" title="Grandmaster KAN" class="rated-user user-red">KAN</a><br/>
+                <a href="/profile/KAP" title="Candidate Master KAP" class="rated-user user-violet">KAP</a><br/>
+                <a href="/profile/ZhNV" title="Grandmaster ZhNV" class="rated-user user-red">ZhNV</a><br/>
+                <a href="/profile/arsor" title="Specialist arsor" class="rated-user user-cyan">arsor</a><br/>
+                <a href="/profile/ashmelev" title="Grandmaster ashmelev" class="rated-user user-red">ashmelev</a><br/>
+                <a href="/profile/kuzmichev_dima" title="Candidate Master kuzmichev_dima" class="rated-user user-violet">kuzmichev_dima</a><br/>
+                <a href="/profile/mike_live" title="Expert mike_live" class="rated-user user-blue">mike_live</a><br/>
+                <a href="/profile/mmatrosov" title="Expert mmatrosov" class="rated-user user-blue">mmatrosov</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Feb/18/2017 12:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Feb/18/2017 12:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/767/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/767"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6215</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="765"
+>
+    <td>
+Codeforces Round #397 by Kaspersky Lab and Barcelona Bootcamp (Div. 1 + Div. 2 combined)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/765">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/765/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Arterm" title="International Grandmaster Arterm" class="rated-user user-red">Arterm</a><br/>
+                <a href="/profile/Endagorion" title="International Grandmaster Endagorion" class="rated-user user-red">Endagorion</a><br/>
+                <a href="/profile/ifsmirnov" title="Grandmaster ifsmirnov" class="rated-user user-red">ifsmirnov</a><br/>
+                <a href="/profile/zemen" title="International Grandmaster zemen" class="rated-user user-red">zemen</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Feb/14/2017 11:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Feb/14/2017 11:05</span>
+    </td>
+    <td>
+        03:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/765/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/765"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5507</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="766"
+>
+    <td>
+Codeforces Round #396 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/766">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/766/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/mahmoudbadawy" title="Candidate Master mahmoudbadawy" class="rated-user user-violet">mahmoudbadawy</a><br/>
+                <a href="/profile/mohammedehab2002" title="Expert mohammedehab2002" class="rated-user user-blue">mohammedehab2002</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Feb/07/2017 20:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Feb/07/2017 20:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/766/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/766"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x7502</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="763"
+>
+    <td>
+Codeforces Round #395 (Div. 1)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/763">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/763/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/akvasha" title="Expert akvasha" class="rated-user user-blue">akvasha</a><br/>
+                <a href="/profile/ilya_the_lamer" title="Specialist ilya_the_lamer" class="rated-user user-cyan">ilya_the_lamer</a><br/>
+                <a href="/profile/platypus179" title="Candidate Master platypus179" class="rated-user user-violet">platypus179</a><br/>
+                <a href="/profile/s17b2_voroneckij" title="Candidate Master s17b2_voroneckij" class="rated-user user-violet">s17b2_voroneckij</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Feb/02/2017 16:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Feb/02/2017 16:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/763/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/763"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x870</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="764"
+>
+    <td>
+Codeforces Round #395 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/764">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/764/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/akvasha" title="Expert akvasha" class="rated-user user-blue">akvasha</a><br/>
+                <a href="/profile/ilya_the_lamer" title="Specialist ilya_the_lamer" class="rated-user user-cyan">ilya_the_lamer</a><br/>
+                <a href="/profile/platypus179" title="Candidate Master platypus179" class="rated-user user-violet">platypus179</a><br/>
+                <a href="/profile/s17b2_voroneckij" title="Candidate Master s17b2_voroneckij" class="rated-user user-violet">s17b2_voroneckij</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Feb/02/2017 16:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Feb/02/2017 16:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/764/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/764"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6938</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="761"
+>
+    <td>
+Codeforces Round #394 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/761">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/761/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Vladik" title="Master Vladik" class="rated-user user-orange">Vladik</a><br/>
+                <a href="/profile/altruist" title="Candidate Master altruist" class="rated-user user-violet">altruist</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jan/31/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jan/31/2017 17:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/761/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/761"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x8117</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="762"
+>
+    <td>
+Educational Codeforces Round 17                <br/>
+                <a style="font-size: 0.8em;" href="/contest/762">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/762/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/HellKitsune" title="Grandmaster HellKitsune" class="rated-user user-red">HellKitsune</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jan/25/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jan/25/2017 17:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/762/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/762"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x6389</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="756"
+>
+    <td>
+8VC Venture Cup 2017 - Final Round                <br/>
+                <a style="font-size: 0.8em;" href="/contest/756">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/756/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Endagorion" title="International Grandmaster Endagorion" class="rated-user user-red">Endagorion</a><br/>
+                <a href="/profile/Um_nik" title="Legendary grandmaster Um_nik" class="rated-user user-legendary"><span class="legendary-user-first-letter">U</span>m_nik</a><br/>
+                <a href="/profile/Umqra" title="Grandmaster Umqra" class="rated-user user-red">Umqra</a><br/>
+                <a href="/profile/pashka" title="Grandmaster pashka" class="rated-user user-red">pashka</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jan/22/2017 21:15</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jan/22/2017 21:15</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/756/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/756"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x184</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="759"
+>
+    <td>
+Codeforces Round #393 (Div. 1) (8VC Venture Cup 2017 - Final Round Div. 1 Edition)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/759">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/759/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Endagorion" title="International Grandmaster Endagorion" class="rated-user user-red">Endagorion</a><br/>
+                <a href="/profile/Um_nik" title="Legendary grandmaster Um_nik" class="rated-user user-legendary"><span class="legendary-user-first-letter">U</span>m_nik</a><br/>
+                <a href="/profile/Umqra" title="Grandmaster Umqra" class="rated-user user-red">Umqra</a><br/>
+                <a href="/profile/pashka" title="Grandmaster pashka" class="rated-user user-red">pashka</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jan/22/2017 21:15</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jan/22/2017 21:15</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/759/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/759"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x656</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="760"
+>
+    <td>
+Codeforces Round #393 (Div. 2) (8VC Venture Cup 2017 - Final Round Div. 2 Edition)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/760">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/760/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Endagorion" title="International Grandmaster Endagorion" class="rated-user user-red">Endagorion</a><br/>
+                <a href="/profile/KAN" title="Grandmaster KAN" class="rated-user user-red">KAN</a><br/>
+                <a href="/profile/Umqra" title="Grandmaster Umqra" class="rated-user user-red">Umqra</a><br/>
+                <a href="/profile/pashka" title="Grandmaster pashka" class="rated-user user-red">pashka</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jan/22/2017 21:15</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jan/22/2017 21:15</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/760/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/760"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5866</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="758"
+>
+    <td>
+Codeforces Round #392 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/758">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/758/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Kniaz" title="Expert Kniaz" class="rated-user user-blue">Kniaz</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jan/19/2017 18:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jan/19/2017 18:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/758/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/758"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x7812</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="755"
+>
+    <td>
+8VC Venture Cup 2017 - Elimination Round                <br/>
+                <a style="font-size: 0.8em;" href="/contest/755">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/755/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Miyukine" title="Master Miyukine" class="rated-user user-orange">Miyukine</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jan/15/2017 20:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jan/15/2017 20:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/755/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/755"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5942</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="757"
+>
+    <td>
+Codecraft-17 and Codeforces Round #391 (Div. 1 + Div. 2, combined)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/757">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/757/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/saatwik27" title="Expert saatwik27" class="rated-user user-blue">saatwik27</a><br/>
+                <a href="/profile/satyam.pandey" title="Expert satyam.pandey" class="rated-user user-blue">satyam.pandey</a><br/>
+                <a href="/profile/shivamkakkar" title="Candidate Master shivamkakkar" class="rated-user user-violet">shivamkakkar</a><br/>
+                <a href="/profile/tanujkhattar" title="Master tanujkhattar" class="rated-user user-orange">tanujkhattar</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jan/12/2017 18:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jan/12/2017 18:35</span>
+    </td>
+    <td>
+        03:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/757/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/757"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x7442</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="754"
+>
+    <td>
+Codeforces Round #390 (Div. 2)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/754">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/754/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/netman" title="International master netman" class="rated-user user-orange">netman</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Jan/06/2017 17:35</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Jan/06/2017 17:35</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/754/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/754"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x7955</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="750"
+>
+    <td>
+Good Bye 2016                <br/>
+                <a style="font-size: 0.8em;" href="/contest/750">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/750/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Errichto" title="International Grandmaster Errichto" class="rated-user user-red">Errichto</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Dec/30/2016 17:15</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Dec/30/2016 17:15</span>
+    </td>
+    <td>
+        02:30
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/750/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/750"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x9144</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="753"
+>
+    <td>
+Testing Round #13                <br/>
+                <a style="font-size: 0.8em;" href="/contest/753">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/753/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Dec/29/2016 12:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Dec/29/2016 12:05</span>
+    </td>
+    <td>
+        01:15
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/753/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/753"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x1523</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="748"
+>
+    <td>
+Technocup 2017 - Elimination Round 3                <br/>
+                <a style="font-size: 0.8em;" href="/contest/748">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/748/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Endagorion" title="International Grandmaster Endagorion" class="rated-user user-red">Endagorion</a><br/>
+                <a href="/profile/Golovanov399" title="Grandmaster Golovanov399" class="rated-user user-red">Golovanov399</a><br/>
+                <a href="/profile/KAN" title="Grandmaster KAN" class="rated-user user-red">KAN</a><br/>
+                <a href="/profile/Kostroma" title="International Grandmaster Kostroma" class="rated-user user-red">Kostroma</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/fcspartakm" title="Candidate Master fcspartakm" class="rated-user user-violet">fcspartakm</a><br/>
+                <a href="/profile/ifsmirnov" title="Grandmaster ifsmirnov" class="rated-user user-red">ifsmirnov</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Dec/25/2016 12:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Dec/25/2016 12:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/748/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/748"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x1015</a>
+    </td>
+
+</tr>
+<tr
+    
+    data-contestId="752"
+>
+    <td>
+Codeforces Round #389 (Div. 2, Rated, Based on Technocup 2017 - Elimination Round 3)                <br/>
+                <a style="font-size: 0.8em;" href="/contest/752">
+                    Enter &raquo;
+                </a>
+            <br/>
+                <a style="font-size: 0.8em;" href="/contest/752/virtual">
+                    Virtual participation &raquo;
+                </a>
+            <br/>
+    </td>
+
+        <td class="small">
+                <a href="/profile/Endagorion" title="International Grandmaster Endagorion" class="rated-user user-red">Endagorion</a><br/>
+                <a href="/profile/Golovanov399" title="Grandmaster Golovanov399" class="rated-user user-red">Golovanov399</a><br/>
+                <a href="/profile/KAN" title="Grandmaster KAN" class="rated-user user-red">KAN</a><br/>
+                <a href="/profile/Kostroma" title="International Grandmaster Kostroma" class="rated-user user-red">Kostroma</a><br/>
+                <a href="/profile/MikeMirzayanov" title="Headquarters, MikeMirzayanov" class="rated-user user-admin">MikeMirzayanov</a><br/>
+                <a href="/profile/fcspartakm" title="Candidate Master fcspartakm" class="rated-user user-violet">fcspartakm</a><br/>
+                <a href="/profile/ifsmirnov" title="Grandmaster ifsmirnov" class="rated-user user-red">ifsmirnov</a><br/>
+        </td>
+
+    <td>
+                <span class="format-date" data-locale="en">Dec/25/2016 12:05</span>
+                <br/>
+                <span class="format-time-only" data-locale="en">Dec/25/2016 12:05</span>
+    </td>
+    <td>
+        02:00
+    </td>
+    <td class="state">
+            <div>
+            <a href="/contest/752/standings">Final standings</a>
+            </div>
+    </td>
+    <td style="font-size:0.8em;">
+<a class="contestParticipantCountLinkMargin" title="Registered" href="/contestRegistrants/752"><img style="vertical-align: middle;" src="http://st.codeforces.com/s/71216/images/icons/user.png"/>&nbsp;x5651</a>
+    </td>
+
+</tr>
+            </table>
+            </div>
+        </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+                // Create new ':containsIgnoreCase' selector for search
+                jQuery.expr[':'].containsIgnoreCase = function(a, i, m) {
+                    return jQuery(a).text().toUpperCase()
+                            .indexOf(m[3].toUpperCase()) >= 0;
+                };
+
+                if (window.updateDatatableFilter == undefined) {
+                    window.updateDatatableFilter = function(i) {
+                        var parent = $(i).parent().parent().parent().parent();
+                        $("tr.no-items", parent).remove();
+                        $("tr", parent).hide().removeClass('visible');
+                        var text = $(i).val();
+                        if (text) {
+                            $("tr" + ":containsIgnoreCase('" + text + "')", parent).show().addClass('visible');
+                        } else {
+                            parent.find(".rowCount").text("");
+                            $("tr", parent).show().addClass('visible');
+                        }
+
+                        var found = false;
+                        var visibleRowCount = 0;
+                        $("tr", parent).each(function () {
+                            if (!found) {
+                                if ($(this).find("th").size() > 0) {
+                                    $(this).show().addClass('visible');
+                                    found = true;
+                                }
+                            }
+                            if ($(this).hasClass('visible')) {
+                                visibleRowCount++;
+                            }
+                        });
+                        if (text) {
+                            parent.find(".rowCount").text("Matches: " + (visibleRowCount - (found ? 1 : 0)));
+                        }
+                        if (visibleRowCount == (found ? 1 : 0)) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo($(parent).find('table'));
+                        }
+                        $(parent).find("tr td").removeClass("dark");
+                        $(parent).find("tr.visible:odd td").addClass("dark");
+                    }
+
+                    $(".datatable .closed").click(function () {
+                        var parent = $(this).parent();
+                        $(this).hide();
+                        $(".filter", parent).fadeIn(function () {
+                            $("input", parent).val("").focus().css("border", "1px solid #aaa");
+                        });
+                    });
+
+                    $(".datatable .opened").click(function () {
+                        var parent = $(this).parent().parent();
+                        $(".filter", parent).fadeOut(function () {
+                            $(".closed", parent).show();
+                            $("input", parent).val("").each(function () {
+                                window.updateDatatableFilter(this);
+                            });
+                        });
+                    });
+
+                    $(".datatable .filter input").keyup(function(e) {
+                        window.updateDatatableFilter(this);
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+
+                    $(".datatable table").each(function () {
+                        var found = false;
+                        $("tr", this).each(function () {
+                            if (!found && $(this).find("th").size() == 0) {
+                                found = true;
+                            }
+                        });
+                        if (!found) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo(this);
+                        }
+                    });
+
+                    // Applies styles to datatables.
+                    $(".datatable").each(function () {
+                        $(this).find("tr:first th").addClass("top");
+                        $(this).find("tr:last td").addClass("bottom");
+                        $(this).find("tr:odd td").addClass("dark");
+                        $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                        $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                    });
+
+                    $(".datatable table.tablesorter").each(function () {
+                        $(this).bind("sortEnd", function () {
+                            $(".datatable").each(function () {
+                                $(this).find("th, td")
+                                    .removeClass("top").removeClass("bottom")
+                                    .removeClass("left").removeClass("right")
+                                    .removeClass("dark");
+                                $(this).find("tr:first th").addClass("top");
+                                $(this).find("tr:last td").addClass("bottom");
+                                $(this).find("tr:odd td").addClass("dark");
+                                $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                                $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                            });
+                        });
+                    });
+                }
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+if (!window.hasContestDescriptionLinkHandler) {
+    window.hasContestDescriptionLinkHandler = true;
+    $(".contest-description-link").click(function () {
+        var contestId = $(this).attr("data-contestId");
+        $.post("/data/contestInfo", {action: "getDescription", contestId: contestId}, function(result) {
+            if (result["success"] == "true")
+                Codeforces.alert(result["description"]);
+        }, "json");
+        return false;
+    });
+}
+
+$(".toggle-mashup-manager").click(function () {
+    $(this).attr("disabled", "disabled");
+    var contestId = $(this).attr("data-contestId");
+    var newValue = $(this).is(":checked");
+    $.post("/data/mashup",
+        {contestId: contestId, action: "toggleMashupContestManagerMode", newValue: newValue},
+        function(response) {
+            if (response["success"] === "true") {
+                Codeforces.reload();
+            } else {
+                Codeforces.showMessage("Unable to toggle mashup contest manager mode");
+                $(this).removeAttr("disabled");
+            }
+        },
+        "json"
+    );
+    return false;
+});
+        });
+    </script>
+
+<div class="pagination">
+    <ul>
+            <span class="inactive">&larr;</span>
+        <li>
+                <span class="page-index active" pageIndex="1"><a href="/contests/page/1">1</a></span>
+        </li>
+        <li>
+                <span class="page-index" pageIndex="2"><a href="/contests/page/2">2</a></span>
+        </li>
+        <li>
+                <span class="page-index" pageIndex="3"><a href="/contests/page/3">3</a></span>
+        </li>
+        <li>
+                ...
+        </li>
+        <li>
+                <span class="page-index" pageIndex="8"><a href="/contests/page/8">8</a></span>
+        </li>
+        <li>
+                <span class="page-index" pageIndex="9"><a href="/contests/page/9">9</a></span>
+        </li>
+            <li><a href="/contests/page/2" class="arrow">&rarr;</a></li>
+    </ul>
+</div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+function handlePaginationKeyboardEvent(right) {
+    var pageIndex = parseInt($(".pagination").find("span.active").attr("pageIndex"));
+    if (right) {
+        pageIndex++;
+    } else {
+        pageIndex--;
+    }
+    $(".pagination").find("span[pageIndex=" + pageIndex + "]").each(function () {
+        Codeforces.redirect($(this).find("a").attr("href"));
+    });
+}
+$(document).keydown(function (e) {
+     var code = (e.keyCode ? e.keyCode : e.which);
+     if (e.ctrlKey) {
+        if (code == 37 || code == 39) {
+            handlePaginationKeyboardEvent(code == 39);
+        }
+     }
+});
+        });
+    </script>
+</div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+        $.post("/data/contests", {action: "getSolvedProblemCountsByContest"}, function(response) {
+        var c = response["solvedProblemCountsByContestId"];
+        var p = response["problemCountsByContestId"];
+        $(".contests-table tr[data-contestId]").each(function () {
+        var contestId = $(this).attr("data-contestId");
+        var problemCount = c[contestId];
+        var totalCount = p[contestId];
+        if (problemCount && problemCount > 0) {
+        var td = $(this).find("td.state");
+        if (problemCount < totalCount)
+        td.css("background-color", "#def");
+        else
+        td.css("background-color", "#D4EDC9");
+        td.append("<div class='notice small' style='margin-top: 0.5em;'>Solved: " + problemCount + " out of " + totalCount + "</div>");
+        }
+        });
+        }, "json");
+        });
+    </script></div>
+                </div>
+        </div>
+            <br style="clear: both;"/>
+            <div id="footer">
+                <div><a href="http://codeforces.com/">Codeforces</a> (c) Copyright 2010-2017 Mike Mirzayanov</div>
+                <div>The only programming contests Web 2.0 platform</div>
+                    <div>Server time: <span class="format-timewithseconds" data-locale="en">Sep/12/2017 21:36:30</span> (c4).</div>
+                    <div>Desktop version, switch to <a rel="nofollow" class="switchToMobile" href="?mobile=true">mobile version</a>.</div>
+                <div class="smaller"><a href="/privacy">Privacy Policy</a></div>
+
+            </div>
+        <script type="text/javascript">
+            $(function() {
+                $(".switchToMobile").click(function() {
+                    Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", "true"));
+                    return false;
+                });
+                $(".switchToDesktop").click(function() {
+                    Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", "false"));
+                    return false;
+                });
+            });
+        </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if ($(window).width() < 1600) {
+                $('.button-up').css('width', '30px').css('line-height', '30px').css('font-size', '20px');
+            }
+
+            if ($(window).width() >= 1200) {
+                $ (window).scroll (function () {
+                    if ($ (this).scrollTop () > 100) {
+                        $ ('.button-up').fadeIn();
+                    } else {
+                        $ ('.button-up').fadeOut();
+                    }
+                });
+
+                $('.button-up').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500);
+                    return false;
+                });
+
+                $('.button-up').hover(function () {
+                    $(this).animate({
+                        'opacity':'1'
+                    }).css({'background-color':'#e7ebf0','color':'#6a86a4'});
+                }, function () {
+                    $(this).animate({
+                        'opacity':'0.7'
+                    }).css({'background':'none','color':'#d3dbe4'});;
+                });
+            }
+            Codeforces.focusOnError();
+        });
+    </script>
+
+        <div class="userListsFacebox" style="display:none;">
+            <div style="padding: 0.5em; width: 600px; max-height: 200px; overflow-y: auto">
+<div class="datatable"
+     
+     style="background-color: #E1E1E1; padding-bottom: 3px;">
+            <div class="lt">&nbsp;</div>
+            <div class="rt">&nbsp;</div>
+            <div class="lb">&nbsp;</div>
+            <div class="rb">&nbsp;</div>
+
+            <div style="padding: 4px 0 0 6px;font-size:1.4rem;position:relative;">
+                User lists
+
+                <div style="position:absolute;right:0.25em;top:0.35em;">
+                    <span style="padding:0;position:relative;bottom:2px;" class="rowCount"></span>
+
+                    <img class="closed" src="http://st.codeforces.com/s/71216/images/icons/control.png"/>
+
+                    <span class="filter" style="display:none;">
+                        <img class="opened" src="http://st.codeforces.com/s/71216/images/icons/control-270.png"/>
+                        <input style="padding:0;position:relative;bottom:2px;border:1px solid #aaa;height:17px;font-size:1.3rem;"/>
+                    </span>
+                </div>
+            </div>
+            <div style="background-color: white;margin:0.3em 3px 0 3px;position:relative;">
+            <div class="ilt">&nbsp;</div>
+            <div class="irt">&nbsp;</div>
+            <table class="">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+            </table>
+            </div>
+        </div>
+            </div>
+        </div>
+        <script type="application/javascript">
+            $(function() {
+                $(".userListMarker").click(function() {
+                    $.post("/data/lists", {action: "findTouched"}, function(json) {
+                        Codeforces.facebox(".userListsFacebox");
+                        var tbody = $("#facebox tbody");
+                        tbody.empty();
+                        for (var i in json) {
+                            tbody.append(
+                                    $("<tr></tr>").append(
+                                            $("<td></td>").attr("data-readKey", json[i].readKey).text(json[i].name)
+                                    )
+                            );
+                        }
+                        Codeforces.updateDatatables();
+                        tbody.find("td").css("cursor", "pointer").click(function() {
+                            document.location = Codeforces.updateUrlParameter(document.location.href, "list", $(this).attr("data-readKey"));
+                        });
+                    }, "json");
+                });
+            });
+        </script>
+</body>
+</html>
