@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CCC &#39;09 J5 - Degrees Of Separation - DMOJ: Modern Online Judge
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="DMOJ,Canadian,Don Mills,DMCI,online judge,programming,code,contest,CCC,CCC Solutions,CCC 2015,IOI,JOI,COCI,DMOPC,Canada,Ontario,Toronto,grade,interactive">
+<meta name="description" content="The main socializing tool for students today is Facebook. There are many interesting computational questions connected to Facebook, such as the &quot;degree of separation&quot; between two people.">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#FFBB33">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+<meta name="theme-color" content="#FFBB33">
+<meta property="og:image" content="https://dmoj.ml/texoid/8e1e8c99eb0455f9fea93ad0c44483265edc1032/svg">
+<meta property="og:title" content="CCC &#39;09 J5 - Degrees Of Separation - DMOJ: Modern Online Judge">
+<meta property="og:site_name" content="DMOJ: Modern Online Judge">
+<meta property="og:url" content="https://dmoj.ca/problem/ccc09j5">
+<meta property="og:description" content="The main socializing tool for students today is Facebook. There are many interesting computational questions connected to Facebook, such as the &quot;degree of separation&quot; between two people."><!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script>window.bad_browser = true</script>
+<![endif]-->
+<link rel="stylesheet" href="//dmoj.ml/static/cache/css/c8b3f96d55e0.css" type="text/css" />
+<link rel="canonical" href="https://dmoj.ca/problem/ccc09j5">
+<link rel="stylesheet" href="//dmoj.ml/static/cache/css/158490f673bf.css" type="text/css" media="all" />
+<style>.title-state {
+    font-size: 2em;
+    float: left;
+    width: 1.1em;
+    display: block;
+    margin-top: 0.16em;
+}
+
+.info-float a {
+    vertical-align: middle;
+}
+
+.problem-clarification {
+    border-bottom: 1px solid #ccc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.clarifications-area h2 {
+    margin-bottom: 20px;
+}
+
+.problem-clarification .body {
+    display: inline-block;
+    padding-left: 3em;
+}
+</style><script type="text/javascript" src="//dmoj.ml/static/cache/js/90b83b3c98b1.js"></script>
+<script type="text/javascript" src="//dmoj.ml/static/cache/js/0e33e8898e76.js"></script>
+<script src="//dmoj.ml/static/libs/featherlight/featherlight.min.a0e732b080f0.js" type="text/javascript"></script><script type="text/javascript" src="//dmoj.ml/static/cache/js/6fab94eb70e0.js"></script>
+<script>$(function () {
+    $('a#clone-link').click(function (event) {
+        event.preventDefault();
+        if (confirm('Are you sure you want to clone?'))
+            $(this).closest("form").submit();
+    })
+});
+</script>
+<script type="text/javascript">window.user = {};</script><script>window.user && Raven.setUserContext(window.user)</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56757436-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<noscript>
+      <style>#content {
+    margin: 80px auto auto;
+}
+
+#navigation {
+    top: 27px;
+}
+      </style>
+    </noscript>
+</head>
+<body>
+<nav id="navigation" class="unselectable">
+<div id="nav-container"><a id="navicon" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+<ul id="nav-list">
+<li class="home-nav-element"><a href="/"><img src="//dmoj.ml/static/icons/logo.d0dbdf0b98be.svg" alt="DMOJ" width="160" height="44" onerror="this.src=&quot;//dmoj.ml/static/icons/logo.2f426bc39826.png&quot;; this.onerror=null" style="border: none" /></a>
+</li>
+
+<li class="home-nav-element"><span style="width: 1px; vertical-align: middle; padding-left: 3px; display: inline-block; height: 32px; margin-right: 1px; border-right: 3px solid rgba(255, 255, 255, 0.15);"></span>
+</li>
+<li class="home-menu-item"><a href="/" class="nav-home">Home</a>
+</li>
+<li><a href="/problems/" class="nav-problem active">Problems
+</a>
+</li>
+<li><a href="/submissions/" class="nav-submit">Submissions
+</a>
+</li>
+<li><a href="/users/" class="nav-user">Users
+</a>
+</li>
+<li><a href="/contests/" class="nav-contest">Contests
+</a>
+</li>
+<li><a href="/about/" class="nav-about">About
+<div href="javascript:void(0)" class="nav-expand">></div></a>
+<ul>
+<li><a href="/status/" class="nav-status">Status
+</a>
+</li>
+<li><a href="/runtimes/" class="nav-runtimes">Runtimes
+</a>
+</li>
+<li><a href="/tips/" class="nav-tips">Tips
+</a>
+</li>
+<li><a href="/api/" class="nav-api">API
+</a>
+</li>
+<li><a href="https://github.com/DMOJ" class="nav-github">Github
+</a>
+</li></ul>
+</li>
+</ul><span id="user-links"><span class="anon"><a href="/accounts/login/?next=/problem/ccc09j5"><b>Login</b></a>&nbsp;|&nbsp;<a href="/accounts/register/">Register</a></span></span>
+</div>
+<div id="nav-shadow"></div>
+</nav>
+<div id="page-container">
+<noscript>
+        <div id="noscript">This site works best with JavaScript enabled.
+        </div>
+      </noscript><br>
+<article id="content">
+<div class="problem-title">
+<h2 style="color:#393630; display: inline-block">CCC &#39;09 J5 - Degrees Of Separation</h2><span class="spacer"></span><a href="/problem/ccc09j5/pdf" class="view-pdf"><span style="position: relative; display: inline-block; font-size: 1.5em"><span style="color: #d40e13" class="fa fa-file-pdf-o"></span><span style="height: 0.2em; display: block; position: absolute; top: 0.3em; background: #d40e13; width: 0.6em; margin-left: -0.15em"></span></span> View as PDF</a>
+</div>
+<hr>
+<div id="content-body">
+<div id="common-content">
+<div id="content-right">
+<div class="info-float"><a href="/problem/ccc09j5/submit" class="unselectable button full">Submit solution</a>
+<hr />
+<div><a href="/problem/ccc09j5/submissions/">All submissions</a>
+</div>
+<div><a href="/problem/ccc09j5/rank/">Best submissions</a>
+</div>
+<hr /><br />
+<div class="problem-info-entry"><i class="fa fa-check fa-fw"></i><span class="pi-name">Points:</span><span class="pi-value">10
+</span>
+</div>
+<div class="problem-info-entry"><i class="fa fa-clock-o fa-fw"></i><span class="pi-name">Time limit:</span><span class="pi-value">2.0s</span>
+</div>
+<div class="problem-lang-limits">
+</div>
+<div class="problem-info-entry"><i class="fa fa-server fa-fw"></i><span class="pi-name">Memory limit:</span><span class="pi-value">64M</span>
+</div>
+<div class="problem-lang-limits">
+</div><br />
+<div id="problem-types">
+<div class="toggle closed unselectable"><span class="fa fa-chevron-right fa-fw"></span>Problem type
+</div>
+<div style="display:none" class="toggled">Graph Theory</div>
+</div><br />
+</div>
+</div>
+<div id="content-left" class="split-common-content">
+<div class="content-description screen"><div><p>The main socializing tool for students today is Facebook. There are many interesting computational questions connected to Facebook, such as the "degree of separation" between two people.</p>
+<p>For example, in the diagram below, there are many different paths between Abby and Alberto. Some of these paths are:</p>
+<ul>
+<li>Abby → Zoey → Alberto</li>
+<li>Abby → Natalie → Zoey → Alberto</li>
+<li>Abby → George → Ali → Kara → Richardo → Jeff → Alberto</li>
+</ul>
+<p>The shortest path between Abby and Alberto has two steps (Abby → Zoey, and Zoey → Alberto), so we say the degree of separation is 2. Additionally, Alberto would be a friend of a friend of Abby.</p>
+
+<div style="max-width: 100%;height: 491;max-height: 491;width: 491;text-align: center"><img src="https://dmoj.ml/texoid/8e1e8c99eb0455f9fea93ad0c44483265edc1032/svg" onerror="this.src='//dmoj.ml/texoid/8e1e8c99eb0455f9fea93ad0c44483265edc1032/png';this.onerror=null" width="648" height="491"></div><p>You can assume an initial configuration of who is friends with who as outlined in the diagram above. You will need to store these relationships in your program. These relationships can change though, and your program needs to handle these changes. In particular, friendships can begin, possibly with new people. Friendships can end. You should be able to find friends of friends and determine the degree of separation between two people.</p>
+<h4>Input/Output Description</h4>
+<p>Your program will read in six possible commands, with the action to be performed by your program outlined below. You may assume that <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>y</mi>
+<annotation encoding="application/x-tex">y</annotation>
+</semantics>
+</math> are integers, with <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>x</mi>
+<mo>≠</mo>
+<mi>y</mi>
+</mrow>
+<annotation encoding="application/x-tex">x \ne y</annotation>
+</semantics>
+</math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>x</mi>
+<mo>≥</mo>
+<mn>1</mn>
+</mrow>
+<annotation encoding="application/x-tex">x \ge 1</annotation>
+</semantics>
+</math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>y</mi>
+<mo>≥</mo>
+<mn>1</mn>
+</mrow>
+<annotation encoding="application/x-tex">y \ge 1</annotation>
+</semantics>
+</math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>x</mi>
+<mo>&lt;</mo>
+<mn>50</mn>
+</mrow>
+<annotation encoding="application/x-tex">x &lt; 50</annotation>
+</semantics>
+</math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>y</mi>
+<mo>&lt;</mo>
+<mn>50</mn>
+</mrow>
+<annotation encoding="application/x-tex">y &lt; 50</annotation>
+</semantics>
+</math>. You may also assume that instructions (i, d, n, f, s, q) occur one per line and parameters (zero, one or two integers) occur one per line.</p>
+<ul>
+<li><code>i</code> <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math> <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>y</mi>
+<annotation encoding="application/x-tex">y</annotation>
+</semantics>
+</math> - make person <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math> and person <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>y</mi>
+<annotation encoding="application/x-tex">y</annotation>
+</semantics>
+</math> friends. If they are already friends, no change needs to be made. If either <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math> or <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>y</mi>
+<annotation encoding="application/x-tex">y</annotation>
+</semantics>
+</math> is a new person, add them.</li>
+<li><code>d</code> <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math> <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>y</mi>
+<annotation encoding="application/x-tex">y</annotation>
+</semantics>
+</math> - delete the friendship between person <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math> and person <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>y</mi>
+<annotation encoding="application/x-tex">y</annotation>
+</semantics>
+</math>.</li>
+<li><code>n</code> <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math> - output the number of friends that person <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math> has.</li>
+<li><code>f</code> <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math> - output the number of "friends of friends" that person <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math> has. Notice that <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math> and direct friends of <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math> are not counted as "friends of friends."</li>
+<li><code>s</code> <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math> <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>y</mi>
+<annotation encoding="application/x-tex">y</annotation>
+</semantics>
+</math> - output the degree of separation between <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>y</mi>
+<annotation encoding="application/x-tex">y</annotation>
+</semantics>
+</math>. If there is no path from <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math> to <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>y</mi>
+<annotation encoding="application/x-tex">y</annotation>
+</semantics>
+</math>, output "Not connected".</li>
+<li><code>q</code> - quit the program.</li>
+</ul>
+<h4>Sample Input</h4>
+<pre><code>i
+20
+10
+i
+20
+9
+n
+20
+f
+20
+s
+20
+6
+q</code></pre>
+<h4>Sample Output</h4>
+<pre><code>2
+3
+4</code></pre>
+<h4>Explanation</h4>
+<ul>
+<li><code>n 20</code>: Person 20 has two friends (10 and 9) </li>
+<li><code>f 20</code>: The friends of friends of 20 are 8, 11, 12. </li>
+<li><code>s 20 6</code>: The shortest path is 20 → 9 → 8 → 7 → 6.</li>
+</ul>
+</div>
+<hr />
+</div>
+<div id="comments" class="comment-area">
+<h2><i style="padding-right: 0.3em" class="fa fa-comments"></i>Comments
+</h2>
+<ul class="comments top-level-comments new-comments">
+<li id="comment-5627" data-revision="1" data-max-revision="1" data-revision-ajax="/comments/5627/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">1</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/aeternalis1" class="user"><img src="//www.gravatar.com/avatar/45f43231bff8831d43d625bf7f614453?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/aeternalis1" class="username rating rate-candidate-master user">aeternalis1</a>
+<div class="relative-time"></div><span data-unix="2017-08-03T03:32:29+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Aug. 2, 2017</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"><a href="javascript:show_revision(5627, -1)" class="previous-revision">&larr;</a><span class="comment-edit-text"> edited</span><a href="javascript:show_revision(5627, 1)" style="visibility: hidden" class="next-revision">&rarr;</a></span><a href="#comment-5627" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title"></div>
+<div class="comment-body"><p>Oops mb i did not read the question correctly. I thought the diagram was just an example of how connections worked.</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li id="comment-2762" data-revision="5" data-max-revision="5" data-revision-ajax="/comments/2762/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">1</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/Anix55" class="user"><img src="//www.gravatar.com/avatar/44a5b0b4d0d5fc5066d6edc8c7ee2633?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/Anix55" class="username rating rate-expert user">Anix55</a>
+<div class="relative-time"></div><span data-unix="2016-02-18T01:02:42+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Feb. 17, 2016</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"><a href="javascript:show_revision(2762, -1)" class="previous-revision">&larr;</a><span class="comment-edit-text"> edit 5
+</span><a href="javascript:show_revision(2762, 1)" style="visibility: hidden" class="next-revision">&rarr;</a></span><a href="#comment-2762" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="" class="comment-title">shortest path</div>
+<div class="comment-body"><p>can anyone explain this friends of friends thing</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-2766" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/2766/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">1</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/minecraftyugi" class="user"><img src="//www.gravatar.com/avatar/40f31854d971554211c7a7bc52b5688c?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/minecraftyugi" class="username rating rate-expert user">minecraftyugi</a>
+<div class="relative-time"></div><span data-unix="2016-02-18T21:43:12+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Feb. 18, 2016</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-2766" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title">Re: shortest path</div>
+<div class="comment-body"><p>For every friend that a person has, count the total number of friends that that friend has, excluding the original person and the person's direct friends.</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<li id="comment-2597" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/2597/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-1</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/FluffyPanda" class="user"><img src="//www.gravatar.com/avatar/42c097ae3712bd2ab8ab9a67d2c3a803?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/FluffyPanda" class="username rating rate-none user">FluffyPanda</a>
+<div class="relative-time"></div><span data-unix="2016-01-14T21:03:03+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Jan. 14, 2016</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-2597" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="" class="comment-title">CCC Problem Number</div>
+<div class="comment-body"><p>This problem is also an S3, not just a J5.</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-2603" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/2603/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">2</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/Xyene" class="user"><img src="//www.gravatar.com/avatar/3fa9c404fb2bf9aef66e0482b331bf39?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/Xyene" class="username rating rate-master admin">Xyene</a>
+<div class="relative-time"></div><span data-unix="2016-01-14T23:11:45+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Jan. 14, 2016</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-2603" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title">Re: CCC Problem Number</div>
+<div class="comment-body"><p>Whenever there are duplicate problems, we use the junior code over the senior: <code>ccc09j5s3</code> is more awkward (doesn't sort exceptionally well), and we don't support redirecting from <code>ccc09s3</code> to <code>ccc09j5</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<script type="text/javascript">function mathjax_pagedown(a){if("MathJax"in window){a.each(window.editors,function(d,b){var c=a("div.wmd-preview#"+d+"_wmd_preview")[0];b.hooks.chain("onPreviewRefresh",function(){MathJax.Hub.Queue(["Typeset",MathJax.Hub,c])});MathJax.Hub.Queue(["Typeset",MathJax.Hub,c])})}}window.mathjax_pagedown=mathjax_pagedown;$(window).load(function(){(mathjax_pagedown)("$"in window?$:django.jQuery)});</script>
+<footer><span id="footer-content"><br><a style="color: rgb(128, 128, 128)" href="//github.com/DMOJ/">fork us on <span style="font-weight:bold">Github</span></a> | <a style="color: rgb(128, 128, 128);" href="//www.facebook.com/dmoj.ca">like us on <span style="font-weight: bold;">Facebook</span></a> | <a style="color: rgb(128, 128, 128)" href="https://translate.dmoj.ca/">help us <span style="font-weight: bold;">translate</span></a> | <a style="color: rgb(128, 128, 128)" href="https://dmoj.ca/tos/">terms of service</a>
+|
+<form action="/i18n/setlang/" method="post" style="display: inline"><input type='hidden' name='csrfmiddlewaretoken' value='HB4pwgKeMN7r2wDFoGN37hCKqigH5heLmrYxgeMlPkAO135AmQSvrPOxOGXqY1r5' />
+<input name="next" type="hidden" value="/problem/ccc09j5">
+<select name="language" onchange="form.submit()" style="height: 1.5em">
+<option value="de">Deutsch (de)
+</option>
+<option value="en" selected="">English (en)
+</option>
+<option value="fr">français (fr)
+</option>
+<option value="ro">Română (ro)
+</option>
+<option value="ru">Русский (ru)
+</option>
+<option value="sr-latn">srpski (latinica) (sr-latn)
+</option>
+<option value="vi">Tiếng Việt (vi)
+</option>
+<option value="zh-hans">简体中文 (zh-hans)
+</option>
+</select>
+</form></span>
+</footer>
+</div>
+</body>
+</html>
