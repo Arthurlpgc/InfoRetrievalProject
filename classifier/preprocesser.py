@@ -2,7 +2,6 @@
 #Saving the result in the folder pages_preprocessed
 from bs4 import BeautifulSoup
 from bs4.element import Comment
-from sklearn.feature_extraction.text import CountVectorizer
 import os
 
 def tag_visible(element):
@@ -61,13 +60,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# folders = ["codechef", "codeforces", "dmoj", "sphere_online_judge", "uri_online_"]
-
-# html = open("pages/sphere_online_judge/good/3SPOJ.html")
-# all_text = text_from_html(html)
-#
-# vectorizer = CountVectorizer()
-# X = vectorizer.fit_transform([all_text])
-# print(vectorizer.get_feature_names())
-# print(X.toarray())
