@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Leaderboard - DMOJ: Modern Online Judge
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="DMOJ,Canadian,Don Mills,DMCI,online judge,programming,code,contest,CCC,CCC Solutions,CCC 2015,IOI,JOI,COCI,DMOPC,Canada,Ontario,Toronto,grade,interactive">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#FFBB33">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+<meta name="theme-color" content="#FFBB33">
+<meta property="og:title" content="Leaderboard - DMOJ: Modern Online Judge">
+<meta property="og:site_name" content="DMOJ: Modern Online Judge">
+<meta property="og:url" content="https://dmoj.ca/users/"><!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script>window.bad_browser = true</script>
+<![endif]-->
+<link rel="stylesheet" href="//dmoj.ml/static/cache/css/c8b3f96d55e0.css" type="text/css" />
+<link rel="canonical" href="https://dmoj.ca/users/">
+<style>.select2-selection__arrow {
+    display: none;
+}
+
+.select2-selection__rendered {
+    cursor: text;
+}
+
+.select2-results__option {
+    position: relative;
+}
+
+.select2-results__option--highlighted {
+    background-color: #DEDEDE !important;
+}
+
+li.select2-results__option--highlighted a.user-redirect {
+    display: inline-block;
+}
+
+a.user-redirect {
+    color: #2980b9;
+    vertical-align: middle;
+    font-size: 1.2em;
+    position: absolute;
+    right: 0.8em;
+    display: none;
+}
+
+a.user-redirect:hover {
+    text-shadow: 0px 0px 2px blue;
+}
+</style>
+<style>#users-table .rank, .points, .problems, .username {
+    white-space: nowrap;
+}
+
+#users-table .username {
+    width: 100%
+}
+
+#users-table .header {
+    vertical-align: middle;
+}
+
+#users-table tr {
+    -webkit-transition: background-color linear .2s;
+    -moz-transition: background-color linear .2s;
+    -o-transition: background-color linear .2s;
+    transition: background-color linear .2s;
+}
+
+#users-table tr:hover {
+    background: #EAEAEA;
+}
+
+#users-table tr.highlight {
+    background: #fff897;
+}
+
+#search-form {
+    display: inline-block;
+    vertical-align: top;
+    width: 225px;
+    float: right;
+}
+</style>
+<style>#users-table td:nth-child(2), #users-table th:nth-child(2) {
+    border-right: none;
+    text-align: left;
+}
+
+#users-table th a {
+    color: white;
+}
+</style><script type="text/javascript" src="//dmoj.ml/static/cache/js/90b83b3c98b1.js"></script>
+<script>$(function () {
+    $('#search-handle').replaceWith($('<select/>').attr({
+        id: 'search-handle',
+        name: 'handle',
+        onchange: 'form.submit()'
+    }));
+    var in_user_redirect = false;
+    $('#search-handle').select2({
+        placeholder: 'Search by handle...',
+        ajax: {
+            url: '/widgets/select2/user_search'
+        },
+        minimumInputLength: 1,
+        escapeMarkup: function (markup) {
+            return markup;
+        },
+        templateResult: function (data, container) {
+            return $('<span>')
+                    .append($('<img>', {'class': 'user-search-image', src: data.gravatar_url,
+                        width: 24, height: 24}))
+                    .append($('<span>', {'class': data.display_rank + ' user-search-name'}).text(data.text))
+                    .append($('<a>', {href: '/user/' + data.text, 'class': 'user-redirect'})
+                            .append($('<i>', {'class': 'fa fa-mail-forward'}))
+                            .mouseover(function () {
+                                in_user_redirect = true;
+                            }).mouseout(function () {
+                                in_user_redirect = false;
+                            }));
+        }
+    }).on('select2:selecting', function () {
+        return !in_user_redirect;
+    });
+});
+</script>
+<script>$(function () {
+    var $last = null;
+    $(window).on('hashchange', function () {
+        var hash = window.location.hash;
+        if (hash.startsWith('#!')) {
+            var $user = $('#user-' + hash.substring(2)).addClass('highlight');
+            if ($user) {
+                $(document).scrollTop($user.position().top - 50);
+                if ($last !== null) $last.removeClass('highlight');
+                $last = $user;
+            }
+        }
+    }).trigger('hashchange');
+});
+</script>
+<script type="text/javascript">window.user = {};</script><script>window.user && Raven.setUserContext(window.user)</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56757436-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<noscript>
+      <style>#content {
+    margin: 80px auto auto;
+}
+
+#navigation {
+    top: 27px;
+}
+      </style>
+    </noscript>
+</head>
+<body>
+<nav id="navigation" class="unselectable">
+<div id="nav-container"><a id="navicon" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+<ul id="nav-list">
+<li class="home-nav-element"><a href="/"><img src="//dmoj.ml/static/icons/logo.d0dbdf0b98be.svg" alt="DMOJ" width="160" height="44" onerror="this.src=&quot;//dmoj.ml/static/icons/logo.2f426bc39826.png&quot;; this.onerror=null" style="border: none" /></a>
+</li>
+
+<li class="home-nav-element"><span style="width: 1px; vertical-align: middle; padding-left: 3px; display: inline-block; height: 32px; margin-right: 1px; border-right: 3px solid rgba(255, 255, 255, 0.15);"></span>
+</li>
+<li class="home-menu-item"><a href="/" class="nav-home">Home</a>
+</li>
+<li><a href="/problems/" class="nav-problem">Problems
+</a>
+</li>
+<li><a href="/submissions/" class="nav-submit">Submissions
+</a>
+</li>
+<li><a href="/users/" class="nav-user active">Users
+</a>
+</li>
+<li><a href="/contests/" class="nav-contest">Contests
+</a>
+</li>
+<li><a href="/about/" class="nav-about">About
+<div href="javascript:void(0)" class="nav-expand">></div></a>
+<ul>
+<li><a href="/status/" class="nav-status">Status
+</a>
+</li>
+<li><a href="/runtimes/" class="nav-runtimes">Runtimes
+</a>
+</li>
+<li><a href="/tips/" class="nav-tips">Tips
+</a>
+</li>
+<li><a href="/api/" class="nav-api">API
+</a>
+</li>
+<li><a href="https://github.com/DMOJ" class="nav-github">Github
+</a>
+</li></ul>
+</li>
+</ul><span id="user-links"><span class="anon"><a href="/accounts/login/?next=/users/"><b>Login</b></a>&nbsp;|&nbsp;<a href="/accounts/register/">Register</a></span></span>
+</div>
+<div id="nav-shadow"></div>
+</nav>
+<div id="page-container">
+<noscript>
+        <div id="noscript">This site works best with JavaScript enabled.
+        </div>
+      </noscript><br>
+<article id="content">
+<div class="page-title">
+<div class="tabs">
+<h2>Leaderboard</h2><span class="spacer"></span>
+<ul>
+<li class="active"><a href="/users/">Leaderboard</a>
+</li>
+<li class=""><a href="/organizations/">Organizations</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content-body">
+<div id="common-content">
+<div id="content-left" class="users">
+<div style="margin-bottom: 7px; margin-top: 3px;"><ul class="pagination">
+<li class="disabled-page"><span>«</span>
+</li>
+<li class="active-page"><a href="/users/">1</a>
+</li>
+<li><a href="/users/?page=2">2</a>
+</li>
+<li><a href="/users/?page=3">3</a>
+</li>
+<li><a href="/users/?page=4">4</a>
+</li>
+<li><a href="/users/?page=5">5</a>
+</li>
+<li><a href="/users/?page=6">6</a>
+</li>
+<li class="disabled-page"><span>...</span>
+</li>
+<li><a href="/users/?page=117">117</a>
+</li>
+<li><a href="/users/?page=118">118</a>
+</li>
+<li><a href="/users/?page=2">»</a>
+</li>
+</ul>
+<form id="search-form" name="form" action="/users/find" method="get">
+<input id="search-handle" type="text" name="search" placeholder="Search by handle..." />
+</form>
+</div>
+<table id="users-table" class="table">
+<thead>
+<tr>
+<th class="header rank">Rank</th>
+<th class="header rank"><a href="/users/?order=-rating"><span class="rate-group"><span style="color: white" class="rate-box"><span style="background: white; height: 0.3em"></span></span></span></a>
+</th>
+<th class="header username">Username</th>
+<th class="header points"><a href="/users/?order=performance_points">Points ▾</a>
+</th>
+<th class="problems"><a href="/users/?order=-problem_count">Problems</a>
+</th>
+</tr>
+<tbody>
+<tr id="user-d">
+<td>1</td>
+<td><span class="rate-group"><span class="rate-box rate-grandmaster"><span style="height: 0.221em"></span></span><span class="rating rate-grandmaster">2377</span></span>
+</td>
+<td class="user-name rating rate-grandmaster user"><a href="/user/d">d</a>
+</td>
+<td title="822.86" class="user-points">823</td>
+<td>1010</td>
+</tr>
+<tr id="user-bruce">
+<td>2</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.545em"></span></span><span class="rating rate-master">2018</span></span>
+</td>
+<td class="user-name rating rate-master setter"><a href="/user/bruce">bruce</a>
+</td>
+<td title="804.05" class="user-points">804</td>
+<td>699</td>
+</tr>
+<tr id="user-imaxblue">
+<td>3</td>
+<td><span class="rate-group"><span class="rate-box rate-grandmaster"><span style="height: 0.031em"></span></span><span class="rating rate-grandmaster">2225</span></span>
+</td>
+<td class="user-name rating rate-grandmaster user"><a href="/user/imaxblue">imaxblue</a>
+</td>
+<td title="759.33" class="user-points">759</td>
+<td>404</td>
+</tr>
+<tr id="user-FatalEagle">
+<td>4</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.700em"></span></span><span class="rating rate-master">2080</span></span>
+</td>
+<td class="user-name rating rate-master admin"><a href="/user/FatalEagle">FatalEagle</a>
+</td>
+<td title="748.23" class="user-points">748</td>
+<td>354</td>
+</tr>
+<tr id="user-wleung_bvg">
+<td>5</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.940em"></span></span><span class="rating rate-candidate-master">1782</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/wleung_bvg">wleung_bvg</a>
+</td>
+<td title="739.07" class="user-points">739</td>
+<td>470</td>
+</tr>
+<tr id="user-kobortor">
+<td>6</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.885em"></span></span><span class="rating rate-master">2154</span></span>
+</td>
+<td class="user-name rating rate-master user"><a href="/user/kobortor">kobortor</a>
+</td>
+<td title="708.12" class="user-points">708</td>
+<td>744</td>
+</tr>
+<tr id="user-jeffreyxiao">
+<td>7</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.948em"></span></span><span class="rating rate-master">2179</span></span>
+</td>
+<td class="user-name rating rate-master setter"><a href="/user/jeffreyxiao">jeffreyxiao</a>
+</td>
+<td title="704.49" class="user-points">704</td>
+<td>674</td>
+</tr>
+<tr id="user-zhouzixiang2004">
+<td>8</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.880em"></span></span><span class="rating rate-master">2152</span></span>
+</td>
+<td class="user-name rating rate-master user"><a href="/user/zhouzixiang2004">zhouzixiang2004</a>
+</td>
+<td title="689.48" class="user-points">689</td>
+<td>438</td>
+</tr>
+<tr id="user-azneye">
+<td>9</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.887em"></span></span><span class="rating rate-expert">1466</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/azneye">azneye</a>
+</td>
+<td title="684.90" class="user-points">685</td>
+<td>179</td>
+</tr>
+<tr id="user-Solipsist">
+<td>10</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.830em"></span></span><span class="rating rate-expert">1449</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/Solipsist">Solipsist</a>
+</td>
+<td title="632.51" class="user-points">633</td>
+<td>154</td>
+</tr>
+<tr id="user-thomas0115">
+<td>11</td>
+<td><span class="rate-group"><span class="rate-box rate-grandmaster"><span style="height: 0.014em"></span></span><span class="rating rate-grandmaster">2211</span></span>
+</td>
+<td class="user-name rating rate-grandmaster user"><a href="/user/thomas0115">thomas0115</a>
+</td>
+<td title="615.08" class="user-points">615</td>
+<td>322</td>
+</tr>
+<tr id="user-ZQFMGB12">
+<td>12</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.868em"></span></span><span class="rating rate-master">2147</span></span>
+</td>
+<td class="user-name rating rate-master user"><a href="/user/ZQFMGB12">ZQFMGB12</a>
+</td>
+<td title="615.01" class="user-points">615</td>
+<td>452</td>
+</tr>
+<tr id="user-SourSpinach">
+<td>13</td>
+<td><span class="rate-group"><span class="rate-box rate-grandmaster"><span style="height: 0.131em"></span></span><span class="rating rate-grandmaster">2305</span></span>
+</td>
+<td class="user-name rating rate-grandmaster setter"><a href="/user/SourSpinach">SourSpinach</a>
+</td>
+<td title="607.10" class="user-points">607</td>
+<td>209</td>
+</tr>
+<tr id="user-Cthulhu">
+<td>14</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.410em"></span></span><span class="rating rate-master">1964</span></span>
+</td>
+<td class="user-name rating rate-master user"><a href="/user/Cthulhu">Cthulhu</a>
+</td>
+<td title="592.43" class="user-points">592</td>
+<td>508</td>
+</tr>
+<tr id="user-Paradox">
+<td>15</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.683em"></span></span><span class="rating rate-candidate-master">1705</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/Paradox">Paradox</a>
+</td>
+<td title="585.20" class="user-points">585</td>
+<td>765</td>
+</tr>
+<tr id="user-awaykened">
+<td>16</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.483em"></span></span><span class="rating rate-master">1993</span></span>
+</td>
+<td class="user-name rating rate-master setter"><a href="/user/awaykened">awaykened</a>
+</td>
+<td title="581.71" class="user-points">582</td>
+<td>423</td>
+</tr>
+<tr id="user-arock">
+<td>17</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.583em"></span></span><span class="rating rate-master">2033</span></span>
+</td>
+<td class="user-name rating rate-master user"><a href="/user/arock">arock</a>
+</td>
+<td title="568.39" class="user-points">568</td>
+<td>640</td>
+</tr>
+<tr id="user-Kirito">
+<td>18</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.527em"></span></span><span class="rating rate-expert">1358</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/Kirito">Kirito</a>
+</td>
+<td title="561.82" class="user-points">562</td>
+<td>535</td>
+</tr>
+<tr id="user-ImbaCalvin">
+<td>19</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.743em"></span></span><span class="rating rate-master">2097</span></span>
+</td>
+<td class="user-name rating rate-master setter"><a href="/user/ImbaCalvin">ImbaCalvin</a>
+</td>
+<td title="559.07" class="user-points">559</td>
+<td>220</td>
+</tr>
+<tr id="user-Zander">
+<td>20</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.513em"></span></span><span class="rating rate-master">2005</span></span>
+</td>
+<td class="user-name rating rate-master user"><a href="/user/Zander">Zander</a>
+</td>
+<td title="556.48" class="user-points">556</td>
+<td>526</td>
+</tr>
+<tr id="user-kevinwen">
+<td>21</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.970em"></span></span><span class="rating rate-candidate-master">1791</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/kevinwen">kevinwen</a>
+</td>
+<td title="543.79" class="user-points">544</td>
+<td>424</td>
+</tr>
+<tr id="user-y0105w49">
+<td>22</td>
+<td><span class="rate-group"><span class="rate-box rate-grandmaster"><span style="height: 0.226em"></span></span><span class="rating rate-grandmaster">2381</span></span>
+</td>
+<td class="user-name rating rate-grandmaster user"><a href="/user/y0105w49">y0105w49</a>
+</td>
+<td title="542.72" class="user-points">543</td>
+<td>85</td>
+</tr>
+<tr id="user-Phoenix1369">
+<td>23</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.360em"></span></span><span class="rating rate-master">1944</span></span>
+</td>
+<td class="user-name rating rate-master setter"><a href="/user/Phoenix1369">Phoenix1369</a>
+</td>
+<td title="530.40" class="user-points">530</td>
+<td>957</td>
+</tr>
+<tr id="user-pyrexshorts">
+<td>24</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.430em"></span></span><span class="rating rate-master">1972</span></span>
+</td>
+<td class="user-name rating rate-master user"><a href="/user/pyrexshorts">pyrexshorts</a>
+</td>
+<td title="520.43" class="user-points">520</td>
+<td>237</td>
+</tr>
+<tr id="user-nullptr">
+<td>25</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.638em"></span></span><span class="rating rate-master">2055</span></span>
+</td>
+<td class="user-name rating rate-master setter"><a href="/user/nullptr">nullptr</a>
+</td>
+<td title="517.41" class="user-points">517</td>
+<td>130</td>
+</tr>
+<tr id="user-Eliden">
+<td>26</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.640em"></span></span><span class="rating rate-master">2056</span></span>
+</td>
+<td class="user-name rating rate-master user"><a href="/user/Eliden">Eliden</a>
+</td>
+<td title="512.33" class="user-points">512</td>
+<td>72</td>
+</tr>
+<tr id="user-eric574">
+<td>27</td>
+<td><span class="rate-group"><span class="rate-box rate-newbie"><span style="height: 0.854em"></span></span><span class="rating rate-newbie">854</span></span>
+</td>
+<td class="user-name rating rate-newbie user"><a href="/user/eric574">eric574</a>
+</td>
+<td title="509.09" class="user-points">509</td>
+<td>365</td>
+</tr>
+<tr id="user-IvanCarvalho">
+<td>28</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.247em"></span></span><span class="rating rate-candidate-master">1574</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/IvanCarvalho">IvanCarvalho</a>
+</td>
+<td title="507.54" class="user-points">508</td>
+<td>240</td>
+</tr>
+<tr id="user-george_chen">
+<td>29</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.517em"></span></span><span class="rating rate-candidate-master">1655</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/george_chen">george_chen</a>
+</td>
+<td title="506.83" class="user-points">507</td>
+<td>466</td>
+</tr>
+<tr id="user-r3mark">
+<td>30</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.978em"></span></span><span class="rating rate-master">2191</span></span>
+</td>
+<td class="user-name rating rate-master user"><a href="/user/r3mark">r3mark</a>
+</td>
+<td title="506.77" class="user-points">507</td>
+<td>373</td>
+</tr>
+<tr id="user-Butane">
+<td>31</td>
+<td><span class="rate-group"><span class="rate-box rate-grandmaster"><span style="height: 0.038em"></span></span><span class="rating rate-grandmaster">2230</span></span>
+</td>
+<td class="user-name rating rate-grandmaster setter"><a href="/user/Butane">Butane</a>
+</td>
+<td title="504.26" class="user-points">504</td>
+<td>453</td>
+</tr>
+<tr id="user-MongolianPoorman">
+<td>32</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.670em"></span></span><span class="rating rate-candidate-master">1701</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/MongolianPoorman">MongolianPoorman</a>
+</td>
+<td title="504.24" class="user-points">504</td>
+<td>370</td>
+</tr>
+<tr id="user-nathanl3">
+<td>33</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.657em"></span></span><span class="rating rate-candidate-master">1697</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/nathanl3">nathanl3</a>
+</td>
+<td title="502.09" class="user-points">502</td>
+<td>733</td>
+</tr>
+<tr id="user-Xyene">
+<td>34</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.148em"></span></span><span class="rating rate-master">1859</span></span>
+</td>
+<td class="user-name rating rate-master admin"><a href="/user/Xyene">Xyene</a>
+</td>
+<td title="495.57" class="user-points">496</td>
+<td>228</td>
+</tr>
+<tr id="user-jackyliao123">
+<td>35</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.587em"></span></span><span class="rating rate-candidate-master">1676</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/jackyliao123">jackyliao123</a>
+</td>
+<td title="486.43" class="user-points">486</td>
+<td>252</td>
+</tr>
+<tr id="user-quantum">
+<td>36</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.575em"></span></span><span class="rating rate-master">2030</span></span>
+</td>
+<td class="user-name rating rate-master admin"><a href="/user/quantum">quantum</a>
+</td>
+<td title="486.15" class="user-points">486</td>
+<td>356</td>
+</tr>
+<tr id="user-Itachi">
+<td>37</td>
+<td>
+</td>
+<td class="user-name rating rate-none user"><a href="/user/Itachi">Itachi</a>
+</td>
+<td title="482.28" class="user-points">482</td>
+<td>156</td>
+</tr>
+<tr id="user-atarw">
+<td>38</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.787em"></span></span><span class="rating rate-candidate-master">1736</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/atarw">atarw</a>
+</td>
+<td title="481.45" class="user-points">481</td>
+<td>475</td>
+</tr>
+<tr id="user-aurpine">
+<td>39</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.103em"></span></span><span class="rating rate-master">1841</span></span>
+</td>
+<td class="user-name rating rate-master user"><a href="/user/aurpine">aurpine</a>
+</td>
+<td title="479.43" class="user-points">479</td>
+<td>420</td>
+</tr>
+<tr id="user-BenjaminBLi">
+<td>40</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.410em"></span></span><span class="rating rate-candidate-master">1623</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/BenjaminBLi">BenjaminBLi</a>
+</td>
+<td title="477.35" class="user-points">477</td>
+<td>196</td>
+</tr>
+<tr id="user-jimgao">
+<td>41</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.920em"></span></span><span class="rating rate-candidate-master">1776</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/jimgao">jimgao</a>
+</td>
+<td title="476.13" class="user-points">476</td>
+<td>429</td>
+</tr>
+<tr id="user-sunnylancoder">
+<td>42</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.690em"></span></span><span class="rating rate-candidate-master">1707</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/sunnylancoder">sunnylancoder</a>
+</td>
+<td title="476.07" class="user-points">476</td>
+<td>266</td>
+</tr>
+<tr id="user-anishmahto">
+<td>43</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.393em"></span></span><span class="rating rate-candidate-master">1618</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/anishmahto">anishmahto</a>
+</td>
+<td title="473.15" class="user-points">473</td>
+<td>410</td>
+</tr>
+<tr id="user-PrimeNet">
+<td>44</td>
+<td>
+</td>
+<td class="user-name rating rate-none user"><a href="/user/PrimeNet">PrimeNet</a>
+</td>
+<td title="472.11" class="user-points">472</td>
+<td>544</td>
+</tr>
+<tr id="user-bobhob314">
+<td>45</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.230em"></span></span><span class="rating rate-master">1892</span></span>
+</td>
+<td class="user-name rating rate-master user"><a href="/user/bobhob314">bobhob314</a>
+</td>
+<td title="459.73" class="user-points">460</td>
+<td>460</td>
+</tr>
+<tr id="user-Kevin_Pan">
+<td>46</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.773em"></span></span><span class="rating rate-candidate-master">1732</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/Kevin_Pan">Kevin_Pan</a>
+</td>
+<td title="459.14" class="user-points">459</td>
+<td>354</td>
+</tr>
+<tr id="user-zimpha">
+<td>47</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.600em"></span></span><span class="rating rate-master">2040</span></span>
+</td>
+<td class="user-name rating rate-master user"><a href="/user/zimpha">zimpha</a>
+</td>
+<td title="456.76" class="user-points">457</td>
+<td>165</td>
+</tr>
+<tr id="user-PogChamp">
+<td>48</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.383em"></span></span><span class="rating rate-expert">1315</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/PogChamp">PogChamp</a>
+</td>
+<td title="455.38" class="user-points">455</td>
+<td>151</td>
+</tr>
+<tr id="user-leonchen0613">
+<td>49</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.883em"></span></span><span class="rating rate-expert">1465</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/leonchen0613">leonchen0613</a>
+</td>
+<td title="450.68" class="user-points">451</td>
+<td>405</td>
+</tr>
+<tr id="user-Xue_Alex">
+<td>50</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.180em"></span></span><span class="rating rate-candidate-master">1554</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/Xue_Alex">Xue_Alex</a>
+</td>
+<td title="448.71" class="user-points">449</td>
+<td>262</td>
+</tr>
+<tr id="user-koosaga">
+<td>51</td>
+<td>
+</td>
+<td class="user-name rating rate-none user"><a href="/user/koosaga">koosaga</a>
+</td>
+<td title="446.73" class="user-points">447</td>
+<td>19</td>
+</tr>
+<tr id="user-BillZeng2k">
+<td>52</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.630em"></span></span><span class="rating rate-expert">1389</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/BillZeng2k">BillZeng2k</a>
+</td>
+<td title="446.06" class="user-points">446</td>
+<td>228</td>
+</tr>
+<tr id="user-fifiman">
+<td>53</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.113em"></span></span><span class="rating rate-candidate-master">1534</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/fifiman">fifiman</a>
+</td>
+<td title="445.68" class="user-points">446</td>
+<td>154</td>
+</tr>
+<tr id="user-Cueball1234">
+<td>54</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.773em"></span></span><span class="rating rate-candidate-master">1732</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/Cueball1234">Cueball1234</a>
+</td>
+<td title="443.25" class="user-points">443</td>
+<td>156</td>
+</tr>
+<tr id="user-k_53P">
+<td>55</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.520em"></span></span><span class="rating rate-candidate-master">1656</span></span>
+</td>
+<td class="user-name rating rate-candidate-master setter"><a href="/user/k_53P">k_53P</a>
+</td>
+<td title="437.36" class="user-points">437</td>
+<td>126</td>
+</tr>
+<tr id="user-UTSJoey">
+<td>56</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.447em"></span></span><span class="rating rate-candidate-master">1634</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/UTSJoey">UTSJoey</a>
+</td>
+<td title="436.97" class="user-points">437</td>
+<td>248</td>
+</tr>
+<tr id="user-NoWoDeYo">
+<td>57</td>
+<td><span class="rate-group"><span class="rate-box rate-amateur"><span style="height: 0.875em"></span></span><span class="rating rate-amateur">1175</span></span>
+</td>
+<td class="user-name rating rate-amateur user"><a href="/user/NoWoDeYo">NoWoDeYo</a>
+</td>
+<td title="433.71" class="user-points">434</td>
+<td>53</td>
+</tr>
+<tr id="user-cheesecake">
+<td>58</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.397em"></span></span><span class="rating rate-expert">1319</span></span>
+</td>
+<td class="user-name rating rate-expert setter"><a href="/user/cheesecake">cheesecake</a>
+</td>
+<td title="430.40" class="user-points">430</td>
+<td>201</td>
+</tr>
+<tr id="user-Eeyore46656">
+<td>59</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.767em"></span></span><span class="rating rate-expert">1430</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/Eeyore46656">Eeyore46656</a>
+</td>
+<td title="425.47" class="user-points">425</td>
+<td>170</td>
+</tr>
+<tr id="user-CarlYu">
+<td>60</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.277em"></span></span><span class="rating rate-expert">1283</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/CarlYu">CarlYu</a>
+</td>
+<td title="423.98" class="user-points">424</td>
+<td>197</td>
+</tr>
+<tr id="user-TheZombieCloud">
+<td>61</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.233em"></span></span><span class="rating rate-expert">1270</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/TheZombieCloud">TheZombieCloud</a>
+</td>
+<td title="421.01" class="user-points">421</td>
+<td>226</td>
+</tr>
+<tr id="user-chenj">
+<td>62</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.257em"></span></span><span class="rating rate-candidate-master">1577</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/chenj">chenj</a>
+</td>
+<td title="417.31" class="user-points">417</td>
+<td>322</td>
+</tr>
+<tr id="user-tikul">
+<td>63</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.640em"></span></span><span class="rating rate-candidate-master">1692</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/tikul">tikul</a>
+</td>
+<td title="413.48" class="user-points">413</td>
+<td>264</td>
+</tr>
+<tr id="user-TommyX">
+<td>64</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.467em"></span></span><span class="rating rate-candidate-master">1640</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/TommyX">TommyX</a>
+</td>
+<td title="412.33" class="user-points">412</td>
+<td>175</td>
+</tr>
+<tr id="user-aCookieBreak">
+<td>65</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.067em"></span></span><span class="rating rate-candidate-master">1520</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/aCookieBreak">aCookieBreak</a>
+</td>
+<td title="411.28" class="user-points">411</td>
+<td>229</td>
+</tr>
+<tr id="user-XIAOAGE">
+<td>66</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.050em"></span></span><span class="rating rate-candidate-master">1515</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/XIAOAGE">XIAOAGE</a>
+</td>
+<td title="407.55" class="user-points">408</td>
+<td>185</td>
+</tr>
+<tr id="user-gloomcore">
+<td>67</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.207em"></span></span><span class="rating rate-candidate-master">1562</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/gloomcore">gloomcore</a>
+</td>
+<td title="406.05" class="user-points">406</td>
+<td>73</td>
+</tr>
+<tr id="user-aeternalis1">
+<td>68</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.480em"></span></span><span class="rating rate-candidate-master">1644</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/aeternalis1">aeternalis1</a>
+</td>
+<td title="405.12" class="user-points">405</td>
+<td>288</td>
+</tr>
+<tr id="user-minecraftyugi">
+<td>69</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.777em"></span></span><span class="rating rate-expert">1433</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/minecraftyugi">minecraftyugi</a>
+</td>
+<td title="400.82" class="user-points">401</td>
+<td>367</td>
+</tr>
+<tr id="user-xXxP0t4t0MStRxXx">
+<td>70</td>
+<td><span class="rate-group"><span class="rate-box rate-newbie"><span style="height: 0.919em"></span></span><span class="rating rate-newbie">919</span></span>
+</td>
+<td class="user-name rating rate-newbie user"><a href="/user/xXxP0t4t0MStRxXx">xXxP0t4t0MStRxXx</a>
+</td>
+<td title="400.21" class="user-points">400</td>
+<td>256</td>
+</tr>
+<tr id="user-PlasmaVortex">
+<td>71</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.403em"></span></span><span class="rating rate-candidate-master">1621</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/PlasmaVortex">PlasmaVortex</a>
+</td>
+<td title="384.19" class="user-points">384</td>
+<td>111</td>
+</tr>
+<tr id="user-jeffreyl">
+<td>72</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.023em"></span></span><span class="rating rate-master">1809</span></span>
+</td>
+<td class="user-name rating rate-master user"><a href="/user/jeffreyl">jeffreyl</a>
+</td>
+<td title="379.54" class="user-points">380</td>
+<td>114</td>
+</tr>
+<tr id="user-JeffreyZ">
+<td>73</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.083em"></span></span><span class="rating rate-master">1833</span></span>
+</td>
+<td class="user-name rating rate-master setter"><a href="/user/JeffreyZ">JeffreyZ</a>
+</td>
+<td title="378.05" class="user-points">378</td>
+<td>177</td>
+</tr>
+<tr id="user-cynical">
+<td>74</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.767em"></span></span><span class="rating rate-candidate-master">1730</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/cynical">cynical</a>
+</td>
+<td title="375.93" class="user-points">376</td>
+<td>226</td>
+</tr>
+<tr id="user-Daniel123">
+<td>75</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.693em"></span></span><span class="rating rate-candidate-master">1708</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/Daniel123">Daniel123</a>
+</td>
+<td title="375.76" class="user-points">376</td>
+<td>211</td>
+</tr>
+<tr id="user-richardyi25">
+<td>76</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.733em"></span></span><span class="rating rate-candidate-master">1720</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/richardyi25">richardyi25</a>
+</td>
+<td title="375.58" class="user-points">376</td>
+<td>267</td>
+</tr>
+<tr id="user-gongy">
+<td>77</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.945em"></span></span><span class="rating rate-master">2178</span></span>
+</td>
+ <td class="user-name rating rate-master user"><a href="/user/gongy">gongy</a>
+</td>
+<td title="375.12" class="user-points">375</td>
+<td>86</td>
+</tr>
+<tr id="user-angelachang27">
+<td>78</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.533em"></span></span><span class="rating rate-candidate-master">1660</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/angelachang27">angelachang27</a>
+</td>
+<td title="373.88" class="user-points">374</td>
+<td>60</td>
+</tr>
+<tr id="user-jlsajfj">
+<td>79</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.370em"></span></span><span class="rating rate-expert">1311</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/jlsajfj">jlsajfj</a>
+</td>
+<td title="371.23" class="user-points">371</td>
+<td>182</td>
+</tr>
+<tr id="user-lolzballs">
+<td>80</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.957em"></span></span><span class="rating rate-expert">1487</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/lolzballs">lolzballs</a>
+</td>
+<td title="370.56" class="user-points">371</td>
+<td>192</td>
+</tr>
+<tr id="user-PlumSauc3">
+<td>81</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.440em"></span></span><span class="rating rate-candidate-master">1632</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/PlumSauc3">PlumSauc3</a>
+</td>
+<td title="367.55" class="user-points">368</td>
+<td>215</td>
+</tr>
+<tr id="user-Andrei1998">
+<td>82</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.723em"></span></span><span class="rating rate-expert">1417</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/Andrei1998">Andrei1998</a>
+</td>
+<td title="365.02" class="user-points">365</td>
+<td>25</td>
+</tr>
+<tr id="user-adam_yu">
+<td>83</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.767em"></span></span><span class="rating rate-expert">1430</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/adam_yu">adam_yu</a>
+</td>
+<td title="364.30" class="user-points">364</td>
+<td>272</td>
+</tr>
+<tr id="user-KevinWan">
+<td>84</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.177em"></span></span><span class="rating rate-expert">1253</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/KevinWan">KevinWan</a>
+</td>
+<td title="356.86" class="user-points">357</td>
+<td>136</td>
+</tr>
+<tr id="user-Ninjaclasher">
+<td>85</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.103em"></span></span><span class="rating rate-candidate-master">1531</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/Ninjaclasher">Ninjaclasher</a>
+</td>
+<td title="354.47" class="user-points">354</td>
+<td>142</td>
+</tr>
+<tr id="user-cranberrysauce26">
+<td>86</td>
+<td>
+</td>
+<td class="user-name rating rate-none user"><a href="/user/cranberrysauce26">cranberrysauce26</a>
+</td>
+<td title="352.73" class="user-points">353</td>
+<td>85</td>
+</tr>
+<tr id="user-Injust">
+<td>87</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.987em"></span></span><span class="rating rate-expert">1496</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/Injust">Injust</a>
+</td>
+<td title="351.94" class="user-points">352</td>
+<td>453</td>
+</tr>
+<tr id="user-Serfcx">
+<td>88</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.963em"></span></span><span class="rating rate-expert">1489</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/Serfcx">Serfcx</a>
+</td>
+<td title="349.46" class="user-points">349</td>
+<td>57</td>
+</tr>
+<tr id="user-1yangdan">
+<td>89</td>
+<td><span class="rate-group"><span class="rate-box rate-amateur"><span style="height: 0.960em"></span></span><span class="rating rate-amateur">1192</span></span>
+</td>
+<td class="user-name rating rate-amateur user"><a href="/user/1yangdan">1yangdan</a>
+</td>
+<td title="349.44" class="user-points">349</td>
+<td>201</td>
+</tr>
+<tr id="user-septence123">
+<td>90</td>
+<td><span class="rate-group"><span class="rate-box rate-amateur"><span style="height: 0.795em"></span></span><span class="rating rate-amateur">1159</span></span>
+</td>
+<td class="user-name rating rate-amateur user"><a href="/user/septence123">septence123</a>
+</td>
+<td title="346.92" class="user-points">347</td>
+<td>156</td>
+</tr>
+<tr id="user-BMP">
+<td>91</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.463em"></span></span><span class="rating rate-expert">1339</span></span>
+</td>
+<td class="user-name rating rate-expert setter"><a href="/user/BMP">BMP</a>
+</td>
+<td title="346.39" class="user-points">346</td>
+<td>291</td>
+</tr>
+<tr id="user-spencereir">
+<td>92</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.250em"></span></span><span class="rating rate-candidate-master">1575</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/spencereir">spencereir</a>
+</td>
+<td title="344.10" class="user-points">344</td>
+<td>72</td>
+</tr>
+<tr id="user-ParsaT">
+<td>93</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.883em"></span></span><span class="rating rate-expert">1465</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/ParsaT">ParsaT</a>
+</td>
+<td title="342.04" class="user-points">342</td>
+<td>202</td>
+</tr>
+<tr id="user-zscoder">
+<td>94</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.620em"></span></span><span class="rating rate-master">2048</span></span>
+</td>
+<td class="user-name rating rate-master user"><a href="/user/zscoder">zscoder</a>
+</td>
+<td title="341.54" class="user-points">342</td>
+<td>48</td>
+</tr>
+<tr id="user-root">
+<td>95</td>
+<td><span class="rate-group"><span class="rate-box rate-amateur"><span style="height: 0.375em"></span></span><span class="rating rate-amateur">1075</span></span>
+</td>
+<td class="user-name rating rate-amateur user"><a href="/user/root">root</a>
+</td>
+<td title="340.84" class="user-points">341</td>
+<td>86</td>
+</tr>
+<tr id="user-JohnWinter">
+<td>96</td>
+<td><span class="rate-group"><span class="rate-box rate-expert"><span style="height: 0.173em"></span></span><span class="rating rate-expert">1252</span></span>
+</td>
+<td class="user-name rating rate-expert user"><a href="/user/JohnWinter">JohnWinter</a>
+</td>
+<td title="339.46" class="user-points">339</td>
+<td>161</td>
+</tr>
+<tr id="user-The_Blue_Wolf">
+<td>97</td>
+<td>
+</td>
+<td class="user-name rating rate-none user"><a href="/user/The_Blue_Wolf">The_Blue_Wolf</a>
+</td>
+<td title="338.83" class="user-points">339</td>
+<td>73</td>
+</tr>
+<tr id="user-salvatorr3100">
+<td>98</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.293em"></span></span><span class="rating rate-candidate-master">1588</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/salvatorr3100">salvatorr3100</a>
+ </td>
+<td title="337.98" class="user-points">338</td>
+<td>254</td>
+</tr>
+<tr id="user-pls">
+<td>99</td>
+<td><span class="rate-group"><span class="rate-box rate-candidate-master"><span style="height: 0.573em"></span></span><span class="rating rate-candidate-master">1672</span></span>
+</td>
+<td class="user-name rating rate-candidate-master user"><a href="/user/pls">pls</a>
+</td>
+<td title="331.42" class="user-points">331</td>
+<td>144</td>
+</tr>
+<tr id="user-inutard">
+<td>100</td>
+<td><span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.265em"></span></span><span class="rating rate-master">1906</span></span>
+</td>
+<td class="user-name rating rate-master user"><a href="/user/inutard">inutard</a>
+</td>
+<td title="331.25" class="user-points">331</td>
+<td>49</td>
+</tr>
+</tbody>
+</thead>
+</table>
+<div style="margin-top:10px;"><ul class="pagination">
+<li class="disabled-page"><span>«</span>
+</li>
+<li class="active-page"><a href="/users/">1</a>
+</li>
+<li><a href="/users/?page=2">2</a>
+</li>
+<li><a href="/users/?page=3">3</a>
+</li>
+<li><a href="/users/?page=4">4</a>
+</li>
+<li><a href="/users/?page=5">5</a>
+</li>
+<li><a href="/users/?page=6">6</a>
+</li>
+<li class="disabled-page"><span>...</span>
+</li>
+<li><a href="/users/?page=117">117</a>
+</li>
+<li><a href="/users/?page=118">118</a>
+</li>
+<li><a href="/users/?page=2">»</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<footer><span id="footer-content"><br><a style="color: rgb(128, 128, 128)" href="//github.com/DMOJ/">fork us on <span style="font-weight:bold">Github</span></a> | <a style="color: rgb(128, 128, 128);" href="//www.facebook.com/dmoj.ca">like us on <span style="font-weight: bold;">Facebook</span></a> | <a style="color: rgb(128, 128, 128)" href="https://translate.dmoj.ca/">help us <span style="font-weight: bold;">translate</span></a> | <a style="color: rgb(128, 128, 128)" href="https://dmoj.ca/tos/">terms of service</a>
+|
+<form action="/i18n/setlang/" method="post" style="display: inline"><input type='hidden' name='csrfmiddlewaretoken' value='KBJn0NqYduJRDHvaavwyClf89twL842FprDvKLs5g1ceCeX58FB0WTrVxRdu1OfZ' />
+<input name="next" type="hidden" value="/users/">
+<select name="language" onchange="form.submit()" style="height: 1.5em">
+<option value="de">Deutsch (de)
+</option>
+<option value="en" selected="">English (en)
+</option>
+<option value="fr">français (fr)
+</option>
+<option value="ro">Română (ro)
+</option>
+<option value="ru">Русский (ru)
+</option>
+<option value="sr-latn">srpski (latinica) (sr-latn)
+</option>
+<option value="vi">Tiếng Việt (vi)
+</option>
+<option value="zh-hans">简体中文 (zh-hans)
+</option>
+</select>
+</form></span>
+</footer>
+</div>
+</body>
+</html>

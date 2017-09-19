@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CCC &#39;05 S5 - Pinball Ranking - DMOJ: Modern Online Judge
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="DMOJ,Canadian,Don Mills,DMCI,online judge,programming,code,contest,CCC,CCC Solutions,CCC 2015,IOI,JOI,COCI,DMOPC,Canada,Ontario,Toronto,grade,interactive">
+<meta name="description" content="Pinball is an arcade game in which an individual player controls a silver ball by means of flippers, with the objective of accumulating as many points as possible. At the end of each game, the player&#39;s score and rank are displayed. The score, an integer between \(0\) and \(1\,000\,000\,000\), is that achieved by the player in the game just ended. ...">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#FFBB33">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+<meta name="theme-color" content="#FFBB33">
+<meta property="og:title" content="CCC &#39;05 S5 - Pinball Ranking - DMOJ: Modern Online Judge">
+<meta property="og:site_name" content="DMOJ: Modern Online Judge">
+<meta property="og:url" content="https://dmoj.ca/problem/ccc05s5">
+<meta property="og:description" content="Pinball is an arcade game in which an individual player controls a silver ball by means of flippers, with the objective of accumulating as many points as possible. At the end of each game, the player&#39;s score and rank are displayed. The score, an integer between \(0\) and \(1\,000\,000\,000\), is that achieved by the player in the game just ended. ..."><!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script>window.bad_browser = true</script>
+<![endif]-->
+<link rel="stylesheet" href="//dmoj.ml/static/cache/css/c8b3f96d55e0.css" type="text/css" />
+<link rel="canonical" href="https://dmoj.ca/problem/ccc05s5">
+<link rel="stylesheet" href="//dmoj.ml/static/cache/css/158490f673bf.css" type="text/css" media="all" />
+<style>.title-state {
+    font-size: 2em;
+    float: left;
+    width: 1.1em;
+    display: block;
+    margin-top: 0.16em;
+}
+
+.info-float a {
+    vertical-align: middle;
+}
+
+.problem-clarification {
+    border-bottom: 1px solid #ccc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.clarifications-area h2 {
+    margin-bottom: 20px;
+}
+
+.problem-clarification .body {
+    display: inline-block;
+    padding-left: 3em;
+}
+</style><script type="text/javascript" src="//dmoj.ml/static/cache/js/90b83b3c98b1.js"></script>
+<script type="text/javascript" src="//dmoj.ml/static/cache/js/0e33e8898e76.js"></script>
+<script src="//dmoj.ml/static/libs/featherlight/featherlight.min.a0e732b080f0.js" type="text/javascript"></script><script type="text/javascript" src="//dmoj.ml/static/cache/js/6fab94eb70e0.js"></script>
+<script>$(function () {
+    $('a#clone-link').click(function (event) {
+        event.preventDefault();
+        if (confirm('Are you sure you want to clone?'))
+            $(this).closest("form").submit();
+    })
+});
+</script>
+<script type="text/javascript">window.user = {};</script><script>window.user && Raven.setUserContext(window.user)</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56757436-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<noscript>
+      <style>#content {
+    margin: 80px auto auto;
+}
+
+#navigation {
+    top: 27px;
+}
+      </style>
+    </noscript>
+</head>
+<body>
+<nav id="navigation" class="unselectable">
+<div id="nav-container"><a id="navicon" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+<ul id="nav-list">
+<li class="home-nav-element"><a href="/"><img src="//dmoj.ml/static/icons/logo.d0dbdf0b98be.svg" alt="DMOJ" width="160" height="44" onerror="this.src=&quot;//dmoj.ml/static/icons/logo.2f426bc39826.png&quot;; this.onerror=null" style="border: none" /></a>
+</li>
+
+<li class="home-nav-element"><span style="width: 1px; vertical-align: middle; padding-left: 3px; display: inline-block; height: 32px; margin-right: 1px; border-right: 3px solid rgba(255, 255, 255, 0.15);"></span>
+</li>
+<li class="home-menu-item"><a href="/" class="nav-home">Home</a>
+</li>
+<li><a href="/problems/" class="nav-problem active">Problems
+</a>
+</li>
+<li><a href="/submissions/" class="nav-submit">Submissions
+</a>
+</li>
+<li><a href="/users/" class="nav-user">Users
+</a>
+</li>
+<li><a href="/contests/" class="nav-contest">Contests
+</a>
+</li>
+<li><a href="/about/" class="nav-about">About
+<div href="javascript:void(0)" class="nav-expand">></div></a>
+<ul>
+<li><a href="/status/" class="nav-status">Status
+</a>
+</li>
+<li><a href="/runtimes/" class="nav-runtimes">Runtimes
+</a>
+</li>
+<li><a href="/tips/" class="nav-tips">Tips
+</a>
+</li>
+<li><a href="/api/" class="nav-api">API
+</a>
+</li>
+<li><a href="https://github.com/DMOJ" class="nav-github">Github
+</a>
+</li></ul>
+</li>
+</ul><span id="user-links"><span class="anon"><a href="/accounts/login/?next=/problem/ccc05s5"><b>Login</b></a>&nbsp;|&nbsp;<a href="/accounts/register/">Register</a></span></span>
+</div>
+<div id="nav-shadow"></div>
+</nav>
+<div id="page-container">
+<noscript>
+        <div id="noscript">This site works best with JavaScript enabled.
+        </div>
+      </noscript><br>
+<article id="content">
+<div class="problem-title">
+<h2 style="color:#393630; display: inline-block">CCC &#39;05 S5 - Pinball Ranking</h2><span class="spacer"></span><a href="/problem/ccc05s5/pdf" class="view-pdf"><span style="position: relative; display: inline-block; font-size: 1.5em"><span style="color: #d40e13" class="fa fa-file-pdf-o"></span><span style="height: 0.2em; display: block; position: absolute; top: 0.3em; background: #d40e13; width: 0.6em; margin-left: -0.15em"></span></span> View as PDF</a>
+</div>
+<hr>
+<div id="content-body">
+<div id="common-content">
+<div id="content-right">
+<div class="info-float"><a href="/problem/ccc05s5/submit" class="unselectable button full">Submit solution</a>
+<hr />
+<div><a href="/problem/ccc05s5/submissions/">All submissions</a>
+</div>
+<div><a href="/problem/ccc05s5/rank/">Best submissions</a>
+</div>
+<hr /><br />
+<div class="problem-info-entry"><i class="fa fa-check fa-fw"></i><span class="pi-name">Points:</span><span class="pi-value">15
+(partial)</span>
+</div>
+<div class="problem-info-entry"><i class="fa fa-clock-o fa-fw"></i><span class="pi-name">Time limit:</span><span class="pi-value">1.0s</span>
+</div>
+<div class="problem-lang-limits">
+</div>
+<div class="problem-info-entry"><i class="fa fa-server fa-fw"></i><span class="pi-name">Memory limit:</span><span class="pi-value">128M</span>
+</div>
+<div class="problem-lang-limits">
+</div><br />
+<div id="problem-types">
+<div class="toggle closed unselectable"><span class="fa fa-chevron-right fa-fw"></span>Problem types
+</div>
+<div style="display:none" class="toggled">Data Structures, Divide and Conquer</div>
+</div><br />
+</div>
+</div>
+<div id="content-left" class="split-common-content">
+<div class="content-description screen"><div><h5>Canadian Computing Competition: 2005 Stage 1, Senior #5</h5>
+<p>Pinball is an arcade game in which an individual player controls a silver ball by means of flippers, with the objective of accumulating as many points as possible. At the end of each game, the player's score and rank are displayed. The score, an integer between <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mn>0</mn>
+<annotation encoding="application/x-tex">0</annotation>
+</semantics>
+</math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>1</mn>
+<mspace width="thinmathspace"></mspace>
+<mn>000</mn>
+<mspace width="thinmathspace"></mspace>
+<mn>000</mn>
+<mspace width="thinmathspace"></mspace>
+<mn>000</mn>
+</mrow>
+<annotation encoding="application/x-tex">1\,000\,000\,000</annotation>
+</semantics>
+</math>, is that achieved by the player in the game just ended. The rank is displayed as "<math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>r</mi>
+<annotation encoding="application/x-tex">r</annotation>
+</semantics>
+</math> of <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>n</mi>
+<annotation encoding="application/x-tex">n</annotation>
+</semantics>
+</math>". <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>n</mi>
+<annotation encoding="application/x-tex">n</annotation>
+</semantics>
+</math> is the total number of games ever played on the machine, and <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>r</mi>
+<annotation encoding="application/x-tex">r</annotation>
+</semantics>
+</math> is the position of the score for the just-ended game within this set.</p>
+<p><em>More precisely, <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>r</mi>
+<annotation encoding="application/x-tex">r</annotation>
+</semantics>
+</math> is one greater than the number of games whose score exceeds that of the game just ended.</em></p>
+<h4>Input Specification</h4>
+<p>You are to implement the pinball machine's ranking algorithm. The first line of input contains a positive integer, <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>t</mi>
+<annotation encoding="application/x-tex">t</annotation>
+</semantics>
+</math>, the total number of games played in the lifetime of the machine. <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>t</mi>
+<annotation encoding="application/x-tex">t</annotation>
+</semantics>
+</math> lines follow, given the scores of these games, in chronological order.</p>
+<h4>Output Specification</h4>
+<p>You are to output the average of the ranks (rounded to two digits after the decimal) that would be displayed on the board.
+At least one test case will have <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>t</mi>
+<mo>≤</mo>
+<mn>100</mn>
+</mrow>
+<annotation encoding="application/x-tex">t \le 100</annotation>
+</semantics>
+</math>. All test cases will have <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>t</mi>
+<mo>≤</mo>
+<mn>100</mn>
+<mspace width="thinmathspace"></mspace>
+<mn>000</mn>
+</mrow>
+<annotation encoding="application/x-tex">t \le 100\,000</annotation>
+</semantics>
+</math>.</p>
+<h4>Sample Input</h4>
+<pre><code>5
+100
+200
+150
+170
+50</code></pre>
+<h4>Sample Output</h4>
+<pre><code>2.20</code></pre>
+<h4>Explanation</h4>
+<p>The pinball screen would display (in turn):</p>
+<pre><code>1 of 1
+1 of 2
+2 of 3
+2 of 4
+5 of 5</code></pre>
+<p>The average rank is <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mn>2</mn>
+<mo>+</mo>
+<mn>2</mn>
+<mo>+</mo>
+<mn>5</mn>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mn>5</mn>
+<mo>=</mo>
+<mn>2.20</mn>
+</mrow>
+<annotation encoding="application/x-tex">(1+1+2+2+5)/5 = 2.20</annotation>
+</semantics>
+</math>.</p>
+</div>
+<hr />
+</div>
+<div id="comments" class="comment-area">
+<h2><i style="padding-right: 0.3em" class="fa fa-comments"></i>Comments
+</h2>
+<ul class="comments top-level-comments new-comments">
+<li id="comment-5597" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/5597/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">0</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/Xue_Alex" class="user"><img src="//www.gravatar.com/avatar/d4f1be1dff67dfee0d834d4a82d57c2b?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/Xue_Alex" class="username rating rate-candidate-master user">Xue_Alex</a>
+<div class="relative-time"></div><span data-unix="2017-07-30T01:22:44+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on July 29, 2017</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-5597" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title"></div>
+<div class="comment-body"><p>tfw changing all floats to doubles AC's</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li id="comment-5234" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/5234/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">0</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/Pleedoh" class="user"><img src="//www.gravatar.com/avatar/0577ae26bbc25fa409c93fbc71df58d4?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/Pleedoh" class="username rating rate-expert user">Pleedoh</a>
+<div class="relative-time"></div><span data-unix="2017-05-15T21:14:35+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on May 15, 2017</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-5234" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title"></div>
+ <div class="comment-body"><p>Round to 2 decimal places?</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-5237" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/5237/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">0</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/mse387" class="user"><img src="//www.gravatar.com/avatar/8e9c57a257d4829c72211575c10c921c?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/mse387" class="username rating rate-amateur user">mse387</a>
+<div class="relative-time"></div><span data-unix="2017-05-15T21:38:32+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on May 15, 2017</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-5237" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title"></div>
+<div class="comment-body"><div><p>Output Specification</p>
+<p>"...output the average of the ranks (rounded to two digits after the decimal) that...."</p>
+</div></div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-5238" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/5238/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">0</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/Pleedoh" class="user"><img src="//www.gravatar.com/avatar/0577ae26bbc25fa409c93fbc71df58d4?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/Pleedoh" class="username rating rate-expert user">Pleedoh</a>
+<div class="relative-time"></div><span data-unix="2017-05-15T22:41:39+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on May 15, 2017</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-5238" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title"></div>
+<div class="comment-body"><p>Right,sorry.</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</ul>
+<li id="comment-4030" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/4030/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-1</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/septence123" class="user"><img src="//www.gravatar.com/avatar/4a4be01ccaec85b11cefe1166220c059?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/septence123" class="username rating rate-amateur user">septence123</a>
+<div class="relative-time"></div><span data-unix="2017-01-06T04:48:14+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Jan. 5, 2017</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-4030" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="" class="comment-title">Still getting TLE?</div>
+<div class="comment-body"><p>I implemented BST and still got TLE? Is there something faster?</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-4031" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/4031/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">0</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/ZQFMGB12" class="user"><img src="//www.gravatar.com/avatar/0bd9d1ab86cf873d48d02c366714a26d?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/ZQFMGB12" class="username rating rate-master user">ZQFMGB12</a>
+<div class="relative-time"></div><span data-unix="2017-01-06T05:25:23+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Jan. 6, 2017</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-4031" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title">Re: Still getting TLE?</div>
+<div class="comment-body"><p>Read <a href="https://dmoj.ca/problem/ds4">this</a> for more info.</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<li id="comment-3366" data-revision="3" data-max-revision="3" data-revision-ajax="/comments/3366/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-6</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/Kirito" class="user"><img src="//www.gravatar.com/avatar/1a26342d1f481833ad6d5e185c506f74?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/Kirito" class="username rating rate-expert user">Kirito</a>
+<div class="relative-time"></div><span data-unix="2016-08-01T00:18:20+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on July 31, 2016</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"><a href="javascript:show_revision(3366, -1)" class="previous-revision">&larr;</a><span class="comment-edit-text"> edit 3
+</span><a href="javascript:show_revision(3366, 1)" style="visibility: hidden" class="next-revision">&rarr;</a></span><a href="#comment-3366" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="" class="comment-title">NVM</div>
+<div class="comment-body"><p>Saw the site update popup.</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-3367" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/3367/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-6</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/Xyene" class="user"><img src="//www.gravatar.com/avatar/3fa9c404fb2bf9aef66e0482b331bf39?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/Xyene" class="username rating rate-master admin">Xyene</a>
+<div class="relative-time"></div><span data-unix="2016-08-01T00:19:12+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on July 31, 2016</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-3367" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title">Re: Contest Testing: Can&#39;t Submit</div>
+<div class="comment-body"><p>Yes.</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<li id="comment-2658" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/2658/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-5</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/MathBunny123" class="user"><img src="//www.gravatar.com/avatar/5b0b401671478a8faf25a1ea37466b1f?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/MathBunny123" class="username rating rate-none user">MathBunny123</a>
+<div class="relative-time"></div><span data-unix="2016-01-30T03:11:30+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Jan. 29, 2016</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-2658" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="" class="comment-title">Too slow? Help?</div>
+<div class="comment-body"><p>According to DMOJ my code is too slow, but I run the test-files from CCC's website and it finishes all of them instantly. Is my approach wrong? I feel like the 1sec time limit is too close to my solution or something.</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-2659" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/2659/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-4</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/jeffreyxiao" class="user"><img src="//www.gravatar.com/avatar/c691cf0daaa79699f3a89d49f653be59?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/jeffreyxiao" class="username rating rate-master setter">jeffreyxiao</a>
+<div class="relative-time"></div><span data-unix="2016-01-30T04:03:56+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Jan. 29, 2016</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-2659" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title">Re: Too slow? Help?</div>
+<div class="comment-body"><p>Your solution is $(O(N^2\ log N)$ because insertion into an ArrayList at an arbitrary position is $O(N)$ time</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-2662" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/2662/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-4</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/MathBunny" class="user"><img src="//www.gravatar.com/avatar/fe179d6696dab022dfe696b336d6f4f5?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/MathBunny" class="username rating rate-amateur user">MathBunny</a>
+<div class="relative-time"></div><span data-unix="2016-01-30T17:10:31+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Jan. 30, 2016</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-2662" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title">Re: Re: Too slow? Help?</div>
+<div class="comment-body"><p>Really? Okay thanks a lot!</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</ul>
+<li id="comment-723" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/723/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-14</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/bobhob314" class="user"><img src="//www.gravatar.com/avatar/1f75cba48dfa37a5254890f8d31ad927?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/bobhob314" class="username rating rate-master user">bobhob314</a>
+<div class="relative-time"></div><span data-unix="2015-01-24T14:20:09+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Jan. 24, 2015</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-723" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="" class="comment-title">Score</div>
+<div class="comment-body"><p>Will the scores be repeated?</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-724" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/724/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-15</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/Sentient" class="user"><img src="//www.gravatar.com/avatar/af654932d899e8d726c8594964ac9819?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/Sentient" class="username rating rate-candidate-master setter">Sentient</a>
+<div class="relative-time"></div><span data-unix="2015-01-24T16:00:05+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Jan. 24, 2015</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-724" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title">Re: Score</div>
+<div class="comment-body"><p>Yes, scores can be repeated; they are not guaranteed to be distinct</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-1382" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/1382/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-13</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/lolzballs" class="user"><img src="//www.gravatar.com/avatar/56ebfe8b7871d5c4d622bdede4ba4b97?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/lolzballs" class="username rating rate-expert user">lolzballs</a>
+<div class="relative-time"></div><span data-unix="2015-03-19T15:53:51+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on March 19, 2015</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-1382" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title">Re: Re: Score</div>
+<div class="comment-body"><p>When they are repeated, is the rank the same, lower or higher?</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-1384" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/1384/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-14</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/quantum" class="user"><img src="//www.gravatar.com/avatar/3aac760f3f17effb1202af33ca70bb9f?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/quantum" class="username rating rate-master admin">quantum</a>
+<div class="relative-time"></div><span data-unix="2015-03-19T16:04:27+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on March 19, 2015</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-1384" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title">Re: Re: Re: Score</div>
+<div class="comment-body"><p>Look at the italicized line.</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li id="comment-1383" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/1383/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-13</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/FatalEagle" class="user"><img src="//www.gravatar.com/avatar/ad8bbef705eb8012873d2be55771e6fc?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/FatalEagle" class="username rating rate-master admin">FatalEagle</a>
+<div class="relative-time"></div><span data-unix="2015-03-19T15:59:31+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on March 19, 2015</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-1383" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title">Re: Re: Re: Score</div>
+<div class="comment-body"><p><em>More precisely, <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>r</mi>
+<annotation encoding="application/x-tex">r</annotation>
+</semantics>
+</math> is one greater than the number of games whose score exceeds that of the game just ended.</em></p>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</ul>
+</ul>
+<li id="comment-230" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/230/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-11</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/quantum" class="user"><img src="//www.gravatar.com/avatar/3aac760f3f17effb1202af33ca70bb9f?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/quantum" class="username rating rate-master admin">quantum</a>
+<div class="relative-time"></div><span data-unix="2014-12-01T19:11:09+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Dec. 1, 2014</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-230" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="" class="comment-title">Partial Points</div>
+<div class="comment-body"><p>This problem now have partial points enabled. The test cases have been re-weighted to give reasonable points for different algorithms to solve this problem. All non-AC submissions have been rejudged.</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li id="comment-200" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/200/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-9</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/BMP" class="user"><img src="//www.gravatar.com/avatar/e48165909c46682f83f8ee011d494696?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/BMP" class="username rating rate-expert setter">BMP</a>
+<div class="relative-time"></div><span data-unix="2014-11-28T22:01:32+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Nov. 28, 2014</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-200" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="" class="comment-title">moar time limit</div>
+<div class="comment-body"><p>plz</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-201" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/201/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-10</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/FatalEagle" class="user"><img src="//www.gravatar.com/avatar/ad8bbef705eb8012873d2be55771e6fc?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/FatalEagle" class="username rating rate-master admin">FatalEagle</a>
+<div class="relative-time"></div><span data-unix="2014-11-28T23:05:45+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Nov. 28, 2014</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-201" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title">Re: moar time limit</div>
+<div class="comment-body"><p>Your program isn't going to pass within a resasonable amount of time. Brute force like you are doing will not pass every problem on the judge. The best solution so far uses 0.057s in the worst case.</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<script type="text/javascript">function mathjax_pagedown(a){if("MathJax"in window){a.each(window.editors,function(d,b){var c=a("div.wmd-preview#"+d+"_wmd_preview")[0];b.hooks.chain("onPreviewRefresh",function(){MathJax.Hub.Queue(["Typeset",MathJax.Hub,c])});MathJax.Hub.Queue(["Typeset",MathJax.Hub,c])})}}window.mathjax_pagedown=mathjax_pagedown;$(window).load(function(){(mathjax_pagedown)("$"in window?$:django.jQuery)});</script>
+<footer><span id="footer-content"><br><a style="color: rgb(128, 128, 128)" href="//github.com/DMOJ/">fork us on <span style="font-weight:bold">Github</span></a> | <a style="color: rgb(128, 128, 128);" href="//www.facebook.com/dmoj.ca">like us on <span style="font-weight: bold;">Facebook</span></a> | <a style="color: rgb(128, 128, 128)" href="https://translate.dmoj.ca/">help us <span style="font-weight: bold;">translate</span></a> | <a style="color: rgb(128, 128, 128)" href="https://dmoj.ca/tos/">terms of service</a>
+|
+<form action="/i18n/setlang/" method="post" style="display: inline"><input type='hidden' name='csrfmiddlewaretoken' value='Kg52FMZrejG7b7fprnnjXyM3l3sWFDWbp6ZapK1yhQ9uaEHkpxsLh6YQJr9Fyn9v' />
+<input name="next" type="hidden" value="/problem/ccc05s5">
+<select name="language" onchange="form.submit()" style="height: 1.5em">
+<option value="de">Deutsch (de)
+</option>
+<option value="en" selected="">English (en)
+</option>
+<option value="fr">français (fr)
+</option>
+<option value="ro">Română (ro)
+</option>
+<option value="ru">Русский (ru)
+</option>
+<option value="sr-latn">srpski (latinica) (sr-latn)
+</option>
+<option value="vi">Tiếng Việt (vi)
+</option>
+<option value="zh-hans">简体中文 (zh-hans)
+</option>
+</select>
+</form></span>
+</footer>
+</div>
+</body>
+</html>

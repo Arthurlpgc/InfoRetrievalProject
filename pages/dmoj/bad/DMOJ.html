@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DMOJ API - DMOJ: Modern Online Judge
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="DMOJ,Canadian,Don Mills,DMCI,online judge,programming,code,contest,CCC,CCC Solutions,CCC 2015,IOI,JOI,COCI,DMOPC,Canada,Ontario,Toronto,grade,interactive">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#FFBB33">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+<meta name="theme-color" content="#FFBB33">
+<meta property="og:title" content="DMOJ API - DMOJ: Modern Online Judge" />
+<meta property="og:site_name" content="DMOJ: Modern Online Judge">
+<meta property="og:url" content="https://dmoj.ca/api/"><!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script>window.bad_browser = true</script>
+<![endif]-->
+<link rel="stylesheet" href="//dmoj.ml/static/cache/css/c8b3f96d55e0.css" type="text/css" />
+<link rel="canonical" href="https://dmoj.ca/api/">
+<script type="text/javascript" src="//dmoj.ml/static/cache/js/90b83b3c98b1.js"></script>
+<script type="text/javascript">window.user = {};</script><script>window.user && Raven.setUserContext(window.user)</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56757436-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<noscript>
+      <style>#content {
+    margin: 80px auto auto;
+}
+
+#navigation {
+    top: 27px;
+}
+      </style>
+    </noscript>
+</head>
+<body>
+<nav id="navigation" class="unselectable">
+<div id="nav-container"><a id="navicon" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+<ul id="nav-list">
+<li class="home-nav-element"><a href="/"><img src="//dmoj.ml/static/icons/logo.d0dbdf0b98be.svg" alt="DMOJ" width="160" height="44" onerror="this.src=&quot;//dmoj.ml/static/icons/logo.2f426bc39826.png&quot;; this.onerror=null" style="border: none" /></a>
+</li>
+
+<li class="home-nav-element"><span style="width: 1px; vertical-align: middle; padding-left: 3px; display: inline-block; height: 32px; margin-right: 1px; border-right: 3px solid rgba(255, 255, 255, 0.15);"></span>
+</li>
+<li class="home-menu-item"><a href="/" class="nav-home">Home</a>
+</li>
+<li><a href="/problems/" class="nav-problem">Problems
+</a>
+</li>
+<li><a href="/submissions/" class="nav-submit">Submissions
+</a>
+</li>
+<li><a href="/users/" class="nav-user">Users
+</a>
+</li>
+<li><a href="/contests/" class="nav-contest">Contests
+</a>
+</li>
+<li><a href="/about/" class="nav-about active">About
+<div href="javascript:void(0)" class="nav-expand">></div></a>
+<ul>
+<li><a href="/status/" class="nav-status">Status
+</a>
+</li>
+<li><a href="/runtimes/" class="nav-runtimes">Runtimes
+</a>
+</li>
+<li><a href="/tips/" class="nav-tips">Tips
+</a>
+</li>
+<li><a href="/api/" class="nav-api active">API
+</a>
+</li>
+<li><a href="https://github.com/DMOJ" class="nav-github">Github
+</a>
+</li></ul>
+</li>
+</ul><span id="user-links"><span class="anon"><a href="/accounts/login/?next=/api/"><b>Login</b></a>&nbsp;|&nbsp;<a href="/accounts/register/">Register</a></span></span>
+</div>
+<div id="nav-shadow"></div>
+</nav>
+<div id="page-container">
+<noscript>
+        <div id="noscript">This site works best with JavaScript enabled.
+        </div>
+      </noscript><br>
+<article id="content">
+<h2 style="color:#393630; display:inline">DMOJ API
+</h2>
+<hr>
+<div id="content-body">
+<div class="content-description"><div><p>The DMOJ supports a simple JSON API for accessing most data used by the backend.</p>
+<h4>Urls</h4>
+<h5><code>/api/problem/list</code> — Lists all the problems.</h5>
+<p>Example: <a href="https://dmoj.ca/api/problem/list">https://dmoj.ca/api/problem/list</a></p>
+<p>Contains a mapping of the form:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">"helloworld"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"Hello, World!"</span><span class="p">,</span>
+        <span class="nt">"group"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Uncategorized"</span><span class="p">],</span>
+        <span class="nt">"points"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">"partial"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Data is equivalent to what may be obtained by parsing <a href="https://dmoj.ca/problems">https://dmoj.ca/problems</a>.</p>
+<hr>
+<h5><code>/api/problem/info/&lt;code&gt;</code> — Fetches problem-specific info.</h5>
+<p>Example: <a href="https://dmoj.ca/api/problem/info/helloworld">https://dmoj.ca/api/problem/info/helloworld</a></p>
+<p>Contains a mapping of the form:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">"authors"</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="nt">"group"</span><span class="p">:</span> <span class="s2">"Uncategorized"</span><span class="p">,</span>
+    <span class="nt">"languages"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">"C"</span><span class="p">,</span>
+        <span class="s2">"CPP"</span><span class="p">,</span>
+        <span class="s2">"CPP0X"</span><span class="p">,</span>
+        <span class="s2">"CPP11"</span><span class="p">,</span>
+        <span class="s2">"CS"</span><span class="p">,</span>
+        <span class="s2">"F95"</span><span class="p">,</span>
+        <span class="s2">"GO"</span><span class="p">,</span>
+        <span class="s2">"HASK"</span><span class="p">,</span>
+        <span class="s2">"JAVA"</span><span class="p">,</span>
+        <span class="s2">"JAVA8"</span><span class="p">,</span>
+        <span class="s2">"LUA"</span><span class="p">,</span>
+        <span class="s2">"MONOCS"</span><span class="p">,</span>
+        <span class="s2">"NASM"</span><span class="p">,</span>
+        <span class="s2">"OCAML"</span><span class="p">,</span>
+        <span class="s2">"PAS"</span><span class="p">,</span>
+        <span class="s2">"PERL"</span><span class="p">,</span>
+        <span class="s2">"PHP"</span><span class="p">,</span>
+        <span class="s2">"PY2"</span><span class="p">,</span>
+        <span class="s2">"PY3"</span><span class="p">,</span>
+        <span class="s2">"PYPY"</span><span class="p">,</span>
+        <span class="s2">"PYPY3"</span><span class="p">,</span>
+        <span class="s2">"RUBY18"</span><span class="p">,</span>
+        <span class="s2">"RUBY21"</span><span class="p">,</span>
+        <span class="s2">"TUR"</span><span class="p">,</span>
+        <span class="s2">"V8JS"</span>
+    <span class="p">],</span>
+    <span class="nt">"memory_limit"</span><span class="p">:</span> <span class="mi">65536</span><span class="p">,</span>
+    <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"Hello, World!"</span><span class="p">,</span>
+    <span class="nt">"partial"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">"points"</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="nt">"time_limit"</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="nt">"types"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">"Implementation"</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This contains the basic information of the problem, save the description.</p>
+<hr>
+<h5><code>/api/contest/list</code> — Lists all contests.</h5>
+<p>Example: <a href="https://dmoj.ca/api/contest/list">https://dmoj.ca/api/contest/list</a></p>
+<hr>
+<h5><code>/api/contest/info/&lt;code&gt;</code> — Fetches contest-specific info.</h5>
+<p>Example: <a href="https://dmoj.ca/api/contest/info/dmopc16c1">https://dmoj.ca/api/contest/info/dmopc16c1</a></p>
+<hr>
+<h5><code>/api/user/list</code> — Lists all users.</h5>
+<p>Example: <a href="https://dmoj.ca/api/user/list">https://dmoj.ca/api/user/list</a></p>
+<hr>
+<h5><code>/api/user/info/&lt;username&gt;</code> — Fetches user info.</h5>
+<p>Example: <a href="https://dmoj.ca/api/user/info/Xyene">https://dmoj.ca/api/user/info/Xyene</a></p>
+<hr>
+<h5><code>/api/user/submissions/&lt;username&gt;</code> — Fetches all submissions by a user.</h5>
+<p>Example: <a href="https://dmoj.ca/api/user/submissions/Xyene">https://dmoj.ca/api/user/submissions/Xyene</a></p>
+<hr>
+</div>
+</div>
+</div>
+</article>
+<footer><span id="footer-content"><br><a style="color: rgb(128, 128, 128)" href="//github.com/DMOJ/">fork us on <span style="font-weight:bold">Github</span></a> | <a style="color: rgb(128, 128, 128);" href="//www.facebook.com/dmoj.ca">like us on <span style="font-weight: bold;">Facebook</span></a> | <a style="color: rgb(128, 128, 128)" href="https://translate.dmoj.ca/">help us <span style="font-weight: bold;">translate</span></a> | <a style="color: rgb(128, 128, 128)" href="https://dmoj.ca/tos/">terms of service</a>
+|
+<form action="/i18n/setlang/" method="post" style="display: inline"><input type='hidden' name='csrfmiddlewaretoken' value='Z25thoHyhZB7KDcLN2BFIED2fzD92IiMESZB1mJFkw4uJaEGLcG72cPPDXkSVsv6' />
+<input name="next" type="hidden" value="/api/">
+<select name="language" onchange="form.submit()" style="height: 1.5em">
+<option value="de">Deutsch (de)
+</option>
+<option value="en" selected="">English (en)
+</option>
+<option value="fr">français (fr)
+</option>
+<option value="ro">Română (ro)
+</option>
+<option value="ru">Русский (ru)
+</option>
+<option value="sr-latn">srpski (latinica) (sr-latn)
+</option>
+<option value="vi">Tiếng Việt (vi)
+</option>
+<option value="zh-hans">简体中文 (zh-hans)
+</option>
+</select>
+</form></span>
+</footer>
+</div>
+</body>
+</html>

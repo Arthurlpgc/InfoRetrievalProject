@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script>
+    (function(_, e, rr, s) {
+      _errs = [s];
+      var c = _.onerror;
+      _.onerror = function() {
+        var a = arguments;
+        _errs.push(a);
+        c && c.apply(this, a)
+      };
+      var b = function() {
+        var c = e.createElement(rr),
+        b = e.getElementsByTagName(rr)[0];
+        c.src = "//beacon.errorception.com/" + s + ".js";
+        c.async = !0;
+        b.parentNode.insertBefore(c, b)
+      };
+      _.addEventListener ? _.addEventListener("load", b, !1) : _.attachEvent("onload", b)
+    })
+    (window, document, "script", "4e7c8fce06a9ab05530008e5");
+  </script>
+  <link rel="dns-prefetch" href="//codechef_shared.s3.amazonaws.com" />
+  <link rel="dns-prefetch" href="//beacon.errorception.com" />
+  <link rel="dns-prefetch" href="//static.ak.facebook.com" />
+  <link rel="dns-prefetch" href="//fbcdn-profile-a.akamaihd.net" />
+  <script type="text/javascript">
+    var _sf_startpt = (new Date()).getTime()
+  </script>
+  <title>Contest Page | CodeChef</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="programming, language, algorithm, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM" />
+  <link rel="shortcut icon" href="/misc/favicon.ico" type="image/x-icon" />
+  <script src="https://apis.google.com/js/platform.js" async="" defer="" gapi_processed="true"></script>
+  <script src="/sites/all/themes/abessive/js/contest-problem.js?v=fix_js"></script>
+  <link rel="stylesheet" href="/sites/all/themes/abessive/css/contest-problem.css?v=5">
+</head>
+
+<body class="sidebar-right">
+  <div id="ember-root">
+
+    <script type="text/x-handlebars" id="application">
+      <section class="topbar">
+        <div class="row">
+          <div class="small-12 columns">
+            <ul class="inline-list right social-login">
+              {{#if loading}}
+              <img style="position: relative;top: -64px; right: 100px;" src="/Contests/images/Loader-Username.gif"/>
+              {{else}}
+              {{#if username}}
+              <li class="loggedin-user no-select">
+
+                <span class="left">
+                  {{{userImage}}}
+                </span>
+
+                <span class="right">
+                  Hello <a>{{{htmlHandle}}}<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                  <ul class="user-dropdown">
+                    <span class="caret"></span>
+                    <li>{{{userProfileURL}}}</li>
+                    <li>{{{userEditProfileURL}}}</li>
+                    <li><a href="https://goodies.codechef.com/my-laddus/">My Laddus</a></li>
+                    <li><a href="/todos">My Todos</a></li>
+                    <li><a href="/sets">My Sets</a></li>
+                    <li><a href="/certificates">My Certificates</a></li>
+                    {{#if isUserTeam}} {{else}}
+                    <li>{{{myTeamsURL}}}</li>
+                    <li><a href="/teams/invites">Team Invites</a></li>
+                    {{/if}}
+                    <li><a href="/referral">Referrals</a></li>
+                  </ul>
+                </span>
+              </li>
+              <li class="todo-section notification-box-todo" title="My Todo List">
+                <i></i>
+                <span class="notification-counter">10</span>
+                <span class="notification-listbox"></span>
+              </li>
+
+              {{else}}
+
+              <div id="user-bar">
+                <form {{bind-attr action=loginActionURL }} accept-charset="UTF-8" method="post" id="new-login-form">
+                  <div>
+                    <div class="form-item" id="edit-name-wrapper">
+                      <label for="edit-name">Username: <span class="form-required" title="This field is required.">*</span></label>
+                      <input maxlength="60" name="name" id="edit-name" size="60" value="" class="form-text required new-input" placeholder="Username" tabindex="1" type="text">
+                    </div>
+                    <div class="form-item" id="edit-pass-wrapper">
+                      <label for="edit-pass">Password: <span class="form-required" title="This field is required.">*</span></label>
+                      <input name="pass" id="edit-pass" maxlength="128" size="60" class="form-text required new-input" placeholder="Password" tabindex="2" type="password">
+                    </div>
+                    <a href="/user/password" tabindex="4">Forgot Password</a>
+                    <input name="form_build_id" id="form-vPQU4c4cYe6482C2tQm1QL2K36YeNildVLh2ZwJfDrM" value="form-vPQU4c4cYe6482C2tQm1QL2K36YeNildVLh2ZwJfDrM" type="hidden">
+                    <input name="form_id" id="edit-new-login-form" value="new_login_form" type="hidden">
+                    <input name="op" id="edit-submit" value="Login" class="form-submit btn new-input-button" tabindex="3" type="submit">
+                  </div>
+                </form>
+              </div>
+              <!--#user-bar-->
+
+              {{/if}}
+
+              <div id="facebook-login">
+                <div id="oauth-buttons" class="oauth-buttons-header">
+                  {{{oauthButtons}}}
+                </div>
+              </div>
+              <!--#facebook-login-->
+
+              {{#if username}}
+              <a href="/logout" class="button grey logout-link">Logout</a>
+              {{else}}
+              <div class="signup"><a href="/signup" class="new-input-button btn">New User</a></div>
+              {{/if}}
+              {{/if}}
+            </ul>
+            <div id="custom-login"></div>
+          </div>
+        </div>
+      </section>
+      <!--.topbar-->
+
+      <header class="site">
+        <div class="row">
+          <div class="small-12 columns">
+            <h1 class="left">
+              <a href="/" title=""><img src="/sites/all/themes/abessive/logo.png" alt="CodeChef is a non-commercial competitive programming community" id="logo"><span></span></a>
+            </h1>
+            <nav class="right">
+              <div id="block-nice_menus-1" class="block block-nice_menus block-header">
+                <div class="content">
+                  <h2><span class="nice-menu-hide-title">Site Navigation</span></h2>
+                  {{#if menu}} {{{menu}}} {{/if}}
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!--.site header-->
+      {{outlet}}
+    </script>
+    <!--#application handlebars template-->
+
+    <script type="text/x-handlebars" id="recentActivityRow">
+      <td class="date">
+        <div {{bind-attr title=submission_date}}>{{{unbound submission_date_lb}}}</div>
+      </td>
+      <td class="user-handle">
+        <div>{{{unbound handle}}}</div>
+      </td>
+      <td class="problem-code">
+        <div>{{{unbound code}}}</div>
+      </td>
+      <td class="result-code">
+        <div>{{{result_code}}}</div>
+      </td>
+      <td class="language">
+        <div {{bind-attr title=language }}>{{unbound language_short}}</div>
+      </td>
+    </script>
+    <!--#recentActivityRow handlebars template-->
+
+    <script type="text/x-handlebars" id="contestPageRow">
+      <td class="cc-problem-name">
+        <div><span>{{#link-to 'contestProblemPage' meta class=color title=name }}{{unbound name}}{{/link-to}} {{{mark}}}</span> {{{todo_widget}}}</div>
+      </td>
+      <td>
+        {{#if allow_submission}}
+        <div><a {{bind-attr href=submit_link }}>{{unbound code}}</a></div>
+        {{else}}
+        <div>{{unbound code}}</div>
+        {{/if}}
+      </td>
+      <td class="num">
+        <div>{{{unbound score}}}</div>
+      </td>
+      <td class="num">
+        <div><a {{bind-attr href=status_link }}>{{unbound accuracy}}</a></div>
+      </td>
+    </script>
+    <!--#contestPageRow handlebars template-->
+
+    <script type="text/x-handlebars" id="singleRow">
+      <td>
+        <div>{{{data}}}</div>
+      </td>
+    </script>
+    <!--#singleRow handlebars template-->
+
+    <script type="text/x-handlebars" id="contestPage">
+      <main class="contest-container content">
+        {{#if loading}}
+        <img src="/Contests/images/Loader-content.gif"> {{else}}
+        <div>
+          <aside class="breadcrumbs">
+            {{{breadcrumbs}}}
+          </aside>
+        </div>
+        <section class="content-area small-8 columns pl0">
+
+          <div class="banner plr10">
+            <img {{bind-attr src="banner"}}>
+          </div>
+
+          {{#if refreshTimeMessage}}
+          <div class="row">
+            <div class="large-12 columns">
+              <div class="time-zone">
+                <span id="timezone_on">{{refreshTimeMessage}}</span>
+              </div>
+            </div>
+          </div>
+          {{/if}}
+
+          <div class="plr10">
+            <div class="problem-table" id="problems-list">
+              {{data-table table=this linkRouter='contestPage'}}
+            </div><!--.problem-table-->
+          </div>
+
+          <div class="social-share row" {{bind-attr class="contestURL:cc-visible:cc-hidden" }}>
+            <div class="large-12 columns">
+              <strong>Liked the Contest? Hit Like Button below</strong>
+              <ul class="inline-list">
+                <li>
+                  <span class="fb-like" data-width="370px" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" {{bind-attr data-href=contestURL}}></span>
+                </li>
+                <li class="right">
+                  <span style="width: 80px; height: 20px;margin-top: -2px;">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="codechef" {{bind-attr data-text=tweetText}}>Tweet</a>
+                  </span>
+                </li>
+                <div class="clearfix"></div>
+              </ul>
+            </div>
+          </div><!--.social-share-->
+
+          <div id="announcements" {{bind-attr class=":cc-text-block :static-datatable :announcements:cc-visible:cc-hidden" }}>
+            <h3>Announcements</h3>
+            <div class="row">
+              <div class="large-12 columns">
+                <div class="content">{{{data.announcements}}}</div>
+              </div>
+            </div>
+          </div><!--#announcements-->
+
+          {{#if data.stats}}
+          <div id="stats" {{bind-attr class=":cc-text-block :static-datatable :stats:cc-visible:cc-hidden" }}>
+            <h3>Stats</h3>
+            <div class="row">
+              <div class="large-12 columns">
+                <div class="content">{{{data.stats}}}</div>
+              </div>
+            </div>
+          </div><!--#stats-->
+          {{/if}}
+
+          <div id="rules" {{bind-attr class=":cc-text-block :static-datatable :rules:cc-visible:cc-hidden" }}>
+            <h3>Contest Details</h3>
+            <div class="row">
+              <div class="large-12 columns">
+                <div class="content">{{{data.rules}}}</div>
+              </div>
+            </div>
+          </div><!--#rules-->
+
+        </section>
+        <!--.content-area-->
+
+        <aside class="sidebar small-4 columns pr0">
+          <div id="timer" {{bind-attr class=":widget :pl0 :pr0 :seperate timeElapsed:cc-visible:cc-hidden" }}>
+            {{{timeElapsed}}}
+            <div id="contest-ended"></div>
+          </div>
+
+          <div id="nid" {{bind-attr class=":widget :seperate nid:cc-visible:cc-hidden" }}>
+            <h4>Edit</h4><br>
+            <a class="button fnone blue" {{bind-attr href=nodeEditURL}}>Edit Contest</a>
+          </div>
+
+          <div id="team-contest" {{bind-attr class=":widget :seperate isTeamContest:cc-visible:cc-hidden" }}>
+            <h4>Registered Teams</h4>
+            <div>{{#if teamsCount}}
+              <a {{bind-attr href=teamsListURL}} class="text-22">
+                {{teamsCount}}
+              </a>
+              {{else}}
+              No data
+              {{/if}}
+            </div>
+          </div>
+
+          <div id="contest-reminder" {{bind-attr class=":widget :seperate isContestReminderAvailable:cc-visible:cc-hidden" }}>
+            <h4>Contest Reminder</h4>
+            <a class="button blue fnone contest-start-notification" {{bind-attr data=contestCode}}>Set Reminder for the contest</a>
+          </div>
+
+          <div id="contest-ranks" {{bind-attr class=":widget :seperate rankingsURL:cc-visible:cc-hidden" }}>
+            <h4>Contest Ranks</h4>
+            {{#if participated}}
+            <p style="font-size: 14px;"> Your Rank: {{myRank}}
+              <br/>
+              Score: {{myScore}}</p>
+            {{/if}}
+            <a target="_blank" {{bind-attr href=rankingsURL }} class="button blue fnone">Go to Contest Ranks</a>
+          </div>
+
+          <div id="recent-activity" class="box-white seperate widget text-left recent-activity">
+            <h5 {{action 'toggleRecentActivity'}} >Recent Activity
+              <button {{bind-attr class=":button :grey :toogle-button :fa recentActivityOpen:fa-minus:fa-plus"}}></button>
+            </h5>
+            <div {{bind-attr class=":content recentActivityOpen:cc-visible:cc-hidden" }}>
+              {{data-table table=recentActivityController}}
+            </div>
+          </div>
+        </aside>
+        <!--.sidebar-->
+        {{/if}}
+        <div class="clearfix"></div>
+      </main>
+      <!--.contest-container-->
+    </script>
+    <!--#contestPage handlebars template-->
+
+    <script type="text/x-handlebars" id="problemPage">
+      <main class="problem-container contest-container content" id="content-regions">
+        {{#if loading}}
+        <img src="/Contests/images/Problem-Page.gif">
+        {{else}}
+
+        <div>
+          <aside class="breadcrumbs">
+            {{{partialBreadcrumbs}}}{{#if contestCode}}{{#link-to 'contestPage' contestCode}}{{contestName}}{{/link-to}} &nbsp;»&nbsp;{{problemName}}{{/if}}
+          </aside>
+        </div>
+
+        <header>
+          <div class="row collapse">
+            <div class="large-12 columns">
+              <h1>
+                {{problemName}}
+                <span>Problem Code: <strong id="problem-code">{{problemCode}}</strong></span>
+                <i class="icon-add-todo right">
+                  {{#if isTodoWidgetAvailable}}
+                  {{{todoWidget}}}
+                  {{else}}
+                  {{#if isProblemSolved}}
+                  <img style="position: relative; top: 2px; left: 5px; height: 17px; margin-right:10px;"
+                  src="/sites/all/modules/codechef_tags/images/solved.png"
+                  border="0" title="Solved" alt="Solved">
+                  {{/if}}
+                  {{/if}}
+                </i>
+                {{#if username}}
+                {{#if isSubmitAllowed}}
+                <a class="button blue right" {{bind-attr href=problemSubmitURL }}>Submit</a>
+                {{/if}}
+                {{/if}}
+                {{#if isAdmin}}
+                <a class="button blue right" {{bind-attr href=nodeEditURL}}>Edit</a>
+                {{/if}}
+              </h1>
+              <div {{bind-attr class=":social-share :social-button-container contestProblemURL:cc-visible:cc-hidden" }}>
+                <div class="social-button">
+                  <div style="width: 80px; height: 20px;margin-top: -2px;"><a href="https://twitter.com/share" class="twitter-share-button" data-via="codechef">Tweet</a></div>
+                </div>
+                <div class="social-button">
+                  <div class="fb-like" data-width="370px" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            <!--.social-share-->
+
+            <div class="clearfix"></div>
+
+            <h2>
+              <section class="is-admin-block">
+                {{#if isAdmin}}
+                <label>{{#if showCheckbox}} {{view Ember.Checkbox checked=problemEditorialCheckbox}}
+                  Publish Problem Editorial Link</label>
+                  {{/if}}
+                  {{/if}}
+                </section>
+              </h2>
+            </div>
+          </header>
+
+          <section class="content-area small-8 columns pl0">
+            <div class="problem-statement">
+              {{#if body}}
+              {{{body}}}
+              {{#if isAdmin}}
+              {{#each problemTimesArray}}
+              <div>
+                <p><b>{{key}}</b>: {{value}}</p>
+              </div>
+              {{/each}}
+              {{/if}}
+            </div>
+            <!--.problem-statement-->
+
+            <aside class="problem-info">
+              {{#if author}}
+              <p>
+                <label>Author:</label>
+                <span><a {{bind-attr href=problemAuthorURL}}>{{{author_html_handle}}}</a></span>
+              </p>
+              {{/if}} {{#if tester}}
+              <p>
+                <label>Tester:</label>
+                <span><a {{bind-attr href=problemTesterURL}}>{{{tester_html_handle}}}</a></span>
+              </p>
+              {{/if}} {{#if editorialURL}}
+              <p>
+                <label>Editorial:</label>
+                <span><a {{bind-attr href=editorialURL}}>{{editorialURL}}</a></span>
+              </p>
+              {{/if}} {{#if tags}}
+              <p>
+                <label>Tags:</label>
+                <span>{{{tags}}}</span>
+              </p>
+              {{/if}} {{#if dateAdded}}
+              <p>
+                <label>Date Added:</label>
+                <span>{{dateAdded}}</span>
+              </p>
+              {{/if}}
+              <p>
+                <label>Time Limit:</label>
+                <span>{{maxTimeLimit}} secs</span>
+              </p>
+              <p>
+                <label>Source Limit:</label>
+                <span>{{sourceSizeLimit}} Bytes</span>
+              </p>
+              <p>
+                <label>Languages:</label>
+                <span>{{languagesSupported}}</span>
+              </p>
+            </aside>
+            <!--.problem-info-->
+
+            <div class="text-center">
+              <input type="hidden" {{bind-attr value=isSubmitAllowed}}/>
+              {{#if username}}
+              {{#if isSubmitAllowed}}
+              <a class="button blue" {{bind-attr href=problemSubmitURL }} style="padding:0.4rem 1.5rem 0.425rem;">Submit</a>
+              {{/if}}
+              {{/if}}
+              {{else}}
+              <div>Please click <a {{action 'reloadProblem' true}}>here</a> to reload. If problem persists, please report to bugs@codechef.com</div>
+              {{/if}}
+            </div>
+
+          </section>
+          <!--.content-area-->
+
+          <aside class="sidebar small-4 columns pr0">
+           <div class="button-submissions">
+            {{#if username}}
+            <a class="button grey" {{bind-attr href=mySubmissionsURL}}>My Submissions</a>
+            <a class="button grey" {{bind-attr href=allSubmissionsURL}}>All Submissions</a>
+            {{else}}
+            <a class="button grey full-width-1" {{bind-attr href=allSubmissionsURL}}>All Submissions</a>
+            {{/if}}
+          </div>
+
+          <div class="successful-submissions widget pb0">
+            <div>
+              <h5 {{action 'toggleSuccessfulSubmissions'}} > Successful Submissions
+                <button {{bind-attr class=":button :grey :toogle-button :fa successfulSubmissionsOpen:fa-minus:fa-plus"}}></button>
+              </h5>
+            </div>
+            <div class="content table-component">
+              <div id="rankContentDiv"></div>
+            </div>
+          </div>
+        </aside>
+        <!--.sidebar-->
+
+        <section class="comments" id="problem-comments">
+          <div class="row collapse">
+            <div class="large-12 columns">
+              {{#if commentsURL}} {{ember-comment currentURL=commentsURL}} {{/if}}
+            </div>
+          </div>
+        </section>
+        <!--.comments-->
+
+        {{/if}}
+      </main>
+      <!--.problem-container-->
+    </script>
+    <!--#problemPage handlebars template-->
+  </div>
+
+  <footer class="site">
+    <div id="block-block-13" class="block block-block block-header">
+      <div class="content">
+        <script type="text/javascript">
+          String.prototype.capitalize = function() {
+            return this.charAt(0).toUpperCase() + this.slice(1);
+          };
+
+          disconnectOauth = function(event, account) {
+            if (event != undefined) {
+              event.preventDefault();
+            }
+            var r = confirm("Are you sure you want to disconnect " + account.capitalize() + " account?");
+            if (r == true) {
+              clearUserCache();
+              $.ajax({
+                url: '/OAuth/' + account,
+                type: 'DELETE',
+                success: function() {
+                  window.location.reload();
+                },
+                error: function() {
+                  invokeGenericModal({
+                    message: "Couldn't complete your request. Please try again.",
+                    id: account + '-error-message'
+                  });
+                }
+              });
+            }
+          };
+        </script>
+
+        <script language="javascript" type="text/javascript">
+          function formatTime(ts) {
+            now = new Date(ts);
+
+            localtime = new Date();
+            hour = now.getHours();
+            min = now.getMinutes();
+            sec = now.getSeconds();
+
+            if (min <= 9) {
+              min = "0" + min;
+            }
+            if (sec <= 9) {
+              sec = "0" + sec;
+            }
+            if (hour > 12) {
+              hour = hour - 12;
+              add = " PM";
+            } else {
+              hour = hour;
+              add = " AM";
+            }
+            if (hour == 12) {
+              add = " PM";
+            }
+            if (hour == 00) {
+              hour = "12";
+            }
+
+            $('#server-time').html(((hour <= 9) ? "0" + hour : hour) + ":" + min + ":" + sec + add);
+
+            nextSec = (now.getTime() + 1000);
+
+            setTimeout("formatTime(" + nextSec + ")", 1000);
+          }
+
+          function getDtTimeZone() {
+            var rightNow = new Date();
+            var toDay = new Date(rightNow.getFullYear(), 0, 1, 0, 0, 0, 0);
+            var temp = toDay.toGMTString();
+            var date2 = new Date(temp.substring(0, temp.lastIndexOf(" ") - 1));
+            var stdTime = (toDay - date2) / (1000 * 60 * 60);
+            return stdTime;
+          }
+        </script>
+
+        <div class="row">
+          <div class="small-12 columns">
+            <p class="text-center"><u>CodeChef is a non-commercial competitive programming community</u></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-8 columns">
+            <ul class="inline-list">
+              <li><a href="http://www.codechef.com/aboutus/">About CodeChef</a></li>
+              <li><a target="_blank" href="http://www.directi.com/">About Directi</a></li>
+              <li><a href="http://www.codechef.com/ceoscorner/">CEO's Corner</a></li>
+              <li><a href="http://www.codechef.com/c-programming">C-Programming</a></li>
+              <li><a href="http://www.codechef.com/Programming-Languages">Programming Languages</a></li>
+              <li><a href="http://www.codechef.com/contactus">Contact Us</a></li>
+            </ul>
+            <p>© 2009 <a href="http://directi.com" target="_blank">Directi Group</a>. All Rights Reserved. CodeChef uses SPOJ © by <a href="http://www.sphere-research.com" target="_blank">Sphere Research Labs</a><br>In order to report copyright violations of any kind, send in an email to <a href="mailto:copyright@codechef.com">copyright@codechef.com</a></p>
+          </div>
+
+          <div class="small-4 columns text-right sponsor">
+            <a href="http://directi.com" target="_blank">
+              <img style="width:120px" alt="CodeChef a product of Directi" src="/sites/all/themes/abessive/images/directi-logo.png">
+            </a>
+            <div>
+              The time now is: <span id="server-time"></span>
+              
+            </div>
+            <div>
+              <span>Your IP: <span id="client-ip"></span></span>
+            </div>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-53602-42']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+
+        <!-- Google Code for Visitors that do not sign-up Remarketing List -->
+        <script type="text/javascript">
+          /* <![CDATA[ */
+          var google_conversion_id = 960072479;
+          var google_custom_params = window.google_tag_params;
+          var google_remarketing_only = true;
+          /* ]]> */
+        </script>
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+          <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/960072479/?guid=ON&amp;script=0"/>
+          </div>
+        </noscript>
+        <!-- Google Code for .tech domain -->
+
+        <!-- Start Alexa Certify Javascript -->
+
+        <script type="text/javascript">
+          _atrk_opts = {
+            atrk_acct: "q16Cj1a8gN00iz",
+            domain: "codechef.com",
+            dynamic: true
+          };
+          (function() {
+            var as = document.createElement('script');
+            as.type = 'text/javascript';
+            as.async = true;
+            as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js";
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(as, s);
+          })();
+        </script>
+
+        <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=q16Cj1a8gN00iz" style="display:none" height="1" width="1" alt="" /></noscript>
+        <!-- End Alexa Certify Javascript -->
+
+        <div class="row">
+          <div class="small-12 columns">
+            <article>
+              <h6><a href="http://www.codechef.com">CodeChef</a> - A Platform for Aspiring Programmers</h6>
+              <p>CodeChef was created as a platform to help programmers make it big in the world of algorithms, <strong>computer programming</strong> and <strong>programming contests</strong>. At CodeChef we work hard to revive the geek in you by hosting a <strong>programming contest</strong> at the start of the month and another smaller programming challenge in the middle of the month. We also aim to have training sessions and discussions related to <strong>algorithms</strong>, <strong>binary search</strong>, technicalities like <strong>array size</strong> and the likes. Apart from providing a platform for <strong>programming competitions</strong>, CodeChef also has various algorithm tutorials and forum discussions to help those who are new to the world of <strong>computer programming</strong>.</p>
+            </article>
+
+            <article>
+              <h6><a href="https://www.codechef.com/problems/easy">Practice Section</a> - A Place to hone your 'Computer Programming Skills'</h6>
+              <p>Try your hand at one of our many practice problems and submit your solution in a language of your choice. Our <strong>programming contest</strong> judge accepts solutions in over 35+ programming languages. Preparing for coding contests were never this much fun! Receive points, and move up through the CodeChef ranks. Use our practice section to better prepare yourself for the multiple <strong>programming challenges</strong> that take place through-out the month on CodeChef.</p>
+            </article>
+
+            <article>
+              <h6><a href="https://www.codechef.com/problems/easy">Compete</a> - Monthly Programming Contests and Cook-offs</h6>
+              <p>Here is where you can show off your <strong>computer programming skills</strong>. Take part in our 10 day long monthly coding contest and the shorter format Cook-off <strong>coding contest</strong>. Put yourself up for recognition and win great prizes. Our <strong>programming contests</strong> have prizes worth up to INR 20,000 (for Indian Community), $700 (for Global Community) and lots more CodeChef goodies up for grabs.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="link-group left">
+              <h6>Programming Tools</h6>
+              <ul class="side-nav">
+                <li><a href="https://www.codechef.com/ide">Online IDE</a></li>
+                <li><a href="http://www.codechef.com/contests#FurtureContests">Upcoming Coding Contests</a></li>
+                <li><a href="http://www.codechef.com/hostyourcontest">Contest Hosting</a></li>
+                <li><a href="http://www.codechef.com/problemsetting">Problem Setting</a></li>
+                <li><a href="http://www.codechef.com/wiki/tutorials">CodeChef Tutorials</a></li>
+                <li><a href="https://www.codechef.com/wiki">CodeChef Wiki</a></li>
+              </ul>
+            </div>
+
+            <div class="link-group left">
+              <h6>Practice Problems</h6>
+              <ul class="side-nav">
+                <li><a href="https://www.codechef.com/problems/easy">Easy</a></li>
+                <li><a href="https://www.codechef.com/problems/medium">Medium</a></li>
+                <li><a href="https://www.codechef.com/problems/Hard">Hard</a></li>
+                <li><a href="https://www.codechef.com/problems/challenge">Challenge</a></li>
+                <li><a href="https://www.codechef.com/problems/extcontest">Peer</a></li>
+                <li><a href="https://www.codechef.com/problems/school">School</a></li>
+                <li><a href="https://www.codechef.com/wiki/faq">FAQ's</a></li>
+              </ul>
+            </div>
+
+            <div class="link-group left">
+              <h6>Initiatives</h6>
+              <ul class="side-nav">
+                <li><a href="http://www.codechef.com/goforgold">Go for Gold</a></li>
+                <li><a href="http://www.codechef.com/school">CodeChef for Schools</a></li>
+                <li><a href="http://www.codechef.com/campus_chapter/about">Campus Chapters</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>        </div>
+      </div>
+      <div id="block-block-51" class="block block-block block-header">
+        <div class="content">
+          <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>  </div>
+        </div>
+        <div class="row powered-by">
+          <div class="small-12 columns">
+            <p><a href="http://www.bigrock.in/">Domain Registration in India</a> and <a href="http://www.bigrock.com/web-hosting/">Web Hosting</a> powered by BigRock</p>
+          </div>
+        </div>
+      </footer>
+
+      <script>
+        var sscache = {};
+
+        function getPage(url, data, page) {
+          var cacheId = url + JSON.stringify(data);
+          var cache = sscache;
+          var success = function(data) {
+            cache[cacheId] = data;
+            $('#rankContentDiv').html(data['content']);
+            var newpage = page === undefined ? 1 : (parseInt(page) + 1);
+            var pageinfo = "<div align='center' class='pageinfo'> - </div>";
+            if (data['max_page'] > 0) {
+              pageinfo = "<div align='center' class='pageinfo'>" + newpage + " of " + data['max_page'] + "</div>";
+            }
+            $("#loader").html(pageinfo);
+
+          };
+
+          var error = function(request, errorType) {
+            try {
+              if (page === undefined) {
+                retryButton = '<input id="retryButton" type="button" value="Retry"/>';
+                $('#rankContentDiv').html(retryButton);
+                $('#retryButton').click(function() {
+                  $('#rankContentDiv').html('<p align="center"><img src="/sites/all/themes/abessive/images/ajax-loader.gif" /> Fetching content</p>');
+                  getPage(url, data, page);
+                });
+              } else {
+                $("#loader").html("Oops! It couldn't load. Try again.");
+              }
+            } catch (e) {}
+          };
+
+          if (cache.hasOwnProperty(cacheId)) {
+            success(cache[cacheId]);
+            return;
+          }
+
+          cAjax({
+            url: url,
+            type: "GET",
+            data: data,
+            cache: false,
+            timeout: 10000,
+            dataType: "json",
+            success: success,
+            error: error
+          });
+
+        }
+
+
+        function set_page(element) {
+          var page;
+
+          if (element == "prev")
+            page = $("#prev_p").val();
+          else if (element == "next")
+            page = $("#next_p").val();
+
+          return page;
+        }
+
+        function onload_getpage_ssubmissions(element) {
+          $('#loader').html('<p><img src="/misc/ajax_loader_d.gif" style="width: 120px; height:15px;"/></p>');
+          var contest = "";
+          if ($("#ccode").length != 0) {
+            contest = '&ccode=' + $("#ccode").val();
+          }
+
+          var page = set_page(element);
+          var data = "page=" + page + "&pcode=" + $("#pcode").val() + contest;
+          var url = "/ssubmission/prob";
+          getPage(url, data, page);
+        }
+      </script>
+
+      <script>
+        (function(h, o, t, j, a, r) {
+          h.hj = h.hj || function() {
+            (h.hj.q = h.hj.q || []).push(arguments)
+          };
+          h._hjSettings = {
+            hjid: 167687,
+            hjsv: 5
+          };
+          a = o.getElementsByTagName('head')[0];
+          r = o.createElement('script');
+          r.async = 1;
+          r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+          a.appendChild(r);
+        })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+      </script>
+
+    </body>
+    </html>

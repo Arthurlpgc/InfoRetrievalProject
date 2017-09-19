@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>User kobortor - DMOJ: Modern Online Judge
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="DMOJ,Canadian,Don Mills,DMCI,online judge,programming,code,contest,CCC,CCC Solutions,CCC 2015,IOI,JOI,COCI,DMOPC,Canada,Ontario,Toronto,grade,interactive">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#FFBB33">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+<meta name="theme-color" content="#FFBB33">
+<meta property="og:title" content="User kobortor - DMOJ: Modern Online Judge">
+<meta property="og:site_name" content="DMOJ: Modern Online Judge">
+<meta property="og:url" content="https://dmoj.ca/user/kobortor"><!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script>window.bad_browser = true</script>
+<![endif]-->
+<link rel="stylesheet" href="//dmoj.ml/static/cache/css/c8b3f96d55e0.css" type="text/css" />
+<link rel="canonical" href="https://dmoj.ca/user/kobortor">
+<style>a.edit-profile {
+    float: right;
+    padding-top: 1em;
+}
+
+.user-problem-group h3 {
+    font-weight: bold;
+    font-size: 1.25em;
+    margin-bottom: -10px;
+    max-height: 20%;
+    line-height: 2.5em;
+}
+
+.user-problem-group ul {
+    -webkit-columns: 300px 4;
+    -moz-columns: 300px 4;
+    columns: 300px 4;
+    list-style-type: none;
+    margin-top: 0;
+    margin-left: -20px;
+    margin-bottom: 0;
+}
+
+.user-problem-group a img {
+    max-width: 1em;
+    margin-right: 3px;
+    padding-bottom: 1px;
+    vertical-align: middle;
+}
+
+.user-info-cell {
+    padding-left: 15px;
+    border-left: 1px solid #CCC;
+}
+
+.contest-history-cell {
+    border-left: 1px solid #CCC;
+    padding: 0 0.5em;
+}
+
+table td {
+    margin: 0;
+    vertical-align: top;
+}
+
+.strike {
+    text-align: right;
+    overflow: hidden;
+}
+
+.strike > span {
+    position: relative;
+    display: inline-block;
+}
+
+.strike > span:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100000px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.2);
+    right: 100%;
+    margin-right: 5px;
+}
+
+#rating-chart {
+    height: 400px;
+    margin-top: 1em;
+}
+
+#rating-tooltip {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, .7);
+    color: white;
+    padding: 3px;
+    border-radius: 3px;
+    -webkit-transition: all .1s ease;
+    transition: all .1s ease;
+    pointer-events: none;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+#rating-tooltip.rate-group {
+    color:white;
+}
+</style>
+<style>.user-gravatar {
+    display: block;
+    padding-right: 15px;
+    width: 135px;
+}
+
+.user-gravatar img {    
+    width: 135px;
+    height: 135px;
+    display: block;
+    border-radius: 6px;
+}
+
+.page-title {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+.user-content {
+    width: 100%;
+}
+</style><script type="text/javascript" src="//dmoj.ml/static/cache/js/90b83b3c98b1.js"></script>
+<script type="text/javascript">window.user = {};</script><script>window.user && Raven.setUserContext(window.user)</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56757436-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<noscript>
+      <style>#content {
+    margin: 80px auto auto;
+}
+
+#navigation {
+    top: 27px;
+}
+      </style>
+    </noscript>
+</head>
+<body>
+<nav id="navigation" class="unselectable">
+<div id="nav-container"><a id="navicon" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+<ul id="nav-list">
+<li class="home-nav-element"><a href="/"><img src="//dmoj.ml/static/icons/logo.d0dbdf0b98be.svg" alt="DMOJ" width="160" height="44" onerror="this.src=&quot;//dmoj.ml/static/icons/logo.2f426bc39826.png&quot;; this.onerror=null" style="border: none" /></a>
+</li>
+
+<li class="home-nav-element"><span style="width: 1px; vertical-align: middle; padding-left: 3px; display: inline-block; height: 32px; margin-right: 1px; border-right: 3px solid rgba(255, 255, 255, 0.15);"></span>
+</li>
+<li class="home-menu-item"><a href="/" class="nav-home">Home</a>
+</li>
+<li><a href="/problems/" class="nav-problem">Problems
+</a>
+</li>
+<li><a href="/submissions/" class="nav-submit">Submissions
+</a>
+</li>
+<li><a href="/users/" class="nav-user active">Users
+</a>
+</li>
+<li><a href="/contests/" class="nav-contest">Contests
+</a>
+</li>
+<li><a href="/about/" class="nav-about">About
+<div href="javascript:void(0)" class="nav-expand">></div></a>
+<ul>
+<li><a href="/status/" class="nav-status">Status
+</a>
+</li>
+<li><a href="/runtimes/" class="nav-runtimes">Runtimes
+</a>
+</li>
+<li><a href="/tips/" class="nav-tips">Tips
+</a>
+</li>
+<li><a href="/api/" class="nav-api">API
+</a>
+</li>
+<li><a href="https://github.com/DMOJ" class="nav-github">Github
+</a>
+</li></ul>
+</li>
+</ul><span id="user-links"><span class="anon"><a href="/accounts/login/?next=/user/kobortor"><b>Login</b></a>&nbsp;|&nbsp;<a href="/accounts/register/">Register</a></span></span>
+</div>
+<div id="nav-shadow"></div>
+</nav>
+<div id="page-container">
+<noscript>
+        <div id="noscript">This site works best with JavaScript enabled.
+        </div>
+      </noscript><br>
+<article id="content">
+<div class="page-title">
+<div style="margin: 0px 0px 8px;padding:0px;width:100%" class="tabs">
+<h2 style="color:#393630; display: inline-block">User kobortor</h2><span class="spacer"></span>
+<ul>
+<li class="active"><a href="/user/kobortor">About</a>
+</li>
+<li class=""><a href="/user/kobortor/solved">Problems</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content-body">
+<table>
+<tr>
+<td style="padding-left:1em">
+<div class="user-gravatar"><img src="//www.gravatar.com/avatar/69d89c3331a05ed90b0523de4d8d6d84?s=135&d=identicon" alt="gravatar" width="135px" height="135px" />
+</div><br />
+<b>744 problems solved</b><br /><b class="semibold">Rank by points:</b> #6<br /><b class="semibold">Total points:</b><span title="708.12"> 708</span><br /><br /><a href="/submissions/user/kobortor/">View submissions</a><br /><br /><b>37 contests written</b><br /><b class="semibold">Rank by rating:</b> #13<br /><b class="semibold">Rating:</b> <span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.885em"></span></span><span class="rating rate-master">2154</span></span><br /><b class="semibold">Volatility:</b> 5<br /><b class="semibold">Min. rating:</b> <span class="rate-group"><span class="rate-box rate-newbie"><span style="height: 0.855em"></span></span><span class="rating rate-newbie">855</span></span><br /><b class="semibold">Max rating:</b> <span class="rate-group"><span class="rate-box rate-master"><span style="height: 0.943em"></span></span><span class="rating rate-master">2177</span></span><br />
+</td>
+<td class="user-content">
+<div class="content-description">
+<p style="margin-top: 0px;"><b>From</b> <a href="/organization/OS">Olympiads School</a>
+</p>
+<h4>About</h4><p>profile linking: <a class="rate-group" href="/user/kobortor"><span class="rating rate-master">kobortor</span></a></p>
+<h4>Rating History</h4>
+<div id="rating-chart">
+<canvas></canvas>
+</div>
+<div id="rating-tooltip">
+<div class="contest"></div>
+<div class="date"></div>
+<div class="rate-group"><span class="rate-box"><span></span></span><span class="rating"></span>, #<span class="rank"></span>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</article>
+<script type="text/javascript" src="//dmoj.ml/static/libs/chart.js/Chart.Core.1ad08489ca9a.js"></script>
+<script type="text/javascript" src="//dmoj.ml/static/libs/chart.js/Chart.Scatter.f543ebcd2fe0.js"></script>
+<script type="text/javascript">var rating_history = [{"rating": 2154, "link": "/contest/bts17/ranking/", "ranking": 11, "date": "Sep 11, 2017, 3:59", "timestamp": 1505102399000.0, "height": "0.885em", "class": "rate-master", "label": "Back to School '17"}, {"rating": 2169, "link": "/contest/tle16c8/ranking/", "ranking": 6, "date": "Apr 21, 2017, 3:00", "timestamp": 1492743600000.0, "height": "0.922em", "class": "rate-master", "label": "TLE '16 April Contest"}, {"rating": 2177, "link": "/contest/tle16c7/ranking/", "ranking": 2, "date": "Mar 24, 2017, 3:00", "timestamp": 1490324400000.0, "height": "0.943em", "class": "rate-master", "label": "TLE '16 March Contest"}, {"rating": 2113, "link": "/contest/tle16c6s/ranking/", "ranking": 4, "date": "Feb 21, 2017, 4:59", "timestamp": 1487653199000.0, "height": "0.782em", "class": "rate-master", "label": "TLE '16 February Contest (Mock CCC) Senior Division"}, {"rating": 2079, "link": "/contest/dmopc16c4/ranking/", "ranking": 7, "date": "Feb 15, 2017, 17:00", "timestamp": 1487178000000.0, "height": "0.698em", "class": "rate-master", "label": "DMOPC '16 February Contest - Mascot Edition"}, {"rating": 2076, "link": "/contest/tle16c5/ranking/", "ranking": 9, "date": "Jan 20, 2017, 4:00", "timestamp": 1484884800000.0, "height": "0.690em", "class": "rate-master", "label": "TLE '16 January Contest"}, {"rating": 2128, "link": "/contest/tle16c4/ranking/", "ranking": 6, "date": "Dec 25, 2016, 4:00", "timestamp": 1482638400000.0, "height": "0.820em", "class": "rate-master", "label": "TLE '16 December Contest"}, {"rating": 2144, "link": "/contest/dmopc16c3/ranking/", "ranking": 10, "date": "Dec 14, 2016, 17:00", "timestamp": 1481734800000.0, "height": "0.860em", "class": "rate-master", "label": "DMOPC '16 December Contest"}, {"rating": 2131, "link": "/contest/dmopc16c2/ranking/", "ranking": 3, "date": "Nov 9, 2016, 3:59", "timestamp": 1478663999000.0, "height": "0.828em", "class": "rate-master", "label": "DMOPC '16 November Contest"}, {"rating": 2069, "link": "/contest/tle16c2/ranking/", "ranking": 6, "date": "Oct 21, 2016, 3:00", "timestamp": 1477018800000.0, "height": "0.672em", "class": "rate-master", "label": "TLE '16 October Contest"}, {"rating": 2053, "link": "/contest/dmopc16c1/ranking/", "ranking": 9, "date": "Oct 12, 2016, 4:00", "timestamp": 1476244800000.0, "height": "0.632em", "class": "rate-master", "label": "DMOPC '16 October Contest"}, {"rating": 2004, "link": "/contest/tle16c1/ranking/", "ranking": 1, "date": "Sep 22, 2016, 3:00", "timestamp": 1474513200000.0, "height": "0.510em", "class": "rate-master", "label": "TLE '16 September Contest"}, {"rating": 1889, "link": "/contest/bts16/ranking/", "ranking": 12, "date": "Sep 19, 2016, 4:00", "timestamp": 1474257600000.0, "height": "0.223em", "class": "rate-master", "label": "Back to School '16"}, {"rating": 1926, "link": "/contest/dmopc15c7/ranking/", "ranking": 6, "date": "Apr 13, 2016, 4:00", "timestamp": 1460520000000.0, "height": "0.315em", "class": "rate-master", "label": "DMOPC '15 April Contest"}, {"rating": 1875, "link": "/contest/tle15/ranking/", "ranking": 13, "date": "Mar 15, 2016, 4:00", "timestamp": 1458014400000.0, "height": "0.188em", "class": "rate-master", "label": "TLE 2015-16"}, {"rating": 1875, "link": "/contest/dmopc15c6/ranking/", "ranking": 3, "date": "Mar 2, 2016, 2:00", "timestamp": 1456884000000.0, "height": "0.188em", "class": "rate-master", "label": "DMOPC '15 March Contest"}, {"rating": 1760, "link": "/contest/dmopc15c5/ranking/", "ranking": 9, "date": "Feb 10, 2016, 2:00", "timestamp": 1455069600000.0, "height": "0.867em", "class": "rate-candidate-master", "label": "DMOPC '15 February Contest"}, {"rating": 1706, "link": "/contest/dmopc15c4/ranking/", "ranking": 15, "date": "Jan 13, 2016, 2:00", "timestamp": 1452650400000.0, "height": "0.687em", "class": "rate-candidate-master", "label": "DMOPC '15 January Contest"}, {"rating": 1658, "link": "/contest/year2016/ranking/", "ranking": 43, "date": "Jan 3, 2016, 17:00", "timestamp": 1451840400000.0, "height": "0.527em", "class": "rate-candidate-master", "label": "New Year's 2016"}, {"rating": 1694, "link": "/contest/dmopc15c2/ranking/", "ranking": 7, "date": "Nov 11, 2015, 2:00", "timestamp": 1447207200000.0, "height": "0.647em", "class": "rate-candidate-master", "label": "DMOPC '15 November Contest"}, {"rating": 1579, "link": "/contest/dmopc15c1/ranking/", "ranking": 8, "date": "Oct 14, 2015, 1:00", "timestamp": 1444784400000.0, "height": "0.263em", "class": "rate-candidate-master", "label": "DMOPC '15 October Contest"}, {"rating": 1434, "link": "/contest/dmopc14c7/ranking/", "ranking": 18, "date": "May 5, 2015, 22:30", "timestamp": 1430865000000.0, "height": "0.780em", "class": "rate-expert", "label": "DMOPC '14 May Contest"}, {"rating": 1350, "link": "/contest/dmopc14c6/ranking/", "ranking": 51, "date": "Apr 7, 2015, 22:30", "timestamp": 1428445800000.0, "height": "0.500em", "class": "rate-expert", "label": "DMOPC '14 April Contest"}, {"rating": 1527, "link": "/contest/gfssoc2s/ranking/", "ranking": 8, "date": "Apr 2, 2015, 23:30", "timestamp": 1428017400000.0, "height": "0.090em", "class": "rate-candidate-master", "label": "Glenforest Spring Open 2015 (Senior)"}, {"rating": 1452, "link": "/contest/mmcc15/ranking/", "ranking": 12, "date": "Mar 23, 2015, 4:00", "timestamp": 1427083200000.0, "height": "0.840em", "class": "rate-expert", "label": "Mini March Coding Challenge 2015"}, {"rating": 1426, "link": "/contest/dmopc14c5/ranking/", "ranking": 15, "date": "Mar 10, 2015, 22:30", "timestamp": 1426026600000.0, "height": "0.753em", "class": "rate-expert", "label": "DMOPC '14 March Contest"}, {"rating": 1368, "link": "/contest/oldnewthing/ranking/", "ranking": 9, "date": "Mar 2, 2015, 5:00", "timestamp": 1425272400000.0, "height": "0.560em", "class": "rate-expert", "label": "The Old New Thing"}, {"rating": 1307, "link": "/contest/utsopen15/ranking/", "ranking": 28, "date": "Feb 18, 2015, 21:10", "timestamp": 1424293800000.0, "height": "0.357em", "class": "rate-expert", "label": "UTS Open"}, {"rating": 1202, "link": "/contest/mockccc15s/ranking/", "ranking": 25, "date": "Feb 13, 2015, 8:00", "timestamp": 1423814400000.0, "height": "0.007em", "class": "rate-expert", "label": "Mock CCC 2015 (Senior)"}, {"rating": 1311, "link": "/contest/mockccc15j/ranking/", "ranking": 13, "date": "Feb 13, 2015, 8:00", "timestamp": 1423814400000.0, "height": "0.370em", "class": "rate-expert", "label": "Mock CCC 2015 (Junior)"}, {"rating": 1200, "link": "/contest/dmopc14c4/ranking/", "ranking": 11, "date": "Feb 10, 2015, 23:30", "timestamp": 1423611000000.0, "height": "0.000em", "class": "rate-expert", "label": "DMOPC '14 February Contest"}, {"rating": 1040, "link": "/contest/dmopc14ce1/ranking/", "ranking": 31, "date": "Jan 14, 2015, 1:30", "timestamp": 1421199000000.0, "height": "0.200em", "class": "rate-amateur", "label": "DMOPC '14 Exam Time"}, {"rating": 1183, "link": "/contest/seed/ranking/", "ranking": 11, "date": "Jan 5, 2015, 23:00", "timestamp": 1420498800000.0, "height": "0.915em", "class": "rate-amateur", "label": "The Cosmic Era"}, {"rating": 1086, "link": "/contest/year2015/ranking/", "ranking": 12, "date": "Jan 5, 2015, 14:00", "timestamp": 1420466400000.0, "height": "0.430em", "class": "rate-amateur", "label": "New Year's 2015"}, {"rating": 965, "link": "/contest/stnbd/ranking/", "ranking": 17, "date": "Dec 29, 2014, 12:00", "timestamp": 1419854400000.0, "height": "0.965em", "class": "rate-newbie", "label": "Seirei Tsukai no Blade Dance"}, {"rating": 910, "link": "/contest/gfssoc1s/ranking/", "ranking": 28, "date": "Dec 8, 2014, 23:30", "timestamp": 1418081400000.0, "height": "0.910em", "class": "rate-newbie", "label": "Glenforest Winter Open 2014  (Senior)"}, {"rating": 855, "link": "/contest/dmopc14c2/ranking/", "ranking": 88, "date": "Nov 18, 2014, 23:30", "timestamp": 1416353400000.0, "height": "0.855em", "class": "rate-newbie", "label": "DMOPC '14 November Contest"}];
+var data_index = {};
+
+$.each(rating_history, function (index, item) {
+    data_index[item.timestamp.toString() + ',' + item.rating.toString()] = index;
+    item.x = new Date(item.timestamp);
+    item.y = item.rating;
+});
+
+$(function () {
+    var $canvas = $('#rating-chart').find('canvas');
+    var ctx = $canvas.get(0).getContext('2d');
+
+    var getItem = function(elements) {
+        return rating_history[data_index[elements[0].arg.toString() + ',' + elements[0].value.toString()]];
+    };
+
+    Chart.types.Scatter.extend({
+        name: 'RatingScatter',
+        showTooltip: function (elements) {
+            var $tooltip = $('#rating-tooltip');
+
+            this.draw();
+            if (elements.length > 0) {
+                var item = getItem(elements);
+                var offset = elements[0].tooltipPosition();
+
+                $tooltip.find('.contest').text(item.label);
+                $tooltip.find('.date').text(item.date);
+                $tooltip.find('.rate-box').attr('class', 'rate-box ' + item.class)
+                        .find('span').css('height', item.height);
+                $tooltip.find('.rating').text(item.rating).attr('class', 'rating ' + item.class);
+                $tooltip.find('.rank').text(item.ranking);
+
+                $tooltip.removeClass('above below');
+                $tooltip.addClass(offset.y < $tooltip.height() ? 'below' : 'above');
+
+                var position = $canvas.offset();
+                var container = $('#page-container').offset();
+                $tooltip.css({
+                    left: position.left - container.left + offset.x + $tooltip.width() / 2,
+                    top: position.top - container.top + offset.y - $tooltip.height() - 13,
+                    fontFamily: this.options.tooltipFontFamily,
+                    fontSize: this.options.tooltipFontSize,
+                    fontStyle: this.options.tooltipFontStyle
+                }).show();
+            } else
+                $tooltip.hide();
+
+            return this;
+        }
+    });
+
+    window.rating_chart = new Chart(ctx).RatingScatter([
+        {
+            label: 'rating',
+            strokeColor: '#A31515',
+            fillColor: '#A31515',
+            data: rating_history
+        }
+    ], {
+        bezierCurve: false,
+        showTooltips: true,
+        scaleShowHorizontalLines: true,
+        scaleShowLabels: true,
+        scaleType: 'date',
+        responsive: true,
+        maintainAspectRatio: false,
+        pointDotRadius: 6,
+        pointHitDetectionRadius: 6
+    });
+
+    $canvas.click(function(evt) {
+        var elements = window.rating_chart.getPointsAtEvent(evt);
+        if (elements.length > 0) {
+            var item = getItem(elements);
+            window.location.href = item.link;
+        }
+    });
+
+    $canvas.mousemove(function(evt) {
+        var elements = window.rating_chart.getPointsAtEvent(evt);
+        if (elements.length > 0) {
+            $canvas.css('cursor', 'pointer');
+        } else {
+            $canvas.css('cursor', '');
+        }
+    });
+});
+</script>
+<footer><span id="footer-content"><br><a style="color: rgb(128, 128, 128)" href="//github.com/DMOJ/">fork us on <span style="font-weight:bold">Github</span></a> | <a style="color: rgb(128, 128, 128);" href="//www.facebook.com/dmoj.ca">like us on <span style="font-weight: bold;">Facebook</span></a> | <a style="color: rgb(128, 128, 128)" href="https://translate.dmoj.ca/">help us <span style="font-weight: bold;">translate</span></a> | <a style="color: rgb(128, 128, 128)" href="https://dmoj.ca/tos/">terms of service</a>
+|
+<form action="/i18n/setlang/" method="post" style="display: inline"><input type='hidden' name='csrfmiddlewaretoken' value='zxgsvNci76lUbeNnOMycQJ5riKFOhlrWenaAfLepaDOhaLfiMWDEahheG8mxa5Eg' />
+<input name="next" type="hidden" value="/user/kobortor">
+<select name="language" onchange="form.submit()" style="height: 1.5em">
+<option value="de">Deutsch (de)
+</option>
+<option value="en" selected="">English (en)
+</option>
+<option value="fr">français (fr)
+</option>
+<option value="ro">Română (ro)
+</option>
+<option value="ru">Русский (ru)
+</option>
+<option value="sr-latn">srpski (latinica) (sr-latn)
+</option>
+<option value="vi">Tiếng Việt (vi)
+</option>
+<option value="zh-hans">简体中文 (zh-hans)
+</option>
+</select>
+</form></span>
+</footer>
+</div>
+</body>
+</html>

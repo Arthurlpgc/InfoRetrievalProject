@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bubble Cup V8 E Spectator Riots - DMOJ: Modern Online Judge
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="DMOJ,Canadian,Don Mills,DMCI,online judge,programming,code,contest,CCC,CCC Solutions,CCC 2015,IOI,JOI,COCI,DMOPC,Canada,Ontario,Toronto,grade,interactive">
+<meta name="description" content="It’s riot time on football stadium Ramacana! Raging fans have entered the field and the police find themselves in a difficult situation. The field can be represented as a square in the coordinate system defined by two diagonal vertices in \((0,0)\) and \((10^5, 10^5)\). The sides of that square are also considered to be inside the field, everything else is ...">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#FFBB33">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+<meta name="theme-color" content="#FFBB33">
+<meta property="og:title" content="Bubble Cup V8 E Spectator Riots - DMOJ: Modern Online Judge">
+<meta property="og:site_name" content="DMOJ: Modern Online Judge">
+<meta property="og:url" content="https://dmoj.ca/problem/bbc08e">
+<meta property="og:description" content="It’s riot time on football stadium Ramacana! Raging fans have entered the field and the police find themselves in a difficult situation. The field can be represented as a square in the coordinate system defined by two diagonal vertices in \((0,0)\) and \((10^5, 10^5)\). The sides of that square are also considered to be inside the field, everything else is ..."><!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script>window.bad_browser = true</script>
+<![endif]-->
+<link rel="stylesheet" href="//dmoj.ml/static/cache/css/c8b3f96d55e0.css" type="text/css" />
+<link rel="canonical" href="https://dmoj.ca/problem/bbc08e">
+<link rel="stylesheet" href="//dmoj.ml/static/cache/css/158490f673bf.css" type="text/css" media="all" />
+<style>.title-state {
+    font-size: 2em;
+    float: left;
+    width: 1.1em;
+    display: block;
+    margin-top: 0.16em;
+}
+
+.info-float a {
+    vertical-align: middle;
+}
+
+.problem-clarification {
+    border-bottom: 1px solid #ccc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.clarifications-area h2 {
+    margin-bottom: 20px;
+}
+
+.problem-clarification .body {
+    display: inline-block;
+    padding-left: 3em;
+}
+</style><script type="text/javascript" src="//dmoj.ml/static/cache/js/90b83b3c98b1.js"></script>
+<script type="text/javascript" src="//dmoj.ml/static/cache/js/0e33e8898e76.js"></script>
+<script src="//dmoj.ml/static/libs/featherlight/featherlight.min.a0e732b080f0.js" type="text/javascript"></script><script type="text/javascript" src="//dmoj.ml/static/cache/js/6fab94eb70e0.js"></script>
+<script>$(function () {
+    $('a#clone-link').click(function (event) {
+        event.preventDefault();
+        if (confirm('Are you sure you want to clone?'))
+            $(this).closest("form").submit();
+    })
+});
+</script>
+<script type="text/javascript">window.user = {};</script><script>window.user && Raven.setUserContext(window.user)</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56757436-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<noscript>
+      <style>#content {
+    margin: 80px auto auto;
+}
+
+#navigation {
+    top: 27px;
+}
+      </style>
+    </noscript>
+</head>
+<body>
+<nav id="navigation" class="unselectable">
+<div id="nav-container"><a id="navicon" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+<ul id="nav-list">
+<li class="home-nav-element"><a href="/"><img src="//dmoj.ml/static/icons/logo.d0dbdf0b98be.svg" alt="DMOJ" width="160" height="44" onerror="this.src=&quot;//dmoj.ml/static/icons/logo.2f426bc39826.png&quot;; this.onerror=null" style="border: none" /></a>
+</li>
+
+<li class="home-nav-element"><span style="width: 1px; vertical-align: middle; padding-left: 3px; display: inline-block; height: 32px; margin-right: 1px; border-right: 3px solid rgba(255, 255, 255, 0.15);"></span>
+</li>
+<li class="home-menu-item"><a href="/" class="nav-home">Home</a>
+</li>
+<li><a href="/problems/" class="nav-problem active">Problems
+</a>
+</li>
+<li><a href="/submissions/" class="nav-submit">Submissions
+</a>
+</li>
+<li><a href="/users/" class="nav-user">Users
+</a>
+</li>
+<li><a href="/contests/" class="nav-contest">Contests
+</a>
+</li>
+<li><a href="/about/" class="nav-about">About
+<div href="javascript:void(0)" class="nav-expand">></div></a>
+<ul>
+<li><a href="/status/" class="nav-status">Status
+</a>
+</li>
+<li><a href="/runtimes/" class="nav-runtimes">Runtimes
+</a>
+</li>
+<li><a href="/tips/" class="nav-tips">Tips
+</a>
+</li>
+<li><a href="/api/" class="nav-api">API
+</a>
+</li>
+<li><a href="https://github.com/DMOJ" class="nav-github">Github
+</a>
+</li></ul>
+</li>
+</ul><span id="user-links"><span class="anon"><a href="/accounts/login/?next=/problem/bbc08e"><b>Login</b></a>&nbsp;|&nbsp;<a href="/accounts/register/">Register</a></span></span>
+</div>
+<div id="nav-shadow"></div>
+</nav>
+<div id="page-container">
+<noscript>
+        <div id="noscript">This site works best with JavaScript enabled.
+        </div>
+      </noscript><br>
+<article id="content">
+<div class="problem-title">
+<h2 style="color:#393630; display: inline-block">Bubble Cup V8 E Spectator Riots</h2><span class="spacer"></span><a href="/problem/bbc08e/pdf" class="view-pdf"><span style="position: relative; display: inline-block; font-size: 1.5em"><span style="color: #d40e13" class="fa fa-file-pdf-o"></span><span style="height: 0.2em; display: block; position: absolute; top: 0.3em; background: #d40e13; width: 0.6em; margin-left: -0.15em"></span></span> View as PDF</a>
+</div>
+<hr>
+<div id="content-body">
+<div id="common-content">
+<div id="content-right">
+<div class="info-float"><a href="/problem/bbc08e/submit" class="unselectable button full">Submit solution</a>
+<hr />
+<div><a href="/problem/bbc08e/submissions/">All submissions</a>
+</div>
+<div><a href="/problem/bbc08e/rank/">Best submissions</a>
+</div>
+<hr /><br />
+<div class="problem-info-entry"><i class="fa fa-check fa-fw"></i><span class="pi-name">Points:</span><span class="pi-value">25
+</span>
+</div>
+<div class="problem-info-entry"><i class="fa fa-clock-o fa-fw"></i><span class="pi-name">Time limit:</span><span class="pi-value">0.5s</span>
+</div>
+<div class="problem-lang-limits">
+</div>
+<div class="problem-info-entry"><i class="fa fa-server fa-fw"></i><span class="pi-name">Memory limit:</span><span class="pi-value">128M</span>
+</div>
+<div class="problem-lang-limits">
+</div><br />
+<div id="problem-types">
+<div class="toggle closed unselectable"><span class="fa fa-chevron-right fa-fw"></span>Problem type
+</div>
+<div style="display:none" class="toggled">Geometry</div>
+</div><br />
+</div>
+</div>
+<div id="content-left" class="split-common-content">
+<div class="content-description screen"><div><p>It’s riot time on football stadium Ramacana! Raging fans have entered the field and the police find themselves in a difficult situation. The field can be represented as a square in the coordinate system defined by two diagonal vertices in <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mo stretchy="false">(</mo>
+<mn>0</mn>
+<mo>,</mo>
+<mn>0</mn>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">(0,0)</annotation>
+</semantics>
+</math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mo stretchy="false">(</mo>
+<msup>
+<mn>10</mn>
+<mn>5</mn>
+</msup>
+<mo>,</mo>
+<msup>
+<mn>10</mn>
+<mn>5</mn>
+</msup>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">(10^5, 10^5)</annotation>
+</semantics>
+</math>. The sides of that square are also considered to be inside the field, everything else is outside.</p>
+<p>In the beginning, there are <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>N</mi>
+<annotation encoding="application/x-tex">N</annotation>
+</semantics>
+</math> fans on the field. For each fan we are given his speed, an integer <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<msub>
+<mi>v</mi>
+<mi>i</mi>
+</msub>
+<annotation encoding="application/x-tex">v_i</annotation>
+</semantics>
+</math> as well as his integer coordinates <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>x</mi>
+<mi>i</mi>
+</msub>
+<mo>,</mo>
+<msub>
+<mi>y</mi>
+<mi>i</mi>
+</msub>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">(x_i, y_i)</annotation>
+</semantics>
+</math>. A fan with those coordinates might move and after one second he might be at any point <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>x</mi>
+<mi>i</mi>
+</msub>
+<mo>+</mo>
+<mi>p</mi>
+<mo>,</mo>
+<msub>
+<mi>y</mi>
+<mi>i</mi>
+</msub>
+<mo>+</mo>
+<mi>q</mi>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">(x_i + p, y_i + q)</annotation>
+</semantics>
+</math> where <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>0</mn>
+<mo>≤</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mi>p</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mi>q</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mo>≤</mo>
+<msub>
+<mi>v</mi>
+<mi>i</mi>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">0 \le |p|+|q| \le v_i</annotation>
+</semantics>
+</math>. <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mi>p</mi>
+<mo>,</mo>
+<mi>q</mi>
+</mrow>
+<annotation encoding="application/x-tex">p, q</annotation>
+</semantics>
+</math> are both integers.</p>
+<p>Points that go outside of the square that represents the field are excluded and all others have equal probability of being the location of that specific fan after one second.</p>
+<p>Andrej, a young and promising police officer, has sent a flying drone to take a photo of the riot from above. The drone’s camera works like this:</p>
+<ol>
+<li>It selects three points with integer coordinates such that there is a chance of a fan appearing there after one second. They must not be collinear or the camera won’t work. It is guaranteed that not all of the initial positions of fans will be on the same line.</li>
+<li>Camera focuses those points and creates a circle that passes through those three points. A photo is taken after one second (one second after the initial state).</li>
+<li>Everything that is on the circle or inside it at the moment of taking the photo (one second after focusing the points) will be on the photo.</li>
+</ol>
+<p>Your goal is to select those three points so that the expected number of fans seen on the photo is maximized. If there are more such selections, select those three points that give the circle with largest radius among them. If there are still more suitable selections, any one of them will be accepted.</p>
+<h4>Input Specification</h4>
+<p>The first line contains the number of fans on the field, <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>N</mi>
+<annotation encoding="application/x-tex">N</annotation>
+</semantics>
+</math>. The next <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>N</mi>
+<annotation encoding="application/x-tex">N</annotation>
+</semantics>
+</math> lines contain three integers: <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>x</mi>
+<mi>i</mi>
+</msub>
+<mo>,</mo>
+<msub>
+<mi>y</mi>
+<mi>i</mi>
+</msub>
+<mo>,</mo>
+<msub>
+<mi>v</mi>
+<mi>i</mi>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">x_i, y_i, v_i</annotation>
+</semantics>
+</math>. They are the <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math>-coordinate, <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>y</mi>
+<annotation encoding="application/x-tex">y</annotation>
+</semantics>
+</math>-coordinate and speed of fan <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>i</mi>
+<annotation encoding="application/x-tex">i</annotation>
+</semantics>
+</math> at the beginning of the one second interval considered in the task.</p>
+<h4>Output Specification</h4>
+<p>You need to output the three points that camera needs to select. Print them in three lines, with every line containing the <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>x</mi>
+<annotation encoding="application/x-tex">x</annotation>
+</semantics>
+</math>-coordinate, then <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>y</mi>
+<annotation encoding="application/x-tex">y</annotation>
+</semantics>
+</math>-coordinate, separated by a single space. The order of points does not matter.</p>
+<h4>Constraints</h4>
+<ul>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>3</mn>
+<mo>≤</mo>
+<mi>N</mi>
+<mo>≤</mo>
+<msup>
+<mn>10</mn>
+<mn>5</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">3 \le N \le 10^5</annotation>
+</semantics>
+</math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>0</mn>
+<mo>≤</mo>
+<msub>
+<mi>x</mi>
+<mi>i</mi>
+</msub>
+<mo>,</mo>
+<msub>
+<mi>y</mi>
+<mi>i</mi>
+</msub>
+<mo>≤</mo>
+<msup>
+<mn>10</mn>
+<mn>5</mn>
+</msup>
+</mrow>
+<annotation encoding="application/x-tex">0 \le x_i, y_i \le 10^5</annotation>
+</semantics>
+</math></li>
+<li><math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mn>0</mn>
+<mo>≤</mo>
+<msub>
+<mi>v</mi>
+<mi>i</mi>
+</msub>
+<mo>≤</mo>
+<mn>1000</mn>
+</mrow>
+<annotation encoding="application/x-tex">0 \le v_i \le 1000</annotation>
+</semantics>
+</math></li>
+</ul>
+<h4>Example Input</h4>
+<pre><code>3
+1 1 1
+1 1 1
+1 2 1</code></pre>
+<h4>Example Output</h4>
+<pre><code>2 2
+2 1
+1 0</code></pre>
+<h4>Explanation</h4>
+<p>The circle defined in output will catch all of the fans, no matter how they move during one second.</p>
+</div>
+<hr />
+</div>
+<div id="comments" class="comment-area">
+<h2><i style="padding-right: 0.3em" class="fa fa-comments"></i>Comments
+</h2>
+<p class="no-comments-message">There are no comments at the moment.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<script type="text/javascript">function mathjax_pagedown(a){if("MathJax"in window){a.each(window.editors,function(d,b){var c=a("div.wmd-preview#"+d+"_wmd_preview")[0];b.hooks.chain("onPreviewRefresh",function(){MathJax.Hub.Queue(["Typeset",MathJax.Hub,c])});MathJax.Hub.Queue(["Typeset",MathJax.Hub,c])})}}window.mathjax_pagedown=mathjax_pagedown;$(window).load(function(){(mathjax_pagedown)("$"in window?$:django.jQuery)});</script>
+<footer><span id="footer-content"><br><a style="color: rgb(128, 128, 128)" href="//github.com/DMOJ/">fork us on <span style="font-weight:bold">Github</span></a> | <a style="color: rgb(128, 128, 128);" href="//www.facebook.com/dmoj.ca">like us on <span style="font-weight: bold;">Facebook</span></a> | <a style="color: rgb(128, 128, 128)" href="https://translate.dmoj.ca/">help us <span style="font-weight: bold;">translate</span></a> | <a style="color: rgb(128, 128, 128)" href="https://dmoj.ca/tos/">terms of service</a>
+|
+<form action="/i18n/setlang/" method="post" style="display: inline"><input type='hidden' name='csrfmiddlewaretoken' value='akXJ9jFurLt0l3NEDm3qa4UgJmtyjcA5PaRRThHBuiWnkAfzBw8SuC637KahcWNp' />
+<input name="next" type="hidden" value="/problem/bbc08e">
+<select name="language" onchange="form.submit()" style="height: 1.5em">
+<option value="de">Deutsch (de)
+</option>
+<option value="en" selected="">English (en)
+</option>
+<option value="fr">français (fr)
+</option>
+<option value="ro">Română (ro)
+</option>
+<option value="ru">Русский (ru)
+</option>
+<option value="sr-latn">srpski (latinica) (sr-latn)
+</option>
+<option value="vi">Tiếng Việt (vi)
+</option>
+<option value="zh-hans">简体中文 (zh-hans)
+</option>
+</select>
+</form></span>
+</footer>
+</div>
+</body>
+</html>
