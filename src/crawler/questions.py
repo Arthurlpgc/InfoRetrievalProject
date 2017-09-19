@@ -8,22 +8,38 @@ class Token():
 
 class LinkRanker():
     def __init__(self):
-        self.minRank = -10000
-        self.maxRank = 100
+        self.minimize = -10000
+        self.decrease = -50
+        self.maximize = 1000
+        self.increase = 50
 
-        codeforcesGoodTokens = [Token('problemset',          self.maxRank),
-                                Token('problemset/page/',    self.maxRank/2),
-                                Token('problemset/tags/',    self.maxRank/2),
-                                Token('problemset/problem/', self.maxRank),]
-   
-        codeforcesBadTokens =  [Token('mobile',     self.minRank),
-                                Token('status',     self.minRank),
-                                Token('standings',  self.minRank),
-                                Token('submit',     self.minRank),]
+        codeforces =    [Token('problemset',            self.increase),
+                         Token('problemset/page/',      self.increase),
+                         Token('problemset/tags/',      self.increase),
+                         Token('problemset/problem/',   self.maximize),
+                         Token('mobile',                self.minimize),
+                         Token('status',                self.minimize),
+                         Token('standings',             self.minimize),
+                         Token('submit',                self.minimize)]
+
+        codechef =      [Token('problems/',             self.maximize),
+                         Token('problems/school',       self.decrease),
+                         Token('problems/easy',         self.decrease),
+                         Token('problems/medium',       self.decrease),
+                         Token('problems/hard',         self.decrease),
+                         Token('problems/challenge',    self.decrease),
+                         Token('problems/extcontest',   self.decrease)]
+
+        uri =           [Token('categories',            self.increase),
+                         Token('/problems/index/',      self.increase),
+                         Token('page=',                 self.increase),
+                         Token('/problems/view/',       self.maximize),
+                         Token('sort=',                 self.minimize)]
 
         self.tokens = []
-        self.tokens.extend(codeforcesGoodTokens)
-        self.tokens.extend(codeforcesBadTokens)
+        self.tokens.extend(codeforces)
+        self.tokens.extend(codechef)
+        self.tokens.extend(uri)
 
     def get(self, anchor, url):
         rank = 0
@@ -40,7 +56,7 @@ class QuestionSpider(scrapy.Spider):
         'DOWNLOAD_TIMEOUT': '5',
         'DOWNLOAD_MAXSIZE': '1000000',
         'ROBOTSTXT_OBEY': 'True',
-        'DOWNLOAD_DELAY': '0.25',
+        'DOWNLOAD_DELAY': '0.1',
         'REDIRECT_MAX_TIMES': '5',
         'CLOSESPIDER_PAGECOUNT': '3000',
         'DEPTH_PRIORITY': '1',
@@ -50,10 +66,14 @@ class QuestionSpider(scrapy.Spider):
 
     start_urls = [
         'http://codeforces.com/',
+        'https://www.codechef.com/',
+        'https://www.urionlinejudge.com.br',
     ]
 
     allowed_domains = [
-        'codeforces.com',
+        #'codeforces.com',
+        #'codechef.com',
+        'urionlinejudge.com.br',
     ]
 
     linkRanker = LinkRanker()
