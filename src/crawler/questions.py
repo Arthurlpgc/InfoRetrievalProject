@@ -36,10 +36,37 @@ class LinkRanker():
                          Token('/problems/view/',       self.maximize),
                          Token('sort=',                 self.minimize)]
 
+        spoj =          [Token('start=',                self.decrease),
+                         Token('problems/partial',      self.decrease),
+                         Token('problems/riddle',       self.decrease),
+                         Token('problems/tutorial',     self.decrease),
+                         Token('problems/basics',       self.decrease),
+                         Token('problems/tag',          self.decrease),
+                         Token('discuss.spoj.com',      self.minimize)]
+
+        dmoj =          [Token('problem/',              self.maximize),
+                         Token('order=',                self.minimize),
+                         Token('search=',               self.minimize),
+                         Token('category=',             self.minimize),
+                         Token('/rank/',                self.minimize)]
+
+        a2 =            [Token('p?ID=',                 self.maximize),
+                         Token('/ps',                   self.increase),
+                         Token('/ps?From=',             self.increase),
+                         Token('/profile?',             self.minimize),
+                         Token('/registrants?',         self.minimize),
+                         Token('/contest?',             self.minimize),
+                         Token('/sigin?',               self.minimize),
+                         Token('/category?',            self.minimize),
+                         Token('/users?',               self.minimize)]
+
         self.tokens = []
         self.tokens.extend(codeforces)
         self.tokens.extend(codechef)
         self.tokens.extend(uri)
+        self.tokens.extend(spoj)
+        self.tokens.extend(dmoj)
+        self.tokens.extend(a2)
 
     def get(self, anchor, url):
         rank = 0
@@ -53,7 +80,7 @@ class QuestionSpider(scrapy.Spider):
 
     custom_settings = {
         'USER_AGENT': 'coding-questions-bot (https://github.com/Arthurlpgc/InfoRetrievalProject)',
-        'DOWNLOAD_TIMEOUT': '5',
+        'DOWNLOAD_TIMEOUT': '20',
         'DOWNLOAD_MAXSIZE': '1000000',
         'ROBOTSTXT_OBEY': 'True',
         'DOWNLOAD_DELAY': '0.1',
@@ -68,12 +95,18 @@ class QuestionSpider(scrapy.Spider):
         'http://codeforces.com/',
         'https://www.codechef.com/',
         'https://www.urionlinejudge.com.br',
+        'http://www.spoj.com/',
+        'https://dmoj.ca/',
+        'https://a2oj.com/',
     ]
 
     allowed_domains = [
         #'codeforces.com',
         #'codechef.com',
-        'urionlinejudge.com.br',
+        #'urionlinejudge.com.br',
+        #'spoj.com',
+        #'dmoj.ca',
+        'a2oj.com',
     ]
 
     linkRanker = LinkRanker()
@@ -84,7 +117,10 @@ class QuestionSpider(scrapy.Spider):
             anchor = a.xpath('/text()').extract()
             for link in a.xpath('@href').extract():
                 url = response.urljoin(link)
-                yield Request(url=url, callback=self.parse, priority=self.linkRanker.get(anchor, url), dont_filter=False)
+                yield Request(url=url, 
+                              callback=self.parse, 
+                              priority=self.linkRanker.get(anchor, url),
+                              dont_filter=False)
 
     def parseUrlName(self, url):
         forbidden = ['/', '\\', '>', '<', '?', '*', ':', '|']
