@@ -13,22 +13,22 @@ class LinkRanker():
         self.maximize = 1000
         self.increase = 50
 
-        codeforces =    [Token('problemset',            self.increase),
-                         Token('problemset/page/',      self.increase),
-                         Token('problemset/tags/',      self.increase),
-                         Token('problemset/problem/',   self.maximize),
+        codeforces =    [Token('/problemset',           self.increase),
+                         Token('/problemset/page/',     self.increase),
+                         Token('/problemset/tags/',     self.increase),
+                         Token('/problemset/problem/',  self.maximize),
                          Token('mobile',                self.minimize),
                          Token('status',                self.minimize),
                          Token('standings',             self.minimize),
                          Token('submit',                self.minimize)]
 
-        codechef =      [Token('problems/',             self.maximize),
-                         Token('problems/school',       self.decrease),
-                         Token('problems/easy',         self.decrease),
-                         Token('problems/medium',       self.decrease),
-                         Token('problems/hard',         self.decrease),
-                         Token('problems/challenge',    self.decrease),
-                         Token('problems/extcontest',   self.decrease)]
+        codechef =      [Token('/problems/',            self.maximize),
+                         Token('/problems/school',      self.decrease),
+                         Token('/problems/easy',        self.decrease),
+                         Token('/problems/medium',      self.decrease),
+                         Token('/problems/hard',        self.decrease),
+                         Token('/problems/challenge',   self.decrease),
+                         Token('/problems/extcontest',  self.decrease)]
 
         uri =           [Token('categories',            self.increase),
                          Token('/problems/index/',      self.increase),
@@ -37,14 +37,14 @@ class LinkRanker():
                          Token('sort=',                 self.minimize)]
 
         spoj =          [Token('start=',                self.decrease),
-                         Token('problems/partial',      self.decrease),
-                         Token('problems/riddle',       self.decrease),
-                         Token('problems/tutorial',     self.decrease),
-                         Token('problems/basics',       self.decrease),
-                         Token('problems/tag',          self.decrease),
+                         Token('/problems/partial',     self.decrease),
+                         Token('/problems/riddle',      self.decrease),
+                         Token('/problems/tutorial',    self.decrease),
+                         Token('/problems/basics',      self.decrease),
+                         Token('/problems/tag',         self.decrease),
                          Token('discuss.spoj.com',      self.minimize)]
 
-        dmoj =          [Token('problem/',              self.maximize),
+        dmoj =          [Token('/problem',              self.maximize),
                          Token('order=',                self.minimize),
                          Token('search=',               self.minimize),
                          Token('category=',             self.minimize),
@@ -59,6 +59,44 @@ class LinkRanker():
                          Token('/sigin?',               self.minimize),
                          Token('/category?',            self.minimize),
                          Token('/users?',               self.minimize)]
+        
+        atcoder =       [Token('.contest.',             self.increase),
+                         Token('/assignments',          self.increase),
+                         Token('/contest',              self.increase),
+                         Token('/contest?p=',           self.increase),
+                         Token('/contest/archive',      self.increase),
+                         Token('/contest/archive?p=',   self.increase),
+                         Token('/tasks/',               self.maximize),
+                         Token('/categories=',          self.minimize),
+                         Token('/submit',               self.minimize),
+                         Token('/submissions',          self.minimize),
+                         Token('/clarifications',       self.minimize),
+                         Token('/custom_test',          self.minimize),
+                         Token('/editorial',            self.minimize),
+                         Token('/tos',                  self.minimize),
+                         Token('/privacy',              self.minimize),
+                         Token('/personal',             self.minimize),
+                         Token('/tutorial',             self.minimize),
+                         Token('/rules',                self.minimize),
+                         Token('/glossary',             self.minimize),
+                         Token('/faq',                  self.minimize),
+                         Token('/register',             self.minimize),
+                         Token('/login',                self.minimize),
+                         Token('/settings',             self.minimize)]
+
+        csacademy =     [Token('/contest/interview-archive/',       self.increase),
+                         Token('/contest/archive/',                 self.increase),
+                         Token('/contest/interview-archive/task/',  self.maximize),
+                         Token('/contest/archive/task/',            self.maximize),
+                         Token('/solution/',                        self.minimize),
+                         Token('/discussion/',                      self.minimize),
+                         Token('/statistics/',                      self.minimize),
+                         Token('/submissions/',                     self.minimize),
+                         Token('/scoreboard/',                      self.minimize)]
+
+        timus =         []
+
+        caribbeanoj =   [Token('/24h/problems',     self.increase)]
 
         self.tokens = []
         self.tokens.extend(codeforces)
@@ -67,6 +105,10 @@ class LinkRanker():
         self.tokens.extend(spoj)
         self.tokens.extend(dmoj)
         self.tokens.extend(a2)
+        self.tokens.extend(atcoder)
+        self.tokens.extend(csacademy)
+        self.tokens.extend(timus)
+        self.tokens.extend(caribbeanoj)
 
     def get(self, anchor, url):
         rank = 0
@@ -98,15 +140,23 @@ class QuestionSpider(scrapy.Spider):
         'http://www.spoj.com/',
         'https://dmoj.ca/',
         'https://a2oj.com/',
+        'http://atcoder.jp/',
+        'https://csacademy.com/',
+        'http://acm.timus.ru/',
+        'http://coj.uci.cu',
     ]
 
     allowed_domains = [
-        #'codeforces.com',
-        #'codechef.com',
-        #'urionlinejudge.com.br',
-        #'spoj.com',
-        #'dmoj.ca',
+        'codeforces.com',
+        'codechef.com',
+        'urionlinejudge.com.br',
+        'spoj.com',
+        'dmoj.ca',
         'a2oj.com',
+        'atcoder.jp',
+        'csacademy.com',
+        'acm.timus.ru',
+        'coj.uci.cu'
     ]
 
     linkRanker = LinkRanker()
