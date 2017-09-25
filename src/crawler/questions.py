@@ -1,4 +1,5 @@
 import scrapy
+from urllib.parse import urlparse
 from scrapy import Request
 
 class Token():
@@ -147,19 +148,21 @@ class QuestionSpider(scrapy.Spider):
     ]
 
     allowed_domains = [
-        'codeforces.com',
-        'codechef.com',
-        'urionlinejudge.com.br',
-        'spoj.com',
-        'dmoj.ca',
-        'a2oj.com',
-        'atcoder.jp',
-        'csacademy.com',
-        'acm.timus.ru',
-        'coj.uci.cu'
+       # 'codeforces.com',
+       'codechef.com',
+       # 'urionlinejudge.com.br',
+        #'spoj.com',
+        #'dmoj.ca',
+        #'a2oj.com',
+        #'atcoder.jp',
+        #'csacademy.com',
+        #'acm.timus.ru',
+        #'coj.uci.cu'
     ]
 
     linkRanker = LinkRanker()
+    maxPagesPerDomain = 100
+    domainsCrawled = {}
     
     def parse(self, response):
         self.savePage(response)
@@ -167,10 +170,17 @@ class QuestionSpider(scrapy.Spider):
             anchor = a.xpath('/text()').extract()
             for link in a.xpath('@href').extract():
                 url = response.urljoin(link)
-                yield Request(url=url, 
-                              callback=self.parse, 
-                              priority=self.linkRanker.get(anchor, url),
-                              dont_filter=False)
+                dom = self.getDomain(link)
+                if(self.domainsCrawled.get(dom, 0) < self.maxPagesPerDomain):
+                    self.domainsCrawled[dom] = self.domainsCrawled.get(dom, 0) + 1
+                    yield Request(url=url, 
+                                callback=self.parse, 
+                                priority=self.linkRanker.get(anchor, url),
+                                dont_filter=False)
+
+    def getDomain(self, url):
+        parsed_uri = urlparse(url)
+        return '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
 
     def parseUrlName(self, url):
         forbidden = ['/', '\\', '>', '<', '?', '*', ':', '|']
