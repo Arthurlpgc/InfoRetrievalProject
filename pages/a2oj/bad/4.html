@@ -1,0 +1,626 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="default.css" rel="stylesheet" type="text/css" />
+<link href='DroidSansMono.css' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="css/nav.css" />
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+<!-- START TABLE SORTER CODE -->
+<link rel="stylesheet" href="style.css" type="text/css" id="" media="print, projection, screen" />
+<script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="jquery.tablesorter.js"></script>
+	
+<script type="text/javascript" id="js">
+$(document).ready(function() {
+	$.tablesorter.defaults.sortList = [[0,0]];
+	$.tablesorter.defaults.textExtraction = ['complex'];
+	$("table").tablesorter();
+});
+</script>
+<!-- END TABLE SORTER CODE -->
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+function view_changed() {
+	var views = document.getElementById("view").options;
+	var view = "all";
+	for (var i = 0; i < views.length; i++)
+		if (views[i].selected) {
+			view = views[i].value;
+			break;
+		}
+	if (view == "all")
+		window.location = 'ps';
+	else
+		window.location = 'ps?view=' + view;
+}
+</script>
+
+
+
+</head>
+<body class="no-js">
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tr>
+<td style="vertical-align: bottom;"><a href="/"><img src="logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">&raquo;&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br/>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> & <b><a href="https://www.facebook.com/acmacpc/" target="_blank" style="text-decoration: none;">ACPC</a></b>, <a href="https://www.codechef.com/" target="_blank" style="text-decoration: none;">CodeChef</a> and <a href="http://www.codability.net/" target="_blank" style="text-decoration: none;">Codability</a></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="https://www.facebook.com/plugins/like.php?show_faces=false&href=https://www.facebook.com/A2OnlineJudge"
+	scrolling="no" frameborder="0"
+	style="border:none; height:45px"></iframe>
+</td>
+</tr>
+</table>
+</div>
+
+<div id="header3"><div align="right"><a href="signin?url=%2Fps" style="font-size: 15px;">Sign In</a> - <a href="signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+
+        <nav id="topNav">
+          <ul>
+<li><a href="/">Contests</a></li><li><a href="ladders"><font color="red">Ladders</font></a></li><li><a href="ps">Problems</a></li><li><a href="status">Status</a></li><li><a href="categories">Categories</a></li><li><a href="groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><ul><li><center><a href="http://goo.gl/Fq5mru" target="_blank">GCJ Tools</a></center></li><li><center><a href="codes">Source Codes</a></center></li><li><center><a href="finder">Problems Finder</a></center></li><li><center><a href="users">Users</a></center></li><li><center><a href="teams">Teams</a></center></li><li><center><a href="cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="about">About</a></li>
+          </ul>
+        </nav>
+        
+        
+        <script src="js/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+<center>
+<table>
+<tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="page">
+
+<font size="3">
+<center>
+
+
+
+
+<font size="4">
+<br/><b><a href="sources">List of problems sources</a></b><br/>
+</font>
+<br/>
+<table cellspacing="1" class="tablesorter" style="text-align: center;">
+<thead>
+<tr>
+<th></th>
+<th>Problem Name</th>
+<th>Solved Count</th>
+<th>Solved Percentage</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><a href="p?ID=1">1. Omar</a></td>
+<td>6834</td>
+<td>86%</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="p?ID=2">2. The Alphabet Sticker</a></td>
+<td>261</td>
+<td>50%</td>
+<td>ACM Arab Collegiate Programming Contest 2013</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><a href="p?ID=3">3. Swyper Keyboard</a></td>
+<td>15</td>
+<td>30%</td>
+<td>ACM Arab Collegiate Programming Contest 2013</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="p?ID=4">4. Increasing Shortest Path</a></td>
+<td>43</td>
+<td>51%</td>
+<td>ACM Arab Collegiate Programming Contest 2013</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><a href="p?ID=5">5. Cup of Cowards</a></td>
+<td>19</td>
+<td>27%</td>
+<td>ACM Arab Collegiate Programming Contest 2013</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="p?ID=6">6. Balloons Colors</a></td>
+<td>3110</td>
+<td>95%</td>
+<td>ACM Arab Collegiate Programming Contest 2013</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><a href="p?ID=7">7. NASSA's Robot</a></td>
+<td>702</td>
+<td>90%</td>
+<td>ACM Arab Collegiate Programming Contest 2013</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="p?ID=8">8. The Stones Game</a></td>
+<td>187</td>
+<td>68%</td>
+<td>ACM Arab Collegiate Programming Contest 2013</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><a href="p?ID=9">9. Super Ants</a></td>
+<td>21</td>
+<td>45%</td>
+<td>ACM Arab Collegiate Programming Contest 2013</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="p?ID=10">10. Omar Loves Candies</a></td>
+<td>215</td>
+<td>62%</td>
+<td>ACM Arab Collegiate Programming Contest 2013</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td><a href="p?ID=11">11. Modified LCS</a></td>
+<td>69</td>
+<td>53%</td>
+<td>ACM Arab Collegiate Programming Contest 2013</td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="p?ID=12">12. Mario Kart</a></td>
+<td>63</td>
+<td>71%</td>
+<td>ACM Arab Collegiate Programming Contest 2013</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td><a href="p?ID=13">13. Omar's Bug</a></td>
+<td>87</td>
+<td>65%</td>
+<td>ACM Arab Collegiate Programming Contest 2013</td>
+</tr>
+<tr>
+<td>14</td>
+<td><a href="p?ID=15">15. No Name</a></td>
+<td>5</td>
+<td>4%</td>
+<td>ACM Arab Collegiate Programming Contest 2012</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td><a href="p?ID=14">14. The New President</a></td>
+<td>408</td>
+<td>66%</td>
+<td>ACM Arab Collegiate Programming Contest 2012</td>
+</tr>
+<tr>
+<td>16</td>
+<td><a href="p?ID=16">16. Encrypted Password</a></td>
+<td>129</td>
+<td>57%</td>
+<td>ACM Arab Collegiate Programming Contest 2012</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td><a href="p?ID=17">17. Kids Love Candies</a></td>
+<td>3641</td>
+<td>93%</td>
+<td>ACM Arab Collegiate Programming Contest 2012</td>
+</tr>
+<tr>
+<td>18</td>
+<td><a href="p?ID=18">18. The Swapping Game</a></td>
+<td>14</td>
+<td>41%</td>
+<td>ACM Arab Collegiate Programming Contest 2012</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td><a href="p?ID=19">19. Lock Pattern</a></td>
+<td>15</td>
+<td>71%</td>
+<td>ACM Arab Collegiate Programming Contest 2012</td>
+</tr>
+<tr>
+<td>20</td>
+<td><a href="p?ID=20">20. Archery</a></td>
+<td>58</td>
+<td>73%</td>
+<td>ACM Arab Collegiate Programming Contest 2012</td>
+</tr>
+<tr class="odd">
+<td>21</td>
+<td><a href="p?ID=21">21. Connecting Islands</a></td>
+<td>7</td>
+<td>77%</td>
+<td>ACM Arab Collegiate Programming Contest 2012</td>
+</tr>
+<tr>
+<td>22</td>
+<td><a href="p?ID=22">22. Contest Hall Preparation</a></td>
+<td>885</td>
+<td>84%</td>
+<td>ACM Arab Collegiate Programming Contest 2012</td>
+</tr>
+<tr class="odd">
+<td>23</td>
+<td><a href="p?ID=23">23. Math Homework</a></td>
+<td>11</td>
+<td>39%</td>
+<td>ACM Arab Collegiate Programming Contest 2012</td>
+</tr>
+<tr>
+<td>24</td>
+<td><a href="p?ID=24">24. Arabic and English</a></td>
+<td>1520</td>
+<td>86%</td>
+<td>ACM Arab Collegiate Programming Contest 2011</td>
+</tr>
+<tr class="odd">
+<td>25</td>
+<td><a href="p?ID=25">25. Between the Mountains</a></td>
+<td>232</td>
+<td>82%</td>
+<td>ACM Arab Collegiate Programming Contest 2011</td>
+</tr>
+<tr>
+<td>26</td>
+<td><a href="p?ID=26">26. Circleland</a></td>
+<td>102</td>
+<td>51%</td>
+<td>ACM Arab Collegiate Programming Contest 2011</td>
+</tr>
+<tr class="odd">
+<td>27</td>
+<td><a href="p?ID=27">27. Dice on a Board</a></td>
+<td>10</td>
+<td>58%</td>
+<td>ACM Arab Collegiate Programming Contest 2011</td>
+</tr>
+<tr>
+<td>28</td>
+<td><a href="p?ID=28">28. Error</a></td>
+<td>19</td>
+<td>51%</td>
+<td>ACM Arab Collegiate Programming Contest 2011</td>
+</tr>
+<tr class="odd">
+<td>29</td>
+<td><a href="p?ID=29">29. Fence</a></td>
+<td>3</td>
+<td>33%</td>
+<td>ACM Arab Collegiate Programming Contest 2011</td>
+</tr>
+<tr>
+<td>30</td>
+<td><a href="p?ID=30">30. Go</a></td>
+<td>3</td>
+<td>60%</td>
+<td>ACM Arab Collegiate Programming Contest 2011</td>
+</tr>
+<tr class="odd">
+<td>31</td>
+<td><a href="p?ID=31">31. Homework</a></td>
+<td>3</td>
+<td>75%</td>
+<td>ACM Arab Collegiate Programming Contest 2011</td>
+</tr>
+<tr>
+<td>32</td>
+<td><a href="p?ID=32">32. Identify the Number</a></td>
+<td>16</td>
+<td>44%</td>
+<td>ACM Arab Collegiate Programming Contest 2011</td>
+</tr>
+<tr class="odd">
+<td>33</td>
+<td><a href="p?ID=33">33. Joy of the Cylinder Game</a></td>
+<td>9</td>
+<td>47%</td>
+<td>ACM Arab Collegiate Programming Contest 2011</td>
+</tr>
+<tr>
+<td>34</td>
+<td><a href="p?ID=131">131. Triangles</a></td>
+<td>367</td>
+<td>78%</td>
+<td>ACM Syrian Collegiate Programming Contest 2013</td>
+</tr>
+<tr class="odd">
+<td>35</td>
+<td><a href="p?ID=122">122. Teams</a></td>
+<td>431</td>
+<td>89%</td>
+<td>ACM Syrian Collegiate Programming Contest 2013</td>
+</tr>
+<tr>
+<td>36</td>
+<td><a href="p?ID=123">123. Weird Dice</a></td>
+<td>5</td>
+<td>31%</td>
+<td>ACM Syrian Collegiate Programming Contest 2013</td>
+</tr>
+<tr class="odd">
+<td>37</td>
+<td><a href="p?ID=124">124. Party</a></td>
+<td>146</td>
+<td>58%</td>
+<td>ACM Syrian Collegiate Programming Contest 2013</td>
+</tr>
+<tr>
+<td>38</td>
+<td><a href="p?ID=125">125. Objects Count</a></td>
+<td>75</td>
+<td>81%</td>
+<td>ACM Syrian Collegiate Programming Contest 2013</td>
+</tr>
+<tr class="odd">
+<td>39</td>
+<td><a href="p?ID=126">126. Reserve a Room</a></td>
+<td>15</td>
+<td>45%</td>
+<td>ACM Syrian Collegiate Programming Contest 2013</td>
+</tr>
+<tr>
+<td>40</td>
+<td><a href="p?ID=127">127. Pronto</a></td>
+<td>36</td>
+<td>40%</td>
+<td>ACM Syrian Collegiate Programming Contest 2013</td>
+</tr>
+<tr class="odd">
+<td>41</td>
+<td><a href="p?ID=128">128. Museum Security</a></td>
+<td>10</td>
+<td>47%</td>
+<td>ACM Syrian Collegiate Programming Contest 2013</td>
+</tr>
+<tr>
+<td>42</td>
+<td><a href="p?ID=129">129. Subtraction</a></td>
+<td>106</td>
+<td>75%</td>
+<td>ACM Syrian Collegiate Programming Contest 2013</td>
+</tr>
+<tr class="odd">
+<td>43</td>
+<td><a href="p?ID=130">130. Hanging Out</a></td>
+<td>6</td>
+<td>85%</td>
+<td>ACM Syrian Collegiate Programming Contest 2013</td>
+</tr>
+<tr>
+<td>44</td>
+<td><a href="p?ID=133">133. Time Jumper (Easy)</a></td>
+<td>213</td>
+<td>60%</td>
+<td>Damascus University First Training Contest 2014</td>
+</tr>
+<tr class="odd">
+<td>45</td>
+<td><a href="p?ID=134">134. Slow Snails</a></td>
+<td>43</td>
+<td>69%</td>
+<td>Damascus University First Training Contest 2014</td>
+</tr>
+<tr>
+<td>46</td>
+<td><a href="p?ID=136">136. Time Jumper (Hard)</a></td>
+<td>132</td>
+<td>66%</td>
+<td>Damascus University First Training Contest 2014</td>
+</tr>
+<tr class="odd">
+<td>47</td>
+<td><a href="p?ID=137">137. Cryptography</a></td>
+<td>269</td>
+<td>87%</td>
+<td>Tishreen University First Training Contest 2014</td>
+</tr>
+<tr>
+<td>48</td>
+<td><a href="p?ID=140">140. Shipping</a></td>
+<td>59</td>
+<td>68%</td>
+<td>Tishreen University First Training Contest 2014</td>
+</tr>
+<tr class="odd">
+<td>49</td>
+<td><a href="p?ID=142">142. Chess Knights</a></td>
+<td>127</td>
+<td>80%</td>
+<td>Tishreen University First Training Contest 2014</td>
+</tr>
+<tr>
+<td>50</td>
+<td><a href="p?ID=144">144. Shuffling</a></td>
+<td>295</td>
+<td>87%</td>
+<td>Tishreen University First Training Contest 2014</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+&lt;Previous
+ - 
+<b>1-50</b>
+&nbsp;
+<a href="ps?From=2">51-100</a>
+&nbsp;
+<a href="ps?From=3">101-150</a>
+&nbsp;
+<a href="ps?From=4">151-200</a>
+&nbsp;
+<a href="ps?From=5">201-250</a>
+&nbsp;
+<a href="ps?From=6">251-300</a>
+&nbsp;
+<a href="ps?From=7">301-312</a>
+ - 
+<a href="ps?From=2">Next&gt;</a>
+
+
+
+
+</center>
+</font>
+</font>
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ &copy; Copyright 2011-2016 <b><a
+	href="https://www.facebook.com/ahmed.aly.tc" target="_blank"
+	style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com" target="_blank" style="text-decoration: none;">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</table>
+</center>
+<!-- end footer -->
+
+
+</body>
+</html>
