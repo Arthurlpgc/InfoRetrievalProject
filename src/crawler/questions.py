@@ -130,8 +130,6 @@ class LinkRanker():
                 rank = rank + token.rank
         return rank
 
-   
-
     def getDomain(self, url):
         parsed_uri = urlparse(url)
         return '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
@@ -143,6 +141,8 @@ class QuestionSpider(scrapy.Spider):
         'USER_AGENT': 'coding-questions-bot (https://github.com/Arthurlpgc/InfoRetrievalProject)',
         'DOWNLOAD_TIMEOUT': '20',
         'DOWNLOAD_MAXSIZE': '1000000',
+        'CONCURRENT_REQUESTS': '1',
+        'REDIRECT_ENABLED': 'False',
         'ROBOTSTXT_OBEY': 'True',
         'DOWNLOAD_DELAY': '0.1',
         'REDIRECT_MAX_TIMES': '5',
@@ -179,7 +179,7 @@ class QuestionSpider(scrapy.Spider):
     ]
 
     linkRanker = LinkRanker()
-    maxPagesPerDomain = 10000
+    maxPagesPerDomain = 3000
     domainsCrawled = {}
     
     def parse(self, response):
@@ -195,6 +195,8 @@ class QuestionSpider(scrapy.Spider):
                                 callback=self.parse, 
                                 priority=self.linkRanker.get(anchor, url),
                                 dont_filter=False)
+                else:
+                    raise scrapy.exceptions.IgnoreRequest()
 
     def getDomain(self, url):
         parsed_uri = urlparse(url)
