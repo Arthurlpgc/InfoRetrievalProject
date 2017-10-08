@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+    <html>
+        <head>
+            <title>URI 1081 - DFSr - Depth Hierarchy</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="author" content="URI Online Judge; www.urionlinejudge.edu.br" />
+            <meta name="description" content="URI Online Judge - Problem 1081 - DFSr - Depth Hierarchy" />
+    
+            <link rel="stylesheet" type="text/css" href="https://urionlinejudge.r.worldssl.net/repository/default.css" />
+        </head>
+        <body>
+
+            <div class="header">
+                <span>URI Online Judge | 1081</span>
+                <h1>DFSr - Depth Hierarchy</h1>
+                <div><p>
+				By Neilor Tonin, URI <img alt="" src="https://urionlinejudge.r.worldssl.net/gallery/images/flags/br.gif" style="width: 16px; height: 11px; " /> Brazil</p>
+				</div>
+                <strong>Timelimit: 1</strong>
+            </div>
+
+            <div class="problem">
+
+                <div class="description">
+                    <p>
+	In graphs, the PathR function is well-known. It's called <strong>dfs </strong>or <strong>dfsr</strong>. It means a recursive deph-searching in nodes of a graph, using backtracking. The task here is, from an input graph, generate the hierarquie design of the searched nodes. To help you, is given the PathR procedure, listed above.</p>
+    <p>
+<p class="center">
+	<img alt="" src="https://urionlinejudge.r.worldssl.net/gallery/images/problems/UOJ_1081.jpg" style="width: 500px; height: 192px;" /></p>
+
+                </div>
+
+                <h2>Input</h2>
+
+                <div class="input">
+                    <p>
+	The input file contains many test cases. The first line of the input file contains an integer <strong>N&nbsp; </strong>that represents the quantity of test cases that follows. Each one of <strong>N </strong>test cases contains, in the first line, two informations:  (1 ≤ <strong>V</strong> ≤ 20) and <strong>E</strong> (1 ≤ <strong>E</strong> ≤ 20), that are respectively the amount of vertices and edges of the graph. Follow <strong>E </strong>lines containing informations over all of the edges of this graph.</p>
+
+                </div>
+
+                <h2>Output</h2>
+
+                <div class="output">
+                    <p>
+	For each test case, an output must be printed that represents a depth search for all nodes, with respect of the hierarquie of each of them. The character <em><strong>b</strong></em> means a blank space. See the follewing example:<br />
+	<strong><em>bb</em></strong>0-2 pathR(G,2)<br />
+	<strong><em>bbbb</em></strong>2-1 pathR(G,1)<br />
+	<strong><em>bbbb</em></strong>2-4 pathR(G,4)<br />
+	<strong><em>bbbbbb</em></strong>4-1<br />
+	<br />
+	And so on...<br />
+	Obs.: The program should print a blank line after each test case, even after the last test case.</p>
+
+                </div>
+
+                <div class="both"></div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Input Sample</td>
+                            <td>Output Sample</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="division">
+                                <p>
+	2<br />
+	12 9<br />
+	0 1<br />
+	1 5<br />
+	5 6<br />
+	0 4<br />
+	4 2<br />
+	2 3<br />
+	7 8<br />
+	1 7<br />
+	10 11<br />
+	11 8<br />
+	0 1<br />
+	1 2<br />
+	3 4<br />
+	4 3<br />
+	5 6<br />
+	6 8<br />
+	7 9<br />
+	9 10</p>
+
+                            </td>
+                            <td>
+                                <p>
+	Caso 1:<br />
+	&nbsp; 0-1 pathR(G,1)<br />
+	&nbsp;&nbsp;&nbsp; 1-5 pathR(G,5)<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5-6 pathR(G,6)<br />
+	&nbsp;&nbsp;&nbsp; 1-7 pathR(G,7)<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7-8 pathR(G,8)<br />
+	&nbsp; 0-4 pathR(G,4)<br />
+	&nbsp;&nbsp;&nbsp; 4-2 pathR(G,2)<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2-3 pathR(G,3)<br />
+	<br />
+	&nbsp; 10-11 pathR(G,11)<br />
+	<br />
+	Caso 2:<br />
+	&nbsp; 0-1 pathR(G,1)<br />
+	&nbsp;&nbsp;&nbsp; 1-2 pathR(G,2)<br />
+	<br />
+	&nbsp; 3-4 pathR(G,4)<br />
+	&nbsp;&nbsp;&nbsp; 4-3<br />
+	<br />
+	&nbsp; 5-6 pathR(G,6)<br />
+	&nbsp;&nbsp;&nbsp; 6-8 pathR(G,8)<br />
+	<br />
+	&nbsp; 7-9 pathR(G,9)<br />
+	&nbsp;&nbsp;&nbsp; 9-10 pathR(G,10)<br />
+	&nbsp;</p>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                    
+            </div>
+
+        </body>
+    </html>

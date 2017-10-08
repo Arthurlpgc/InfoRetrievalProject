@@ -20,13 +20,20 @@ class TextPipeline:
             'vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
             'tfidf__use_idf': (True, False),
             'tfidf__norm': ('l1', 'l2')
+            #information gain - feature selection
+            #stemming
+            #precision recall fmeasure
+            #area under the curve - ROC
+
         }
         #Insert clf parameters
         for key, value in clf_parameters.items():
             self.parameters.update({"clf__" + key: value})
         self.verbose = verbose
+        self.scoring = ['precision_macro', 'f1_macro', 'recall_macro', 'accuracy', 'roc_auc']
+
         #Init Grid Search
-        self.grid_search = GridSearchCV(self.pipeline, self.parameters, n_jobs=n_jobs, verbose=self.verbose)
+        self.grid_search = GridSearchCV(self.pipeline, self.parameters, n_jobs=n_jobs, verbose=self.verbose, scoring=self.scoring, refit="f1_macro")
 
 
     def fit(self, corpus, output):

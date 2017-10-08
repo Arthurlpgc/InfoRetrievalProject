@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Tips - DMOJ: Modern Online Judge
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="DMOJ,Canadian,Don Mills,DMCI,online judge,programming,code,contest,CCC,CCC Solutions,CCC 2015,IOI,JOI,COCI,DMOPC,Canada,Ontario,Toronto,grade,interactive">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#FFBB33">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+<meta name="theme-color" content="#FFBB33">
+<meta property="og:title" content="Tips - DMOJ: Modern Online Judge" />
+<meta property="og:site_name" content="DMOJ: Modern Online Judge">
+<meta property="og:url" content="https://dmoj.ca/tips/"><!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script>window.bad_browser = true</script>
+<![endif]-->
+<link rel="stylesheet" href="//dmoj.ml/static/cache/css/c8b3f96d55e0.css" type="text/css" />
+<link rel="canonical" href="https://dmoj.ca/tips/">
+<script type="text/javascript" src="//dmoj.ml/static/cache/js/90b83b3c98b1.js"></script>
+<script type="text/javascript">window.user = {};</script><script>window.user && Raven.setUserContext(window.user)</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56757436-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<noscript>
+      <style>#content {
+    margin: 80px auto auto;
+}
+
+#navigation {
+    top: 27px;
+}
+      </style>
+    </noscript>
+</head>
+<body>
+<nav id="navigation" class="unselectable">
+<div id="nav-container"><a id="navicon" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+<ul id="nav-list">
+<li class="home-nav-element"><a href="/"><img src="//dmoj.ml/static/icons/logo.d0dbdf0b98be.svg" alt="DMOJ" width="160" height="44" onerror="this.src=&quot;//dmoj.ml/static/icons/logo.2f426bc39826.png&quot;; this.onerror=null" style="border: none" /></a>
+</li>
+
+<li class="home-nav-element"><span style="width: 1px; vertical-align: middle; padding-left: 3px; display: inline-block; height: 32px; margin-right: 1px; border-right: 3px solid rgba(255, 255, 255, 0.15);"></span>
+</li>
+<li class="home-menu-item"><a href="/" class="nav-home">Home</a>
+</li>
+<li><a href="/problems/" class="nav-problem">Problems
+</a>
+</li>
+<li><a href="/submissions/" class="nav-submit">Submissions
+</a>
+</li>
+<li><a href="/users/" class="nav-user">Users
+</a>
+</li>
+<li><a href="/contests/" class="nav-contest">Contests
+</a>
+</li>
+<li><a href="/about/" class="nav-about active">About
+<div href="javascript:void(0)" class="nav-expand">></div></a>
+<ul>
+<li><a href="/status/" class="nav-status">Status
+</a>
+</li>
+<li><a href="/runtimes/" class="nav-runtimes">Runtimes
+</a>
+</li>
+<li><a href="/tips/" class="nav-tips active">Tips
+</a>
+</li>
+<li><a href="/api/" class="nav-api">API
+</a>
+</li>
+<li><a href="https://github.com/DMOJ" class="nav-github">Github
+</a>
+</li></ul>
+</li>
+</ul><span id="user-links"><span class="anon"><a href="/accounts/login/?next=/tips/"><b>Login</b></a>&nbsp;|&nbsp;<a href="/accounts/register/">Register</a></span></span>
+</div>
+<div id="nav-shadow"></div>
+</nav>
+<div id="page-container">
+<noscript>
+        <div id="noscript">This site works best with JavaScript enabled.
+        </div>
+      </noscript><br>
+<article id="content">
+<h2 style="color:#393630; display:inline">Tips
+</h2>
+<hr>
+<div id="content-body">
+<div class="content-description"><div><ul>
+<li><a href="#java-main">Java tips</a><ul>
+<li><a href="#java-input">Reading input</a></li>
+<li><a href="#java-sort">Sorting arrays</a></li>
+<li><a href="#java-hsa">hsa.Console</a></li>
+</ul>
+</li>
+<li><a href="#python-main">Python tips</a><ul>
+<li><a href="#python-speed">Execution speed</a></li>
+<li><a href="#python-in">Reading input</a></li>
+<li><a href="#python-inn">Reading real and integer values</a></li>
+<li><a href="#python-site">Using <code>site</code> functions (like <code>exit</code>)</a></li>
+</ul>
+</li>
+<li><a href="#c-main">C/C++ tips</a><ul>
+<li><a href="#c-alloc">Allocating</a></li>
+<li><a href="#cpp-io">Input and Output</a></li>
+<li><a href="#i-l-ll">int, long, and long long</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="java-main"></a></p>
+<h4>Tips for Java Contestants</h4>
+<p><a name="java-input"></a></p>
+<h5>Reading Input</h5>
+<p>Java's <code>java.util.Scanner</code> on <code>System.in</code> is <em>extremely</em> slow, having to do a really large number of highly expensive conversions. If you time out on a problem while using the <code>Scanner</code> class, consider switching to <code>java.io.BufferedReader</code> for reading input.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Scanner</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+</code></pre></div>
+<p>becomes</p>
+<div class="codehilite"><pre><span></span><code><span class="n">BufferedReader</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">InputStreamReader</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+<span class="n">String</span><span class="o">[]</span> <span class="n">tokens</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">readLine</span><span class="o">().</span><span class="na">split</span><span class="o">(</span><span class="s">" "</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">tokens</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">tokens</span><span class="o">[</span><span class="mi">1</span><span class="o">]);</span>
+</code></pre></div>
+<p>The DMOJ system patches the standard <code>System.in</code> stream with a faster alternative that allows <code>Scanner</code> to perform reasonably, but this behavior is unique to the DMOJ - your code won't run as fast on most other contest systems. Therefore, you should attempt to use <code>BufferedReader</code> whenever you need to read input. <strong>It's over 100 times faster!</strong></p>
+<p><a name="java-sort"></a></p>
+<h5>Sorting Arrays</h5>
+<p>Java 7 uses a dual-pivot quicksort algorithm to sort primitive arrays. While this provides fast sorting in most cases, it has a worst-case time complexity of <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<msup>
+<mi>N</mi>
+<mn>2</mn>
+</msup>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">\mathcal{O}(N^2)</annotation>
+</semantics>
+</math> - terrible for large arrays. If your code times out while using <code>Arrays.sort(primitive[])</code>, consider using <code>Collections.sort</code> or <code>Arrays.sort(Object[])</code>. The latter uses a Timsort implementation, which is guaranteed <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<mi>N</mi>
+<mi>log</mi>
+<mo>⁡</mo>
+<mi>N</mi>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">\mathcal{O}(N \log N)</annotation>
+</semantics>
+</math> worst case performance: much faster than quicksort's <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi class="MJX-tex-caligraphic" mathvariant="script">O</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<msup>
+<mi>N</mi>
+<mn>2</mn>
+</msup>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">\mathcal{O}(N^2)</annotation>
+</semantics>
+</math>. In most cases, converting code using primitive sorting to Object sorting is trivial:</p>
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">N</span><span class="o">];</span>
+<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="o">...</span>
+<span class="o">}</span>
+<span class="n">Arrays</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">a</span><span class="o">);</span>
+</code></pre></div>
+<p>becomes</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Integer</span><span class="o">[]</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="o">[</span><span class="n">N</span><span class="o">];</span>
+<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="o">...</span>
+<span class="o">}</span>
+<span class="n">Arrays</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">a</span><span class="o">);</span>
+</code></pre></div>
+<p>The only difference in the two variations is the change from an <code>int</code> datatype to an <code>Integer</code> datatype. In most aspects they are equivalent, except that <code>Integer</code>s are objects (and hence use the <code>Array.sort(Object[])</code> method overload, instead of the <em>potentially</em> much slower <code>Arrays.sort(int[])</code>).</p>
+<p>Do note, however, that sorting on <code>Object</code> arrays is <em>generally</em> much slower than sorting on primitive arrays. When you're sure primitive array sorting will do fine (and it usually does), do not use <code>Object</code> array sorting.</p>
+<p><a name="java-hsa"></a></p>
+<h5>hsa.Console</h5>
+<p>Some ICS courses teach the usage of the <code>hsa.Console</code> object for doing console manipulation. <strong>The DMOJ does <em>not</em> support the <code>hsa.Console</code> class</strong>. The DMOJ is primarily a text-based input/output system, so using standard IO methods is required.</p>
+<p>Essentially, you should use <code>System.out.print</code> instead of <code>hsa.Console.print</code>, and the <code>BufferedReader</code> or <code>Scanner</code> (discouraged: see above) classes instead of <code>hsa.Console.readChar</code>.</p>
+<p></p><hr>
+<a name="python-main"></a>
+<h4>Tips for Python Contestants</h4>
+<p><a name="python-speed"></a></p>
+<h5>Execution Speed</h5>
+<p>Python, being an interpreted language, is <em>very noticeably</em> slower than compiled languages such as C, C++, or Java. <strong>The speed difference is so significant that Python may be up to <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mn>100</mn>
+<annotation encoding="application/x-tex">100</annotation>
+</semantics>
+</math> to <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mn>400</mn>
+<annotation encoding="application/x-tex">400</annotation>
+</semantics>
+</math> times slower than the aforementioned languages</strong>. In the real world, this is less of a problem than on algorithmic competitions and online judges. This issue can be alleviated by the usage of the PyPy interpreter (as opposed to the CPython interpreter), so if you're sure your solution is correct, but times out, try resubmitting with PyPy. Many problems on this judge are designed so that a solution with a good running time in Python can get Accepted, but you should note that for some problems, it is <strong>impossible</strong> to get Python accepted. The reason is that if the time limits were set so that a correct Python can pass, an incorrect solution in faster languages such as C, C++, or Java would also pass. Unfortunately, there is nothing we can do with the judge to make your Python submissions run as fast as C, so the best you can do is to learn one of the aforementioned languages (if you haven't already) to use in times when Python just isn't fast enough. However, Python programmers don't have to be discouraged. It is perfectly possible to write Python solutions which can perform faster than compiled languages.</p>
+<p><a name="python-in"></a></p>
+<h5>Reading Input</h5>
+<p>Often, your program will be bottlenecked not by your algorithm's speed but by the speed that you can read and write data from input and to output. You can speed up input by reading directly from <code>sys.stdin</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="p">:</span>
+    <span class="c1"># Do something</span>
+</code></pre></div>
+<p><code>sys.stdin</code> is a file-like object. That is, you can manipulate it just as you would a file returned by <code>open</code>.</p>
+<p>A quick technique for faster input is to simply use <code>sys.stdin.readline</code> in place of all your string input calls.</p>
+<p>For Python 2, this means</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">raw_input</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span>
+</code></pre></div>
+<p>For Python 3, this means</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">input</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span>
+</code></pre></div>
+<p>An even faster and better solution is to buffer all of the problem input (if you know the input will be of a manageable size), and parse it yourself:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">all_data</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+</code></pre></div>
+<p>The above example stores all the lines of input in a list <code>all_data</code>. <code>all_data[0]</code> contains the first line of input, <code>all_data[1]</code> contains the second and so on. <em>This is the fastest possible way to input data in Python</em>.</p>
+<p><a name="python-inn"></a></p>
+<h5>Faster Reading of Real and Integer Values</h5>
+<p>This section is solely for Python 2 contestants (Python 3 does not have this issue).</p>
+<p>If struggling with IO speed, an easy technique is to change all your <code>input</code> calls to <code>sys.stdin.readline</code> calls and perform the casting yourself. If you know that <code>N</code> will be an integer, you can scrap the <code>input</code> call and do the type conversion yourself.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">N</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+</code></pre></div>
+<p>becomes</p>
+<div class="codehilite"><pre><span></span><code><span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+</code></pre></div>
+<p><strong>Performing your own casting is much faster!</strong> It also protects you from nasty trailing returns in input that may exist on other online judges.</p>
+<p>Benchmark data (Python 2), reading a million ints from standard input:</p>
+<ul>
+<li><code>input()</code>: <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mn>4.87823</mn>
+<annotation encoding="application/x-tex">4.87823</annotation>
+</semantics>
+</math> seconds</li>
+<li><code>int(raw_input())</code>: <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mn>4.83112</mn>
+<annotation encoding="application/x-tex">4.83112</annotation>
+</semantics>
+</math> seconds</li>
+<li><code>raw_input = sys.stdin.readline; int(raw_input())</code>: <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mn>0.69960</mn>
+<annotation encoding="application/x-tex">0.69960</annotation>
+</semantics>
+</math> seconds</li>
+</ul>
+<p>It is without any doubt that <code>int(sys.stdin.readline())</code> should be used to read integers, <code>float(sys.stdin.readline())</code> for real numbers and so on. <strong>Python 3 contestants should also make use of <code>sys.stdin</code> whenever they can.</strong></p>
+<p><a name="python-site"></a></p>
+<h5>Using <code>site</code> functions (like <code>exit</code>)</h5>
+<p>The DMOJ denies access to the <code>site</code> module, so functions that are injected into the builtin namespace — like <code>exit</code> — are disallowed.</p>
+<p><a name="c-main"></a></p>
+<h4>Tips for C/C++ Contestants</h4>
+<p><a name="c-alloc"></a></p>
+<h5>Allocating</h5>
+<p>Refrain from declaring big arrays as local variables, as it will often cause you to run out of stack space and fail with a Runtime Error.</p>
+<p>Instead of doing:</p>
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">N</span><span class="p">;</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">N</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>consider:</p>
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">100001</span><span class="p">];</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">N</span><span class="p">;</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">N</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Declaring big arrays in global scope is a much safer approach as long as you know the maximum bound of N (and almost all problems give you upper bounds). Be wary of out of bounds array indices, though.</p>
+<p><a name="cpp-io"></a></p>
+<h5>Input and Output</h5>
+<p>It is recommended for C++ users to use C-style input and output, namely <code>scanf</code> and <code>printf</code> instead of <code>cin</code> and <code>cout</code> for performance reasons.</p>
+<p>If you must use <code>cin</code> and <code>cout</code>, you can put these two lines of code at the top of your main function:</p>
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">cin</span><span class="p">.</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>to speed up the <code>cin</code> stream. This will unsync <code>cin</code> with <code>scanf</code> and <code>cout</code>. Note that you should not use <code>scanf</code> after unsyncing with <code>stdio</code>.</p>
+<p>Additionally, you should not use <code>endl</code>, but rather <code>\n</code> to output newlines when flushing is not required. <code>endl</code>'s flushing behavior can potentially cause your program to receive TLE instead of AC.</p>
+<p>Finally, if the problem only requires unsigned integral data types to be read, you can prepend this macro to the top of your source:</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">#define scan(x) do{while((x=getchar())&lt;'0'); for(x-='0'; '0'&lt;=(_=getchar()); x=(x&lt;&lt;3)+(x&lt;&lt;1)+_-'0');}while(0)</span>
+<span class="kt">char</span> <span class="n">_</span><span class="p">;</span>
+</code></pre></div>
+<p>Instead of <code>std::cin &gt;&gt; n</code>, or <code>scanf("%d", &amp;n)</code>, you would use <code>scan(n)</code>.</p>
+<p><a name="i-l-ll"></a></p>
+<h5><code>int</code>, <code>long</code>, and <code>long long</code></h5>
+<p>On the judge, <code>int</code> is 32-bit, <code>long long</code> is 64-bit, and <code>long</code> can be either 32- or 64-bit depending on which judge your submission is graded on. Therefore, it is recommended to use either <code>int</code> or <code>long long</code>, but not <code>long</code>.</p>
+</div>
+</div>
+</div>
+</article>
+<footer><span id="footer-content"><br><a style="color: rgb(128, 128, 128)" href="//github.com/DMOJ/">fork us on <span style="font-weight:bold">Github</span></a> | <a style="color: rgb(128, 128, 128);" href="//www.facebook.com/dmoj.ca">like us on <span style="font-weight: bold;">Facebook</span></a> | <a style="color: rgb(128, 128, 128)" href="https://translate.dmoj.ca/">help us <span style="font-weight: bold;">translate</span></a> | <a style="color: rgb(128, 128, 128)" href="https://dmoj.ca/tos/">terms of service</a>
+|
+<form action="/i18n/setlang/" method="post" style="display: inline"><input type='hidden' name='csrfmiddlewaretoken' value='b66KtuZgP1LttiVueCvKMteO4pqOpIMgQW0Sds1nSyeQsPnpcMAc61qBsN7xisZA' />
+<input name="next" type="hidden" value="/tips/">
+<select name="language" onchange="form.submit()" style="height: 1.5em">
+<option value="de">Deutsch (de)
+</option>
+<option value="en" selected="">English (en)
+</option>
+<option value="fr">français (fr)
+</option>
+<option value="ro">Română (ro)
+</option>
+<option value="ru">Русский (ru)
+</option>
+<option value="sr-latn">srpski (latinica) (sr-latn)
+</option>
+<option value="vi">Tiếng Việt (vi)
+</option>
+<option value="zh-hans">简体中文 (zh-hans)
+</option>
+</select>
+</form></span>
+</footer>
+</div>
+</body>
+</html>

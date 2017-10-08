@@ -1,0 +1,5491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>User kobortor - DMOJ: Modern Online Judge
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="DMOJ,Canadian,Don Mills,DMCI,online judge,programming,code,contest,CCC,CCC Solutions,CCC 2015,IOI,JOI,COCI,DMOPC,Canada,Ontario,Toronto,grade,interactive">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#FFBB33">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+<meta name="theme-color" content="#FFBB33">
+<meta property="og:title" content="User kobortor - DMOJ: Modern Online Judge">
+<meta property="og:site_name" content="DMOJ: Modern Online Judge">
+<meta property="og:url" content="https://dmoj.ca/user/kobortor/solved"><!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script>window.bad_browser = true</script>
+<![endif]-->
+<link rel="stylesheet" href="//dmoj.ml/static/cache/css/c8b3f96d55e0.css" type="text/css" />
+<link rel="canonical" href="https://dmoj.ca/user/kobortor/solved">
+<style>a.edit-profile {
+    float: right;
+    padding-top: 1em;
+}
+
+.user-problem-group h3 {
+    font-weight: 600;
+    font-size: 1.25em;
+    margin-bottom: -10px;
+    max-height: 20%;
+    line-height: 2.5em;
+}
+
+.user-problem-group ul {
+    -webkit-columns: 300px 4;
+    -moz-columns: 300px 4;
+    columns: 300px 4;
+    list-style-type: none;
+    margin-top: 0;
+    margin-left: -20px;
+    margin-bottom: 0;
+}
+
+.user-problem-group a img {
+    max-width: 1em;
+    margin-right: 3px;
+    padding-bottom: 1px;
+    vertical-align: middle;
+}
+
+.user-info-cell {
+    padding-left: 15px;
+    border-left: 1px solid #CCC;
+}
+
+.contest-history-cell {
+    border-left: 1px solid #CCC;
+    padding: 0 0.5em;
+}
+
+table td {
+    margin: 0;
+    vertical-align: top;
+}
+
+.strike {
+    text-align: right;
+    overflow: hidden;
+}
+
+.strike > span {
+    position: relative;
+    display: inline-block;
+}
+
+.strike > span:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100000px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.2);
+    right: 100%;
+    margin-right: 5px;
+}
+
+.pp {
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+.pp-scaled {
+    font-size: 0.8em;
+}
+
+.pp-weighted {
+    color: #777;
+}
+
+td.sub-pp {
+    text-align: right;
+}
+
+#load-link-wrapper {
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+#load-more-link {
+    display: block;
+    padding: 0.5em 0;
+}
+
+td.problem-name {
+    text-align: left;
+    padding-left: 1em;
+}
+
+td.problem-score {
+    width: 80px;
+}
+
+td.problem-category {
+    width: 100px;
+}
+
+.breakdown-header {
+    font-weight: 600;
+    font-size: 1.25em;
+    margin-bottom: 0.2em;
+}
+</style>
+<style>.user-gravatar {
+    display: block;
+    padding-right: 15px;
+    width: 135px;
+}
+
+.user-gravatar img {    
+    width: 135px;
+    height: 135px;
+    display: block;
+    border-radius: 6px;
+}
+
+.page-title {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+.user-content {
+    width: 100%;
+}
+</style><script type="text/javascript" src="//dmoj.ml/static/cache/js/90b83b3c98b1.js"></script>
+<script type="text/javascript">$(function () {
+    register_update_relative(function () {
+        return $('.pp-table').find('span.time');
+    }, function (when) {
+        return Math.abs(moment().diff(when, 'years')) < 1;
+    });
+});
+window.show_pp_base = 1;
+window.currently_requesting_pp = false;
+window.load_more_pp = function () {
+    if (window.currently_requesting_pp) return;
+    window.currently_requesting_pp = true;
+
+    $.get('/user/kobortor/solved/ajax', {
+        start: window.show_pp_base * 10,
+        end: (window.show_pp_base + 1) * 10
+    }).done(function (data) {
+        $('table.pp-table').append(data['results']);
+        window.show_pp_base++;
+        if (!data['has_more']) {
+            $("#load-link-wrapper").hide();
+        }
+        window.currently_requesting_pp = false;
+    });
+};
+</script>
+<script type="text/javascript">window.user = {};</script><script>window.user && Raven.setUserContext(window.user)</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56757436-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<noscript>
+      <style>#content {
+    margin: 80px auto auto;
+}
+
+#navigation {
+    top: 27px;
+}
+      </style>
+    </noscript>
+</head>
+<body>
+<nav id="navigation" class="unselectable">
+<div id="nav-container"><a id="navicon" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+<ul id="nav-list">
+<li class="home-nav-element"><a href="/"><img src="//dmoj.ml/static/icons/logo.d0dbdf0b98be.svg" alt="DMOJ" width="160" height="44" onerror="this.src=&quot;//dmoj.ml/static/icons/logo.2f426bc39826.png&quot;; this.onerror=null" style="border: none" /></a>
+</li>
+
+<li class="home-nav-element"><span style="width: 1px; vertical-align: middle; padding-left: 3px; display: inline-block; height: 32px; margin-right: 1px; border-right: 3px solid rgba(255, 255, 255, 0.15);"></span>
+</li>
+<li class="home-menu-item"><a href="/" class="nav-home">Home</a>
+</li>
+<li><a href="/problems/" class="nav-problem">Problems
+</a>
+</li>
+<li><a href="/submissions/" class="nav-submit">Submissions
+</a>
+</li>
+<li><a href="/users/" class="nav-user active">Users
+</a>
+</li>
+<li><a href="/contests/" class="nav-contest">Contests
+</a>
+</li>
+<li><a href="/about/" class="nav-about">About
+<div href="javascript:void(0)" class="nav-expand">></div></a>
+<ul>
+<li><a href="/status/" class="nav-status">Status
+</a>
+</li>
+<li><a href="/runtimes/" class="nav-runtimes">Runtimes
+</a>
+</li>
+<li><a href="/tips/" class="nav-tips">Tips
+</a>
+</li>
+<li><a href="/api/" class="nav-api">API
+</a>
+</li>
+<li><a href="https://github.com/DMOJ" class="nav-github">Github
+</a>
+</li></ul>
+</li>
+</ul><span id="user-links"><span class="anon"><a href="/accounts/login/?next=/user/kobortor/solved"><b>Login</b></a>&nbsp;|&nbsp;<a href="/accounts/register/">Register</a></span></span>
+</div>
+<div id="nav-shadow"></div>
+</nav>
+<div id="page-container">
+<noscript>
+        <div id="noscript">This site works best with JavaScript enabled.
+        </div>
+      </noscript><br>
+<article id="content">
+<div class="page-title">
+<div style="margin: 0px 0px 8px;padding:0px;width:100%" class="tabs">
+<h2 style="color:#393630; display: inline-block">User kobortor</h2><span class="spacer"></span>
+<ul>
+<li class=""><a href="/user/kobortor">About</a>
+</li>
+<li class="active"><a href="/user/kobortor/solved">Problems</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content-body">
+<table>
+<tr>
+<td style="padding-left:1em">
+<div class="user-gravatar"><img src="//www.gravatar.com/avatar/69d89c3331a05ed90b0523de4d8d6d84?s=135&d=identicon" alt="gravatar" width="135px" height="135px" />
+</div><br />
+<b>744 problems solved</b><br /><b class="semibold">Rank by points:</b> #6<br /><b class="semibold">Total points:</b><span title="708.12"> 708</span><br /><br /><a href="/submissions/user/kobortor/">View submissions</a><br />
+</td>
+<td class="user-content">
+<h3 class="breakdown-header">Points Breakdown</h3>
+<table id="submissions-table" class="pp-table table">
+<colgroup>
+<col class="sub-result" />
+<col class="sub-info" />
+<col class="sub-pp" />
+</colgroup>
+<tbody>
+<tr>
+<td class="sub-result AC">
+<div class="score">100 / 100
+</div>
+<div class="state"><span title="Accepted" class="status">AC</span> | <span class="language">C++14</span>
+</div>
+</td>
+<td colspan="2" class="sub-info">
+<div class="name"><a href="/problem/ioi14p6">IOI &#39;14 P6 - Holiday</a>
+</div>
+<div><span data-unix="2017-04-07T03:41:17+00:00" class="time"><span class="relative">on April 6, 2017</span></span>
+</div>
+</td>
+<td class="sub-pp sub-usage">
+<div class="pp"><a href="/submission/465951">40pp</a>
+</div>
+<div class="pp-weighted">weighted
+<b>100%</b>
+(40pp)
+</div>
+</td>
+</tr>
+<tr>
+<td class="sub-result AC">
+<div class="score">100 / 100
+</div>
+<div class="state"><span title="Accepted" class="status">AC</span> | <span class="language">C++14</span>
+</div>
+</td>
+<td colspan="2" class="sub-info">
+<div class="name"><a href="/problem/ioi15p6">IOI &#39;15 P6 - Towns</a>
+</div>
+<div><span data-unix="2016-11-21T01:56:29+00:00" class="time"><span class="relative">on Nov. 20, 2016</span></span>
+</div>
+</td>
+<td class="sub-pp sub-usage">
+<div class="pp"><a href="/submission/313293">40pp</a>
+</div>
+<div class="pp-weighted">weighted
+<b>95%</b>
+(38pp)
+</div>
+</td>
+</tr>
+<tr>
+<td class="sub-result AC">
+<div class="score">100 / 100
+</div>
+<div class="state"><span title="Accepted" class="status">AC</span> | <span class="language">C++14</span>
+</div>
+</td>
+<td colspan="2" class="sub-info">
+<div class="name"><a href="/problem/tree3">Mine and Tree</a>
+</div>
+<div><span data-unix="2016-11-04T03:51:13+00:00" class="time"><span class="relative">on Nov. 3, 2016</span></span>
+</div>
+</td>
+<td class="sub-pp sub-usage">
+<div class="pp"><a href="/submission/299240">40pp</a>
+</div>
+<div class="pp-weighted">weighted
+<b>90%</b>
+(36pp)
+</div>
+</td>
+</tr>
+<tr>
+<td class="sub-result AC">
+<div class="score">100 / 100
+</div>
+<div class="state"><span title="Accepted" class="status">AC</span> | <span class="language">C++14</span>
+</div>
+</td>
+<td colspan="2" class="sub-info">
+<div class="name"><a href="/problem/joi14p1">JOI &#39;14 - Factories</a>
+</div>
+<div><span data-unix="2017-08-13T22:29:25+00:00" class="time"><span class="relative">on Aug. 13, 2017</span></span>
+</div>
+</td>
+<td class="sub-pp sub-usage">
+<div class="pp"><a href="/submission/565816">30pp</a>
+</div>
+<div class="pp-weighted">weighted
+<b>86%</b>
+(26pp)
+</div>
+</td>
+</tr>
+<tr>
+<td class="sub-result AC">
+<div class="score">100 / 100
+</div>
+<div class="state"><span title="Accepted" class="status">AC</span> | <span class="language">C++14</span>
+</div>
+</td>
+<td colspan="2" class="sub-info">
+<div class="name"><a href="/problem/coi06p2">COI &#39;06 #2 Policija</a>
+</div>
+<div><span data-unix="2017-08-13T20:10:57+00:00" class="time"><span class="relative">on Aug. 13, 2017</span></span>
+</div>
+</td>
+<td class="sub-pp sub-usage">
+<div class="pp"><a href="/submission/565745">30pp</a>
+</div>
+<div class="pp-weighted">weighted
+<b>81%</b>
+(24pp)
+</div>
+</td>
+</tr>
+<tr>
+<td class="sub-result AC">
+<div class="score">10 / 10
+</div>
+<div class="state"><span title="Accepted" class="status">AC</span> | <span class="language">C++14</span>
+</div>
+</td>
+<td colspan="2" class="sub-info">
+<div class="name"><a href="/problem/coci06c6p6">COCI &#39;06 Contest 6 #6 Prostor</a>
+</div>
+<div><span data-unix="2017-06-24T22:22:29+00:00" class="time"><span class="relative">on June 24, 2017</span></span>
+</div>
+</td>
+<td class="sub-pp sub-usage">
+<div class="pp"><a href="/submission/530815">30pp</a>
+</div>
+<div class="pp-weighted">weighted
+<b>77%</b>
+(23pp)
+</div>
+</td>
+</tr>
+<tr>
+<td class="sub-result AC">
+<div class="score">100 / 100
+</div>
+<div class="state"><span title="Accepted" class="status">AC</span> | <span class="language">C++14</span>
+</div>
+</td>
+<td colspan="2" class="sub-info">
+<div class="name"><a href="/problem/coci07c5p6">COCI &#39;07 Contest 5 #6 Baza</a>
+</div>
+<div><span data-unix="2017-06-22T19:29:47+00:00" class="time"><span class="relative">on June 22, 2017</span></span>
+</div>
+</td>
+<td class="sub-pp sub-usage">
+<div class="pp"><a href="/submission/529100">30pp</a>
+</div>
+<div class="pp-weighted">weighted
+<b>74%</b>
+(22pp)
+</div>
+</td>
+</tr>
+<tr>
+<td class="sub-result AC">
+<div class="score">20 / 20
+</div>
+<div class="state"><span title="Accepted" class="status">AC</span> | <span class="language">C++14</span>
+</div>
+</td>
+<td colspan="2" class="sub-info">
+<div class="name"><a href="/problem/cco15p6">CCO &#39;15 P6 - Eggscavation</a>
+</div>
+<div><span data-unix="2017-04-02T00:30:59+00:00" class="time"><span class="relative">on April 1, 2017</span></span>
+</div>
+</td>
+<td class="sub-pp sub-usage">
+<div class="pp"><a href="/submission/460921">30pp</a>
+</div>
+<div class="pp-weighted">weighted
+<b>70%</b>
+(21pp)
+</div>
+</td>
+</tr>
+<tr>
+<td class="sub-result AC">
+<div class="score">100 / 100
+</div>
+<div class="state"><span title="Accepted" class="status">AC</span> | <span class="language">C++14</span>
+</div>
+</td>
+<td colspan="2" class="sub-info">
+<div class="name"><a href="/problem/dmopc14c4p5">DMOPC &#39;14 Contest 5 P5 - Aircraft Carrier Akagi</a>
+</div>
+<div><span data-unix="2017-03-28T15:09:31+00:00" class="time"><span class="relative">on March 28, 2017</span></span>
+</div>
+</td>
+<td class="sub-pp sub-usage">
+<div class="pp"><a href="/submission/446858">30pp</a>
+</div>
+<div class="pp-weighted">weighted
+<b>66%</b>
+(20pp)
+</div>
+</td>
+</tr>
+<tr>
+<td class="sub-result AC">
+<div class="score">25 / 25
+</div>
+<div class="state"><span title="Accepted" class="status">AC</span> | <span class="language">C++14</span>
+</div>
+</td>
+<td colspan="2" class="sub-info">
+<div class="name"><a href="/problem/cco16p3">CCO &#39;16 P3 - Legends</a>
+</div>
+<div><span data-unix="2017-03-28T02:29:22+00:00" class="time"><span class="relative">on March 27, 2017</span></span>
+</div>
+</td>
+<td class="sub-pp sub-usage">
+<div class="pp"><a href="/submission/446672">30pp</a>
+</div>
+<div class="pp-weighted">weighted
+<b>63%</b>
+(19pp)
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="load-link-wrapper"><a id="load-more-link" href="javascript:load_more_pp();">Load more...</a>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>Authored Problems (15)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Category</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/bfs17p4">Back From Summer &#39;17 P4: Pair Programming</a>
+</td>
+<td class="problem-category">Seasonal</td>
+<td class="problem-score"><a href="/problem/bfs17p4/rank/">12p</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c3p5">TLE &#39;16 Contest 3 P5 - LAN Party</a>
+</td>
+<td class="problem-category">TLE</td>
+<td class="problem-score"><a href="/problem/tle16c3p5/rank/">15p</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc15c1p5">TSOC &#39;15 Contest 1 #5 - Giant Ants</a>
+</td>
+<td class="problem-category">TSOC</td>
+<td class="problem-score"><a href="/problem/tsoc15c1p5/rank/">10p</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc15c2p4">TSOC &#39;15 Contest 2 #4 - Dungeon Crawling</a>
+</td>
+<td class="problem-category">TSOC</td>
+<td class="problem-score"><a href="/problem/tsoc15c2p4/rank/">10</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc15c2p5">TSOC &#39;15 Contest 2 #5 - Bebiliths</a>
+</td>
+<td class="problem-category">TSOC</td>
+<td class="problem-score"><a href="/problem/tsoc15c2p5/rank/">7p</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc15c2p6">TSOC &#39;15 Contest 2 #6 - All-Out War!</a>
+</td>
+<td class="problem-category">TSOC</td>
+<td class="problem-score"><a href="/problem/tsoc15c2p6/rank/">15p</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc16c1p1">Vasile and Haircuts</a>
+</td>
+<td class="problem-category">TSOC</td>
+<td class="problem-score"><a href="/problem/tsoc16c1p1/rank/">3</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc16c1p2">Johnny and Garden</a>
+</td>
+<td class="problem-category">TSOC</td>
+<td class="problem-score"><a href="/problem/tsoc16c1p2/rank/">5p</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc16c1p3">You and Crossroads</a>
+</td>
+<td class="problem-category">TSOC</td>
+<td class="problem-score"><a href="/problem/tsoc16c1p3/rank/">5p</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc16c1p4">Alex and Animal Rights</a>
+</td>
+<td class="problem-category">TSOC</td>
+<td class="problem-score"><a href="/problem/tsoc16c1p4/rank/">7p</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc16c1p5">Max and Cards</a>
+</td>
+<td class="problem-category">TSOC</td>
+<td class="problem-score"><a href="/problem/tsoc16c1p5/rank/">7p</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc16c1p6">Joey and Biology</a>
+</td>
+<td class="problem-category">TSOC</td>
+<td class="problem-score"><a href="/problem/tsoc16c1p6/rank/">12p</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc16c2p2">Oh My!</a>
+</td>
+<td class="problem-category">TSOC</td>
+<td class="problem-score"><a href="/problem/tsoc16c2p2/rank/">10</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc16c2p5">Last Trip to Surface</a>
+</td>
+<td class="problem-category">TSOC</td>
+<td class="problem-score"><a href="/problem/tsoc16c2p5/rank/">20</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2017p7">Santa&#39;s Deliveries</a>
+</td>
+<td class="problem-category">Seasonal</td>
+<td class="problem-score"><a href="/problem/year2017p7/rank/">25p</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>ACM-ICPC
+(37.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/naq16d">ICPC NAQ 2016 D - Brackets</a>
+</td>
+<td class="problem-score"><a href="/problem/naq16d/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/naq16g">ICPC NAQ 2016 G - Inverse Factorial</a>
+</td>
+<td class="problem-score"><a href="/problem/naq16g/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/naq16l">Unusual Darts</a>
+</td>
+<td class="problem-score"><a href="/problem/naq16l/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>APIO
+(118.8 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/apio10p1">APIO &#39;10 P1 - Commando</a>
+</td>
+<td class="problem-score"><a href="/problem/apio10p1/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/apio12p1">APIO &#39;12 P1 - Dispatching</a>
+</td>
+<td class="problem-score"><a href="/problem/apio12p1/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/apio15p1">APIO &#39;15 P1 - Bali Sculptures</a>
+</td>
+<td class="problem-score"><a href="/problem/apio15p1/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/apio15p2">APIO &#39;15 P2 - Jakarta Skyscrapers</a>
+</td>
+<td class="problem-score"><a href="/problem/apio15p2/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/apio15p3">APIO &#39;15 P3 - Palembang Bridges</a>
+</td>
+<td class="problem-score"><a href="/problem/apio15p3/submissions/kobortor/">13.8 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/apio16p1">APIO &#39;16 P1 - Boat</a>
+</td>
+<td class="problem-score"><a href="/problem/apio16p1/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>CCC
+(978.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/ccc01j1">CCC &#39;01 J1 - Dressing Up</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc01j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc01j2">CCC &#39;01 J2 - Mod Inverse</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc01j2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc02j2">CCC &#39;02 J2 - AmeriCanadian</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc02j2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc02s1">CCC &#39;02 S1 - The Students&#39; Council Breakfast</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc02s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc02s2">CCC &#39;02 S2 - Fraction Action</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc02s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc03j1">CCC &#39;03 J1 - Trident</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc03j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc03j2">CCC &#39;03 J2 - Picture Perfect</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc03j2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc03s1">CCC &#39;03 S1 - Snakes and Ladders</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc03s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc03s2">CCC &#39;03 S2 - Poetry</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc03s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc03s3">CCC &#39;03 S3 - Floor Plan</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc03s3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc03s4">CCC &#39;03 S4 - Substrings</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc03s4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc03s5">CCC &#39;03 S5 - Trucking Troubles</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc03s5/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc04j1">CCC &#39;04 J1 - Squares</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc04j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc04j2">CCC &#39;04 J2 - Terms of Office</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc04j2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc04j3">CCC &#39;04 J3 - Smile with Similes</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc04j3/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc04j4">CCC &#39;04 J4 - Simple Encryption</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc04j4/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc04j5">CCC &#39;04 J5 - Fractals</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc04j5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc04s1">CCC &#39;04 S1 - Fix</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc04s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc05j1">CCC &#39;05 J1 - The Cell Sell</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc05j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc05j2">CCC &#39;05 J2 - RSA Numbers</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc05j2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc05j3">CCC &#39;05 J3 - Returning Home</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc05j3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc05j5">CCC &#39;05 J5 - Bananas</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc05j5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc05s1">CCC &#39;05 S1 - Snow Calls</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc05s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc05s2">CCC &#39;05 S2 - Mouse Move</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc05s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc05s5">CCC &#39;05 S5 - Pinball Ranking</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc05s5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc06j1">CCC &#39;06 J1 - Canadian Calorie Counting</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc06j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc06j2">CCC &#39;06 J2 - Roll the Dice</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc06j2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc06j3">CCC &#39;06 J3 - Cell-Phone Messaging</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc06j3/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc06j4">CCC &#39;06 J4 - It&#39;s tough being a teen!</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc06j4/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc06s1">CCC &#39;06 S1 - Maternity</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc06s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc06s2">CCC &#39;06 S2 - Attack of the CipherTexts</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc06s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc06s3">CCC &#39;06 S3 - Tin Can Telephone</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc06s3/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc06s4">CCC &#39;06 S4 - Groups</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc06s4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc06s5">CCC &#39;06 S5 - Origin of Life</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc06s5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc07j1">CCC &#39;07 J1 - Who is in the Middle?</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc07j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc07j2">CCC &#39;07 J2 - I Speak TXTMSG</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc07j2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc07j3">CCC &#39;07 J3 - Deal or No Deal Calculator</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc07j3/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc07j5">CCC &#39;07 J5 - Keep on Truckin&#39;</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc07j5/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc07s1">CCC &#39;07 S1 - Federal Voting Age</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc07s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc07s2">CCC &#39;07 S2 - Boxes</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc07s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc07s3">CCC &#39;07 S3 - Friends</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc07s3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc07s4">CCC &#39;07 S4 - Waterpark</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc07s4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc07s5">CCC &#39;07 S5 - Bowling for Numbers</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc07s5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc08j1">CCC &#39;08 J1 - Body Mass Index</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc08j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc08j2">CCC &#39;08 J2 - Do the Shuffle</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc08j2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc08j3">CCC &#39;08 J3 - GPS Text Entry</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc08j3/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc08j4">CCC &#39;08 J4 - From Prefix to Postfix</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc08j4/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc08s1">CCC &#39;08 S1 - It&#39;s Cold Here!</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc08s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc08s2">CCC &#39;08 S2 - Pennies in the Ring</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc08s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc08s3">CCC &#39;08 S3 - Maze</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc08s3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc08s5">CCC &#39;08 S5 - Nukit</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc08s5/submissions/kobortor/">9.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc09j1">CCC &#39;09 J1 - ISBN</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc09j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc09j2">CCC &#39;09 J2 - Old Fishin&#39; Hole</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc09j2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc09j3">CCC &#39;09 J3 - Good Times</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc09j3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc09j4">CCC &#39;09 J4 - Signage</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc09j4/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+ </tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc09j5">CCC &#39;09 J5 - Degrees Of Separation</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc09j5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc09s1">CCC &#39;09 S1 - Cool Numbers</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc09s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc09s2">CCC &#39;09 S2 - Lights Going on and Off</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc09s2/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc09s4">CCC &#39;09 S4 - Shop and Ship</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc09s4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc09s5">CCC &#39;09 S5 - Wireless</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc09s5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc10j1">CCC &#39;10 J1 - What is n, Daddy?</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc10j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc10j2">CCC &#39;10 J2 - Up and Down</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc10j2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc10j3">CCC &#39;10 J3 - Punchy</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc10j3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc10j4">CCC &#39;10 J4 - Global Warming</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc10j4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc10j5">CCC &#39;10 J5 - Knight Hop</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc10j5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc10s1">CCC &#39;10 S1 - Computer Purchase</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc10s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc10s2">CCC &#39;10 S2 - Huffman Encoding</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc10s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc10s3">CCC &#39;10 S3 - Firehose</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc10s3/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc10s4">CCC &#39;10 S4 - Animal Farm</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc10s4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc10s5">CCC &#39;10 S5 - Nutrient Tree</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc10s5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc11j1">CCC &#39;11 J1 - Which Alien?</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc11j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc11j2">CCC &#39;11 J2 - Who Has Seen The Wind</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc11j2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc11j3">CCC &#39;11 J3 - Sumac Sequences</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc11j3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc11j4">CCC &#39;11 J4 - Boring Business</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc11j4/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc11j5">CCC &#39;11 J5 - Unfriend</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc11j5/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc11s1">CCC &#39;11 S1 - English or French?</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc11s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc11s2">CCC &#39;11 S2 - Multiple Choice</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc11s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc11s3">CCC &#39;11 S3 - Alice Through the Looking Glass</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc11s3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc11s4">CCC &#39;11 S4 - Blood Distribution</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc11s4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc11s5">CCC &#39;11 S5 - Switch</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc11s5/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc12j1">CCC &#39;12 J1 - Speed fines are not fine!</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc12j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc12j2">CCC &#39;12 J2 - Sounds fishy!</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc12j2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc12j3">CCC &#39;12 J3 - Icon Scaling</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc12j3/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc12j4">CCC &#39;12 J4 - Big Bang Secrets</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc12j4/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc12s1">CCC &#39;12 S1 - Don&#39;t pass me the ball!</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc12s1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc12s2">CCC &#39;12 S2 - Aromatic Numbers</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc12s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc12s3">CCC &#39;12 S3 - Absolutely Acidic</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc12s3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc12s4">CCC &#39;12 S4 - A Coin Game</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc12s4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc12s5">CCC &#39;12 S5 - Mouse Journey</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc12s5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc13j1">CCC &#39;13 J1 - Next in line</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc13j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc13j2">CCC &#39;13 J2 - Rotating letters</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc13j2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc13j3">CCC &#39;13 J3 - From 1987 to 2013</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc13j3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc13j4">CCC &#39;13 J4 - Time on task</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc13j4/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc13s2">CCC &#39;13 S2 - Bridge Transport</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc13s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc13s3">CCC &#39;13 S3 - Chances of Winning</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc13s3/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc13s4">CCC &#39;13 S4 - Who is Taller?</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc13s4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc13s5">CCC &#39;13 S5 - Factor Solitaire</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc13s5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc14j1">CCC &#39;14 J1 - Triangle Times</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc14j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc14j2">CCC &#39;14 J2 - Vote Count</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc14j2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc14j3">CCC &#39;14 J3 - Double Dice</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc14j3/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc14s1">CCC &#39;14 S1 - Party Invitation</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc14s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc14s2">CCC &#39;14 S2 - Assigning Partners</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc14s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc14s3">CCC &#39;14 S3 - The Geneva Confection</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc14s3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc14s4">CCC &#39;14 S4 - Tinted Glass Window</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc14s4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc14s5">CCC &#39;14 S5 - Lazy Fox</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc14s5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc15j1">CCC &#39;15 J1 - Special Day</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc15j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc15j2">CCC &#39;15 J2 - Happy or Sad</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc15j2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc15j3">CCC &#39;15 J3 - Rövarspråket</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc15j3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc15j4">CCC &#39;15 J4 - Wait Time</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc15j4/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc15j5">CCC &#39;15 J5 - π-day</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc15j5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc15s1">CCC &#39;15 S1 - Zero That Out</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc15s1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc15s2">CCC &#39;15 S2 - Jerseys</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc15s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc15s3">CCC &#39;15 S3 - Gates</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc15s3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc15s4">CCC &#39;15 S4 - Convex Hull</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc15s4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc15s5">CCC &#39;15 S5 - Greedy For Pies</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc15s5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc16j1">CCC &#39;16 J1 - Tournament Selection</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc16j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc16j2">CCC &#39;16 J2 - Magic Squares</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc16j2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc16j3">CCC &#39;16 J3 - Hidden Palindrome</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc16j3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc16j4">CCC &#39;16 J4 - Arrival Time</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc16j4/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc16s1">CCC &#39;16 S1 - Ragaman</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc16s1/submissions/kobortor/">4.0 / 4.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc16s2">CCC &#39;16 S2 - Tandem Bicycle</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc16s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc16s3">CCC &#39;16 S3 - Phonomenal Reviews</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc16s3/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc16s4">CCC &#39;16 S4 - Combining Riceballs</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc16s4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc16s5">CCC &#39;16 S5 - Circle of Life</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc16s5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc17s4">CCC &#39;17 S4 - Minimum Cost Flow</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc17s4/submissions/kobortor/">17.0 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc17s5">CCC &#39;17 S5 - RMT</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc17s5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc96s1">CCC &#39;96 S1 - Deficient, Perfect, and Abundant</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc96s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc96s4">CCC &#39;96 S4 - When in Rome</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc96s4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccc98s1">CCC &#39;98 S1 - Censor</a>
+</td>
+<td class="problem-score"><a href="/problem/ccc98s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccoqr16p1">CCOQR &#39;16 - Stupendous Bowties</a>
+</td>
+<td class="problem-score"><a href="/problem/ccoqr16p1/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccoqr16p2">CCOQR &#39;16 - Through A Maze Darkly</a>
+</td>
+<td class="problem-score"><a href="/problem/ccoqr16p2/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccoqr16p3">CCOQR &#39;16 - Data Structure</a>
+</td>
+<td class="problem-score"><a href="/problem/ccoqr16p3/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/hkccc15j1">CCCHK &#39;15 J1 - Rock-paper-scissors</a>
+</td>
+<td class="problem-score"><a href="/problem/hkccc15j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>CCO
+(858.8 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/cco00p1">CCO &#39;00 P1 - Subsets</a>
+</td>
+<td class="problem-score"><a href="/problem/cco00p1/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco05p1">CCO &#39;05 P1 - Number Matrix</a>
+</td>
+<td class="problem-score"><a href="/problem/cco05p1/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco07p1">CCO &#39;07 P1 - Cows</a>
+</td>
+<td class="problem-score"><a href="/problem/cco07p1/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco07p2">CCO &#39;07 P2 - Snowflakes</a>
+</td>
+<td class="problem-score"><a href="/problem/cco07p2/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco07p3">CCO &#39;07 P3 - Bowling for Numbers++</a>
+</td>
+<td class="problem-score"><a href="/problem/cco07p3/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco07p4">CCO &#39;07 P4 - Gerrymandering</a>
+</td>
+<td class="problem-score"><a href="/problem/cco07p4/submissions/kobortor/">18.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco10p5">CCO &#39;10 P5 - Space Miner</a>
+</td>
+<td class="problem-score"><a href="/problem/cco10p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco10p6">CCO &#39;10 P6 - Shuffle</a>
+</td>
+<td class="problem-score"><a href="/problem/cco10p6/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco11p2">CCO &#39;11 P2 - Vampire Tunnels</a>
+</td>
+<td class="problem-score"><a href="/problem/cco11p2/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco12p5">CCO &#39;12 P5 - Sample Size</a>
+</td>
+<td class="problem-score"><a href="/problem/cco12p5/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco13p1">CCO &#39;13 P1 - All Your Base Belong to Palindromes</a>
+</td>
+<td class="problem-score"><a href="/problem/cco13p1/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco13p2">CCO &#39;13 P2 - Tourney</a>
+</td>
+<td class="problem-score"><a href="/problem/cco13p2/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco13p3">CCO &#39;13 P3 - LHC</a>
+</td>
+<td class="problem-score"><a href="/problem/cco13p3/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco13p4">CCO &#39;13 P4 - A Romantic Movie Outing</a>
+</td>
+<td class="problem-score"><a href="/problem/cco13p4/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco13p5">CCO &#39;13 P5 - Transforming Comets</a>
+</td>
+<td class="problem-score"><a href="/problem/cco13p5/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco13p6">CCO &#39;13 P6 - Repetitivity</a>
+</td>
+<td class="problem-score"><a href="/problem/cco13p6/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco14p1">CCO &#39;14 P1 - Troyangles</a>
+</td>
+<td class="problem-score"><a href="/problem/cco14p1/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco14p2">CCO &#39;14 P2 - King Gruff</a>
+</td>
+<td class="problem-score"><a href="/problem/cco14p2/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco14p3">CCO &#39;14 P3 - Werewolf</a>
+</td>
+<td class="problem-score"><a href="/problem/cco14p3/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco14p4">CCO &#39;14 P4 - Where&#39;s That Fuel?</a>
+</td>
+<td class="problem-score"><a href="/problem/cco14p4/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco14p5">CCO &#39;14 P5 - Early Exam Evacuation</a>
+</td>
+<td class="problem-score"><a href="/problem/cco14p5/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco15p1">CCO &#39;15 P1 - Hungry Fox</a>
+</td>
+<td class="problem-score"><a href="/problem/cco15p1/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco15p2">CCO &#39;15 P2 - Artskjid</a>
+</td>
+<td class="problem-score"><a href="/problem/cco15p2/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco15p4">CCO &#39;15 P4 - Cars on Ice</a>
+</td>
+<td class="problem-score"><a href="/problem/cco15p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco15p5">CCO &#39;15 P5 - Timpanist</a>
+</td>
+<td class="problem-score"><a href="/problem/cco15p5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco15p6">CCO &#39;15 P6 - Eggscavation</a>
+</td>
+<td class="problem-score"><a href="/problem/cco15p6/submissions/kobortor/">30.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco16p2">CCO &#39;16 P2 - Splitting Hares</a>
+</td>
+<td class="problem-score"><a href="/problem/cco16p2/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco16p3">CCO &#39;16 P3 - Legends</a>
+</td>
+<td class="problem-score"><a href="/problem/cco16p3/submissions/kobortor/">30.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco16p5">CCO &#39;16 P5 - Zombie Apocalypse</a>
+</td>
+<td class="problem-score"><a href="/problem/cco16p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco16p6">CCO &#39;16 P6 - Pirates</a>
+</td>
+<td class="problem-score"><a href="/problem/cco16p6/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco17p4">CCO &#39;17 P4 - Rainfall Storage</a>
+</td>
+<td class="problem-score"><a href="/problem/cco17p4/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco17p5">CCO &#39;17 P5 - Professional Network</a>
+</td>
+<td class="problem-score"><a href="/problem/cco17p5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cco17p6">CCO &#39;17 P6 - Shifty Grid</a>
+</td>
+<td class="problem-score"><a href="/problem/cco17p6/submissions/kobortor/">18.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccoprep16c2q1">Bus Routes</a>
+</td>
+<td class="problem-score"><a href="/problem/ccoprep16c2q1/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccoprep16c2q2">An Easy Problem</a>
+</td>
+<td class="problem-score"><a href="/problem/ccoprep16c2q2/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccoprep16c2q3">HopScotch</a>
+</td>
+<td class="problem-score"><a href="/problem/ccoprep16c2q3/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccoprep16c3q2">XOR Path</a>
+</td>
+<td class="problem-score"><a href="/problem/ccoprep16c3q2/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccoprep16q1">City Game</a>
+</td>
+<td class="problem-score"><a href="/problem/ccoprep16q1/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccoprep1p2">CCO Preparation Test 1 - Escape Maze</a>
+</td>
+<td class="problem-score"><a href="/problem/ccoprep1p2/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccoprep1p3">CCO Preparation Test 1 - K-th Rank Student</a>
+</td>
+<td class="problem-score"><a href="/problem/ccoprep1p3/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccoprep2p1">CCO Preparation Test 2 - Concatenation</a>
+</td>
+<td class="problem-score"><a href="/problem/ccoprep2p1/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccoprep2p3">CCO Preparation Test 2 - Subsets</a>
+</td>
+<td class="problem-score"><a href="/problem/ccoprep2p3/submissions/kobortor/">7.5 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ccoprep3p2">CCO Preparation Test 3 - Packing Up</a>
+</td>
+<td class="problem-score"><a href="/problem/ccoprep3p2/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mcco17p1">Mock CCO &#39;17 Day 1 P1 - Fast Fuhrer Transform</a>
+</td>
+<td class="problem-score"><a href="/problem/mcco17p1/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mcco17p2">Mock CCO &#39;17 Day 1 P2 - Penetrating Power</a>
+</td>
+<td class="problem-score"><a href="/problem/mcco17p2/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mcco17p3">Mock CCO &#39;17 Day 1 P3 - Connection</a>
+</td>
+<td class="problem-score"><a href="/problem/mcco17p3/submissions/kobortor/">25.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mcco17p4">Mock CCO &#39;17 Day 2 P1 - Guards</a>
+</td>
+<td class="problem-score"><a href="/problem/mcco17p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mcco17p5">Mock CCO &#39;17 Day 2 P2 - Blitzkrieg</a>
+</td>
+<td class="problem-score"><a href="/problem/mcco17p5/submissions/kobortor/">14.28 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mcco17p6">Mock CCO &#39;17 Day 2 P3 - Dire Consequences</a>
+</td>
+<td class="problem-score"><a href="/problem/mcco17p6/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>Classics
+(76.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/ds1">Binary Indexed Tree Test</a>
+</td>
+<td class="problem-score"><a href="/problem/ds1/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ds2">Disjoint Set Test</a>
+</td>
+<td class="problem-score"><a href="/problem/ds2/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ds3">Segment Tree Test</a>
+</td>
+<td class="problem-score"><a href="/problem/ds3/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ds4">Binary Search Tree Test</a>
+</td>
+<td class="problem-score"><a href="/problem/ds4/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/lcs">Longest Common Subsequence</a>
+</td>
+<td class="problem-score"><a href="/problem/lcs/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/modinv">Modular Multiplicative Inverse</a>
+</td>
+<td class="problem-score"><a href="/problem/modinv/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/sssp">Single Source Shortest Path</a>
+</td>
+<td class="problem-score"><a href="/problem/sssp/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>COCI
+(1046.5 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/coci06c1p5">COCI &#39;06 Contest 1 #5 Bond</a>
+</td>
+<td class="problem-score"><a href="/problem/coci06c1p5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci06c1p6">COCI &#39;06 Contest 1 #6 Debug</a>
+</td>
+<td class="problem-score"><a href="/problem/coci06c1p6/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci06c3p5">COCI &#39;06 Contest 3 #5 Bicikli</a>
+</td>
+<td class="problem-score"><a href="/problem/coci06c3p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci06c4p4">COCI &#39;06 Contest 4 #4 Zbrka</a>
+</td>
+<td class="problem-score"><a href="/problem/coci06c4p4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci06c4p6">COCI &#39;06 Contest 4 #6 Ispiti</a>
+</td>
+<td class="problem-score"><a href="/problem/coci06c4p6/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci06c5p5">COCI &#39;06 Contest 5 #5 Ivana</a>
+</td>
+<td class="problem-score"><a href="/problem/coci06c5p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci06c5p6">COCI &#39;06 Contest 5 #6 Dvaput</a>
+</td>
+<td class="problem-score"><a href="/problem/coci06c5p6/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci06c6p6">COCI &#39;06 Contest 6 #6 Prostor</a>
+</td>
+<td class="problem-score"><a href="/problem/coci06c6p6/submissions/kobortor/">30.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci07c1p6">COCI &#39;07 Contest 1 #6 Staza</a>
+</td>
+<td class="problem-score"><a href="/problem/coci07c1p6/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci07c2p4">COCI &#39;07 Contest 2 #4 Turbo</a>
+</td>
+<td class="problem-score"><a href="/problem/coci07c2p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci07c3p6">COCI &#39;07 Contest 3 #6 Redoks</a>
+</td>
+<td class="problem-score"><a href="/problem/coci07c3p6/submissions/kobortor/">17.0 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci07c4p5">COCI &#39;07 Contest 4 #5 Poklon</a>
+</td>
+<td class="problem-score"><a href="/problem/coci07c4p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci07c5p6">COCI &#39;07 Contest 5 #6 Baza</a>
+</td>
+<td class="problem-score"><a href="/problem/coci07c5p6/submissions/kobortor/">30.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci08c1p6">COCI &#39;08 Contest 1 #6 Krtica</a>
+</td>
+<td class="problem-score"><a href="/problem/coci08c1p6/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci08c6p1">COCI &#39;08 Contest 6 #1 Buka</a>
+</td>
+<td class="problem-score"><a href="/problem/coci08c6p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci08c6p3">COCI &#39;08 Contest 6 #3 Nered</a>
+</td>
+<td class="problem-score"><a href="/problem/coci08c6p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci08c6p4">COCI &#39;08 Contest 6 #4 Cuskija</a>
+</td>
+<td class="problem-score"><a href="/problem/coci08c6p4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci13c1p3">COCI &#39;13 Contest 1 #3 Ratar</a>
+</td>
+<td class="problem-score"><a href="/problem/coci13c1p3/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci13c1p4">COCI &#39;13 Contest 1 #4 Lopov</a>
+</td>
+<td class="problem-score"><a href="/problem/coci13c1p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci13c1p5">COCI &#39;13 Contest 1 #5 Organizator</a>
+</td>
+<td class="problem-score"><a href="/problem/coci13c1p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c1p1">COCI &#39;14 Contest 1 #1 Prosjek</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c1p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c1p2">COCI &#39;14 Contest 1 #2 Klopka</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c1p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c1p3">COCI &#39;14 Contest 1 #3 Piramida</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c1p3/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c1p4">COCI &#39;14 Contest 1 #4 Mafija</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c1p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c1p5">COCI &#39;14 Contest 1 #5 Zabava</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c1p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c1p6">COCI &#39;14 Contest 1 #6 Kamp</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c1p6/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c2p1">COCI &#39;14 Contest 2 #1 Mobitel</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c2p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c2p2">COCI &#39;14 Contest 2 #2 Utrka</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c2p2/submissions/kobortor/">6.0 / 6.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c2p3">COCI &#39;14 Contest 2 #3 Studentsko</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c2p3/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c2p4">COCI &#39;14 Contest 2 #4 Bob</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c2p4/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c2p5">COCI &#39;14 Contest 2 #5 Šuma</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c2p5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c2p6">COCI &#39;14 Contest 2 #6 Norma</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c2p6/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c3p1">COCI &#39;14 Contest 3 #1 Strojopis</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c3p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c3p2">COCI &#39;14 Contest 3 #2 Dom</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c3p2/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c3p3">COCI &#39;14 Contest 3 #3 Silueta</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c3p3/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c3p4">COCI &#39;14 Contest 3 #4 Coci</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c3p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c3p5">COCI &#39;14 Contest 3 #5 Stogovi</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c3p5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c4p1">COCI &#39;14 Contest 4 #1 Cesta</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c4p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c4p2">COCI &#39;14 Contest 4 #2 Pšenica</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c4p2/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c4p3">COCI &#39;14 Contest 4 #3 Pripreme</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c4p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c4p4">COCI &#39;14 Contest 4 #4 Mravi</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c4p4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c4p5">COCI &#39;14 Contest 4 #5 Sabor</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c4p5/submissions/kobortor/">1.5 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c5p1">COCI &#39;14 Contest 5 #1 Funghi</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c5p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c5p2">COCI &#39;14 Contest 5 #2 Zmija</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c5p2/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c5p3">COCI &#39;14 Contest 5 #3 Traktor</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c5p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c5p4">COCI &#39;14 Contest 5 #4 Zgodan</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c5p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c5p5">COCI &#39;14 Contest 5 #5 Jabuke</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c5p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c6p1">COCI &#39;14 Contest 6 #1 Paprika</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c6p1/submissions/kobortor/">4.0 / 4.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c6p2">COCI &#39;14 Contest 6 #2 Niko</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c6p2/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c6p3">COCI &#39;14 Contest 6 #3 Meteor</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c6p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c6p4">COCI &#39;14 Contest 6 #4 Kratki</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c6p4/submissions/kobortor/">2.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c6p5">COCI &#39;14 Contest 6 #5 Neo</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c6p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c7p1">COCI &#39;14 Contest 7 #1 Teta</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c7p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c7p2">COCI &#39;14 Contest 7 #2 Kriza</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c7p2/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c7p3">COCI &#39;14 Contest 7 #3 ACM</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c7p3/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c7p4">COCI &#39;14 Contest 7 #4 Janje</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c7p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci14c7p5">COCI &#39;14 Contest 7 #5 Prosjek</a>
+</td>
+<td class="problem-score"><a href="/problem/coci14c7p5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci15c1p3">COCI &#39;15 Contest 1 #3 Baloni</a>
+</td>
+<td class="problem-score"><a href="/problem/coci15c1p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci15c1p4">COCI &#39;15 Contest 1 #4 Topovi</a>
+</td>
+<td class="problem-score"><a href="/problem/coci15c1p4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci15c1p5">COCI &#39;15 Contest 1 #5 Relativnost</a>
+</td>
+<td class="problem-score"><a href="/problem/coci15c1p5/submissions/kobortor/">17.0 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci15c2p4">COCI &#39;15 Contest 2 #4 Savez</a>
+ </td>
+<td class="problem-score"><a href="/problem/coci15c2p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci15c2p5">COCI &#39;15 Contest 2 #5 Vudu</a>
+</td>
+<td class="problem-score"><a href="/problem/coci15c2p5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci15c3p3">COCI &#39;15 Contest 3 #3 Molekule</a>
+</td>
+<td class="problem-score"><a href="/problem/coci15c3p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci15c3p4">COCI &#39;15 Contest 3 #4 Slon</a>
+</td>
+<td class="problem-score"><a href="/problem/coci15c3p4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci15c3p5">COCI &#39;15 Contest 3 #5 Nekameleoni</a>
+</td>
+<td class="problem-score"><a href="/problem/coci15c3p5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci15c3p6">COCI &#39;15 Contest 3 #6 Domino</a>
+</td>
+<td class="problem-score"><a href="/problem/coci15c3p6/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci15c4p1">COCI &#39;15 Contest 4 #1 Yoda</a>
+</td>
+<td class="problem-score"><a href="/problem/coci15c4p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci15c4p2">COCI &#39;15 Contest 4 #2 Han</a>
+</td>
+<td class="problem-score"><a href="/problem/coci15c4p2/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci15c4p3">COCI &#39;15 Contest 4 #3 Deathstar</a>
+</td>
+<td class="problem-score"><a href="/problem/coci15c4p3/submissions/kobortor/">8.0 / 8.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci15c4p4">COCI &#39;15 Contest 4 #4 Chewbacca</a>
+</td>
+<td class="problem-score"><a href="/problem/coci15c4p4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci15c4p5">COCI &#39;15 Contest 4 #5 Galaksija</a>
+</td>
+<td class="problem-score"><a href="/problem/coci15c4p5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci15c4p6">COCI &#39;15 Contest 4 #6 Endor</a>
+</td>
+<td class="problem-score"><a href="/problem/coci15c4p6/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci16c1p3">COCI &#39;16 Contest 1 #3 Cezar</a>
+</td>
+<td class="problem-score"><a href="/problem/coci16c1p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coci16c1p5">COCI &#39;16 Contest 1 #5 Kralj</a>
+</td>
+<td class="problem-score"><a href="/problem/coci16c1p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coi06p1">COI &#39;06 #1 Patrik</a>
+</td>
+<td class="problem-score"><a href="/problem/coi06p1/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coi06p2">COI &#39;06 #2 Policija</a>
+</td>
+<td class="problem-score"><a href="/problem/coi06p2/submissions/kobortor/">30.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/coi07p3">COI &#39;07 #3 Tamnica</a>
+</td>
+<td class="problem-score"><a href="/problem/coi07p3/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/crci07p4">COCI &#39;07 Regional #4 Jednakost</a>
+</td>
+<td class="problem-score"><a href="/problem/crci07p4/submissions/kobortor/">17.0 / 17.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>CSPC
+(18.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/cspc1p1">CSPC &#39;15 #1 - The Card Game</a>
+</td>
+<td class="problem-score"><a href="/problem/cspc1p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cspc1p2">CSPC &#39;15 #2 - Build Season</a>
+</td>
+<td class="problem-score"><a href="/problem/cspc1p2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cspc1p3">CSPC &#39;15 #3 - Spell Check</a>
+</td>
+<td class="problem-score"><a href="/problem/cspc1p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cspc1p5">CSPC &#39;15 #5 - Averages</a>
+</td>
+<td class="problem-score"><a href="/problem/cspc1p5/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>DMOPC
+(1340.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc13c1p4">DMOPC &#39;13 Contest 1 P4 - AFK</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc13c1p4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc13c1p5">DMOPC &#39;13 Contest 1 P5 - Math on Titan</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc13c1p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc13c3p1">DMOPC &#39;13 Contest 3 P1 - Sharing is Caring</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc13c3p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc13c3p2">DMOPC &#39;13 Contest 3 P2 - Phone Microwave</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc13c3p2/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc13c3p3">DMOPC &#39;13 Contest 3 P3 - Crossing Field</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc13c3p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc13c3p4">DMOPC &#39;13 Contest 3 P4 - Snowman</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc13c3p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc13c3p5">DMOPC &#39;13 Contest 3 P5 - A Romantic Dinner</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc13c3p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c1p1">DMOPC &#39;14 Contest 1 P1 - Median Mark</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c1p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c1p2">DMOPC &#39;14 Contest 1 P2 - Tiles</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c1p2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c1p3">DMOPC &#39;14 Contest 1 P3 - New Students</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c1p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c1p4">DMOPC &#39;14 Contest 1 P4 - Perfect Timing</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c1p4/submissions/kobortor/">8.0 / 8.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c1p5">DMOPC &#39;14 Contest 1 P5 - Surprise Teleport</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c1p5/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c1p6">DMOPC &#39;14 Contest 1 P6 - Biology Homework</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c1p6/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c2p1">DMOPC &#39;14 Contest 2 P1 - Logging Log</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c2p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c2p2">DMOPC &#39;14 Contest 2 P2 - Cutting Logs</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c2p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c2p3">DMOPC &#39;14 Contest 2 P3 - Sawmill</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c2p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c2p4">DMOPC &#39;14 Contest 2 P4 - Deforestation</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c2p4/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c2p5">DMOPC &#39;14 Contest 2 P5 - Sawmill Scheme</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c2p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c2p6">DMOPC &#39;14 Contest 2 P6 - Selective Cutting</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c2p6/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c3p1">DMOPC &#39;14 Contest 3 P1 - Not Enough Users!</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c3p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c3p2">DMOPC &#39;14 Contest 3 P2 - Not Enough Rejudging!</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c3p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c3p3">DMOPC &#39;14 Contest 3 P3 - Not Enough Personnel!</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c3p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c3p4">DMOPC &#39;14 Contest 3 P4 - Not Enough Testers!</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c3p4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c3p5">DMOPC &#39;14 Contest 3 P5 - Not Enough Servers!</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c3p5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c3p6">DMOPC &#39;14 Contest 3 P6 - Not Enough Time!</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c3p6/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c4p1">DMOPC &#39;14 Contest 5 P1 - New Key</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c4p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c4p2">DMOPC &#39;14 Contest 5 P2 - Redirection</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c4p2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c4p3">DMOPC &#39;14 Contest 5 P3 - Golden Lily</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c4p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c4p4">DMOPC &#39;14 Contest 5 P4 - Sketchley Park</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c4p4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c4p5">DMOPC &#39;14 Contest 5 P5 - Aircraft Carrier Akagi</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c4p5/submissions/kobortor/">30.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c4p6">DMOPC &#39;14 Contest 5 P6 - Save Nagato!</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c4p6/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c5p1">DMOPC &#39;14 Contest 6 P1 - Core Drill</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c5p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c5p2">DMOPC &#39;14 Contest 6 P2 - Longest Tunnel</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c5p2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c5p3">DMOPC &#39;14 Contest 6 P3 - Brotherly Sequence</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c5p3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c5p4">DMOPC &#39;14 Contest 6 P4 - Kittan&#39;s Dilemma</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c5p4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c5p5">DMOPC &#39;14 Contest 6 P5 - Attack on Anti-Spiral</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c5p5/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c6p1">DMOPC &#39;14 Contest 7 P1 - Finding Bessarion</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c6p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c6p2">DMOPC &#39;14 Contest 7 P2 - GO Faster</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c6p2/submissions/kobortor/">6.0 / 6.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c6p3">DMOPC &#39;14 Contest 7 P3 - Streetcars</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c6p3/submissions/kobortor/">8.0 / 8.0</a>
+</td>
+</tr>
+<tr>
+ <td class="problem-name"><a href="/problem/dmopc14c6p5">DMOPC &#39;14 Contest 7 P5 - Planning</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c6p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c6p6">DMOPC &#39;14 Contest 7 P6 - Trip</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c6p6/submissions/kobortor/">17.0 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c7p1">DMOPC &#39;14 Contest 8 P1 - Flare</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c7p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c7p2">DMOPC &#39;14 Contest 8 P2 - Tides</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c7p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c7p3">DMOPC &#39;14 Contest 8 P3 - Globally Unique Shells</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c7p3/submissions/kobortor/">6.0 / 6.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c7p4">DMOPC &#39;14 Contest 8 P4 - Sand Triangle</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c7p4/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c7p5">DMOPC &#39;14 Contest 8 P5 - Aurora</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c7p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14c7p6">DMOPC &#39;14 Contest 8 P6 - Revenge of the Bins</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14c7p6/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14ce1p1">DMOPC &#39;14 Exam Time P1 - French Homework</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14ce1p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14ce1p2">DMOPC &#39;14 Exam Time P2 - Physics Duel</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14ce1p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14ce1p3">DMOPC &#39;14 Exam Time P3 - Chemistry Homework</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14ce1p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14ce1p4">DMOPC &#39;14 Exam Time P4 - Exam Delay</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14ce1p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc14ce1p5">DMOPC &#39;14 Exam Time P5 - Happy Teachers</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc14ce1p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c1p1">DMOPC &#39;15 Contest 1 P1 - Itami and Manga</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c1p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c1p2">DMOPC &#39;15 Contest 1 P2 - Itami and Squad</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c1p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c1p3">DMOPC &#39;15 Contest 1 P3 - Itami and Cipher</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c1p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c1p4">DMOPC &#39;15 Contest 1 P4 - Itami and Candy</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c1p4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c1p5">DMOPC &#39;15 Contest 1 P5 - Lelei and Dragon Scales</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c1p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c1p6">DMOPC &#39;15 Contest 1 P6 - Lelei and Contest</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c1p6/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c2p1">DMOPC &#39;15 Contest 2 P1 - Grumpy Dwarf</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c2p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c2p2">DMOPC &#39;15 Contest 2 P2 - Admin War</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c2p2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c2p3">DMOPC &#39;15 Contest 2 P3 - Origami</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c2p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c2p4">DMOPC &#39;15 Contest 2 P4 - Personal Assistant</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c2p4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c2p5">DMOPC &#39;15 Contest 2 P5 - Sysadmin</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c2p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c2p6">DMOPC &#39;15 Contest 2 P6 - Manhattan Magnets</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c2p6/submissions/kobortor/">17.0 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c3p1">DMOPC &#39;15 Contest 3 P1 - Quality Scenes</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c3p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c3p2">DMOPC &#39;15 Contest 3 P2 - Cheesecake Distribution</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c3p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c3p3">DMOPC &#39;15 Contest 3 P3 - Dimethylbenzene</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c3p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c3p4">DMOPC &#39;15 Contest 3 P4 - Contagion</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c3p4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c3p5">DMOPC &#39;15 Contest 3 P5 - Total Annihilation</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c3p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c3p6">DMOPC &#39;15 Contest 3 P6 - Gala</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c3p6/submissions/kobortor/">30.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c4p1">DMOPC &#39;15 Contest 4 P1 - Dictionary</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c4p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c4p2">DMOPC &#39;15 Contest 4 P2 - The Big Clock</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c4p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c4p3">DMOPC &#39;15 Contest 4 P3 - Lethal</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c4p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c4p4">DMOPC &#39;15 Contest 4 P4 - Great Sequence</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c4p4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c5p1">DMOPC &#39;15 Contest 5 P1 - Gel Bananas</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c5p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c5p2">DMOPC &#39;15 Contest 5 P2 - D-Mails</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c5p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c5p3">DMOPC &#39;15 Contest 5 P3 - All Your Base</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c5p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c5p4">DMOPC &#39;15 Contest 5 P4 - Steins;Number</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c5p4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c5p5">DMOPC &#39;15 Contest 5 P5 - World Line Convergence</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c5p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c6p1">DMOPC &#39;15 Contest 6 P1 - Double XP Weekend</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c6p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c6p2">DMOPC &#39;15 Contest 6 P2 - Tilt</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c6p2/submissions/kobortor/">6.0 / 6.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c6p3">DMOPC &#39;15 Contest 6 P3 - Harvest</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c6p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c6p4">DMOPC &#39;15 Contest 6 P4 - Line Graph</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c6p4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c6p5">DMOPC &#39;15 Contest 6 P5 - A Classic Problem</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c6p5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c6p6">DMOPC &#39;15 Contest 6 P6 - Graf Zeppelin</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c6p6/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c7p1">DMOPC &#39;15 Contest 7 P1 - Kemonomimi Competition</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c7p1/submissions/kobortor/">6.0 / 6.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c7p2">DMOPC &#39;15 Contest 7 P2 - Not a Wall of Text</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c7p2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c7p3">DMOPC &#39;15 Contest 7 P3 - Harbourmaster</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c7p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c7p4">DMOPC &#39;15 Contest 7 P4 - Magic</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c7p4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c7p5">DMOPC &#39;15 Contest 7 P5 - Ariadne&#39;s Thread</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c7p5/submissions/kobortor/">17.0 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc15c7p6">DMOPC &#39;15 Contest 7 P6 - A Very Very Original Problem</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc15c7p6/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c1p0">DMOPC &#39;16 Contest 1 P0 - C.C. and Cheese-kun</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c1p0/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c1p1">DMOPC &#39;16 Contest 1 P1 - A New Chapter</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c1p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c1p2">DMOPC &#39;16 Contest 1 P2 - Lines</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c1p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c1p3">DMOPC &#39;16 Contest 1 P3 - Shoe Shopping</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c1p3/submissions/kobortor/">8.0 / 8.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c1p4">DMOPC &#39;16 Contest 1 P4 - Tree Appraisal</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c1p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c1p5">DMOPC &#39;16 Contest 1 P5 - Blood Tubes</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c1p5/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c1p6">DMOPC &#39;16 Contest 1 P6 - Phantom Child</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c1p6/submissions/kobortor/">2.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c2p1">DMOPC &#39;16 Contest 2 P1 - Seed Strategy</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c2p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c2p2">DMOPC &#39;16 Contest 2 P2 - Ebola Outbreak</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c2p2/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c2p3">DMOPC &#39;16 Contest 2 P3 - Queries</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c2p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c2p4">DMOPC &#39;16 Contest 2 P4 - Zeros</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c2p4/submissions/kobortor/">8.0 / 8.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c2p5">DMOPC &#39;16 Contest 2 P5 - Tormented in Tartarus</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c2p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c3p0">DMOPC &#39;16 Contest 3 P0 - Negative Feedback</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c3p0/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c3p1">DMOPC &#39;16 Contest 3 P1 - Leading Basic Shots</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c3p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c3p2">DMOPC &#39;16 Contest 3 P2 - Starstruck Squeeze</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c3p2/submissions/kobortor/">8.0 / 8.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c3p3">DMOPC &#39;16 Contest 3 P3 - Phantom Fight</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c3p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c4p1">DMOPC &#39;16 Contest 4 P1 - Fast Exponents</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c4p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c4p2">DMOPC &#39;16 Contest 4 P2 - Systests</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c4p2/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c4p3">DMOPC &#39;16 Contest 4 P3 - Carnival Phantasm</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c4p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c4p4">DMOPC &#39;16 Contest 4 P4 - Molly and Manga Shopping</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c4p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c4p5">DMOPC &#39;16 Contest 4 P5 - Migrant Mascot</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c4p5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmopc16c4p6">DMOPC &#39;16 Contest 4 P6 - Molly and Flying Drones</a>
+</td>
+<td class="problem-score"><a href="/problem/dmopc16c4p6/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg15b1">DMPG &#39;15 B1 - Loner Phoner</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg15b1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg15b2">DMPG &#39;15 B2 - Trunk in Trunk</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg15b2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg15b3">DMPG &#39;15 B3 - Picking Berries</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg15b3/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg15b4">DMPG &#39;15 B4 - Maximum Product</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg15b4/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg15b5">DMPG &#39;15 B5 - Lux-urious S&#39;mores</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg15b5/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg15b6">DMPG &#39;15 B6 - Bad S&#39;mores</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg15b6/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg15g1">DMPG &#39;15 G1 - Marcia and Maze</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg15g1/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg15g3">DMPG &#39;15 G3 - Kinako Bread 2</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg15g3/submissions/kobortor/">30.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg15g4">DMPG &#39;15 G4 - Spacetime Convergence Cannons</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg15g4/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg15g5">DMPG &#39;15 G5 - ExpedColle</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg15g5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg15s1">DMPG &#39;15 S1 - Collecting Dust</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg15s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg15s2">DMPG &#39;15 S2 - MMORPG</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg15s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg15s3">DMPG &#39;15 S3 - Zen Garden</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg15s3/submissions/kobortor/">8.0 / 8.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg15s4">DMPG &#39;15 S4 - Signal Hill</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg15s4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg15s5">DMPG &#39;15 S5 - Black and White</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg15s5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg16g1">DMPG &#39;16 G1 - Explooooosion!</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg16g1/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg16g2">DMPG &#39;16 G2 - Kabane Apocalypse</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg16g2/submissions/kobortor/">3.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg16g3">DMPG &#39;16 G3 - Guerrilla Warfare</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg16g3/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg16g4">DMPG &#39;16 G4 - Araxxi</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg16g4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg16g5">DMPG &#39;16 G5 - Continuation Passing</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg16g5/submissions/kobortor/">1.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg16g6">DMPG &#39;16 G6 - SAO Queries</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg16g6/submissions/kobortor/">18.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg16s3">DMPG &#39;16 S3 - The Faster Way</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg16s3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg16s4">DMPG &#39;16 S4 - MMORPG II</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg16s4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/dmpg16s5">DMPG &#39;16 S5 - Pizza Bag</a>
+</td>
+<td class="problem-score"><a href="/problem/dmpg16s5/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>ECOO
+(69.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/ecoo13r1p1">ECOO &#39;13 R1 P1 - Take a Number</a>
+</td>
+<td class="problem-score"><a href="/problem/ecoo13r1p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ecoo13r3p4">ECOO &#39;13 R3 P4 - Tour de Force</a>
+</td>
+<td class="problem-score"><a href="/problem/ecoo13r3p4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ecoo15r1p1">ECOO &#39;15 R1 P1 - When You Eat Your Smarties</a>
+</td>
+<td class="problem-score"><a href="/problem/ecoo15r1p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ecoo15r1p2">ECOO &#39;15 R1 P2 - Word Wrap</a>
+</td>
+<td class="problem-score"><a href="/problem/ecoo15r1p2/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ecoo15r1p4">ECOO &#39;15 R1 P4 - Neanderthal Numbers</a>
+</td>
+<td class="problem-score"><a href="/problem/ecoo15r1p4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ecoo15r2p3">ECOO &#39;15 R2 P3 - Lucas&#39; Other Tower</a>
+</td>
+<td class="problem-score"><a href="/problem/ecoo15r2p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ecoo16r1p1">ECOO &#39;16 R1 P1 - Pass or Fail</a>
+</td>
+<td class="problem-score"><a href="/problem/ecoo16r1p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mockecoo14p1">Do You Want to Build a Snowman?</a>
+</td>
+<td class="problem-score"><a href="/problem/mockecoo14p1/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>FHC
+(131.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+ <th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/fhc15c1p1">Homework</a>
+</td>
+<td class="problem-score"><a href="/problem/fhc15c1p1/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/fhc15c1p2">Autocomplete</a>
+</td>
+<td class="problem-score"><a href="/problem/fhc15c1p2/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/fhc15c1p3">Winning at Sports</a>
+</td>
+<td class="problem-score"><a href="/problem/fhc15c1p3/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/fhc15c1p4">Corporate Gifting</a>
+</td>
+<td class="problem-score"><a href="/problem/fhc15c1p4/submissions/kobortor/">17.0 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/fhc15c2p1">Lazy Sort</a>
+</td>
+<td class="problem-score"><a href="/problem/fhc15c2p1/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/fhc15c2p2">All Critical</a>
+</td>
+<td class="problem-score"><a href="/problem/fhc15c2p2/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/fhc15c2p3">Autocomplete Strikes Back</a>
+</td>
+<td class="problem-score"><a href="/problem/fhc15c2p3/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/fhc15c3p1">Boomerang</a>
+</td>
+<td class="problem-score"><a href="/problem/fhc15c3p1/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/fhc15c3p3">Gentrification</a>
+</td>
+<td class="problem-score"><a href="/problem/fhc15c3p3/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>Fun Math
+(133.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/3drotate">Rotations in 3 Dimensions</a>
+</td>
+<td class="problem-score"><a href="/problem/3drotate/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/aplusb">A Plus B</a>
+</td>
+<td class="problem-score"><a href="/problem/aplusb/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/aplusb2">A Plus B (Hard)</a>
+</td>
+<td class="problem-score"><a href="/problem/aplusb2/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/badpath">Bad Paths</a>
+</td>
+<td class="problem-score"><a href="/problem/badpath/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/binary">Binary</a>
+</td>
+<td class="problem-score"><a href="/problem/binary/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/factorial">Fast Factorial Calculator</a>
+</td>
+<td class="problem-score"><a href="/problem/factorial/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/fibonacci">Fibonacci Sequence</a>
+</td>
+<td class="problem-score"><a href="/problem/fibonacci/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/geometry1">Troubling Triangles</a>
+</td>
+<td class="problem-score"><a href="/problem/geometry1/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/infinity">Infinity</a>
+</td>
+<td class="problem-score"><a href="/problem/infinity/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/next1">Next Semiprime</a>
+</td>
+<td class="problem-score"><a href="/problem/next1/submissions/kobortor/">8.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/odd">The Odd Number</a>
+</td>
+<td class="problem-score"><a href="/problem/odd/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/phantom1">The Mirror</a>
+</td>
+<td class="problem-score"><a href="/problem/phantom1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/phantom2">The Third Cellar</a>
+</td>
+<td class="problem-score"><a href="/problem/phantom2/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/postfix">Postfix Notation</a>
+</td>
+<td class="problem-score"><a href="/problem/postfix/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/primefactor">Prime Factorization</a>
+</td>
+<td class="problem-score"><a href="/problem/primefactor/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/xor">XOR</a>
+</td>
+<td class="problem-score"><a href="/problem/xor/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>GFSSOC
+(277.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc16s4">GFSSOC &#39;17 S4 - First Ace</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc16s4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc1j1">Flying Plushies</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc1j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc1j2">Wow much parking lot</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc1j2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc1j3">Waiting</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc1j3/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc1j4">Tic Tac Moe!</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc1j4/submissions/kobortor/">6.0 / 6.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc1j5">Pursuit of Knowledge</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc1j5/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc1s1">Friendship is a number</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc1s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc1s2">Speech</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc1s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc1s3">Hide n Seek</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc1s3/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc1s4">Stalactites</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc1s4/submissions/kobortor/">17.0 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc1s5">Stardust Snow</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc1s5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc2j1">CodeFights</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc2j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc2j2">Fizz Fuzz</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc2j2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc2j3">Equation Solver</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc2j3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc2j4">Marathon</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc2j4/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc2j5">Nightmare-a-thon</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc2j5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc2s1">T-Shirts</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc2s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc2s2">Hearth</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc2s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc2s3">System(0);</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc2s3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc2s4">Mostly Talking</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc2s4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc2s5">Raider</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc2s5/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc3j1">Festive Fardin</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc3j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc3j2">Purchasing Presents</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc3j2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc3j3">Christmas Presents</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc3j3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc3j4">Christmas Music</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc3j4/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+ <td class="problem-name"><a href="/problem/gfssoc3j5">Secret Santa</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc3j5/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc3s1">OR-deal</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc3s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc3s2">Soko-Boop</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc3s2/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc3s3">PalinDrone</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc3s3/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfssoc3s5">ORBOT</a>
+</td>
+<td class="problem-score"><a href="/problem/gfssoc3s5/submissions/kobortor/">12.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfsspc1p1">Bruno and Trig</a>
+</td>
+<td class="problem-score"><a href="/problem/gfsspc1p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfsspc1p2">Bruno and Tennis</a>
+</td>
+<td class="problem-score"><a href="/problem/gfsspc1p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfsspc1p3">Bruno and Beads</a>
+</td>
+<td class="problem-score"><a href="/problem/gfsspc1p3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfsspc1p4">Bruno and Fibonacci</a>
+</td>
+<td class="problem-score"><a href="/problem/gfsspc1p4/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gfsspc1p5">Bruno and Pumpkins</a>
+</td>
+<td class="problem-score"><a href="/problem/gfsspc1p5/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>IOI
+(377.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/ioi00p1">IOI &#39;00 P1 - Palindrome</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi00p1/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ioi01p3">IOI &#39;01 P3 - Twofive</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi01p3/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ioi09p4">IOI &#39;09 P4 - Raisins</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi09p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ioi13p4">IOI &#39;13 P4 - Cave</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi13p4/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ioi14p1">IOI &#39;14 P1 - Rail</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi14p1/submissions/kobortor/">30.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ioi14p3">IOI &#39;14 P3 - Game</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi14p3/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ioi14p4">IOI &#39;14 P4 - Gondola</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi14p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ioi14p5">IOI &#39;14 P5 - Friend</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi14p5/submissions/kobortor/">30.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ioi14p6">IOI &#39;14 P6 - Holiday</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi14p6/submissions/kobortor/">40.0 / 40.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ioi15p2">IOI &#39;15 P2 - Scales</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi15p2/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ioi15p3">IOI &#39;15 P3 - Teams</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi15p3/submissions/kobortor/">26.95 / 35.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ioi15p4">IOI &#39;15 P4 - Horses</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi15p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ioi15p5">IOI &#39;15 P5 - Sorting</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi15p5/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ioi15p6">IOI &#39;15 P6 - Towns</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi15p6/submissions/kobortor/">40.0 / 40.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ioi16p1">IOI &#39;16 P1 - Detecting Molecules</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi16p1/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ioi16p5">IOI &#39;16 P5 - Unscrambling a Messy Bug</a>
+</td>
+<td class="problem-score"><a href="/problem/ioi16p5/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>JOI
+(100.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/joi14p1">JOI &#39;14 - Factories</a>
+</td>
+<td class="problem-score"><a href="/problem/joi14p1/submissions/kobortor/">30.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/joi14p2">JOI &#39;14 - Fortune Telling 2</a>
+</td>
+<td class="problem-score"><a href="/problem/joi14p2/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/joi14p5">JOI &#39;14 - Pinball</a>
+</td>
+<td class="problem-score"><a href="/problem/joi14p5/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/joi14p6">JOI &#39;14 - Secret</a>
+</td>
+<td class="problem-score"><a href="/problem/joi14p6/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>Mock CCC
+(65.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/mockccc15j1">416</a>
+ </td>
+<td class="problem-score"><a href="/problem/mockccc15j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mockccc15j2">Lowest Exam Mark</a>
+</td>
+<td class="problem-score"><a href="/problem/mockccc15j2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mockccc15j3">Problem-setting Pandemonium (Junior)</a>
+</td>
+<td class="problem-score"><a href="/problem/mockccc15j3/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mockccc15j4">Vox in Box</a>
+</td>
+<td class="problem-score"><a href="/problem/mockccc15j4/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mockccc15j5">Royal Guard</a>
+</td>
+<td class="problem-score"><a href="/problem/mockccc15j5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mockccc15s1">Dupvoting</a>
+</td>
+<td class="problem-score"><a href="/problem/mockccc15s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mockccc15s2">Problem-setting Pandemonium (Senior)</a>
+</td>
+<td class="problem-score"><a href="/problem/mockccc15s2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mockccc15s3">The Tachyon Trap</a>
+</td>
+<td class="problem-score"><a href="/problem/mockccc15s3/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mockccc15s4">Ice Pillars</a>
+</td>
+<td class="problem-score"><a href="/problem/mockccc15s4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>MWC
+(15.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/mwc15c4p2">MWC &#39;15 #4 P2: Data Formatting</a>
+</td>
+<td class="problem-score"><a href="/problem/mwc15c4p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mwc15c4p5">MWC &#39;15 #4 P5: Arts and Crafts</a>
+</td>
+<td class="problem-score"><a href="/problem/mwc15c4p5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>Seasonal
+(706.6 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/bfs17p1">Back From Summer &#39;17 P1: Pithy Passtimes</a>
+</td>
+<td class="problem-score"><a href="/problem/bfs17p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bfs17p2">Back From Summer &#39;17 P2: Crayola Lightsaber</a>
+</td>
+<td class="problem-score"><a href="/problem/bfs17p2/submissions/kobortor/">6.0 / 6.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bfs17p3">Back From Summer &#39;17 P3: Basketball Dodgeball</a>
+</td>
+<td class="problem-score"><a href="/problem/bfs17p3/submissions/kobortor/">8.0 / 8.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bfs17p4">Back From Summer &#39;17 P4: Pair Programming</a>
+</td>
+<td class="problem-score"><a href="/problem/bfs17p4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bfs17p5">Back From Summer &#39;17 P5: Confusing Codeforces Contest</a>
+</td>
+<td class="problem-score"><a href="/problem/bfs17p5/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bfs17p6">Back From Summer &#39;17 P6: Crowded Cities</a>
+</td>
+<td class="problem-score"><a href="/problem/bfs17p6/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bts16p1">Back to School &#39;16: Harambe</a>
+</td>
+<td class="problem-score"><a href="/problem/bts16p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bts16p2">Back to School &#39;16: Paradox</a>
+</td>
+<td class="problem-score"><a href="/problem/bts16p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bts16p3">Back to School &#39;16: Dodgeball</a>
+</td>
+<td class="problem-score"><a href="/problem/bts16p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bts16p4">Back to School &#39;16: Screensaver</a>
+</td>
+<td class="problem-score"><a href="/problem/bts16p4/submissions/kobortor/">8.0 / 8.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bts16p5">Back to School &#39;16: Cherry Tree</a>
+</td>
+<td class="problem-score"><a href="/problem/bts16p5/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bts16p7">Back to School &#39;16: Contest Practice</a>
+</td>
+<td class="problem-score"><a href="/problem/bts16p7/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bts16p8">Back to School &#39;16: Textbooks</a>
+</td>
+<td class="problem-score"><a href="/problem/bts16p8/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bts17p1">Back To School &#39;17: 🅱aram🅱e</a>
+</td>
+<td class="problem-score"><a href="/problem/bts17p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bts17p2">Back to School &#39;17: Avalon</a>
+</td>
+<td class="problem-score"><a href="/problem/bts17p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bts17p3">Back To School &#39;17: Physics</a>
+</td>
+<td class="problem-score"><a href="/problem/bts17p3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bts17p4">Back To School &#39;17: Wet Mud</a>
+</td>
+<td class="problem-score"><a href="/problem/bts17p4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bts17p6">Back to School &#39;17: Sour Candy</a>
+</td>
+<td class="problem-score"><a href="/problem/bts17p6/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cccjqrp1">CCCJQR P1</a>
+</td>
+<td class="problem-score"><a href="/problem/cccjqrp1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cccjqrp2">CCCJQR P2</a>
+</td>
+<td class="problem-score"><a href="/problem/cccjqrp2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/cccjqrp5">CCCJQR P5</a>
+</td>
+<td class="problem-score"><a href="/problem/cccjqrp5/submissions/kobortor/">1.2 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/deathgun">Death Gun</a>
+</td>
+<td class="problem-score"><a href="/problem/deathgun/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/halloween14p1">Rabbit Girls</a>
+</td>
+<td class="problem-score"><a href="/problem/halloween14p1/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/halloween14p2">Cat Girls</a>
+</td>
+<td class="problem-score"><a href="/problem/halloween14p2/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/halloween14p3">Dog Girls</a>
+</td>
+<td class="problem-score"><a href="/problem/halloween14p3/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/halloween14p4">Fox Girls</a>
+</td>
+<td class="problem-score"><a href="/problem/halloween14p4/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mec16p1">MEC &#39;16 P1 - Bat-Doctor</a>
+</td>
+<td class="problem-score"><a href="/problem/mec16p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mec16p2">MEC &#39;16 P2 - Conveyor Belt</a>
+</td>
+<td class="problem-score"><a href="/problem/mec16p2/submissions/kobortor/">4.5 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mec16p3">MEC &#39;16 P3 - Getting Good at Programming</a>
+</td>
+<td class="problem-score"><a href="/problem/mec16p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mec16p4">MEC &#39;16 P4 - Circuitry</a>
+</td>
+<td class="problem-score"><a href="/problem/mec16p4/submissions/kobortor/">10.8 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mec16p5">MEC &#39;16 P5 - Ski Lift Construction</a>
+</td>
+<td class="problem-score"><a href="/problem/mec16p5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/miraclesort">Miracle Sort</a>
+</td>
+<td class="problem-score"><a href="/problem/miraclesort/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mnyc17p1">MNYC &#39;17: 2048</a>
+</td>
+<td class="problem-score"><a href="/problem/mnyc17p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mnyc17p2">MNYC &#39;17: ASCII Art II</a>
+</td>
+<td class="problem-score"><a href="/problem/mnyc17p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mnyc17p3">MNYC &#39;17: Hurontario</a>
+</td>
+<td class="problem-score"><a href="/problem/mnyc17p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mnyc17p4">MNYC &#39;17: Removing Christmas Trees</a>
+</td>
+<td class="problem-score"><a href="/problem/mnyc17p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mnyc17p6">MNYC &#39;17: Bells</a>
+</td>
+<td class="problem-score"><a href="/problem/mnyc17p6/submissions/kobortor/">1.7 / 17.0</a>
+</td>
+ </tr>
+<tr>
+<td class="problem-name"><a href="/problem/mnycp1">Mackenzie New Year&#39;s Challenge P1 - King Modulus</a>
+</td>
+<td class="problem-score"><a href="/problem/mnycp1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mnycp2">Mackenzie New Year&#39;s Challenge P2 - Moore&#39;s Law</a>
+</td>
+<td class="problem-score"><a href="/problem/mnycp2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mnycp3">Mackenzie New Year&#39;s Challenge P3 - ECOO!</a>
+</td>
+<td class="problem-score"><a href="/problem/mnycp3/submissions/kobortor/">4.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mnycp5">Mackenzie New Year&#39;s Challenge P5 - Jelly</a>
+</td>
+<td class="problem-score"><a href="/problem/mnycp5/submissions/kobortor/">5.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mnycp6">Mackenzie New Year&#39;s Challenge P6 - Rocks</a>
+</td>
+<td class="problem-score"><a href="/problem/mnycp6/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/piggy">Piggy</a>
+</td>
+<td class="problem-score"><a href="/problem/piggy/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/saoj">Sword Art Online Judge</a>
+</td>
+<td class="problem-score"><a href="/problem/saoj/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/saoj2">Sword Art Online Judge 2</a>
+</td>
+<td class="problem-score"><a href="/problem/saoj2/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/scroll">Scroll</a>
+</td>
+<td class="problem-score"><a href="/problem/scroll/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/toosimple">Too Simple</a>
+</td>
+<td class="problem-score"><a href="/problem/toosimple/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tree1">Is it a Tree?</a>
+</td>
+<td class="problem-score"><a href="/problem/tree1/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tree2">Tree Cutting</a>
+</td>
+<td class="problem-score"><a href="/problem/tree2/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tree3">Mine and Tree</a>
+</td>
+<td class="problem-score"><a href="/problem/tree3/submissions/kobortor/">40.0 / 40.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/valday15p1">#1 BABE</a>
+</td>
+<td class="problem-score"><a href="/problem/valday15p1/submissions/kobortor/">6.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/valday15p2">Simon and Marcy</a>
+</td>
+<td class="problem-score"><a href="/problem/valday15p2/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/valday15p3">The Great Escape</a>
+</td>
+<td class="problem-score"><a href="/problem/valday15p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2015p1">Invitation Devastation</a>
+</td>
+<td class="problem-score"><a href="/problem/year2015p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2015p2">Food Selection</a>
+</td>
+<td class="problem-score"><a href="/problem/year2015p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2015p3">Gift Wrap</a>
+</td>
+<td class="problem-score"><a href="/problem/year2015p3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2015p4">Leftover Eggnog</a>
+</td>
+<td class="problem-score"><a href="/problem/year2015p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2015p5">Message to Mars</a>
+</td>
+<td class="problem-score"><a href="/problem/year2015p5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2015p6">Tiles</a>
+</td>
+<td class="problem-score"><a href="/problem/year2015p6/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2016p1">Late Christmas Shopping</a>
+</td>
+<td class="problem-score"><a href="/problem/year2016p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2016p2">The 365 Days of Christmas</a>
+</td>
+<td class="problem-score"><a href="/problem/year2016p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2016p3">Arithmetic Snowman</a>
+</td>
+<td class="problem-score"><a href="/problem/year2016p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2016p4">DIY Christmas Tree</a>
+</td>
+<td class="problem-score"><a href="/problem/year2016p4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2016p5">Eggnog Dilemma</a>
+</td>
+<td class="problem-score"><a href="/problem/year2016p5/submissions/kobortor/">2.4 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2016p6">Cake Balancing</a>
+</td>
+<td class="problem-score"><a href="/problem/year2016p6/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2016p7">Old Christmas Lights</a>
+</td>
+<td class="problem-score"><a href="/problem/year2016p7/submissions/kobortor/">17.0 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2016p8">S-NO-wall</a>
+</td>
+<td class="problem-score"><a href="/problem/year2016p8/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2017p2">Peter&#39;s Escape</a>
+</td>
+<td class="problem-score"><a href="/problem/year2017p2/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2017p3">Fibonacci Presents</a>
+</td>
+<td class="problem-score"><a href="/problem/year2017p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2017p4">Christmas Cozonac</a>
+</td>
+<td class="problem-score"><a href="/problem/year2017p4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/year2017p7">Santa&#39;s Deliveries</a>
+</td>
+<td class="problem-score"><a href="/problem/year2017p7/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>TLE
+(385.1 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/tle15p1">TLE &#39;15 P1 - Power Rankings</a>
+</td>
+<td class="problem-score"><a href="/problem/tle15p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle15p3">TLE &#39;15 P3 - Poetry</a>
+</td>
+<td class="problem-score"><a href="/problem/tle15p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle15p4">TLE &#39;15 P4 - Olympiads Homework</a>
+</td>
+<td class="problem-score"><a href="/problem/tle15p4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle15p5">TLE &#39;15 P5 - Prefix Sum Array</a>
+</td>
+<td class="problem-score"><a href="/problem/tle15p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c1p1">TLE &#39;16 Contest 1 P1 - Buying Paper</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c1p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c1p2">TLE &#39;16 Contest 1 P2 - Heavy-Light Decomposition</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c1p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c1p3">TLE &#39;16 Contest 1 P3 - Joey and Chemistry</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c1p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c1p4">TLE &#39;16 Contest 1 P4 - Microwaves Again!</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c1p4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c1p5">TLE &#39;16 Contest 1 P5 - Battle Plan</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c1p5/submissions/kobortor/">17.0 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c2p1">TLE &#39;16 Contest 2 P1 - In Debt</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c2p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c2p2">TLE &#39;16 Contest 2 P2 - Packing Microwaves</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c2p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c2p3">TLE &#39;16 Contest 2 P3 - Fax&#39;s Thanksgiving Dinner</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c2p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c2p4">TLE &#39;16 Contest 2 P4 - Harambe&#39;s Noble Quest</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c2p4/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c2p5">TLE &#39;16 Contest 2 P5 - Thanksgiving Feast</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c2p5/submissions/kobortor/">4.3 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c3p2">TLE &#39;16 Contest 3 P2 - In Remembrance</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c3p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+ <td class="problem-name"><a href="/problem/tle16c3p4">TLE &#39;16 Contest 3 P4 - Gaussian Elimination</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c3p4/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c4p1">TLE &#39;16 Contest 4 P1 - Stack of Presents</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c4p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c4p2">TLE &#39;16 Contest 4 P2 - Shepherding</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c4p2/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c4p3">TLE &#39;16 Contest 4 P3 - Cubes</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c4p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c4p4">TLE &#39;16 Contest 4 P4 - Christmas Tree Building</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c4p4/submissions/kobortor/">17.0 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c4p5">TLE &#39;16 Contest 4 P5 - Buying Gifts</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c4p5/submissions/kobortor/">17.0 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c4p6">TLE &#39;16 Contest 4 P6 - Essay Writing</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c4p6/submissions/kobortor/">13.8 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c5p1">TLE &#39;16 Contest 5 P1 - English Proficiency Exam</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c5p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c5p2">TLE &#39;16 Contest 5 P2 - Playing Piano</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c5p2/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c5p5">TLE &#39;16 Contest 5 P5 - Better Ranking List</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c5p5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c6s1">TLE &#39;16 Contest 6 (Mock CCC) S1 - Writing the CCC</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c6s1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c6s2">TLE &#39;16 Contest 6 (Mock CCC) S2 - Paper Stapling</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c6s2/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c6s3">TLE &#39;16 Contest 6 (Mock CCC) S3 - Hyper Fax</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c6s3/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c6s5">TLE &#39;16 Contest 6 (Mock CCC) S5 - Toll Routes</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c6s5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c7p1">TLE &#39;16 Contest 7 P1 - Math Helper</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c7p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c7p2">TLE &#39;16 Contest 7 P2 - Judging</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c7p2/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c7p3">TLE &#39;16 Contest 7 P3 - NOR</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c7p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c7p4">TLE &#39;16 Contest 7 P4 - Abstract Problem</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c7p4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c7p6">TLE &#39;16 Contest 7 P6 - Everyone Hates Reading</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c7p6/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c8p1">TLE &#39;16 Contest 8 P1 - Paper Hole Punching</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c8p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c8p2">TLE &#39;16 Contest 8 P2 - Dank Meme</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c8p2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c8p3">TLE &#39;16 Contest 8 P3 - Fool&#39;s Sequence</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c8p3/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c8p4">TLE &#39;16 Contest 8 P4 - Delivery Service</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c8p4/submissions/kobortor/">17.0 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tle16c8p5">TLE &#39;16 Contest 8 P5 - Prom Night</a>
+</td>
+<td class="problem-score"><a href="/problem/tle16c8p5/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>TSOC
+(112.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc15c1p1">TSOC &#39;15 Contest 1 #1 - Molecular or Non-Molecular?</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc15c1p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc15c1p2">TSOC &#39;15 Contest 1 #2 - Special Store</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc15c1p2/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc15c1p3">TSOC &#39;15 Contest 1 #3 - Elevators</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc15c1p3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc15c1p4">TSOC &#39;15 Contest 1 #4 - Restaurant Of Secrets</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc15c1p4/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc15c1p5">TSOC &#39;15 Contest 1 #5 - Giant Ants</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc15c1p5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc15c2p1">TSOC &#39;15 Contest 2 #1 - The Code</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc15c2p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc15c2p2">TSOC &#39;15 Contest 2 #2 - Diamonds</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc15c2p2/submissions/kobortor/">6.0 / 6.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc15c2p4">TSOC &#39;15 Contest 2 #4 - Dungeon Crawling</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc15c2p4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc15c2p5">TSOC &#39;15 Contest 2 #5 - Bebiliths</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc15c2p5/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc15c2p6">TSOC &#39;15 Contest 2 #6 - All-Out War!</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc15c2p6/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc16c1p1">Vasile and Haircuts</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc16c1p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc16c1p2">Johnny and Garden</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc16c1p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc16c1p3">You and Crossroads</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc16c1p3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc16c1p4">Alex and Animal Rights</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc16c1p4/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc16c1p5">Max and Cards</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc16c1p5/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/tsoc16c1p6">Joey and Biology</a>
+</td>
+<td class="problem-score"><a href="/problem/tsoc16c1p6/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>Uncategorized
+(711.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/16bitswonly">16 BIT S/W ONLY</a>
+</td>
+<td class="problem-score"><a href="/problem/16bitswonly/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/a20">A20 Gate</a>
+</td>
+<td class="problem-score"><a href="/problem/a20/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/anoisyclass">A Noisy Class</a>
+</td>
+<td class="problem-score"><a href="/problem/anoisyclass/submissions/kobortor/">8.0 / 8.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bf1">List Minimum</a>
+</td>
+<td class="problem-score"><a href="/problem/bf1/submissions/kobortor/">4.0 / 4.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bf1hard">List Minimum (Hard)</a>
+</td>
+<td class="problem-score"><a href="/problem/bf1hard/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bf2">Lexicographically Least Substring</a>
+</td>
+<td class="problem-score"><a href="/problem/bf2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bf3">Next Prime</a>
+</td>
+<td class="problem-score"><a href="/problem/bf3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/bf4hard">String Finding (Hard)</a>
+</td>
+<td class="problem-score"><a href="/problem/bf4hard/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/boolean">Boolean</a>
+</td>
+<td class="problem-score"><a href="/problem/boolean/submissions/kobortor/">4.0 / 4.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/denoun">German Nouns</a>
+</td>
+<td class="problem-score"><a href="/problem/denoun/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/discount">Discerning Discounts</a>
+</td>
+<td class="problem-score"><a href="/problem/discount/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/electricity">Power Distribution</a>
+</td>
+<td class="problem-score"><a href="/problem/electricity/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/encode">Encode</a>
+</td>
+<td class="problem-score"><a href="/problem/encode/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/equivaddr">Equivalent Addresses</a>
+</td>
+<td class="problem-score"><a href="/problem/equivaddr/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/exe">Executable Format</a>
+</td>
+<td class="problem-score"><a href="/problem/exe/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/fastbit">Fast Bit Counting</a>
+</td>
+<td class="problem-score"><a href="/problem/fastbit/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/game1">The Game of Nim</a>
+</td>
+<td class="problem-score"><a href="/problem/game1/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gcc16p1">GCC &#39;16 P1 - Watching Anime</a>
+</td>
+<td class="problem-score"><a href="/problem/gcc16p1/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/gcc16p3">GCC &#39;16 P3 - Hang Gliding Fun</a>
+</td>
+<td class="problem-score"><a href="/problem/gcc16p3/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/graph1">Breaking the Friend Chain</a>
+</td>
+<td class="problem-score"><a href="/problem/graph1/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/hailstone">Hailstone Numbers</a>
+</td>
+<td class="problem-score"><a href="/problem/hailstone/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/hci16jumping">Jumping</a>
+</td>
+<td class="problem-score"><a href="/problem/hci16jumping/submissions/kobortor/">17.0 / 17.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/hci16police">Cheapest Operation Ever</a>
+</td>
+<td class="problem-score"><a href="/problem/hci16police/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/hci16schecker">Sentence Checker</a>
+</td>
+<td class="problem-score"><a href="/problem/hci16schecker/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/helloworld">Hello, World!</a>
+</td>
+<td class="problem-score"><a href="/problem/helloworld/submissions/kobortor/">1.0 / 1.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ics4p1">Word Scrambler</a>
+</td>
+<td class="problem-score"><a href="/problem/ics4p1/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/largeperm">Largest Permutation</a>
+</td>
+<td class="problem-score"><a href="/problem/largeperm/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/ludipq">Guess the Sequence</a>
+</td>
+<td class="problem-score"><a href="/problem/ludipq/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mmcc14p1">Tenri</a>
+</td>
+<td class="problem-score"><a href="/problem/mmcc14p1/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mmcc14p2">Kirito</a>
+</td>
+<td class="problem-score"><a href="/problem/mmcc14p2/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mmcc14p3">Esdeath</a>
+</td>
+<td class="problem-score"><a href="/problem/mmcc14p3/submissions/kobortor/">30.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mmcc15p1">Inaho</a>
+</td>
+<td class="problem-score"><a href="/problem/mmcc15p1/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/mockingspongebob">Mocking SpongeBob</a>
+</td>
+<td class="problem-score"><a href="/problem/mockingspongebob/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/noacmnolife">NO ACM NO LIFE</a>
+</td>
+<td class="problem-score"><a href="/problem/noacmnolife/submissions/kobortor/">30.0 / 30.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/origami">Mailing Origami</a>
+</td>
+<td class="problem-score"><a href="/problem/origami/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/pegg">Power Eggs</a>
+</td>
+<td class="problem-score"><a href="/problem/pegg/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/pickit">Pick It</a>
+</td>
+<td class="problem-score"><a href="/problem/pickit/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/pulse">Pulse</a>
+</td>
+<td class="problem-score"><a href="/problem/pulse/submissions/kobortor/">4.0 / 4.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/regex2">Better Censor</a>
+</td>
+<td class="problem-score"><a href="/problem/regex2/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/rgss4">P4 - HEIGHT</a>
+</td>
+<td class="problem-score"><a href="/problem/rgss4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/rollencrypt">Rolling Encryption</a>
+</td>
+<td class="problem-score"><a href="/problem/rollencrypt/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/rte16j1">RTE &#39;16 J1 - Board Game</a>
+</td>
+<td class="problem-score"><a href="/problem/rte16j1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/sandwich">Sandwich</a>
+</td>
+<td class="problem-score"><a href="/problem/sandwich/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/seed1">Ship</a>
+</td>
+<td class="problem-score"><a href="/problem/seed1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/seed2">Uneven Sand</a>
+</td>
+<td class="problem-score"><a href="/problem/seed2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/seed3">Battle Positions</a>
+</td>
+<td class="problem-score"><a href="/problem/seed3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/seed4">Freedom Appears!</a>
+</td>
+<td class="problem-score"><a href="/problem/seed4/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/seed5">GENESIS</a>
+</td>
+<td class="problem-score"><a href="/problem/seed5/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/segments">Touching Segments</a>
+</td>
+<td class="problem-score"><a href="/problem/segments/submissions/kobortor/">20.0 / 20.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/set">Unique Elements</a>
+</td>
+<td class="problem-score"><a href="/problem/set/submissions/kobortor/">4.0 / 4.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/shortest1">Python Infinite Loop</a>
+</td>
+<td class="problem-score"><a href="/problem/shortest1/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/sort1">Bubble Sort</a>
+</td>
+<td class="problem-score"><a href="/problem/sort1/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/stnbd1">Ren Ashbell</a>
+</td>
+<td class="problem-score"><a href="/problem/stnbd1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/stnbd2">Claire Elstein</a>
+</td>
+<td class="problem-score"><a href="/problem/stnbd2/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/stnbd3">Rinslet Laurenfrost</a>
+</td>
+<td class="problem-score"><a href="/problem/stnbd3/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/stnbd4">Ellis Fahrengart</a>
+</td>
+<td class="problem-score"><a href="/problem/stnbd4/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/stnbd5">Fianna Ray Ordesia</a>
+</td>
+<td class="problem-score"><a href="/problem/stnbd5/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/sweep">Line Sweep</a>
+</td>
+<td class="problem-score"><a href="/problem/sweep/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/thicc17p1">THICC &#39;17 P1 - Carol&#39;s Carnivorous Plants</a>
+</td>
+<td class="problem-score"><a href="/problem/thicc17p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/thicc17p2">THICC &#39;17 P2 - Molly and Product</a>
+</td>
+<td class="problem-score"><a href="/problem/thicc17p2/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/thicc17p3">THICC &#39;17 P3 - The God of Death</a>
+</td>
+<td class="problem-score"><a href="/problem/thicc17p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/thicc17p4">THICC &#39;17 P4 - Kenta&#39;s Neural Networks</a>
+</td>
+<td class="problem-score"><a href="/problem/thicc17p4/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/thicc17p5">THICC &#39;17 P5 - Smarties</a>
+</td>
+<td class="problem-score"><a href="/problem/thicc17p5/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/thicc17p6">THICC &#39;17 P6 - Tunnels</a>
+</td>
+<td class="problem-score"><a href="/problem/thicc17p6/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/utso15p1">UTS Open &#39;15 #1 - Caesar Salad</a>
+</td>
+<td class="problem-score"><a href="/problem/utso15p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/utso15p4">UTS Open &#39;15 #4 - Subway</a>
+</td>
+<td class="problem-score"><a href="/problem/utso15p4/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/utso15p5">UTS Open &#39;15 #5 - Distribution Channel</a>
+</td>
+<td class="problem-score"><a href="/problem/utso15p5/submissions/kobortor/">25.0 / 25.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="user-problem-group">
+<h3 class="unselectable toggle closed"><span class="fa fa-chevron-right fa-fw"></span>VM7WC
+(282.0 points)
+</h3>
+<table style="display: none" class="table toggled">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="problem-name"><a href="/problem/vmss15c1p0">VMSS &#39;15 #0 - Head Data Slave Applications</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss15c1p0/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss15c1p1">VMSS &#39;15 #1 - Senpai, Help Me</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss15c1p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss15c1p2">VMSS &#39;15 #2 - Tomb Robbing</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss15c1p2/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss15c1p3">VMSS &#39;15 #3 - Jeffrey and Roads</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss15c1p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss15c1p4">VMSS &#39;15 #4 - Frank and Roads</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss15c1p4/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss15c1p5">VMSS &#39;15 #5 - Jeffrey and Frank and a Lack of Roads</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss15c1p5/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c1p1">VM7WC &#39;15 #1 Bronze - Goon</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c1p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+ <tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c1p2">VM7WC &#39;15 #1 Silver - Jung Goon</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c1p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c1p3">VM7WC &#39;15 #1 Gold - JHK</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c1p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c2p1">VM7WC &#39;15 #2 Bronze - Recruits!</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c2p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c2p2">VM7WC &#39;15 #2 Silver - 4 Nations, 1 Secret</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c2p2/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c2p3">VM7WC &#39;15 #2 Gold - Uniting the Earth Empire</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c2p3/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c3p1">VM7WC &#39;15 #3 Bronze - M&#39;s Theorem!</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c3p1/submissions/kobortor/">4.0 / 4.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c3p2">VM7WC &#39;15 #3 Silver - Test Scores</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c3p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c3p3">VM7WC &#39;15 #3 Gold - Pollos</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c3p3/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c4p1">VM7WC &#39;15 #4 Bronze - Melanie&#39;s Cradles</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c4p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c4p2">VM7WC &#39;15 #4 Silver - The Melanie Game</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c4p2/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c4p3">VM7WC &#39;15 #4 Gold - Chain Rule</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c4p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c5p1">VM7WC &#39;15 #5 Bronze - Melanioana</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c5p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c5p3">VM7WC &#39;15 #5 Gold - Tree Planting</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c5p3/submissions/kobortor/">12.0 / 12.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c6p1">VM7WC &#39;15 #6 Bronze - Alex&#39;s Bae</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c6p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c6p2">VM7WC &#39;15 #6 Silver - Whipping Out the Old Dictionary</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c6p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc15c6p3">VM7WC &#39;15 #6 Gold - Agriphilisophical Data Slaves</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc15c6p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c1p1">VM7WC &#39;16 #1 Bronze - A New Prime Factorization</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c1p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c1p2">VMSS 7 WC &#39;16 #1 Silver - Project Feng: Multiple Statements</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c1p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c1p3">VM7WC &#39;16 #1 Gold - Russian Palindrome Cultivation</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c1p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c2p1">VM7WC &#39;16 #2 Bronze - G</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c2p1/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c2p2">VM7WC &#39;16 #2 Silver - GG</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c2p2/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c2p3">VM7WC &#39;16 #2 Gold - GGG</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c2p3/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c3p1">VMSS 7 Week Challenge 2016, Week 3 Bronze - Shahir-in-a-Box</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c3p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c3p2">VM7WC &#39;16 #3 Silver - Can Shahir even get there?!</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c3p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c3p3">VM7WC &#39;16 #3 Gold - Hello, Officer.</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c3p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c4p1">VM7WC &#39;16 #4 Bronze - Perfect Squares for Not-So-Perfect Cases</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c4p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c4p2">VM7WC &#39;16 #4 Silver - Tests or Test Cases?</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c4p2/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c4p3">VM7WC &#39;16 #4 Gold - Restoring Reputation</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c4p3/submissions/kobortor/">10.0 / 10.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c5p1">VM7WC &#39;16 #5 Bronze - Jayden Watches Videos</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c5p1/submissions/kobortor/">3.0 / 3.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c5p2">VM7WC &#39;16 #5 Silver - Jayden Plays Video Games</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c5p2/submissions/kobortor/">15.0 / 15.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c5p3">VM7WC &#39;16 #5 Gold - Jayden Studies Trees</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c5p3/submissions/kobortor/">7.0 / 7.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c5p4">VM7WC &#39;16 #5 Silver - Jayden Eats Chocolate</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c5p4/submissions/kobortor/">5.0 / 5.0</a>
+</td>
+</tr>
+<tr>
+<td class="problem-name"><a href="/problem/vmss7wc16c6p1">VM7WC &#39;16 #6 Bronze - The Most Important Skill in Biology</a>
+</td>
+<td class="problem-score"><a href="/problem/vmss7wc16c6p1/submissions/kobortor/">4.0 / 4.0</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</article>
+<footer><span id="footer-content"><br><a style="color: rgb(128, 128, 128)" href="//github.com/DMOJ/">fork us on <span style="font-weight:bold">Github</span></a> | <a style="color: rgb(128, 128, 128);" href="//www.facebook.com/dmoj.ca">like us on <span style="font-weight: bold;">Facebook</span></a> | <a style="color: rgb(128, 128, 128)" href="https://translate.dmoj.ca/">help us <span style="font-weight: bold;">translate</span></a> | <a style="color: rgb(128, 128, 128)" href="https://dmoj.ca/tos/">terms of service</a>
+|
+<form action="/i18n/setlang/" method="post" style="display: inline"><input type='hidden' name='csrfmiddlewaretoken' value='ewu0nDymcc4R0VCDBeB1JvYhVTisIbqHTmo87BAtfJxeZs4yzoGt33a4jhZbBVD1' />
+<input name="next" type="hidden" value="/user/kobortor/solved">
+<select name="language" onchange="form.submit()" style="height: 1.5em">
+<option value="de">Deutsch (de)
+</option>
+<option value="en" selected="">English (en)
+</option>
+<option value="fr">français (fr)
+</option>
+<option value="ro">Română (ro)
+</option>
+<option value="ru">Русский (ru)
+</option>
+<option value="sr-latn">srpski (latinica) (sr-latn)
+</option>
+<option value="vi">Tiếng Việt (vi)
+</option>
+<option value="zh-hans">简体中文 (zh-hans)
+</option>
+</select>
+</form></span>
+</footer>
+</div>
+</body>
+</html>

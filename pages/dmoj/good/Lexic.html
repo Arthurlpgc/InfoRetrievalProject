@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Lexicographically Least Substring - DMOJ: Modern Online Judge
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="DMOJ,Canadian,Don Mills,DMCI,online judge,programming,code,contest,CCC,CCC Solutions,CCC 2015,IOI,JOI,COCI,DMOPC,Canada,Ontario,Toronto,grade,interactive">
+<meta name="description" content="You have a string (indexed from \(0\)) with no more than \(50\) lowercase characters. Find the lexicographically least substring with a length of at least \(K\). A string \(S\) is said to be lexicographically smaller than a string \(T\) if \(|S| \lt |T|\) and \(S\) is a prefix of \(T\) or \(S_k \lt T_k\) and \(S_i = T_i\) \((0 \le ...">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#FFBB33">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+<meta name="theme-color" content="#FFBB33">
+<meta property="og:title" content="Lexicographically Least Substring - DMOJ: Modern Online Judge">
+<meta property="og:site_name" content="DMOJ: Modern Online Judge">
+<meta property="og:url" content="https://dmoj.ca/problem/bf2">
+<meta property="og:description" content="You have a string (indexed from \(0\)) with no more than \(50\) lowercase characters. Find the lexicographically least substring with a length of at least \(K\). A string \(S\) is said to be lexicographically smaller than a string \(T\) if \(|S| \lt |T|\) and \(S\) is a prefix of \(T\) or \(S_k \lt T_k\) and \(S_i = T_i\) \((0 \le ..."><!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script>window.bad_browser = true</script>
+<![endif]-->
+<link rel="stylesheet" href="//dmoj.ml/static/cache/css/c8b3f96d55e0.css" type="text/css" />
+<link rel="canonical" href="https://dmoj.ca/problem/bf2">
+<link rel="stylesheet" href="//dmoj.ml/static/cache/css/158490f673bf.css" type="text/css" media="all" />
+<style>.title-state {
+    font-size: 2em;
+    float: left;
+    width: 1.1em;
+    display: block;
+    margin-top: 0.16em;
+}
+
+.info-float a {
+    vertical-align: middle;
+}
+
+.problem-clarification {
+    border-bottom: 1px solid #ccc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.clarifications-area h2 {
+    margin-bottom: 20px;
+}
+
+.problem-clarification .body {
+    display: inline-block;
+    padding-left: 3em;
+}
+</style><script type="text/javascript" src="//dmoj.ml/static/cache/js/90b83b3c98b1.js"></script>
+<script type="text/javascript" src="//dmoj.ml/static/cache/js/0e33e8898e76.js"></script>
+<script src="//dmoj.ml/static/libs/featherlight/featherlight.min.a0e732b080f0.js" type="text/javascript"></script><script type="text/javascript" src="//dmoj.ml/static/cache/js/6fab94eb70e0.js"></script>
+<script>$(function () {
+    $('a#clone-link').click(function (event) {
+        event.preventDefault();
+        if (confirm('Are you sure you want to clone?'))
+            $(this).closest("form").submit();
+    })
+});
+</script>
+<script type="text/javascript">window.user = {};</script><script>window.user && Raven.setUserContext(window.user)</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56757436-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<noscript>
+      <style>#content {
+    margin: 80px auto auto;
+}
+
+#navigation {
+    top: 27px;
+}
+      </style>
+    </noscript>
+</head>
+<body>
+<nav id="navigation" class="unselectable">
+<div id="nav-container"><a id="navicon" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+<ul id="nav-list">
+<li class="home-nav-element"><a href="/"><img src="//dmoj.ml/static/icons/logo.d0dbdf0b98be.svg" alt="DMOJ" width="160" height="44" onerror="this.src=&quot;//dmoj.ml/static/icons/logo.2f426bc39826.png&quot;; this.onerror=null" style="border: none" /></a>
+</li>
+
+<li class="home-nav-element"><span style="width: 1px; vertical-align: middle; padding-left: 3px; display: inline-block; height: 32px; margin-right: 1px; border-right: 3px solid rgba(255, 255, 255, 0.15);"></span>
+</li>
+<li class="home-menu-item"><a href="/" class="nav-home">Home</a>
+</li>
+<li><a href="/problems/" class="nav-problem active">Problems
+</a>
+</li>
+<li><a href="/submissions/" class="nav-submit">Submissions
+</a>
+</li>
+<li><a href="/users/" class="nav-user">Users
+</a>
+</li>
+<li><a href="/contests/" class="nav-contest">Contests
+</a>
+</li>
+<li><a href="/about/" class="nav-about">About
+<div href="javascript:void(0)" class="nav-expand">></div></a>
+<ul>
+<li><a href="/status/" class="nav-status">Status
+</a>
+</li>
+<li><a href="/runtimes/" class="nav-runtimes">Runtimes
+</a>
+</li>
+<li><a href="/tips/" class="nav-tips">Tips
+</a>
+</li>
+<li><a href="/api/" class="nav-api">API
+</a>
+</li>
+<li><a href="https://github.com/DMOJ" class="nav-github">Github
+</a>
+</li></ul>
+</li>
+</ul><span id="user-links"><span class="anon"><a href="/accounts/login/?next=/problem/bf2"><b>Login</b></a>&nbsp;|&nbsp;<a href="/accounts/register/">Register</a></span></span>
+</div>
+<div id="nav-shadow"></div>
+</nav>
+<div id="page-container">
+<noscript>
+        <div id="noscript">This site works best with JavaScript enabled.
+        </div>
+      </noscript><br>
+<article id="content">
+<div class="problem-title">
+<h2 style="color:#393630; display: inline-block">Lexicographically Least Substring</h2><span class="spacer"></span><a href="/problem/bf2/pdf" class="view-pdf"><span style="position: relative; display: inline-block; font-size: 1.5em"><span style="color: #d40e13" class="fa fa-file-pdf-o"></span><span style="height: 0.2em; display: block; position: absolute; top: 0.3em; background: #d40e13; width: 0.6em; margin-left: -0.15em"></span></span> View as PDF</a>
+</div>
+<hr>
+<div id="content-body">
+<div id="common-content">
+<div id="content-right">
+<div class="info-float"><a href="/problem/bf2/submit" class="unselectable button full">Submit solution</a>
+<hr />
+<div><a href="/problem/bf2/submissions/">All submissions</a>
+</div>
+<div><a href="/problem/bf2/rank/">Best submissions</a>
+</div>
+<hr /><br />
+<div class="problem-info-entry"><i class="fa fa-check fa-fw"></i><span class="pi-name">Points:</span><span class="pi-value">5
+</span>
+</div>
+<div class="problem-info-entry"><i class="fa fa-clock-o fa-fw"></i><span class="pi-name">Time limit:</span><span class="pi-value">2.0s</span>
+</div>
+<div class="problem-lang-limits">
+</div>
+<div class="problem-info-entry"><i class="fa fa-server fa-fw"></i><span class="pi-name">Memory limit:</span><span class="pi-value">64M</span>
+</div>
+<div class="problem-lang-limits">
+</div><br />
+<div id="problem-types">
+<div class="toggle closed unselectable"><span class="fa fa-chevron-right fa-fw"></span>Problem types
+</div>
+<div style="display:none" class="toggled">Brute Force, String Algorithms</div>
+</div><br />
+</div>
+</div>
+<div id="content-left" class="split-common-content">
+<div class="content-description screen"><div><h5>Brute Force Practice 2</h5>
+<p>You have a string (indexed from <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mn>0</mn>
+<annotation encoding="application/x-tex">0</annotation>
+</semantics>
+</math>) with no more than <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mn>50</mn>
+<annotation encoding="application/x-tex">50</annotation>
+</semantics>
+</math> lowercase characters. Find the lexicographically least substring with a length of at least <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>K</mi>
+<annotation encoding="application/x-tex">K</annotation>
+</semantics>
+</math>. A string <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>S</mi>
+<annotation encoding="application/x-tex">S</annotation>
+</semantics>
+</math> is said to be lexicographically smaller than a string <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>T</mi>
+<annotation encoding="application/x-tex">T</annotation>
+</semantics>
+</math> if <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mi>S</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mo>&lt;</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mi>T</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+</mrow>
+<annotation encoding="application/x-tex">|S| &lt; |T|</annotation>
+</semantics>
+</math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>S</mi>
+<annotation encoding="application/x-tex">S</annotation>
+</semantics>
+</math> is a prefix of <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>T</mi>
+<annotation encoding="application/x-tex">T</annotation>
+</semantics>
+</math> or <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>S</mi>
+<mi>k</mi>
+</msub>
+<mo>&lt;</mo>
+<msub>
+<mi>T</mi>
+<mi>k</mi>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">S_k &lt; T_k</annotation>
+</semantics>
+</math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<msub>
+<mi>S</mi>
+<mi>i</mi>
+</msub>
+<mo>=</mo>
+<msub>
+<mi>T</mi>
+<mi>i</mi>
+</msub>
+</mrow>
+<annotation encoding="application/x-tex">S_i = T_i</annotation>
+</semantics>
+</math> <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mo stretchy="false">(</mo>
+<mn>0</mn>
+<mo>≤</mo>
+<mi>i</mi>
+<mo>&lt;</mo>
+<mi>k</mi>
+<mo>,</mo>
+<mn>0</mn>
+<mo>≤</mo>
+<mi>k</mi>
+<mo>&lt;</mo>
+<mo movablelimits="true" form="prefix">min</mo>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mi>S</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mo>,</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mi>T</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo stretchy="false">)</mo>
+</mrow>
+<annotation encoding="application/x-tex">(0 \le i &lt; k, 0 \le k &lt; \min(|S|, |T|))</annotation>
+</semantics>
+</math>. Here, <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">|</mo>
+</mrow>
+</mrow>
+<annotation encoding="application/x-tex">|X|</annotation>
+</semantics>
+</math> denotes the length of the string.</p>
+<h4>Input</h4>
+<p>The first line will have the string.</p>
+<p>The second line will have <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>K</mi>
+<annotation encoding="application/x-tex">K</annotation>
+</semantics>
+</math>.</p>
+<h4>Output</h4>
+<p>Print the lexicographically least substring of length at least <math xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mi>K</mi>
+<annotation encoding="application/x-tex">K</annotation>
+</semantics>
+</math>.</p>
+<h4>Sample Input</h4>
+<pre><code>iloveprogramming
+4</code></pre>
+<h4>Sample Output</h4>
+<pre><code>ammi</code></pre>
+</div>
+<hr />
+</div>
+<div id="comments" class="comment-area">
+<h2><i style="padding-right: 0.3em" class="fa fa-comments"></i>Comments
+</h2>
+<ul class="comments top-level-comments new-comments">
+<li id="comment-3656" data-revision="1" data-max-revision="1" data-revision-ajax="/comments/3656/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-8</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/onlyIfStatement" class="user"><img src="//www.gravatar.com/avatar/4f32966fd998daa5696765d24f1f4777?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/onlyIfStatement" class="username rating rate-expert user">onlyIfStatement</a>
+<div class="relative-time"></div><span data-unix="2016-11-01T03:48:10+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Oct. 31, 2016</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"><a href="javascript:show_revision(3656, -1)" class="previous-revision">&larr;</a><span class="comment-edit-text"> edited</span><a href="javascript:show_revision(3656, 1)" style="visibility: hidden" class="next-revision">&rarr;</a></span><a href="#comment-3656" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="" class="comment-title">Incorrect?</div>
+<div class="comment-body"><p>NVM</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-3658" data-revision="2" data-max-revision="2" data-revision-ajax="/comments/3658/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">5</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/Kirito" class="user"><img src="//www.gravatar.com/avatar/1a26342d1f481833ad6d5e185c506f74?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/Kirito" class="username rating rate-expert user">Kirito</a>
+<div class="relative-time"></div><span data-unix="2016-11-01T12:09:29+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Nov. 1, 2016</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"><a href="javascript:show_revision(3658, -1)" class="previous-revision">&larr;</a><span class="comment-edit-text"> edit 2
+</span><a href="javascript:show_revision(3658, 1)" style="visibility: hidden" class="next-revision">&rarr;</a></span><a href="#comment-3658" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title">Re: Incorrect?</div>
+<div class="comment-body"><div><p>Are you implying that all the people who have AC got it by accident? Your program is wrong, try the following input.</p>
+<pre><code>baaazzz
+4</code></pre>
+</div></div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-3666" data-revision="1" data-max-revision="1" data-revision-ajax="/comments/3666/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">-1</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/onlyIfStatement" class="user"><img src="//www.gravatar.com/avatar/4f32966fd998daa5696765d24f1f4777?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/onlyIfStatement" class="username rating rate-expert user">onlyIfStatement</a>
+<div class="relative-time"></div><span data-unix="2016-11-02T22:58:04+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Nov. 2, 2016</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"><a href="javascript:show_revision(3666, -1)" class="previous-revision">&larr;</a><span class="comment-edit-text"> edited</span><a href="javascript:show_revision(3666, 1)" style="visibility: hidden" class="next-revision">&rarr;</a></span><a href="#comment-3666" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title">Re: Re: Incorrect?</div>
+<div class="comment-body"><p>IM A SPECIAL SNOW FLAKE</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-3667" data-revision="1" data-max-revision="1" data-revision-ajax="/comments/3667/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">1</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/Kirito" class="user"><img src="//www.gravatar.com/avatar/1a26342d1f481833ad6d5e185c506f74?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/Kirito" class="username rating rate-expert user">Kirito</a>
+<div class="relative-time"></div><span data-unix="2016-11-02T23:26:08+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Nov. 2, 2016</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"><a href="javascript:show_revision(3667, -1)" class="previous-revision">&larr;</a><span class="comment-edit-text"> edited</span><a href="javascript:show_revision(3667, 1)" style="visibility: hidden" class="next-revision">&rarr;</a></span><a href="#comment-3667" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title">Re: Re: Re: Incorrect?</div>
+<div class="comment-body"><p><a href="http://lmgtfy.com/?q=Lexicographical%20order" rel="nofollow">No. Just no.</a></p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<ul class="comments">
+<li id="comment-3668" data-revision="1" data-max-revision="1" data-revision-ajax="/comments/3668/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">3</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/onlyIfStatement" class="user"><img src="//www.gravatar.com/avatar/4f32966fd998daa5696765d24f1f4777?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/onlyIfStatement" class="username rating rate-expert user">onlyIfStatement</a>
+<div class="relative-time"></div><span data-unix="2016-11-02T23:35:34+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Nov. 2, 2016</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"><a href="javascript:show_revision(3668, -1)" class="previous-revision">&larr;</a><span class="comment-edit-text"> edited</span><a href="javascript:show_revision(3668, 1)" style="visibility: hidden" class="next-revision">&rarr;</a></span><a href="#comment-3668" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="display: none" class="comment-title">Re: Re: Re: Re: Incorrect?</div>
+<div class="comment-body"><p>excuse my stupidity it's been a long week</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</ul>
+</ul>
+</ul>
+<li id="comment-374" data-revision="0" data-max-revision="0" data-revision-ajax="/comments/374/history/ajax" class="comment">
+<div class="comment-display">
+<div class="info">
+<div class="vote"><a href="javascript:void(0)" title="Please login to vote" class="upvote-link fa fa-chevron-up fa-fw"></a><br />
+<div class="comment-score">0</div><a href="javascript:void(0)" title="Please login to vote" class="downvote-link fa fa-chevron-down fa-fw"></a>
+</div><a href="/user/bobhob314" class="user"><img src="//www.gravatar.com/avatar/1f75cba48dfa37a5254890f8d31ad927?s=135&d=identicon" class="gravatar" /></a>
+</div>
+<div class="detail">
+<div class="header"><a href="/user/bobhob314" class="username rating rate-master user">bobhob314</a>
+<div class="relative-time"></div><span data-unix="2014-12-25T16:25:41+00:00" class="comment-time">&nbsp;commented
+<span class="relative">on Dec. 25, 2014</span></span><span class="comment-spacer"></span><span class="comment-operation"><span class="comment-edits"></span><a href="#comment-374" title="Link" class="comment-link"><i class="fa fa-link fa-fw"></i></a></span>
+</div>
+<div class="content content-description">
+<div style="" class="comment-title">(: ^ o )</div>
+<div class="comment-body"><p>Python hax always provide a nice meme</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<script type="text/javascript">function mathjax_pagedown(a){if("MathJax"in window){a.each(window.editors,function(d,b){var c=a("div.wmd-preview#"+d+"_wmd_preview")[0];b.hooks.chain("onPreviewRefresh",function(){MathJax.Hub.Queue(["Typeset",MathJax.Hub,c])});MathJax.Hub.Queue(["Typeset",MathJax.Hub,c])})}}window.mathjax_pagedown=mathjax_pagedown;$(window).load(function(){(mathjax_pagedown)("$"in window?$:django.jQuery)});</script>
+<footer><span id="footer-content"><br><a style="color: rgb(128, 128, 128)" href="//github.com/DMOJ/">fork us on <span style="font-weight:bold">Github</span></a> | <a style="color: rgb(128, 128, 128);" href="//www.facebook.com/dmoj.ca">like us on <span style="font-weight: bold;">Facebook</span></a> | <a style="color: rgb(128, 128, 128)" href="https://translate.dmoj.ca/">help us <span style="font-weight: bold;">translate</span></a> | <a style="color: rgb(128, 128, 128)" href="https://dmoj.ca/tos/">terms of service</a>
+|
+<form action="/i18n/setlang/" method="post" style="display: inline"><input type='hidden' name='csrfmiddlewaretoken' value='sh6lH7wEdRLukXEk3MFtEAqZb3XWEDKT770tr5yLgoeRju6f1WKVY8CMzrEFxnXd' />
+<input name="next" type="hidden" value="/problem/bf2">
+<select name="language" onchange="form.submit()" style="height: 1.5em">
+<option value="de">Deutsch (de)
+</option>
+<option value="en" selected="">English (en)
+</option>
+<option value="fr">français (fr)
+</option>
+<option value="ro">Română (ro)
+</option>
+<option value="ru">Русский (ru)
+</option>
+<option value="sr-latn">srpski (latinica) (sr-latn)
+</option>
+<option value="vi">Tiếng Việt (vi)
+</option>
+<option value="zh-hans">简体中文 (zh-hans)
+</option>
+</select>
+</form></span>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Contests - DMOJ: Modern Online Judge
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="DMOJ,Canadian,Don Mills,DMCI,online judge,programming,code,contest,CCC,CCC Solutions,CCC 2015,IOI,JOI,COCI,DMOPC,Canada,Ontario,Toronto,grade,interactive">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#FFBB33">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+<meta name="theme-color" content="#FFBB33">
+<meta property="og:title" content="Contests - DMOJ: Modern Online Judge">
+<meta property="og:site_name" content="DMOJ: Modern Online Judge">
+<meta property="og:url" content="https://dmoj.ca/contests/"><!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script>window.bad_browser = true</script>
+<![endif]-->
+<meta name="description" content="The DMOJ's contest list - past, present, and future." /><link rel="stylesheet" href="//dmoj.ml/static/cache/css/c8b3f96d55e0.css" type="text/css" />
+<link rel="canonical" href="https://dmoj.ca/contests/">
+<script type="text/javascript" src="//dmoj.ml/static/cache/js/90b83b3c98b1.js"></script>
+<script src="//dmoj.ml/static/libs/featherlight/featherlight.min.a0e732b080f0.js" type="text/javascript"></script>
+<script type="text/javascript">$(document).ready(function () {
+    $('.time-remaining').each(function () {
+        count_down($(this));
+    });
+
+    $('.contest-tag').find('a').featherlight();
+
+    $('.join-warning').click(function () {
+        return confirm('Are you sure you want to join?\n' +
+                'Joining a contest for the first time starts your timer, after which it becomes unstoppable.');
+    });
+});
+</script>
+<script type="text/javascript">window.user = {};</script><script>window.user && Raven.setUserContext(window.user)</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56757436-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<noscript>
+      <style>#content {
+    margin: 80px auto auto;
+}
+
+#navigation {
+    top: 27px;
+}
+      </style>
+    </noscript>
+</head>
+<body>
+<nav id="navigation" class="unselectable">
+<div id="nav-container"><a id="navicon" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+<ul id="nav-list">
+<li class="home-nav-element"><a href="/"><img src="//dmoj.ml/static/icons/logo.d0dbdf0b98be.svg" alt="DMOJ" width="160" height="44" onerror="this.src=&quot;//dmoj.ml/static/icons/logo.2f426bc39826.png&quot;; this.onerror=null" style="border: none" /></a>
+</li>
+
+<li class="home-nav-element"><span style="width: 1px; vertical-align: middle; padding-left: 3px; display: inline-block; height: 32px; margin-right: 1px; border-right: 3px solid rgba(255, 255, 255, 0.15);"></span>
+</li>
+<li class="home-menu-item"><a href="/" class="nav-home">Home</a>
+</li>
+<li><a href="/problems/" class="nav-problem">Problems
+</a>
+</li>
+<li><a href="/submissions/" class="nav-submit">Submissions
+</a>
+</li>
+<li><a href="/users/" class="nav-user">Users
+</a>
+</li>
+<li><a href="/contests/" class="nav-contest active">Contests
+</a>
+</li>
+<li><a href="/about/" class="nav-about">About
+<div href="javascript:void(0)" class="nav-expand">></div></a>
+<ul>
+<li><a href="/status/" class="nav-status">Status
+</a>
+</li>
+<li><a href="/runtimes/" class="nav-runtimes">Runtimes
+</a>
+</li>
+<li><a href="/tips/" class="nav-tips">Tips
+</a>
+</li>
+<li><a href="/api/" class="nav-api">API
+</a>
+</li>
+<li><a href="https://github.com/DMOJ" class="nav-github">Github
+</a>
+</li></ul>
+</li>
+</ul><span id="user-links"><span class="anon"><a href="/accounts/login/?next=/contests/"><b>Login</b></a>&nbsp;|&nbsp;<a href="/accounts/register/">Register</a></span></span>
+</div>
+<div id="nav-shadow"></div>
+</nav>
+<div id="page-container">
+<noscript>
+        <div id="noscript">This site works best with JavaScript enabled.
+        </div>
+      </noscript><br>
+<article id="content">
+<div class="page-title">
+<div class="tabs">
+<h2 style="color:#393630; display: inline-block">Contests</h2><span class="spacer"></span>
+<ul>
+<li class="active"><a href="/contests/">List</a>
+</li>
+<li class=""><a href="/contests/2017/9/">Calendar</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content-body">
+<div class="content-description">
+<h4>Upcoming Contests</h4>
+<i>There are no scheduled contests at this time.</i><br />
+<h4>Past Contests</h4>
+<table class="contest-list table striped">
+<thead>
+<tr>
+<th style="width:90%">Contest</th>
+<th>Users</th>
+<th style="width:15%"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/bts17" class="contest-list-title">Back to School &#39;17</a>
+<div class="contest-tags"><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Sep 9, 2017, 0:00 - Sep 10, 2017, 23:59<br />04:00 window</span>
+</div>
+</td>
+<td><a href="/contest/bts17/ranking/">104</a>
+</td>
+<td><a href="/contest/bts17/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/bfs17" class="contest-list-title">Back From Summer 2017</a>
+<div class="contest-tags"><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Sep 8, 2017, 15:30 - Sep 8, 2017, 23:59<br />02:00 window</span>
+</div>
+</td>
+<td><a href="/contest/bfs17/ranking/">101</a>
+</td>
+<td><a href="/contest/bfs17/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/thicc17" class="contest-list-title">THICC &#39;17</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Aug 5, 2017, 11:00 - Aug 6, 2017, 0:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/thicc17/ranking/">84</a>
+</td>
+<td><a href="/contest/thicc17/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/rte16j" class="contest-list-title">RTE &#39;16 Junior Division</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Jun 7, 2017, 15:00 - Jun 7, 2017, 23:00<br />01:30 window</span>
+</div>
+</td>
+<td><a href="/contest/rte16j/ranking/">36</a>
+</td>
+<td><a href="/contest/rte16j/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/rte16s" class="contest-list-title">RTE &#39;16 Senior Division</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Jun 7, 2017, 15:00 - Jun 7, 2017, 23:00<br />01:30 window</span>
+</div>
+</td>
+<td><a href="/contest/rte16s/ranking/">34</a>
+</td>
+<td><a href="/contest/rte16s/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg17d1open" class="contest-list-title">DMPG &#39;17 - Gold Division (Open Unofficial Mirror)</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">May 15, 2017, 11:00 - May 16, 2017, 11:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmpg17d1open/ranking/">18</a>
+</td>
+<td><a href="/contest/dmpg17d1open/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg17d2open" class="contest-list-title">DMPG &#39;17 - Silver Division (Open Unofficial Mirror)</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">May 15, 2017, 11:00 - May 16, 2017, 11:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmpg17d2open/ranking/">32</a>
+</td>
+<td><a href="/contest/dmpg17d2open/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg17d3open" class="contest-list-title">DMPG &#39;17 - Bronze Division (Open Unofficial Mirror)</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">May 15, 2017, 11:00 - May 16, 2017, 11:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmpg17d3open/ranking/">36</a>
+</td>
+<td><a href="/contest/dmpg17d3open/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg17d1" class="contest-list-title">DMPG &#39;17 - Gold Division</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+May 15, 2017, 10:25<br />
+03:00 long</span>
+</div>
+</td>
+<td><a href="/contest/dmpg17d1/ranking/">7</a>
+</td>
+<td><a href="/contest/dmpg17d1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg17d2" class="contest-list-title">DMPG &#39;17 - Silver Division</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+May 15, 2017, 10:25<br />
+03:00 long</span>
+</div>
+</td>
+<td><a href="/contest/dmpg17d2/ranking/">62</a>
+</td>
+<td><a href="/contest/dmpg17d2/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg17d3" class="contest-list-title">DMPG &#39;17 - Bronze Division</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+May 15, 2017, 10:25<br />
+03:00 long</span>
+</div>
+</td>
+<td><a href="/contest/dmpg17d3/ranking/">64</a>
+</td>
+<td><a href="/contest/dmpg17d3/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/cco17d1" class="contest-list-title">2017 Canadian Computing Olympiad Day 1 Mirror</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">May 13, 2017, 0:00 - May 15, 2017, 12:00<br />04:00 window</span>
+</div>
+</td>
+<td><a href="/contest/cco17d1/ranking/">78</a>
+</td>
+<td><a href="/contest/cco17d1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/cco17d2" class="contest-list-title">2017 Canadian Computing Olympiad Day 2 Mirror</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">May 13, 2017, 0:00 - May 15, 2017, 12:00<br />04:00 window</span>
+</div>
+</td>
+<td><a href="/contest/cco17d2/ranking/">47</a>
+</td>
+<td><a href="/contest/cco17d2/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/mcco17d1" class="contest-list-title">Mock CCO &#39;17 - Day 1</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">May 2, 2017, 12:00 - May 7, 2017, 12:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/mcco17d1/ranking/">62</a>
+</td>
+<td><a href="/contest/mcco17d1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/mcco17d2" class="contest-list-title">Mock CCO &#39;17 - Day 2</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">May 2, 2017, 12:00 - May 7, 2017, 12:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/mcco17d2/ranking/">21</a>
+</td>
+<td><a href="/contest/mcco17d2/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/tle16c8" class="contest-list-title">TLE &#39;16 April Contest</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Apr 20, 2017, 12:00 - Apr 20, 2017, 23:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/tle16c8/ranking/">117</a>
+</td>
+<td><a href="/contest/tle16c8/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/ioiqr" class="contest-list-title">International Olympiad in Informatics Qualifying Round</a>
+<div class="contest-tags"><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Apr 1, 2017, 0:00<br />
+23:59 long</span>
+</div>
+</td>
+<td><a href="/contest/ioiqr/ranking/">94</a>
+</td>
+<td><a href="/contest/ioiqr/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/tle16c7" class="contest-list-title">TLE &#39;16 March Contest</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Mar 23, 2017, 12:00 - Mar 23, 2017, 23:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/tle16c7/ranking/">90</a>
+</td>
+<td><a href="/contest/tle16c7/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/moi17r3" class="contest-list-title">Moroccan Olympiad in Informatics (Round 3)</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Mar 11, 2017, 10:00<br />
+02:00 long</span>
+</div>
+</td>
+<td><a href="/contest/moi17r3/ranking/">245</a>
+</td>
+<td><a href="/contest/moi17r3/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/waterlooacmw2017" class="contest-list-title">2017 Winter Waterloo Local ACM Contest Mirror</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Mar 4, 2017, 13:30 - Mar 5, 2017, 0:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/waterlooacmw2017/ranking/">40</a>
+</td>
+<td><a href="/contest/waterlooacmw2017/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/moi17r2" class="contest-list-title">Moroccan Olympiad in Informatics (Round 2)</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Mar 4, 2017, 10:00<br />
+02:00 long</span>
+</div>
+</td>
+<td><a href="/contest/moi17r2/ranking/">440</a>
+</td>
+<td><a href="/contest/moi17r2/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/moi17r1" class="contest-list-title">Moroccan Olympiad in Informatics (Round 1)</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Feb 25, 2017, 10:00<br />
+02:00 long</span>
+</div>
+</td>
+<td><a href="/contest/moi17r1/ranking/">503</a>
+</td>
+<td><a href="/contest/moi17r1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/tle16c6j" class="contest-list-title">TLE &#39;16 February Contest (Mock CCC) Junior Division</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Feb 20, 2017, 9:00 - Feb 20, 2017, 23:59<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/tle16c6j/ranking/">99</a>
+</td>
+<td><a href="/contest/tle16c6j/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/tle16c6s" class="contest-list-title">TLE &#39;16 February Contest (Mock CCC) Senior Division</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Feb 20, 2017, 9:00 - Feb 20, 2017, 23:59<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/tle16c6s/ranking/">126</a>
+</td>
+<td><a href="/contest/tle16c6s/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/rgss17" class="contest-list-title">Richmond Green Programming Contest 2017</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Feb 17, 2017, 12:00 - Feb 20, 2017, 0:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/rgss17/ranking/">149</a>
+</td>
+<td><a href="/contest/rgss17/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc16c4" class="contest-list-title">DMOPC &#39;16 February Contest - Mascot Edition</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Feb 14, 2017, 12:00 - Feb 15, 2017, 12:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmopc16c4/ranking/">119</a>
+</td>
+<td><a href="/contest/dmopc16c4/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/gfssoc16j" class="contest-list-title">GFSSOC ‘17 Junior Division</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Jan 20, 2017, 11:00 - Jan 21, 2017, 0:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/gfssoc16j/ranking/">38</a>
+</td>
+<td><a href="/contest/gfssoc16j/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/gfssoc16s" class="contest-list-title">GFSSOC ‘17 Senior Division</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Jan 20, 2017, 11:00 - Jan 21, 2017, 0:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/gfssoc16s/ranking/">35</a>
+</td>
+<td><a href="/contest/gfssoc16s/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/tle16c5" class="contest-list-title">TLE &#39;16 January Contest</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Jan 19, 2017, 12:00 - Jan 19, 2017, 23:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/tle16c5/ranking/">89</a>
+</td>
+<td><a href="/contest/tle16c5/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/mnyc17" class="contest-list-title">Mackenzie New Year&#39;s Challenge &#39;17</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Jan 7, 2017, 12:00<br />
+1 day 12:00 long</span>
+</div>
+</td>
+<td><a href="/contest/mnyc17/ranking/">73</a>
+</td>
+<td><a href="/contest/mnyc17/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/year2017" class="contest-list-title">New Year&#39;s 2017</a>
+<div class="contest-tags"><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Jan 1, 2017, 9:00<br />
+12:00 long</span>
+</div>
+</td>
+<td><a href="/contest/year2017/ranking/">134</a>
+</td>
+<td><a href="/contest/year2017/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/tle16c4" class="contest-list-title">TLE &#39;16 December Contest</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Dec 23, 2016, 12:00 - Dec 24, 2016, 23:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/tle16c4/ranking/">140</a>
+</td>
+<td><a href="/contest/tle16c4/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/gcc16c1" class="contest-list-title">GCC &#39;16 #1</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Dec 21, 2016, 17:00 - Dec 21, 2016, 23:00<br />02:00 window</span>
+</div>
+</td>
+<td><a href="/contest/gcc16c1/ranking/">35</a>
+</td>
+<td><a href="/contest/gcc16c1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/hcibaps16" class="contest-list-title">HCI NOI Training 16 Be-a-problem-setter Contest</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Dec 16, 2016, 21:00<br />
+06:00 long</span>
+</div>
+</td>
+<td><a href="/contest/hcibaps16/ranking/">25</a>
+</td>
+<td><a href="/contest/hcibaps16/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc16c3" class="contest-list-title">DMOPC &#39;16 December Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Dec 13, 2016, 12:00 - Dec 14, 2016, 12:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmopc16c3/ranking/">196</a>
+</td>
+<td><a href="/contest/dmopc16c3/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/tle16c3" class="contest-list-title">TLE &#39;16 November Contest</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Nov 17, 2016, 12:00 - Nov 17, 2016, 23:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/tle16c3/ranking/">100</a>
+</td>
+<td><a href="/contest/tle16c3/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc16c2" class="contest-list-title">DMOPC &#39;16 November Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Nov 8, 2016, 12:00 - Nov 8, 2016, 22:59<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmopc16c2/ranking/">104</a>
+</td>
+<td><a href="/contest/dmopc16c2/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/tle16c2" class="contest-list-title">TLE &#39;16 October Contest</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Oct 20, 2016, 12:00 - Oct 20, 2016, 23:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/tle16c2/ranking/">96</a>
+</td>
+<td><a href="/contest/tle16c2/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc16c1" class="contest-list-title">DMOPC &#39;16 October Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Oct 11, 2016, 11:25 - Oct 12, 2016, 0:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmopc16c1/ranking/">166</a>
+</td>
+<td><a href="/contest/dmopc16c1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/tle16c1" class="contest-list-title">TLE &#39;16 September Contest</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Sep 21, 2016, 12:00 - Sep 21, 2016, 23:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/tle16c1/ranking/">54</a>
+</td>
+<td><a href="/contest/tle16c1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/bts16" class="contest-list-title">Back to School &#39;16</a>
+<div class="contest-tags"><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Sep 16, 2016, 15:00 - Sep 19, 2016, 0:00<br />04:00 window</span>
+</div>
+</td>
+<td><a href="/contest/bts16/ranking/">71</a>
+</td>
+<td><a href="/contest/bts16/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg16d1open" class="contest-list-title">DMPG &#39;16 - Gold Division (Open Unofficial Mirror)</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">May 18, 2016, 11:00 - May 18, 2016, 21:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmpg16d1open/ranking/">36</a>
+</td>
+<td><a href="/contest/dmpg16d1open/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg16d2open" class="contest-list-title">DMPG &#39;16 - Silver Division (Open Unofficial Mirror)</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">May 18, 2016, 11:00 - May 18, 2016, 21:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmpg16d2open/ranking/">34</a>
+</td>
+<td><a href="/contest/dmpg16d2open/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg16d3open" class="contest-list-title">DMPG &#39;16 - Bronze Division (Open Unofficial Mirror)</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">May 18, 2016, 11:00 - May 18, 2016, 21:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmpg16d3open/ranking/">40</a>
+</td>
+<td><a href="/contest/dmpg16d3open/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg16d1" class="contest-list-title">DMPG &#39;16 - Gold Division</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+May 18, 2016, 10:25<br />
+03:05 long</span>
+</div>
+</td>
+<td><a href="/contest/dmpg16d1/ranking/">6</a>
+</td>
+<td><a href="/contest/dmpg16d1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg16d2" class="contest-list-title">DMPG &#39;16 - Silver Division</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+May 18, 2016, 10:25<br />
+03:05 long</span>
+</div>
+</td>
+<td><a href="/contest/dmpg16d2/ranking/">46</a>
+</td>
+<td><a href="/contest/dmpg16d2/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg16d3" class="contest-list-title">DMPG &#39;16 - Bronze Division</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+May 18, 2016, 10:25<br />
+03:05 long</span>
+</div>
+</td>
+<td><a href="/contest/dmpg16d3/ranking/">42</a>
+</td>
+<td><a href="/contest/dmpg16d3/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/tsoc16c2" class="contest-list-title">TSOC &#39;16 #2</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Apr 20, 2016, 1:00 - Apr 24, 2016, 23:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/tsoc16c2/ranking/">40</a>
+</td>
+<td><a href="/contest/tsoc16c2/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc15c7" class="contest-list-title">DMOPC &#39;15 April Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Apr 12, 2016, 12:00 - Apr 13, 2016, 0:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmopc15c7/ranking/">88</a>
+</td>
+<td><a href="/contest/dmopc15c7/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/cccjqr" class="contest-list-title">CCC Junior Qualification Round</a>
+<div class="contest-tags"><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Apr 1, 2016, 7:00<br />
+17:00 long</span>
+</div>
+</td>
+<td><a href="/contest/cccjqr/ranking/">40</a>
+</td>
+<td><a href="/contest/cccjqr/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/aprilfools16" class="contest-list-title">Perfectly Reasonable Contest</a>
+<div class="contest-tags"><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Apr 1, 2016, 0:00<br />
+1 day long</span>
+</div>
+</td>
+<td><a href="/contest/aprilfools16/ranking/">64</a>
+</td>
+<td><a href="/contest/aprilfools16/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/mec16" class="contest-list-title">Mackenzie Easter Competition 2016</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Mar 25, 2016, 12:00 - Mar 29, 2016, 0:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/mec16/ranking/">49</a>
+</td>
+<td><a href="/contest/mec16/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/top16pr" class="contest-list-title">TOP 2016 - Practice Session</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Mar 15, 2016, 11:00<br />
+02:00 long</span>
+</div>
+</td>
+<td><a href="/contest/top16pr/ranking/">48</a>
+</td>
+<td><a href="/contest/top16pr/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/tle15" class="contest-list-title">TLE 2015-16</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Mar 11, 2016, 0:00 - Mar 15, 2016, 0:00<br />04:00 window</span>
+</div>
+</td>
+<td><a href="/contest/tle15/ranking/">62</a>
+</td>
+<td><a href="/contest/tle15/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc15c6" class="contest-list-title">DMOPC &#39;15 March Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Mar 1, 2016, 12:00 - Mar 1, 2016, 21:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmopc15c6/ranking/">87</a>
+</td>
+<td><a href="/contest/dmopc15c6/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/vmss7wc16c6" class="contest-list-title">VMSS 7WC &#39;16, Week 6</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Feb 11, 2016, 15:06<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/vmss7wc16c6/ranking/">109</a>
+</td>
+<td><a href="/contest/vmss7wc16c6/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc15c5" class="contest-list-title">DMOPC &#39;15 February Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Feb 9, 2016, 12:00 - Feb 9, 2016, 21:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmopc15c5/ranking/">82</a>
+</td>
+<td><a href="/contest/dmopc15c5/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/vmss7wc16c5" class="contest-list-title">VMSS 7WC &#39;16, Week 5</a>
+ <div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Feb 5, 2016, 15:06<br />
+6 days long</span>
+</div>
+</td>
+<td><a href="/contest/vmss7wc16c5/ranking/">102</a>
+</td>
+<td><a href="/contest/vmss7wc16c5/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/vmss7wc16c4" class="contest-list-title">VMSS 7WC &#39;16, Week 4</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Jan 28, 2016, 15:06<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/vmss7wc16c4/ranking/">106</a>
+</td>
+<td><a href="/contest/vmss7wc16c4/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/vmss7wc16c3" class="contest-list-title">VMSS 7WC &#39;16, Week 3</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Jan 21, 2016, 15:06<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/vmss7wc16c3/ranking/">102</a>
+</td>
+<td><a href="/contest/vmss7wc16c3/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/vmss7wc16c2" class="contest-list-title">VMSS 7WC &#39;16, Week 2</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Jan 14, 2016, 15:06<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/vmss7wc16c2/ranking/">117</a>
+</td>
+<td><a href="/contest/vmss7wc16c2/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc15c4" class="contest-list-title">DMOPC &#39;15 January Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Jan 12, 2016, 12:00 - Jan 12, 2016, 21:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmopc15c4/ranking/">100</a>
+</td>
+<td><a href="/contest/dmopc15c4/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/vmss7wc16c1" class="contest-list-title">VMSS 7WC &#39;16, Week 1</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Jan 7, 2016, 15:06<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/vmss7wc16c1/ranking/">115</a>
+</td>
+<td><a href="/contest/vmss7wc16c1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/tsoc16c1" class="contest-list-title">Thornhill Selection Contest</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Jan 7, 2016, 12:00 - Jan 14, 2016, 12:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/tsoc16c1/ranking/">79</a>
+</td>
+<td><a href="/contest/tsoc16c1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/year2016" class="contest-list-title">New Year&#39;s 2016</a>
+<div class="contest-tags"><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Jan 1, 2016, 12:00<br />
+2 days long</span>
+</div>
+</td>
+<td><a href="/contest/year2016/ranking/">112</a>
+</td>
+<td><a href="/contest/year2016/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/mnyc16" class="contest-list-title">Mackenzie New Year&#39;s Challenge</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Dec 30, 2015, 9:00<br />
+1 day 12:00 long</span>
+</div>
+</td>
+<td><a href="/contest/mnyc16/ranking/">78</a>
+</td>
+<td><a href="/contest/mnyc16/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/gfssoc3j" class="contest-list-title">Glenforest Winter Open 2015 (Junior)</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Dec 14, 2015, 15:30<br />
+03:00 long</span>
+</div>
+</td>
+<td><a href="/contest/gfssoc3j/ranking/">28</a>
+</td>
+<td><a href="/contest/gfssoc3j/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/gfssoc3s" class="contest-list-title">Glenforest Winter Open 2015 (Senior)</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Dec 14, 2015, 15:30<br />
+04:00 long</span>
+</div>
+</td>
+<td><a href="/contest/gfssoc3s/ranking/">43</a>
+</td>
+<td><a href="/contest/gfssoc3s/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc15c3" class="contest-list-title">DMOPC &#39;15 December Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Dec 8, 2015, 12:00 - Dec 8, 2015, 21:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmopc15c3/ranking/">164</a>
+</td>
+<td><a href="/contest/dmopc15c3/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc15c2" class="contest-list-title">DMOPC &#39;15 November Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Nov 10, 2015, 12:00 - Nov 10, 2015, 21:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmopc15c2/ranking/">160</a>
+</td>
+<td><a href="/contest/dmopc15c2/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc15c1" class="contest-list-title">DMOPC &#39;15 October Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Oct 13, 2015, 12:00 - Oct 13, 2015, 21:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmopc15c1/ranking/">136</a>
+</td>
+<td><a href="/contest/dmopc15c1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/vmss15c1" class="contest-list-title">VMSS Warmup</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Sep 17, 2015, 4:18<br />
+7 days 11:11 long</span>
+</div>
+</td>
+<td><a href="/contest/vmss15c1/ranking/">92</a>
+</td>
+<td><a href="/contest/vmss15c1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg15d1open" class="contest-list-title">DMPG &#39;15 - Gold Division (Open Unofficial Mirror)</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">May 28, 2015, 11:00 - May 28, 2015, 21:10<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmpg15d1open/ranking/">47</a>
+</td>
+<td><a href="/contest/dmpg15d1open/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg15d2open" class="contest-list-title">DMPG &#39;15 - Silver Division (Open Unofficial Mirror)</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">May 28, 2015, 11:00 - May 28, 2015, 21:10<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmpg15d2open/ranking/">22</a>
+</td>
+<td><a href="/contest/dmpg15d2open/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg15d3open" class="contest-list-title">DMPG &#39;15 - Bronze Division (Open Unofficial Mirror)</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">May 28, 2015, 11:00 - May 28, 2015, 21:10<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/dmpg15d3open/ranking/">15</a>
+</td>
+<td><a href="/contest/dmpg15d3open/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg15d1" class="contest-list-title">DMPG &#39;15 - Gold Division</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+May 28, 2015, 10:10<br />
+03:00 long</span>
+</div>
+</td>
+<td><a href="/contest/dmpg15d1/ranking/">10</a>
+</td>
+<td><a href="/contest/dmpg15d1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg15d2" class="contest-list-title">DMPG &#39;15 - Silver Division</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+May 28, 2015, 10:10<br />
+03:00 long</span>
+</div>
+</td>
+<td><a href="/contest/dmpg15d2/ranking/">57</a>
+</td>
+<td><a href="/contest/dmpg15d2/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmpg15d3" class="contest-list-title">DMPG &#39;15 - Bronze Division</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+May 28, 2015, 10:10<br />
+03:00 long</span>
+</div>
+</td>
+<td><a href="/contest/dmpg15d3/ranking/">30</a>
+</td>
+<td><a href="/contest/dmpg15d3/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/ccomashup" class="contest-list-title">CCO Mashup</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+May 11, 2015, 9:00<br />
+2 days 14:59 long</span>
+</div>
+</td>
+<td><a href="/contest/ccomashup/ranking/">46</a>
+</td>
+<td><a href="/contest/ccomashup/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc14c7" class="contest-list-title">DMOPC &#39;14 May Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+May 5, 2015, 15:30<br />
+03:00 long</span>
+</div>
+</td>
+<td><a href="/contest/dmopc14c7/ranking/">76</a>
+</td>
+<td><a href="/contest/dmopc14c7/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/tsoc15c2" class="contest-list-title">TSOC &#39;15 #2 - « Special Day »</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Apr 20, 2015, 0:00 - Apr 23, 2015, 0:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/tsoc15c2/ranking/">30</a>
+</td>
+<td><a href="/contest/tsoc15c2/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/ccoprep3" class="contest-list-title">CCO Preparation Test 3</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Apr 18, 2015, 0:00 - Apr 24, 2015, 23:59<br />04:00 window</span>
+</div>
+</td>
+<td><a href="/contest/ccoprep3/ranking/">27</a>
+</td>
+<td><a href="/contest/ccoprep3/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc14c6" class="contest-list-title">DMOPC &#39;14 April Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Apr 7, 2015, 15:30<br />
+03:00 long</span>
+</div>
+</td>
+<td><a href="/contest/dmopc14c6/ranking/">63</a>
+</td>
+<td><a href="/contest/dmopc14c6/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/gfssoc2j" class="contest-list-title">Glenforest Spring Open 2015 (Junior)</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Apr 2, 2015, 15:00<br />
+04:30 long</span>
+</div>
+</td>
+<td><a href="/contest/gfssoc2j/ranking/">29</a>
+</td>
+<td><a href="/contest/gfssoc2j/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/gfssoc2s" class="contest-list-title">Glenforest Spring Open 2015 (Senior)</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Apr 2, 2015, 15:00<br />
+04:30 long</span>
+</div>
+</td>
+<td><a href="/contest/gfssoc2s/ranking/">30</a>
+</td>
+<td><a href="/contest/gfssoc2s/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/aprilfools15" class="contest-list-title">« Quest » (April Fools 2015)</a>
+<div class="contest-tags"><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Apr 1, 2015, 0:00<br />
+23:59 long</span>
+</div>
+</td>
+<td><a href="/contest/aprilfools15/ranking/">80</a>
+</td>
+<td><a href="/contest/aprilfools15/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/mmcc15" class="contest-list-title">Mini March Coding Challenge 2015</a>
+<div class="contest-tags"><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Mar 16, 2015, 0:00<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/mmcc15/ranking/">40</a>
+</td>
+<td><a href="/contest/mmcc15/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc14c5" class="contest-list-title">DMOPC &#39;14 March Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Mar 10, 2015, 15:30<br />
+03:00 long</span>
+</div>
+</td>
+<td><a href="/contest/dmopc14c5/ranking/">61</a>
+</td>
+<td><a href="/contest/dmopc14c5/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/ccoprep2" class="contest-list-title">CCO Preparation Test 2</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Mar 7, 2015, 10:00 - Mar 11, 2015, 10:00<br />04:00 window</span>
+</div>
+</td>
+<td><a href="/contest/ccoprep2/ranking/">24</a>
+</td>
+<td><a href="/contest/ccoprep2/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/ccoprep1" class="contest-list-title">CCO Preparation Test 1</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Feb 28, 2015, 10:00 - Mar 4, 2015, 14:00<br />04:00 window</span>
+</div>
+</td>
+<td><a href="/contest/ccoprep1/ranking/">20</a>
+</td>
+<td><a href="/contest/ccoprep1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/cspc1" class="contest-list-title">CSPC &#39;15 #1</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Feb 24, 2015, 15:45<br />
+02:00 long</span>
+</div>
+</td>
+<td><a href="/contest/cspc1/ranking/">32</a>
+</td>
+<td><a href="/contest/cspc1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/tsoc15c1" class="contest-list-title">TSOC &#39;15 #1</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Feb 23, 2015, 15:00 - Feb 23, 2015, 18:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/tsoc15c1/ranking/">27</a>
+</td>
+<td><a href="/contest/tsoc15c1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/oldnewthing" class="contest-list-title">The Old New Thing</a>
+<div class="contest-tags"><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Feb 23, 2015, 0:00<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/oldnewthing/ranking/">53</a>
+</td>
+<td><a href="/contest/oldnewthing/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/valday15" class="contest-list-title">Valentine&#39;s Day 2015</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Feb 14, 2015, 19:00 - Feb 14, 2015, 22:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/valday15/ranking/">51</a>
+</td>
+<td><a href="/contest/valday15/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/mockccc15j" class="contest-list-title">Mock CCC 2015 (Junior)</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Feb 13, 2015, 0:00 - Feb 13, 2015, 3:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/mockccc15j/ranking/">70</a>
+</td>
+<td><a href="/contest/mockccc15j/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/mockccc15s" class="contest-list-title">Mock CCC 2015 (Senior)</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Feb 13, 2015, 0:00 - Feb 13, 2015, 3:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/mockccc15s/ranking/">53</a>
+</td>
+<td><a href="/contest/mockccc15s/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/vmss7w15c6" class="contest-list-title">VMSS 7 Week Challenge Week Final Week!</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Feb 12, 2015, 15:00<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/vmss7w15c6/ranking/">63</a>
+</td>
+<td><a href="/contest/vmss7w15c6/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/utsopen15" class="contest-list-title">UTS Open</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Feb 11, 2015, 16:10<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/utsopen15/ranking/">97</a>
+</td>
+<td><a href="/contest/utsopen15/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc14c4" class="contest-list-title">DMOPC &#39;14 February Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Feb 10, 2015, 15:30<br />
+03:00 long</span>
+</div>
+</td>
+<td><a href="/contest/dmopc14c4/ranking/">63</a>
+</td>
+<td><a href="/contest/dmopc14c4/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/vmss7w15c5" class="contest-list-title">VMSS 7 Week Challenge Week 5</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Feb 5, 2015, 15:00<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/vmss7w15c5/ranking/">64</a>
+</td>
+<td><a href="/contest/vmss7w15c5/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/vmss7w15c4" class="contest-list-title">VMSS 7 Week Challenge Week 4</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Jan 29, 2015, 15:00<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/vmss7w15c4/ranking/">61</a>
+</td>
+<td><a href="/contest/vmss7w15c4/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/vmss7w15c3" class="contest-list-title">VMSS 7 Week Challenge Week 3</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Jan 22, 2015, 15:00<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/vmss7w15c3/ranking/">52</a>
+</td>
+<td><a href="/contest/vmss7w15c3/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/vmss7w15c2" class="contest-list-title">VMSS 7 Week Challenge Week 2</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Jan 15, 2015, 15:00<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/vmss7w15c2/ranking/">64</a>
+</td>
+<td><a href="/contest/vmss7w15c2/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc14ce1" class="contest-list-title">DMOPC &#39;14 Exam Time</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Jan 13, 2015, 15:30<br />
+05:00 long</span>
+</div>
+</td>
+<td><a href="/contest/dmopc14ce1/ranking/">37</a>
+</td>
+<td><a href="/contest/dmopc14ce1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/vmss7w15c1" class="contest-list-title">VMSS 7 Week Challenge Week 1</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Jan 8, 2015, 15:00<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/vmss7w15c1/ranking/">68</a>
+</td>
+<td><a href="/contest/vmss7w15c1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/year2015" class="contest-list-title">New Year&#39;s 2015</a>
+<div class="contest-tags"><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Jan 1, 2015, 9:00<br />
+4 days long</span>
+</div>
+</td>
+<td><a href="/contest/year2015/ranking/">33</a>
+</td>
+<td><a href="/contest/year2015/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/seed" class="contest-list-title">The Cosmic Era</a>
+<div class="contest-tags"><span style="background-color: #CCC" class="contest-tag"><a href="/contests/tag/external" style="color: #000" data-featherlight="/contests/tag/external/ajax">external</a></span><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Dec 29, 2014, 18:00<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/seed/ranking/">34</a>
+</td>
+<td><a href="/contest/seed/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/christmastree" class="contest-list-title">Christmas Trees - Christmas Special</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Dec 25, 2014, 12:30<br />
+4 days long</span>
+</div>
+</td>
+<td><a href="/contest/christmastree/ranking/">29</a>
+</td>
+<td><a href="/contest/christmastree/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/stnbd" class="contest-list-title">Seirei Tsukai no Blade Dance</a>
+<div class="contest-tags"><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Dec 22, 2014, 7:00<br />
+7 days long</span>
+</div>
+</td>
+<td><a href="/contest/stnbd/ranking/">31</a>
+</td>
+<td><a href="/contest/stnbd/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/phantom" class="contest-list-title">The Phantom of the Opera</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Dec 22, 2014, 0:00<br />
+14 days long</span>
+</div>
+</td>
+<td><a href="/contest/phantom/ranking/">18</a>
+</td>
+<td><a href="/contest/phantom/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc14c3" class="contest-list-title">DMOPC &#39;14 December Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Dec 16, 2014, 15:30<br />
+03:00 long</span>
+</div>
+</td>
+<td><a href="/contest/dmopc14c3/ranking/">86</a>
+</td>
+<td><a href="/contest/dmopc14c3/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/gfssoc1j" class="contest-list-title">Glenforest Winter Open 2014 (Junior)</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Dec 8, 2014, 15:30<br />
+03:00 long</span>
+</div>
+</td>
+<td><a href="/contest/gfssoc1j/ranking/">40</a>
+</td>
+<td><a href="/contest/gfssoc1j/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/gfssoc1s" class="contest-list-title">Glenforest Winter Open 2014 (Senior)</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Dec 8, 2014, 15:30<br />
+03:00 long</span>
+</div>
+</td>
+<td><a href="/contest/gfssoc1s/ranking/">54</a>
+</td>
+<td><a href="/contest/gfssoc1s/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/classics1" class="contest-list-title">Classics Contest #1</a>
+<div class="contest-tags">
+</div><span style="text-align:right;color:#777;" class="floating-time-right">Nov 23, 2014, 0:00 - Nov 25, 2014, 18:00<br />03:00 window</span>
+</div>
+</td>
+<td><a href="/contest/classics1/ranking/">27</a>
+</td>
+<td><a href="/contest/classics1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc14c2" class="contest-list-title">DMOPC &#39;14 November Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Nov 18, 2014, 15:30<br />
+03:00 long</span>
+</div>
+</td>
+<td><a href="/contest/dmopc14c2/ranking/">120</a>
+</td>
+<td><a href="/contest/dmopc14c2/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc14c1r" class="contest-list-title">DMOPC &#39;14 October Contest (Rerun)</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Nov 11, 2014, 15:15<br />
+02:15 long</span>
+</div>
+</td>
+<td><a href="/contest/dmopc14c1r/ranking/">39</a>
+</td>
+<td><a href="/contest/dmopc14c1r/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/halloween14" class="contest-list-title">Halloween Kemonomimi Party</a>
+<div class="contest-tags"><span style="background-color: #eb6420" class="contest-tag"><a href="/contests/tag/seasonal" style="color: #fff" data-featherlight="/contests/tag/seasonal/ajax">seasonal</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Oct 31, 2014, 0:00<br />
+10 days 01:00 long</span>
+</div>
+</td>
+<td><a href="/contest/halloween14/ranking/">26</a>
+</td>
+<td><a href="/contest/halloween14/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+<tr>
+<td>
+<div style="position:relative"><a href="/contest/dmopc14c1" class="contest-list-title">DMOPC &#39;14 October Contest</a>
+<div class="contest-tags"><span style="background-color: #fbca04" class="contest-tag"><a href="/contests/tag/dmopc" style="color: #000" data-featherlight="/contests/tag/dmopc/ajax">dmopc</a></span>
+</div><span style="text-align:right;color:#777;" class="floating-time-right">
+Oct 14, 2014, 15:30<br />
+02:15 long</span>
+</div>
+</td>
+<td><a href="/contest/dmopc14c1/ranking/">54</a>
+</td>
+<td><a href="/contest/dmopc14c1/join" class="unselectable button full participate-button">Virtual join</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+<footer><span id="footer-content"><br><a style="color: rgb(128, 128, 128)" href="//github.com/DMOJ/">fork us on <span style="font-weight:bold">Github</span></a> | <a style="color: rgb(128, 128, 128);" href="//www.facebook.com/dmoj.ca">like us on <span style="font-weight: bold;">Facebook</span></a> | <a style="color: rgb(128, 128, 128)" href="https://translate.dmoj.ca/">help us <span style="font-weight: bold;">translate</span></a> | <a style="color: rgb(128, 128, 128)" href="https://dmoj.ca/tos/">terms of service</a>
+|
+<form action="/i18n/setlang/" method="post" style="display: inline"><input type='hidden' name='csrfmiddlewaretoken' value='rfESAsiLHAVO0e7BRWd2mtTQ18PIWQ7V65y0kqkSK7obZLzwP6iuG15DpwwrPAkf' />
+<input name="next" type="hidden" value="/contests/">
+<select name="language" onchange="form.submit()" style="height: 1.5em">
+<option value="de">Deutsch (de)
+</option>
+<option value="en" selected="">English (en)
+</option>
+<option value="fr">français (fr)
+</option>
+<option value="ro">Română (ro)
+</option>
+<option value="ru">Русский (ru)
+</option>
+<option value="sr-latn">srpski (latinica) (sr-latn)
+</option>
+<option value="vi">Tiếng Việt (vi)
+</option>
+<option value="zh-hans">简体中文 (zh-hans)
+</option>
+</select>
+</form></span>
+</footer>
+</div>
+</body>
+</html>
