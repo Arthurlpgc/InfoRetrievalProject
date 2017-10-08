@@ -1,2 +1,4 @@
 src/crawler/documents/*.html
+src/crawler/test/*.html
+
 __pycache__/
