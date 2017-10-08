@@ -130,13 +130,7 @@ class LinkRanker():
                 rank = rank + token.rank
         return rank
 
-    def getSpecific(self, anchor, url):
-        dom = self.getDomain(url)
-        rank = 0
-        for token in self.specific[dom]
-            if(token.word in url):
-                rank = rank + token.rank
-        return rank
+   
 
     def getDomain(self, url):
         parsed_uri = urlparse(url)
@@ -172,8 +166,8 @@ class QuestionSpider(scrapy.Spider):
     ]
 
     allowed_domains = [
-       # 'codeforces.com',
-       'codechef.com',
+        'codeforces.com',
+       #'codechef.com',
        # 'urionlinejudge.com.br',
         #'spoj.com',
         #'dmoj.ca',
@@ -185,7 +179,7 @@ class QuestionSpider(scrapy.Spider):
     ]
 
     linkRanker = LinkRanker()
-    maxPagesPerDomain = 100
+    maxPagesPerDomain = 10000
     domainsCrawled = {}
     
     def parse(self, response):
