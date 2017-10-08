@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS Academy</title>
+    <meta charset="utf-8">
+    <meta name="description" content="CSAcademy is a next generation educational platform. Discover computer science
+    with interactive lessons and a seamless online code editor.">
+
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#"></html>
+    <meta property="og:image" content="/static/icon.png" />
+    <link rel="image_src" href="/static/icon.png" />
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+    <link rel="stylesheet" href="/static/katex/katex.min.css">
+    <link rel="stylesheet" href="/static/css/lato-font.css">
+    <link rel="stylesheet" href="/static/css/ext/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/csacademy.css?v=1">
+
+    <script>
+        var JS_VERSION = 38;
+        var SERVER_PAGE_LOAD = 1507496720.8693411;
+        var SERVER_TIME_OFFSET = Date.now() / 1000.0 - SERVER_PAGE_LOAD;
+        var WEBSOCKET_URL = "wss://ws1.csacademy.com/";
+        var USER = {"isAuthenticated": false};
+    </script>
+
+    <script src="/static/js/ext/min/polyfill.min.js"></script>
+    <script src="/static/js/ext/require.js"></script>
+    <script src="/static/require_config.js?v=38"></script>
+    <script src="/static/js/PublicState.js?v=38"></script>
+    <script src="/static/js/EmojiMini.js?v=38"></script>
+    <script src="/static/js/bundle.js?v=38"></script>
+    <script>
+        require(["Bundle"], function (bundle) {
+            window.bundle = bundle;
+        });
+    </script>
+    
+    
+</head>
+<body>
+<noscript>You have javascript turned off. Any functionality on our website needs javascript turned on.</noscript>
+
+    <script>
+        require(["Bundle", "Bundle"], function (Bundle, WidgetRequire) {
+            Bundle.GlobalState.importState({});
+            window.currentWidget = WidgetRequire.CSAApp.create(document.body, {});
+        });
+    </script>
+
+</body>
+</html>

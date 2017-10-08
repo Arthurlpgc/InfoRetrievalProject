@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>F: Sandglass
+ - AtCoder Regular Contest 082 | AtCoder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="
+">
+    <meta name="keyword" content="AtCoder,アットコーダー,あっとこーだー,プログラミングコンテスト
+">
+    <meta name="author" content="Atcoder" />
+    <meta name="copyright" content="Copyright (C) 2012 Atcoder" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="stylesheet" type="text/css" href="/css/all.css?v=2">
+    <link rel="stylesheet" type="text/css" href="/css/print.css?v=1" media="print">
+        <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="/js/jquery.js"></script>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30554866-3']);
+  _gaq.push(['_setDomainName', 'atcoder.jp']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>    
+    <!--[if lt IE 9]><style>.navbar-fixed-top{ position: relative!important; }</style><![endif]-->
+
+  </head>
+
+
+  <body>
+          <div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+              <a class="brand" href="/"><span class="contest-name">AtCoder Regular Contest 082</span><span class="bland-small"><time>2017/09/02 12:00:00 +0000</time> ~ <time>2017/09/02 13:40:00 +0000</time></span></a>
+      
+      <div class="nav-collapse">
+                <ul class="nav">
+          <li class="divider-vertical"></li>
+          <li><a href="http://atcoder.jp" target="_blank"><span class="lang"><span class="lang-en">back to atcoder.jp</span><span class="lang-ja">AtCoderへ戻る</span></span></a></li>
+        </ul>
+                            <ul  id="nav-right-logined" class="nav pull-right" style="display:none;">
+            <li class="dropdown">
+              <a href="#" lang="ja" class="dropdown-toggle static-nav-language-selector-dropdown" data-toggle="dropdown" style="display:none;">
+                <i class="flag-ja"></i> 日本語 <b class="caret"></b>
+              </a>
+              <a href="#" lang="en" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-en"></i> English <b class="caret"></b>
+              </a>
+              <a href="#" lang="ko" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-ko"></i> 한국어 <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li> <a lang="ja" class="static-nav-language-selector" href="#"><i class="flag-ja"></i> 日本語</a></li>
+                <li> <a lang="en" class="static-nav-language-selector" href="#"><i class="flag-en"></i> English</a></li>
+                <li> <a lang="ko" class="static-nav-language-selector" href="#"><i class="flag-ko"></i> 한국어</a></li>
+              </ul>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-white"></i> <span id="nav-right-username"></span><b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/me"><span class="lang"><span class="lang-en">My Profile</span><span class="lang-ja">マイプロフィール</span></span></a></li>
+                                	<li><a href="/settings"><span class="lang"><span class="lang-en">Settings</span><span class="lang-ja">設定</span></span></a></li>
+                    <li><a href="/settings/password"><span class="lang"><span class="lang-en">Change password</span><span class="lang-ja">パスワードの変更</span></span></a></li>
+                	                	<li class="divider"></li>
+                                <li><a href="/logout"><span class="lang"><span class="lang-en">Sign out</span><span class="lang-ja">ログアウト</span></span></a></li>
+             </ul>
+            </li>
+          </ul>
+          <ul id="nav-right-not-login" class="nav pull-right" style="display:none;">
+            <li class="dropdown">
+              <a href="#" lang="ja" class="dropdown-toggle static-nav-language-selector-dropdown" data-toggle="dropdown" style="display:none;">
+                <i class="flag-ja"></i> 日本語 <b class="caret"></b>
+              </a>
+              <a href="#" lang="en" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-en"></i> English <b class="caret"></b>
+              </a>
+              <a href="#" lang="ko" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-ko"></i> 한국어 <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li> <a lang="ja" class="static-nav-language-selector" href="#"><i class="flag-ja"></i> 日本語</a></li>
+                <li> <a lang="en" class="static-nav-language-selector" href="#"><i class="flag-en"></i> English</a></li>
+                <li> <a lang="ko" class="static-nav-language-selector" href="#"><i class="flag-ko"></i> 한국어</a></li>
+              </ul>
+            </li>
+                        <li class="divider-vertical"></li>
+            <li><a href="/register"><span class="lang"><span class="lang-en">Sign up</span><span class="lang-ja">新規登録</span></span></a></li>
+                        <li class="divider-vertical"></li>
+            <li><a href="/login"><span class="lang"><span class="lang-en">Sign in</span><span class="lang-ja">ログイン</span></span></a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+        
+    <div id="outer-inner" class="container">
+      <h1 class="site-title">
+          AtCoder Regular Contest 082
+      </h1>
+                      <time style="display:none" id="contest-start-time">2017/09/02 12:00:00 +0000</time>
+        <time style="display:none" id="contest-end-time">2017/09/02 13:40:00 +0000</time>
+        <time style="display:none" id="server-current-time">2017/10/08 20:54:56 +0000</time>
+
+            
+      <ul class="nav nav-tabs">
+                            <li><a href="http://arc082.contest.atcoder.jp/"><i class="icon-home"></i> <span class="lang"><span class="lang-en">Home</span><span class="lang-ja">トップページ</span><span class="lang-ko">톱 페이지</span></span></a></li>
+                                          <li class="active"><a href="http://arc082.contest.atcoder.jp/assignments"><i class="icon-list-alt"></i> <span class="lang"><span class="lang-en">Tasks</span><span class="lang-ja">問題</span><span class="lang-ko">문제</span></span></a></li>
+                                          <li><a href="https://arc082.contest.atcoder.jp/submit"><i class="icon-upload"></i> <span class="lang"><span class="lang-en">Submit</span><span class="lang-ja">提出</span><span class="lang-ko">제출</span></span></a></li>
+                                          <li><a href="http://arc082.contest.atcoder.jp/clarifications"><i class="icon-question-sign"></i> <span class="lang"><span class="lang-en">Clarifications</span><span class="lang-ja">質問</span><span class="lang-ko">질문</span></span></a></li>
+                                          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <b class="caret"></b><i class="icon-download-alt"></i> <span class="lang"><span class="lang-en">Results</span><span class="lang-ja">結果</span><span class="lang-ko">채점 결과</span></span>
+            </a>
+            <ul class="dropdown-menu">
+                              <li><a href="http://arc082.contest.atcoder.jp/submissions/all"><span class="lang"><span class="lang-en">All submissions</span><span class="lang-ja">すべての結果</span><span class="lang-ko">모든 결과</span></span></a></li>
+                              <li><a href="https://arc082.contest.atcoder.jp/submissions/me"><span class="lang"><span class="lang-en">My submissions</span><span class="lang-ja">自分の結果</span><span class="lang-ko">자신의 결과</span></span></a></li>
+                          </ul>
+          </li>
+                                          <li><a href="/standings"><i class="icon-user"></i> <span class="lang"><span class="lang-en">Standings</span><span class="lang-ja">順位表</span><span class="lang-ko">순위표</span></span></a></li>
+                                          <li><a href="/custom_test"><i class="icon-user"></i> <span class="lang"><span class="lang-en">Custom Test</span><span class="lang-ja">コードテスト</span></span></a></li>
+                                          <li><a href="/editorial"><i class="icon-user"></i> <span class="lang"><span class="lang-en">Editorial</span><span class="lang-ja">解説</span></span></a></li>
+                      </ul>
+        <div id="alert_box" class="alert alert-block" style="display:none">
+  <a class="close" data-dismiss="alert">×</a>
+  <h4 id="alert_box_heading" class="alert-heading" style="display:none"></h4>
+  <p id="alert_box_content"></p>
+</div>
+
+      <h2>F - Sandglass</h2>
+<hr />
+<p><span class="lang"><span class="lang-en">Time limit</span><span class="lang-ja">時間制限</span></span> : 2sec / <span class="lang"><span class="lang-en">Memory limit</span><span class="lang-ja">メモリ制限</span></span> : 256MB</p>
+
+<div id="task-statement">
+  <span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>700</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>パーツAとパーツBからなる砂時計があります。これらのパーツにはいくらかの砂が入っています。
+砂時計を置くときはパーツAとパーツBのどちらかが上になり、そうでないほうが下になります。</p>
+<p><var>1</var> 秒間に <var>1</var> [g] の砂が上にあるパーツから下にあるパーツに落ちます。
+ただし、上のパーツにもう砂が残っていない場合は砂は落ちません。</p>
+<p>はじめ時刻 <var>0</var> にパーツAが上にあり、<var>a</var> [g] の砂がパーツAに入っていて、<var>X-a</var> [g] の砂がパーツBに入っています(すなわち、合計 <var>X</var> [g] の砂が入っています)。</p>
+<p>時刻 <var>r_1,r_2, .., r_K</var> に砂時計をひっくり返します。この操作は瞬間的に行われ、時間はかからないものとします。なお、時刻 <var>t</var> とは時刻 <var>0</var> の <var>t</var> 秒後を指します。</p>
+<p>クエリが <var>Q</var> 個与えられます。
+各クエリは <var>(t_i,a_i)</var> の形をしています。
+各クエリに対し、<var>a=a_i</var> だとして、時刻 <var>t_i</var> にパーツAに入っている砂の量が何gか答えてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1≤X≤10^9</var></li>
+<li><var>1≤K≤10^5</var></li>
+<li><var>1≤r_1&lt;r_2&lt; .. &lt;r_K≤10^9</var></li>
+<li><var>1≤Q≤10^5</var></li>
+<li><var>0≤t_1&lt;t_2&lt; .. &lt;t_Q≤10^9</var></li>
+<li><var>0≤a_i≤X (1≤i≤Q)</var></li>
+<li>入力値はすべて整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>X</var>
+<var>K</var>
+<var>r_1</var> <var>r_2</var> .. <var>r_K</var>
+<var>Q</var>
+<var>t_1</var> <var>a_1</var>
+<var>t_2</var> <var>a_2</var>
+<var>:</var>
+<var>t_Q</var> <var>a_Q</var>
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>各クエリの答えを <var>1</var> 行ごとに出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>180
+3
+60 120 180
+3
+30 90
+61 1
+180 180
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>60
+1
+120
+</pre>
+
+<p><var>1</var> つめのクエリでは、はじめパーツAに <var>90</var> [g] 入っていた砂が <var>30</var> [g] 減り、<var>60</var> [g] になります。
+<var>2</var> つめのクエリでは、はじめパーツAに入っていた <var>1</var> [g] の砂がパーツBに落ちた後、<var>59</var> 秒間変化は起こりません。ここで砂時計をひっくり返し、その <var>1</var> 秒後にパーツAに入っている砂の量を聞かれているため、答えは <var>1</var> [g] になります。</p>
+</section>
+</div>
+
+<hr />
+
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>100
+1
+100000
+4
+0 100
+90 100
+100 100
+101 100
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>100
+10
+0
+0
+</pre>
+
+<p>どのクエリでもはじめにパーツAに入っている砂は <var>100</var> [g] で、砂時計をひっくり返す前の時間での値を聞いています。</p>
+</section>
+</div>
+
+<hr />
+
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>100
+5
+48 141 231 314 425
+7
+0 19
+50 98
+143 30
+231 55
+342 0
+365 100
+600 10
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>19
+52
+91
+10
+58
+42
+100
+</pre></section>
+</div>
+</span>
+<span class="lang-en">
+<p>Score : <var>700</var> points</p>
+
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>We have a sandglass consisting of two bulbs, bulb A and bulb B. These bulbs contain some amount of sand.
+When we put the sandglass, either bulb <var>A</var> or <var>B</var> lies on top of the other and becomes the <em>upper bulb</em>. The other bulb becomes the <em>lower bulb</em>.</p>
+<p>The sand drops from the upper bulb to the lower bulb at a rate of <var>1</var> gram per second.
+When the upper bulb no longer contains any sand, nothing happens.</p>
+<p>Initially at time <var>0</var>, bulb A is the upper bulb and contains <var>a</var> grams of sand; bulb B contains <var>X-a</var> grams of sand (for a total of <var>X</var> grams).</p>
+<p>We will turn over the sandglass at time <var>r_1,r_2,..,r_K</var>. Assume that this is an instantaneous action and takes no time. Here, time <var>t</var> refer to the time <var>t</var> seconds after time <var>0</var>.</p>
+<p>You are given <var>Q</var> queries.
+Each query is in the form of <var>(t_i,a_i)</var>.
+For each query, assume that <var>a=a_i</var> and find the amount of sand that would be contained in bulb A at time <var>t_i</var>.</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1≤X≤10^9</var></li>
+<li><var>1≤K≤10^5</var></li>
+<li><var>1≤r_1&lt;r_2&lt; .. &lt;r_K≤10^9</var></li>
+<li><var>1≤Q≤10^5</var></li>
+<li><var>0≤t_1&lt;t_2&lt; .. &lt;t_Q≤10^9</var></li>
+<li><var>0≤a_i≤X (1≤i≤Q)</var></li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+
+<hr />
+
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Input</h3><p>The input is given from Standard Input in the following format:</p>
+<pre><var>X</var>
+<var>K</var>
+<var>r_1</var> <var>r_2</var> .. <var>r_K</var>
+<var>Q</var>
+<var>t_1</var> <var>a_1</var>
+<var>t_2</var> <var>a_2</var>
+<var>:</var>
+<var>t_Q</var> <var>a_Q</var>
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Output</h3><p>For each query, print the answer in its own line.</p>
+</section>
+</div>
+</div>
+
+<hr />
+
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>180
+3
+60 120 180
+3
+30 90
+61 1
+180 180
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>60
+1
+120
+</pre>
+
+<p>In the first query, <var>30</var> out of the initial <var>90</var> grams of sand will drop from bulb A, resulting in <var>60</var> grams.
+In the second query, the initial <var>1</var> gram of sand will drop from bulb A, and nothing will happen for the next <var>59</var> seconds. Then, we will turn over the sandglass, and <var>1</var> second after this, bulb <var>A</var> contains <var>1</var> gram of sand at the time in question.</p>
+</section>
+</div>
+
+<hr />
+
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>100
+1
+100000
+4
+0 100
+90 100
+100 100
+101 100
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>100
+10
+0
+0
+</pre>
+
+<p>In every query, the upper bulb initially contains <var>100</var> grams, and the question in time comes before we turn over the sandglass.</p>
+</section>
+</div>
+
+<hr />
+
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>100
+5
+48 141 231 314 425
+7
+0 19
+50 98
+143 30
+231 55
+342 0
+365 100
+600 10
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>19
+52
+91
+10
+58
+42
+100
+</pre></section>
+</div>
+</span>
+</span>
+
+</div>
+
+
+<hr/>
+<p><a class="btn btn-primary btn-large" href="/submit?task_id=3527"><span class="lang"><span class="lang-en">Submit</span><span class="lang-ja">提出する</span></span></a></p>
+
+<script>$(function(){document.queryCommandSupported("copy")&&($("h3+pre").before('<div class="div-sample-copy"><span class="btn-sample-copy" tabindex="0" data-toggle="tooltip" data-trigger="manual" title="Copied!">Copy</span></div>'),$(".btn-sample-copy").click(function(){window.getSelection().removeAllRanges();try{var e=document.createRange();e.selectNode($(this).parent().next("pre").get()[0]),window.getSelection().addRange(e),document.execCommand("copy"),$(this).tooltip("show");var t=this;setTimeout(function(){$(t).tooltip("hide")},800)}catch(o){console.log(o)}window.getSelection().removeAllRanges()}))});</script>
+
+    </div>
+
+    <footer>
+      <ul>
+  <li><a href="/tos"><span class="lang"><span class="lang-en">Terms of service</span><span class="lang-ja">利用規約</span></span></a></li>
+  <li><a href="/privacy"><span class="lang"><span class="lang-en">Privacy</span><span class="lang-ja">プライバシーポリシー</span></span></a></li>
+  <li><a href="/personal"><span class="lang"><span class="lang-en">Personal Information</span><span class="lang-ja">個人情報保護方針</span></span></a></li>
+  <li><a href="/tutorial"><span class="lang"><span class="lang-en">Tutorial</span><span class="lang-ja">チュートリアル</span></span></a></li>
+  <li><a href="/rules"><span class="lang"><span class="lang-en">Rules</span><span class="lang-ja">ルール</span></span></a></li>
+  <li><a href="/glossary"><span class="lang"><span class="lang-en">Glossary</span><span class="lang-ja">用語集</span></span></a></li>
+  <li><a href="/faq"><span class="lang"><span class="lang-en">FAQ</span><span class="lang-ja">よくある質問</span></span></a></li>
+</ul>
+<p id="copyright">&copy; 2017 AtCoder Inc. All rights reserved.</p>
+    </footer>
+
+    <p id="fixed-server-timer" style="display: none;"></p>
+
+        <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/prettify.js"></script>
+    <script src="/js/lang-vb.js"></script>
+    <script src="/js/lang-hs.js"></script>
+    <script src="/js/varmath.js"></script>
+    <script src="/js/script.js?v=2"></script>
+  </body>
+</html>

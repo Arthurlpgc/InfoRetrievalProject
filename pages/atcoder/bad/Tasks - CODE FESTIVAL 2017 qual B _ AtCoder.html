@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tasks
+ - CODE FESTIVAL 2017 qual B | AtCoder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="
+">
+    <meta name="keyword" content="AtCoder,アットコーダー,あっとこーだー,プログラミングコンテスト
+">
+    <meta name="author" content="Atcoder" />
+    <meta name="copyright" content="Copyright (C) 2012 Atcoder" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="stylesheet" type="text/css" href="/css/all.css?v=2">
+    <link rel="stylesheet" type="text/css" href="/css/print.css?v=1" media="print">
+        <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="/js/jquery.js"></script>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30554866-3']);
+  _gaq.push(['_setDomainName', 'atcoder.jp']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>    
+    <!--[if lt IE 9]><style>.navbar-fixed-top{ position: relative!important; }</style><![endif]-->
+
+  </head>
+
+
+  <body>
+            <style type="text/css">
+          html body {
+    background-color: #fffffa !important;
+    background-image:  none !important;
+}
+#outer-inner {
+    background: none repeat scroll 0 0 #ffffff;
+}
+.navbar-inner {
+    background-color: #db0079 !important;
+    background-image: none !important;
+}
+
+.caret {
+    color: #fff !important;
+    opacity: 1 !important;
+}
+
+.bland-small {
+    color: #fff !important;
+}
+
+.navbar .divider-vertical {
+    background-color: #fff !important;
+    border-right: none;
+}
+
+.navbar .nav > li > a {
+    color: #fff !important;
+}
+
+.insert-participant-box {
+    background-color: #fff !important;
+    text-align: -webkit-center !important;
+}
+
+#contest-statement section p {
+    font-size: medium;
+}
+
+#contest-statement section ul {
+    font-size: medium;
+}
+      </style>
+          <div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+              <a class="brand" href="/"><span class="contest-name">CODE FESTIVAL 2017 qual B</span><span class="bland-small"><time>2017/10/08 12:00:00 +0000</time> ~ <time>2017/10/08 14:00:00 +0000</time></span></a>
+      
+      <div class="nav-collapse">
+                            <ul  id="nav-right-logined" class="nav pull-right" style="display:none;">
+            <li class="dropdown">
+              <a href="#" lang="ja" class="dropdown-toggle static-nav-language-selector-dropdown" data-toggle="dropdown" style="display:none;">
+                <i class="flag-ja"></i> 日本語 <b class="caret"></b>
+              </a>
+              <a href="#" lang="en" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-en"></i> English <b class="caret"></b>
+              </a>
+              <a href="#" lang="ko" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-ko"></i> 한국어 <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li> <a lang="ja" class="static-nav-language-selector" href="#"><i class="flag-ja"></i> 日本語</a></li>
+                <li> <a lang="en" class="static-nav-language-selector" href="#"><i class="flag-en"></i> English</a></li>
+                <li> <a lang="ko" class="static-nav-language-selector" href="#"><i class="flag-ko"></i> 한국어</a></li>
+              </ul>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-white"></i> <span id="nav-right-username"></span><b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/me"><span class="lang"><span class="lang-en">My Profile</span><span class="lang-ja">マイプロフィール</span></span></a></li>
+                                	<li><a href="/settings"><span class="lang"><span class="lang-en">Settings</span><span class="lang-ja">設定</span></span></a></li>
+                    <li><a href="/settings/password"><span class="lang"><span class="lang-en">Change password</span><span class="lang-ja">パスワードの変更</span></span></a></li>
+                	                		<li><a href="/settings/participants"><span class="lang"><span class="lang-en">Edit information</span><span class="lang-ja">参加登録情報設定</span></span></a></li>
+                	                	<li class="divider"></li>
+                                <li><a href="/logout"><span class="lang"><span class="lang-en">Sign out</span><span class="lang-ja">ログアウト</span></span></a></li>
+             </ul>
+            </li>
+          </ul>
+          <ul id="nav-right-not-login" class="nav pull-right" style="display:none;">
+            <li class="dropdown">
+              <a href="#" lang="ja" class="dropdown-toggle static-nav-language-selector-dropdown" data-toggle="dropdown" style="display:none;">
+                <i class="flag-ja"></i> 日本語 <b class="caret"></b>
+              </a>
+              <a href="#" lang="en" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-en"></i> English <b class="caret"></b>
+              </a>
+              <a href="#" lang="ko" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-ko"></i> 한국어 <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li> <a lang="ja" class="static-nav-language-selector" href="#"><i class="flag-ja"></i> 日本語</a></li>
+                <li> <a lang="en" class="static-nav-language-selector" href="#"><i class="flag-en"></i> English</a></li>
+                <li> <a lang="ko" class="static-nav-language-selector" href="#"><i class="flag-ko"></i> 한국어</a></li>
+              </ul>
+            </li>
+                        <li class="divider-vertical"></li>
+            <li><a href="/register"><span class="lang"><span class="lang-en">Sign up</span><span class="lang-ja">新規登録</span></span></a></li>
+                        <li class="divider-vertical"></li>
+            <li><a href="/login"><span class="lang"><span class="lang-en">Sign in</span><span class="lang-ja">ログイン</span></span></a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+        
+    <div id="outer-inner" class="container">
+      <h1 class="site-title">
+          CODE FESTIVAL 2017 qual B
+      </h1>
+                      <time style="display:none" id="contest-start-time">2017/10/08 12:00:00 +0000</time>
+        <time style="display:none" id="contest-end-time">2017/10/08 14:00:00 +0000</time>
+        <time style="display:none" id="server-current-time">2017/10/08 20:50:21 +0000</time>
+
+            
+      <ul class="nav nav-tabs">
+                            <li><a href="http://code-festival-2017-qualb.contest.atcoder.jp/"><i class="icon-home"></i> <span class="lang"><span class="lang-en">Home</span><span class="lang-ja">トップページ</span><span class="lang-ko">톱 페이지</span></span></a></li>
+                                          <li class="active"><a href="http://code-festival-2017-qualb.contest.atcoder.jp/assignments"><i class="icon-list-alt"></i> <span class="lang"><span class="lang-en">Tasks</span><span class="lang-ja">問題</span><span class="lang-ko">문제</span></span></a></li>
+                                          <li><a href="https://code-festival-2017-qualb.contest.atcoder.jp/submit"><i class="icon-upload"></i> <span class="lang"><span class="lang-en">Submit</span><span class="lang-ja">提出</span><span class="lang-ko">제출</span></span></a></li>
+                                          <li><a href="http://code-festival-2017-qualb.contest.atcoder.jp/clarifications"><i class="icon-question-sign"></i> <span class="lang"><span class="lang-en">Clarifications</span><span class="lang-ja">質問</span><span class="lang-ko">질문</span></span></a></li>
+                                          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <b class="caret"></b><i class="icon-download-alt"></i> <span class="lang"><span class="lang-en">Results</span><span class="lang-ja">結果</span><span class="lang-ko">채점 결과</span></span>
+            </a>
+            <ul class="dropdown-menu">
+                              <li><a href="http://code-festival-2017-qualb.contest.atcoder.jp/submissions/all"><span class="lang"><span class="lang-en">All submissions</span><span class="lang-ja">すべての結果</span><span class="lang-ko">모든 결과</span></span></a></li>
+                              <li><a href="https://code-festival-2017-qualb.contest.atcoder.jp/submissions/me"><span class="lang"><span class="lang-en">My submissions</span><span class="lang-ja">自分の結果</span><span class="lang-ko">자신의 결과</span></span></a></li>
+                          </ul>
+          </li>
+                                          <li><a href="/standings"><i class="icon-user"></i> <span class="lang"><span class="lang-en">Standings</span><span class="lang-ja">順位表</span><span class="lang-ko">순위표</span></span></a></li>
+                                          <li><a href="/custom_test"><i class="icon-user"></i> <span class="lang"><span class="lang-en">Custom Test</span><span class="lang-ja">コードテスト</span></span></a></li>
+                                          <li><a href="/editorial"><i class="icon-user"></i> <span class="lang"><span class="lang-en">Editorial</span><span class="lang-ja">解説</span></span></a></li>
+                      </ul>
+        <div id="alert_box" class="alert alert-block" style="display:none">
+  <a class="close" data-dismiss="alert">×</a>
+  <h4 id="alert_box_heading" class="alert-heading" style="display:none"></h4>
+  <p id="alert_box_content"></p>
+</div>
+
+      <h2><span class="lang"><span class="lang-en">Tasks</span><span class="lang-ja">問題</span><span class="lang-ko">문제</span></span></h2>
+<table class="table table-bordered table-striped table-wb">
+  <thead>
+    <tr>
+      <th width="5%" class="center">#</th>
+      <th><span class="lang"><span class="lang-en">Title</span><span class="lang-ja">問題名</span></span></th>
+      <th width="10%" class="right"><span><span class="lang"><span class="lang-en">Time limit</span><span class="lang-ja">時間制限</span></span></span></th>
+      <th width="13%" class="right"><span><span class="lang"><span class="lang-en">Memory limit</span><span class="lang-ja">メモリ制限</span></span></span></th>
+      <th width="16%">
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr>
+      <td class="center"><a class="linkwrapper" href="/tasks/code_festival_2017_qualb_a">A</a></td>
+      <td><a class="linkwrapper" href="/tasks/code_festival_2017_qualb_a">XXFESTIVAL</a></td>
+      <td class="right">
+                  2 sec
+              </td>
+      <td class="right">
+        <span>
+                  256 MB
+                </span>
+      </td>
+      <td><a href="/submit?task_id=3572"><span class="lang"><span class="lang-en">Submit</span><span class="lang-ja">提出する</span></span></a>
+            </td>
+    </tr>
+        <tr>
+      <td class="center"><a class="linkwrapper" href="/tasks/code_festival_2017_qualb_b">B</a></td>
+      <td><a class="linkwrapper" href="/tasks/code_festival_2017_qualb_b">Problem Set</a></td>
+      <td class="right">
+                  2 sec
+              </td>
+      <td class="right">
+        <span>
+                  256 MB
+                </span>
+      </td>
+      <td><a href="/submit?task_id=3573"><span class="lang"><span class="lang-en">Submit</span><span class="lang-ja">提出する</span></span></a>
+            </td>
+    </tr>
+        <tr>
+      <td class="center"><a class="linkwrapper" href="/tasks/code_festival_2017_qualb_c">C</a></td>
+      <td><a class="linkwrapper" href="/tasks/code_festival_2017_qualb_c">3 Steps</a></td>
+      <td class="right">
+                  2 sec
+              </td>
+      <td class="right">
+        <span>
+                  256 MB
+                </span>
+      </td>
+      <td><a href="/submit?task_id=3574"><span class="lang"><span class="lang-en">Submit</span><span class="lang-ja">提出する</span></span></a>
+            </td>
+    </tr>
+        <tr>
+      <td class="center"><a class="linkwrapper" href="/tasks/code_festival_2017_qualb_d">D</a></td>
+      <td><a class="linkwrapper" href="/tasks/code_festival_2017_qualb_d">101 to 010</a></td>
+      <td class="right">
+                  2 sec
+              </td>
+      <td class="right">
+        <span>
+                  256 MB
+                </span>
+      </td>
+      <td><a href="/submit?task_id=3575"><span class="lang"><span class="lang-en">Submit</span><span class="lang-ja">提出する</span></span></a>
+            </td>
+    </tr>
+        <tr>
+      <td class="center"><a class="linkwrapper" href="/tasks/code_festival_2017_qualb_e">E</a></td>
+      <td><a class="linkwrapper" href="/tasks/code_festival_2017_qualb_e">Popping Balls</a></td>
+      <td class="right">
+                  2 sec
+              </td>
+      <td class="right">
+        <span>
+                  256 MB
+                </span>
+      </td>
+      <td><a href="/submit?task_id=3576"><span class="lang"><span class="lang-en">Submit</span><span class="lang-ja">提出する</span></span></a>
+            </td>
+    </tr>
+        <tr>
+      <td class="center"><a class="linkwrapper" href="/tasks/code_festival_2017_qualb_f">F</a></td>
+      <td><a class="linkwrapper" href="/tasks/code_festival_2017_qualb_f">Largest Smallest Cyclic Shift</a></td>
+      <td class="right">
+                  2 sec
+              </td>
+      <td class="right">
+        <span>
+                  256 MB
+                </span>
+      </td>
+      <td><a href="/submit?task_id=3577"><span class="lang"><span class="lang-en">Submit</span><span class="lang-ja">提出する</span></span></a>
+            </td>
+    </tr>
+      </tbody>
+</table>
+
+
+
+    </div>
+
+    <footer>
+      <ul>
+  <li><a href="/personal"><span class="lang"><span class="lang-en">Personal Information</span><span class="lang-ja">個人情報保護方針</span></span></a></li>
+  <li><a href="/tutorial"><span class="lang"><span class="lang-en">Tutorial</span><span class="lang-ja">チュートリアル</span></span></a></li>
+  <li><a href="/rules"><span class="lang"><span class="lang-en">Rules</span><span class="lang-ja">ルール</span></span></a></li>
+  <li><a href="/glossary"><span class="lang"><span class="lang-en">Glossary</span><span class="lang-ja">用語集</span></span></a></li>
+  <li><a href="/faq"><span class="lang"><span class="lang-en">FAQ</span><span class="lang-ja">よくある質問</span></span></a></li>
+</ul>
+<p id="copyright">Powered by <a href="http://atcoder.jp">AtCoder.</a></p>
+    </footer>
+
+    <p id="fixed-server-timer" style="display: none;"></p>
+
+        <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/prettify.js"></script>
+    <script src="/js/lang-vb.js"></script>
+    <script src="/js/lang-hs.js"></script>
+    <script src="/js/varmath.js"></script>
+    <script src="/js/script.js?v=2"></script>
+  </body>
+</html>
