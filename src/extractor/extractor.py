@@ -1,64 +1,16 @@
 # -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
+from bs4.element import Comment
 import json
 import re
 
-class CodeforcesExtractor:
-	def process(self, html):
-		problem={}
-		head=html.find(class_='header')
-		problem['title']=head.find(class_="title").string
-		problem['memory_limit']=head.find(class_="memory-limit").find_all(text=True, recursive=False)[0]
-		problem['time_limit']=head.find(class_="time-limit").find_all(text=True, recursive=False)[0]
-		statement=html.find(class_='problem-statement').find_all('p')
-		s = ""
-		for p in statement:
-			s = s + p.text
-		problem['statement']=s
-		return problem
-
-class CodechefExtractor:
-	def extract_label(self, html, label):
-		pgs = html.find_all('p')
-		for p in pgs:
-			if p.find('label')!= None and p.find('label').text == label:
-				return p.find('span').text
-	def process(self, html):
-		problem={}
-		problem['title']=html.find_all('h1')[1].find_all(text=True, recursive=False)[0].strip()
-		problem['time_limit']=self.extract_label(html, 'Time Limit:')
-		problem['memory_limit']='1.5 GB'#its same for all in codechef
-		full_statement=html.find(class_="problem-statement").find_all(recursive=False)
-		print(full_statement)
-		statement=""
-		for p in full_statement:
-			if(len(p.find_all('label'))>0):
-				break
-			statement = statement + ' '.join(p.find_all(text=True, recursive=True))
-		problem['statement'] = statement
-		return problem
-
-class SpojExtractor:
-	def get_td(self, html, label):
-		trs=html.find_all('tr')
-		for tr in trs:
-			if len(tr.find_all('td'))==2 and tr.find_all('td')[0].text==label:
-				return tr.find_all('td')[1].text.strip()
-	def process(self, html):
-		problem={}
-		problem['title']=html.find(id="problem-name").string
-		problem['memory_limit']=self.get_td(html, "Memory limit:")
-		problem['time_limit']=self.get_td(html, "Time limit:")
-		statement=' '.join(html.find(id="problem-body").find_all(text=True,recursive=True))
-		problem['statement']=statement;
-		return problem
-
 class GeneralExtractor:
-	def get_td(self, html, label):
-		trs=html.find_all('tr')
-		for tr in trs:
-			if len(tr.find_all('td'))==2 and tr.find_all('td')[0].text==label:
-				return tr.find_all('td')[1].text.strip()
+	def tag_visible(self,element):
+		if element.parent.name in ['style', 'script', 'head', 'title', 'meta', '[document]']:
+			return False
+		if isinstance(element, Comment):
+			return False
+		return True
 
 	def take_out_judge(self, title):
 		if "@" in title:
@@ -136,6 +88,20 @@ class GeneralExtractor:
 			return -1
 		return eval(re.search('([0-9]+\.)?[0-9]+',txt).group(0))
 
+	def get_props(self,html):
+		txt=' '.join(filter(self.tag_visible,html.find_all(text=True,recursive=True)))
+		pattern="([a-zA-Z]+( )?){1,2}\:"
+		pattern=pattern+"([ \n])*"  +  "([A-Za-z0-9\.]+( )?){1,2}"
+		pattern="("+pattern+")"
+		rfe=re.findall(pattern,txt)
+		if rfe==None:
+			return None
+		ret={}
+		for grp in rfe:
+			if(grp!=None and len(grp[0].split(':'))==2):
+				ret[grp[0].split(':')[0]]=grp[0].split(':')[1]
+		return ret
+
 	def extract(self, path, wpath=None):
 		fl = open(path,"r")
 		html = BeautifulSoup(fl, 'html.parser')
@@ -143,6 +109,7 @@ class GeneralExtractor:
 		problem['title'] = self.get_clear_title(html)
 		problem['time-limit'] = self.get_time_limit(html)
 		problem['memory-limit'] = self.get_memory_limit(html)
+		problem['props'] = self.get_props(html)
 		print(path, problem)
 		if(wpath!=None):
 			fp = open(wpath, 'w')
@@ -150,13 +117,23 @@ class GeneralExtractor:
 
 extr=GeneralExtractor()
 
-extr.extract("forces.html")
-extr.extract("atcoder.html")
-extr.extract("chef.html")
-extr.extract("spoj.html")
-extr.extract("dmoj.html")
-extr.extract("a2oj.html")
-extr.extract("csa.html")
-extr.extract("timus.html")
-extr.extract("coj.html")
-extr.extract("uri.html")
+extr.extract("forces.html","jsons/forces.json")
+extr.extract("chef.html","jsons/chef.json")
+extr.extract("atcoder.html","jsons/atcoder.json")
+extr.extract("spoj.html","jsons/spoj.json")
+extr.extract("dmoj.html","jsons/dmoj.json")
+extr.extract("a2oj.html","jsons/a2oj.json")
+extr.extract("csa.html","jsons/csa.json")
+extr.extract("timus.html","jsons/timus.json")
+extr.extract("coj.html","jsons/coj.json")
+extr.extract("uri.html","jsons/uri.json")
+'''
+	def get_statement(self,html):
+		ps = html.find_all('p')
+		if(html.find(class_='problem-statement')!=None):
+			psar=html.find(class_='problem-statement')
+			return ' '.join([' '.join(psar.find_all(text=True,recursive=True)) for x in ps])
+		return "aa"
+		prestatement = ' '.join([' '.join(x.find_all(text=True,recursive=True)) for x in ps])
+		return prestatement
+'''
