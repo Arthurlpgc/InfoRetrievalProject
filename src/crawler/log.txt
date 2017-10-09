@@ -4,13 +4,13 @@ Pages In Queue per Domain:
 http://codeforces.com/: 1
 https://www.codechef.com/: 1
 https://www.urionlinejudge.com.br/: 1
-http://www.spoj.com/: 42
+http://www.spoj.com/: 29
 https://dmoj.ca/: 1
-http://blog.spoj.com/: 4
+http://blog.spoj.com/: 17
 
 Pages Crawled: 50
-Relevant Pages Found: 12
-Precision: 0.24
+Relevant Pages Found: 15
+Precision: 0.3
 
 
  -- CRAWLER LOG --
@@ -18,13 +18,13 @@ Pages In Queue per Domain:
 http://codeforces.com/: 1
 https://www.codechef.com/: 1
 https://www.urionlinejudge.com.br/: 1
-http://www.spoj.com/: 92
+http://www.spoj.com/: 79
 https://dmoj.ca/: 1
-http://blog.spoj.com/: 4
+http://blog.spoj.com/: 17
 
 Pages Crawled: 100
-Relevant Pages Found: 19
-Precision: 0.19
+Relevant Pages Found: 49
+Precision: 0.49
 
 
  -- CRAWLER LOG --
@@ -32,13 +32,13 @@ Pages In Queue per Domain:
 http://codeforces.com/: 1
 https://www.codechef.com/: 1
 https://www.urionlinejudge.com.br/: 1
-http://www.spoj.com/: 142
+http://www.spoj.com/: 129
 https://dmoj.ca/: 1
-http://blog.spoj.com/: 4
+http://blog.spoj.com/: 17
 
 Pages Crawled: 150
-Relevant Pages Found: 53
-Precision: 0.35333333333333333
+Relevant Pages Found: 49
+Precision: 0.32666666666666666
 
 
  -- CRAWLER LOG --
@@ -46,11 +46,11 @@ Pages In Queue per Domain:
 http://codeforces.com/: 1
 https://www.codechef.com/: 1
 https://www.urionlinejudge.com.br/: 1
-http://www.spoj.com/: 192
+http://www.spoj.com/: 179
 https://dmoj.ca/: 1
-http://blog.spoj.com/: 4
+http://blog.spoj.com/: 17
 
 Pages Crawled: 200
-Relevant Pages Found: 85
-Precision: 0.425
+Relevant Pages Found: 49
+Precision: 0.245
 

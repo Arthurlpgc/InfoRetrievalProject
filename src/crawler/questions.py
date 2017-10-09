@@ -57,7 +57,9 @@ class LinkRanker():
                          Token('discuss.spoj.com',      self.minimize),
                          Token('/tag/',                 self.minimize),
                          Token('/ranks/',               self.minimize),
-                         Token('/users/',               self.minimize)]
+                         Token('/users/',               self.minimize),
+                         Token('blog.spoj.com',         self.minimize),
+                         Token('/jobs',                 self.minimize)]
 
         dmoj =          [Token('/problem',              self.maximize),
                          Token('order=',                self.minimize),
