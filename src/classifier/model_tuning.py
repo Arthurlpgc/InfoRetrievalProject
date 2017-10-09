@@ -89,4 +89,5 @@ if __name__ == "__main__":
     grid_search_random_forest()
     grid_search_logistic_regression()
     grid_search_multinomial_nb()
-    grid_search_mlp()
+    # Descomente se quiser brincar de interstellar
+    # grid_search_mlp()

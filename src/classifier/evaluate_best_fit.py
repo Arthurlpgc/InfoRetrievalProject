@@ -42,25 +42,14 @@ def plot_confusion_matrix(y_test, y_pred, cm, classes, normalize=True, title='Co
     cnf_matrix = confusion_matrix(y_test, y_pred)
     np.set_printoptions(precision=2)
 
-    # # Plot non-normalized confusion matrix
-    # plt.figure()
-    # plot_confusion_matrix(cnf_matrix, classes=classes,
-    #                       title='Confusion matrix, without normalization')
-    #
-    # # Plot normalized confusion matrix
-    # plt.figure()
-    # plot_confusion_matrix(cnf_matrix, classes=classes, normalize=True,
-    #                       title='Normalized confusion matrix')
-
     plt.show()
-
-
 
 def binarize(string):
     if(string == "bad"):
         return 0
     else:
         return 1
+
 def svm():
     train_corpus = "train_pages_preprocessed/"
     test_corpus = "test_pages_preprocessed/"
@@ -72,12 +61,9 @@ def svm():
     clf = make_pipeline(CountVectorizer(max_df=1.0, max_features=5000, ngram_range=(1,2)),TfidfTransformer(use_idf=False, norm="l2"),SVC(C=10, gamma=1, kernel='poly'))
     clf.fit(corpus_train, vfunc(metadata_train['label']))
     predicao = clf.predict(corpus_test)
-    # clf.score(corpus_test, vfunc(metadata_test['label']) )
     print(classification_report(vfunc(metadata_test['label']), predicao))
     plot_confusion_matrix(vfunc(metadata_test['label']), predicao, confusion_matrix(vfunc(metadata_test['label']), predicao), ["Coding Question", "Junk"],
                               normalize=False,
                               title='Confusion matrix')
-    # print(scores.keys())
-    # print(scores.values())
 
 svm()
