@@ -35,7 +35,8 @@ class LinkRanker():
                          Token('/problems/medium',      self.decrease),
                          Token('/problems/hard',        self.decrease),
                          Token('/problems/challenge',   self.decrease),
-                         Token('/problems/extcontest',  self.decrease)]
+                         Token('/problems/extcontest',  self.decrease),
+                         Token('/tags/',                self.minimize)]
 
         uri =           [Token('categories',            self.increase),
                          Token('/problems/index/',      self.increase),
@@ -183,28 +184,29 @@ class QuestionSpider(scrapy.Spider):
     ]
 
     linkRanker = LinkRanker()
-    maxPagesPerDomain = 10
+    maxPagesPerDomain = 3000
     domainsCrawled = {}
     pagesCrawled = 0
     relevantPagesCrawled = 0
     
     def parse(self, response):
+        domain = self.getDomain(response.url)
+        self.domainsCrawled[domain] = self.domainsCrawled.get(domain, 0) + 1
+        if(self.domainsCrawled.get(domain, 0) >= self.maxPagesPerDomain):
+            raise scrapy.exceptions.IgnoreRequest()
         self.savePage(response)
         self.pagesCrawled = self.pagesCrawled + 1
-        self.generateLog()
+        if(self.pagesCrawled%50 == 0):
+            self.generateLog()
         for a in response.selector.xpath('//a'):
             anchor = a.xpath('/text()').extract()
             for link in a.xpath('@href').extract():
                 url = response.urljoin(link)
-                dom = self.getDomain(link)
-                if(self.domainsCrawled.get(dom, 0) < self.maxPagesPerDomain):
-                    self.domainsCrawled[dom] = self.domainsCrawled.get(dom, 0) + 1
-                    yield Request(url=url, 
-                                callback=self.parse, 
-                                priority=self.linkRanker.get(anchor, url),
-                                dont_filter=False)
-                else:
-                    raise scrapy.exceptions.IgnoreRequest()
+                yield Request(url=url, 
+                            callback=self.parse, 
+                            priority=self.linkRanker.get(anchor, url),
+                            dont_filter=False)
+
 
     def getDomain(self, url):
         parsed_uri = urlparse(url)
@@ -230,11 +232,19 @@ class QuestionSpider(scrapy.Spider):
 
     def generateLog(self):
         print('\n -- CRAWLER LOG --\n')
-        print('Pages Crawled per Domain:')
+        print('Pages In Queue per Domain:')
         for key in self.domainsCrawled:
             print(key, ': ', self.domainsCrawled[key])
-        print('Pages Crawled: ', self.pagesCrawled)
+        print('\nPages Crawled: ', self.pagesCrawled)
         print('Relevant Pages Found: ', self.relevantPagesCrawled)
-        print('Precision: ', self.relevantPagesCrawled/self.pagesCrawled)
+        print('Precision: ', self.relevantPagesCrawled/self.pagesCrawled,'\n')
+        with open('crawler/log.txt', 'a') as f:
+            f.write('\n -- CRAWLER LOG --\n')
+            f.write('Pages In Queue per Domain:\n')
+            for key in self.domainsCrawled:
+                f.write(key+': '+str(self.domainsCrawled[key])+'\n')
+            f.write('\nPages Crawled: '+str(self.pagesCrawled)+'\n')
+            f.write('Relevant Pages Found: '+str(self.relevantPagesCrawled)+'\n')
+            f.write('Precision: '+str(self.relevantPagesCrawled/self.pagesCrawled)+'\n\n')
 
 

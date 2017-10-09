@@ -1,0 +1,40 @@
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 48
+https://www.codechef.com/: 2
+
+Pages Crawled: 50
+Relevant Pages Found: 46
+Precision: 0.92
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 98
+https://www.codechef.com/: 2
+
+Pages Crawled: 100
+Relevant Pages Found: 96
+Precision: 0.96
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 102
+https://www.codechef.com/: 48
+
+Pages Crawled: 150
+Relevant Pages Found: 146
+Precision: 0.9733333333333334
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 102
+https://www.codechef.com/: 98
+
+Pages Crawled: 200
+Relevant Pages Found: 196
+Precision: 0.98
+
