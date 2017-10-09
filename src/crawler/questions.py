@@ -55,7 +55,9 @@ class LinkRanker():
                          Token('/problems/basics',      self.decrease),
                          Token('/problems/tag',         self.decrease),
                          Token('discuss.spoj.com',      self.minimize),
-                         Token('/tag/',                 self.minimize)]
+                         Token('/tag/',                 self.minimize),
+                         Token('/ranks/',               self.minimize),
+                         Token('/users/',               self.minimize)]
 
         dmoj =          [Token('/problem',              self.maximize),
                          Token('order=',                self.minimize),
@@ -178,8 +180,8 @@ class QuestionSpider(scrapy.Spider):
     allowed_domains = [
         #'codeforces.com',
         #'codechef.com',
-        'urionlinejudge.com.br',
-        #'spoj.com',
+        #'urionlinejudge.com.br',
+        'spoj.com',
         #'dmoj.ca',
         #'a2oj.com',
         #'atcoder.jp',
