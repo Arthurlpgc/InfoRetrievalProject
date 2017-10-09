@@ -12,7 +12,7 @@ def tag_visible(element):
     return True
 
 def text_from_html(body):
-    soup = BeautifulSoup(body, 'html.parser')
+    soup = BeautifulSoup(body.read(), 'html.parser')
     texts = soup.findAll(text=True)
     visible_texts = filter(tag_visible, texts)
     return u" ".join(t.strip() for t in visible_texts)
@@ -37,7 +37,7 @@ def preprocess_site_pages(folder, site, label):
                 count += 1
                 new_file_name = processed_pages_folder + file[:5] + str(count) + ".txt"
             thefile = open(new_file_name, 'w')
-            thefile.write("%s\n" % html_visible_text)
+            thefile.write("%s\n" % html_visible_text.encode('utf8'))
         else:
             raise NameError("Files in folder must be hmtl files")
 
@@ -46,15 +46,15 @@ def main():
     #Get all the site folders labeled in pages
     site_folders = os.listdir(folder_path)
 
-    try:
-        os.makedirs(os.path.abspath("pages_preprocessed/good"))
-        os.makedirs(os.path.abspath("pages_preprocessed/bad"))
+    # try:
+    os.makedirs(os.path.abspath("pages_preprocessed/good"))
+    os.makedirs(os.path.abspath("pages_preprocessed/bad"))
 
-        for site in site_folders:
-            preprocess_site_pages("pages", site, "bad")
-            preprocess_site_pages("pages", site, "good")
-    except:
-        print("Remove existing folder to continue!")
+    for site in site_folders:
+        preprocess_site_pages("pages", site, "bad")
+        preprocess_site_pages("pages", site, "good")
+    # except:
+    #     print("Remove existing folder to continue!")
 
 
 
