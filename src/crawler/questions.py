@@ -1,4 +1,5 @@
 import scrapy
+from urllib.parse import urlparse
 from scrapy import Request
 
 class Token():
@@ -110,12 +111,28 @@ class LinkRanker():
         self.tokens.extend(timus)
         self.tokens.extend(caribbeanoj)
 
+        self.specific = {}
+        self.specific['http://codeforces.com/'] = codeforces
+        self.specific['https://www.codechef.com/'] = codechef
+        self.specific['https://www.urionlinejudge.com.br/'] = uri
+        self.specific['http://www.spoj.com/'] = spoj
+        self.specific['https://dmoj.ca/'] = dmoj
+        self.specific['https://a2oj.com/'] = a2
+        self.specific['http://atcoder.jp/'] = atcoder
+        self.specific['https://csacademy.com/'] = csacademy
+        self.specific['http://acm.timus.ru/'] = timus
+        self.specific['http://coj.uci.cu/'] = caribbeanoj
+
     def get(self, anchor, url):
         rank = 0
         for token in self.tokens:
             if(token.word in url):
                 rank = rank + token.rank
         return rank
+
+    def getDomain(self, url):
+        parsed_uri = urlparse(url)
+        return '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
 
 class QuestionSpider(scrapy.Spider):
     name = 'questions'
@@ -124,6 +141,8 @@ class QuestionSpider(scrapy.Spider):
         'USER_AGENT': 'coding-questions-bot (https://github.com/Arthurlpgc/InfoRetrievalProject)',
         'DOWNLOAD_TIMEOUT': '20',
         'DOWNLOAD_MAXSIZE': '1000000',
+        'CONCURRENT_REQUESTS': '1',
+        'REDIRECT_ENABLED': 'False',
         'ROBOTSTXT_OBEY': 'True',
         'DOWNLOAD_DELAY': '0.1',
         'REDIRECT_MAX_TIMES': '5',
@@ -148,7 +167,7 @@ class QuestionSpider(scrapy.Spider):
 
     allowed_domains = [
         'codeforces.com',
-        'codechef.com',
+       'codechef.com',
         'urionlinejudge.com.br',
         'spoj.com',
         'dmoj.ca',
@@ -160,6 +179,8 @@ class QuestionSpider(scrapy.Spider):
     ]
 
     linkRanker = LinkRanker()
+    maxPagesPerDomain = 3000
+    domainsCrawled = {}
     
     def parse(self, response):
         self.savePage(response)
@@ -167,10 +188,19 @@ class QuestionSpider(scrapy.Spider):
             anchor = a.xpath('/text()').extract()
             for link in a.xpath('@href').extract():
                 url = response.urljoin(link)
-                yield Request(url=url, 
-                              callback=self.parse, 
-                              priority=self.linkRanker.get(anchor, url),
-                              dont_filter=False)
+                dom = self.getDomain(link)
+                if(self.domainsCrawled.get(dom, 0) < self.maxPagesPerDomain):
+                    self.domainsCrawled[dom] = self.domainsCrawled.get(dom, 0) + 1
+                    yield Request(url=url, 
+                                callback=self.parse, 
+                                priority=self.linkRanker.get(anchor, url),
+                                dont_filter=False)
+                else:
+                    raise scrapy.exceptions.IgnoreRequest()
+
+    def getDomain(self, url):
+        parsed_uri = urlparse(url)
+        return '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
 
     def parseUrlName(self, url):
         forbidden = ['/', '\\', '>', '<', '?', '*', ':', '|']
