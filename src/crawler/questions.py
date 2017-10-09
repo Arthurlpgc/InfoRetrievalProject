@@ -165,7 +165,7 @@ class QuestionSpider(scrapy.Spider):
     start_urls = [
         'http://codeforces.com/',
         'https://www.codechef.com/',
-        'https://www.urionlinejudge.com.br',
+        'https://www.urionlinejudge.com.br/judge/en/login',
         'http://www.spoj.com/',
         'https://dmoj.ca/',
         'https://a2oj.com/',
@@ -179,24 +179,24 @@ class QuestionSpider(scrapy.Spider):
         #'codeforces.com',
         #'codechef.com',
         'urionlinejudge.com.br',
-        'spoj.com',
-        'dmoj.ca',
-        'a2oj.com',
-        'atcoder.jp',
-        'csacademy.com',
-        'acm.timus.ru',
-        'coj.uci.cu'
+        #'spoj.com',
+        #'dmoj.ca',
+        #'a2oj.com',
+        #'atcoder.jp',
+        #'csacademy.com',
+        #'acm.timus.ru',
+        #'coj.uci.cu'
     ]
 
     linkRanker = LinkRanker()
-    maxPagesPerDomain = 100
+    maxPagesPerDomain = 200
     domainsCrawled = {}
     pagesCrawled = 0
     relevantPagesCrawled = 0
     
     def parse(self, response):
         if not isinstance(response, HtmlResponse):
-            return
+            raise scrapy.exceptions.IgnoreRequest()
         domain = self.getDomain(response.url)
         if(self.domainsCrawled.get(domain, 0) >= self.maxPagesPerDomain):
             raise scrapy.exceptions.IgnoreRequest()
