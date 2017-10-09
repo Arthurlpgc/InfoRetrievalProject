@@ -1,6 +1,11 @@
 import scrapy
 from urllib.parse import urlparse
 from scrapy import Request
+import os,sys,inspect
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0,parentdir) 
+from classifier.predict import check_if_is_coding_question
 
 class Token():
     def __init__(self, word, rank):
@@ -139,14 +144,12 @@ class QuestionSpider(scrapy.Spider):
 
     custom_settings = {
         'USER_AGENT': 'coding-questions-bot (https://github.com/Arthurlpgc/InfoRetrievalProject)',
-        'DOWNLOAD_TIMEOUT': '20',
+        'DOWNLOAD_TIMEOUT': '5',
         'DOWNLOAD_MAXSIZE': '1000000',
         'CONCURRENT_REQUESTS': '1',
         'REDIRECT_ENABLED': 'False',
         'ROBOTSTXT_OBEY': 'True',
         'DOWNLOAD_DELAY': '0.1',
-        'REDIRECT_MAX_TIMES': '5',
-        'CLOSESPIDER_PAGECOUNT': '3000',
         'DEPTH_PRIORITY': '1',
         'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue',
         'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue',
@@ -167,7 +170,7 @@ class QuestionSpider(scrapy.Spider):
 
     allowed_domains = [
         'codeforces.com',
-       'codechef.com',
+        'codechef.com',
         'urionlinejudge.com.br',
         'spoj.com',
         'dmoj.ca',
@@ -212,4 +215,6 @@ class QuestionSpider(scrapy.Spider):
         filename = 'documents/%s.html' % self.parseUrlName(response.url)
         with open(filename, 'wb') as f:
             f.write(response.body)
+    
+
 
