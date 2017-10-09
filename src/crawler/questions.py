@@ -26,7 +26,8 @@ class LinkRanker():
                          Token('mobile',                self.minimize),
                          Token('status',                self.minimize),
                          Token('standings',             self.minimize),
-                         Token('submit',                self.minimize)]
+                         Token('submit',                self.minimize),
+                         Token('locale=',               self.minimize)]
 
         codechef =      [Token('/problems/',            self.maximize),
                          Token('/problems/school',      self.decrease),
@@ -182,11 +183,15 @@ class QuestionSpider(scrapy.Spider):
     ]
 
     linkRanker = LinkRanker()
-    maxPagesPerDomain = 3000
+    maxPagesPerDomain = 10
     domainsCrawled = {}
+    pagesCrawled = 0
+    relevantPagesCrawled = 0
     
     def parse(self, response):
         self.savePage(response)
+        self.pagesCrawled = self.pagesCrawled + 1
+        self.generateLog()
         for a in response.selector.xpath('//a'):
             anchor = a.xpath('/text()').extract()
             for link in a.xpath('@href').extract():
@@ -212,9 +217,24 @@ class QuestionSpider(scrapy.Spider):
         return url
 
     def savePage(self, response):
-        filename = 'documents/%s.html' % self.parseUrlName(response.url)
+        filename = 'crawler/documents/%s.html' % self.parseUrlName(response.url)
         with open(filename, 'wb') as f:
             f.write(response.body)
+        self.extractQuestion(filename)
     
+    def extractQuestion(self, filename):
+        with open(filename, 'rb') as f:
+            relevant = check_if_is_coding_question(f)
+            if(relevant == 'good'):
+                self.relevantPagesCrawled = self.relevantPagesCrawled + 1
+
+    def generateLog(self):
+        print('\n -- CRAWLER LOG --\n')
+        print('Pages Crawled per Domain:')
+        for key in self.domainsCrawled:
+            print(key, ': ', self.domainsCrawled[key])
+        print('Pages Crawled: ', self.pagesCrawled)
+        print('Relevant Pages Found: ', self.relevantPagesCrawled)
+        print('Precision: ', self.relevantPagesCrawled/self.pagesCrawled)
 
 
