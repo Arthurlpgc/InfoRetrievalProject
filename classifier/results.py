@@ -22,7 +22,7 @@ def grid_search_mlp():
     }
 
     pipeline = TextPipeline(MLPClassifier(), mlp_parameters, n_jobs=6, verbose = 1)
-    corpus_folder = "pages_preprocessed/"
+    corpus_folder = "train_pages_preprocessed/"
     corpus, metadata = create_corpus(corpus_folder, ["bad", "good"])
     vfunc = np.vectorize(binarize)
     pipeline.fit(corpus, vfunc(metadata['label']))
@@ -34,7 +34,7 @@ def grid_search_multinomial_nb():
     }
 
     pipeline = TextPipeline(MultinomialNB(), nb_parameters, n_jobs=6, verbose = 1)
-    corpus_folder = "pages_preprocessed/"
+    corpus_folder = "train_pages_preprocessed/"
     corpus, metadata = create_corpus(corpus_folder, ["bad", "good"])
     vfunc = np.vectorize(binarize)
     pipeline.fit(corpus, vfunc(metadata['label']))
@@ -47,7 +47,7 @@ def grid_search_logistic_regression():
     }
 
     pipeline = TextPipeline(LogisticRegression(), lg_parameters, n_jobs=6, verbose = 1)
-    corpus_folder = "pages_preprocessed/"
+    corpus_folder = "train_pages_preprocessed/"
     corpus, metadata = create_corpus(corpus_folder, ["bad", "good"])
     vfunc = np.vectorize(binarize)
     pipeline.fit(corpus, vfunc(metadata['label']))
@@ -63,7 +63,7 @@ def grid_search_random_forest():
     }
 
     pipeline = TextPipeline(RandomForestClassifier(), rf_parameters, n_jobs=6, verbose = 1)
-    corpus_folder = "pages_preprocessed/"
+    corpus_folder = "train_pages_preprocessed/"
     corpus, metadata = create_corpus(corpus_folder, ["bad", "good"])
     vfunc = np.vectorize(binarize)
     pipeline.fit(corpus, vfunc(metadata['label']))
@@ -78,15 +78,15 @@ def grid_search_svm():
     }
 
     pipeline = TextPipeline(SVC(), svc_parameters, n_jobs=6, verbose = 1)
-    corpus_folder = "pages_preprocessed/"
+    corpus_folder = "train_pages_preprocessed/"
     corpus, metadata = create_corpus(corpus_folder, ["bad", "good"])
     vfunc = np.vectorize(binarize)
     pipeline.fit(corpus, vfunc(metadata['label']))
     pipeline.save_results("results/svm_results2.csv")
-
+#
 if __name__ == "__main__":
-    # grid_search_svm()
-    # grid_search_random_forest()
-    # grid_search_logistic_regression()
-    # grid_search_multinomial_nb()
+    grid_search_svm()
+    grid_search_random_forest()
+    grid_search_logistic_regression()
+    grid_search_multinomial_nb()
     grid_search_mlp()

@@ -1,0 +1,72 @@
+           C  O  J   Thinking better!    Caribbean Online Judge                   Podios del Caribe en los Concursos Regionales / Equipos caribeños en las Finales Mundiales    LATAM Champions at ACM-ICPC Regional Contests / LATAM Champions at ACM-ICPC World Finals    The 2017 ACM-ICPC Caribbean Finals     October 8, 2017
+            -
+            16:58:08      Home      Downloads      Tools      Forum      FAQ      Links      About      Contact us               Login                    Register       Forgot password?   Terms of service              24 hour archive      Problems  Judgments  Standings   Users   Institutions   Countries      Compare users   Statistics             Real contests      Coming   Running   Previous (587)   Standings  Statistics                 Links     DOCUMENTATION SITES   SOME OF THE INTERNATIONAL PROGRAMMING CONTESTS   OTHER ONLINE JUDGES AVAILABLE ON THE INTERNET      DOCUMENTATION SITES   Here you can get some documentation to improve your computer programming, problem solving and teamwork skills:
+        Do you have more related documentation? Please, contact us to add it!   The ACMSolver  Methods
+                to Solve  Tom
+                Verhoeff Guide  The Stony
+                Brook Algorithm Repository  Wolfram MathWorld   The Algorithmist  TopCoder
+                / Algorithm Tutorials  Computational Geometry
+                Algorithms Library  MAXimal  The
+                Hitchiker's Guide to Programming Contests  Igor's Code Archive   Standard Template
+                Library Programmer's Guide  The Math Forum  Math.com  Varsity
+                Tutors LLC  A Beginner’s Guide to Programming Languages     SOME OF THE INTERNATIONAL PROGRAMMING CONTESTS   Do you know about another international programming contest? Please, contact us to add it!   ACM International
+                Collegiate Programming Contest (ACM-ICPC)  International
+                Olympiad in Informatics (IOI)  TopCoder  Microsoft Imagine
+                Cup  Google Code Jam   IEEEXtreme 24 Hour
+                Programming Competition  BUTE International
+                24 Hour Programming Contest  Internet Problem Solving
+                Contest (IPSC)  Bubble Cup  American Computer Science
+                League  DWITE  ICFP Programming
+                Contest     OTHER ONLINE JUDGES AVAILABLE ON THE INTERNET   Do you know about another online judge available on the Internet? Please, contact us to add it!   Kattis Online Judge  Infoarena  .Campion  Lviv National University
+                Online Judge  e-olimp Online
+                Check System  IAI Judge  El
+                Judge  Saratov State University ::
+                Online Contester  Timus Online Judge  Codeforces  SPb IFMO Training
+                Center  Sphere Online Judge (SPOJ)   Teddy Online Judge  USA Computing Olympiad
+                (USACO) Training Site  Automatic
+                Program Judge  University of Miami
+                Online Judge  Al Zimmermann's
+                Programming Contests (AZSPCS)  Project Euler  CodingBat  Universidad de
+                Valladolid (UVA) Online Judge  The
+                2000's ACM-ICPC Live Archive  z-training  CodeChef  IARCS Online Judge  University of
+                Dhaka Online Judge  Arbiter
+                Online Judge  Croatian Open Competition
+                in Informatics (COCI)  University
+                of Aizu Online Judge  Herbert Online
+                Judge  KRSU Online Judge    Mendo Online Judge  SYSS Online Judge  HKOI Online Judge  Python Online
+                Judge  National
+                Taiwan University Online Judge  NCTU Online
+                Judge  GEPWNAGE Online Judge   Peking University Online Judge
+                (POJ)  Zhejiang University
+                Online Judge (ZOJ)  Harbin Engineering
+                University (HRBEU) Online Judge  Jilin University
+                Online Judge (JOJ)  Hangzhou Dianzi
+                University (HDU) Online Judge  Wuhan University
+                (WHU) Online Judge  Tianjin University
+                Online Judge (TOJ)  Shenyang Institute of
+                Engineering Online Judge  Sichuan
+                University Online Judge (SOJ)  Xiamen
+                University (XMU) Online Judge  Fuzhou University Online
+                Judge (FOJ)  Harbin Institute
+                of Technology Online Judge (HOJ)  Tongji University
+                Online Judge  Shandong
+                University of Technology (SDUT) Online Judge  Nankai Online Judge  Nanjing
+                University of Aeronautics and Astronautics Online Judge (NOJ)  UESTC Online Judge  ZeroJudge  HappyLearn
+                Online Judge  RenQingNet Online Judge
+                (RQNOJ)  East China
+                Normal University (ECNU) Online Judge  Jin Bin's ACM Online
+                Judge System  Central
+                South University (CSU) Judge Online  North University of
+                China (NUC) Online Judge  Hunan Normal
+                University (HUNNU) Online Judge  Sicily Online Judge (SOJ)  Huazhong University
+                of Science and Technology Online Judge (HUSTOJ)  HYSBZ Online
+                Judge  Sogang
+                University Online Judge  Free
+                ProblemSet Online Judge (FPS-OJ)  lavida.us Online Judge   Zhejiang
+                Gongshang University (ZJGSU) Online Judge  Northwestern
+                Polytechnical University (NWPU) Online Judge  Shandong
+                Institute of Business and Technology (SDIBT) Online Judge  Maanshan Technical
+                College (MASTC) Online Judge  MegaGod Online Judge   SISO
+                Online Judge  Facebook
+                Hacker Cup  URI Online
+                Judge                     Universidad de las Ciencias Informáticas (UCI)  2010-2016 | COJ v1.0 beta | All rights reserved In case of any question or comment, please contact us .        
