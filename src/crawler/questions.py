@@ -46,7 +46,7 @@ class LinkRanker():
                          Token('/problems/index/',      self.increase),
                          Token('page=',                 self.increase),
                          Token('/problems/view/',       self.maximize),
-                         Token('sort=',                 self.minimize)]
+                         Token('?sort=',                 self.minimize)]
 
         spoj =          [Token('start=',                self.decrease),
                          Token('/problems/partial',     self.decrease),
