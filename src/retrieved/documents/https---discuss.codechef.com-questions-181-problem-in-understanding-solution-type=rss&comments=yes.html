@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Answers to: problem in understanding solution?</title><link>https://discuss.codechef.com/questions/181/problem-in-understanding-solution</link><description>&lt;p&gt;I've attended a contest on codeforces. Here is the &lt;a href="http://www.codeforces.com/problemset/problem/165/E"&gt;question&lt;/a&gt;. 
+solution::&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;cstdio&amp;gt;
+#define rep(a,b) for (int a=0;a&amp;lt;b;a++)
+using namespace std;
+
+int n,a[1000100],d[1&amp;lt;&amp;lt;22];
+
+int main()
+{
+    cin &amp;gt;&amp;gt; n;
+    rep(i,1&amp;lt;&amp;lt;22) d[i]=-1;
+    rep(i,n) scanf("%d",&amp;amp;a[i]), d[a[i]]=a[i];
+    rep(i,1&amp;lt;&amp;lt;22) 
+        if (d[i]&amp;lt;0)
+            rep(j,22)
+                if (((i&amp;gt;&amp;gt;j)&amp;amp;1) &amp;amp;&amp;amp; d[i^(1&amp;lt;&amp;lt;j)]&amp;gt;=0)
+                    d[i]=d[i^(1&amp;lt;&amp;lt;j)];
+    rep(i,n) printf("%d ",d[(1&amp;lt;&amp;lt;22)-a[i]-1]);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But how it is working I'm not able to understand. Need help..!&lt;/p&gt;</description><atom:link href="https://discuss.codechef.com/questions/181/problem-in-understanding-solution" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 16 Jan 2013 01:32:50 +0530</lastBuildDate><item><title>Comment by bondoc73 on tarun_007's question</title><link>https://discuss.codechef.com/questions/181/problem-in-understanding-solution#5267</link><description>&lt;p&gt;The explanation is here: &lt;a href="http://codeforces.com/blog/entry/4124?locale=en"&gt;http://codeforces.com/blog/entry/4124?locale=en&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">bondoc73</dc:creator><pubDate>Wed, 16 Jan 2013 01:32:50 +0530</pubDate><guid>https://discuss.codechef.com/questions/181/problem-in-understanding-solution#5267</guid></item></channel></rss>

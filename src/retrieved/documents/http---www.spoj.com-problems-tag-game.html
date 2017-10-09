@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie" lang="en"> <!--<![endif]-->
+<head>
+	<!-- main header -->
+	<meta charset="utf-8">
+	
+				<title>Sphere Online Judge (SPOJ)</title>
+	  
+	<meta name="keywords" content="language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  		<meta property="og:image" content="//stx1.spoj.com/gfx/spoj-fb.jpg"/>
+	<meta property="og:description" content="SPOJ (Sphere Online Judge) is an online judge system with over 315,000 registered users and over 20000 problems. The solution to problems can be submitted in over 60 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+	<meta name="description" content="SPOJ (Sphere Online Judge) is an online judge system with over 315,000 registered users and over 20000 problems. The solution to problems can be submitted in over 60 languages including C, C++, Java, Python, C#, Go, Haskell, Ocaml, and F#. SPOJ has a rapidly growing problem set/tasks available for practice 24 hours/day, including many original tasks prepared by the community of expert problem setters associated with the project."/>
+		<meta property="og:site_name" content="spoj.com"/>
+
+  <!--[if (gte IE 9)|!(IE)]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" id="metatag">
+  <![endif]--> 
+
+	  <!-- Favicon -->
+	  <link href="//stx1.spoj.com/gfx/favicon_new.png" rel="shortcut icon" type="image/x-icon" />
+	  
+	  <!-- RSS -->
+	  <link href="/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+	
+	  <!-- Web Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">  
+
+	<!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	
+	
+	
+	<!-- CSS: Bootstrap, Font-awesome, Bootstrap libs,  -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  	<link href="//stx1.spoj.com/gfx/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet" />
+  	<link href="//stx1.spoj.com/themes/bootstrap-social.css" rel="stylesheet" type="text/css" />
+  	
+	<link href="//stx1.spoj.com/themes/common.css?4" rel="stylesheet" type="text/css" id="theme0" />
+	<link href="//stx1.spoj.com/themes/en_new.css?4" rel="stylesheet" type="text/css" id="theme" />
+	
+	<!-- JS -->
+	<script type="text/javascript" src='//code.jquery.com/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+	
+		
+		
+	<script type="text/javascript" language="javascript">
+	$(function () { 
+		$("#profile-menu").popover();
+	});
+	function UnCryptMailto(s) {
+		var n=0;
+		var r="";
+		for(var i=0;i<s.length;i++) {		
+			n=s.charCodeAt(i); 
+			if (n>=8364) {n = 128;}
+			r += String.fromCharCode(n+(2));	
+		}
+		return r;
+	}
+	function linkTo_UnCryptMailto(s)	{
+		location.href=UnCryptMailto(s);
+	}
+	</script>
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action) {
+	  try {
+	    var pageTracker=_gat._getTracker("UA-XXXXX-X");
+	    pageTracker._trackEvent(category, action);
+	    setTimeout('document.location = "' + link.href + '"', 100)
+	  }catch(err){}
+	}
+	</script>
+	
+</head>
+
+<body>
+
+	
+	<!-- <div class="space30"></div> -->
+	
+	<!-- Content -->
+	<div class="content">
+		<div class="container" id="header">
+			<div class="row">
+				<div class="col-md-12 text-right">
+										<form method="post" style="display: none;" action="/login/" id="login-form">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-2">
+								<input type="hidden" name="next_raw" value="/"/>
+								<input type="hidden" name="autologin" value="1"/>
+								<input type="text" name="login_user" placeholder="Username" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+								<input type="password" name="password" placeholder="Password" class="form-control input-sm" style="display: inline-block; width: 25%;"/>
+																<button type="submit" class="btn btn-default btn-sm" style="display: inline-block; margin-right: 10px;"><span class="fa fa-sign-in fa-lg"></span> <strong>sign in</strong></button>
+																<a href="/register"><i class="fa fa-user-plus"></i> sign up</a> 
+								<a href="/forgot"><i class="fa fa-question-circle"></i> forgot</a>
+				        									</div>
+						</div>
+					</form>
+										
+					
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-md-4">
+					<a href="/" class="navbar-brand">
+						<img src="//stx1.spoj.com/gfx/2015e.png" style="height: 40px;"/>
+					</a>
+					<div class="navbar-header">
+				      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fa fa-bars"></i>
+				      </button>
+				    </div>
+				</div>
+				<div class="col-md-8" id="menu">
+				
+					
+					<div class="row">
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"  style="border: 0px;">
+				      <ul class="nav navbar-nav" style="  float: right; margin-top: 10px;">
+				      						        <li >
+					          <a href="/problems"><i class="fa fa-puzzle-piece"></i> PROBLEMS</a>
+					        </li>
+					        					        <li >
+					          <a href="/status"><i class="fa fa-circle"></i> STATUS</a>
+					        </li>
+					        <li >
+					          <a href="/ranks"><i class="fa fa-trophy"></i> RANKS</a>
+					        </li>
+					        <li >
+					          <a href="http://spoj.com/forum"><i class="fa fa-comments-o"></i> DISCUSS</a>
+					        </li>
+					        <li >
+					          <a href="/contests">CONTESTS</a>
+					        </li>
+											        					        <li >
+					        	<a href="/login" class="text-success" onclick="$('#login-form').show(); $('input[name=login_user]').focus(); return false;"><i class="fa fa-sign-in"></i> sign in</a>
+					        </li>
+					        						
+				        
+				      </ul>
+				    </nav>
+				    </div>
+				    
+				    
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="container" id="menu">
+			
+		</div>
+		
+		<div class="container" id="content">
+		<div class="submenu">
+	<ol class="">
+		<li ><a href="/problems/classical">Classical</a></li>
+		<li ><a href="/problems/challenge">Challenge</a></li>
+		<li ><a href="/problems/partial">Partial</a></li>
+		<li ><a href="/problems/tutorial">Tutorial</a></li>
+		<li ><a href="/problems/riddle">Riddle</a></li>
+		<li ><a href="/problems/basics">Basics</a></li>
+		<li class="active"><a href="/problems/tags">#tags</a></li>
+	</ol>
+	
+	</div>
+
+<div class="row">
+	
+	
+	<div class="col-lg-8 col-md-8">	
+	
+		<div>
+			<center>
+				<div class="aProblemsTop c728x90"><div class="no_a_info"></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4453360425583535"
+     data-ad-slot="7119866239"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+			</center>
+			<br/>
+		</div>
+	
+		<table class="problems table table-condensed table-hover">
+		
+		<colgroup>
+						<col width="55px"/>
+		</colgroup>
+		<thead>
+			<tr class="title-row">
+						<th class="text-center"><a href="?sort=5" title="Problem ID. Click here to sort.">ID</a></th>
+			<th class="valign-middle"><a href="?sort=2" title="Problem name. Click here to sort. Click on the name of a problem to read its description.">NAME</a></th>
+						
+			<th width="70" class="text-center valign-middle"><a href="?sort=11" title="Quality">QUALITY</a></th>
+			<th width="50" class="text-center valign-middle"><a href="?sort=6" title="The number of users who have solved a problem. Click here to sort.">USERS</a></th>
+			<th width="50" class="valign-middle text-right"><a href="?sort=7" title="The percentage of all solutions to a problem, which were accepted. This is some indicator of the difficulty of the problem. Click here to sort.">ACC&nbsp;%</a></th>
+			<th width="120" class="text-center">DIFFICULTY				<a href="?sort=9" title="Concept difficulty">C</a>
+				<a href="?sort=10" title="Implementation difficulty">I</a>
+			</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+				<tr class="">
+		<!--
+		<td>4557</td>
+		-->
+				<td class="text-center">
+						4557
+					</td>
+		<td align="left">
+			<a href="/problems/ANARC08H">Musical Chairs</a>
+			<span class="options-box">
+			&nbsp;
+						</span>
+		</td>
+				
+		<td class="text-center">
+			
+			
+						<span class="text-success" title="+16 -0"><i class="fa fa-thumbs-o-up"></i> <strong>16</strong></span>
+								
+		</td>
+		<td class="text-center"><a href="/ranks/ANARC08H" title="See the best solutions.">2272</a></td>
+		<td class="text-right"><a href="/status/ANARC08H" title="See all submitted solutions to this problem."></a></td>
+		
+		<td class="text-center ">
+			
+			
+			
+			
+						
+			 
+						 
+						<div id="rate-implementation-box" class="progress problem-list-progress" style="margin-top: 1px;" title="Difficulty: Implementation 7/50 Concept 18/50">
+			  			  <div class="progress-bar  progress-bar-info" role="progressbar" aria-valuenow="7" aria-valuemin="0" aria-valuemax="50" style="width: 7%;">
+			    	<span>7</span>
+			  </div>
+			  			  			  <div class="progress-bar pull-right progress-bar-success" role="progressbar" aria-valuenow="18" aria-valuemin="0" aria-valuemax="50" style="width: 18%;">
+					<span>18</span>
+			  </div>
+			  			</div>
+		</td>
+		
+		</tr>
+				<tr class="">
+		<!--
+		<td>16102</td>
+		-->
+				<td class="text-center">
+						16102
+					</td>
+		<td align="left">
+			<a href="/problems/CARRHIM">Can you play carrom !!!</a>
+			<span class="options-box">
+			&nbsp;
+						</span>
+		</td>
+				
+		<td class="text-center">
+			
+			
+						<span class="text-success" title="+4 -2"><i class="fa fa-thumbs-o-up"></i> <strong>2</strong></span>
+								
+		</td>
+		<td class="text-center"><a href="/ranks/CARRHIM" title="See the best solutions.">201</a></td>
+		<td class="text-right"><a href="/status/CARRHIM" title="See all submitted solutions to this problem."></a></td>
+		
+		<td class="text-center ">
+			
+			
+			
+			
+						
+			 
+						 
+						<div id="rate-implementation-box" class="progress problem-list-progress" style="margin-top: 1px;" title="Difficulty: Implementation 15/50 Concept 12/50">
+			  			  <div class="progress-bar  progress-bar-success" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="50" style="width: 15%;">
+			    	<span>15</span>
+			  </div>
+			  			  			  <div class="progress-bar pull-right progress-bar-info" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="50" style="width: 12%;">
+					<span>12</span>
+			  </div>
+			  			</div>
+		</td>
+		
+		</tr>
+				<tr class="">
+		<!--
+		<td>25960</td>
+		-->
+				<td class="text-center">
+						25960
+					</td>
+		<td align="left">
+			<a href="/problems/CATMO1">Cat and Mouse I</a>
+			<span class="options-box">
+			&nbsp;
+						</span>
+		</td>
+				
+		<td class="text-center">
+			
+			
+								
+		</td>
+		<td class="text-center"><a href="/ranks/CATMO1" title="See the best solutions.">49</a></td>
+		<td class="text-right"><a href="/status/CATMO1" title="See all submitted solutions to this problem."></a></td>
+		
+		<td class="text-center ">
+			
+			
+			
+			
+						
+			 
+						 
+						<div id="rate-implementation-box" class="progress problem-list-progress" style="margin-top: 1px;" title=" ">
+			  			  			</div>
+		</td>
+		
+		</tr>
+				<tr class="">
+		<!--
+		<td>92</td>
+		-->
+				<td class="text-center">
+						92
+					</td>
+		<td align="left">
+			<a href="/problems/CUTSQRS">Cutting off Squares</a>
+			<span class="options-box">
+			&nbsp;
+						</span>
+		</td>
+				
+		<td class="text-center">
+			
+			
+								
+		</td>
+		<td class="text-center"><a href="/ranks/CUTSQRS" title="See the best solutions.">210</a></td>
+		<td class="text-right"><a href="/status/CUTSQRS" title="See all submitted solutions to this problem."></a></td>
+		
+		<td class="text-center ">
+			
+			
+			
+			
+						
+			 
+						 
+						<div id="rate-implementation-box" class="progress problem-list-progress" style="margin-top: 1px;" title=" ">
+			  			  			</div>
+		</td>
+		
+		</tr>
+				<tr class="">
+		<!--
+		<td>1786</td>
+		-->
+				<td class="text-center">
+						1786
+					</td>
+		<td align="left">
+			<a href="/problems/DANGER">In Danger</a>
+			<span class="options-box">
+			&nbsp;
+						</span>
+		</td>
+				
+		<td class="text-center">
+			
+			
+						<span class="text-success" title="+37 -4"><i class="fa fa-thumbs-o-up"></i> <strong>33</strong></span>
+								
+		</td>
+		<td class="text-center"><a href="/ranks/DANGER" title="See the best solutions.">3621</a></td>
+		<td class="text-right"><a href="/status/DANGER" title="See all submitted solutions to this problem."></a></td>
+		
+		<td class="text-center ">
+			
+			
+			
+			
+						
+			 
+						 
+						<div id="rate-implementation-box" class="progress problem-list-progress" style="margin-top: 1px;" title="Difficulty: Implementation 8/50 Concept 13/50">
+			  			  <div class="progress-bar  progress-bar-info" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="50" style="width: 8%;">
+			    	<span>8</span>
+			  </div>
+			  			  			  <div class="progress-bar pull-right progress-bar-success" role="progressbar" aria-valuenow="13" aria-valuemin="0" aria-valuemax="50" style="width: 13%;">
+					<span>13</span>
+			  </div>
+			  			</div>
+		</td>
+		
+		</tr>
+				<tr class="">
+		<!--
+		<td>6772</td>
+		-->
+				<td class="text-center">
+						6772
+					</td>
+		<td align="left">
+			<a href="/problems/HC">Happy Coins</a>
+			<span class="options-box">
+			&nbsp;
+						</span>
+		</td>
+				
+		<td class="text-center">
+			
+			
+						<span class="text-success" title="+13 -3"><i class="fa fa-thumbs-o-up"></i> <strong>10</strong></span>
+								
+		</td>
+		<td class="text-center"><a href="/ranks/HC" title="See the best solutions.">1996</a></td>
+		<td class="text-right"><a href="/status/HC" title="See all submitted solutions to this problem."></a></td>
+		
+		<td class="text-center ">
+			
+			
+			
+			
+						
+			 
+						 
+						<div id="rate-implementation-box" class="progress problem-list-progress" style="margin-top: 1px;" title="Difficulty: Implementation 3/50 Concept 9/50">
+			  			  <div class="progress-bar  progress-bar-info" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="50" style="width: 3%;">
+			    	<span>3</span>
+			  </div>
+			  			  			  <div class="progress-bar pull-right progress-bar-info" role="progressbar" aria-valuenow="9" aria-valuemin="0" aria-valuemax="50" style="width: 9%;">
+					<span>9</span>
+			  </div>
+			  			</div>
+		</td>
+		
+		</tr>
+				<tr class="">
+		<!--
+		<td>15567</td>
+		-->
+				<td class="text-center">
+						15567
+					</td>
+		<td align="left">
+			<a href="/problems/IITKWPCN">Playing With Balls</a>
+			<span class="options-box">
+			&nbsp;
+						</span>
+		</td>
+				
+		<td class="text-center">
+			
+			
+						<span class="text-success" title="+17 -1"><i class="fa fa-thumbs-o-up"></i> <strong>16</strong></span>
+								
+		</td>
+		<td class="text-center"><a href="/ranks/IITKWPCN" title="See the best solutions.">1332</a></td>
+		<td class="text-right"><a href="/status/IITKWPCN" title="See all submitted solutions to this problem."></a></td>
+		
+		<td class="text-center ">
+			
+			
+			
+			
+						
+			 
+						 
+						<div id="rate-implementation-box" class="progress problem-list-progress" style="margin-top: 1px;" title="Difficulty: Implementation 2/50 Concept 11/50">
+			  			  <div class="progress-bar  progress-bar-info" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="50" style="width: 2%;">
+			    	<span>2</span>
+			  </div>
+			  			  			  <div class="progress-bar pull-right progress-bar-info" role="progressbar" aria-valuenow="11" aria-valuemin="0" aria-valuemax="50" style="width: 11%;">
+					<span>11</span>
+			  </div>
+			  			</div>
+		</td>
+		
+		</tr>
+				<tr class="">
+		<!--
+		<td>18150</td>
+		-->
+				<td class="text-center">
+						18150
+					</td>
+		<td align="left">
+			<a href="/problems/SHAKTI">SHAKTIMAN AND KILWISH</a>
+			<span class="options-box">
+			&nbsp;
+						</span>
+		</td>
+				
+		<td class="text-center">
+			
+			
+						<span class="text-success" title="+21 -2"><i class="fa fa-thumbs-o-up"></i> <strong>19</strong></span>
+								
+		</td>
+		<td class="text-center"><a href="/ranks/SHAKTI" title="See the best solutions.">2042</a></td>
+		<td class="text-right"><a href="/status/SHAKTI" title="See all submitted solutions to this problem."></a></td>
+		
+		<td class="text-center ">
+			
+			
+			
+			
+						
+			 
+						 
+						<div id="rate-implementation-box" class="progress problem-list-progress" style="margin-top: 1px;" title="Difficulty: Implementation 3/50 Concept 11/50">
+			  			  <div class="progress-bar  progress-bar-info" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="50" style="width: 3%;">
+			    	<span>3</span>
+			  </div>
+			  			  			  <div class="progress-bar pull-right progress-bar-info" role="progressbar" aria-valuenow="11" aria-valuemin="0" aria-valuemax="50" style="width: 11%;">
+					<span>11</span>
+			  </div>
+			  			</div>
+		</td>
+		
+		</tr>
+				<tr class="">
+		<!--
+		<td>32578</td>
+		-->
+				<td class="text-center">
+						32578
+					</td>
+		<td align="left">
+			<a href="/problems/SPLEND1">Meh and Mini Splendor</a>
+			<span class="options-box">
+			&nbsp;
+						</span>
+		</td>
+				
+		<td class="text-center">
+			
+			
+								
+		</td>
+		<td class="text-center"><a href="/ranks/SPLEND1" title="See the best solutions.">2</a></td>
+		<td class="text-right"><a href="/status/SPLEND1" title="See all submitted solutions to this problem."></a></td>
+		
+		<td class="text-center ">
+			
+			
+			
+			
+						
+			 
+						 
+						<div id="rate-implementation-box" class="progress problem-list-progress" style="margin-top: 1px;" title=" ">
+			  			  			</div>
+		</td>
+		
+		</tr>
+				<tr class="">
+		<!--
+		<td>1161</td>
+		-->
+				<td class="text-center">
+						1161
+					</td>
+		<td align="left">
+			<a href="/problems/TOE1">Tic-Tac-Toe ( I )</a>
+			<span class="options-box">
+			&nbsp;
+						</span>
+		</td>
+				
+		<td class="text-center">
+			
+			
+						<span class="text-success" title="+8 -1"><i class="fa fa-thumbs-o-up"></i> <strong>7</strong></span>
+								
+		</td>
+		<td class="text-center"><a href="/ranks/TOE1" title="See the best solutions.">1782</a></td>
+		<td class="text-right"><a href="/status/TOE1" title="See all submitted solutions to this problem."></a></td>
+		
+		<td class="text-center ">
+			
+			
+			
+			
+						
+			 
+						 
+						<div id="rate-implementation-box" class="progress problem-list-progress" style="margin-top: 1px;" title="Difficulty: Implementation 8/50 Concept 9/50">
+			  			  <div class="progress-bar  progress-bar-info" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="50" style="width: 8%;">
+			    	<span>8</span>
+			  </div>
+			  			  			  <div class="progress-bar pull-right progress-bar-info" role="progressbar" aria-valuenow="9" aria-valuemin="0" aria-valuemax="50" style="width: 9%;">
+					<span>9</span>
+			  </div>
+			  			</div>
+		</td>
+		
+		</tr>
+				<tr class="">
+		<!--
+		<td>1162</td>
+		-->
+				<td class="text-center">
+						1162
+					</td>
+		<td align="left">
+			<a href="/problems/TOE2">Tic-Tac-Toe ( II )</a>
+			<span class="options-box">
+			&nbsp;
+						</span>
+		</td>
+				
+		<td class="text-center">
+			
+			
+						<span class="text-success" title="+3 -0"><i class="fa fa-thumbs-o-up"></i> <strong>3</strong></span>
+								
+		</td>
+		<td class="text-center"><a href="/ranks/TOE2" title="See the best solutions.">1314</a></td>
+		<td class="text-right"><a href="/status/TOE2" title="See all submitted solutions to this problem."></a></td>
+		
+		<td class="text-center ">
+			
+			
+			
+			
+						
+			 
+						 
+						<div id="rate-implementation-box" class="progress problem-list-progress" style="margin-top: 1px;" title="Difficulty: Implementation 13/50 Concept 9/50">
+			  			  <div class="progress-bar  progress-bar-success" role="progressbar" aria-valuenow="13" aria-valuemin="0" aria-valuemax="50" style="width: 13%;">
+			    	<span>13</span>
+			  </div>
+			  			  			  <div class="progress-bar pull-right progress-bar-info" role="progressbar" aria-valuenow="9" aria-valuemin="0" aria-valuemax="50" style="width: 9%;">
+					<span>9</span>
+			  </div>
+			  			</div>
+		</td>
+		
+		</tr>
+				<tr class="">
+		<!--
+		<td>10285</td>
+		-->
+				<td class="text-center">
+						10285
+					</td>
+		<td align="left">
+			<a href="/problems/WTK">Why this kolaveri di</a>
+			<span class="options-box">
+			&nbsp;
+						</span>
+		</td>
+				
+		<td class="text-center">
+			
+			
+						<span class="text-success" title="+14 -0"><i class="fa fa-thumbs-o-up"></i> <strong>14</strong></span>
+								
+		</td>
+		<td class="text-center"><a href="/ranks/WTK" title="See the best solutions.">1214</a></td>
+		<td class="text-right"><a href="/status/WTK" title="See all submitted solutions to this problem."></a></td>
+		
+		<td class="text-center ">
+			
+			
+			
+			
+						
+			 
+						 
+						<div id="rate-implementation-box" class="progress problem-list-progress" style="margin-top: 1px;" title="Difficulty: Implementation 8/50 Concept 19/50">
+			  			  <div class="progress-bar  progress-bar-info" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="50" style="width: 8%;">
+			    	<span>8</span>
+			  </div>
+			  			  			  <div class="progress-bar pull-right progress-bar-success" role="progressbar" aria-valuenow="19" aria-valuemin="0" aria-valuemax="50" style="width: 19%;">
+					<span>19</span>
+			  </div>
+			  			</div>
+		</td>
+		
+		</tr>
+				</tbody>
+		</table>
+		
+		
+	</div>
+	
+	<div class="col-lg-4 col-md-4">
+		<h3><strong>#game</strong></h3>
+		<p>mental of physical activity with the given set of rules</p>
+		<p>   https://en.wikipedia.org/wiki/Game
+https://en.wikipedia.org/wiki/Logic_puzzle</p>
+	</div>
+</div>	<br/>
+</div>
+		
+		
+		<div class="container" id="footer">
+			<div class="row">
+				<div class="col-md-2">
+					
+				</div>
+				<div class="col-md-8 text-center">
+					<a href="/info">About</a> | <a href="/tutorials">Tutorial</a> | <a href="/tools">Tools</a> | <a href="/clusters">Clusters</a> | <a href="/credits">Credits</a> | <a href="/jobs">Jobs</a> | <a href="/sphereengine">API</a> | <a href="/gfx/spoj-terms.pdf" target="_blank">Terms</a>
+				</div>
+				<div class="col-md-2 text-right">
+					<a href="/rss/" ><img src="//stx1.spoj.com/gfx/rss10x10.gif" border=0>&nbsp;RSS</a>&nbsp;
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center" id="footer-srl">
+			
+	&copy; Spoj.com. All Rights Reserved. Spoj uses <a href="http://sphere-engine.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com?utm_campaign=permanent&amp;utm_medium=footer&amp;utm_source=spoj" style="color:black">Sphere Research Labs</a>.
+
+		</div> 
+	</div>
+
+	<!-- JavaScripts -->
+	
+		
+	
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			$('.no_a_info').css('visibility', 'visible');
+		}, 5000);
+		
+		if(!$('.aProblemTop').length && !$('.aProblemsTop').length && !$('.aSubmitTop').length && !$('.aStatusTop').length && !$('.aMainRight').length){
+			ga('send', 'event', 'ads', 'no-ads', 'main-contest');
+		}
+		if ($('.aProblemTop').height() == 0){
+			$('.aProblemTop').css({'border': '1px solid #ddd', 'background': '#f0f4e3', 'height': 90});
+			$('.aProblemTop').html($('<p class="text-center">using adblock?</p><h4 class="text-center">Online ads help us to maintain site.</h4><p class="text-center"><strong>please whitelist *.spoj.com</strong></p>'));
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemTop');
+		}
+		if ($('.aProblemsTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aProblemsTop');
+		}
+		if ($('.aSubmitTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aSubmitTop');
+		}
+		if ($('.aStatusTop').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aStatusTop');
+		}
+		if ($('.aMainRight').height() == 0){
+			ga('send', 'event', 'ads', 'adblock2', 'aMainRight');
+		}
+	});
+	</script>
+	
+	
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.timers.js"></script>
+	<script type="text/javascript" src="//stx1.spoj.com/gfx/jquery.cookie.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<script src="//stx1.spoj.com/gfx/md5.js"></script>
+	<script src="//stx1.spoj.com/gfx/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+	<script src="//stx1.spoj.com/gfx/scripts/tour.js"></script>
+	
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&appId=321676846207&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+	
+
+
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-10507872-1', 'auto');
+	  ga('require', 'linkid', 'linkid.js');
+	  ga('send', 'pageview');
+	</script>
+<!-- Hotjar Tracking Code for http://www.spoj.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:334656,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script type="text/javascript">
+	$(function(){
+		$(document).on('click', '.track', function(){
+			var event = $(this).attr('data-event');
+			var action = $(this).attr('data-action');
+			var value = $(this).attr('data-value');
+			ga('send', 'event', event, action, value);
+		});
+	});
+	//window.open('http://incoming.hotjar.com/s/7366', '_blank');
+	</script>
+
+
+</body>
+</html>

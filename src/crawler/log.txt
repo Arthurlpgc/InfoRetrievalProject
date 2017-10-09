@@ -21,8 +21,8 @@ Precision: 0.96
 
  -- CRAWLER LOG --
 Pages In Queue per Domain:
-http://codeforces.com/: 102
-https://www.codechef.com/: 48
+http://codeforces.com/: 100
+https://www.codechef.com/: 50
 
 Pages Crawled: 150
 Relevant Pages Found: 146
@@ -31,10 +31,38 @@ Precision: 0.9733333333333334
 
  -- CRAWLER LOG --
 Pages In Queue per Domain:
-http://codeforces.com/: 102
-https://www.codechef.com/: 98
+http://codeforces.com/: 100
+https://www.codechef.com/: 100
 
 Pages Crawled: 200
 Relevant Pages Found: 196
 Precision: 0.98
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 100
+https://www.codechef.com/: 100
+http://assets.codeforces.com/: 16
+https://discuss.codechef.com/: 19
+https://blog.codechef.com/: 7
+http://www.spoj.com/: 8
+
+Pages Crawled: 250
+Relevant Pages Found: 200
+Precision: 0.8
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 100
+https://www.codechef.com/: 100
+http://assets.codeforces.com/: 16
+https://discuss.codechef.com/: 19
+https://blog.codechef.com/: 7
+http://www.spoj.com/: 58
+
+Pages Crawled: 300
+Relevant Pages Found: 201
+Precision: 0.67
 

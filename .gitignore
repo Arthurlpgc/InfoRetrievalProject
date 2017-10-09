@@ -1,3 +1,2 @@
 __pycache__
-src/crawler/documents/*.html
-src/crawler/test/*.html
+src/retrieved/documents/*.html
