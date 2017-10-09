@@ -1,0 +1,74 @@
+           C  O  J   Thinking better!    Caribbean Online Judge                   Podios del Caribe en los Concursos Regionales / Equipos caribeños en las Finales Mundiales    LATAM Champions at ACM-ICPC Regional Contests / LATAM Champions at ACM-ICPC World Finals    The 2017 ACM-ICPC Caribbean Finals     October 8, 2017
+            -
+            17:00:03      Home      Downloads      Tools      Forum      FAQ      Links      About      Contact us               Login                    Register       Forgot password?   Terms of service              24 hour archive      Problems  Judgments  Standings   Users   Institutions   Countries      Compare users   Statistics             Real contests      Coming   Running   Previous (587)   Standings  Statistics                 24 hour archive: Problem       Submissions  Best solutions  PDF  Discussion       1036
+				- MC Part Deux  1036 - MC Part Deux  1036 - MC Part Deux         Statistics  Sub: 45 | AC: 21 | AC%: 46,67  | Score: 3,33    Created by  2009 Waterloo Local Contest - Ondrej Lhoták    Added by  ejaltuna (2011-10-08)    Limits    Total Time: 2000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 6000 MS 
+                                                            
+                                                         | Memory: 3 GB  | Output: 64 MB | Size: 30 KB   Total Time: 4000 MS 
+                                                            
+                                                         | Memory: 1 GB  | Output: 64 MB | Size: 30 KB   Total Time: 2000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 12000 MS 
+                                                            
+                                                         | Memory: 125 MB  | Output: 64 MB | Size: 30 KB   Total Time: 6000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 2000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 2000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 12000 MS 
+                                                            
+                                                         | Memory: 312 MB  | Output: 64 MB | Size: 30 KB   Total Time: 6000 MS 
+                                                            
+                                                         | Memory: 125 MB  | Output: 64 MB | Size: 30 KB   Total Time: 6000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 6000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 6000 MS 
+                                                            
+                                                         | Memory: 1 GB  | Output: 64 MB | Size: 30 KB   Total Time: 12000 MS 
+                                                            
+                                                         | Memory: 937 MB  | Output: 64 MB | Size: 30 KB   Total Time: 6000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 2000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB     Enabled languages    C  C#  C++  C++11  Java  JavaScript-NodeJS  Pascal  Perl  PHP  Prolog  Python  Ruby  Text      Available in            Description    The Dean has determined that mathies have outgrown the building that has served them so well for many years. Luckily for him, the PM has decided to stimulate the economy by funding a new math building. To maximize the stimulating effect, the construction process is outsourced to a software engineering consultant who employs agile methodologies. The building will be built first, and designed later. The Dean has some concerns about this innovative process. After all, it would be very embarrassing if the walls of the new math building failed to line up at right angles!
+
+The Dean sneaks out one night with a tape measure to survey the last remaining grassy area on campus, where the new building will go. He drives stakes into the ground, then measures the distances between them. Afterwards, he retreats into his office to construct a map from his measurements. He notices that the first three stakes form a right-angled triangle with arms of length one metre and hypotenuse of length sqrt(2) metres. And that's not all. The Dean plots these first three stakes on a piece of graph paper at coordinates (0,0), (0,1), and (1,0). After plotting some of the other stakes, it turns out that all of the stakes happen to be precisely at lattice points (i.e. points with integer coordinates) on the graph paper. Still, plotting all of the many stakes is tedious, so he asks his co-op student (i.e. you) to help out.    The Dean has determined that mathies have outgrown the building that has served them so well for many years. Luckily for him, the PM has decided to stimulate the economy by funding a new math building. To maximize the stimulating effect, the construction process is outsourced to a software engineering consultant who employs agile methodologies. The building will be built first, and designed later. The Dean has some concerns about this innovative process. After all, it would be very embarrassing if the walls of the new math building failed to line up at right angles!
+
+The Dean sneaks out one night with a tape measure to survey the last remaining grassy area on campus, where the new building will go. He drives stakes into the ground, then measures the distances between them. Afterwards, he retreats into his office to construct a map from his measurements. He notices that the first three stakes form a right-angled triangle with arms of length one metre and hypotenuse of length sqrt(2) metres. And that's not all. The Dean plots these first three stakes on a piece of graph paper at coordinates (0,0), (0,1), and (1,0). After plotting some of the other stakes, it turns out that all of the stakes happen to be precisely at lattice points (i.e. points with integer coordinates) on the graph paper. Still, plotting all of the many stakes is tedious, so he asks his co-op student (i.e. you) to help out.    The Dean has determined that mathies have outgrown the building that has served them so well for many years. Luckily for him, the PM has decided to stimulate the economy by funding a new math building. To maximize the stimulating effect, the construction process is outsourced to a software engineering consultant who employs agile methodologies. The building will be built first, and designed later. The Dean has some concerns about this innovative process. After all, it would be very embarrassing if the walls of the new math building failed to line up at right angles!
+
+The Dean sneaks out one night with a tape measure to survey the last remaining grassy area on campus, where the new building will go. He drives stakes into the ground, then measures the distances between them. Afterwards, he retreats into his office to construct a map from his measurements. He notices that the first three stakes form a right-angled triangle with arms of length one metre and hypotenuse of length sqrt(2) metres. And that's not all. The Dean plots these first three stakes on a piece of graph paper at coordinates (0,0), (0,1), and (1,0). After plotting some of the other stakes, it turns out that all of the stakes happen to be precisely at lattice points (i.e. points with integer coordinates) on the graph paper. Still, plotting all of the many stakes is tedious, so he asks his co-op student (i.e. you) to help out.        Input specification    Input consists of a number of test cases.
+
+The first line of each test case contains two integers n and m , each at least 1 and no larger than 1000. The integer n is the number of lines that follow, and m is the number of stakes. The stakes are numbered from 1 to m . All of the stakes are at distinct locations.
+
+The x and y coordinates of each stake are no less than -10^6 and no greater than 10^6. Each of the following lines contains exactly six integers a, b, c, x, y, z . The integers a , b , and c are the numbers of three stakes. The three stakes are always listed in counter-clockwise order. That is, to move from stake a to stake b and then to stake c , one must turn left at stake b . The number x is the square of the distance from stake a to stake b . The number y is the square of the distance from stake b to stake c . The number z is the square of the distance from stake c to stake a . Every stake will appear in at least one line of the input.
+
+For every pair of stakes a , b , there is a subset of the triangles in the input that forms a sequence T1, T2, ..., Tn such that two of the vertices of Ti are also vertices of Ti+1 for all 0 < i < n , a is a vertex of T1 , and b is a vertex of Tn . The last line of input is 0 0. These zeros are not values of n and m, and should not be processed as such.    Input consists of a number of test cases.
+
+The first line of each test case contains two integers n and m , each at least 1 and no larger than 1000. The integer n is the number of lines that follow, and m is the number of stakes. The stakes are numbered from 1 to m . All of the stakes are at distinct locations.
+
+The x and y coordinates of each stake are no less than -10^6 and no greater than 10^6. Each of the following lines contains exactly six integers a, b, c, x, y, z . The integers a , b , and c are the numbers of three stakes. The three stakes are always listed in counter-clockwise order. That is, to move from stake a to stake b and then to stake c , one must turn left at stake b . The number x is the square of the distance from stake a to stake b . The number y is the square of the distance from stake b to stake c . The number z is the square of the distance from stake c to stake a . Every stake will appear in at least one line of the input.
+
+For every pair of stakes a , b , there is a subset of the triangles in the input that forms a sequence T1, T2, ..., Tn such that two of the vertices of Ti are also vertices of Ti+1 for all 0 < i < n , a is a vertex of T1 , and b is a vertex of Tn . The last line of input is 0 0. These zeros are not values of n and m, and should not be processed as such.    Input consists of a number of test cases.
+
+The first line of each test case contains two integers n and m , each at least 1 and no larger than 1000. The integer n is the number of lines that follow, and m is the number of stakes. The stakes are numbered from 1 to m . All of the stakes are at distinct locations.
+
+The x and y coordinates of each stake are no less than -10^6 and no greater than 10^6. Each of the following lines contains exactly six integers a, b, c, x, y, z . The integers a , b , and c are the numbers of three stakes. The three stakes are always listed in counter-clockwise order. That is, to move from stake a to stake b and then to stake c , one must turn left at stake b . The number x is the square of the distance from stake a to stake b . The number y is the square of the distance from stake b to stake c . The number z is the square of the distance from stake c to stake a . Every stake will appear in at least one line of the input.
+
+For every pair of stakes a , b , there is a subset of the triangles in the input that forms a sequence T1, T2, ..., Tn such that two of the vertices of Ti are also vertices of Ti+1 for all 0 < i < n , a is a vertex of T1 , and b is a vertex of Tn . The last line of input is 0 0. These zeros are not values of n and m, and should not be processed as such.        Output specification    Output consists of exactly m lines for each test case. The m lines describe the stakes 1 to m in sequence. Each line contains two integers, giving the x and y coordinates of the stake. The first three lines of output for each test case are always:
+
+0 0
+0 1
+1 0    Output consists of exactly m lines for each test case. The m lines describe the stakes 1 to m in sequence. Each line contains two integers, giving the x and y coordinates of the stake. The first three lines of output for each test case are always:
+
+0 0
+0 1
+1 0    Input consists of a number of test cases.
+
+The first line of each test case contains two integers n and m , each at least 1 and no larger than 1000. The integer n is the number of lines that follow, and m is the number of stakes. The stakes are numbered from 1 to m . All of the stakes are at distinct locations.
+
+The x and y coordinates of each stake are no less than -10^6 and no greater than 10^6. Each of the following lines contains exactly six integers a, b, c, x, y, z . The integers a , b , and c are the numbers of three stakes. The three stakes are always listed in counter-clockwise order. That is, to move from stake a to stake b and then to stake c , one must turn left at stake b . The number x is the square of the distance from stake a to stake b . The number y is the square of the distance from stake b to stake c . The number z is the square of the distance from stake c to stake a . Every stake will appear in at least one line of the input.
+
+For every pair of stakes a , b , there is a subset of the triangles in the input that forms a sequence T1, T2, ..., Tn such that two of the vertices of Ti are also vertices of Ti+1 for all 0 < i < n , a is a vertex of T1 , and b is a vertex of Tn . The last line of input is 0 0. These zeros are not values of n and m, and should not be processed as such.        Sample input  1 3 1 3 2 1 2 1 0 0      Sample output  0 0 0 1 1 0      Hint(s)              Recommendation  We have carefully selected several similar problems: 3376 | 2441 | 2534 | 2141 | 3232 | 3344    Close                       Universidad de las Ciencias Informáticas (UCI)  2010-2016 | COJ v1.0 beta | All rights reserved In case of any question or comment, please contact us .        

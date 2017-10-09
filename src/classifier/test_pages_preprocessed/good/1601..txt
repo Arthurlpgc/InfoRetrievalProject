@@ -1,0 +1,10 @@
+ENG  RUS Timus Online Judge Online Judge Problems Authors Online contests About Online Judge Frequently asked questions Site news Webboard Links Problem set Submit solution Judge status Guide Register Update your info Authors ranklist  Current contest Scheduled contests Past contests Rules 1601. AntiCAPS Time limit: 0.5 second Memory limit: 64 MB The blonde Angela has a new whim: internet chats. Of course, as any blonde, she
+writes her messages using the upper case. You are the moderator of Angela's
+favorite chat and you're fed up with her upper-case messages. The problem
+is that Angela does not respond to your warnings. You decided to write a simple
+antiCAPS corrector, which would make Angela's messages readable. The correction rules are very simple:  Sentences in a message consist of words, spaces and punctuation marks. Words consist of English letters. Sentences end with a full stop, exclamation mark, or question mark. The first word of each sentence must start with a capital letter, and all other
+letters of the sentence must be lowercase.  Input You are given Angela's message, which consists of uppercase English letters,
+spaces, line breaks and punctuation marks: full stops, commas, dashes, colons, exclamation
+and question marks. Total length of message is not exceeding 10000 symbols. Output Output the corrected message. Sample input output HI THERE!
+HOW DID YOU KNOW I AM A BLONDE? Hi there!
+How did you know i am a blonde? Problem Author: Denis Musin Problem Source: IX USU Open Personal Contest (March 1, 2008) Tags: none ( hide tags for unsolved problems ) Difficulty: 92  Printable version  Submit solution  Discussion (65) All submissions (16251)  All accepted submissions (4413)  Solutions rating (3655) © 2000–2017 Timus Online Judge Team . All rights reserved.

@@ -1,0 +1,41 @@
+                  AtCoder Beginner Contest 074 2017/09/16 12:00:00 +0000 ~ 2017/09/16 13:40:00 +0000     back to atcoder.jp AtCoderへ戻る      日本語    English    한국어     日本語   English   한국어         My Profile マイプロフィール  Settings 設定  Change password パスワードの変更   Sign out ログアウト        日本語    English    한국어     日本語   English   한국어     Sign up 新規登録   Sign in ログイン        AtCoder Beginner Contest 074  2017/09/16 12:00:00 +0000  2017/09/16 13:40:00 +0000  2017/10/08 20:53:37 +0000    Home トップページ 톱 페이지   Tasks 問題 문제   Submit 提出 제출   Clarifications 質問 질문     Results 結果 채점 결과    All submissions すべての結果 모든 결과  My submissions 自分の結果 자신의 결과     Standings 順位表 순위표   Custom Test コードテスト   Editorial 解説    ×     D - Restoring Road Network   Time limit 時間制限 : 2sec / Memory limit メモリ制限 : 256MB     配点: 500 点    問題文 かつて存在した高橋王国には N 個の都市があり、いくつかの都市の組は道路で双方向に結ばれていました。
+道路の構造は以下のようであったことがわかっています。   都市間の移動は道路を通ってのみ行われ、どの都市からどの都市へも必要なら他の都市を経由することで移動できるようになっていた。  道路の長さは道路によって異なっていたかもしれないが、全て正整数であった。   考古学者のすぬけ君は、高橋王国の遺跡で整数からなる N \times N の表 A を発見しました。
+すぬけ君は、この表は高橋王国における都市間の道路に沿った最短距離を表した表ではないかと考えました。  すべての u, v について、 A の u 行目 v 列目の整数 A_{u, v} が都市 u から都市 v への最短経路の長さとなるような
+道路の構造が存在するかどうか判定してください。
+さらに、存在する場合、そのような道路の構造のうち、存在する道路の長さの和が最小となるようなものについて、その和を求めてください。      制約  1≦N≦300  i ≠ j のとき、 1 ≦ A_{i, j} = A_{j, i} ≦ 10^9  A_{i, i} = 0         入力 入力は以下の形式で標準入力から与えられる。  N  A_{1, 1}  A_{1, 2}  ...  A_{1, N}  A_{2, 1}  A_{2, 2}  ...  A_{2, N}  ...  A_{N, 1}  A_{N, 2}  ...  A_{N, N}       出力 条件を満たす道路の構造が存在しない場合、 -1 と出力せよ。
+存在する場合、道路の長さの和の最小値を出力せよ。        入力例 1 3
+0 1 3
+1 0 2
+3 2 0      出力例 1 3  条件を満たす道路の構造は以下のとおりです。   都市 1 と都市 2 の間は長さ 1 の道路によって結ばれている。  都市 2 と都市 3 の間は長さ 2 の道路によって結ばれている。  都市 3 と都市 1 の間は道路で結ばれていない。        入力例 2 3
+0 1 3
+1 0 1
+3 1 0      出力例 2 -1  都市 1 から都市 2 へ、および都市 2 から都市 3 へそれぞれ距離 1 で移動できることから、
+都市 1 から都市 3 へは都市 2 を経由することで距離 2 で移動できることがわかります。
+一方、都市 1 と都市 3 の間の最短距離は 3 でなければなりません。  よって条件を満たす道路の構造は存在しないことがわかります。       入力例 3 5
+0 21 18 11 28
+21 0 13 10 26
+18 13 0 23 13
+11 10 23 0 17
+28 26 13 17 0      出力例 3 82       入力例 4 3
+0 1000000000 1000000000
+1000000000 0 1000000000
+1000000000 1000000000 0      出力例 4 3000000000     Score : 500 points    Problem Statement In Takahashi Kingdom, which once existed, there are N cities, and some pairs of cities are connected bidirectionally by roads.
+The following are known about the road network:   People traveled between cities only through roads. It was possible to reach any city from any other city, via intermediate cities if necessary.  Different roads may have had different lengths, but all the lengths were positive integers.   Snuke the archeologist found a table with N rows and N columns, A , in the ruin of Takahashi Kingdom.
+He thought that it represented the shortest distances between the cities along the roads in the kingdom.  Determine whether there exists a road network such that for each u and v , the integer A_{u, v} at the u -th row and v -th column of A is equal to the length of the shortest path from City u to City v .
+If such a network exist, find the shortest possible total length of the roads.      Constraints  1 \leq N \leq 300  If i ≠ j , 1 \leq A_{i, j} = A_{j, i} \leq 10^9 .  A_{i, i} = 0         Inputs Input is given from Standard Input in the following format:  N  A_{1, 1}  A_{1, 2}  ...  A_{1, N}  A_{2, 1}  A_{2, 2}  ...  A_{2, N}  ...  A_{N, 1}  A_{N, 2}  ...  A_{N, N}       Outputs If there exists no network that satisfies the condition, print -1 .
+If it exists, print the shortest possible total length of the roads.        Sample Input 1 3
+0 1 3
+1 0 2
+3 2 0      Sample Output 1 3  The network below satisfies the condition:   City 1 and City 2 is connected by a road of length 1 .  City 2 and City 3 is connected by a road of length 2 .  City 3 and City 1 is not connected by a road.        Sample Input 2 3
+0 1 3
+1 0 1
+3 1 0      Sample Output 2 -1  As there is a path of length 1 from City 1 to City 2 and City 2 to City 3 , there is a path of length 2 from City 1 to City 3 .
+However, according to the table, the shortest distance between City 1 and City 3 must be 3 .  Thus, we conclude that there exists no network that satisfies the condition.       Sample Input 3 5
+0 21 18 11 28
+21 0 13 10 26
+18 13 0 23 13
+11 10 23 0 17
+28 26 13 17 0      Sample Output 3 82       Sample Input 4 3
+0 1000000000 1000000000
+1000000000 0 1000000000
+1000000000 1000000000 0      Sample Output 4 3000000000       Submit 提出する      Terms of service 利用規約  Privacy プライバシーポリシー  Personal Information 個人情報保護方針  Tutorial チュートリアル  Rules ルール  Glossary 用語集  FAQ よくある質問   © 2017 AtCoder Inc. All rights reserved.          
