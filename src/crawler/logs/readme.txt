@@ -1,0 +1,1 @@
+Those are recorded logs from crawler executions. Stored for further statistical analysis.

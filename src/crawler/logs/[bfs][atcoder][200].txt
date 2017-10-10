@@ -1,0 +1,102 @@
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 1
+https://dmoj.ca/: 1
+http://atcoder.jp/: 34
+https://csacademy.com/: 1
+https://practice.contest.atcoder.jp/: 2
+http://practice.contest.atcoder.jp/: 1
+http://code-festival-2017-qualb.contest.atcoder.jp/: 1
+http://tenka1-2017-beginner.contest.atcoder.jp/: 1
+http://code-festival-2017-quala.contest.atcoder.jp/: 1
+http://arc083.contest.atcoder.jp/: 1
+http://abc073.contest.atcoder.jp/: 1
+http://arc082.contest.atcoder.jp/: 1
+http://agc019.contest.atcoder.jp/: 1
+
+Pages Crawled: 50
+Relevant Pages Found: 0
+Precision: 0.0
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 1
+https://dmoj.ca/: 1
+http://atcoder.jp/: 84
+https://csacademy.com/: 1
+https://practice.contest.atcoder.jp/: 2
+http://practice.contest.atcoder.jp/: 1
+http://code-festival-2017-qualb.contest.atcoder.jp/: 1
+http://tenka1-2017-beginner.contest.atcoder.jp/: 1
+http://code-festival-2017-quala.contest.atcoder.jp/: 1
+http://arc083.contest.atcoder.jp/: 1
+http://abc073.contest.atcoder.jp/: 1
+http://arc082.contest.atcoder.jp/: 1
+http://agc019.contest.atcoder.jp/: 1
+
+Pages Crawled: 100
+Relevant Pages Found: 0
+Precision: 0.0
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 1
+https://dmoj.ca/: 1
+http://atcoder.jp/: 134
+https://csacademy.com/: 1
+https://practice.contest.atcoder.jp/: 2
+http://practice.contest.atcoder.jp/: 1
+http://code-festival-2017-qualb.contest.atcoder.jp/: 1
+http://tenka1-2017-beginner.contest.atcoder.jp/: 1
+http://code-festival-2017-quala.contest.atcoder.jp/: 1
+http://arc083.contest.atcoder.jp/: 1
+http://abc073.contest.atcoder.jp/: 1
+http://arc082.contest.atcoder.jp/: 1
+http://agc019.contest.atcoder.jp/: 1
+
+Pages Crawled: 150
+Relevant Pages Found: 0
+Precision: 0.0
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 1
+https://dmoj.ca/: 1
+http://atcoder.jp/: 143
+https://csacademy.com/: 1
+https://practice.contest.atcoder.jp/: 8
+http://practice.contest.atcoder.jp/: 9
+http://code-festival-2017-qualb.contest.atcoder.jp/: 10
+http://tenka1-2017-beginner.contest.atcoder.jp/: 5
+http://code-festival-2017-quala.contest.atcoder.jp/: 1
+http://arc083.contest.atcoder.jp/: 1
+http://abc073.contest.atcoder.jp/: 1
+http://arc082.contest.atcoder.jp/: 1
+http://agc019.contest.atcoder.jp/: 1
+http://ddcc2017-qual.contest.atcoder.jp/: 1
+http://kupc2017.contest.atcoder.jp/: 1
+http://jag2017summer-day3.contest.atcoder.jp/: 1
+http://jag2017summer-day1.contest.atcoder.jp/: 1
+https://code-festival-2017-qualb.contest.atcoder.jp/: 5
+https://beta.atcoder.jp/: 1
+https://tenka1-2017-beginner.contest.atcoder.jp/: 4
+
+Pages Crawled: 200
+Relevant Pages Found: 0
+Precision: 0.0

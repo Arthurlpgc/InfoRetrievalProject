@@ -14,7 +14,7 @@ def create_corpus(folder, label):
     for item in label:
         folder_path = os.path.abspath(folder + item)
         for file in  os.listdir(folder_path):
-            with open(folder_path + "/" + file, 'r') as myfile:
+            with open(folder_path + "/" + file, 'r', encoding="utf8") as myfile:
                 corpus_metadata['file_name'].append(file)
                 corpus_metadata['label'].append(item)
                 corpus.append(myfile.read())

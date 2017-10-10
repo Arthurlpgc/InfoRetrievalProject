@@ -1,0 +1,59 @@
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 30
+https://dmoj.ca/: 1
+http://discuss.spoj.com/: 13
+http://blog.spoj.com/: 3
+
+Pages Crawled: 50
+Relevant Pages Found: 2
+Precision: 0.04
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 80
+https://dmoj.ca/: 1
+http://discuss.spoj.com/: 13
+http://blog.spoj.com/: 3
+
+Pages Crawled: 100
+Relevant Pages Found: 28
+Precision: 0.28
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 130
+https://dmoj.ca/: 1
+http://discuss.spoj.com/: 13
+http://blog.spoj.com/: 3
+
+Pages Crawled: 150
+Relevant Pages Found: 46
+Precision: 0.30666666666666664
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 180
+https://dmoj.ca/: 1
+http://discuss.spoj.com/: 13
+http://blog.spoj.com/: 3
+
+Pages Crawled: 200
+Relevant Pages Found: 56
+Precision: 0.28

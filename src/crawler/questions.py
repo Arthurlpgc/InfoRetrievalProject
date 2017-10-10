@@ -1,6 +1,13 @@
 import scrapy
 from urllib.parse import urlparse
 from scrapy import Request
+from scrapy.http import HtmlResponse
+import os,sys,inspect
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0,parentdir) 
+from classifier.predict import check_if_is_coding_question
+from extractor.extractor import GeneralExtractor
 
 class Token():
     def __init__(self, word, rank):
@@ -21,7 +28,9 @@ class LinkRanker():
                          Token('mobile',                self.minimize),
                          Token('status',                self.minimize),
                          Token('standings',             self.minimize),
-                         Token('submit',                self.minimize)]
+                         Token('submit',                self.minimize),
+                         Token('locale=',               self.minimize),
+                         Token('assets.',               self.minimize)]
 
         codechef =      [Token('/problems/',            self.maximize),
                          Token('/problems/school',      self.decrease),
@@ -29,7 +38,10 @@ class LinkRanker():
                          Token('/problems/medium',      self.decrease),
                          Token('/problems/hard',        self.decrease),
                          Token('/problems/challenge',   self.decrease),
-                         Token('/problems/extcontest',  self.decrease)]
+                         Token('/problems/extcontest',  self.decrease),
+                         Token('/tags/',                self.minimize),
+                         Token('discuss.',              self.minimize),
+                         Token('blog.',                 self.minimize)]
 
         uri =           [Token('categories',            self.increase),
                          Token('/problems/index/',      self.increase),
@@ -43,7 +55,12 @@ class LinkRanker():
                          Token('/problems/tutorial',    self.decrease),
                          Token('/problems/basics',      self.decrease),
                          Token('/problems/tag',         self.decrease),
-                         Token('discuss.spoj.com',      self.minimize)]
+                         Token('discuss.spoj.com',      self.minimize),
+                         Token('/tag/',                 self.minimize),
+                         Token('/ranks/',               self.minimize),
+                         Token('/users/',               self.minimize),
+                         Token('blog.spoj.com',         self.minimize),
+                         Token('/jobs',                 self.minimize)]
 
         dmoj =          [Token('/problem',              self.maximize),
                          Token('order=',                self.minimize),
@@ -97,7 +114,8 @@ class LinkRanker():
 
         timus =         []
 
-        caribbeanoj =   [Token('/24h/problems',     self.increase)]
+        caribbeanoj =   [Token('/24h/problems',     self.increase),
+                         Token('pid=',              self.maximize)]
 
         self.tokens = []
         self.tokens.extend(codeforces)
@@ -130,6 +148,19 @@ class LinkRanker():
                 rank = rank + token.rank
         return rank
 
+    def getSpecific(self, anchor, url):
+        if(self.getDomain(url) not in self.specific):
+            return self.minimize
+        rank = 0
+        for token in self.specific[self.getDomain(url)]:
+            if(token.word in url):
+                rank = rank + token.rank
+        return rank
+        
+
+    def getUniform(self, anchor, url):
+        return 0
+
     def getDomain(self, url):
         parsed_uri = urlparse(url)
         return '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
@@ -139,14 +170,11 @@ class QuestionSpider(scrapy.Spider):
 
     custom_settings = {
         'USER_AGENT': 'coding-questions-bot (https://github.com/Arthurlpgc/InfoRetrievalProject)',
-        'DOWNLOAD_TIMEOUT': '20',
+        'DOWNLOAD_TIMEOUT': '5',
         'DOWNLOAD_MAXSIZE': '1000000',
         'CONCURRENT_REQUESTS': '1',
-        'REDIRECT_ENABLED': 'False',
         'ROBOTSTXT_OBEY': 'True',
-        'DOWNLOAD_DELAY': '0.1',
-        'REDIRECT_MAX_TIMES': '5',
-        'CLOSESPIDER_PAGECOUNT': '3000',
+        'DOWNLOAD_DELAY': '1',
         'DEPTH_PRIORITY': '1',
         'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue',
         'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue',
@@ -155,7 +183,7 @@ class QuestionSpider(scrapy.Spider):
     start_urls = [
         'http://codeforces.com/',
         'https://www.codechef.com/',
-        'https://www.urionlinejudge.com.br',
+        'https://www.urionlinejudge.com.br/judge/en/login',
         'http://www.spoj.com/',
         'https://dmoj.ca/',
         'https://a2oj.com/',
@@ -167,7 +195,7 @@ class QuestionSpider(scrapy.Spider):
 
     allowed_domains = [
         'codeforces.com',
-       'codechef.com',
+        'codechef.com',
         'urionlinejudge.com.br',
         'spoj.com',
         'dmoj.ca',
@@ -179,24 +207,33 @@ class QuestionSpider(scrapy.Spider):
     ]
 
     linkRanker = LinkRanker()
-    maxPagesPerDomain = 3000
+    extractor = GeneralExtractor()
+    maxPagesPerDomain = 200
     domainsCrawled = {}
+    pagesCrawled = 0
+    relevantPagesCrawled = 0
     
     def parse(self, response):
+        if not isinstance(response, HtmlResponse):
+            raise scrapy.exceptions.IgnoreRequest()
+        domain = self.getDomain(response.url)
+        if(self.domainsCrawled.get(domain, 0) >= self.maxPagesPerDomain):
+            raise scrapy.exceptions.IgnoreRequest()
+        self.domainsCrawled[domain] = self.domainsCrawled.get(domain, 0) + 1
         self.savePage(response)
+        self.pagesCrawled = self.pagesCrawled + 1
+        if(self.pagesCrawled%50 == 0):
+            self.generateLog()
         for a in response.selector.xpath('//a'):
             anchor = a.xpath('/text()').extract()
             for link in a.xpath('@href').extract():
                 url = response.urljoin(link)
-                dom = self.getDomain(link)
-                if(self.domainsCrawled.get(dom, 0) < self.maxPagesPerDomain):
-                    self.domainsCrawled[dom] = self.domainsCrawled.get(dom, 0) + 1
+                if(self.domainsCrawled.get(url, 0) < self.maxPagesPerDomain):
                     yield Request(url=url, 
-                                callback=self.parse, 
-                                priority=self.linkRanker.get(anchor, url),
-                                dont_filter=False)
-                else:
-                    raise scrapy.exceptions.IgnoreRequest()
+                                  callback=self.parse, 
+                                  priority=self.linkRanker.get(anchor, url),
+                                  dont_filter=False)
+
 
     def getDomain(self, url):
         parsed_uri = urlparse(url)
@@ -209,7 +246,33 @@ class QuestionSpider(scrapy.Spider):
         return url
 
     def savePage(self, response):
-        filename = 'documents/%s.html' % self.parseUrlName(response.url)
+        filename = 'retrieved/documents/%s.html' % self.parseUrlName(response.url)
         with open(filename, 'wb') as f:
             f.write(response.body)
+        self.extractQuestion(filename, self.parseUrlName(response.url))
+    
+    def extractQuestion(self, filename, objectname):
+        with open(filename, 'rb') as f:
+            relevant = check_if_is_coding_question(f)
+            if(relevant == 'good'):
+                self.relevantPagesCrawled = self.relevantPagesCrawled + 1
+                self.extractor.extract(filename, 'retrieved/objects/%s.json' % objectname)
+
+    def generateLog(self):
+        print('\n -- CRAWLER LOG --\n')
+        print('Pages In Queue per Domain:')
+        for key in self.domainsCrawled:
+            print(key, ': ', self.domainsCrawled[key])
+        print('\nPages Crawled: ', self.pagesCrawled)
+        print('Relevant Pages Found: ', self.relevantPagesCrawled)
+        print('Precision: ', self.relevantPagesCrawled/self.pagesCrawled,'\n')
+        with open('crawler/log.txt', 'a') as f:
+            f.write('\n -- CRAWLER LOG --\n')
+            f.write('Pages In Queue per Domain:\n')
+            for key in self.domainsCrawled:
+                f.write(key+': '+str(self.domainsCrawled[key])+'\n')
+            f.write('\nPages Crawled: '+str(self.pagesCrawled)+'\n')
+            f.write('Relevant Pages Found: '+str(self.relevantPagesCrawled)+'\n')
+            f.write('Precision: '+str(self.relevantPagesCrawled/self.pagesCrawled)+'\n\n')
+
 

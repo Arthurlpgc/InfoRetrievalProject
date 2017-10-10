@@ -1,0 +1,139 @@
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 1
+https://dmoj.ca/: 1
+https://a2oj.com/: 1
+http://atcoder.jp/: 11
+https://csacademy.com/: 1
+http://practice.contest.atcoder.jp/: 2
+http://code-festival-2017-qualb.contest.atcoder.jp/: 8
+http://tenka1-2017-beginner.contest.atcoder.jp/: 6
+http://code-festival-2017-quala.contest.atcoder.jp/: 8
+http://arc083.contest.atcoder.jp/: 6
+http://abc073.contest.atcoder.jp/: 2
+
+Pages Crawled: 50
+Relevant Pages Found: 20
+Precision: 0.4
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 1
+https://dmoj.ca/: 1
+https://a2oj.com/: 1
+http://atcoder.jp/: 11
+https://csacademy.com/: 1
+http://practice.contest.atcoder.jp/: 2
+http://code-festival-2017-qualb.contest.atcoder.jp/: 8
+http://tenka1-2017-beginner.contest.atcoder.jp/: 6
+http://code-festival-2017-quala.contest.atcoder.jp/: 8
+http://arc083.contest.atcoder.jp/: 6
+http://abc073.contest.atcoder.jp/: 6
+http://arc082.contest.atcoder.jp/: 6
+http://agc019.contest.atcoder.jp/: 8
+https://practice.contest.atcoder.jp/: 1
+https://beta.atcoder.jp/: 3
+http://tenka1-2017.contest.atcoder.jp/: 6
+http://abc074.contest.atcoder.jp/: 6
+http://abc072.contest.atcoder.jp/: 6
+http://arc081.contest.atcoder.jp/: 6
+http://abc070.contest.atcoder.jp/: 3
+http://arc080.contest.atcoder.jp/: 1
+
+Pages Crawled: 100
+Relevant Pages Found: 51
+Precision: 0.51
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 1
+https://dmoj.ca/: 1
+https://a2oj.com/: 1
+http://atcoder.jp/: 11
+https://csacademy.com/: 1
+http://practice.contest.atcoder.jp/: 2
+http://code-festival-2017-qualb.contest.atcoder.jp/: 8
+http://tenka1-2017-beginner.contest.atcoder.jp/: 6
+http://code-festival-2017-quala.contest.atcoder.jp/: 8
+http://arc083.contest.atcoder.jp/: 6
+http://abc073.contest.atcoder.jp/: 6
+http://arc082.contest.atcoder.jp/: 6
+http://agc019.contest.atcoder.jp/: 8
+https://practice.contest.atcoder.jp/: 1
+https://beta.atcoder.jp/: 3
+http://tenka1-2017.contest.atcoder.jp/: 6
+http://abc074.contest.atcoder.jp/: 6
+http://abc072.contest.atcoder.jp/: 6
+http://arc081.contest.atcoder.jp/: 6
+http://abc070.contest.atcoder.jp/: 6
+http://arc080.contest.atcoder.jp/: 6
+http://arc079.contest.atcoder.jp/: 6
+http://agc018.contest.atcoder.jp/: 8
+http://arc078.contest.atcoder.jp/: 6
+http://agc017.contest.atcoder.jp/: 8
+http://arc077.contest.atcoder.jp/: 6
+http://arc076.contest.atcoder.jp/: 6
+http://agc016.contest.atcoder.jp/: 2
+
+Pages Crawled: 150
+Relevant Pages Found: 85
+Precision: 0.5666666666666667
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 1
+https://dmoj.ca/: 1
+https://a2oj.com/: 1
+http://atcoder.jp/: 11
+https://csacademy.com/: 1
+http://practice.contest.atcoder.jp/: 2
+http://code-festival-2017-qualb.contest.atcoder.jp/: 8
+http://tenka1-2017-beginner.contest.atcoder.jp/: 6
+http://code-festival-2017-quala.contest.atcoder.jp/: 8
+http://arc083.contest.atcoder.jp/: 6
+http://abc073.contest.atcoder.jp/: 6
+http://arc082.contest.atcoder.jp/: 6
+http://agc019.contest.atcoder.jp/: 8
+https://practice.contest.atcoder.jp/: 1
+https://beta.atcoder.jp/: 3
+http://tenka1-2017.contest.atcoder.jp/: 6
+http://abc074.contest.atcoder.jp/: 6
+http://abc072.contest.atcoder.jp/: 6
+http://arc081.contest.atcoder.jp/: 6
+http://abc070.contest.atcoder.jp/: 6
+http://arc080.contest.atcoder.jp/: 6
+http://arc079.contest.atcoder.jp/: 6
+http://agc018.contest.atcoder.jp/: 8
+http://arc078.contest.atcoder.jp/: 6
+http://agc017.contest.atcoder.jp/: 8
+http://arc077.contest.atcoder.jp/: 6
+http://arc076.contest.atcoder.jp/: 6
+http://agc016.contest.atcoder.jp/: 8
+http://abc064.contest.atcoder.jp/: 6
+http://arc075.contest.atcoder.jp/: 6
+http://agc015.contest.atcoder.jp/: 8
+http://arc074.contest.atcoder.jp/: 6
+http://abc061.contest.atcoder.jp/: 6
+http://agc014.contest.atcoder.jp/: 8
+http://arc073.contest.atcoder.jp/: 4
+
+Pages Crawled: 200
+Relevant Pages Found: 121
+Precision: 0.605
+
