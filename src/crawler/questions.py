@@ -193,16 +193,16 @@ class QuestionSpider(scrapy.Spider):
     ]
 
     allowed_domains = [
-        #'codeforces.com',
-        #'codechef.com',
-        #'urionlinejudge.com.br',
+        'codeforces.com',
+        'codechef.com',
+        'urionlinejudge.com.br',
         'spoj.com',
-        #'dmoj.ca',
-        #'a2oj.com',
-        #'atcoder.jp',
-        #'csacademy.com',
-        #'acm.timus.ru',
-        #'coj.uci.cu'
+        'dmoj.ca',
+        'a2oj.com',
+        'atcoder.jp',
+        'csacademy.com',
+        'acm.timus.ru',
+        'coj.uci.cu'
     ]
 
     linkRanker = LinkRanker()
