@@ -113,7 +113,7 @@ class GeneralExtractor:
 		return prestatement
 
 	def extract(self, path, wpath=None):
-		fl = open(path,"r")
+		fl = open(path,"r", encoding="utf8")
 		html = BeautifulSoup(fl, 'html.parser')
 		problem = {}
 		problem['title'] = self.get_clear_title(html)
@@ -121,7 +121,6 @@ class GeneralExtractor:
 		problem['memory-limit'] = self.get_memory_limit(html)
 		problem['props'] = self.get_props(html)
 		problem['statement'] = self.get_statement(html)
-		print(path, problem)
 		if(wpath!=None):
 			fp = open(wpath, 'w')
 			json.dump(problem, fp)

@@ -7,6 +7,7 @@ currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentfram
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0,parentdir) 
 from classifier.predict import check_if_is_coding_question
+from extractor.extractor import GeneralExtractor
 
 class Token():
     def __init__(self, word, rank):
@@ -206,6 +207,7 @@ class QuestionSpider(scrapy.Spider):
     ]
 
     linkRanker = LinkRanker()
+    extractor = GeneralExtractor()
     maxPagesPerDomain = 200
     domainsCrawled = {}
     pagesCrawled = 0
@@ -247,13 +249,14 @@ class QuestionSpider(scrapy.Spider):
         filename = 'retrieved/documents/%s.html' % self.parseUrlName(response.url)
         with open(filename, 'wb') as f:
             f.write(response.body)
-        self.extractQuestion(filename)
+        self.extractQuestion(filename, self.parseUrlName(response.url))
     
-    def extractQuestion(self, filename):
+    def extractQuestion(self, filename, objectname):
         with open(filename, 'rb') as f:
             relevant = check_if_is_coding_question(f)
             if(relevant == 'good'):
                 self.relevantPagesCrawled = self.relevantPagesCrawled + 1
+                self.extractor.extract(filename, 'retrieved/objects/%s.json' % objectname)
 
     def generateLog(self):
         print('\n -- CRAWLER LOG --\n')
