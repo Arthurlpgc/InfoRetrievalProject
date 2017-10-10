@@ -102,6 +102,15 @@ class GeneralExtractor:
 				ret[grp[0].split(':')[0]]=grp[0].split(':')[1]
 		return ret
 
+	def get_statement(self,html):
+		text=' '.join(html.find_all(recursive=True,text=True))
+		ps = html.find_all('p')
+		if(html.find(class_='problem-statement')!=None):
+			psar=html.find(class_='problem-statement')
+			return ' '.join([' '.join(psar.find_all(text=True,recursive=True)) for x in ps])
+		prestatement = ' '.join([' '.join(x.find_all(text=True,recursive=True)) for x in ps])
+		return prestatement
+
 	def extract(self, path, wpath=None):
 		fl = open(path,"r")
 		html = BeautifulSoup(fl, 'html.parser')
@@ -110,30 +119,24 @@ class GeneralExtractor:
 		problem['time-limit'] = self.get_time_limit(html)
 		problem['memory-limit'] = self.get_memory_limit(html)
 		problem['props'] = self.get_props(html)
+		problem['statement'] = self.get_statement(html)
 		print(path, problem)
 		if(wpath!=None):
 			fp = open(wpath, 'w')
 			json.dump(problem, fp)
 
 extr=GeneralExtractor()
-
+'''
 extr.extract("forces.html","jsons/forces.json")
 extr.extract("chef.html","jsons/chef.json")
 extr.extract("atcoder.html","jsons/atcoder.json")
 extr.extract("spoj.html","jsons/spoj.json")
 extr.extract("dmoj.html","jsons/dmoj.json")
+'''
 extr.extract("a2oj.html","jsons/a2oj.json")
+'''
 extr.extract("csa.html","jsons/csa.json")
 extr.extract("timus.html","jsons/timus.json")
 extr.extract("coj.html","jsons/coj.json")
 extr.extract("uri.html","jsons/uri.json")
-'''
-	def get_statement(self,html):
-		ps = html.find_all('p')
-		if(html.find(class_='problem-statement')!=None):
-			psar=html.find(class_='problem-statement')
-			return ' '.join([' '.join(psar.find_all(text=True,recursive=True)) for x in ps])
-		return "aa"
-		prestatement = ' '.join([' '.join(x.find_all(text=True,recursive=True)) for x in ps])
-		return prestatement
 '''
