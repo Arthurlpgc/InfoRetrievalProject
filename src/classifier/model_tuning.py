@@ -7,6 +7,7 @@ from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.neural_network import MLPClassifier
+from sklearn.neighbors import KNeighborsClassifier
 
 def binarize(string):
     if(string == "bad"):
@@ -14,14 +15,27 @@ def binarize(string):
     else:
         return 1
 
+def grid_search_knn():
+    knn_parameters = {
+        "n_neighbors": [1, 2, 3, 4],
+        "weights": ["uniform", "distance"],
+    }
+
+    pipeline = TextPipeline(KNeighborsClassifier(), knn_parameters, n_jobs=-1, verbose = 1)
+    corpus_folder = "train_pages_preprocessed/"
+    corpus, metadata = create_corpus(corpus_folder, ["bad", "good"])
+    vfunc = np.vectorize(binarize)
+    pipeline.fit(corpus, vfunc(metadata['label']))
+    pipeline.save_results("results/knn_results.csv")
+
 def grid_search_mlp():
     mlp_parameters = {
         "activation": ["relu", "tanh", "logistic"],
-        "learning_rate_init":[0.0001, 0.001, 0.01],
-        "hidden_layer_sizes":[(30,), (60,), (100,)]
+        "learning_rate_init":[0.001, 0.01, 0.1, 1],
+        "hidden_layer_sizes":[(1000,), (5000,), (10000,),(30000,)]
     }
 
-    pipeline = TextPipeline(MLPClassifier(), mlp_parameters, n_jobs=6, verbose = 1)
+    pipeline = TextPipeline(MLPClassifier(), mlp_parameters, n_jobs=4, verbose = 1)
     corpus_folder = "train_pages_preprocessed/"
     corpus, metadata = create_corpus(corpus_folder, ["bad", "good"])
     vfunc = np.vectorize(binarize)
@@ -85,9 +99,10 @@ def grid_search_svm():
     pipeline.save_results("results/svm_results2.csv")
 #
 if __name__ == "__main__":
-    grid_search_svm()
-    grid_search_random_forest()
-    grid_search_logistic_regression()
-    grid_search_multinomial_nb()
+    # grid_search_svm()
+    # grid_search_random_forest()
+    # grid_search_logistic_regression()
+    # grid_search_multinomial_nb()
     # Descomente se quiser brincar de interstellar
     # grid_search_mlp()
+    grid_search_knn()
