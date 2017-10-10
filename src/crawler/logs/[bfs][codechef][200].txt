@@ -1,0 +1,52 @@
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 41
+https://www.urionlinejudge.com.br/: 1
+https://discuss.codechef.com/: 4
+https://blog.codechef.com/: 3
+
+Pages Crawled: 50
+Relevant Pages Found: 2
+Precision: 0.04
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 91
+https://www.urionlinejudge.com.br/: 1
+https://discuss.codechef.com/: 4
+https://blog.codechef.com/: 3
+
+Pages Crawled: 100
+Relevant Pages Found: 17
+Precision: 0.17
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 141
+https://www.urionlinejudge.com.br/: 1
+https://discuss.codechef.com/: 4
+https://blog.codechef.com/: 3
+
+Pages Crawled: 150
+Relevant Pages Found: 33
+Precision: 0.22
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 191
+https://www.urionlinejudge.com.br/: 1
+https://discuss.codechef.com/: 4
+https://blog.codechef.com/: 3
+
+Pages Crawled: 200
+Relevant Pages Found: 50
+Precision: 0.25
+

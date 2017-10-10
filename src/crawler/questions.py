@@ -46,7 +46,7 @@ class LinkRanker():
                          Token('/problems/index/',      self.increase),
                          Token('page=',                 self.increase),
                          Token('/problems/view/',       self.maximize),
-                         Token('?sort=',                 self.minimize)]
+                         Token('sort=',                 self.minimize)]
 
         spoj =          [Token('start=',                self.decrease),
                          Token('/problems/partial',     self.decrease),
@@ -113,7 +113,8 @@ class LinkRanker():
 
         timus =         []
 
-        caribbeanoj =   [Token('/24h/problems',     self.increase)]
+        caribbeanoj =   [Token('/24h/problems',     self.increase),
+                         Token('pid=',              self.maximize)]
 
         self.tokens = []
         self.tokens.extend(codeforces)
@@ -146,6 +147,9 @@ class LinkRanker():
                 rank = rank + token.rank
         return rank
 
+    def getUniform(self, anchor, url):
+        return 0
+
     def getDomain(self, url):
         parsed_uri = urlparse(url)
         return '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
@@ -158,7 +162,6 @@ class QuestionSpider(scrapy.Spider):
         'DOWNLOAD_TIMEOUT': '5',
         'DOWNLOAD_MAXSIZE': '1000000',
         'CONCURRENT_REQUESTS': '1',
-        'REDIRECT_ENABLED': 'False',
         'ROBOTSTXT_OBEY': 'True',
         'DOWNLOAD_DELAY': '0.05',
         'DEPTH_PRIORITY': '1',
@@ -180,20 +183,20 @@ class QuestionSpider(scrapy.Spider):
     ]
 
     allowed_domains = [
-        #'codeforces.com',
-        #'codechef.com',
-        #'urionlinejudge.com.br',
+        'codeforces.com',
+        'codechef.com',
+        'urionlinejudge.com.br',
         'spoj.com',
-        #'dmoj.ca',
-        #'a2oj.com',
-        #'atcoder.jp',
-        #'csacademy.com',
-        #'acm.timus.ru',
-        #'coj.uci.cu'
+        'dmoj.ca',
+        'a2oj.com',
+        'atcoder.jp',
+        'csacademy.com',
+        'acm.timus.ru',
+        'coj.uci.cu'
     ]
 
     linkRanker = LinkRanker()
-    maxPagesPerDomain = 200
+    maxPagesPerDomain = 400
     domainsCrawled = {}
     pagesCrawled = 0
     relevantPagesCrawled = 0
