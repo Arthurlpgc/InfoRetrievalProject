@@ -1,0 +1,80 @@
+           C  O  J   Thinking better!    Caribbean Online Judge                   Podios del Caribe en los Concursos Regionales / Equipos caribeños en las Finales Mundiales    LATAM Champions at ACM-ICPC Regional Contests / LATAM Champions at ACM-ICPC World Finals    The 2017 ACM-ICPC Caribbean Finals     October 8, 2017
+            -
+            16:59:43      Home      Downloads      Tools      Forum      FAQ      Links      About      Contact us               Login                    Register       Forgot password?   Terms of service              24 hour archive      Problems  Judgments  Standings   Users   Institutions   Countries      Compare users   Statistics             Real contests      Coming   Running   Previous (587)   Standings  Statistics                 24 hour archive: Problem       Submissions  Best solutions  PDF  Discussion       1034
+				- Meltdown  1034 - Meltdown  1034 - Meltdown         Statistics  Sub: 85 | AC: 51 | AC%: 60,00  | Score: 2,30    Created by  2009 Waterloo Local Contest - Malcolm Sharpe    Added by  ejaltuna (2011-09-13)    Limits    Total Time: 2000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 6000 MS 
+                                                            
+                                                         | Memory: 3 GB  | Output: 64 MB | Size: 30 KB   Total Time: 4000 MS 
+                                                            
+                                                         | Memory: 1 GB  | Output: 64 MB | Size: 30 KB   Total Time: 2000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 12000 MS 
+                                                            
+                                                         | Memory: 125 MB  | Output: 64 MB | Size: 30 KB   Total Time: 6000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 2000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 2000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 12000 MS 
+                                                            
+                                                         | Memory: 312 MB  | Output: 64 MB | Size: 30 KB   Total Time: 6000 MS 
+                                                            
+                                                         | Memory: 125 MB  | Output: 64 MB | Size: 30 KB   Total Time: 6000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 6000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 6000 MS 
+                                                            
+                                                         | Memory: 1 GB  | Output: 64 MB | Size: 30 KB   Total Time: 12000 MS 
+                                                            
+                                                         | Memory: 937 MB  | Output: 64 MB | Size: 30 KB   Total Time: 6000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB   Total Time: 2000 MS 
+                                                            
+                                                         | Memory: 62 MB  | Output: 64 MB | Size: 30 KB     Enabled languages    C  C#  C++  C++11  Java  JavaScript-NodeJS  Pascal  Perl  PHP  Prolog  Python  Ruby  Text      Available in            Description    A polygon is lowered at a constant speed of v metres per minute from the air into a liquid that dissolves it at a constant speed of c metres per minute from all sides. Given a point (x,y) inside the polygon that moves with the polygon, determine when the liquid reaches the point.
+
+The border between air and liquid always has y-coordinate 0, and the liquid only eats away from the sides of the polygon in 2 dimensions. The polygon does not rotate as it is lowered into the liquid, and at time 0, it is not touching the liquid.
+
+Unlike the polygon, which is flat (2-dimensional), the liquid exists in three dimensions. Therefore, the liquid seeps into cavities in the polygon. For example, if the polygon is "cup-shaped", the liquid can get "inside" the cup, as in the diagram below.    A polygon is lowered at a constant speed of v metres per minute from the air into a liquid that dissolves it at a constant speed of c metres per minute from all sides. Given a point (x,y) inside the polygon that moves with the polygon, determine when the liquid reaches the point.
+
+The border between air and liquid always has y-coordinate 0, and the liquid only eats away from the sides of the polygon in 2 dimensions. The polygon does not rotate as it is lowered into the liquid, and at time 0, it is not touching the liquid.
+
+Unlike the polygon, which is flat (2-dimensional), the liquid exists in three dimensions. Therefore, the liquid seeps into cavities in the polygon. For example, if the polygon is "cup-shaped", the liquid can get "inside" the cup, as in the diagram below.    A polygon is lowered at a constant speed of v metres per minute from the air into a liquid that dissolves it at a constant speed of c metres per minute from all sides. Given a point (x,y) inside the polygon that moves with the polygon, determine when the liquid reaches the point.
+
+The border between air and liquid always has y-coordinate 0, and the liquid only eats away from the sides of the polygon in 2 dimensions. The polygon does not rotate as it is lowered into the liquid, and at time 0, it is not touching the liquid.
+
+Unlike the polygon, which is flat (2-dimensional), the liquid exists in three dimensions. Therefore, the liquid seeps into cavities in the polygon. For example, if the polygon is "cup-shaped", the liquid can get "inside" the cup, as in the diagram below.        Input specification    The input consists of several test cases.
+
+The first line of each test case contains the five integers N , x,  y , v , and c , where 3 <= N <= 30 , -100 <= x <= 100 , 1 <= y <= 100 , and 1 <= c < v <= 10 .
+
+The following N lines of the test case each contain one vertex of the polygon. The i -th line contains the two integers x , y , where -100 <= x <= 100 , 1 <= y <= 100 .
+
+The vertices of the polygon are given in counter-clockwise order. The border of the polygon does not intersect or touch itself, and the point ( x , y ) lies strictly inside the polygon (it does not lie on the border of the polygon).
+
+Input is terminated by a line containing 0 0 0 0 0. These zeros are not a test case and should not be processed.    The input consists of several test cases.
+
+The first line of each test case contains the five integers N , x,  y , v , and c , where 3 <= N <= 30 , -100 <= x <= 100 , 1 <= y <= 100 , and 1 <= c < v <= 10 .
+
+The following N lines of the test case each contain one vertex of the polygon. The i -th line contains the two integers x , y , where -100 <= x <= 100 , 1 <= y <= 100 .
+
+The vertices of the polygon are given in counter-clockwise order. The border of the polygon does not intersect or touch itself, and the point ( x , y ) lies strictly inside the polygon (it does not lie on the border of the polygon).
+
+Input is terminated by a line containing 0 0 0 0 0. These zeros are not a test case and should not be processed.    The input consists of several test cases.
+
+The first line of each test case contains the five integers N , x,  y , v , and c , where 3 <= N <= 30 , -100 <= x <= 100 , 1 <= y <= 100 , and 1 <= c < v <= 10 .
+
+The following N lines of the test case each contain one vertex of the polygon. The i -th line contains the two integers x , y , where -100 <= x <= 100 , 1 <= y <= 100 .
+
+The vertices of the polygon are given in counter-clockwise order. The border of the polygon does not intersect or touch itself, and the point ( x , y ) lies strictly inside the polygon (it does not lie on the border of the polygon).
+
+Input is terminated by a line containing 0 0 0 0 0. These zeros are not a test case and should not be processed.        Output specification    For each test case, output the first time in minutes that the liquid reaches the specified point, rounded to four decimal places.    For each test case, output the first time in minutes that the liquid reaches the specified point, rounded to four decimal places.    The input consists of several test cases.
+
+The first line of each test case contains the five integers N , x,  y , v , and c , where 3 <= N <= 30 , -100 <= x <= 100 , 1 <= y <= 100 , and 1 <= c < v <= 10 .
+
+The following N lines of the test case each contain one vertex of the polygon. The i -th line contains the two integers x , y , where -100 <= x <= 100 , 1 <= y <= 100 .
+
+The vertices of the polygon are given in counter-clockwise order. The border of the polygon does not intersect or touch itself, and the point ( x , y ) lies strictly inside the polygon (it does not lie on the border of the polygon).
+
+Input is terminated by a line containing 0 0 0 0 0. These zeros are not a test case and should not be processed.        Sample input  4 0 50 2 1 -1 10 1 10 1 90 -1 90 0 0 0 0 0      Sample output  25.8660      Hint(s)              Recommendation  We have carefully selected several similar problems: 2156 | 3479 | 1811 | 2141 | 1650 | 2243    Close                       Universidad de las Ciencias Informáticas (UCI)  2010-2016 | COJ v1.0 beta | All rights reserved In case of any question or comment, please contact us .        

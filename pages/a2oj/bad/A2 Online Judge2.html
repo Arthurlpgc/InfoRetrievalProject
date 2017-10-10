@@ -1,0 +1,2709 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<script type="text/javascript">
+function makeHttpObject() {
+	try {return new XMLHttpRequest();}
+	catch (error) {}
+	try {return new ActiveXObject("Msxml2.XMLHTTP");}
+	catch (error) {}
+	try {return new ActiveXObject("Microsoft.XMLHTTP");}
+	catch (error) {}
+	return null;
+}
+
+function judge_changed() {
+	var judges = document.getElementById("Judge").options;
+	var judge = "";
+	for (var i = 0; i < judges.length; i++)
+		if (judges[i].selected) {
+			judge = judges[i].value;
+			break;
+		}
+	var request = makeHttpObject();
+	if(request == null)
+		return;
+	request.open("GET", "judge?Judge=" + judge, false);
+	request.send(null);
+}
+
+function problem_changed() {
+	var sd = document.getElementById("selectedDiv");
+	sd.innerHTML = "";
+	var problem = document.getElementById("Problem").value;
+	var index = problem.lastIndexOf("[");
+	if (index == -1)
+		return;
+	var ID = problem.substr(index + 1);
+	index = ID.indexOf(" ");
+	if (index == -1)
+		return;
+	ID = ID.substr(0, index);
+	var url = "";
+	if (problem.indexOf(" (A2 Online Judge) [") != -1)
+		url = "https://a2oj.com/p?ID=" + ID + "";
+	else if (problem.indexOf(" (UVA) [") != -1)
+		url = "https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=" + ID + "";
+	else if (problem.indexOf(" (SPOJ) [") != -1)
+		url = "http://www.spoj.com/problems/" + ID + "/";
+	else if (problem.indexOf(" (Live Archive) [") != -1)
+		url = "https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&page=show_problem&problem=" + ID + "";
+	else if (problem.indexOf(" (Codeforces) [") != -1)
+		url = "http://codeforces.com/problemset/problem/" + ID + "";
+	else if (problem.indexOf(" (TJU) [") != -1)
+		url = "http://acm.tju.edu.cn/toj/showp" + ID + ".html";
+	else if (problem.indexOf(" (SGU) [") != -1)
+		url = "http://acm.sgu.ru/problem.php?contest=0&problem=" + ID + "";
+	else if (problem.indexOf(" (PKU) [") != -1)
+		url = "http://poj.org/problem?id=" + ID + "";
+	else if (problem.indexOf(" (Timus) [") != -1)
+		url = "http://acm.timus.ru/problem.aspx?space=1&num=" + ID + "";
+	else if (problem.indexOf(" (ZOJ) [") != -1)
+		url = "http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=" + ID + "";
+	else if (problem.indexOf(" (URI) [") != -1)
+		url = "https://www.urionlinejudge.com.br/judge/en/problems/view/" + ID + "";
+	else if (problem.indexOf(" (SPOJ Brazil) [") != -1)
+		url = "http://br.spoj.com/problems/" + ID + "/";
+	else if (problem.indexOf(" (SPOJ Poland) [") != -1)
+		url = "http://pl.spoj.com/problems/" + ID + "/";
+	else if (problem.indexOf(" (SPOJ Vietnam) [") != -1)
+		url = "http://vn.spoj.com/problems/" + ID + "/";
+
+	if (url == "")
+		return;
+	sd.innerHTML = "<center><a href=\""+url+"\" target=\"_blank\">Selected Problem Link</a></center>";
+}
+</script>
+
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="default.css" rel="stylesheet" type="text/css" />
+
+		<link rel="stylesheet" href="css/nav.css" />
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+<!-- START TABLE SORTER CODE -->
+<link rel="stylesheet" href="style.css" type="text/css" id="" media="print, projection, screen" />
+<script type="text/javascript" src="jquery.tablesorter.js"></script>
+	
+<script type="text/javascript" id="js">
+$(document).ready(function() {
+	$.tablesorter.defaults.sortList = [[0,0]];
+	$.tablesorter.defaults.textExtraction = ['complex'];
+	$("table").tablesorter();
+});
+</script>
+<!-- END TABLE SORTER CODE -->
+
+<!-- START AUTO COMPLETE CODE -->
+<script src="jquery-latest.js"></script>
+<link rel="stylesheet" href="jquery.autocomplete.css" type="text/css" />
+<script type="text/javascript" src="jquery.bgiframe.min.js"></script>
+<script type="text/javascript" src="jquery.dimensions.js"></script>
+<script type="text/javascript" src="jquery.autocomplete.js"></script>
+
+<script>
+$(document).ready(function(){
+	$("#Problem").autocomplete("problems",{
+    	delay: 200,
+		scrollHeight: 220,
+    	selectFirst: false,
+    	cacheLength: 0,
+    	afterSelect: problem_changed
+	});
+});
+</script>
+<!-- END AUTO COMPLETE CODE -->
+
+
+
+
+
+
+
+
+</head>
+<body class="no-js" onload="judge_changed()">
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tr>
+<td style="vertical-align: bottom;"><a href="/"><img src="logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">&raquo;&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br/>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> & <b><a href="https://www.facebook.com/acmacpc/" target="_blank" style="text-decoration: none;">ACPC</a></b>, <a href="https://www.codechef.com/" target="_blank" style="text-decoration: none;">CodeChef</a> and <a href="http://www.codability.net/" target="_blank" style="text-decoration: none;">Codability</a></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="https://www.facebook.com/plugins/like.php?show_faces=false&href=https://www.facebook.com/A2OnlineJudge"
+	scrolling="no" frameborder="0"
+	style="border:none; height:45px"></iframe>
+</td>
+</tr>
+</table>
+</div>
+
+<div id="header3"><div align="right"><a href="signin?url=%2Fcategories" style="font-size: 15px;">Sign In</a> - <a href="signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+
+        <nav id="topNav">
+          <ul>
+<li><a href="/">Contests</a></li><li><a href="ladders"><font color="red">Ladders</font></a></li><li><a href="ps">Problems</a></li><li><a href="status">Status</a></li><li><a href="categories">Categories</a></li><li><a href="groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><ul><li><center><a href="http://goo.gl/Fq5mru" target="_blank">GCJ Tools</a></center></li><li><center><a href="codes">Source Codes</a></center></li><li><center><a href="finder">Problems Finder</a></center></li><li><center><a href="users">Users</a></center></li><li><center><a href="teams">Teams</a></center></li><li><center><a href="cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="about">About</a></li>
+          </ul>
+        </nav>
+        
+        
+        <script src="js/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+<tr>
+
+<td style="vertical-align: top;">
+<center>
+<table>
+<tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="page">
+
+<font size="3">
+<center>
+
+
+<table border="1" cellpadding="5">
+<tr><td><b><font color="red"><center>You must be logged in to add a new category</center></font></b></td></tr>
+</table>
+<br/>
+
+
+
+<form action="problem1" method="get">
+<table>
+<tr>
+<td>Search in</td>
+<td>:
+<select name="Judge" id="Judge" style="Width:304px" onchange="judge_changed()">
+<option value="">All Online Judges</option>
+<option value="A2OJ">A2 Online Judge</option>
+<option value="UVA">UVA</option>
+<option value="SPOJ">SPOJ</option>
+<option value="LA">Live Archive</option>
+<option value="CF">Codeforces</option>
+<option value="TJU">TJU</option>
+<option value="SGU">SGU</option>
+<option value="PKU">PKU</option>
+<option value="TIMUS">Timus</option>
+<option value="ZOJ">ZOJ</option>
+<option value="URI">URI</option>
+<option value="SPOJBR">SPOJ Brazil</option>
+<option value="SPOJPL">SPOJ Poland</option>
+<option value="SPOJVN">SPOJ Vietnam</option>
+</select> 
+</td>
+</tr>
+<tr>
+<td>Search for</td>
+<td>:
+<input type="text" name="Problem" id="Problem" style="Width:300px"/>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<div id="selectedDiv"></div>
+</td>
+</tr>
+</table>
+<input type="submit" value="View and edit the categories for the selected problem"/>
+</form>
+<br/>
+
+
+<table cellspacing="1" class="tablesorter" style="text-align: center;">
+<thead>
+<tr>
+<th></th>
+<th>Category</th>
+<th>Problems Count</th>
+
+
+</tr>
+</thead>
+<tbody>
+
+<tr class="odd">
+<td>1</td>
+<td><a href="category?ID=33">Dynamic Programming</a></td>
+<td>1089</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="category?ID=92">implementation</a></td>
+<td>970</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><a href="category?ID=86">math</a></td>
+<td>598</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="category?ID=56">Greedy</a></td>
+<td>553</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><a href="category?ID=13">DFS &amp; BFS &amp; Dijkstra</a></td>
+<td>515</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="category?ID=407">Codeforces Div. 2 - A Problems</a></td>
+<td>446</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><a href="category?ID=409">Codeforces Div. 2 - C Problems</a></td>
+<td>441</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="category?ID=85">brute force</a></td>
+<td>440</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><a href="category?ID=408">Codeforces Div. 2 - B Problems</a></td>
+<td>439</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="category?ID=410">Codeforces Div. 2 - D Problems</a></td>
+<td>432</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td><a href="category?ID=411">Codeforces Div. 2 - E Problems</a></td>
+<td>427</td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="category?ID=88">data structures</a></td>
+<td>422</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td><a href="category?ID=40">Binary Search &amp; Ternary Search</a></td>
+<td>309</td>
+</tr>
+<tr>
+<td>14</td>
+<td><a href="category?ID=94">constructive algorithms</a></td>
+<td>286</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td><a href="category?ID=95">sortings</a></td>
+<td>285</td>
+</tr>
+<tr>
+<td>16</td>
+<td><a href="category?ID=101">graphs</a></td>
+<td>247</td>
+</tr>
+<tr class="odd">
+<td>17</td>
+<td><a href="category?ID=41">Number Theory</a></td>
+<td>221</td>
+</tr>
+<tr>
+<td>18</td>
+<td><a href="category?ID=21">Geometry</a></td>
+<td>205</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td><a href="category?ID=87">strings</a></td>
+<td>194</td>
+</tr>
+<tr>
+<td>20</td>
+<td><a href="category?ID=90">combinatorics</a></td>
+<td>193</td>
+</tr>
+<tr class="odd">
+<td>21</td>
+<td><a href="category?ID=89">trees</a></td>
+<td>167</td>
+</tr>
+<tr>
+<td>22</td>
+<td><a href="category?ID=334">Codeforces Div. 1, D</a></td>
+<td>156</td>
+</tr>
+<tr class="odd">
+<td>23</td>
+<td><a href="category?ID=12">Network Flow</a></td>
+<td>152</td>
+</tr>
+<tr>
+<td>24</td>
+<td><a href="category?ID=25">Segment Tree</a></td>
+<td>150</td>
+</tr>
+<tr class="odd">
+<td>25</td>
+<td><a href="category?ID=100">probabilities</a></td>
+<td>142</td>
+</tr>
+<tr>
+<td>26</td>
+<td><a href="category?ID=96">two pointers</a></td>
+<td>116</td>
+</tr>
+<tr class="odd">
+<td>27</td>
+<td><a href="category?ID=97">bitmasks</a></td>
+<td>101</td>
+</tr>
+<tr>
+<td>28</td>
+<td><a href="category?ID=98">dsu</a></td>
+<td>97</td>
+</tr>
+<tr class="odd">
+<td>29</td>
+<td><a href="category?ID=32">Matrix Power</a></td>
+<td>86</td>
+</tr>
+<tr>
+<td>30</td>
+<td><a href="category?ID=619">#Errichto</a></td>
+<td>78</td>
+</tr>
+<tr class="odd">
+<td>31</td>
+<td><a href="category?ID=17">MST,Disjoint sets,SCC</a></td>
+<td>76</td>
+</tr>
+<tr>
+<td>32</td>
+<td><a href="category?ID=91">games</a></td>
+<td>71</td>
+</tr>
+<tr class="odd">
+<td>33</td>
+<td><a href="category?ID=93">hashing</a></td>
+<td>70</td>
+</tr>
+<tr>
+<td>34</td>
+<td><a href="category?ID=26">Binary Indexed Tree</a></td>
+<td>61</td>
+</tr>
+<tr class="odd">
+<td>35</td>
+<td><a href="category?ID=62">Ad-hoc</a></td>
+<td>59</td>
+</tr>
+<tr>
+<td>36</td>
+<td><a href="category?ID=99">divide and conquer</a></td>
+<td>57</td>
+</tr>
+<tr class="odd">
+<td>37</td>
+<td><a href="category?ID=463">Codeforces Div. 2 - F Problems</a></td>
+<td>51</td>
+</tr>
+<tr>
+<td>38</td>
+<td><a href="category?ID=58">Maximum Matching / Vertex Cover on Bipartite Graph</a></td>
+<td>48</td>
+</tr>
+<tr class="odd">
+<td>39</td>
+<td><a href="category?ID=119">backtracking</a></td>
+<td>40</td>
+</tr>
+<tr>
+<td>40</td>
+<td><a href="category?ID=49">Trie</a></td>
+<td>37</td>
+</tr>
+<tr class="odd">
+<td>41</td>
+<td><a href="category?ID=126">Non-Classical Dynamic Programming</a></td>
+<td>36</td>
+</tr>
+<tr>
+<td>42</td>
+<td><a href="category?ID=76">bfs</a></td>
+<td>34</td>
+</tr>
+<tr class="odd">
+<td>43</td>
+<td><a href="category?ID=36">expresison and parsing</a></td>
+<td>32</td>
+</tr>
+<tr>
+<td>44</td>
+<td><a href="category?ID=377">string suffix structures</a></td>
+<td>32</td>
+</tr>
+<tr class="odd">
+<td>45</td>
+<td><a href="category?ID=29">KMP</a></td>
+<td>28</td>
+</tr>
+<tr>
+<td>46</td>
+<td><a href="category?ID=72">Heavy-Light Descomposition</a></td>
+<td>28</td>
+</tr>
+<tr class="odd">
+<td>47</td>
+<td><a href="category?ID=125">0/1 Knapsack</a></td>
+<td>27</td>
+</tr>
+<tr>
+<td>48</td>
+<td><a href="category?ID=44">Suffix Array/Tree</a></td>
+<td>27</td>
+</tr>
+<tr class="odd">
+<td>49</td>
+<td><a href="category?ID=30">Meet in The Middle</a></td>
+<td>26</td>
+</tr>
+<tr>
+<td>50</td>
+<td><a href="category?ID=134">The_scorpion</a></td>
+<td>24</td>
+</tr>
+<tr class="odd">
+<td>51</td>
+<td><a href="category?ID=79">LIS</a></td>
+<td>21</td>
+</tr>
+<tr>
+<td>52</td>
+<td><a href="category?ID=14">Balanced Binary Search Trees</a></td>
+<td>21</td>
+</tr>
+<tr class="odd">
+<td>53</td>
+<td><a href="category?ID=230">ACM-ICPC Dhaka Site Regional Contests</a></td>
+<td>20</td>
+</tr>
+<tr>
+<td>54</td>
+<td><a href="category?ID=31">TopologicalSort</a></td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td>55</td>
+<td><a href="category?ID=42">FFT</a></td>
+<td>20</td>
+</tr>
+<tr>
+<td>56</td>
+<td><a href="category?ID=435">polynomial</a></td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td>57</td>
+<td><a href="category?ID=131">All Pair Shortest Path (Floyd-Warshall)</a></td>
+<td>18</td>
+</tr>
+<tr>
+<td>58</td>
+<td><a href="category?ID=208">LCA</a></td>
+<td>16</td>
+</tr>
+<tr class="odd">
+<td>59</td>
+<td><a href="category?ID=318">MO?s Algorithm (Query square root decomposition)</a></td>
+<td>16</td>
+</tr>
+<tr>
+<td>60</td>
+<td><a href="category?ID=22">Convex hull</a></td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td>61</td>
+<td><a href="category?ID=227">Suffix automaton</a></td>
+<td>14</td>
+</tr>
+<tr>
+<td>62</td>
+<td><a href="category?ID=150">Lowest Common Ancestor</a></td>
+<td>14</td>
+</tr>
+<tr class="odd">
+<td>63</td>
+<td><a href="category?ID=84">back-tracking</a></td>
+<td>14</td>
+</tr>
+<tr>
+<td>64</td>
+<td><a href="category?ID=590">Mo's Algorithm/ Squareroot Decomposition</a></td>
+<td>14</td>
+</tr>
+<tr class="odd">
+<td>65</td>
+<td><a href="category?ID=382">Codeforces Practice List</a></td>
+<td>13</td>
+</tr>
+<tr>
+<td>66</td>
+<td><a href="category?ID=169">Reasoning</a></td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>67</td>
+<td><a href="category?ID=27">line sweep</a></td>
+<td>13</td>
+</tr>
+<tr>
+<td>68</td>
+<td><a href="category?ID=24">EulerianTour</a></td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>69</td>
+<td><a href="category?ID=54">Hungarian Algorithm</a></td>
+<td>13</td>
+</tr>
+<tr>
+<td>70</td>
+<td><a href="category?ID=35">Aho-Corasick</a></td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>71</td>
+<td><a href="category?ID=65">2sat</a></td>
+<td>12</td>
+</tr>
+<tr>
+<td>72</td>
+<td><a href="category?ID=124">LCS</a></td>
+<td>12</td>
+</tr>
+<tr class="odd">
+<td>73</td>
+<td><a href="category?ID=59">Gaussian elimination</a></td>
+<td>11</td>
+</tr>
+<tr>
+<td>74</td>
+<td><a href="category?ID=231">Strongly Connected Components</a></td>
+<td>11</td>
+</tr>
+<tr class="odd">
+<td>75</td>
+<td><a href="category?ID=319">Centroid Decomposition</a></td>
+<td>10</td>
+</tr>
+<tr>
+<td>76</td>
+<td><a href="category?ID=130">Coin Change</a></td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>77</td>
+<td><a href="category?ID=187">beginner</a></td>
+<td>10</td>
+</tr>
+<tr>
+<td>78</td>
+<td><a href="category?ID=170">Strategy</a></td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>79</td>
+<td><a href="category?ID=103">Edit Distance</a></td>
+<td>9</td>
+</tr>
+<tr>
+<td>80</td>
+<td><a href="category?ID=166">STL</a></td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>81</td>
+<td><a href="category?ID=48">Math Games</a></td>
+<td>9</td>
+</tr>
+<tr>
+<td>82</td>
+<td><a href="category?ID=64">Articulation Point</a></td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>83</td>
+<td><a href="category?ID=69">Heaps</a></td>
+<td>8</td>
+</tr>
+<tr>
+<td>84</td>
+<td><a href="category?ID=106">DFS&amp;BFS</a></td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>85</td>
+<td><a href="category?ID=164">Complete Searsh</a></td>
+<td>8</td>
+</tr>
+<tr>
+<td>86</td>
+<td><a href="category?ID=216">bit manipulation</a></td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>87</td>
+<td><a href="category?ID=308">segment trees</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td>88</td>
+<td><a href="category?ID=165">Dijkstra</a></td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>89</td>
+<td><a href="category?ID=211">STOP ADDING DUMP CATEGORIES</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td>90</td>
+<td><a href="category?ID=63">Simulation</a></td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>91</td>
+<td><a href="category?ID=112">ad hoc</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td>92</td>
+<td><a href="category?ID=132">MCM &amp; OBST</a></td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>93</td>
+<td><a href="category?ID=610">Square Root Decomposition</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td>94</td>
+<td><a href="category?ID=80">Bellman-Ford</a></td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>95</td>
+<td><a href="category?ID=178">Recursion</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>96</td>
+<td><a href="category?ID=309">big numbers</a></td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>97</td>
+<td><a href="category?ID=37">RMQ</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>98</td>
+<td><a href="category?ID=34">Rabin-Karp</a></td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>99</td>
+<td><a href="category?ID=576">0/1 BFS</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>100</td>
+<td><a href="category?ID=221">Simulated Annealing</a></td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>101</td>
+<td><a href="category?ID=421">Minimum Spanning Tree</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>102</td>
+<td><a href="category?ID=174">Game Theory</a></td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>103</td>
+<td><a href="category?ID=45">kth shortest path</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>104</td>
+<td><a href="category?ID=190">Treap</a></td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>105</td>
+<td><a href="category?ID=173">Optimization</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td>106</td>
+<td><a href="category?ID=412">SGU Problems</a></td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>107</td>
+<td><a href="category?ID=175">AI</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td>108</td>
+<td><a href="category?ID=254">Iniciante</a></td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>109</td>
+<td><a href="category?ID=43">Partitioning</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td>110</td>
+<td><a href="category?ID=321">tries</a></td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>111</td>
+<td><a href="category?ID=102">schedules</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td>112</td>
+<td><a href="category?ID=52">Grid compression</a></td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>113</td>
+<td><a href="category?ID=378">chinese remainder theorem</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td>114</td>
+<td><a href="category?ID=348">matrix exponentiation</a></td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>115</td>
+<td><a href="category?ID=53">Newton Raphson method</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>116</td>
+<td><a href="category?ID=50">Range tree</a></td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>117</td>
+<td><a href="category?ID=225">flood fill</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>118</td>
+<td><a href="category?ID=315">digit dp</a></td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>119</td>
+<td><a href="category?ID=171">Float precision</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>120</td>
+<td><a href="category?ID=474">Minkowski addition</a></td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>121</td>
+<td><a href="category?ID=275">linked list</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>122</td>
+<td><a href="category?ID=195">Difference Constraints</a></td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>123</td>
+<td><a href="category?ID=23">Polygon centroid</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>124</td>
+<td><a href="category?ID=20">Minimum Enclosing Circle</a></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>125</td>
+<td><a href="category?ID=159">justSama</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>126</td>
+<td><a href="category?ID=547">SQRT Heuristic</a></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>127</td>
+<td><a href="category?ID=236">string</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>128</td>
+<td><a href="category?ID=567">ista breaks up with shreya</a></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>129</td>
+<td><a href="category?ID=19">Max points on line</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>130</td>
+<td><a href="category?ID=16">Algorithm X</a></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>131</td>
+<td><a href="category?ID=338">Z algorithm</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>132</td>
+<td><a href="category?ID=39">Factoradic Index</a></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>133</td>
+<td><a href="category?ID=584">frequency ARRAY</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>134</td>
+<td><a href="category?ID=235">binary search</a></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>135</td>
+<td><a href="category?ID=128">Biconnected Component</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>136</td>
+<td><a href="category?ID=505">big mod</a></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>137</td>
+<td><a href="category?ID=539">binar search</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>138</td>
+<td><a href="category?ID=179">dinamyc porograming</a></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>139</td>
+<td><a href="category?ID=176">Alignment</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>140</td>
+<td><a href="category?ID=18">Voronoi</a></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>141</td>
+<td><a href="category?ID=304">dp</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>142</td>
+<td><a href="category?ID=38">Pigeonhole principle</a></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>143</td>
+<td><a href="category?ID=147">acm</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>144</td>
+<td><a href="category?ID=351">algorithms</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>145</td>
+<td><a href="category?ID=60">Minimum cost arborescence</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>146</td>
+<td><a href="category?ID=182">Basica</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>147</td>
+<td><a href="category?ID=57">Linear Programming</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>148</td>
+<td><a href="category?ID=346">dynammic programming</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>149</td>
+<td><a href="category?ID=456">ciclos</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>150</td>
+<td><a href="category?ID=492">SRP_HOMEWORK_01</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>151</td>
+<td><a href="category?ID=172">Logic</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>152</td>
+<td><a href="category?ID=46">maximum empty rectangle </a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>153</td>
+<td><a href="category?ID=557">Arrays</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>154</td>
+<td><a href="category?ID=294">Mathematical Questions</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>155</td>
+<td><a href="category?ID=245">Codeforces</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>156</td>
+<td><a href="category?ID=290">binary search tree</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>157</td>
+<td><a href="category?ID=276">contest</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>158</td>
+<td><a href="category?ID=28">Circle sweep</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>159</td>
+<td><a href="category?ID=273">SRM 557 DivII 250</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>160</td>
+<td><a href="category?ID=180">data structure</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>161</td>
+<td><a href="category?ID=311">ECPC 2014</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>162</td>
+<td><a href="category?ID=416">disunion set</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>163</td>
+<td><a href="category?ID=293">uva</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>164</td>
+<td><a href="category?ID=481">MST</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>165</td>
+<td><a href="category?ID=443">kingdon</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>166</td>
+<td><a href="category?ID=289">Dynam</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>167</td>
+<td><a href="category?ID=360">109</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>168</td>
+<td><a href="category?ID=279">uri</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>169</td>
+<td><a href="category?ID=323">omar</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>170</td>
+<td><a href="category?ID=465">begainners</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>171</td>
+<td><a href="category?ID=380">Begginer</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>172</td>
+<td><a href="category?ID=566">ista = LGBT head</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>173</td>
+<td><a href="category?ID=217">general</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>174</td>
+<td><a href="category?ID=51">Stable Marriage</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>175</td>
+<td><a href="category?ID=490">Coordinate Compression</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>176</td>
+<td><a href="category?ID=415">scc</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>177</td>
+<td><a href="category?ID=209">bst</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>178</td>
+<td><a href="category?ID=483">Disjoint Set Union</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>179</td>
+<td><a href="category?ID=167">suffix array</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>180</td>
+<td><a href="category?ID=246">bi connected component</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>181</td>
+<td><a href="category?ID=514">acm egypt</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>182</td>
+<td><a href="category?ID=325">prime</a></td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>183</td>
+<td><a href="category?ID=234">dfs</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>184</td>
+<td><a href="category?ID=354">implemntation</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>185</td>
+<td><a href="category?ID=541">biney index tree</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>186</td>
+<td><a href="category?ID=189">Mispelling</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>187</td>
+<td><a href="category?ID=395">gcd</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>188</td>
+<td><a href="category?ID=577">Gammal</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>189</td>
+<td><a href="category?ID=432">Palindromes</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>190</td>
+<td><a href="category?ID=613">DIV 2 A</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>191</td>
+<td><a href="category?ID=274">andres</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>192</td>
+<td><a href="category?ID=467">geekhamza</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>193</td>
+<td><a href="category?ID=504">30008</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>194</td>
+<td><a href="category?ID=538">SERCLE DEATH</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>195</td>
+<td><a href="category?ID=185">andrerabelo</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>196</td>
+<td><a href="category?ID=389">merge sort</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>197</td>
+<td><a href="category?ID=574">D-Codeforces</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>198</td>
+<td><a href="category?ID=609">codeforce div1 catagori A</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>199</td>
+<td><a href="category?ID=270">ACM Syrian Collegiate Programming Contest 2</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>200</td>
+<td><a href="category?ID=464">regionals</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>201</td>
+<td><a href="category?ID=316">22134 - LP1-FPUNA-2015</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>202</td>
+<td><a href="category?ID=501">a canh</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>203</td>
+<td><a href="category?ID=535">Junior Training Sheet - template - v4.4</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>204</td>
+<td><a href="category?ID=385">recursive</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>205</td>
+<td><a href="category?ID=571">Sheet: https://a2oj.com/register?ID=32538</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>206</td>
+<td><a href="category?ID=222">Problem 2 Component Testing</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>207</td>
+<td><a href="category?ID=430">rabin</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>208</td>
+<td><a href="category?ID=606">A2OJ FCI-CU</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>209</td>
+<td><a href="category?ID=265">Ahmad</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>210</td>
+<td><a href="category?ID=460">stacks</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>211</td>
+<td><a href="category?ID=312">10945</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>212</td>
+<td><a href="category?ID=495">codeforces div 1-a</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>213</td>
+<td><a href="category?ID=532">topological sory</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>214</td>
+<td><a href="category?ID=568">combination</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>215</td>
+<td><a href="category?ID=219">training round</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>216</td>
+<td><a href="category?ID=422">disjoint set</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>217</td>
+<td><a href="category?ID=602">bs</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>218</td>
+<td><a href="category?ID=262">niquefa</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>219</td>
+<td><a href="category?ID=343">Div 2 B</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>220</td>
+<td><a href="category?ID=528">Combi</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>221</td>
+<td><a href="category?ID=379">suffix</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>222</td>
+<td><a href="category?ID=565">istasis likes dhinchak pooja</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>223</td>
+<td><a href="category?ID=417">nfa</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>224</td>
+<td><a href="category?ID=599">maps</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>225</td>
+<td><a href="category?ID=257">adhoc</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>226</td>
+<td><a href="category?ID=453">ad</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>227</td>
+<td><a href="category?ID=306">Mid-Central USA</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>228</td>
+<td><a href="category?ID=489">tarjan</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>229</td>
+<td><a href="category?ID=339">fibo</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>230</td>
+<td><a href="category?ID=376">depth first search</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>231</td>
+<td><a href="category?ID=562">Acm world final 2011</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>232</td>
+<td><a href="category?ID=414">icpc</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>233</td>
+<td><a href="category?ID=596">square</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>234</td>
+<td><a href="category?ID=450">bipartite</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>235</td>
+<td><a href="category?ID=302">flow</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>236</td>
+<td><a href="category?ID=486">fenwick tree</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>237</td>
+<td><a href="category?ID=336">tree</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>238</td>
+<td><a href="category?ID=524">search</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>239</td>
+<td><a href="category?ID=373">math geometry</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>240</td>
+<td><a href="category?ID=592">frequency arrays</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>241</td>
+<td><a href="category?ID=248">url</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>242</td>
+<td><a href="category?ID=447">level 1</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>243</td>
+<td><a href="category?ID=482">dfs &amp; bfs</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>244</td>
+<td><a href="category?ID=333">dy</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>245</td>
+<td><a href="category?ID=521">pst0</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>246</td>
+<td><a href="category?ID=368">acam</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>247</td>
+<td><a href="category?ID=554">arraya</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>248</td>
+<td><a href="category?ID=205">UFG</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>249</td>
+<td><a href="category?ID=589">power</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>250</td>
+<td><a href="category?ID=444">28239</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>251</td>
+<td><a href="category?ID=479">matrices</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>252</td>
+<td><a href="category?ID=330">acm phase 0</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>253</td>
+<td><a href="category?ID=517">aho</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>254</td>
+<td><a href="category?ID=364">disjoint</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>255</td>
+<td><a href="category?ID=551">centroid</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>256</td>
+<td><a href="category?ID=201">knj</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>257</td>
+<td><a href="category?ID=404">extended</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>258</td>
+<td><a href="category?ID=585">bipartite matching</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>259</td>
+<td><a href="category?ID=241">factoradic</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>260</td>
+<td><a href="category?ID=441">Google Code Jam</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>261</td>
+<td><a href="category?ID=287">A</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>262</td>
+<td><a href="category?ID=475">1c</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>263</td>
+<td><a href="category?ID=327">zu</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>264</td>
+<td><a href="category?ID=513">stable roomate</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>265</td>
+<td><a href="category?ID=361">Graph basics concepts BFS &amp; DFS</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>266</td>
+<td><a href="category?ID=198">crazy search</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>267</td>
+<td><a href="category?ID=401">biginteger</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>268</td>
+<td><a href="category?ID=582">binary searsh</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>269</td>
+<td><a href="category?ID=437">matrix multiplication problem</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>270</td>
+<td><a href="category?ID=622">articulation</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>271</td>
+<td><a href="category?ID=280">zbox</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>272</td>
+<td><a href="category?ID=472">heavy light decomposition</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>273</td>
+<td><a href="category?ID=324">ahmeddahi92</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>274</td>
+<td><a href="category?ID=510">sort drinking</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>275</td>
+<td><a href="category?ID=357">195</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>276</td>
+<td><a href="category?ID=544">priority queue</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>277</td>
+<td><a href="category?ID=191">PI-UFS-T01</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>278</td>
+<td><a href="category?ID=398">bitmask</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>279</td>
+<td><a href="category?ID=579">binry</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>280</td>
+<td><a href="category?ID=233">ad hock</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>281</td>
+<td><a href="category?ID=434">a2</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>282</td>
+<td><a href="category?ID=469">basic programming</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>283</td>
+<td><a href="category?ID=506">353</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>284</td>
+<td><a href="category?ID=353">warshall</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>285</td>
+<td><a href="category?ID=540">lucas theorem</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>286</td>
+<td><a href="category?ID=392">implmentation</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>287</td>
+<td><a href="category?ID=229">graph theory</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>288</td>
+<td><a href="category?ID=612">decode</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>289</td>
+<td><a href="category?ID=466">palindrome</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>290</td>
+<td><a href="category?ID=503">473</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>291</td>
+<td><a href="category?ID=350">easy</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>292</td>
+<td><a href="category?ID=537">Dijkstra dfs bfs</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>293</td>
+<td><a href="category?ID=184">Avanzada</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>294</td>
+<td><a href="category?ID=387">binary</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>295</td>
+<td><a href="category?ID=573">cummulative</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>296</td>
+<td><a href="category?ID=608">greedy problem</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>297</td>
+<td><a href="category?ID=268">ECPC</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>298</td>
+<td><a href="category?ID=498">obi</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>299</td>
+<td><a href="category?ID=534">13</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>300</td>
+<td><a href="category?ID=384">segment</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>301</td>
+<td><a href="category?ID=570">heap</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>302</td>
+<td><a href="category?ID=429">bitmask problems</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>303</td>
+<td><a href="category?ID=605">priority</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>304</td>
+<td><a href="category?ID=264">1119</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>305</td>
+<td><a href="category?ID=459">oc</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>306</td>
+<td><a href="category?ID=494">two pointerd</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>307</td>
+<td><a href="category?ID=345">breath first search</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>308</td>
+<td><a href="category?ID=531">toplogical sort</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>309</td>
+<td><a href="category?ID=177">Pattern</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>310</td>
+<td><a href="category?ID=381">Practice</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>311</td>
+<td><a href="category?ID=218">floyd warshall</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>312</td>
+<td><a href="category?ID=601">kruskal</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>313</td>
+<td><a href="category?ID=260">Treinamento1604</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>314</td>
+<td><a href="category?ID=455">Bfs Dfs</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>315</td>
+<td><a href="category?ID=491">data</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>316</td>
+<td><a href="category?ID=342">dd</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>317</td>
+<td><a href="category?ID=564">dynamic programming,codeforces DIV 2 D</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>318</td>
+<td><a href="category?ID=215">maths</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>319</td>
+<td><a href="category?ID=598">kmp algo</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>320</td>
+<td><a href="category?ID=256">352-Pesky Palindromes</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>321</td>
+<td><a href="category?ID=452">Add them twice</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>322</td>
+<td><a href="category?ID=305">North America - Mid-Central USA</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>323</td>
+<td><a href="category?ID=488">UNCC ACM</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>324</td>
+<td><a href="category?ID=527">matching</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>325</td>
+<td><a href="category?ID=375">graphe</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>326</td>
+<td><a href="category?ID=560">ternary</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>327</td>
+<td><a href="category?ID=210">add hoc</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>328</td>
+<td><a href="category?ID=413">Dfs and similar</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>329</td>
+<td><a href="category?ID=595">cumulative</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>330</td>
+<td><a href="category?ID=253">dynamic programing</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>331</td>
+<td><a href="category?ID=449">two pointer</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>332</td>
+<td><a href="category?ID=300">abed</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>333</td>
+<td><a href="category?ID=484">hash</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>334</td>
+<td><a href="category?ID=335">Codeforces Div. 1, E</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>335</td>
+<td><a href="category?ID=523">Div2</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>336</td>
+<td><a href="category?ID=168">Chinese Postman Problem</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>337</td>
+<td><a href="category?ID=371">garf</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>338</td>
+<td><a href="category?ID=556">d</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>339</td>
+<td><a href="category?ID=207">shortestpath</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>340</td>
+<td><a href="category?ID=591">topcoder</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>341</td>
+<td><a href="category?ID=247">SPC</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>342</td>
+<td><a href="category?ID=446">hakenbush</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>343</td>
+<td><a href="category?ID=332">bits</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>344</td>
+<td><a href="category?ID=519">re</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>345</td>
+<td><a href="category?ID=366">Graph Coloring Welsh-Powell Algorithm</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>346</td>
+<td><a href="category?ID=553">djikstra</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>347</td>
+<td><a href="category?ID=204">dynamic</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>348</td>
+<td><a href="category?ID=588">A - Siggy?s sum</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>349</td>
+<td><a href="category?ID=243">15822</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>350</td>
+<td><a href="category?ID=478">topological</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>351</td>
+<td><a href="category?ID=329">game</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>352</td>
+<td><a href="category?ID=516">bellman</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>353</td>
+<td><a href="category?ID=363">252</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>354</td>
+<td><a href="category?ID=549">floyd</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>355</td>
+<td><a href="category?ID=200">arab</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>356</td>
+<td><a href="category?ID=403">pinary search</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>357</td>
+<td><a href="category?ID=238">backtrack</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>358</td>
+<td><a href="category?ID=439">Dinamic</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>359</td>
+<td><a href="category?ID=624">ACM Arab Collegiate Programming Contest 2013</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>360</td>
+<td><a href="category?ID=285">convex</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>361</td>
+<td><a href="category?ID=326">coci</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>362</td>
+<td><a href="category?ID=512">codeforces Div 1 A</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>363</td>
+<td><a href="category?ID=546">web</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>364</td>
+<td><a href="category?ID=196">structs</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>365</td>
+<td><a href="category?ID=400">customfurnish</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>366</td>
+<td><a href="category?ID=581">bitmasking</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>367</td>
+<td><a href="category?ID=436">B</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>368</td>
+<td><a href="category?ID=621">adhocv</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>369</td>
+<td><a href="category?ID=471">link list</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>370</td>
+<td><a href="category?ID=509">Queues</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>371</td>
+<td><a href="category?ID=355">divide</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>372</td>
+<td><a href="category?ID=542">2791 - Lagrange's Four-Square Theorem</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>373</td>
+<td><a href="category?ID=396">184. Strings with Same Letters</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>374</td>
+<td><a href="category?ID=578">vector</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>375</td>
+<td><a href="category?ID=433">sort</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>376</td>
+<td><a href="category?ID=614">sweep line</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>377</td>
+<td><a href="category?ID=468">bitmasks problems</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>378</td>
+<td><a href="category?ID=320">knapsack algorithm</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>379</td>
+<td><a href="category?ID=352">SAMO</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>380</td>
+<td><a href="category?ID=186">india</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>381</td>
+<td><a href="category?ID=390">184</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>382</td>
+<td><a href="category?ID=575">div</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>383</td>
+<td><a href="category?ID=228">c</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>384</td>
+<td><a href="category?ID=271">vec</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>385</td>
+<td><a href="category?ID=317">graps</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>386</td>
+<td><a href="category?ID=502">Div 2</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>387</td>
+<td><a href="category?ID=536">classes</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>388</td>
+<td><a href="category?ID=183">Media</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>389</td>
+<td><a href="category?ID=386">dp bitmask</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>390</td>
+<td><a href="category?ID=572">comb</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>391</td>
+<td><a href="category?ID=223">stack</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>392</td>
+<td><a href="category?ID=431">linked lists</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>393</td>
+<td><a href="category?ID=607">bit masking</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>394</td>
+<td><a href="category?ID=267">meet-in-the-middle</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>395</td>
+<td><a href="category?ID=461">union</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>396</td>
+<td><a href="category?ID=313">Mother bear  uva</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>397</td>
+<td><a href="category?ID=497">0/1</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>398</td>
+<td><a href="category?ID=533">jzzhu and sequences</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>399</td>
+<td><a href="category?ID=383">array</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>400</td>
+<td><a href="category?ID=569">flo</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>401</td>
+<td><a href="category?ID=220">training round #2</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>402</td>
+<td><a href="category?ID=428">gemastik</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>403</td>
+<td><a href="category?ID=604">number system</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>404</td>
+<td><a href="category?ID=263">sara reda</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>405</td>
+<td><a href="category?ID=458">Simple Math</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>406</td>
+<td><a href="category?ID=310">Theatre Square</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>407</td>
+<td><a href="category?ID=493">reursion</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>408</td>
+<td><a href="category?ID=344">m</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>409</td>
+<td><a href="category?ID=530">matrix</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>410</td>
+<td><a href="category?ID=420">euclid</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>411</td>
+<td><a href="category?ID=600">Groups</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>412</td>
+<td><a href="category?ID=258">twins</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>413</td>
+<td><a href="category?ID=454">bridges</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>414</td>
+<td><a href="category?ID=307">probability</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>415</td>
+<td><a href="category?ID=341">BIT</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>416</td>
+<td><a href="category?ID=563">LCIS</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>417</td>
+<td><a href="category?ID=212">125. Objects Count</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>418</td>
+<td><a href="category?ID=597">pattern search</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>419</td>
+<td><a href="category?ID=255">Iniciante - Aracode</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>420</td>
+<td><a href="category?ID=451">longest</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>421</td>
+<td><a href="category?ID=487">29708 - ContestPreparation</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>422</td>
+<td><a href="category?ID=337">Sparse Table</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>423</td>
+<td><a href="category?ID=526">function</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>424</td>
+<td><a href="category?ID=374">Math &amp; Geometry</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>425</td>
+<td><a href="category?ID=558">set</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>426</td>
+<td><a href="category?ID=593">frequency</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>427</td>
+<td><a href="category?ID=249">mineira</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>428</td>
+<td><a href="category?ID=448">LP1-I_so_love_programming!</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>429</td>
+<td><a href="category?ID=299">hbb</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>430</td>
+<td><a href="category?ID=522">breadth first search</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>431</td>
+<td><a href="category?ID=369">bainary search</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>432</td>
+<td><a href="category?ID=555">Kadane's Algorithm</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>433</td>
+<td><a href="category?ID=206">Joud Khattab</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>434</td>
+<td><a href="category?ID=445">mathematical</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>435</td>
+<td><a href="category?ID=292">2A</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>436</td>
+<td><a href="category?ID=480">max flow</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>437</td>
+<td><a href="category?ID=331">Capital City</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>438</td>
+<td><a href="category?ID=518">game thery</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>439</td>
+<td><a href="category?ID=365">Topological sort</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>440</td>
+<td><a href="category?ID=552">acm sham</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>441</td>
+<td><a href="category?ID=203">caoyu01</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>442</td>
+<td><a href="category?ID=405">impemention</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>443</td>
+<td><a href="category?ID=586">link</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>444</td>
+<td><a href="category?ID=242">1160</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>445</td>
+<td><a href="category?ID=442">2-sat</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>446</td>
+<td><a href="category?ID=288">range minimum querry</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>447</td>
+<td><a href="category?ID=476">books</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>448</td>
+<td><a href="category?ID=328">spoj</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>449</td>
+<td><a href="category?ID=362">queue</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>450</td>
+<td><a href="category?ID=548">codeforce A</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>451</td>
+<td><a href="category?ID=199">graph</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>452</td>
+<td><a href="category?ID=402">div 2C</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>453</td>
+<td><a href="category?ID=583">rolling hash</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>454</td>
+<td><a href="category?ID=237">codeforce</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>455</td>
+<td><a href="category?ID=438">maxflow</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>456</td>
+<td><a href="category?ID=623">so easy</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>457</td>
+<td><a href="category?ID=284">amman cpc 2015</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>458</td>
+<td><a href="category?ID=473">sorting</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>459</td>
+<td><a href="category?ID=511">Ladder</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>460</td>
+<td><a href="category?ID=359">beginners</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>461</td>
+<td><a href="category?ID=545">ifrn</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>462</td>
+<td><a href="category?ID=399">C#</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>463</td>
+<td><a href="category?ID=580">Mriganga</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>464</td>
+<td><a href="category?ID=620">number</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>465</td>
+<td><a href="category?ID=278">knapsack</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>466</td>
+<td><a href="category?ID=470">codeforces Div2 A</a></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>467</td>
+<td><a href="category?ID=322">indonesia</a></td>
+<td>0</td>
+</tr>
+<tr>
+<td>468</td>
+<td><a href="category?ID=507">binary tree</a></td>
+<td>0</td>
+</tr>
+
+
+</tbody>
+</table>
+
+</center>
+</font>
+</font>
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ &copy; Copyright 2011-2016 <b><a
+	href="https://www.facebook.com/ahmed.aly.tc" target="_blank"
+	style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com" target="_blank" style="text-decoration: none;">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</table>
+</center>
+<!-- end footer -->
+
+
+</body>
+</html>

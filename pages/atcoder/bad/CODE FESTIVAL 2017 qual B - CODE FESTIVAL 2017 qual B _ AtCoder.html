@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CODE FESTIVAL 2017 qual B
+ - CODE FESTIVAL 2017 qual B | AtCoder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="
+">
+    <meta name="keyword" content="AtCoder,アットコーダー,あっとこーだー,プログラミングコンテスト
+">
+    <meta name="author" content="Atcoder" />
+    <meta name="copyright" content="Copyright (C) 2012 Atcoder" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="stylesheet" type="text/css" href="/css/all.css?v=2">
+    <link rel="stylesheet" type="text/css" href="/css/print.css?v=1" media="print">
+        <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="/js/jquery.js"></script>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30554866-3']);
+  _gaq.push(['_setDomainName', 'atcoder.jp']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>    
+    <!--[if lt IE 9]><style>.navbar-fixed-top{ position: relative!important; }</style><![endif]-->
+
+  </head>
+
+
+  <body>
+            <style type="text/css">
+          html body {
+    background-color: #fffffa !important;
+    background-image:  none !important;
+}
+#outer-inner {
+    background: none repeat scroll 0 0 #ffffff;
+}
+.navbar-inner {
+    background-color: #db0079 !important;
+    background-image: none !important;
+}
+
+.caret {
+    color: #fff !important;
+    opacity: 1 !important;
+}
+
+.bland-small {
+    color: #fff !important;
+}
+
+.navbar .divider-vertical {
+    background-color: #fff !important;
+    border-right: none;
+}
+
+.navbar .nav > li > a {
+    color: #fff !important;
+}
+
+.insert-participant-box {
+    background-color: #fff !important;
+    text-align: -webkit-center !important;
+}
+
+#contest-statement section p {
+    font-size: medium;
+}
+
+#contest-statement section ul {
+    font-size: medium;
+}
+      </style>
+          <div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+              <a class="brand" href="/"><span class="contest-name">CODE FESTIVAL 2017 qual B</span><span class="bland-small"><time>2017/10/08 12:00:00 +0000</time> ~ <time>2017/10/08 14:00:00 +0000</time></span></a>
+      
+      <div class="nav-collapse">
+                            <ul  id="nav-right-logined" class="nav pull-right" style="display:none;">
+            <li class="dropdown">
+              <a href="#" lang="ja" class="dropdown-toggle static-nav-language-selector-dropdown" data-toggle="dropdown" style="display:none;">
+                <i class="flag-ja"></i> 日本語 <b class="caret"></b>
+              </a>
+              <a href="#" lang="en" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-en"></i> English <b class="caret"></b>
+              </a>
+              <a href="#" lang="ko" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-ko"></i> 한국어 <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li> <a lang="ja" class="static-nav-language-selector" href="#"><i class="flag-ja"></i> 日本語</a></li>
+                <li> <a lang="en" class="static-nav-language-selector" href="#"><i class="flag-en"></i> English</a></li>
+                <li> <a lang="ko" class="static-nav-language-selector" href="#"><i class="flag-ko"></i> 한국어</a></li>
+              </ul>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-white"></i> <span id="nav-right-username"></span><b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/me"><span class="lang"><span class="lang-en">My Profile</span><span class="lang-ja">マイプロフィール</span></span></a></li>
+                                	<li><a href="/settings"><span class="lang"><span class="lang-en">Settings</span><span class="lang-ja">設定</span></span></a></li>
+                    <li><a href="/settings/password"><span class="lang"><span class="lang-en">Change password</span><span class="lang-ja">パスワードの変更</span></span></a></li>
+                	                		<li><a href="/settings/participants"><span class="lang"><span class="lang-en">Edit information</span><span class="lang-ja">参加登録情報設定</span></span></a></li>
+                	                	<li class="divider"></li>
+                                <li><a href="/logout"><span class="lang"><span class="lang-en">Sign out</span><span class="lang-ja">ログアウト</span></span></a></li>
+             </ul>
+            </li>
+          </ul>
+          <ul id="nav-right-not-login" class="nav pull-right" style="display:none;">
+            <li class="dropdown">
+              <a href="#" lang="ja" class="dropdown-toggle static-nav-language-selector-dropdown" data-toggle="dropdown" style="display:none;">
+                <i class="flag-ja"></i> 日本語 <b class="caret"></b>
+              </a>
+              <a href="#" lang="en" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-en"></i> English <b class="caret"></b>
+              </a>
+              <a href="#" lang="ko" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-ko"></i> 한국어 <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li> <a lang="ja" class="static-nav-language-selector" href="#"><i class="flag-ja"></i> 日本語</a></li>
+                <li> <a lang="en" class="static-nav-language-selector" href="#"><i class="flag-en"></i> English</a></li>
+                <li> <a lang="ko" class="static-nav-language-selector" href="#"><i class="flag-ko"></i> 한국어</a></li>
+              </ul>
+            </li>
+                        <li class="divider-vertical"></li>
+            <li><a href="/register"><span class="lang"><span class="lang-en">Sign up</span><span class="lang-ja">新規登録</span></span></a></li>
+                        <li class="divider-vertical"></li>
+            <li><a href="/login"><span class="lang"><span class="lang-en">Sign in</span><span class="lang-ja">ログイン</span></span></a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+        
+    <div id="outer-inner" class="container">
+      <h1 class="site-title">
+          CODE FESTIVAL 2017 qual B
+      </h1>
+                      <time style="display:none" id="contest-start-time">2017/10/08 12:00:00 +0000</time>
+        <time style="display:none" id="contest-end-time">2017/10/08 14:00:00 +0000</time>
+        <time style="display:none" id="server-current-time">2017/10/08 20:50:28 +0000</time>
+
+            
+      <ul class="nav nav-tabs">
+                            <li class="active"><a href="http://code-festival-2017-qualb.contest.atcoder.jp/"><i class="icon-home"></i> <span class="lang"><span class="lang-en">Home</span><span class="lang-ja">トップページ</span><span class="lang-ko">톱 페이지</span></span></a></li>
+                                          <li><a href="http://code-festival-2017-qualb.contest.atcoder.jp/assignments"><i class="icon-list-alt"></i> <span class="lang"><span class="lang-en">Tasks</span><span class="lang-ja">問題</span><span class="lang-ko">문제</span></span></a></li>
+                                          <li><a href="https://code-festival-2017-qualb.contest.atcoder.jp/submit"><i class="icon-upload"></i> <span class="lang"><span class="lang-en">Submit</span><span class="lang-ja">提出</span><span class="lang-ko">제출</span></span></a></li>
+                                          <li><a href="http://code-festival-2017-qualb.contest.atcoder.jp/clarifications"><i class="icon-question-sign"></i> <span class="lang"><span class="lang-en">Clarifications</span><span class="lang-ja">質問</span><span class="lang-ko">질문</span></span></a></li>
+                                          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <b class="caret"></b><i class="icon-download-alt"></i> <span class="lang"><span class="lang-en">Results</span><span class="lang-ja">結果</span><span class="lang-ko">채점 결과</span></span>
+            </a>
+            <ul class="dropdown-menu">
+                              <li><a href="http://code-festival-2017-qualb.contest.atcoder.jp/submissions/all"><span class="lang"><span class="lang-en">All submissions</span><span class="lang-ja">すべての結果</span><span class="lang-ko">모든 결과</span></span></a></li>
+                              <li><a href="https://code-festival-2017-qualb.contest.atcoder.jp/submissions/me"><span class="lang"><span class="lang-en">My submissions</span><span class="lang-ja">自分の結果</span><span class="lang-ko">자신의 결과</span></span></a></li>
+                          </ul>
+          </li>
+                                          <li><a href="/standings"><i class="icon-user"></i> <span class="lang"><span class="lang-en">Standings</span><span class="lang-ja">順位表</span><span class="lang-ko">순위표</span></span></a></li>
+                                          <li><a href="/custom_test"><i class="icon-user"></i> <span class="lang"><span class="lang-en">Custom Test</span><span class="lang-ja">コードテスト</span></span></a></li>
+                                          <li><a href="/editorial"><i class="icon-user"></i> <span class="lang"><span class="lang-en">Editorial</span><span class="lang-ja">解説</span></span></a></li>
+                      </ul>
+        <div id="alert_box" class="alert alert-block" style="display:none">
+  <a class="close" data-dismiss="alert">×</a>
+  <h4 id="alert_box_heading" class="alert-heading" style="display:none"></h4>
+  <p id="alert_box_content"></p>
+</div>
+
+      
+<div class="insert-participant-box">
+<h1>CODE FESTIVAL 2017 qual B</h1>
+</div>
+
+
+
+<div id="contest-statement"><span class="lang">
+    <span class="lang-ja">
+        <h2>おしらせ</h2>
+        <section>
+            <p>
+                ページを公開しました。(2017/9/28)
+            </p>
+        </section>
+
+        <hr/>
+
+        <h2>概要</h2>
+        <section>
+            <p>
+                プログラミングとアルゴリズムを全員で楽しみつくすプログラミングコンテスト。CODE FESTIVALは1泊2日、CODE THANKS FESTIVALは単日の開催です。
+            </p>
+            <p>
+                競うだけでなく、「学ぶ」「遊ぶ」「つながる」など楽しみ方はあなた次第！プログラミング歴に関わらず、全員で楽しむプロコンです。まずはエントリーください。
+            </p>
+        </section>
+
+        <hr/>
+
+<h2>注意</h2>
+        <section>
+            <p>
+	      必ず <a href="https://code-festival-2017-qualb.contest.atcoder.jp/">https://code-festival-2017-qualb.contest.atcoder.jp/</a> から参加登録を行ってください。
+            </p>
+	    <p>
+	      <a href="https://beta.atcoder.jp/contests/code-festival-2017-qualb">ベータ版</a> からは参加登録ができません。
+	    </p>
+        </section>
+
+        <hr/>
+
+        <h2>本戦</h2>
+        <section>
+            <p style="font-size: larger">
+                CODE FESTIVAL
+            </p>
+            <ul>
+                <li>
+                    日時：2017年11月25日（土）午前～11月26日（日）夕方予定
+                </li>
+                <li>
+                    参加人数：100人
+                </li>
+                <li>
+                    場所：秋葉原UDX GALLERY　（JR秋葉原駅徒歩2分）
+                </li>
+                <li>
+                   その他：交通費・宿泊費はリクルートホールディングス負担
+                </li>
+            </ul>
+            <p>
+                その他詳細は<a href="http://r.recruit-jinji.jp/code_fes/" target="_blank">http://r.recruit-jinji.jp/code_fes/</a>からご確認ください。
+            </p>
+        </section>
+
+        <hr/>
+
+        <h2>本戦</h2>
+        <section>
+            <p style="font-size: larger">
+                CODE THANKS FESTIVAL
+            </p>
+            <ul>
+                <li>
+                    日時：2017年12月2日（土）
+                </li>
+                <li>
+                    参加人数：100人
+                </li>
+                <li>
+                    場所：コワーキング・スペースMONO　（ゆりかもめ「テレコムセンター」駅直結）
+                </li>
+                <li>
+                    その他：交通費・宿泊費リクルートホールディングス負担
+                </li>
+            </ul>
+            <p>
+                その他詳細は<a href="http://r.recruit-jinji.jp/code_fes/" target="_blank">http://r.recruit-jinji.jp/code_fes/</a>からご確認ください。
+            </p>
+        </section>
+
+        <hr/>
+
+        <h2>予選参加</h2>
+        <section>
+            <p>
+                予選はどなたでもご参加いただけます。
+            </p>
+            <p>
+                本戦は参加資格を満たした方のみご参加いただけます。
+            </p>
+            <p>
+                ※本戦参加資格は以下「本戦参加資格について」を参照ください※
+            </p>
+        </section>
+
+<hr/>
+
+        <h2>予選参加時の注意点について</h2>
+        <section>
+            <p>
+                エントリー時に入力したIDとAtCoder上で発番したIDに相違がないか事前にご確認お願いしいたします。
+            </p>
+            <p>
+                異なるIDで予選に参加した場合、本人であっても本戦に参加いただくことができませんのでご注意ください。
+            </p>
+            <p>
+                誤って登録してしまった場合やエントリー時に入力したIDと異なるAtCoder IDで参加を希望される場合には、問い合わせ先（rhd_procon@r.recruit.co.jp）までご連絡ください。
+            </p>
+        </section>
+
+        <hr/>
+
+        <h2>AtCoderIDの相違で予選時にログインができない場合</h2>
+        <section>
+            <ul>
+  　　　　 <li>
+                    これまでリクルートホールディングスのインターンシップなどで個別に付与されたIDは使用できません。必ずご自身のIDでご参加ください。
+                </li>
+                <li>
+                    AtCoder 問い合わせ先（support@atcoder.jp）に登録メールアドレスを送付し、正しいIDをご確認お願いします。
+                </li>
+                <li>
+                    リクルートホールディングスの問い合わせ先（rhd_procon@r.recruit.co.jp)に正しいIDが分かり次第、下記3点を必ずお送りください。
+                </li>
+            </ul>
+            <ol>
+                <li>
+                    正しいID
+                </li>
+                <li>
+                    氏名
+                </li>
+                <li>
+                    電話番号
+                </li>
+            </ol>
+        </section>
+
+        <hr/>
+
+        <h2>本戦参加資格について</h2>
+        <section>
+            <p>
+                以下の条件を満たした方が本戦にご参加いただけます。
+            </p>
+            <ul>
+                <li>
+                    エントリー者
+                </li>
+                <li>
+                    学生（高専4~5年生、高専専攻科、専門、短大、大学、大学院）、または既卒4年以内の未就業者
+                </li>
+                ※アルバイト経験又はインターンシップ経験のみの場合は、未就業扱いとなります。
+                ※居住地は不問です
+            </ul>
+            <p>
+                上記の条件に加え、本戦別に以下が必要となります。
+            </p>
+            <p style="font-size: larger">
+                CODE FESTIVAL（日本在住の学生）
+            </p>
+            <ul>
+                <li>
+                    予選Aの上位40名または、予選Bの上位20名または予選Cの上位20名。
+                </li>
+                ※予選Aを通過した方は、予選B・予選Cの上位各20名から除外とし重複でカウントしないものとします。また予選Bも同様に通過した方は予選Cの上位20名から除外とし重複でカウントしないものとします。
+            </ul>
+            <p style="font-size: larger">
+                CODE THANKS FESTIVAL（日本在住の学生）
+            </p>
+            <ul>
+                <li>
+                    CODE FESTIVALにご参加いただけなかった方のなかで予選A上位40名　予選B上位30名　予選C上位30名。
+                </li>
+            </ul>
+        </section>
+
+        <hr/>
+
+        <h2>予選通過者確定までの流れとお願いについて</h2>
+        <section>
+            <ul>
+                <li>
+                    STEP1：予選B終了後、CODE FESTIVAL本戦に進んでいただく成績上位20名の方にご連絡致します。
+                </li>
+                ※予選Bの合否については10月12日（木）のご連絡を予定しています。参加可否について必ずメール内に記載のある締切までご回答ください。<br/>
+                ※回答期限等詳細はお送りするメールにてご確認ください。<br/>
+                随時メール・電話のご確認をお願いいたします。STEP1のメールを受取った方は、早急にご回答をお願いいたします。
+                <li>
+                    STEP2：STEP1にて参加できない方が確認できた場合は繰上げにて次点の方にご連絡致します。
+                </li>
+                次点の方へのご連絡もSTEP1と同様のフローとなります。順次ご連絡致しますので、随時メール・電話のご確認をお願いいたします。
+            </ul>
+        </section>
+
+        <hr/>
+
+        <h2>ルール</h2>
+        <section>
+            <ul>
+                <li>
+                    競技開始と同時に複数の問題が提示されます。
+                </li>
+                <li>
+                    制限時間内に1点でも多く得点した人が上の順位になるルールです。
+                </li>
+                <li>
+                    得点が同じ場合には、より早く解いた人が上の順位になります。
+                </li>
+                <li>
+                    必ず個人で参加する必要があります。2人以上で結託し、解答する行為は禁止しております。
+                </li>
+                <li>
+                    予選・本戦の最中に、問題に関する言及、解答ソースコードの公開などは禁止です。
+                </li>
+                <li>
+                    その他ルールの詳細はAtCoderに準じますが、不正解の回答を提出してもペナルティはありません。
+                </li>
+            </ul>
+        </section>
+
+        <hr/>
+
+        <h2>初めての方へ</h2>
+        <section>
+            <p>
+                Atcoderを初めてご利用になる方は、<a href="https://practice.contest.atcoder.jp/" target="_blank">練習ページ</a>にてソースコード提出の練習をされることを強く薦めます。
+            </p>
+            <p>
+                特に、<span style="color:darkred; font-weight: bold;">Java</span>を使用する予定の方は、以下の諸注意に気をつけてください。
+            </p>
+            <ul>
+                <li>
+                    ソースコードのクラス名は<code>Main</code>で宣言してください。先頭が小文字の<code>main</code>など、それ以外のクラス名で宣言しないでください。それゆえ、あなたはファイル名を<code>Main.java</code>とし、コーディングする必要があります。
+                </li>
+                <li>
+                    独自に作成した<span style="color:darkred; font-weight: bold;">package</span>を使用しないでください。なぜならば、我々のシステムがJavaを実行するコマンドは<code>java
+                    {filename}</code>だからです。
+                </li>
+            </ul>
+        </section>
+
+        <hr/>
+
+        <h2>使用可能なプログラミング言語</h2>
+        <section>
+            <p>
+                <a href="/faq#about_Language" target="_blank">使用可能な言語情報</a> を参照してください。
+            </p>
+        </section>
+
+        <hr/>
+
+        <h2>ジャッジステータス</h2>
+        <section>
+            <p>
+                ユーザが提出したプログラムはジャッジシステムによって評価されます。以下でシステムが返すステータス（状態）について説明します。
+            </p>
+            <table class="table table-bordered table-striped table-wb table-center">
+                <thead>
+                <tr>
+                    <th class="span2 table-center">
+                        Status
+                    </th>
+                    <th class="span10">
+                        Explanation
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                <span class="label tooltip-label" rel="tooltip" data-title="Wrong for Judging"
+                      data-original-title="">WJ</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Waiting for Judging. 提出したプログラムはジャッジを待っている状態です。
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                <span class="label tooltip-label label-warning" rel="tooltip" data-title="Compilation Error"
+                      data-original-title="">CE</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Compilation Error. 提出されたプログラムのコンパイルに失敗しました。
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                <span class="label tooltip-label label-warning" rel="tooltip" data-title="Memory Limit Exceeded"
+                      data-original-title="">MLE</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Memory Limit Exceeded. 問題で指定されたメモリ制限を超えています。
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                <span class="label tooltip-label label-warning" rel="tooltip" data-title="Time Limit Exceeded"
+                      data-original-title="">TLE</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Time Limit Exceeded. 問題で指定された実行時間以内にプログラムが終了しませんでした。
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                <span class="label tooltip-label label-warning" rel="tooltip" data-title="Runtime Error"
+                      data-original-title="">RE</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Runtime Error. プログラムの実行中にエラーが発生しました。コンパイル時に検知できなかったエラーがあります。スタックオーバーフロー、ゼロ除算などが原因です。
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                <span class="label tooltip-label label-warning" rel="tooltip" data-title="Output Limit Exceeded"
+                      data-original-title="">OLE</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Output Limit Exceeded. 問題で指定された制限を超えるサイズの出力を行いました。
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                <span class="label tooltip-label label-warning" rel="tooltip" data-title="Internal Error"
+                      data-original-title="">IE</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Internal Error. 内部のエラー、つまりジャッジシステムのエラーです。
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                <span class="label tooltip-label label-warning" rel="tooltip" data-title="Wrong Answer"
+                      data-original-title="">WA</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Wrong Answer. 誤答です。提出したプログラムの出力は正しくありません。
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                <span class="label label-success tooltip-label" rel="tooltip" data-title="Accepted"
+                      data-original-title="">AC</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Accepted ! 正答です。提出したプログラムは正しいことが保証されました。
+                        </article>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <p>
+                <span class="label label-success">AC</span>が正解を示す唯一のステータスです.
+            </p>
+        </section>
+    </span>
+    <span class="lang-en">
+        <h2>Information</h2>
+        <section>
+            <p>
+                Page now available.(2017/09/28)
+            </p>
+        </section>
+
+        <hr/>
+
+        <h2>Event outline</h2>
+        <section>
+            <p>
+                CODE FESTIVAL is a two-day programming contest (procon) enabling 100 participants to enjoy programming and algorithms to their hearts' content.
+            </p>
+            <p>
+                A chance to compete, learn, play, network and more: enjoy the event in your own style! This is a procon where everyone can have fun, regardless of programming experience. Enter and discover for yourself.
+            </p>
+        </section>
+
+        <hr/>
+        <h2>Caution</h2>
+            <section>
+                <p>
+                    Please be sure to register from <a href="https://code-festival-2017-qualb.contest.atcoder.jp">https://code-festival-2017-qualb.contest.atcoder.jp</a>.
+	        </p>
+	        <p>
+                    You can't register at beta version.
+	        </p>
+            </section>
+        <hr />
+        <h2>CODE FESTIVAL 2017</h2>
+        <section>
+            <p style="font-size: larger">
+                CODE FESTIVAL
+            </p>
+            <ul>
+                <li>
+                    Dates: Morning of Sat. 25 to evening of Sun. 26 November 2017.
+                </li>
+                <li>
+                    Participants: 100
+                </li>
+                <li>
+                    Venue: Akihabara UDX GALLERY (a 2-minute walk from Akihabara Station)
+                </li>
+                <li>
+                    Fares and accommodation: Free of charge!
+                </li>
+            </ul>
+            <p>
+                For more details, please see <a href="http://r.recruit-jinji.jp/code_fes/us/index.html">http://r.recruit-jinji.jp/code_fes/us/index.html</a>.
+            </p>
+        </section>
+
+        <hr/>
+
+        <h2>Qualification contests</h2>
+        <section>
+            <p>
+                Anyone can take part in the qualification contests.
+            </p>
+            <p>
+                Only those fulfilling eligibility requirements will be able to take part in the final.
+            </p>
+            <p>
+                See below for eligibility requirements.
+            </p>
+        </section>
+
+<hr/>
+
+        <h2>Notes about qualification contests</h2>
+        <section>
+            <p>
+                Please check that the ID you entered on your entry form matches the ID issued on AtCoder before completing the qualification contests.
+            </p>
+            <p>
+                If you use a different ID, you will not be able to participate in the final even if you completed the qualification contests yourself.
+            </p>
+            <p>
+                If you registered with the wrong ID or if you wish to take part with a different AtCoder ID from the one on your entry form, please contact rhd_procon@r.recruit.co.jp.
+            </p>
+        </section>
+
+        <hr/>
+
+        <h2>If you cannot log in for the qualification contests because your AtCoder ID is wrong:</h2>
+        <section>
+            <ul>
+                <li>
+                    Send your registered e-mail address to support@atcoder.jp and check your correct ID.
+                </li>
+                <li>
+                    As soon as you know the correct ID, please send the following to rhd_procon@r.recruit.co.jp:
+                </li>
+            </ul>
+            <ol>
+                <li>
+                    The correct ID
+                </li>
+                <li>
+                    Your name
+                </li>
+                <li>
+                    Your telephone number
+                </li>
+            </ol>
+        </section>
+
+        <hr/>
+
+        <h2>Eligibility</h2>
+        <section>
+            <ul>
+                <li>
+                    Must be an applicant.
+                </li>
+                <li>
+                    Must be a student (technical college 4th or 5th year, technical college specialist course, vocational school, junior college, university, graduate school), or have graduated within the last four years but not yet in employment.
+                </li>
+            </ul>
+            <p>
+                Notes:
+            </p>
+            <ol>
+                <li>
+                    Please check that you will fulfill the above conditions as of 25 November 2017.
+                </li>
+                <li>
+                    Those who have done only part time work are regarded as not yet in employment.
+                </li>
+                <li>
+                    Place of residence is irrelevant.
+                </li>
+            </ol>
+
+            <p>
+               For more details, please see <a href="https://r.recruit-jinji.jp/code_fes/us/index.html">https://r.recruit-jinji.jp/code_fes/us/index.html.</a>
+                </li>
+            </ul>
+            
+        </section>
+
+        <hr/>
+
+        <h2>Process for determining those who have passed the qualification contests</h2>
+        <section>
+            <ul>
+                <li>
+                    Step 1: After Qualification Contest B, we will notify the contestants with the top 3 results, who will advance to the final.
+                </li>
+                Note: We plan to notify entrants of Qualification Contest B of the results on October 12. Please advise whether or not you will participate in the final by the deadline indicated in the e-mail. Further details will be included in the e-mail.<br />
+                Please check your e-mail and phone messages regularly. If you receive an e-mail at Step 1 notifying that you have passed, please respond promptly.<br />
+                <li>
+                    Step 2: If contestants who passed Step 1 advise us that they cannot participate in the final, we will contact the contestants with the next-highest results. The process will be the same as for Step 1. Such contestants will be contacted progressively, so please check your e-mail and phone messages regularly.
+                </li>
+            </ul>
+        </section>
+
+        <hr/>
+
+        <h2>Rules</h2>
+        <section>
+            <ul>
+                <li>
+                    You may work on these problems in any order you prefer.
+                </li>
+                <li>
+                    You will not be penalized for giving wrong answers either.
+                </li>
+                <li>
+                    If your score equals to other participants, then winner is decided by time.
+                </li>
+                <li>
+                    You are not allowed to collaborate with other participants or any other third parties to solve the problems.
+                </li>
+                <li>
+                    Available programming languages are to be described later. You may use the standard library for each language.
+                </li>
+            </ul>
+        </section>
+
+        <hr/>
+
+        <h2>For beginners</h2>
+        <section>
+            <p>
+                If you take part in a programming contest for the first time which is held on AtCoder, we make a strong recommendation to you to practice how to submit your source code on AtCoder using <a href="https://practice.contest.atcoder.jp/" target="_blank">Practice Page</a>.
+            </p>
+            <p>
+                Especially, if you are going to use <span style="color:darkred; font-weight: bold;">Java</span> , you must see points to notice bellow.
+            </p>
+            <ul>
+                <li>
+                    The class name of your source code has to declared as <code>Main</code>. Not to declared as <code>main</code> and any other class name. For this reason, the file name of yours also designated as <code>Main</code>.
+                </li>
+                <li>
+                    You don't allow to use your <span style="color:darkred; font-weight: bold;">package</span>. Because the execution command on our system for Java is <code>java {filename}</code>.
+                </li>
+            </ul>
+        </section>
+
+        <hr/>
+
+        <h2>Programming language</h2>
+        <section>
+            <p>
+                You are allowed to use <a href="/faq#about_Language" target="_blank">these programming languages.</a>
+            </p>
+        </section>
+
+        <hr/>
+
+        <h2>Judge status</h2>
+        <section>
+            <p>
+                Our system judges your source code whether it is correct or incorrect and returns a result of yours.
+            </p>
+            <p>
+                Details are shown below tables. Don't forget to see these information.
+            </p>
+            <table class="table table-bordered table-striped table-wb table-center">
+                <thead>
+                <tr>
+                    <th class="span2 table-center">
+                        Status
+                    </th>
+                    <th class="span10">
+                        Explanation
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <span class="label tooltip-label" rel="tooltip" data-title="Waiting for Judge" data-original-title="">WJ</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Waiting for Judge. Your source code is waiting for judge by the system. Please reload after a while.
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="label tooltip-label label-warning" rel="tooltip" data-title="Compilation Error" data-original-title="">CE</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Compilation Error. Our judge system couldn't compile your code.
+                            So, your source code is incorrect.
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="label tooltip-label label-warning" rel="tooltip" data-title="Memory Limit Exceeded" data-original-title="">MLE</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Memory Limit Exceeded. Each problems are restricted memory limit which your program can use.<br>
+                            That is 256MB usually. Your source code is incorrect because it exceeded the limit.
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="label tooltip-label label-warning" rel="tooltip" data-title="Time Limit Exceeded" data-original-title="">TLE</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Time Limit Exceeded. Each problems have time limit.
+                            If execution time of your code exceeds this limit,<br> the status of judge is TLE. Your source code is incorrect for that reason.
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="label tooltip-label label-warning" rel="tooltip" data-title="Runtime Error" data-original-title="">RE</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Runtime Error. At least an error occurs while the system is executing your source code.<br>
+                            For example, stack overflow and divided by zero.<br>
+                            These errors are can not detect by compiling.
+                            Your source code is incorrect because of the reason.
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="label tooltip-label label-warning" rel="tooltip" data-title="Output Limit Exceeded" data-original-title="">OLE</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Output Limit Exceeded. The data outputted by your code exceeds the designated size of a problem.<br>
+                            Your source code is incorrect.
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="label tooltip-label label-warning" rel="tooltip" data-title="Internal Error" data-original-title="">IE</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Internal Error. This is special case because the error almost exits in our judge system.<br>
+                            Anyway, your source code didn't output a result that is expected correct answer.<br>
+                            Your source code is incorrect.
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="label tooltip-label label-warning" rel="tooltip" data-title="Wrong Answer" data-original-title="">WA</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Wrong Answer. Your source code is incorrect. The code has to output correct result for all cases.
+                        </article>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="label label-success tooltip-label" rel="tooltip" data-title="Accepted" data-original-title="">AC</span>
+                    </td>
+                    <td style="text-align: left">
+                        <article>
+                            Accepted ! Your source code was accepted correctly.
+                        </article>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <p>
+                <span class="label label-success">AC</span> is an only status that means <code>Your source code is correct !</code>.
+            </p>
+        </section>
+    </span>
+</span></div>
+
+
+
+
+
+
+
+    </div>
+
+    <footer>
+      <ul>
+  <li><a href="/personal"><span class="lang"><span class="lang-en">Personal Information</span><span class="lang-ja">個人情報保護方針</span></span></a></li>
+  <li><a href="/tutorial"><span class="lang"><span class="lang-en">Tutorial</span><span class="lang-ja">チュートリアル</span></span></a></li>
+  <li><a href="/rules"><span class="lang"><span class="lang-en">Rules</span><span class="lang-ja">ルール</span></span></a></li>
+  <li><a href="/glossary"><span class="lang"><span class="lang-en">Glossary</span><span class="lang-ja">用語集</span></span></a></li>
+  <li><a href="/faq"><span class="lang"><span class="lang-en">FAQ</span><span class="lang-ja">よくある質問</span></span></a></li>
+</ul>
+<p id="copyright">Powered by <a href="http://atcoder.jp">AtCoder.</a></p>
+    </footer>
+
+    <p id="fixed-server-timer" style="display: none;"></p>
+
+        <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/prettify.js"></script>
+    <script src="/js/lang-vb.js"></script>
+    <script src="/js/lang-hs.js"></script>
+    <script src="/js/varmath.js"></script>
+    <script src="/js/script.js?v=2"></script>
+  </body>
+</html>

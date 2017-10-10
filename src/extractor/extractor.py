@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
 from bs4.element import Comment
@@ -126,17 +127,4 @@ class GeneralExtractor:
 			json.dump(problem, fp)
 
 extr=GeneralExtractor()
-'''
-extr.extract("forces.html","jsons/forces.json")
-extr.extract("chef.html","jsons/chef.json")
-extr.extract("atcoder.html","jsons/atcoder.json")
-extr.extract("spoj.html","jsons/spoj.json")
-extr.extract("dmoj.html","jsons/dmoj.json")
-'''
-extr.extract("a2oj.html","jsons/a2oj.json")
-'''
-extr.extract("csa.html","jsons/csa.json")
-extr.extract("timus.html","jsons/timus.json")
-extr.extract("coj.html","jsons/coj.json")
-extr.extract("uri.html","jsons/uri.json")
-'''
+

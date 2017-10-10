@@ -1,0 +1,32 @@
+                  Username: *     Password: *    Forgot Password               New User                 Site Navigation  PRACTICE Code, Compile & Run  Beginner  Easy  Medium  Hard  Challenge  Peer    COMPETE All Contests  September Cook-Off 2017  September Lunchtime 2017  September Challenge 2017    DISCUSS Forums  Blog  Wiki  Facebook  Twitter    COMMUNITY Goodies Website  SnackDown 2017  CodeChef for Schools  Host your Contest  Go for Gold  Campus Chapter    HELP Frequently Asked Questions  Rating Mechanism  CodeChef Rating (All)  CodeChef Rating (Junior)  FAQ for problem setters  Problem Setting  Tutorials  Event Calendar  Top Contributors on Discuss    ABOUT About CodeChef  Press Room  CEO's Corner  Contact Us  About Directi                Home » Practice(Extcontest) » The Game Of Stacks      The Game Of Stacks Problem Code: CB07                          All submissions for this problem are available. The
+ game of stacks is played among K players as follows: Initially there 
+are N stacks of coins where the i'th stack has X(i) coins. In his turn, 
+each player can choose any stack and remove any number of coins ( 
+greater than 0 ) from it. The player who is not able to pick any coin 
+during his turn will be considered the worst ranked player. The players 
+following him will be ranked 2nd worst, 3rd worst, and so on. You have been asked to play first. You have decided to play the game if 
+and only if your rank is not bound to be the worst assuming that each 
+player plays optimally. You need to output "Play" if your rank is not 
+bound to be the worst, and "Not Play" otherwise. Input  The first line contains the number of test cases T, at most 20, 
+followed by T test cases. Each test case begins on a new line containing
+ the values of N and K, where 1 <= N <= 100,000 and 1 <= K 
+<= 100,000. The next line contains N space separated integers X(1), 
+X(2),..., X(N) where for each i, 1 <= X(i) <= 100,000,000. Output  For each test case in the input, you need to output "Play" if you 
+rank is not bound to be the worst, and "Not Play" otherwise. Print the 
+result of each test case on a new line. Example  Input: 2
+5 3
+1 2 3 4 5
+5 3
+5 6 3 1 6 Output: Play
+Not Play     Author:  2★ moneymachine    Tags:  moneymachine    Date Added:  17-01-2010    Time Limit:  1 secs    Source Limit:  50000 Bytes    Languages:  ADA, ASM, BASH, BF, C, C99 strict, CAML, CLOJ, 
+CLPS, COB, CPP 4.3.2, CPP 6.3, CPP14, CS2, D, ERL, FORT, FS, GO, HASK, 
+ICK, ICON, JAVA, JS, kotlin, LISP clisp, LISP sbcl, LUA, NEM, NICE, 
+NODEJS, PAS fpc, PAS gpc, PERL, PERL6, PHP, PIKE, PRLG, PYPY, PYTH, PYTH
+ 3.5, RUBY, rust, SCALA, SCM chicken, SCM guile, SCM qobi, ST, swift, 
+TEXT, WSPC             All Submissions     Successful Submissions             Comments                 CodeChef is a non-commercial competitive programming community       About CodeChef  About Directi  CEO's Corner  C-Programming  Programming Languages  Contact Us   © 2009 Directi Group . All Rights Reserved. CodeChef uses SPOJ © by Sphere Research Labs In order to report copyright violations of any kind, send in an email to copyright@codechef.com       The time now is: 11:42:07 AM    Your IP: 177.98.212.249                      CodeChef - A Platform for Aspiring Programmers  CodeChef was created as a platform to help programmers make it big in the world of algorithms, computer programming and programming contests . At CodeChef we work hard to revive the geek in you by hosting a programming contest at the start of the month and another smaller programming challenge in 
+the middle of the month. We also aim to have training sessions and 
+discussions related to algorithms , binary search , technicalities like array size and the likes. Apart from providing a platform for programming competitions , CodeChef also has various algorithm tutorials and forum discussions to help those who are new to the world of computer programming .    Practice Section - A Place to hone your 'Computer Programming Skills'  Try your hand at one of our many practice problems and submit your solution in a language of your choice. Our programming contest judge accepts solutions in over 35+ programming languages. Preparing 
+for coding contests were never this much fun! Receive points, and move 
+up through the CodeChef ranks. Use our practice section to better 
+prepare yourself for the multiple programming challenges that take place through-out the month on CodeChef.    Compete - Monthly Programming Contests and Cook-offs  Here is where you can show off your computer programming skills . Take part in our 10 day long monthly coding contest and the shorter format Cook-off coding contest . Put yourself up for recognition and win great prizes. Our programming contests have prizes worth up to INR 20,000 (for Indian Community), $700 (for 
+Global Community) and lots more CodeChef goodies up for grabs.        Programming Tools   Online IDE  Upcoming Coding Contests  Contest Hosting  Problem Setting  CodeChef Tutorials  CodeChef Wiki     Practice Problems   Easy  Medium  Hard  Challenge  Peer  School  FAQ's     Initiatives   Go for Gold  CodeChef for Schools  Campus Chapters               Domain Registration in India and Web Hosting powered by BigRock      

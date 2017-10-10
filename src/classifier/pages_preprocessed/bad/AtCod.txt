@@ -1,0 +1,68 @@
+                              Home  Contest  Ranking              English    日本語  English    Sign up  Sign in           Contest     Active Contests      Start Time  Contest Name      2012/06/25 00:00  practice contest       Recent Contests      Start Time  Contest Name      2017/10/08 21:00  CODE FESTIVAL 2017 qual B    2017/09/30 21:00  Tenka1 Programmer Beginner Contest    2017/09/30 21:00  Tenka1 Programmer Contest    2017/09/23 21:00  CODE FESTIVAL 2017 qual A    2017/09/16 21:00  AtCoder Regular Contest 083    2017/09/16 21:00  AtCoder Beginner Contest 074    2017/09/09 21:00  AtCoder Beginner Contest 073    2017/09/02 21:00  AtCoder Regular Contest 082    2017/09/02 21:00  AtCoder Beginner Contest 072    2017/08/26 21:00  AtCoder Grand Contest 019       view all / Calendar      Ranking          User  Rating      1    tourist  4175    2    Um_nik  3723    3    LHiC  3720    4    w4yneb0t  3710    5    Petr  3645    6    semiexp  3520    7    yutaka1999  3509    8    ksun48  3438    9    cospleermusora  3417    10    endagorion  3414      view all / Hall of Fame      <a href="https://r.recruit-jinji.jp/code_fes/us/" target="_blank"><img src="https://s3-ap-northeast-1.amazonaws.com/img.atcoder.jp/banner/code_festival_2017_eng.png" alt="[PR] CodeFestival 2017" class="img-responsive center-block"></a>     Information   [How to get an account / participate in contests?](http://atcoder.jp/post/2)
+
+[AtCoder's Contest Format](http://atcoder.jp/post/1)      CODE FESTIVAL 2017 Qualification Round B Announcement  posted:      [CODE FESTIVAL 2017 Qualification Round B  ](https://code-festival-2017-qualb.contest.atcoder.jp/) will be held.
+
+- Time：October 8th (Sunday), 21:00 JST
+- Duration: 120 minutes
+- Number of Tasks: 6
+- writer：<a href="/user/maroonrk" class="username"><span class="user-red">maroonrk</span></a>, <a href="/user/snuke" class="username"><span class="user-red">snuke</span></a>, <a href="/user/rng_58" class="username"><span class="user-admin">rng_58</span></a>
+- Rating： all
+- The point values are: 100 - 200 (100) - 500 - 700 - 1600 - 1600.
+
+If you are eligible for the onsite contest, please don't forget to register at https://www.recruit-jinji.jp/recruitment/code_fes/us/index.html. This website also contains various information about the tournament.
+
+We are looking forward to your participation!     last update:                    Tenka1 Programmer Contest announcement  posted:      Two contests [Tenka1 Programmer Contest](https://tenka1-2017.contest.atcoder.jp/) 
+and [Tenka1 Programmer Beginner Contest](https://tenka1-2017-beginner.contest.atcoder.jp/) will be held at the same time.
+Please check http://tenka1.klab.jp/2017/index.html　for details.
+
+You can participate in whichever contest you want.
+ (However, you can't register to both competitions.)
+The last two tasks in ABC are the same as the first two tasks in ARC.
+
+- Time： September 30th (Saturday), [21:00 JST](http://www.timeanddate.com/worldclock/fixedtime.html?iso=20170930T2100&p1=248)
+- Duration: 100 minutes
+- Number of Tasks: 4
+- writer：<a href="/user/DEGwer" class="username"><span class="user-red">DEGwer</span></a> <a href="/user/hasi" class="username"><span class="user-yellow">hasi</span></a>
+- Rating： 0-2799 for Tenka1 Programmer Contest, 0-1199 for Tenka1 Programmer Beginner Contest
+
+The point values will be announced later.
+
+We are looking forward to your participation!     last update:                    CODE FESTIVAL 2017 Qualification Round A   Announcement  posted:      [CODE FESTIVAL 2017 Qualification Round A  ](https://code-festival-2017-quala.contest.atcoder.jp/) will be held.
+
+- Time：September 23th (Saturday), 21:00 JST
+- Duration: 120 minutes
+- Number of Tasks: 6
+- writer： <img src="/public/img/icon/crown3200.gif"></img> <a href="/user/sugim48" class="username"><span class="user-red">sugim48</span></a> and <a href="/user/DEGwer" class="username"><span class="user-red">DEGwer</span></a>
+- Rating： all
+- The point values are: 100 - 200 - 400 - 700 - 1600 - 1600.
+
+If you are eligible for the onsite contest, please don't forget to register at https://www.recruit-jinji.jp/recruitment/code_fes/us/index.html. This website also contains various information about the tournament.
+
+We are looking forward to your participation!     last update:                    AtCoder Regular Contest 083 / Beginner Contest 074 Announcement  posted:      Two contests  [AtCoder Regular Contest 083](https://arc083.contest.atcoder.jp/) and
+ [AtCoder Beginner Contest 074](https://abc074.contest.atcoder.jp/)  will be held at the same time.
+ 
+You can participate in whichever contest you want.
+ (However, you can't register to both competitions.)
+The last two tasks in ABC are the same as the first two tasks in ARC.
+
+- Time： September 16th (Saturday), [21:00 JST](http://www.timeanddate.com/worldclock/fixedtime.html?iso=20170916T2100&p1=248)
+- Duration: 100 minutes
+- Number of Tasks: 4
+- writer：<a href="/user/wo01" class="username"><span class="user-orange">wo01</span></a>
+- Rating： 0-2799 for ARC, 0-1199 for ABC
+
+The point values will be
+
+ABC: 100 - 200 - 300 - 500
+ARC: 300 - 500 - 700 - 1200
+
+We are looking forward to your participation!     last update:                    AtCoder Beginner Contest 073 Announcement  posted:      [AtCoder Beginner Contest 073](https://beta.atcoder.jp/contests/abc073) will be held.
+
+- Time：September 9th (Saturday), 21:00 JST
+- Duration: 100 minutes
+- Number of Tasks: 4
+- writer： <a href="https://atcoder.jp/user/namonakiacc"><span class="user-black">namonakiacc</span></a>
+- Rating： 0-1199
+- The point values are: 100 - 200 - 300 - 400
+
+We are looking forward to your participation!     last update:                     1    2    3    4    5    ...    13               terms of service  privacy policy  Information Protection Policy  company  contact    Copyright 2016 © AtCoder Inc. All rights reserved.      

@@ -1,0 +1,372 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+
+
+
+<title>19. Lock Pattern - A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="default.css" rel="stylesheet" type="text/css" />
+<link href='DroidSansMono.css' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="css/nav.css" />
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+
+<script src="jquery-latest.js"></script>
+
+
+
+</head>
+<body class="no-js">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123446397673080";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tr>
+<td style="vertical-align: bottom;"><a href="/"><img src="logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">&raquo;&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br/>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> & <b><a href="https://www.facebook.com/acmacpc/" target="_blank" style="text-decoration: none;">ACPC</a></b>, <a href="https://www.codechef.com/" target="_blank" style="text-decoration: none;">CodeChef</a> and <a href="http://www.codability.net/" target="_blank" style="text-decoration: none;">Codability</a></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="https://www.facebook.com/plugins/like.php?show_faces=false&href=https://www.facebook.com/A2OnlineJudge"
+	scrolling="no" frameborder="0"
+	style="border:none; height:45px"></iframe>
+</td>
+</tr>
+</table>
+</div>
+
+<div id="header3"><div align="right"><a href="signin?url=%2Fp%3FID%3D19" style="font-size: 15px;">Sign In</a> - <a href="signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+
+        <nav id="topNav">
+          <ul>
+<li><a href="/">Contests</a></li><li><a href="ladders"><font color="red">Ladders</font></a></li><li><a href="ps">Problems</a></li><li><a href="status">Status</a></li><li><a href="categories">Categories</a></li><li><a href="groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><ul><li><center><a href="http://goo.gl/Fq5mru" target="_blank">GCJ Tools</a></center></li><li><center><a href="codes">Source Codes</a></center></li><li><center><a href="finder">Problems Finder</a></center></li><li><center><a href="users">Users</a></center></li><li><center><a href="teams">Teams</a></center></li><li><center><a href="cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="about">About</a></li>
+          </ul>
+        </nav>
+        
+        
+        <script src="js/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+<center>
+<table>
+<tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="page">
+
+<font size="3">
+<center>
+
+
+
+
+
+</center>
+</font>
+
+<center>
+
+
+
+<div style="font-family: 'Droid Sans Mono', sans-serif; font-size: 20px; font-weight: bold;">
+<table>
+<tr style="background: #E0E0E0;">
+<td style="padding: 10px;"><a href="submit?ID=19">Submit</a></td>
+
+<td style="padding: 10px;"><a href="status?Sort=Time&ID=19">Best Submissions</a></td>
+<td style="padding: 10px;"><a href="status?ID=19">All Submissions</a></td>
+
+</tr>
+</table>
+
+<br />
+
+19. Lock Pattern
+
+</div>
+</center>
+<br/><br/>
+
+<div style="font-family: 'Droid Sans Mono', sans-serif; font-size: 19px; font-weight: bold; text-decoration: underline;">
+Problem Statement:
+</div>
+<div style="font-family: 'Droid Sans Mono', sans-serif; font-size: 17px;">
+One of the ways to lock some phones, is the lock pattern. To unlock your phone you have to draw a secret pattern on a grid of some points, the pattern will be some line segments connecting these points. Your phone pattern grid consists of four rows with three points in each row. The following image on the left is the representation of the grid, it can be modeled as a 2D plane with X and Y coordinates for each point, for example the top left point is (1,4) and the bottom right point is (3,1). The image on the right is a valid pattern, which connects the following points in this order: (3,4) (2,4) (1,2) (2,1) (2,2) (3,2) (3,1) (1,3)<br/><br/><center>  <img src="https://a2oj.com/i3?n=19_b.png"/> </center><br/><br/>A valid pattern has the following properties:<br/><br/>- A pattern can be represented using the sequence of points which it's touching for the first time (in the same order of drawing the pattern), a pattern going from (1,1) to (2,2) is not the same as a pattern going from (2,2) to (1,1).<br/><br/>- For every two consecutive points A and B in the pattern representation, if the line segment connecting A and B passes through some other points, these points must be in the sequence also and comes before A and B, otherwise the pattern will be invalid. For example a pattern representation which starts with (3,1) then (1,3) is invalid because the segment passes through (2,2) which didn't appear in the pattern representation before (3,1), and the correct representation for this pattern is (3,1) (2,2) (1,3). But the pattern (2,2) (3,2) (3,1) (1,3) is valid because (2,2) appeared before (3,1).<br/><br/>- In the pattern representation we don't mention the same point more than once, even if the pattern will touch this point again through another valid segment, and each segment in the pattern must be going from a point to another point which the pattern didn't touch before and it might go through some points which already appeared in the pattern.<br/><br/>- The length of a pattern is the sum of the Manhattan distances between every two consecutive points in the pattern representation. The Manhattan distance between two points (X1, Y1) and (X2, Y2) is |X1 &#8722; X2| + |Y1 &#8722; Y2| (where |X| means the absolute value of X). The length of the pattern in the above image is: 1 + 3 + 2 + 1 + 1 + 1 + 4 = 13.<br/><br/>- A pattern must touch at least two points. Unfortunately you forgot your phone's pattern, but you remember the length of the pattern and a set of points S which are not touched by the pattern for sure (the points which are not in S might and might not be touched by the pattern), and you decided to try all the valid patterns which satisfy what you remember. Before doing this, you have to write a program to calculate for you the number of different valid patterns.
+
+</div>
+
+
+
+<br/><br/>
+<div style="font-family: 'Droid Sans Mono', sans-serif; font-size: 19px; font-weight: bold; text-decoration: underline;">
+Input Format:
+</div>
+<div style="font-family: 'Droid Sans Mono', sans-serif; font-size: 17px;">
+Your program will be tested on one or more test cases. The first line of the input will be a single integer T, the number of test cases (1 &#8804; T &#8804; 100). Followed by the test cases, the first line of a test case contains two integers L and N separated by a single space. L (1 &#8804; L &#8804; 1,000) is the length of the pattern (as described above), and N (0 &#8804; N &#8804; 12) is the number of points that you are sure they are not touched by the pattern, followed by N lines each line contains two integers X (1 &#8804; X &#8804; 3) and Y (1 &#8804; Y &#8804; 4) separated by a single space, representing the coordinates of one of the points which are not touched by thc pattern for sure, the N points are distinct.
+
+</div>
+
+<br/><br/>
+<div style="font-family: 'Droid Sans Mono', sans-serif; font-size: 19px; font-weight: bold; text-decoration: underline;">
+Output Format:
+</div>
+<div style="font-family: 'Droid Sans Mono', sans-serif; font-size: 17px;">
+For each test case, if there are no valid patterns according to what you remember, print on a single line &quot;BAD MEMORY&quot; (without the quotes), otherwise print the number of different valid patterns.
+
+</div>
+
+<br/><br/>
+<div style="font-family: 'Droid Sans Mono', sans-serif;  font-size: 19px; font-weight: bold; text-decoration: underline;">
+Sample Input:
+</div>
+<div style="font-family: 'Droid Sans Mono', sans-serif; font-size: 17px; white-space: pre;">3
+1 0
+2 10
+1 1
+1 2
+1 3
+2 1
+2 2
+2 3
+2 4
+3 2
+3 3
+3 4
+1 3
+1 4
+2 4
+3 4
+</div>
+
+<br/><br/>
+<div style="font-family: 'Droid Sans Mono', sans-serif;  font-size: 19px; font-weight: bold; text-decoration: underline;">
+Sample Output:
+</div>
+<div style="font-family: 'Droid Sans Mono', sans-serif; font-size: 17px; white-space: pre;">34
+BAD MEMORY
+24
+</div>
+
+
+
+<br/><br/>
+
+<center>
+<div style="font-family: 'Droid Sans Mono', sans-serif; font-size: 20px; font-weight: bold;">
+<table>
+<tr style="background: #E0E0E0;">
+<td style="padding: 10px;"><a href="submit?ID=19">Submit</a></td>
+
+<td style="padding: 10px;"><a href="status?Sort=Time&ID=19">Best Submissions</a></td>
+<td style="padding: 10px;"><a href="status?ID=19">All Submissions</a></td>
+
+</tr>
+</table>
+</div>
+
+<br /><br /><br />
+
+<div class="fb-comments" data-href="https://a2oj.com/p?ID=19" data-width="800"></div>
+
+</center>
+
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+
+<center>
+<div style="font-family: 'Droid Sans Mono', sans-serif; font-size: 15px;">
+<table>
+<tr>
+<td style="padding-right: 15px; width: 126px;">
+Added by:
+</td>
+<td>
+<a href="profile?Username=abdelkarim">abdelkarim</a>
+</td>
+</tr>
+<tr>
+<td style="padding-right: 15px;">
+Added at:
+</td>
+<td>
+2014-02-22 20:12:58 UTC
+</td>
+</tr>
+<tr>
+<td style="padding-right: 15px;">
+Time Limit:
+</td>
+<td>
+10 seconds
+
+</td>
+</tr>
+<tr>
+<td style="padding-right: 15px;">
+Partial score:
+</td>
+<td>
+No
+</td>
+</tr>
+
+<tr><td style="padding-right: 15px;">Source:</td><td><a href="source?ID=2">ACM Arab Collegiate Programming Contest 2012</a></td></tr>
+
+</table>
+</div>
+</center>
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ &copy; Copyright 2011-2016 <b><a
+	href="https://www.facebook.com/ahmed.aly.tc" target="_blank"
+	style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com" target="_blank" style="text-decoration: none;">Sphere Engine</a>&trade; &copy; by <a href="http://sphere-research.com" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</table>
+</center>
+<!-- end footer -->
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+                             sign in  sign up  forgot              Toggle navigation           PROBLEMS    STATUS    RANKS    DISCUSS    CONTESTS    sign in                Problems  classical  Skyscraper Floors    Status Ranking                SCRAPER - Skyscraper Floors    no tags      What a great idea it is to build skyscrapers! Using not too
+large area of land, which is very expensive in many cities today, the
+skyscrapers offer an extremely large utility area for flats or offices. 
+The only disadvantage is that it takes too long to get to the upper 
+floors. Of course these skyscrapers have to be equiped not only 
+with a stairway but also with several elevators. But even using 
+ordinary elevators is very slow. Just imagine you want to get from 
+the very top floor to the base floor and many other people on other 
+floors want the same. As a result the elevator stops on almost every 
+floor and since its capacity is limited and the elevator is already 
+full from the upper floors, most stops are useless and just cause 
+a delay. If there are more elevators in the skyscrapers, this problem 
+is a little bit eliminated but still not completely. Most people just 
+press all the buttons of all the elevators and then take the first 
+one so that all elevators will stop on the floor anyway. However, the solution exists as we shall see. The Antique Comedians of
+Midilesia headquarters reside in a skyscraper with a very special
+elevator system. The elevators do not stop on every floor but only on
+every X -th floor.
+Moreover each elevator can go just to a certain floor Y (called starting floor) and cannot go any lower. There is one
+high-capacity elevator which can stop on every elevator's starting
+floor. The ACM has a big problem. The headquarters should be moved to
+another office this week, possibly on a different floor. 
+Unfortunately, the high-capacity elevator is
+out of order right now so it is not always possible to go to the base
+floor. One piece of furniture cannot be moved using the stairway because it
+is too large to pass through the stairway door. You are to write
+a program that decides whether it is possible to move a piece of
+furniture from the original office to the other. Input  The input consists of N cases (equal to about 2000). The first line contains only
+one positive integer N . Then follow the cases.
+Each case starts with a line containing four integers F , E , A , B , where F , 1 <= F < 50000000 determines the number of floors in the
+skyscraper (this means that there are floors 0 to F-1 ), E , 0 < E < 100 is the number of elevators and A , B , 0 <= A,B < F are numbers of the
+two floors between which the piece of furniture should be moved. Then
+follow E lines. Each of them contains description of one elevator.
+There are exactly two integers X and Y , X >
+0 , Y >= 0 at
+each line. Y determines, that the elevator starts on the Y -th floor and X determines, that it stops on every X -th floor, eg. for X = 3 , Y = 7 the
+elevator stops on floors 7, 10, 13, 16, etc.). Output  For each case, print exactly one line.
+If floor B is reachable from floor A not using the
+stairway, print the sentence
+' It is possible to move the furniture. ', otherwise print 
+' The furniture cannot be moved. '. Example  Sample input:
+
+2
+22 4 0 6
+3 2
+4 7
+13 6
+10 0
+1000 2 500 777
+2 0
+2 1
+
+Sample output:
+
+It is possible to move the furniture.
+The furniture cannot be moved.  Warning: large Input/Output data, be careful with certain languages    Submit solution!       hide comments                  Shahed Shahriar : 2015-10-06 14:33:47   I got AC in UVa 718 Skyscraper Floors but getting WA here :/  Last edit: 2015-10-06 14:36:31               Submit solution!         Added by: adrian  Date: 2004-06-06  Time limit: 13s  Source limit: 50000B  Memory limit: 1536MB   Cluster:   Cube (Intel G860)    Languages: All  Resource: ACM Central European Programming Contest, Prague 1998                          About | Tutorial | Tools | Clusters | Credits | Jobs | API | Terms    RSS    © Spoj.com. All Rights Reserved. Spoj uses Sphere Engine ™ © by Sphere Research Labs .

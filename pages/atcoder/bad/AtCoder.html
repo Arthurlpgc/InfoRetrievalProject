@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>AtCoder</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/settings.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/username.css">
+	<link rel="shortcut icon" type="image/png" href="/public/img/favicon.png">
+	<script src="/public/js/lib/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/public/js/lib/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/public/js/lib/marked.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" type="text/css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+	<script type="text/x-mathjax-config">MathJax.Hub.Config({messageStyle:"none",tex2jax:{skipTags:["script","noscript","style","textarea","code"],inlineMath:[['$','$'],['\\(','\\)']]}});</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.5.2/jquery.timeago.min.js"></script>
+	
+	<script src="/public/js/share-button.js"></script>
+	<script src="/public/js/blog.js"></script>
+	<script src="/public/js/ga.js"></script>
+</head>
+
+<body>
+<div id="main-div">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+				<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/"></a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="/">Home</a></li>
+				<li><a href="/contest">Contest</a></li>
+				<li><a href="/ranking">Ranking</a></li>
+			</ul>
+			<form class="navbar-form navbar-left" role="search" action="/search/user" method="GET">
+				<div class="form-group input-group input-group-sm" style="margin-top:3px;">
+					<input type="text" class="form-control" name="text" placeholder="User Search">
+					<div class="input-group-btn">
+						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+					</div>
+				</div>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+				
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+						<img src='/public/img/flag-lang/en.png'> English <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="?lang=ja"><img src='/public/img/flag-lang/ja.png'> 日本語</a></li>
+						<li><a href="?lang=en"><img src='/public/img/flag-lang/en.png'> English</a></li>
+					</ul>
+				</li>
+				
+				
+					<li><a href="https://practice.contest.atcoder.jp/register">Sign up</a></li>
+					<li><a href="https://practice.contest.atcoder.jp/login">Sign in</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="panel panel-primary">
+	<div class="panel-heading collapse-heading" data-toggle="collapse" data-target="#collapse-contest">
+		<h3 class="panel-title">
+			Contest
+			<span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span>
+		</h3>
+	</div>
+	<div id="collapse-contest" class="panel-body panel-collapse collapse in">
+		
+			<h4>Active Contests</h4>
+			
+			<div class="table-responsive">
+	<table class="table table-default table-striped table-hover table-condensed" style="margin-bottom:0;">
+		<thead>
+		<tr>
+			<th class="col-sm-4">Start Time</th>
+			<th class="col-sm-8">Contest Name</th>
+		</tr>
+		</thead>
+		<tbody>
+		
+			<tr>
+				<td><small><a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20120625T0000&amp;p1=248" target="_blank">2012/06/25 00:00</a></small></td>
+				<td><small><a href="https://practice.contest.atcoder.jp">practice contest</a></small></td>
+			</tr>
+		
+		</tbody>
+	</table>
+</div>
+		
+		
+		
+			<hr>
+			<h4>Recent Contests</h4>
+			
+			<div class="table-responsive">
+	<table class="table table-default table-striped table-hover table-condensed" style="margin-bottom:0;">
+		<thead>
+		<tr>
+			<th class="col-sm-4">Start Time</th>
+			<th class="col-sm-8">Contest Name</th>
+		</tr>
+		</thead>
+		<tbody>
+		
+			<tr>
+				<td><small><a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20171008T2100&amp;p1=248" target="_blank">2017/10/08 21:00</a></small></td>
+				<td><small><a href="https://code-festival-2017-qualb.contest.atcoder.jp">CODE FESTIVAL 2017 qual B</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20170930T2100&amp;p1=248" target="_blank">2017/09/30 21:00</a></small></td>
+				<td><small><a href="https://tenka1-2017-beginner.contest.atcoder.jp">Tenka1 Programmer Beginner Contest</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20170930T2100&amp;p1=248" target="_blank">2017/09/30 21:00</a></small></td>
+				<td><small><a href="https://tenka1-2017.contest.atcoder.jp">Tenka1 Programmer Contest</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20170923T2100&amp;p1=248" target="_blank">2017/09/23 21:00</a></small></td>
+				<td><small><a href="https://code-festival-2017-quala.contest.atcoder.jp">CODE FESTIVAL 2017 qual A</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20170916T2100&amp;p1=248" target="_blank">2017/09/16 21:00</a></small></td>
+				<td><small><a href="https://arc083.contest.atcoder.jp">AtCoder Regular Contest 083</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20170916T2100&amp;p1=248" target="_blank">2017/09/16 21:00</a></small></td>
+				<td><small><a href="https://abc074.contest.atcoder.jp">AtCoder Beginner Contest 074</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20170909T2100&amp;p1=248" target="_blank">2017/09/09 21:00</a></small></td>
+				<td><small><a href="https://abc073.contest.atcoder.jp">AtCoder Beginner Contest 073</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20170902T2100&amp;p1=248" target="_blank">2017/09/02 21:00</a></small></td>
+				<td><small><a href="https://arc082.contest.atcoder.jp">AtCoder Regular Contest 082</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20170902T2100&amp;p1=248" target="_blank">2017/09/02 21:00</a></small></td>
+				<td><small><a href="https://abc072.contest.atcoder.jp">AtCoder Beginner Contest 072</a></small></td>
+			</tr>
+		
+			<tr>
+				<td><small><a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20170826T2100&amp;p1=248" target="_blank">2017/08/26 21:00</a></small></td>
+				<td><small><a href="https://agc019.contest.atcoder.jp">AtCoder Grand Contest 019</a></small></td>
+			</tr>
+		
+		</tbody>
+	</table>
+</div>
+		
+		<br>
+		<p><a href="/contest" class="more-link">view all</a> / <a href="/calendar" class="more-link">Calendar</a></p>
+	</div>
+</div>
+			<div class="panel panel-primary">
+	<div class="panel-heading collapse-heading" data-toggle="collapse" data-target="#collapse-ranking">
+		<h3 class="panel-title">
+			Ranking
+			<span class="glyphicon pull-right"></span>
+		</h3>
+	</div>
+	<div id="collapse-ranking" class="panel-body panel-collapse collapse in">
+		<div class="table-responsive">
+			<table class="table table-default table-striped table-hover table-condensed">
+				<thead>
+					<tr>
+						<th class="col-sm-1"></th>
+						<th class="col-sm-8">User</th>
+						<th class="col-sm-3">Rating</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					<tr>
+						<td>1</td>
+						<td><img src='/public/img/flag/BY.png'> <img src='/public/img/icon/crown4000.gif'> <a href='/user/tourist' class='username'><span class='user-red'>tourist</span></a></td>
+						<td>4175</td>
+					</tr>
+					
+					<tr>
+						<td>2</td>
+						<td><img src='/public/img/flag/RU.png'> <img src='/public/img/icon/crown3600.gif'> <a href='/user/Um_nik' class='username'><span style='color:#08E8DE;'>Um_nik</span></a></td>
+						<td>3723</td>
+					</tr>
+					
+					<tr>
+						<td>3</td>
+						<td><img src='/public/img/flag/RU.png'> <img src='/public/img/icon/crown3600.gif'> <a href='/user/LHiC' class='username'><span class='user-red'>LHiC</span></a></td>
+						<td>3720</td>
+					</tr>
+					
+					<tr>
+						<td>4</td>
+						<td><img src='/public/img/flag/CH.png'> <img src='/public/img/icon/crown3600.gif'> <a href='/user/w4yneb0t' class='username'><span class='user-red'>w4yneb0t</span></a></td>
+						<td>3710</td>
+					</tr>
+					
+					<tr>
+						<td>5</td>
+						<td><img src='/public/img/flag/RU.png'> <img src='/public/img/icon/crown3600.gif'> <a href='/user/Petr' class='username'><span class='user-red'>Petr</span></a></td>
+						<td>3645</td>
+					</tr>
+					
+					<tr>
+						<td>6</td>
+						<td><img src='/public/img/flag/JP.png'> <img src='/public/img/icon/crown3200.gif'> <a href='/user/semiexp' class='username'><span style='color:#92D050;'>semiexp</span></a></td>
+						<td>3520</td>
+					</tr>
+					
+					<tr>
+						<td>7</td>
+						<td><img src='/public/img/flag/JP.png'> <img src='/public/img/icon/crown3200.gif'> <a href='/user/yutaka1999' class='username'><span class='user-red'>yutaka1999</span></a></td>
+						<td>3509</td>
+					</tr>
+					
+					<tr>
+						<td>8</td>
+						<td><img src='/public/img/flag/CA.png'> <img src='/public/img/icon/crown3200.gif'> <a href='/user/ksun48' class='username'><span class='user-red'>ksun48</span></a></td>
+						<td>3438</td>
+					</tr>
+					
+					<tr>
+						<td>9</td>
+						<td><img src='/public/img/flag/RU.png'> <img src='/public/img/icon/crown3200.gif'> <a href='/user/cospleermusora' class='username'><span class='user-red'>cospleermusora</span></a></td>
+						<td>3417</td>
+					</tr>
+					
+					<tr>
+						<td>10</td>
+						<td><img src='/public/img/flag/RU.png'> <img src='/public/img/icon/crown3200.gif'> <a href='/user/endagorion' class='username'><span class='user-red'>endagorion</span></a></td>
+						<td>3414</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+		<p><a href="/ranking" class="more-link">view all</a> / <a href="/hof" class="more-link">Hall of Fame</a></p>
+	</div>
+</div>
+		</div>
+
+		<div class="col-sm-8">
+			
+				
+				
+<div class="text-center blog-post">&lt;a href=&#34;https://r.recruit-jinji.jp/code_fes/us/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://s3-ap-northeast-1.amazonaws.com/img.atcoder.jp/banner/code_festival_2017_eng.png&#34; alt=&#34;[PR] CodeFestival 2017&#34; class=&#34;img-responsive center-block&#34;&gt;&lt;/a&gt;</div>
+<br>
+
+			
+				
+				
+<div class="panel panel-info">
+	<div class="panel-heading post-heading">
+		<h3 class="panel-title"><a href="/post/10">Information</a></h3>
+		
+	</div>
+	<div class="panel-body blog-post">[How to get an account / participate in contests?](http://atcoder.jp/post/2)
+
+[AtCoder&#39;s Contest Format](http://atcoder.jp/post/1)
+</div>
+	
+</div>
+<script>
+$(function(){$('[data-toggle="tooltip"]').each(function(){
+var unix=parseInt($(this).attr('title'),10);if(1400000000<=unix&&unix<=5000000000){var date=new Date(unix*1000);$(this).attr('title',date.toLocaleString());}
+$(this).tooltip();});});
+</script>
+
+			
+			
+				
+				
+<div class="panel panel-default">
+	<div class="panel-heading post-heading">
+		<h3 class="panel-title"><a href="/post/155">CODE FESTIVAL 2017 Qualification Round B Announcement</a></h3>
+		
+			<small>posted:
+				<span aria-hidden="true" data-html="true" data-toggle="tooltip" data-placement="right" title="1507367429">
+					<time class="timeago" datetime="2017/10/07 18:10"></time>
+				</span>
+			</small>
+		
+	</div>
+	<div class="panel-body blog-post">[CODE FESTIVAL 2017 Qualification Round B  ](https://code-festival-2017-qualb.contest.atcoder.jp/) will be held.
+
+- Time：October 8th (Sunday), 21:00 JST
+- Duration: 120 minutes
+- Number of Tasks: 6
+- writer：&lt;a href=&#34;/user/maroonrk&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-red&#34;&gt;maroonrk&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/user/snuke&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-red&#34;&gt;snuke&lt;/span&gt;&lt;/a&gt;, &lt;a href=&#34;/user/rng_58&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-admin&#34;&gt;rng_58&lt;/span&gt;&lt;/a&gt;
+- Rating： all
+- The point values are: 100 - 200 (100) - 500 - 700 - 1600 - 1600.
+
+If you are eligible for the onsite contest, please don&#39;t forget to register at https://www.recruit-jinji.jp/recruitment/code_fes/us/index.html. This website also contains various information about the tournament.
+
+We are looking forward to your participation!</div>
+	
+		<div class="panel-footer post-footer">
+			<div class="row">
+				<div class="col-xs-7">
+					<small>last update:
+						<span aria-hidden="true" data-html="true" data-toggle="tooltip" data-placement="right" title="1507371839">
+							<time class="timeago" datetime="2017/10/07 19:23"></time>
+						</span>
+					</small>
+				</div>
+				<div class="col-xs-5">
+					<div class="pull-right">
+						<a class="share-button" target="_blank" onclick="share_button('facebook','/post/155','CODE FESTIVAL 2017 Qualification Round B Announcement',600,400)" style="background-image:url(/public/img/share/facebook.png);"></a>
+						<a class="share-button" target="_blank" onclick="share_button('twitter','/post/155','CODE FESTIVAL 2017 Qualification Round B Announcement',512,256)" style="background-image:url(/public/img/share/twitter.png);"></a>
+						<a class="share-button" target="_blank" onclick="share_button('google_plus','/post/155','CODE FESTIVAL 2017 Qualification Round B Announcement',512,450)" style="background-image:url(/public/img/share/google.png);"></a>
+						<a class="share-button" target="_blank" onclick="share_button('hatena','/post/155','CODE FESTIVAL 2017 Qualification Round B Announcement',512,360)" style="background-image:url(/public/img/share/hatena.png);"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</div>
+<script>
+$(function(){$('[data-toggle="tooltip"]').each(function(){
+var unix=parseInt($(this).attr('title'),10);if(1400000000<=unix&&unix<=5000000000){var date=new Date(unix*1000);$(this).attr('title',date.toLocaleString());}
+$(this).tooltip();});});
+</script>
+
+			
+				
+				
+<div class="panel panel-default">
+	<div class="panel-heading post-heading">
+		<h3 class="panel-title"><a href="/post/152">Tenka1 Programmer Contest announcement</a></h3>
+		
+			<small>posted:
+				<span aria-hidden="true" data-html="true" data-toggle="tooltip" data-placement="right" title="1506679318">
+					<time class="timeago" datetime="2017/09/29 19:01"></time>
+				</span>
+			</small>
+		
+	</div>
+	<div class="panel-body blog-post">Two contests [Tenka1 Programmer Contest](https://tenka1-2017.contest.atcoder.jp/) 
+and [Tenka1 Programmer Beginner Contest](https://tenka1-2017-beginner.contest.atcoder.jp/) will be held at the same time.
+Please check http://tenka1.klab.jp/2017/index.html　for details.
+
+You can participate in whichever contest you want.
+ (However, you can&#39;t register to both competitions.)
+The last two tasks in ABC are the same as the first two tasks in ARC.
+
+- Time： September 30th (Saturday), [21:00 JST](http://www.timeanddate.com/worldclock/fixedtime.html?iso=20170930T2100&amp;p1=248)
+- Duration: 100 minutes
+- Number of Tasks: 4
+- writer：&lt;a href=&#34;/user/DEGwer&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-red&#34;&gt;DEGwer&lt;/span&gt;&lt;/a&gt; &lt;a href=&#34;/user/hasi&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-yellow&#34;&gt;hasi&lt;/span&gt;&lt;/a&gt;
+- Rating： 0-2799 for Tenka1 Programmer Contest, 0-1199 for Tenka1 Programmer Beginner Contest
+
+The point values will be announced later.
+
+We are looking forward to your participation!
+</div>
+	
+		<div class="panel-footer post-footer">
+			<div class="row">
+				<div class="col-xs-7">
+					<small>last update:
+						<span aria-hidden="true" data-html="true" data-toggle="tooltip" data-placement="right" title="1506755137">
+							<time class="timeago" datetime="2017/09/30 16:05"></time>
+						</span>
+					</small>
+				</div>
+				<div class="col-xs-5">
+					<div class="pull-right">
+						<a class="share-button" target="_blank" onclick="share_button('facebook','/post/152','Tenka1 Programmer Contest announcement',600,400)" style="background-image:url(/public/img/share/facebook.png);"></a>
+						<a class="share-button" target="_blank" onclick="share_button('twitter','/post/152','Tenka1 Programmer Contest announcement',512,256)" style="background-image:url(/public/img/share/twitter.png);"></a>
+						<a class="share-button" target="_blank" onclick="share_button('google_plus','/post/152','Tenka1 Programmer Contest announcement',512,450)" style="background-image:url(/public/img/share/google.png);"></a>
+						<a class="share-button" target="_blank" onclick="share_button('hatena','/post/152','Tenka1 Programmer Contest announcement',512,360)" style="background-image:url(/public/img/share/hatena.png);"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</div>
+<script>
+$(function(){$('[data-toggle="tooltip"]').each(function(){
+var unix=parseInt($(this).attr('title'),10);if(1400000000<=unix&&unix<=5000000000){var date=new Date(unix*1000);$(this).attr('title',date.toLocaleString());}
+$(this).tooltip();});});
+</script>
+
+			
+				
+				
+<div class="panel panel-default">
+	<div class="panel-heading post-heading">
+		<h3 class="panel-title"><a href="/post/149">CODE FESTIVAL 2017 Qualification Round A   Announcement</a></h3>
+		
+			<small>posted:
+				<span aria-hidden="true" data-html="true" data-toggle="tooltip" data-placement="right" title="1506078723">
+					<time class="timeago" datetime="2017/09/22 20:12"></time>
+				</span>
+			</small>
+		
+	</div>
+	<div class="panel-body blog-post">[CODE FESTIVAL 2017 Qualification Round A  ](https://code-festival-2017-quala.contest.atcoder.jp/) will be held.
+
+- Time：September 23th (Saturday), 21:00 JST
+- Duration: 120 minutes
+- Number of Tasks: 6
+- writer： &lt;img src=&#34;/public/img/icon/crown3200.gif&#34;&gt;&lt;/img&gt; &lt;a href=&#34;/user/sugim48&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-red&#34;&gt;sugim48&lt;/span&gt;&lt;/a&gt; and &lt;a href=&#34;/user/DEGwer&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-red&#34;&gt;DEGwer&lt;/span&gt;&lt;/a&gt;
+- Rating： all
+- The point values are: 100 - 200 - 400 - 700 - 1600 - 1600.
+
+If you are eligible for the onsite contest, please don&#39;t forget to register at https://www.recruit-jinji.jp/recruitment/code_fes/us/index.html. This website also contains various information about the tournament.
+
+We are looking forward to your participation!</div>
+	
+		<div class="panel-footer post-footer">
+			<div class="row">
+				<div class="col-xs-7">
+					<small>last update:
+						<span aria-hidden="true" data-html="true" data-toggle="tooltip" data-placement="right" title="1506099078">
+							<time class="timeago" datetime="2017/09/23 01:51"></time>
+						</span>
+					</small>
+				</div>
+				<div class="col-xs-5">
+					<div class="pull-right">
+						<a class="share-button" target="_blank" onclick="share_button('facebook','/post/149','CODE FESTIVAL 2017 Qualification Round A   Announcement',600,400)" style="background-image:url(/public/img/share/facebook.png);"></a>
+						<a class="share-button" target="_blank" onclick="share_button('twitter','/post/149','CODE FESTIVAL 2017 Qualification Round A   Announcement',512,256)" style="background-image:url(/public/img/share/twitter.png);"></a>
+						<a class="share-button" target="_blank" onclick="share_button('google_plus','/post/149','CODE FESTIVAL 2017 Qualification Round A   Announcement',512,450)" style="background-image:url(/public/img/share/google.png);"></a>
+						<a class="share-button" target="_blank" onclick="share_button('hatena','/post/149','CODE FESTIVAL 2017 Qualification Round A   Announcement',512,360)" style="background-image:url(/public/img/share/hatena.png);"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</div>
+<script>
+$(function(){$('[data-toggle="tooltip"]').each(function(){
+var unix=parseInt($(this).attr('title'),10);if(1400000000<=unix&&unix<=5000000000){var date=new Date(unix*1000);$(this).attr('title',date.toLocaleString());}
+$(this).tooltip();});});
+</script>
+
+			
+				
+				
+<div class="panel panel-default">
+	<div class="panel-heading post-heading">
+		<h3 class="panel-title"><a href="/post/147">AtCoder Regular Contest 083 / Beginner Contest 074 Announcement</a></h3>
+		
+			<small>posted:
+				<span aria-hidden="true" data-html="true" data-toggle="tooltip" data-placement="right" title="1505486929">
+					<time class="timeago" datetime="2017/09/15 23:48"></time>
+				</span>
+			</small>
+		
+	</div>
+	<div class="panel-body blog-post">Two contests  [AtCoder Regular Contest 083](https://arc083.contest.atcoder.jp/) and
+ [AtCoder Beginner Contest 074](https://abc074.contest.atcoder.jp/)  will be held at the same time.
+ 
+You can participate in whichever contest you want.
+ (However, you can&#39;t register to both competitions.)
+The last two tasks in ABC are the same as the first two tasks in ARC.
+
+- Time： September 16th (Saturday), [21:00 JST](http://www.timeanddate.com/worldclock/fixedtime.html?iso=20170916T2100&amp;p1=248)
+- Duration: 100 minutes
+- Number of Tasks: 4
+- writer：&lt;a href=&#34;/user/wo01&#34; class=&#34;username&#34;&gt;&lt;span class=&#34;user-orange&#34;&gt;wo01&lt;/span&gt;&lt;/a&gt;
+- Rating： 0-2799 for ARC, 0-1199 for ABC
+
+The point values will be
+
+ABC: 100 - 200 - 300 - 500
+ARC: 300 - 500 - 700 - 1200
+
+We are looking forward to your participation!
+</div>
+	
+		<div class="panel-footer post-footer">
+			<div class="row">
+				<div class="col-xs-7">
+					<small>last update:
+						<span aria-hidden="true" data-html="true" data-toggle="tooltip" data-placement="right" title="1505486929">
+							<time class="timeago" datetime="2017/09/15 23:48"></time>
+						</span>
+					</small>
+				</div>
+				<div class="col-xs-5">
+					<div class="pull-right">
+						<a class="share-button" target="_blank" onclick="share_button('facebook','/post/147','AtCoder Regular Contest 083 \/ Beginner Contest 074 Announcement',600,400)" style="background-image:url(/public/img/share/facebook.png);"></a>
+						<a class="share-button" target="_blank" onclick="share_button('twitter','/post/147','AtCoder Regular Contest 083 \/ Beginner Contest 074 Announcement',512,256)" style="background-image:url(/public/img/share/twitter.png);"></a>
+						<a class="share-button" target="_blank" onclick="share_button('google_plus','/post/147','AtCoder Regular Contest 083 \/ Beginner Contest 074 Announcement',512,450)" style="background-image:url(/public/img/share/google.png);"></a>
+						<a class="share-button" target="_blank" onclick="share_button('hatena','/post/147','AtCoder Regular Contest 083 \/ Beginner Contest 074 Announcement',512,360)" style="background-image:url(/public/img/share/hatena.png);"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</div>
+<script>
+$(function(){$('[data-toggle="tooltip"]').each(function(){
+var unix=parseInt($(this).attr('title'),10);if(1400000000<=unix&&unix<=5000000000){var date=new Date(unix*1000);$(this).attr('title',date.toLocaleString());}
+$(this).tooltip();});});
+</script>
+
+			
+				
+				
+<div class="panel panel-default">
+	<div class="panel-heading post-heading">
+		<h3 class="panel-title"><a href="/post/146">AtCoder Beginner Contest 073 Announcement</a></h3>
+		
+			<small>posted:
+				<span aria-hidden="true" data-html="true" data-toggle="tooltip" data-placement="right" title="1504865829">
+					<time class="timeago" datetime="2017/09/08 19:17"></time>
+				</span>
+			</small>
+		
+	</div>
+	<div class="panel-body blog-post">[AtCoder Beginner Contest 073](https://beta.atcoder.jp/contests/abc073) will be held.
+
+- Time：September 9th (Saturday), 21:00 JST
+- Duration: 100 minutes
+- Number of Tasks: 4
+- writer： &lt;a href=&#34;https://atcoder.jp/user/namonakiacc&#34;&gt;&lt;span class=&#34;user-black&#34;&gt;namonakiacc&lt;/span&gt;&lt;/a&gt;
+- Rating： 0-1199
+- The point values are: 100 - 200 - 300 - 400
+
+We are looking forward to your participation!</div>
+	
+		<div class="panel-footer post-footer">
+			<div class="row">
+				<div class="col-xs-7">
+					<small>last update:
+						<span aria-hidden="true" data-html="true" data-toggle="tooltip" data-placement="right" title="1504865829">
+							<time class="timeago" datetime="2017/09/08 19:17"></time>
+						</span>
+					</small>
+				</div>
+				<div class="col-xs-5">
+					<div class="pull-right">
+						<a class="share-button" target="_blank" onclick="share_button('facebook','/post/146','AtCoder Beginner Contest 073 Announcement',600,400)" style="background-image:url(/public/img/share/facebook.png);"></a>
+						<a class="share-button" target="_blank" onclick="share_button('twitter','/post/146','AtCoder Beginner Contest 073 Announcement',512,256)" style="background-image:url(/public/img/share/twitter.png);"></a>
+						<a class="share-button" target="_blank" onclick="share_button('google_plus','/post/146','AtCoder Beginner Contest 073 Announcement',512,450)" style="background-image:url(/public/img/share/google.png);"></a>
+						<a class="share-button" target="_blank" onclick="share_button('hatena','/post/146','AtCoder Beginner Contest 073 Announcement',512,360)" style="background-image:url(/public/img/share/hatena.png);"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+</div>
+<script>
+$(function(){$('[data-toggle="tooltip"]').each(function(){
+var unix=parseInt($(this).attr('title'),10);if(1400000000<=unix&&unix<=5000000000){var date=new Date(unix*1000);$(this).attr('title',date.toLocaleString());}
+$(this).tooltip();});});
+</script>
+
+			
+			
+			<div class="text-center">
+	<ul class="pagination pagination-sm">
+		
+			
+				<li class="active">
+			
+
+			
+				<a href="/?p=1">1</a>
+			
+			</li>
+		
+			
+				<li>
+			
+
+			
+				<a href="/?p=2">2</a>
+			
+			</li>
+		
+			
+				<li>
+			
+
+			
+				<a href="/?p=3">3</a>
+			
+			</li>
+		
+			
+				<li>
+			
+
+			
+				<a href="/?p=4">4</a>
+			
+			</li>
+		
+			
+				<li>
+			
+
+			
+				<a href="/?p=5">5</a>
+			
+			</li>
+		
+			
+				<li>
+			
+
+			
+				<a href="#">...</a>
+			
+			</li>
+		
+			
+				<li>
+			
+
+			
+				<a href="/?p=13">13</a>
+			
+			</li>
+		
+	</ul>
+</div>
+
+		</div>
+	</div>
+</div>
+<script>convert_posts();</script>
+<script>
+$(document).ready(function(){
+	if($(window).width()<768){$('.panel-collapse').removeClass('in').collapse('hide');}
+	$('.panel-heading').click(function(){$($(this).attr('data-target')).collapse('toggle');});
+});
+</script>
+
+
+<hr>
+</div> 
+<div class="container">
+	<footer class="footer" style="margin-bottom: 20px;">
+		<ul>
+			<li><a href="/tos">terms of service</a></li>
+			<li><a href="/privacy">privacy policy</a></li>
+			<li><a href="/personal">Information Protection Policy</a></li>
+			<li><a href="/company">company</a></li>
+			<li><a href="/contact">contact</a></li>
+		</ul>
+		<div class="row text-center">
+			<small id="copyright" class="col-sm-12">Copyright 2016 &copy;<a href="http://atcoder.co.jp">AtCoder Inc.</a> All rights reserved.</small>
+		</div>
+	</footer>
+</div>
+<script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

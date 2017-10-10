@@ -1,0 +1,10 @@
+                          A 2 Online Judge  »     by Ahmed Aly   Sponsored by Coach Academy & ACPC , CodeChef and Codability         Sign In - Sign Up      Contests Ladders Problems Status Categories Groups More GCJ Tools Source Codes Problems Finder Users Teams Cumulative Rank About                                    Submit  Best Submissions  All Submissions    1. Omar    Problem Statement:   If you are here because of A2OJ Code Battle, please sign up for the tournament here . Input Format: Your program will be tested on one or more test cases. The first line of the input will be a single integer T, the number of test cases (1 ≤ T ≤ 100). Followed by the test cases, each test case is described in one line which contains 2 integers separated by a single space X Y (1 ≤ X,Y ≤ 100). X and Y are the 2 numbers which you should print the sum of them. Output Format: For each test case, print a single line contains a single integer which is the sum of X and Y. Sample Input: 5
+22 12
+23 12
+1 1
+2 3
+100 100 Sample Output: 34
+35
+2
+5
+200 Notes:   (Omar after winning the ACM ACPC Regional Contest 2013)      Submit  Best Submissions  All Submissions            Added by:   ahmed_aly     Added at:  2014-02-21 09:24:26 UTC    Time Limit:  2-3 second(s)    Partial score:  No         A2OJ © Copyright 2011-2016 Ahmed Aly All Rights Reserved. A2OJ uses Sphere Engine ™ © by Sphere Research Labs . 

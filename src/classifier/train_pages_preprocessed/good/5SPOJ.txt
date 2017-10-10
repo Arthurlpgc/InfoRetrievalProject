@@ -1,0 +1,23 @@
+                             sign in  sign up  forgot              Toggle navigation           PROBLEMS    STATUS    RANKS    DISCUSS    CONTESTS    sign in                Problems  classical  Hash it!    Status Ranking                HASHIT - Hash it!    #hash-table  #hashing      Your task is to calculate the result of the hashing process in a table of 101 elements, containing keys that are strings of length at most 15 letters (ASCII codes ' A ',...,' z '). 
+Implement the following operations:   find the index of the element defined by the key (ignore, if no such element), insert a new key into the table (ignore insertion of the key that already exists), delete a key from the table (without moving the others),
+by marking the position in table as empty (ignore non-existing keys in the table)  When performing find, insert and delete operations define the following function:  integer Hash(string key) , which for a string key = a 1 a n Hash key h key h key a 1 a n n Hash key j 2 j j Input  t [the number of test cases <= 100] n 1 [the number of operations (one per line)[<= 1000] ADD:string [or] DEL:string
+[other test cases, without empty lines betwee series] Output For every test case you have to create a new table, insert or delete keys, and write to the output: the number of keys in the table [first line] index:key [sorted by indices] Example Input:
+1
+11
+ADD:marsz
+ADD:marsz
+ADD:Dabrowski
+ADD:z
+ADD:ziemii
+ADD:wloskiej
+ADD:do
+ADD:Polski
+DEL:od
+DEL:do
+DEL:wloskiej Output:
+5
+34:Dabrowski
+46:Polski
+63:marsz
+76:ziemii
+96:z   Submit solution!     hide comments       <  Previous  1  2  3  4  Next  >               Saif : 2017-06-16 13:59:08   Use this test case: 1 5 ADD: ADD:e DEL:e ADD:ee ADD:e         kspoj : 2017-06-16 08:57:40   Guys, I'm stuck, my code is running fine with most spoj toolkit testcases... But I'm getting WA... Spoj toolkit is not showing output ("due to some technical issues") for the following test cases: 1 2 ADD    :   xyz ADD :   abc  Please help _/\_  :(         rishi_devan : 2017-05-01 14:40:08   Straightforward !         cake_is_a_lie : 2017-03-06 14:46:25   Not double inserting existing items can become problematic after deletions, so be careful! Cost me a lot of WAs.         vengatesh15 : 2017-02-13 08:47:28   There should be a blank line after every test case .. that cost me 2WA         samnik : 2017-02-12 07:41:58   can anyone help me   working for test cases but still getting WA here is my code  https://ideone.com/8Sv2Z1  Last edit: 2017-02-12 14:39:39         Bartosz : 2016-10-23 13:15:46   Empty string is also considered to be a valid key, and it have to be put on the position 0. It cost me few WAs to realize that.  Last edit: 2016-10-23 13:43:45         gautam : 2016-08-06 15:40:10   yeah....ac.....!!!!         souravjaiswal : 2016-07-05 20:58:17   guys just use http://spojtoolkit.com/ to get extra test cases.         KD : 2016-06-07 09:06:09   AC after 5 WA ....be careful about the deletion and insertion of same elements multiple time:          Submit solution!         Added by: mima  Date: 2004-06-01  Time limit: 3s  Source limit: 50000B  Memory limit: 1536MB   Cluster:   Cube (Intel G860)    Languages: All except: NODEJS PERL6 VB.NET  Resource: -                         About | Tutorial | Tools | Clusters | Credits | Jobs | API | Terms    RSS    © Spoj.com. All Rights Reserved. Spoj uses Sphere Engine ™ © by Sphere Research Labs .

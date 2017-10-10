@@ -1,0 +1,27 @@
+                             sign in  sign up  forgot              Toggle navigation           PROBLEMS    STATUS    RANKS    DISCUSS    CONTESTS    sign in                Problems  classical  Illumination    Status Ranking                ILLUM - Illumination    #bubble-cup-7-round-2      Two cubes and a light bulb are placed in a three-dimensional euclidean space. You are expected to find out
+if one of them casts shadow on the other one and if so, calculate the area of this shadow.  Input  Multiple test cases. For each test case:  The first line of the input contains the coordinates of the bulb. It is followed
+by two groups of four lines each that describe the cubes. Each line of the
+cube description contains the coordinates of a vertex (see the figure where
+the vertices are marked and labeled in the same order as they are given in the
+input).   All the coordinates are given with 5 digits after decimal point. It is guaranteed that the cubes do not intersect,
+the light bulb is outside both of them, and doesn’t lie on any of the planes that contain their faces. A light
+bulb should be regarded as a point light source.  Input terminates by EOF.  Output  For each test case:  The output should contain a single line with two numbers separated with a space character. The first one is
+the number of the cube that has a shadow on it (1 or 2). The second is the area of the shadow. If none of the given cubes casts shadow on the other the output should contain a single number -1.  Note: if your output has an error with absolute value less than 10 -2 , it will be judged as Accepted. i.e. You may output any number of digits after decimal point.  Example  Input: -1.00000 1.00000 1.00000
+0.00000 0.00000 0.00000
+2.00000 0.00000 0.00000
+0.00000 2.00000 0.00000
+0.00000 0.00000 2.00000
+5.00000 0.00000 0.00000
+7.00000 0.00000 0.00000
+5.00000 2.00000 0.00000
+5.00000 0.00000 2.00000
+0.00000 0.00000 0.00000
+1.00000 1.00000 1.00000
+2.00000 1.00000 1.00000
+1.00000 2.00000 1.00000
+1.00000 1.00000 2.00000
+-1.00000 -1.00000 -1.00000
+-1.00000 -2.00000 -1.00000
+-2.00000 -1.00000 -1.00000
+-1.00000 -1.00000 -2.00000 Output: 2 4.000
+-1    Submit solution!                    Submit solution!         Added by: Fudan University Problem Setters  Date: 2008-04-19  Time limit: 0.5s  Source limit: 50000B  Memory limit: 1536MB   Cluster:   Cube (Intel G860)    Languages: All except: C99 ERL JS-RHINO NODEJS PERL6 VB.NET  Resource: ACM/ICPC NEERC Moscow Subregional Contest 2007                          About | Tutorial | Tools | Clusters | Credits | Jobs | API | Terms    RSS    © Spoj.com. All Rights Reserved. Spoj uses Sphere Engine ™ © by Sphere Research Labs .

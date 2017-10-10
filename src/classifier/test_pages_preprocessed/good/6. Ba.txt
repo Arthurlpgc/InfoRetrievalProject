@@ -1,0 +1,12 @@
+                          A 2 Online Judge  »     by Ahmed Aly   Sponsored by Coach Academy & ACPC , CodeChef and Codability         Sign In - Sign Up      Contests Ladders Problems Status Categories Groups More GCJ Tools Source Codes Problems Finder Users Teams Cumulative Rank About                                    Submit  Best Submissions  All Submissions    6. Balloons Colors    Problem Statement:   If you are here because of A2OJ Code Battle, please sign up for the tournament here . N N N N N X Y N X Y Input Format: Your program will be tested on one or more test cases. The first line of the input will be a single integer T , the number of test cases (1  ≤ T ≤  100). Followed by the test cases, the first line of each test case contains 3 integers separated by a single space N  X  Y (3  ≤ N ≤  100) and (1  ≤ X , Y ≤ N ) representing the number of problems, the color which the easiest problem should not get and the color which the hardest problem should not get, respectively. Followed by a line which contains N integers separated by a single space (each integer from 1 to N should appear exactly once), the first integer is the color for the first problem (the easiest), the second integer is the color for the second problem and so on (the last integer is the color for the hardest problem). Output Format: For each test case, print a single line which contains a single word, this word should be (without the quotes):  - "BOTH": If both the easiest and hardest problems got colors which they should not get.  - "EASY": If only the easiest problem got a color which it should not get.  - "HARD": If only the hardest problem got a color which it should not get.  - "OKAY": If both the easiest and hardest problems got colors which they can get. Sample Input: 4
+3 1 2
+1 3 2
+5 3 4
+3 1 2 4 5
+6 1 6
+2 1 3 4 5 6
+7 7 7
+1 7 2 3 4 5 6 Sample Output: BOTH
+EASY
+HARD
+OKAY     Submit  Best Submissions  All Submissions            Added by:   abdelkarim     Added at:  2014-02-21 23:46:39 UTC    Time Limit:  3 seconds    Partial score:  No   Source: ACM Arab Collegiate Programming Contest 2013        A2OJ © Copyright 2011-2016 Ahmed Aly All Rights Reserved. A2OJ uses Sphere Engine ™ © by Sphere Research Labs . 

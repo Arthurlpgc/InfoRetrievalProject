@@ -1,0 +1,33 @@
+ENG  RUS Timus Online Judge Online Judge Problems Authors Online contests About Online Judge Frequently asked questions Site news Webboard Links Problem set Submit solution Judge status Guide Register Update your info Authors ranklist  Current contest Scheduled contests Past contests Rules 2101. Knight's Shield Time limit: 1.0 second Memory limit: 64 MB Little Peter Ivanov likes to play knights. Or musketeers. Or samurai. It 
+depends on his mood. For parents, it is still always looks like “he again 
+found a stick and peels the trees.” They cannot understand that it is a 
+sword. Or epee. Or katana. Today Peter has found a shield. Actually, it is a board from the fence; 
+fortunately, the nails from it have already been pulled. Peter knows that 
+the family coat of arms should be depicted on the knight’s shield. The 
+coat of arms of Ivanovs is a rectangle inscribed in a triangle (only 
+grandfather supports Peter’s game, and he is, after all, a professor of 
+mathematics). Peter has already drawn the triangle, and then noticed that 
+there is a hole from a nail inside the triangle. It is not very good, so 
+Peter wants to draw a rectangle in such a way that the hole will be on its 
+border. Because of the rectangle in Peter’s family symbolizes the authority and 
+power then Peter wants to draw a rectangle of maximum area. And due to the fact, that Peter is a grandson of 
+grandfather-mathematician, he is also interested in purely theoretical  
+question — how many different rectangles, satisfying the conditions, 
+can be drawn in the triangle. Help Peter to find the answers to these questions. Input The four lines contain the coordinates of four points that are the 
+vertices of the triangle and the hole, respectively. All coordinates are 
+integers and do not exceed 10 4 in absolute value. It is guaranteed 
+that the hole is strictly inside the triangle. Also it is guaranteed that 
+the triangle vertices do not lie on one line. Output In the first line output the maximum area of a rectangle, which Peter can 
+draw. The answer will be considered correct if a relative or absolute 
+error of maximum area does not exceed 10 −6 . In the second line output the number of different rectangles that Peter 
+can draw (these rectangles are not required to have the maximum 
+area). Samples input output 0 0
+10 0
+0 20
+4 6 48.0000000000
+4 -3 0
+2 -1
+5 7
+0 1 9.0697674419
+2 Notes The rectangle is called inscribed in a triangle if all its vertices lie on 
+the sides of the triangle. Problem Author: Alexey Danilyuk Problem Source: Ural FU Junior Championship 2016 Tags: geometry  ( hide tags for unsolved problems ) Difficulty: 1297  Printable version  Submit solution  Discussion (2) All submissions (169)  All accepted submissions (45)  Solutions rating (38) © 2000–2017 Timus Online Judge Team . All rights reserved.

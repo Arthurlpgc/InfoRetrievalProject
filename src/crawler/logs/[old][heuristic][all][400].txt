@@ -1,0 +1,588 @@
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 47
+https://www.codechef.com/: 3
+
+Pages Crawled: 50
+Relevant Pages Found: 45
+Precision: 0.9
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 97
+https://www.codechef.com/: 3
+
+Pages Crawled: 100
+Relevant Pages Found: 95
+Precision: 0.95
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 102
+https://www.codechef.com/: 48
+
+Pages Crawled: 150
+Relevant Pages Found: 145
+Precision: 0.9666666666666667
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 102
+https://www.codechef.com/: 98
+
+Pages Crawled: 200
+Relevant Pages Found: 195
+Precision: 0.975
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 102
+https://www.codechef.com/: 148
+
+Pages Crawled: 250
+Relevant Pages Found: 245
+Precision: 0.98
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 102
+https://www.codechef.com/: 198
+
+Pages Crawled: 300
+Relevant Pages Found: 295
+Precision: 0.9833333333333333
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 102
+https://www.codechef.com/: 248
+
+Pages Crawled: 350
+Relevant Pages Found: 345
+Precision: 0.9857142857142858
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 102
+https://www.codechef.com/: 298
+
+Pages Crawled: 400
+Relevant Pages Found: 395
+Precision: 0.9875
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 102
+https://www.codechef.com/: 348
+
+Pages Crawled: 450
+Relevant Pages Found: 445
+Precision: 0.9888888888888889
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 102
+https://www.codechef.com/: 398
+
+Pages Crawled: 500
+Relevant Pages Found: 495
+Precision: 0.99
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 150
+https://www.codechef.com/: 400
+
+Pages Crawled: 550
+Relevant Pages Found: 541
+Precision: 0.9836363636363636
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 200
+https://www.codechef.com/: 400
+
+Pages Crawled: 600
+Relevant Pages Found: 591
+Precision: 0.985
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 250
+https://www.codechef.com/: 400
+
+Pages Crawled: 650
+Relevant Pages Found: 641
+Precision: 0.9861538461538462
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 300
+https://www.codechef.com/: 400
+
+Pages Crawled: 700
+Relevant Pages Found: 691
+Precision: 0.9871428571428571
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 350
+https://www.codechef.com/: 400
+
+Pages Crawled: 750
+Relevant Pages Found: 741
+Precision: 0.988
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+
+Pages Crawled: 800
+Relevant Pages Found: 791
+Precision: 0.98875
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 50
+
+Pages Crawled: 850
+Relevant Pages Found: 797
+Precision: 0.9376470588235294
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 62
+http://www.spoj.com/: 38
+
+Pages Crawled: 900
+Relevant Pages Found: 836
+Precision: 0.9288888888888889
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 62
+http://www.spoj.com/: 88
+
+Pages Crawled: 950
+Relevant Pages Found: 884
+Precision: 0.9305263157894736
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 62
+http://www.spoj.com/: 138
+
+Pages Crawled: 1000
+Relevant Pages Found: 931
+Precision: 0.931
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 62
+http://www.spoj.com/: 188
+
+Pages Crawled: 1050
+Relevant Pages Found: 969
+Precision: 0.9228571428571428
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 62
+http://www.spoj.com/: 238
+
+Pages Crawled: 1100
+Relevant Pages Found: 985
+Precision: 0.8954545454545455
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 62
+http://www.spoj.com/: 288
+
+Pages Crawled: 1150
+Relevant Pages Found: 985
+Precision: 0.8565217391304348
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 62
+http://www.spoj.com/: 338
+
+Pages Crawled: 1200
+Relevant Pages Found: 994
+Precision: 0.8283333333333334
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 62
+http://www.spoj.com/: 388
+
+Pages Crawled: 1250
+Relevant Pages Found: 1032
+Precision: 0.8256
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 99
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+
+Pages Crawled: 1300
+Relevant Pages Found: 1055
+Precision: 0.8115384615384615
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 149
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+
+Pages Crawled: 1350
+Relevant Pages Found: 1066
+Precision: 0.7896296296296297
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 191
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 6
+http://snackdown15.codechef.com/: 2
+
+Pages Crawled: 1400
+Relevant Pages Found: 1072
+Precision: 0.7657142857142857
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 194
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 50
+http://snackdown15.codechef.com/: 5
+
+Pages Crawled: 1450
+Relevant Pages Found: 1072
+Precision: 0.7393103448275862
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 194
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 100
+http://snackdown15.codechef.com/: 5
+
+Pages Crawled: 1500
+Relevant Pages Found: 1072
+Precision: 0.7146666666666667
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 194
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 150
+http://snackdown15.codechef.com/: 5
+
+Pages Crawled: 1550
+Relevant Pages Found: 1072
+Precision: 0.6916129032258065
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 195
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 183
+http://snackdown15.codechef.com/: 5
+http://acm.timus.ru/: 16
+
+Pages Crawled: 1600
+Relevant Pages Found: 1073
+Precision: 0.670625
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 195
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 183
+http://snackdown15.codechef.com/: 5
+http://acm.timus.ru/: 66
+
+Pages Crawled: 1650
+Relevant Pages Found: 1103
+Precision: 0.6684848484848485
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 195
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 183
+http://snackdown15.codechef.com/: 5
+http://acm.timus.ru/: 116
+
+Pages Crawled: 1700
+Relevant Pages Found: 1152
+Precision: 0.6776470588235294
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 195
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 183
+http://snackdown15.codechef.com/: 5
+http://acm.timus.ru/: 166
+
+Pages Crawled: 1750
+Relevant Pages Found: 1201
+Precision: 0.6862857142857143
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 195
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 183
+http://snackdown15.codechef.com/: 5
+http://acm.timus.ru/: 216
+
+Pages Crawled: 1800
+Relevant Pages Found: 1250
+Precision: 0.6944444444444444
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 195
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 183
+http://snackdown15.codechef.com/: 5
+http://acm.timus.ru/: 266
+
+Pages Crawled: 1850
+Relevant Pages Found: 1300
+Precision: 0.7027027027027027
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 195
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 183
+http://snackdown15.codechef.com/: 5
+http://acm.timus.ru/: 316
+
+Pages Crawled: 1900
+Relevant Pages Found: 1350
+Precision: 0.7105263157894737
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 195
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 183
+http://snackdown15.codechef.com/: 5
+http://acm.timus.ru/: 366
+
+Pages Crawled: 1950
+Relevant Pages Found: 1399
+Precision: 0.7174358974358974
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 196
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 199
+http://snackdown15.codechef.com/: 5
+http://acm.timus.ru/: 400
+
+Pages Crawled: 2000
+Relevant Pages Found: 1432
+Precision: 0.716
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 198
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 246
+http://snackdown15.codechef.com/: 5
+http://acm.timus.ru/: 400
+https://ipc.discuss.codechef.com/: 1
+https://inoi15.discuss.codechef.com/: 3
+
+Pages Crawled: 2050
+Relevant Pages Found: 1433
+Precision: 0.6990243902439024
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 201
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 293
+http://snackdown15.codechef.com/: 5
+http://acm.timus.ru/: 400
+https://ipc.discuss.codechef.com/: 1
+https://inoi15.discuss.codechef.com/: 3
+
+Pages Crawled: 2100
+Relevant Pages Found: 1433
+Precision: 0.6823809523809524
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 202
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 342
+http://snackdown15.codechef.com/: 5
+http://acm.timus.ru/: 400
+https://ipc.discuss.codechef.com/: 1
+https://inoi15.discuss.codechef.com/: 3
+
+Pages Crawled: 2150
+Relevant Pages Found: 1433
+Precision: 0.6665116279069767
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 202
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 392
+http://snackdown15.codechef.com/: 5
+http://acm.timus.ru/: 400
+https://ipc.discuss.codechef.com/: 1
+https://inoi15.discuss.codechef.com/: 3
+
+Pages Crawled: 2200
+Relevant Pages Found: 1435
+Precision: 0.6522727272727272
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 400
+https://www.codechef.com/: 400
+https://discuss.codechef.com/: 247
+http://www.spoj.com/: 400
+http://discuss.spoj.com/: 1
+https://blog.codechef.com/: 394
+http://snackdown15.codechef.com/: 5
+http://acm.timus.ru/: 400
+https://ipc.discuss.codechef.com/: 1
+https://inoi15.discuss.codechef.com/: 3
+http://campus.codechef.com/: 3
+
+Pages Crawled: 2250
+Relevant Pages Found: 1435
+Precision: 0.6377777777777778
+

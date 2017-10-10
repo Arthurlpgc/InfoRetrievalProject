@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>B: Different Distribution
+ - Tenka1 Programmer Beginner Contest | AtCoder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="
+">
+    <meta name="keyword" content="AtCoder,アットコーダー,あっとこーだー,プログラミングコンテスト
+">
+    <meta name="author" content="Atcoder" />
+    <meta name="copyright" content="Copyright (C) 2012 Atcoder" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="stylesheet" type="text/css" href="/css/all.css?v=2">
+    <link rel="stylesheet" type="text/css" href="/css/print.css?v=1" media="print">
+        <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="/js/jquery.js"></script>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30554866-3']);
+  _gaq.push(['_setDomainName', 'atcoder.jp']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>    
+    <!--[if lt IE 9]><style>.navbar-fixed-top{ position: relative!important; }</style><![endif]-->
+
+  </head>
+
+
+  <body>
+          <div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+              <a class="brand" href="/"><span class="contest-name">Tenka1 Programmer Beginner Contest</span><span class="bland-small"><time>2017/09/30 12:00:00 +0000</time> ~ <time>2017/09/30 13:40:00 +0000</time></span></a>
+      
+      <div class="nav-collapse">
+                            <ul  id="nav-right-logined" class="nav pull-right" style="display:none;">
+            <li class="dropdown">
+              <a href="#" lang="ja" class="dropdown-toggle static-nav-language-selector-dropdown" data-toggle="dropdown" style="display:none;">
+                <i class="flag-ja"></i> 日本語 <b class="caret"></b>
+              </a>
+              <a href="#" lang="en" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-en"></i> English <b class="caret"></b>
+              </a>
+              <a href="#" lang="ko" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-ko"></i> 한국어 <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li> <a lang="ja" class="static-nav-language-selector" href="#"><i class="flag-ja"></i> 日本語</a></li>
+                <li> <a lang="en" class="static-nav-language-selector" href="#"><i class="flag-en"></i> English</a></li>
+                <li> <a lang="ko" class="static-nav-language-selector" href="#"><i class="flag-ko"></i> 한국어</a></li>
+              </ul>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-white"></i> <span id="nav-right-username"></span><b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/me"><span class="lang"><span class="lang-en">My Profile</span><span class="lang-ja">マイプロフィール</span></span></a></li>
+                                	<li><a href="/settings"><span class="lang"><span class="lang-en">Settings</span><span class="lang-ja">設定</span></span></a></li>
+                    <li><a href="/settings/password"><span class="lang"><span class="lang-en">Change password</span><span class="lang-ja">パスワードの変更</span></span></a></li>
+                	                		<li><a href="/settings/participants"><span class="lang"><span class="lang-en">Edit information</span><span class="lang-ja">参加登録情報設定</span></span></a></li>
+                	                	<li class="divider"></li>
+                                <li><a href="/logout"><span class="lang"><span class="lang-en">Sign out</span><span class="lang-ja">ログアウト</span></span></a></li>
+             </ul>
+            </li>
+          </ul>
+          <ul id="nav-right-not-login" class="nav pull-right" style="display:none;">
+            <li class="dropdown">
+              <a href="#" lang="ja" class="dropdown-toggle static-nav-language-selector-dropdown" data-toggle="dropdown" style="display:none;">
+                <i class="flag-ja"></i> 日本語 <b class="caret"></b>
+              </a>
+              <a href="#" lang="en" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-en"></i> English <b class="caret"></b>
+              </a>
+              <a href="#" lang="ko" class="dropdown-toggle static-nav-language-selector-dropdown"  data-toggle="dropdown" style="display:none;">
+                <i class="flag-ko"></i> 한국어 <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li> <a lang="ja" class="static-nav-language-selector" href="#"><i class="flag-ja"></i> 日本語</a></li>
+                <li> <a lang="en" class="static-nav-language-selector" href="#"><i class="flag-en"></i> English</a></li>
+                <li> <a lang="ko" class="static-nav-language-selector" href="#"><i class="flag-ko"></i> 한국어</a></li>
+              </ul>
+            </li>
+                        <li class="divider-vertical"></li>
+            <li><a href="/register"><span class="lang"><span class="lang-en">Sign up</span><span class="lang-ja">新規登録</span></span></a></li>
+                        <li class="divider-vertical"></li>
+            <li><a href="/login"><span class="lang"><span class="lang-en">Sign in</span><span class="lang-ja">ログイン</span></span></a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+        
+    <div id="outer-inner" class="container">
+      <h1 class="site-title">
+          Tenka1 Programmer Beginner Contest
+      </h1>
+                      <time style="display:none" id="contest-start-time">2017/09/30 12:00:00 +0000</time>
+        <time style="display:none" id="contest-end-time">2017/09/30 13:40:00 +0000</time>
+        <time style="display:none" id="server-current-time">2017/10/08 20:52:58 +0000</time>
+
+            
+      <ul class="nav nav-tabs">
+                            <li><a href="http://tenka1-2017-beginner.contest.atcoder.jp/"><i class="icon-home"></i> <span class="lang"><span class="lang-en">Home</span><span class="lang-ja">トップページ</span><span class="lang-ko">톱 페이지</span></span></a></li>
+                                          <li class="active"><a href="http://tenka1-2017-beginner.contest.atcoder.jp/assignments"><i class="icon-list-alt"></i> <span class="lang"><span class="lang-en">Tasks</span><span class="lang-ja">問題</span><span class="lang-ko">문제</span></span></a></li>
+                                          <li><a href="https://tenka1-2017-beginner.contest.atcoder.jp/submit"><i class="icon-upload"></i> <span class="lang"><span class="lang-en">Submit</span><span class="lang-ja">提出</span><span class="lang-ko">제출</span></span></a></li>
+                                          <li><a href="http://tenka1-2017-beginner.contest.atcoder.jp/clarifications"><i class="icon-question-sign"></i> <span class="lang"><span class="lang-en">Clarifications</span><span class="lang-ja">質問</span><span class="lang-ko">질문</span></span></a></li>
+                                          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <b class="caret"></b><i class="icon-download-alt"></i> <span class="lang"><span class="lang-en">Results</span><span class="lang-ja">結果</span><span class="lang-ko">채점 결과</span></span>
+            </a>
+            <ul class="dropdown-menu">
+                              <li><a href="http://tenka1-2017-beginner.contest.atcoder.jp/submissions/all"><span class="lang"><span class="lang-en">All submissions</span><span class="lang-ja">すべての結果</span><span class="lang-ko">모든 결과</span></span></a></li>
+                              <li><a href="https://tenka1-2017-beginner.contest.atcoder.jp/submissions/me"><span class="lang"><span class="lang-en">My submissions</span><span class="lang-ja">自分の結果</span><span class="lang-ko">자신의 결과</span></span></a></li>
+                          </ul>
+          </li>
+                                          <li><a href="/standings"><i class="icon-user"></i> <span class="lang"><span class="lang-en">Standings</span><span class="lang-ja">順位表</span><span class="lang-ko">순위표</span></span></a></li>
+                                          <li><a href="/custom_test"><i class="icon-user"></i> <span class="lang"><span class="lang-en">Custom Test</span><span class="lang-ja">コードテスト</span></span></a></li>
+                                          <li><a href="/editorial"><i class="icon-user"></i> <span class="lang"><span class="lang-en">Editorial</span><span class="lang-ja">解説</span></span></a></li>
+                      </ul>
+        <div id="alert_box" class="alert alert-block" style="display:none">
+  <a class="close" data-dismiss="alert">×</a>
+  <h4 id="alert_box_heading" class="alert-heading" style="display:none"></h4>
+  <p id="alert_box_content"></p>
+</div>
+
+      <h2>B - Different Distribution</h2>
+<hr />
+<p><span class="lang"><span class="lang-en">Time limit</span><span class="lang-ja">時間制限</span></span> : 2sec / <span class="lang"><span class="lang-en">Memory limit</span><span class="lang-ja">メモリ制限</span></span> : 256MB</p>
+
+<div id="task-statement">
+  <span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>200</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>何人かの人がゲームをしました。全ての人の点数は異なる非負整数でした。</p>
+<p>高橋君は、<var>N</var> 個の情報を持っています。<var>i</var> 個目の情報は、得点の大きいほうから <var>A_i</var> 番目の人の得点が <var>B_i</var> 点であったことを表します。</p>
+<p>ゲームの参加人数としてありうる最大値を求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq A_i \leq 10^9(1\leq i\leq N)</var></li>
+<li><var>0 \leq B_i \leq 10^9(1\leq i\leq N)</var></li>
+<li><var>i ≠ j</var> ならば <var>A_i ≠ A_j</var></li>
+<li>与えられる条件すべてを満たす得点の組が存在することが保障される</li>
+<li>入力は全て整数である</li>
+</ul>
+</section>
+</div>
+
+<hr />
+
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var>
+<var>A_1</var> <var>B_1</var>
+:
+<var>A_N</var> <var>B_N</var>
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>ゲームの参加人数としてありうる最大値を出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>3
+4 7
+2 9
+6 2
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>8
+</pre>
+
+<p>点数が大きいほうから順に <var>12,9,8,7,5,2,1,0</var> 点である状況が、参加人数の最大値を達成する一例です。</p>
+</section>
+</div>
+
+<hr />
+
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>5
+1 10
+3 6
+5 2
+4 4
+2 8
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>7
+</pre>
+
+</section>
+</div>
+
+<hr />
+
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>2
+1 1000000000
+1000000000 1
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>1000000001
+</pre></section>
+</div>
+</span>
+<span class="lang-en">
+<p>Score : <var>200</var> points</p>
+
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>A group of people played a game. All players had distinct scores, which are positive integers.</p>
+<p>Takahashi knows <var>N</var> facts on the players' scores. The <var>i</var>-th fact is as follows: the <var>A_i</var>-th highest score among the players is <var>B_i</var>.</p>
+<p>Find the maximum possible number of players in the game.</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>1 \leq N \leq 10^5</var></li>
+<li><var>1 \leq A_i \leq 10^9(1\leq i\leq N)</var></li>
+<li><var>0 \leq B_i \leq 10^9(1\leq i\leq N)</var></li>
+<li>If <var>i ≠ j</var>, <var>A_i ≠ A_j</var>.</li>
+<li>There exists a possible outcome of the game that are consistent with the facts.</li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+
+<hr />
+
+<div class="io-style">
+<div class="part">
+<section>
+<h3>Inputs</h3><p>Input is given from Standard Input in the following format:</p>
+<pre><var>N</var>
+<var>A_1</var> <var>B_1</var>
+:
+<var>A_N</var> <var>B_N</var>
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Outputs</h3><p>Print the maximum possible number of players in the game.</p>
+</section>
+</div>
+</div>
+
+<hr />
+
+<div class="part">
+<section>
+<h3>Sample Input 1</h3><pre>3
+4 7
+2 9
+6 2
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Sample Output 1</h3><pre>8
+</pre>
+
+<p>The maximum possible number of players is achieved when, for example, the players have the following scores: <var>12,9,8,7,5,2,1,0</var>.</p>
+</section>
+</div>
+
+<hr />
+
+<div class="part">
+<section>
+<h3>Sample Input 2</h3><pre>5
+1 10
+3 6
+5 2
+4 4
+2 8
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Sample Output 2</h3><pre>7
+</pre>
+
+</section>
+</div>
+
+<hr />
+
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>2
+1 1000000000
+1000000000 1
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>1000000001
+</pre></section>
+</div>
+</span>
+</span>
+
+</div>
+
+
+<hr/>
+<p><a class="btn btn-primary btn-large" href="/submit?task_id=3517"><span class="lang"><span class="lang-en">Submit</span><span class="lang-ja">提出する</span></span></a></p>
+
+<script>$(function(){document.queryCommandSupported("copy")&&($("h3+pre").before('<div class="div-sample-copy"><span class="btn-sample-copy" tabindex="0" data-toggle="tooltip" data-trigger="manual" title="Copied!">Copy</span></div>'),$(".btn-sample-copy").click(function(){window.getSelection().removeAllRanges();try{var e=document.createRange();e.selectNode($(this).parent().next("pre").get()[0]),window.getSelection().addRange(e),document.execCommand("copy"),$(this).tooltip("show");var t=this;setTimeout(function(){$(t).tooltip("hide")},800)}catch(o){console.log(o)}window.getSelection().removeAllRanges()}))});</script>
+
+    </div>
+
+    <footer>
+      <ul>
+  <li><a href="/personal"><span class="lang"><span class="lang-en">Personal Information</span><span class="lang-ja">個人情報保護方針</span></span></a></li>
+  <li><a href="/tutorial"><span class="lang"><span class="lang-en">Tutorial</span><span class="lang-ja">チュートリアル</span></span></a></li>
+  <li><a href="/rules"><span class="lang"><span class="lang-en">Rules</span><span class="lang-ja">ルール</span></span></a></li>
+  <li><a href="/glossary"><span class="lang"><span class="lang-en">Glossary</span><span class="lang-ja">用語集</span></span></a></li>
+  <li><a href="/faq"><span class="lang"><span class="lang-en">FAQ</span><span class="lang-ja">よくある質問</span></span></a></li>
+</ul>
+<p id="copyright">Powered by <a href="http://atcoder.jp">AtCoder.</a></p>
+    </footer>
+
+    <p id="fixed-server-timer" style="display: none;"></p>
+
+        <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/prettify.js"></script>
+    <script src="/js/lang-vb.js"></script>
+    <script src="/js/lang-hs.js"></script>
+    <script src="/js/varmath.js"></script>
+    <script src="/js/script.js?v=2"></script>
+  </body>
+</html>

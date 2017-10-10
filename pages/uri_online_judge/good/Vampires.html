@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+    <html>
+        <head>
+            <title>URI 1093 - Vampires</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="author" content="URI Online Judge; www.urionlinejudge.edu.br" />
+            <meta name="description" content="URI Online Judge - Problem 1093 - Vampires" />
+
+            <link rel="stylesheet" type="text/css" href="https://urionlinejudge.r.worldssl.net/repository/default.css" />
+        </head>
+        <body>
+
+            <div class="header">
+                <span>URI Online Judge | 1093</span>
+                <h1>Vampires</h1>
+                <div><p>
+	By Pedro Demasi&nbsp;<img alt="" src="https://urionlinejudge.r.worldssl.net/gallery/images/flags/br.gif" style="width: 16px; height: 11px;" />&nbsp;Brazil</p></div>
+                <strong>Timelimit: 1</strong>
+            </div>
+
+            <div class="problem">
+
+                <div class="description">
+                    <p>
+	Felipinho is thrilled with his new RPG game, about wars between clans of vampires. In this game he plays a vampire that repeatedly comes into combat against vampires from other clans. Such battles are won or lost based on some characteristics of the opponents, with the help of a standard six-faced dice. For simplicity, we will consider only the fight between two vampires, Vampire 1 and Vampire 2. Each vampire has a vital energy (denoted respectively by <i>EV<sub>1</sub></i> and <i>EV<sub>2</sub></i>). Besides, an attack force <i>AT</i> and a damage capacity <i>D</i> are also given.</p>
+<p>
+	The combat is fought in turns, in the following way. At each turn, the dice is rolled; if the result value is less than or equal to <strong><i>AT</i></strong>, Vampire 1 wins the turn, otherwise Vampire 2 wins. The winner then sucks the value <strong><i>D</i> </strong>from the loser\'s vital energy. That is, <strong><i>D</i> </strong>points are subtracted from the loser's vital energy and added to the winner's vital energy. The combat continues until one of the fighters has <strong><i>EV</i> </strong>less than or equal to zero.</p>
+<p>
+	For example, suppose <i><strong>EV<sub>1</sub></strong>=7</i>,<strong> </strong><i><strong>EV<sub>2</sub></strong>=5</i>, <i><strong>AT</strong>=2</i> and<strong> </strong><i><strong>D</strong>=4</i>. The dice is rolled and the result value is <i>3</i>. Then, Vampire 2 wins the turn, and therefore <i>4</i> points are subtracted from <strong><i>EV<sub>1</sub></i> </strong>and added to <strong><i>EV<sub>2</sub></i></strong>. The new values for the vital energies would be <i><strong>EV<sub>1</sub></strong>=3</i> and <i><strong>EV<sub>2</sub></strong>=9</i>. Notice that, if in the next turn Vampire 2 wins again, the combat ends. The values of <i><strong>AT</strong></i> and <i><strong>D</strong></i> are constant throughout the combat; only <strong><i>EV<sub>1</sub></i> </strong>and <strong><i>EV<sub>2</sub></i> </strong>vary.</p>
+<p>
+	Despite loving the game, Felipinho thinks that the combats are too long, and suspects that, given the initial values of <strong><i>EV<sub>1</sub></i></strong>, <strong><i>EV<sub>2</sub></i></strong>, <strong><i>AT</i> </strong>and <strong><i>D</i></strong>, it is possible to determine the probability of one of the players winning the combat, and that could help shorten the combat time. Felipinho has asked your help to verify his suspicion.</p>
+
+                </div>
+
+                <h2>Input</h2>
+
+                <div class="input">
+                    <p>
+	The input contains several test cases. Each test case is given in one single line, containing four integers <strong><i>EV<sub>1</sub></i></strong>, <strong><i>EV<sub>2</sub></i></strong>, <strong><i>AT</i> </strong>and <strong><i>D</i> </strong>separated by spaces (<i>1 ≤ <strong>EV<sub>1</sub></strong>, <strong>EV<sub>2</sub> </strong>≤ 10</i>, <i>1 ≤ <strong>AT </strong>≤ 5</i> and <i>1 ≤ <strong>D </strong>≤ 10</i>). The end of input is indicated by one line containing only four zeros, separated by spaces.</p>
+
+                </div>
+
+                <h2>Output</h2>
+
+                <div class="output">
+                    <p style="text-align: justify;">
+	For each test case in the input, your program must print a single line. The line must contain a real number representing, in terms of percentages, the probability that Vampire 1 wins the combat. The result must be printed as a real number with exactly one decimal figure.</p>
+
+                </div>
+
+                <div class="both"></div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Input Sample</td>
+                            <td>Output Sample</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="division">
+                                <p>
+	1 1 3 1<br>
+	1 2 1 1<br>
+	8 5 3 1<br>
+	7 5 2 4<br>
+	0 0 0 0</p>
+
+                            </td>
+                            <td>
+                                <p>
+	50.0<br>
+	3.2<br>
+	61.5<br>
+	20.0</p>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table> <p class="footer">
+             Maratona de Programação da SBC 2008.</p>
+            </div>
+
+        </body>
+    </html>

@@ -1,0 +1,72 @@
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 1
+https://dmoj.ca/: 1
+https://a2oj.com/: 1
+http://atcoder.jp/: 1
+https://csacademy.com/: 1
+http://acm.timus.ru/: 41
+http://coj.uci.cu/: 1
+
+Pages Crawled: 50
+Relevant Pages Found: 3
+Precision: 0.06
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 1
+https://dmoj.ca/: 1
+https://a2oj.com/: 1
+http://atcoder.jp/: 1
+https://csacademy.com/: 1
+http://acm.timus.ru/: 91
+http://coj.uci.cu/: 1
+
+Pages Crawled: 100
+Relevant Pages Found: 4
+Precision: 0.04
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 1
+https://dmoj.ca/: 1
+https://a2oj.com/: 1
+http://atcoder.jp/: 1
+https://csacademy.com/: 1
+http://acm.timus.ru/: 141
+http://coj.uci.cu/: 1
+
+Pages Crawled: 150
+Relevant Pages Found: 4
+Precision: 0.02666666666666667
+
+
+ -- CRAWLER LOG --
+Pages In Queue per Domain:
+http://codeforces.com/: 1
+https://www.codechef.com/: 1
+https://www.urionlinejudge.com.br/: 1
+http://www.spoj.com/: 1
+https://dmoj.ca/: 1
+https://a2oj.com/: 1
+http://atcoder.jp/: 1
+https://csacademy.com/: 1
+http://acm.timus.ru/: 191
+http://coj.uci.cu/: 1
+
+Pages Crawled: 200
+Relevant Pages Found: 4
+Precision: 0.02
+
