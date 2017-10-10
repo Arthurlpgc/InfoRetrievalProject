@@ -1,4 +1,4 @@
 __pycache__
 src/retrieved/documents/*.html
-src/retrieved/object/*.json
+src/retrieved/objects/*.json
 log.txt
