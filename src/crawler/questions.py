@@ -174,7 +174,7 @@ class QuestionSpider(scrapy.Spider):
         'DOWNLOAD_MAXSIZE': '1000000',
         'CONCURRENT_REQUESTS': '1',
         'ROBOTSTXT_OBEY': 'True',
-        'DOWNLOAD_DELAY': '0.05',
+        'DOWNLOAD_DELAY': '1',
         'DEPTH_PRIORITY': '1',
         'SCHEDULER_DISK_QUEUE': 'scrapy.squeues.PickleFifoDiskQueue',
         'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeues.FifoMemoryQueue',
