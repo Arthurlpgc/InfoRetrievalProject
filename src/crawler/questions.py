@@ -147,6 +147,16 @@ class LinkRanker():
                 rank = rank + token.rank
         return rank
 
+    def getSpecific(self, anchor, url):
+        if(self.getDomain(url) not in self.specific):
+            return self.minimize
+        rank = 0
+        for token in self.specific[self.getDomain(url)]:
+            if(token.word in url):
+                rank = rank + token.rank
+        return rank
+        
+
     def getUniform(self, anchor, url):
         return 0
 
@@ -183,20 +193,20 @@ class QuestionSpider(scrapy.Spider):
     ]
 
     allowed_domains = [
-        'codeforces.com',
-        'codechef.com',
-        'urionlinejudge.com.br',
+        #'codeforces.com',
+        #'codechef.com',
+        #'urionlinejudge.com.br',
         'spoj.com',
-        'dmoj.ca',
-        'a2oj.com',
-        'atcoder.jp',
-        'csacademy.com',
-        'acm.timus.ru',
-        'coj.uci.cu'
+        #'dmoj.ca',
+        #'a2oj.com',
+        #'atcoder.jp',
+        #'csacademy.com',
+        #'acm.timus.ru',
+        #'coj.uci.cu'
     ]
 
     linkRanker = LinkRanker()
-    maxPagesPerDomain = 400
+    maxPagesPerDomain = 200
     domainsCrawled = {}
     pagesCrawled = 0
     relevantPagesCrawled = 0
