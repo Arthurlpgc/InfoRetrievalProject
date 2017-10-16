@@ -17,8 +17,10 @@ The crawler will be retrieving information from the following online judges:
 
 In order to run your crawler, follow these steps:
 
-1. Download [Scrapy](https://scrapy.org/)
-1. `cd src/crawler`
-1. run `scrapy crawl questions-bfs`
+* First, make sure you have [Python 3.6](https://www.python.org/) and [pip](https://pip.pypa.io/en/stable/installing/) installed in your system. Then:
 
-This will start the simple breadth first search spider module responsible for downloading all pages in the specified domain. You can see them on the fly in `src/crawler/documents` folder.
+1. Go to src folder: `cd src`
+1. Install project requirements: `pip install -r requirements.txt`
+1. Run the crawler: `scrapy runspider crawler/questions.py`
+
+This will start a breadth first search based on some heurístic spider module responsible for downloading all pages in the specified domain. You can see them on the fly in `src/retrieved/documents` and `src/retrieved/objects` folder.
