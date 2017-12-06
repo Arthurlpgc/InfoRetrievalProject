@@ -1,9 +1,11 @@
-from ranker.ranker import Ranker
+from ranker.StructuredRanker import StructuredRanker
+from ranker.PlainTextRanker import PlainTextRanker
+
 
 index = 'indexes/indexNot Shortened.json'
-documents = 'indexes/name.csv'
 
-ranker = Ranker(index)
+structuredRanker = StructuredRanker(index)
+plainTextRanker = PlainTextRanker(index)
 
 print('Ranker connected to {}\n'.format(index))
 
@@ -19,8 +21,10 @@ while(True):
         print('\n-- New Query --')
         title = input('Title: ')
         statement = input('Statement: ')
-        rank = ranker.getStructuredRank(title, statement)
+        rank = structuredRanker.getStructuredRank(title, statement)
         print(rank)
     elif(ans == '2'):
         print('\n-- New Query --')
-        print('b')
+        query = input('Query: ')
+        rank = plainTextRanker.getRank(query)
+        print(rank)

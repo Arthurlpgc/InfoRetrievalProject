@@ -4,7 +4,7 @@ import re
 import csv
 import math
 
-class Ranker():
+class StructuredRanker():
     def __init__(self, indexPath):
         self.index = json.load(open(indexPath))
         #build a vocabulary from each word that appears in index
@@ -31,11 +31,7 @@ class Ranker():
         self.numberDocs = 0
         with open('indexes/name.csv') as documents:
             for row in csv.reader(documents):
-                self.aa = -1
                 for name in row:
-                    self.aa += 1
-                    if(self.aa == 58):
-                        print(name)
                     self.vectors.append({'title': numpy.zeros(self.vocabularySizes['title']), 'statement': numpy.zeros(self.vocabularySizes['statement'])})
                     document = json.load(open('retrieved/objects/{}.json'.format(name)))
                     title = re.sub("[^\w]", " ",  document['title']).split()
