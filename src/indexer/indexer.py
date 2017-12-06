@@ -12,17 +12,21 @@ def get_json_data(path):
 	ret = {'file': path.split('/')[-1]}
 	stt=re.sub("[^\w]", " ",  data['statement']).split()
 	stt=list(map(lambda x:x.lower(),stt))
-	sttf=[]
+	sttf={}
 	for wordy in stt:
 		if wordy not in sttf:
-			sttf.append(wordy)
+			sttf[wordy] = 1
+		else:
+			sttf[wordy] = sttf[wordy] + 1			
 	ret['statement']=sttf
 	tt=re.sub("[^\w]", " ",  data['title']).split()
 	tt=list(map(lambda x:x.lower(),tt))
-	ttf=[]
+	ttf={}
 	for wordy in tt:
 		if wordy not in ttf:
-			ttf.append(wordy)
+			ttf[wordy] = 1
+		else:
+			ttf[wordy] = ttf[wordy] + 1			
 	ret['title']=ttf
 	tme=data['time-limit']
 	if tme%200:
@@ -37,18 +41,21 @@ def get_json_data(path):
 files_table = []
 names_dict = {}
 
-def put_word(word, idx):
+def put_word(word, idx, cnt=None):
 	if word not in names_dict.keys():
 		names_dict[word]=[]
-	names_dict[word].append(idx)
+	if cnt==None:
+		names_dict[word].append(idx)
+	else:
+		names_dict[word].append([idx,cnt])
 
 def insert_entry(hsh):
 	files_table.append(hsh['file'])
 	idx = len(files_table)-1
 	for word in hsh['statement']:
-		put_word(word+".statement",idx)
+		put_word(word+".statement",idx, hsh['statement'][word])
 	for word in hsh['title']:
-		put_word(word+".title",idx)
+		put_word(word+".title",idx, hsh['title'][word])
 	put_word(str(hsh['time'])+".time",idx)
 	put_word(str(hsh['memorylog'])+".mem",idx)
 
@@ -116,21 +123,24 @@ for tp in ['Not Shortened','Shortened']:
 	print("\nnames_dict json is ok: "+str(names_dict==names_dict2))
 	print("Size in json: "+ str(os.stat('index'+tp+'.json').st_size)+" bytes")
 
-	with open('index'+tp+'.bson', 'wb') as fp:
-	   fp.write(bson.dumps(names_dict))
+	# with open('index'+tp+'.bson', 'wb') as fp:
+	#    fp.write(bson.dumps(names_dict))
 
-	with open('index'+tp+'.bson', 'rb') as fp:
-	    names_dict2=bson.loads(fp.read())
+	# with open('index'+tp+'.bson', 'rb') as fp:
+	#     names_dict2=bson.loads(fp.read())
 
-	print("\nnames_dict bson is ok: "+str(names_dict==names_dict2))
-	print("Size in bson: "+ str(os.stat('index'+tp+'.bson').st_size)+" bytes")
+	# print("\nnames_dict bson is ok: "+str(names_dict==names_dict2))
+	# print("Size in bson: "+ str(os.stat('index'+tp+'.bson').st_size)+" bytes")
 
 	#simple compressed string
 	dummystring=''
 	for k in names_dict:
 		dummystring=dummystring+"|"+k+":"
 		for x in names_dict[k]:
-			dummystring=dummystring+str(x)+","
+			if type(x) is int:
+				dummystring=dummystring+str(x)+","			
+			else:
+				dummystring=dummystring+str(x[0])+","+str(x[1])+","
 
 	with open('index'+tp+'.scs1', 'w') as fp:
 	   fp.write(dummystring)
@@ -141,6 +151,7 @@ for tp in ['Not Shortened','Shortened']:
 		stt=1
 		k=''
 		num=0
+		mgc=[]
 		for c in dummystring2:
 			if stt==0:
 				if c==':':
@@ -156,7 +167,13 @@ for tp in ['Not Shortened','Shortened']:
 				elif c>='0' and c<='9':
 					num=num*10+int(c)-int('0')
 				elif c==',':
-					names_dict2[k].append(num)
+					if '.time' in k or '.mem' in k:
+						names_dict2[k].append(num)
+					else:
+						mgc.append(num)
+						if len(mgc)==2:
+							names_dict2[k].append(mgc)
+							mgc=[]
 					num=0
 				else:
 					k=''+c
@@ -171,13 +188,19 @@ for tp in ['Not Shortened','Shortened']:
 		for x in range(len(names_dict[k])):
 			if(x!=0):
 				dummystring=dummystring+","
-			dummystring=dummystring+bitstr(names_dict[k][x])
+			if type(names_dict[k][x]) is list:
+				dummystring=dummystring+bitstr(names_dict[k][x][0])
+				dummystring=dummystring+','
+				dummystring=dummystring+bitstr(names_dict[k][x][1])
+			else:
+				dummystring=dummystring+bitstr(names_dict[k][x])
 		dummystring=dummystring+"|"
 
 	with open('index'+tp+'.scs2', 'wb') as fp:
 	   fp.write(dummystring.encode('utf-8'))
 
 	names_dict2={}
+	mgc=[]
 	with open('index'+tp+'.scs2', 'rb') as fp:
 		dummystring2=fp.read().decode('utf-8')
 		stt=0
@@ -203,7 +226,13 @@ for tp in ['Not Shortened','Shortened']:
 				stt=1+(ord(c)//128)
 				num=(num<<7)+(ord(c)&127)
 				if stt==1:
-					names_dict2[k].append(num)
+					if '.time' in k or '.mem' in k:
+						names_dict2[k].append(num)
+					else:
+						mgc.append(num)
+						if len(mgc)==2:
+							names_dict2[k].append(mgc)
+							mgc=[]
 
 	for k in names_dict.keys():
 		if names_dict[k] != names_dict2[k]:
@@ -234,23 +263,43 @@ for tp in ['Not Shortened','Shortened']:
 		while len(Ch)<6:
 			Ch="0"+Ch
 		(byte_array,idx)=add_st(Ch,byte_array,idx)
-		for x in names_dict[k]:
-			st=''
-			saux="11"
-			#print('lllll')
-			#print(x)
-			if(x==0):
-				st='10000000'
-			while x>0:
-				stemp="{0:b}".format(x&63)
-				while len(stemp)<6:
-					stemp="0"+stemp
-				if(x<64):
-					saux='10'
-				st=st+saux+stemp
-				x=x//64
-			#print(st)
-			(byte_array,idx)=add_st(st,byte_array,idx)
+		if '.time' in k or '.mem' in k:
+			for x in names_dict[k]:
+				st=''
+				saux="11"
+				#print('lllll')
+				#print(x)
+				if(x==0):
+					st='10000000'
+				while x>0:
+					stemp="{0:b}".format(x&63)
+					while len(stemp)<6:
+						stemp="0"+stemp
+					if(x<64):
+						saux='10'
+					st=st+saux+stemp
+					x=x//64
+				#print(st)
+				(byte_array,idx)=add_st(st,byte_array,idx)
+		else:
+			for y in names_dict[k]:
+				for x in y:
+					st=''
+					saux="11"
+					#print('lllll')
+					#print(x)
+					if(x==0):
+						st='10000000'
+					while x>0:
+						stemp="{0:b}".format(x&63)
+						while len(stemp)<6:
+							stemp="0"+stemp
+						if(x<64):
+							saux='10'
+						st=st+saux+stemp
+						x=x//64
+					#print(st)
+					(byte_array,idx)=add_st(st,byte_array,idx)
 	(byte_array,idx)=add_st('00',byte_array,idx)
 
 	with open('index'+tp+'.scb', 'wb') as fp:
@@ -286,7 +335,13 @@ for tp in ['Not Shortened','Shortened']:
 			elif stt==2:
 				(byte_array2,idx,st)=get_st(byte_array2,idx,6)
 				num=num+int(st)*mul
-				names_dict2[k].append(num)
+				if '.time' in k or '.mem' in k:
+					names_dict2[k].append(num)
+				else:
+					mgc.append(num)
+					if len(mgc)==2:
+						names_dict2[k].append(mgc)
+						mgc=[]
 				stt=-1
 				mul=1
 				num=0
@@ -298,7 +353,9 @@ for tp in ['Not Shortened','Shortened']:
 
 	for k in names_dict:
 		for i in range(len(names_dict[k])-1,0,-1):
-			names_dict[k][i]-=names_dict[k][i-1]
-
+			if '.time' in k or '.mem' in k:		
+				names_dict[k][i]-=names_dict[k][i-1]
+			else:
+				names_dict[k][i][0]-=names_dict[k][i-1][0]				
 print("\nscs1: Simple compressed string with : and , acting as separators\n(trying new ways to compress it)")
 print("\nscs2: scs1 + base 128 varInt")
