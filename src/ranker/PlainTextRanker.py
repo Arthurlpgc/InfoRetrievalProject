@@ -49,7 +49,7 @@ class PlainTextRanker():
             docs = self.index.get(key+'.title', []) + self.index.get(key+'.statement', [])
             self.idf[key] = 1 + math.log(self.numberDocs/len(docs))
 
-    def getRank(self, query):
+    def getRank(self, query, tfIdf):
         query = [word for word in query.lower().split(' ')]
         #gets the list of relevant documents for this query
         relevantDocs = []
@@ -61,15 +61,18 @@ class PlainTextRanker():
     
         relevantDocs = list(set(relevantDocs))
         #creates the vector space for this query
-        return self.rankDocumentAtTime(relevantDocs, query)
+        return self.rankDocumentAtTime(relevantDocs, query, tfIdf)
 
-    def rankDocumentAtTime(self, relevantDocs, query):
+    def rankDocumentAtTime(self, relevantDocs, query, tfIdf):
         queryVector = numpy.zeros(self.vocabularySize)
         queryLen = len(query)
         for word in query:
             if(word in self.vocabulary):
                 queryVector[self.vocabulary[word]] += 1/queryLen
-        ranks = self.tfIdfRank(relevantDocs, queryVector)
+        if(tfIdf==True):
+            ranks = self.tfIdfRank(relevantDocs, queryVector)
+        else:
+            ranks = self.commonRank(relevantDocs, queryVector)
         ranks.sort(reverse=True, key= lambda tup:tup[1])
         ranks = list(map(lambda rank: (rank[0],rank[1]/ranks[0][1]),ranks))
         return ranks
