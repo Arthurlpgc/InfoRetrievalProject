@@ -1,0 +1,21 @@
+Calculating spearmarn correlation for [Chef wants to prepare a Cook-Off contest with 5 problems chosen from a set of  N  problems] query
+0.0663645155171
+
+Calculating spearmarn correlation for [the petya and of you maximize the income] query
+0.00537671724112
+
+Calculating spearmarn correlation for [Dynamic Programming] query
+0.130752268807
+
+Calculating spearmarn correlation for [A map of treasures] query
+-0.0159931888745
+
+Calculating spearmarn correlation for [help ivan maximize] query
+0.123275717918
+
+Calculating spearmarn correlation for [petya and the required tree] query
+-0.00376509020577
+
+Calculating spearmarn correlation for [the following lines contain words] query
+0.0362641532133
+

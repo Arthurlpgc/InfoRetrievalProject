@@ -100,11 +100,12 @@ def get_st(barray,idx,sze):
 		idx=((idx+1)&7)
 	return (barray,idx,st)
 
-with open('name.csv','w') as fle:
+with open('indexes/name.csv','w') as fle:
 	writer = csv.writer(fle)
+	print(files_table)
 	writer.writerows([files_table])
 
-with open('name.csv','r') as fle:
+with open('indexes/name.csv','r') as fle:
 	reader = csv.reader(fle)
 	for row in reader:
 		files_table2 = row
@@ -114,23 +115,23 @@ print("files_table is ok: "+str(files_table==files_table2))
 for tp in ['Not Shortened','Shortened']:
 	print('\n'+tp + " Version:")
 
-	with open('index'+tp+'.json', 'w') as fp:
+	with open('indexes/index'+tp+'.json', 'w') as fp:
 	    json.dump(names_dict, fp)
 
-	with open('index'+tp+'.json', 'r') as fp:
+	with open('indexes/index'+tp+'.json', 'r') as fp:
 	    names_dict2=json.load(fp)
 
 	print("\nnames_dict json is ok: "+str(names_dict==names_dict2))
-	print("Size in json: "+ str(os.stat('index'+tp+'.json').st_size)+" bytes")
+	print("Size in json: "+ str(os.stat('indexes/index'+tp+'.json').st_size)+" bytes")
 
-	# with open('index'+tp+'.bson', 'wb') as fp:
+	# with open('indexes/index'+tp+'.bson', 'wb') as fp:
 	#    fp.write(bson.dumps(names_dict))
 
-	# with open('index'+tp+'.bson', 'rb') as fp:
+	# with open('indexes/index'+tp+'.bson', 'rb') as fp:
 	#     names_dict2=bson.loads(fp.read())
 
 	# print("\nnames_dict bson is ok: "+str(names_dict==names_dict2))
-	# print("Size in bson: "+ str(os.stat('index'+tp+'.bson').st_size)+" bytes")
+	# print("Size in bson: "+ str(os.stat('indexes/index'+tp+'.bson').st_size)+" bytes")
 
 	#simple compressed string
 	dummystring=''
@@ -142,11 +143,11 @@ for tp in ['Not Shortened','Shortened']:
 			else:
 				dummystring=dummystring+str(x[0])+","+str(x[1])+","
 
-	with open('index'+tp+'.scs1', 'w') as fp:
+	with open('indexes/index'+tp+'.scs1', 'w') as fp:
 	   fp.write(dummystring)
 
 	names_dict2={}
-	with open('index'+tp+'.scs1', 'r') as fp:
+	with open('indexes/index'+tp+'.scs1', 'r') as fp:
 		dummystring2=fp.read()
 		stt=1
 		k=''
@@ -180,7 +181,7 @@ for tp in ['Not Shortened','Shortened']:
 					stt=0
 
 	print("\nnames_dict scs1 is ok: "+str(names_dict==names_dict2))
-	print("Size in scs1: "+ str(os.stat('index'+tp+'.scs1').st_size)+" bytes")
+	print("Size in scs1: "+ str(os.stat('indexes/index'+tp+'.scs1').st_size)+" bytes")
 
 	dummystring=''
 	for k in names_dict:
@@ -196,12 +197,12 @@ for tp in ['Not Shortened','Shortened']:
 				dummystring=dummystring+bitstr(names_dict[k][x])
 		dummystring=dummystring+"|"
 
-	with open('index'+tp+'.scs2', 'wb') as fp:
+	with open('indexes/index'+tp+'.scs2', 'wb') as fp:
 	   fp.write(dummystring.encode('utf-8'))
 
 	names_dict2={}
 	mgc=[]
-	with open('index'+tp+'.scs2', 'rb') as fp:
+	with open('indexes/index'+tp+'.scs2', 'rb') as fp:
 		dummystring2=fp.read().decode('utf-8')
 		stt=0
 		k=''
@@ -241,7 +242,7 @@ for tp in ['Not Shortened','Shortened']:
 			print(names_dict2[k])
 			break
 	print("\nnames_dict scs2 is ok: "+str(names_dict==names_dict2))
-	print("Size in scs2: "+ str(os.stat('index'+tp+'.scs2').st_size)+" bytes")
+	print("Size in scs2: "+ str(os.stat('indexes/index'+tp+'.scs2').st_size)+" bytes")
 
 	charset=set()
 	for k in names_dict:
@@ -302,7 +303,7 @@ for tp in ['Not Shortened','Shortened']:
 					(byte_array,idx)=add_st(st,byte_array,idx)
 	(byte_array,idx)=add_st('00',byte_array,idx)
 
-	with open('index'+tp+'.scb', 'wb') as fp:
+	with open('indexes/index'+tp+'.scb', 'wb') as fp:
 	   fp.write(bytearray(byte_array))
 
 	names_dict2={}
@@ -311,7 +312,7 @@ for tp in ['Not Shortened','Shortened']:
 	idx=0
 	k=''
 	mul=1
-	with open('index'+tp+'.scb', 'rb') as fp:
+	with open('indexes/index'+tp+'.scb', 'rb') as fp:
 		byte_array2=fp.read()
 		while True:
 			if stt==-1:
@@ -349,7 +350,7 @@ for tp in ['Not Shortened','Shortened']:
 				break
 
 	print("\nnames_dict scb is ok: "+str(names_dict==names_dict2))
-	print("Size in scb: "+ str(os.stat('index'+tp+'.scb').st_size)+" bytes")
+	print("Size in scb: "+ str(os.stat('indexes/index'+tp+'.scb').st_size)+" bytes")
 
 	for k in names_dict:
 		for i in range(len(names_dict[k])-1,0,-1):

@@ -24,3 +24,12 @@ In order to run your crawler, follow these steps:
 1. Run the crawler: `scrapy runspider crawler/questions.py`
 
 This will start a breadth first search based on some heurístic spider module responsible for downloading all pages in the specified domain. You can see them on the fly in `src/retrieved/documents` and `src/retrieved/objects` folder.
+
+## Creating an Index
+
+After running the crawler and retrieving documents, you have to manually set up an index to work with.  In order to do this:
+
+1. Go to src folder: `cd src`
+1. Run the indexer: `python3 indexer/indexer.py`
+
+It will search for documents stored at `src/retrieved/objects` and create various indexes accordingly. The indexes will be avaiable for latter querys at the `src/indexes` folder.
