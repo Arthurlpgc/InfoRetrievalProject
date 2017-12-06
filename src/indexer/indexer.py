@@ -95,6 +95,7 @@ def get_st(barray,idx,sze):
 
 with open('indexes/name.csv','w') as fle:
 	writer = csv.writer(fle)
+	print(files_table)
 	writer.writerows([files_table])
 
 with open('indexes/name.csv','r') as fle:
