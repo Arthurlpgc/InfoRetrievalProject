@@ -1,0 +1,1 @@
+All objects extract from crawled pages will be here in json format.
