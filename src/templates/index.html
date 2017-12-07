@@ -13,31 +13,37 @@
   </head>
   <body>
     <div class="container">
+      <div class="row">
       <h1>Coding Questions Search</h1>
       <br>
       <form method='POST' action='/'>
+        <div class=".col-sm-4">
         <h4>Plain Text Query</h4>
         <div class="form-group">
           <input type="text" name="query" class="form-control" id="text" placeholder="Search by text..." style="max-width: 300px;">
         </div>
         <button type="submit" name="plain" class="btn btn-default">Submit</button>
         <br>
-          <br>
-        <h4>Structured Query</h4>
-        <h6>Title</h6>
-        <div class="form-group">
-          <input type="text" name="query_title" class="form-control" id="title" placeholder="Search by title..." style="max-width: 300px;">
+      </div>
+        <div class=".col-sm-8">
+          <h4>Structured Query</h4>
+          <h6>Title</h6>
+          <div class="form-group">
+            <input type="text" name="query_title" class="form-control" id="title" placeholder="Search by title..." style="max-width: 300px;">
+          </div>
+          <h6>Statement</h6>
+          <div class="form-group">
+            <input type="text" name="query_statement" class="form-control" id="title" placeholder="Search by statement..." style="max-width: 300px;">
+            <br>
+          <button type="submit" name="structured" class="btn btn-default">Submit</button>
+          </form>
         </div>
+      </div>
+      </div>
+      {% block content %}
 
-        <h6>Statement</h6>
-        <div class="form-group">
-          <input type="text" name="query_statement" class="form-control" id="title" placeholder="Search by statement..." style="max-width: 300px;">
-        </div>
+      {% endblock content %}
 
-        <button type="submit" name="structured" class="btn btn-default">Submit</button>
-        </form>
-
-      <br>
     </div>
     <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

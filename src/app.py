@@ -1,7 +1,39 @@
 import os
 from flask import Flask, render_template, request
+from ranker.StructuredRanker import StructuredRanker
+from ranker.PlainTextRanker import PlainTextRanker
+import csv
+import json
 
 app = Flask(__name__)
+
+index = 'indexes/indexNot Shortened.json'
+
+structuredRanker = StructuredRanker(index)
+plainTextRanker = PlainTextRanker(index)
+
+unmap = lambda lista: [item for sublist in lista for item in sublist]
+with open('indexes/name.csv') as documents:
+    documents_list = unmap(list(csv.reader(open('indexes/name.csv'))))
+
+
+def get_results_list(query, plain=True):
+    if(plain):
+        rank = plainTextRanker.getRank(query, tfIdf=False)
+    else:
+        pass
+
+    results_list = []
+    for result in rank:
+        obj = []
+        document = json.load(open('retrieved/objects/{}.json'.format(documents_list[result[0]])))
+
+        obj.append(format(documents_list[result[0]]))
+        obj.append(document['title'])
+        obj.append(document['statement'][:300])
+        results_list.append(obj)
+
+    return results_list
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -9,7 +41,15 @@ def index():
     if (request.method == "POST"):
         #plain search
         if ('plain' in request.form.keys()):
-            print("plain search")
+            text_query = request.form['query']
+            print(text_query)
+            data = get_results_list(text_query)
+            print(data)
+
+            # if(data is []):
+            #     return render_template('results.html', titulo=titulo, msg="no results found")
+
+            return render_template('results.html', data=data)
         #structured search
         elif('structured' in request.form.keys()):
             pass

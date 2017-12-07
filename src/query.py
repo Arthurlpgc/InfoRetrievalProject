@@ -26,5 +26,5 @@ while(True):
     elif(ans == '2'):
         print('\n-- New Query --')
         query = input('Query: ')
-        rank = plainTextRanker.getRank(query)
+        rank = plainTextRanker.getRank(query, tfIdf=False)
         print(rank)

@@ -13,13 +13,14 @@ queries = ['Chef wants to prepare a Cook-Off contest with 5 problems chosen from
 
 ranker = PlainTextRanker('indexes/indexNot Shortened.json')
 
-file = open("ranker/SpearmanLog.txt", "w")
+# file = open("ranker/SpearmanLog.txt", "w")
 
 
 for query in queries:
     rank1 = ranker.getRank(query, False)
     rank2 = ranker.getRank(query, True)
     print(rank1)
+    print(rank2)
     # spearman = SpearmanCorrelation(rank1, rank2)
     # file.write('Calculating spearmarn correlation for [{}] query\n'.format(str(query)))
     # file.write(str(spearman.get()))
