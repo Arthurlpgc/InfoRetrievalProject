@@ -31,7 +31,11 @@ class StructuredRanker():
         self.numberDocs = 0
         with open('indexes/name.csv') as documents:
             for row in csv.reader(documents):
+                self.aa = 0
                 for name in row:
+                    if(self.aa == 44):
+                        print(name)
+                    self.aa += 1
                     self.vectors.append({'title': numpy.zeros(self.vocabularySizes['title']), 'statement': numpy.zeros(self.vocabularySizes['statement'])})
                     document = json.load(open('retrieved/objects/{}.json'.format(name)))
                     title = re.sub("[^\w]", " ",  document['title']).split()
@@ -115,6 +119,8 @@ class StructuredRanker():
        
     
     def cossineSimilarity(self, a, b):
+        if(math.fabs((math.sqrt(self.dotProduct(a, a)) * math.sqrt(self.dotProduct(b, b)))) < 0.0001):
+            return 0
         return self.dotProduct(a, b) / (math.sqrt(self.dotProduct(a, a)) * math.sqrt(self.dotProduct(b, b)))
 
     def dotProduct(self, a, b):
