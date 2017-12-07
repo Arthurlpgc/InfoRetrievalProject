@@ -7,15 +7,17 @@ Calculating spearmarn correlation for [the petya and of you maximize the income]
 Calculating spearmarn correlation for [Dynamic Programming] query
 0.130752268807
 
-Calculating spearmarn correlation for [A map of treasures] query
--0.0159931888745
-
 Calculating spearmarn correlation for [help ivan maximize] query
 0.121661230585
 
 Calculating spearmarn correlation for [petya and the required tree] query
 -0.00376509020577
 
-Calculating spearmarn correlation for [the following lines contain words] query
-0.0362641532133
+Calculating spearmarn correlation for structured query: title:Forbidden Indices
+statement:You are given a string consisting of
+0.051230583434
+
+Calculating spearmarn correlation for structured query: title:Beautiful Divisors
+statement:Luba learned about
+-0.0605522208884
 
