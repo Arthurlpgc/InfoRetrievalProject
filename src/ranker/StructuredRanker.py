@@ -53,17 +53,23 @@ class StructuredRanker():
             self.idf[key] = 1 + math.log(self.numberDocs/len(self.index[key]))
 
     def getStructuredRank(self, title, statement):
+        unmap = lambda lista: [item for sublist in lista for item in sublist]
+
         title = [word + '.title' for word in title.lower().split(' ')]
         statement = [word + '.statement' for word in statement.lower().split(' ')]
         #gets the list of relevant documents for this query
         relevantDocs = []
         for word in title:
             if(word in self.index):
-                relevantDocs += self.index[word]
+                relevantDocs += unmap(self.index[word])
         for word in statement:
             if(word in self.index):
-                relevantDocs += self.index[word]
+                relevantDocs += unmap(self.index[word])
+
+
+        # relevantDocs = [item for sublist in relevantDocs for item in sublist]
         relevantDocs = list(set(relevantDocs))
+
         #creates the vector space for this query
         return self.rankDocumentAtTime(relevantDocs, title, statement)
 
@@ -88,10 +94,11 @@ class StructuredRanker():
             rank = 0
             for attribute in self.weights:
                 vector = self.vectors[doc][attribute]
+                print(self.cossineSimilarity(vector, queryVector[attribute]))
                 rank += self.weights[attribute] * self.cossineSimilarity(vector, queryVector[attribute])
             ranks.append((doc, rank))
         return ranks
-    
+
     def tfIdfRank(self, relevantDocs, queryVector):
         ranks = []
         for doc in relevantDocs:
@@ -109,18 +116,13 @@ class StructuredRanker():
             ranks.append((doc, rank))
         return ranks
 
-       
-    
+
+
     def cossineSimilarity(self, a, b):
-        return self.dotProduct(a, b) / math.sqrt(self.dotProduct(a, a)) + math.sqrt(self.dotProduct(b, b))
+        return self.dotProduct(a, b) / (math.sqrt(self.dotProduct(a, a))*math.sqrt(self.dotProduct(b, b)))
 
     def dotProduct(self, a, b):
         ans = 0
         for i in range(0, len(a)):
             ans += a[i] * b[i]
         return ans
-
-
-        
-    
-        
