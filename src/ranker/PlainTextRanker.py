@@ -103,7 +103,9 @@ class PlainTextRanker():
 
 
     def cossineSimilarity(self, a, b):
-        return self.dotProduct(a, b) / math.sqrt(self.dotProduct(a, a)) + math.sqrt(self.dotProduct(b, b))
+        if(math.fabs((math.sqrt(self.dotProduct(a, a)) * math.sqrt(self.dotProduct(b, b)))) < 0.0001):
+            return 0
+        return self.dotProduct(a, b) / (math.sqrt(self.dotProduct(a, a)) * math.sqrt(self.dotProduct(b, b)))
 
     def dotProduct(self, a, b):
         ans = 0
