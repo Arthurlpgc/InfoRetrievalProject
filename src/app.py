@@ -21,14 +21,18 @@ def get_results_list(query, plain=True):
     if(plain):
         rank = plainTextRanker.getRank(query, tfIdf=False)
     else:
-        pass
+        rank = structuredRanker.getStructuredRank(query['title'], query['statement'])
 
     results_list = []
     for result in rank:
         obj = []
         document = json.load(open('retrieved/objects/{}.json'.format(documents_list[result[0]])))
 
-        obj.append(format(documents_list[result[0]]))
+
+        url = format(documents_list[result[0]]).replace("http---", "http://").replace("https---", "https://").replace("-", "/")
+        obj.append(url)
+
+        # obj.append(format(documents_list[result[0]]))
         obj.append(document['title'])
         obj.append(document['statement'][:300])
         results_list.append(obj)
@@ -52,9 +56,12 @@ def index():
             return render_template('results.html', data=data)
         #structured search
         elif('structured' in request.form.keys()):
-            pass
-
-
+            title_query = request.form['query_title']
+            statement_query = request.form['query_statement']
+            query = {  'title': "graph" , 'statement':"time"}
+            data = get_results_list(query)
+            print(data)
+            return render_template('results.html', data=data)
 
             # select_opt = request.form.get('query_select')
             # text_query = request.form['query']

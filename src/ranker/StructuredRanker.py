@@ -53,19 +53,16 @@ class StructuredRanker():
             self.idf[key] = 1 + math.log(self.numberDocs/len(self.index[key]))
 
     def getStructuredRank(self, title, statement):
-        unmap = lambda lista: [item for sublist in lista for item in sublist]
-
         title = [word + '.title' for word in title.lower().split(' ')]
         statement = [word + '.statement' for word in statement.lower().split(' ')]
         #gets the list of relevant documents for this query
         relevantDocs = []
         for word in title:
             if(word in self.index):
-                relevantDocs += unmap(self.index[word])
+                relevantDocs += self.index[word]
         for word in statement:
             if(word in self.index):
-                relevantDocs += unmap(self.index[word])
-
+                relevantDocs += self.index[word]
 
         # relevantDocs = [item for sublist in relevantDocs for item in sublist]
         relevantDocs = list(set(relevantDocs))
@@ -94,7 +91,6 @@ class StructuredRanker():
             rank = 0
             for attribute in self.weights:
                 vector = self.vectors[doc][attribute]
-                print(self.cossineSimilarity(vector, queryVector[attribute]))
                 rank += self.weights[attribute] * self.cossineSimilarity(vector, queryVector[attribute])
             ranks.append((doc, rank))
         return ranks
@@ -119,7 +115,7 @@ class StructuredRanker():
 
 
     def cossineSimilarity(self, a, b):
-        return self.dotProduct(a, b) / (math.sqrt(self.dotProduct(a, a))*math.sqrt(self.dotProduct(b, b)))
+        return self.dotProduct(a, b) / math.sqrt(self.dotProduct(a, a)) + math.sqrt(self.dotProduct(b, b))
 
     def dotProduct(self, a, b):
         ans = 0

@@ -45,7 +45,18 @@
       {% endblock content %}
 
     </div>
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
     <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script>
+    var monkeyList = new List('test-list', {
+      valueNames: ['list-group-item'],
+      page: 5,
+      pagination: true
+    });
+    </script>
   </body>
 </html>

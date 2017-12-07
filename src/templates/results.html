@@ -4,6 +4,8 @@
 {% block content %}
 <div class="row">
   <div class=".col-sm-4">
+
+<div id="test-list">
 <ul class="list-group">
 
   {% for obj in data%}
@@ -13,51 +15,11 @@
       <p>{{ obj[2]}}</p>
     </li>
   {% endfor %}
-
-  <!-- <li class="list-group-item">
-    <h4>{{titulo}}</h4>
-    <a href="{{data.url}}" >{{data.url}}</a>
-    <p> {{data.statement}} </p>
-
-  </li>
-  <li class="list-group-item">
-    <h4>{{titulo}}</h4>
-    <a href="{{data.url}}" >{{data.url}}</a>
-    <p> {{data.statement}} </p>
-
-  </li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li> -->
 </ul>
+ <ul class="pagination"></ul>
+</div>
+
   </div >
 </div>
-<!--
-<div class="row">
-  <h4>{{titulo}}</h4>
-  <a href="{{data.url}}" >{{data.url}}</a>
-  <p> {{data.statement}}</p>
-
-</div>
-<div class="row">
-  <h4>{{titulo}}</h4>
-  <a href="{{data.url}}" >{{data.url}}</a>
-  <p> {{data.statement}}</p>
-
-</div>
-<div class="row">
-  <h4>{{titulo}}</h4>
-  <a href="{{data.url}}" >{{data.url}}</a>
-  <p> {{data.statement}}</p>
-
-</div> -->
-<!--
-	 {% for obj in results_list%}
-		<h2><a href="https://clica" >{{obj.url}}</a></h2>
-		<ul>
-			<li>{{obj.title}}</li>
-			<li>{{obj.statement}}</li>
-		</ul>
-	{%endfor%} -->
 
 {% endblock content %}

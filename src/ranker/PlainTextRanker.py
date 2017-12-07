@@ -57,9 +57,9 @@ class PlainTextRanker():
         relevantDocs = []
         for word in query:
             if((word+'.title') in self.index):
-                relevantDocs += unmap(self.index[(word+'.title')])
+                relevantDocs += self.index[(word+'.title')]
             if((word+'.statement') in self.index):
-                relevantDocs += unmap(self.index[(word+'.statement')])
+                relevantDocs += self.index[(word+'.statement')]
 
         relevantDocs = list(set(relevantDocs))
         #creates the vector space for this query
