@@ -31,7 +31,11 @@ class StructuredRanker():
         self.numberDocs = 0
         with open('indexes/name.csv') as documents:
             for row in csv.reader(documents):
+                self.aa = 0
                 for name in row:
+                    if(self.aa == 44):
+                        print(name)
+                    self.aa += 1
                     self.vectors.append({'title': numpy.zeros(self.vocabularySizes['title']), 'statement': numpy.zeros(self.vocabularySizes['statement'])})
                     document = json.load(open('retrieved/objects/{}.json'.format(name)))
                     title = re.sub("[^\w]", " ",  document['title']).split()
@@ -52,7 +56,7 @@ class StructuredRanker():
         for key in self.statementVocabulary:
             self.idf[key] = 1 + math.log(self.numberDocs/len(self.index[key]))
 
-    def getStructuredRank(self, title, statement):
+    def getStructuredRank(self, title, statement, tfIdf):
         title = [word + '.title' for word in title.lower().split(' ')]
         statement = [word + '.statement' for word in statement.lower().split(' ')]
         #gets the list of relevant documents for this query
@@ -65,9 +69,9 @@ class StructuredRanker():
                 relevantDocs += self.index[word]
         relevantDocs = list(set(relevantDocs))
         #creates the vector space for this query
-        return self.rankDocumentAtTime(relevantDocs, title, statement)
+        return self.rankDocumentAtTime(relevantDocs, title, statement, tfIdf)
 
-    def rankDocumentAtTime(self, relevantDocs, title, statement):
+    def rankDocumentAtTime(self, relevantDocs, title, statement, tfIdf):
         queryVector = {'title': numpy.zeros(self.vocabularySizes['title']), 'statement': numpy.zeros(self.vocabularySizes['statement'])}
         titleLen = len(title)
         statementLen = len(statement)
@@ -77,7 +81,10 @@ class StructuredRanker():
         for word in statement:
             if(word in self.statementVocabulary):
                 queryVector['statement'][self.statementVocabulary[word]] += 1/statementLen
-        ranks = self.tfIdfRank(relevantDocs, queryVector)
+        if(tfIdf == True):
+            ranks = self.tfIdfRank(relevantDocs, queryVector)
+        else:
+            ranks = self.commonRank(relevantDocs, queryVector)
         ranks.sort(reverse=True, key= lambda tup:tup[1])
         ranks = list(map(lambda rank: (rank[0],rank[1]/ranks[0][1]),ranks))
         return ranks
@@ -112,7 +119,9 @@ class StructuredRanker():
        
     
     def cossineSimilarity(self, a, b):
-        return self.dotProduct(a, b) / math.sqrt(self.dotProduct(a, a)) + math.sqrt(self.dotProduct(b, b))
+        if(math.fabs((math.sqrt(self.dotProduct(a, a)) * math.sqrt(self.dotProduct(b, b)))) < 0.0001):
+            return 0
+        return self.dotProduct(a, b) / (math.sqrt(self.dotProduct(a, a)) * math.sqrt(self.dotProduct(b, b)))
 
     def dotProduct(self, a, b):
         ans = 0
