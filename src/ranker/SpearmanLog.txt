@@ -11,7 +11,7 @@ Calculating spearmarn correlation for [A map of treasures] query
 -0.0159931888745
 
 Calculating spearmarn correlation for [help ivan maximize] query
-0.123275717918
+0.121661230585
 
 Calculating spearmarn correlation for [petya and the required tree] query
 -0.00376509020577

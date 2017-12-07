@@ -112,7 +112,7 @@ class StructuredRanker():
        
     
     def cossineSimilarity(self, a, b):
-        return self.dotProduct(a, b) / math.sqrt(self.dotProduct(a, a)) + math.sqrt(self.dotProduct(b, b))
+        return self.dotProduct(a, b) / (math.sqrt(self.dotProduct(a, a)) * math.sqrt(self.dotProduct(b, b)))
 
     def dotProduct(self, a, b):
         ans = 0
