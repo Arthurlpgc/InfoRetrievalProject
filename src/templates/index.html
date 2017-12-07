@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coding Questions Search</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+      .container {
+        max-width: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Coding Questions Search</h1>
+      <br>
+      <form method='POST' action='/'>
+        <h4>Plain Text Query</h4>
+        <div class="form-group">
+          <input type="text" name="query" class="form-control" id="text" placeholder="Search by text..." style="max-width: 300px;">
+        </div>
+        <button type="submit" name="plain" class="btn btn-default">Submit</button>
+        <br>
+          <br>
+        <h4>Structured Query</h4>
+        <h6>Title</h6>
+        <div class="form-group">
+          <input type="text" name="query_title" class="form-control" id="title" placeholder="Search by title..." style="max-width: 300px;">
+        </div>
+
+        <h6>Statement</h6>
+        <div class="form-group">
+          <input type="text" name="query_statement" class="form-control" id="title" placeholder="Search by statement..." style="max-width: 300px;">
+        </div>
+
+        <button type="submit" name="structured" class="btn btn-default">Submit</button>
+        </form>
+
+      <br>
+    </div>
+    <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+</html>
