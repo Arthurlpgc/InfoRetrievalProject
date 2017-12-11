@@ -1,0 +1,3453 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="X-Csrf-Token" content="f539642c01f0748cd0ac7a9aa7305c49"/>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=0.01"/>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/jquery-1.8.3.js"></script>
+    <script type="application/javascript">
+        window.standaloneContest = false;
+        function adjustViewport() {
+            var screenWidthPx = Math.min($(window).width(), window.screen.width);
+            var siteWidthPx = 1100; // min width of site
+            var ratio = Math.min(screenWidthPx / siteWidthPx, 1.0);
+            var viewport = "width=device-width, initial-scale=" + ratio;
+            $('#viewport').attr('content', viewport);
+            var style = $('<style>html * { max-height: 1000000px; }</style>');
+            $('html > head').append(style);
+        }
+
+        if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+            adjustViewport();
+        }
+    </script>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="profileName" content="c3">
+    <meta name="google-site-verification" content="OTd2dN5x4nS4OPknPI9JFg36fKxjqY0i1PSfFPv_J90"/>
+    <meta property="fb:admins" content="100001352546622" />
+    <meta property="og:image" content="http://st.codeforces.com/s/55245/images/codeforces-telegram-square.png" />
+    <link rel="image_src" href="http://st.codeforces.com/s/55245/images/codeforces-telegram-square.png" />
+    <meta property="og:title" content="Problemset - Codeforces"/>
+    <meta property="og:description" content=""/>
+    
+    <meta property="og:site_name" content="Codeforces"/>
+    
+    <meta name="gc" content="89cd5d7084985eebd1adb347a73f803e36caf4bb"/>
+    
+    
+    
+    <meta name="utc_offset" content="+03:00"/>
+    <meta name="verify-reformal" content="f56f99fd7e087fb6ccb48ef2" />
+    <title>Problemset - Codeforces</title>
+        <meta name="description" content="Codeforces. Programming competitions and contests, programming community" />
+        <meta name="keywords" content="programming algorithm contest competition informatics olympiads c++ java graphs vkcup" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/font-awesome.min.css" type="text/css" charset="utf-8" />
+
+        <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Cuprum&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+
+    <link rel="shortcut icon" type="image/png" href="http://st.codeforces.com/s/55245/favicon.png">
+
+    <!--CombineResourcesFilter-->
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/prettify.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/clear.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/ttypography.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/problem-statement.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/second-level-menu.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/roundbox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/datatable.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/table-form.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/topic.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/jquery.jgrowl.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/facebox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/jquery.wysiwyg.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/jquery.autocomplete.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/codeforces.datepick.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/colorbox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/jquery.drafts.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="http://st.codeforces.com/s/55245/css/community.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/prettify/prettify.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/moment.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/pushstream.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/jquery.lavalamp.min.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/jquery.jgrowl.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/jquery.swipe.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/facebox.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/jquery.wysiwyg.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/controls/wysiwyg.colorpicker.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/controls/wysiwyg.table.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/controls/wysiwyg.image.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/controls/wysiwyg.link.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/jquery.autocomplete.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/jquery.datepick.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/jquery.ie6blocker.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/jquery.ba-bbq.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/jquery.drafts.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/sjcl.js"></script>
+    <script type="text/javascript" src="/scripts/0488170e75a36d752153e86269828499/en/codeforces-options.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/js/codeforces.js?v=20160131"></script>
+    <!--/CombineResourcesFilter-->
+
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/markitup/skins/markitup/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="http://st.codeforces.com/s/55245/markitup/sets/markdown/style.css" type="text/css" charset="utf-8" />
+
+    <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/markitup/jquery.markitup.js"></script>
+    <script type="text/javascript" src="http://st.codeforces.com/s/55245/markitup/sets/markdown/set.js"></script>
+
+    <!--[if IE]>
+    <style>
+        #sidebar {
+            padding-left: 1em;
+            margin: 1em 1em 1em 0;
+        }
+    </style>
+    <![endif]-->
+
+
+</head>
+<body><span style='display:none;' class='csrf-token' data-csrf='f539642c01f0748cd0ac7a9aa7305c49'>&nbsp;</span>
+
+<div class="button-up" style="display: none; opacity: 0.7; width: 50px; height:100%; position: fixed; left: 0; top: 0; cursor: pointer; text-align: center; line-height: 35px; color: #d3dbe4; font-weight: bold; font-size: 3.0rem;"><i class="icon-circle-arrow-up"></i></div>
+
+<!-- Codeforces JavaScripts. -->
+<script type="text/javascript">
+    var queryMobile = Codeforces.queryString.mobile;
+    if (queryMobile === "true" || queryMobile === "false") {
+        Codeforces.putToStorage("useMobile", queryMobile == "true");
+    } else {
+        var useMobile = Codeforces.getFromStorage("useMobile");
+        if (useMobile === true || useMobile === false) {
+            if (useMobile != false) {
+                Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", useMobile));
+            }
+        }
+    }
+</script>
+<script type="text/javascript">
+    if (window.parent.frames.length > 0) {
+        window.stop();
+    }
+</script>
+<script type="text/javascript">
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '554666954583323',
+            xfbml      : true,
+            version    : 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+    (function () {
+        jQuery.expr[':'].containsCI = function(elem, index, match) {
+            return !match || !match.length || match.length < 4 || !match[3] || (
+                    elem.textContent || elem.innerText || jQuery(elem).text() || ''
+            ).toLowerCase().indexOf(match[3].toLowerCase()) >= 0;
+        }
+    }(jQuery));
+
+    $.ajaxPrefilter(function(options, originalOptions, xhr) {
+        var csrf = Codeforces.getCsrfToken();
+
+        if (csrf) {
+            var data = originalOptions.data;
+            if (originalOptions.data !== undefined) {
+                if (Object.prototype.toString.call(originalOptions.data) === '[object String]') {
+                    data = $.deparam(originalOptions.data);
+                }
+            } else {
+                data = {};
+            }
+            options.data = $.param($.extend(data, { csrf_token: csrf }));
+        }
+    });
+
+    window.getCodeforcesServerTime = function(callback) {
+        $.post("/data/time", {}, callback, "json");
+    }
+
+    window.updateTypography = function () {
+        $("div.ttypography code").addClass("tt");
+        $("div.ttypography pre>code").addClass("prettyprint").removeClass("tt");
+        $("div.ttypography table").addClass("bordertable");
+        prettyPrint();
+    }
+
+    $.ajaxSetup({ scriptCharset: "utf-8" ,contentType: "application/x-www-form-urlencoded; charset=UTF-8", headers: {
+        'X-Csrf-Token': Codeforces.getCsrfToken()
+    }});
+
+    window.updateTypography();
+
+    Codeforces.signForms();
+
+    setTimeout(function() {
+        $(".second-level-menu-list").lavaLamp({
+            fx: "backout",
+            speed: 1000
+        });
+    }, 0);
+
+
+    Codeforces.countdown();
+    $("a[rel='photobox']").colorbox();
+
+
+    function showAnnouncements(json) {
+        //info("j=" + JSON.stringify(json));
+
+        if (json.t != "a") {
+            return;
+        }
+        // console.log("Got announcement from channel");
+        setTimeout(function() {
+            Codeforces.showAnnouncements(json.d, "en");
+        }, Math.random() * 500);
+    }
+    if (Codeforces.getParticipantChannel()) {
+        Codeforces.subscribe(Codeforces.getParticipantChannel(), function(json) {
+            showAnnouncements(json);
+        });
+    }
+
+    if (Codeforces.getContestChannel()) {
+        Codeforces.subscribe(Codeforces.getContestChannel(), function(json) {
+            showAnnouncements(json);
+        });
+    }
+
+    if (Codeforces.getGlobalChannel()) {
+        Codeforces.subscribe(Codeforces.getGlobalChannel(), function(json) {
+            showAnnouncements(json);
+        });
+    }
+
+    if (Codeforces.getUserChannel()) {
+        Codeforces.subscribe(Codeforces.getUserChannel(), function(json) {
+            showAnnouncements(json);
+        });
+    }
+
+    $(".clickable-title").click(function() {
+        Codeforces.alert($(this).attr("title"));
+    }).css("position", "relative").css("bottom", "3px");
+
+
+    Codeforces.reformatTimes();
+    Codeforces.initializePubSub();
+
+    Codeforces.setupSpoilers();
+    Codeforces.setupTutorials("/data/problemTutorial");
+        });
+    </script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-743380-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = (document.location.protocol == 'https:' ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<div id="body">
+        
+
+<div class="side-bell" style="visibility: hidden; display: none; opacity: 0.7; width: 40px; position: fixed; right: 0; top: 0; cursor: pointer; text-align: center; line-height: 35px; color: #d3dbe4; font-weight: bold; font-size: 1.5rem;">
+    <span class="icon-stack" style="width: 100%;">
+        <i class="icon-circle icon-stack-base"></i>
+        <i class="icon-bell-alt icon-light"></i>
+    </span>
+    <br/>
+    <span class="side-bell__count" style="position: relative; top: -10px;"></span>
+</div>
+
+
+<div id="header" style="position: relative;">
+    <div style="float:left;">
+            
+            <a href="/"><img src="http://st.codeforces.com/s/55245/images/codeforces-logo-with-telegram.png"/></a>
+    </div>
+    <div class="lang-chooser">
+        <div style="text-align: right;">
+            <a href="?locale=en"><img src="http://st.codeforces.com/s/55245/images/flags/24/gb.png" title="In English" alt="In English"/></a>
+            <a href="?locale=ru"><img src="http://st.codeforces.com/s/55245/images/flags/24/ru.png" title="По-русски" alt="По-русски"/></a>
+        </div>
+
+        <div >
+                        <a href="/enter?back=%2Fproblemset">Enter</a>
+                     | 
+                        <a href="/register">Register</a>
+                    
+        </div>
+
+
+
+    </div>
+    <br style="clear: both;"/>
+</div>
+        
+
+    <div class="roundbox menu-box" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+            <div class="roundbox-lb">&nbsp;</div>
+            <div class="roundbox-rb">&nbsp;</div>
+    <div class="menu-list-container">
+    <ul class="menu-list main-menu-list">
+                <li class=""><a href="/">Home</a></li>
+                <li class=""><a href="/contests">Contests</a></li>
+                <li class=""><a href="/gyms">Gym</a></li>
+                <li class="current"><a href="/problemset">Problemset</a></li>
+                <li class=""><a href="/groups">Groups</a></li>
+                <li class=""><a href="/ratings">Rating</a></li>
+                <li class=""><a href="/api/help">API</a></li>
+                <li class=""><a href="/calendar">Calendar</a></li>
+    </ul>
+        <form method="post" action="/search"><input type='hidden' name='csrf_token' value='f539642c01f0748cd0ac7a9aa7305c49'/>
+            <input class="search" name="query" data-isPlaceholder="true" value=""/>
+        </form>
+    <br style="clear: both;"/>
+</div>
+
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input.search").focus(function () {
+                if ($(this).attr("data-isPlaceholder") === "true") {
+                    $(this).val("");
+                    $(this).removeAttr("data-isPlaceholder");
+                }
+            });
+        });
+    </script>
+            <br style="height: 3em; clear: both;"/>
+
+        <div style="position: relative;">
+                        <div id="sidebar">
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">&rarr; Pay attention
+            <div class="top-links">
+            </div>
+        </div>
+<div style="padding: 0.5em;">
+        <div style="text-align:center;border-bottom: 1px solid rgb(185, 185, 185);margin:0 -0.5em 0.5em -0.5em;padding: 0 1em 0.5em 1em;">
+            <span class='contest-state-phase'>Before contest</span><br/><a href="/contests/871,872">Codeforces Round #440 (Div. 1, based on Technocup 2018 Elimination Round 2)</a><br/><span class='countdown' home='http://st.codeforces.com/s/55245' noRedirection='true' textBeforeRedirect=''><span title="125:01:57">5 days</span></span>
+        </div>
+        <div style="text-align:center;border-bottom: 1px solid rgb(185, 185, 185);margin:0 -0.5em 0.5em -0.5em;padding: 0 1em 0.5em 1em;">
+            <span class='contest-state-phase'>Before contest</span><br/><a href="/contests/871,872">Codeforces Round #440 (Div. 2, based on Technocup 2018 Elimination Round 2)</a><br/><span class='countdown' home='http://st.codeforces.com/s/55245' noRedirection='true' textBeforeRedirect=''><span title="125:01:57">5 days</span></span>
+        </div>
+        <div style="text-align:center;">
+            <div class="socials" style="text-align: left;">
+                <div style="margin-top: 0.85em;position: relative;">
+
+        <div id="fb-root"></div>
+        <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "http://connect.facebook.net/en_EN/all.js#appId=554666954583323&xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <div class="fb-like" data-href="http://codeforces.com/contests/871,872" data-send="false" data-width="256" data-show-faces="false" data-font="arial" data-ref='218179207'></div>
+
+        </div>
+</div>
+
+        </div>
+</div>
+    </div>
+</div>
+                        <div id="pageContent" class="content-with-sidebar">
+                    <div class="second-level-menu">
+<ul class="second-level-menu-list">
+        <li><a
+                                        href="/problemset">Problems</a></li>
+        <li><a
+                                        href="/problemset/submit">Submit</a></li>
+        <li><a
+                                        href="/problemset/status">Status</a></li>
+        <li><a
+                                        href="/problemset/standings">Standings</a></li>
+        <li><a
+                                        href="/problemset/customtest">Custom test</a></li>
+</ul>
+</div>
+
+
+<script type="application/javascript">
+    $(function() {
+        $(".closeUserList").click(function() {
+            document.location = Codeforces.updateUrlParameter(document.location.href, "list", "");
+            return false;
+        });
+    })
+</script>
+<div class="datatable"
+     
+     style="background-color: #E1E1E1; padding-bottom: 3px;">
+            <div class="lt">&nbsp;</div>
+            <div class="rt">&nbsp;</div>
+            <div class="lb">&nbsp;</div>
+            <div class="rb">&nbsp;</div>
+
+            <div style="padding: 4px 0 0 6px;font-size:1.4rem;position:relative;">
+                All problems
+                    <i style="cursor: pointer; font-size: 1.5rem; position: relative; top: 2px;" class="icon-list userListMarker"></i>
+
+                <div style="position:absolute;right:0.25em;top:0.35em;">
+                    <span style="padding:0;position:relative;bottom:2px;" class="rowCount"></span>
+
+                    <img class="closed" src="http://st.codeforces.com/s/55245/images/icons/control.png"/>
+
+                    <span class="filter" style="display:none;">
+                        <img class="opened" src="http://st.codeforces.com/s/55245/images/icons/control-270.png"/>
+                        <input style="padding:0;position:relative;bottom:2px;border:1px solid #aaa;height:17px;font-size:1.3rem;"/>
+                    </span>
+                </div>
+            </div>
+            <div style="background-color: white;margin:0.3em 3px 0 3px;position:relative;">
+            <div class="ilt">&nbsp;</div>
+            <div class="irt">&nbsp;</div>
+            <table class="problems">
+    <tr>
+        <th style="width: 4em;">#</th>
+        <th>Name</th>
+        <th style="width: 3em;">&nbsp;</th>
+
+
+
+
+        <th style="width: 6em;">
+            <a href="/problemset?order=BY_SOLVED_DESC" class="non-decorated">
+                Solved
+                <img alt="Sort desc." title="Sort desc." src="http://st.codeforces.com/s/55245/images/datatable/tablesorter-bg.gif" style="vertical-align: middle;">
+            </a>
+        </th>
+    </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/869/E">
+                869E
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/869/E">
+The Untended Antiquity                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/data structures" style="text-decoration: none;" class="notice" title="Heaps, binary search trees, segment trees, hash tables, etc">data structures</a>,
+                        <a href="/problemset/tags/hashing" style="text-decoration: none;" class="notice" title="Hashing, hashtables">hashing</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/869/E"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/869/problem/E"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x419</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/869/D">
+                869D
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/869/D">
+The Overdosing Ubiquity                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/dfs and similar" style="text-decoration: none;" class="notice" title="Dfs and similar">dfs and similar</a>,
+                        <a href="/problemset/tags/graphs" style="text-decoration: none;" class="notice" title="Graphs">graphs</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/869/D"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/869/problem/D"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x26</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/869/C">
+                869C
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/869/C">
+The Intriguing Obsession                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/combinatorics" style="text-decoration: none;" class="notice" title="Combinatorics">combinatorics</a>,
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/869/C"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/869/problem/C"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x1590</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/869/B">
+                869B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/869/B">
+The Eternal Immortality                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/869/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/869/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x4341</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/869/A">
+                869A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/869/A">
+The Artful Expedient                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/869/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/869/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x4098</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/868/G">
+                868G
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/868/G">
+El Toll Caves                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/868/G"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/868/problem/G"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x7</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/868/F">
+                868F
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/868/F">
+Yet Another Minimization Problem                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/divide and conquer" style="text-decoration: none;" class="notice" title="Divide and Conquer">divide and conquer</a>,
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/868/F"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/868/problem/F"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x219</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/868/E">
+                868E
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/868/E">
+Policeman and a Tree                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/graphs" style="text-decoration: none;" class="notice" title="Graphs">graphs</a>,
+                        <a href="/problemset/tags/trees" style="text-decoration: none;" class="notice" title="Trees">trees</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/868/E"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/868/problem/E"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x81</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/868/D">
+                868D
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/868/D">
+Huge Strings                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/bitmasks" style="text-decoration: none;" class="notice" title="Bitmasks">bitmasks</a>,
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/strings" style="text-decoration: none;" class="notice" title="Prefix- and Z-functions, suffix structures, Knuth–Morris–Pratt algorithm, etc">strings</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/868/D"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/868/problem/D"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x457</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/868/C">
+                868C
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/868/C">
+Qualification Rounds                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/bitmasks" style="text-decoration: none;" class="notice" title="Bitmasks">bitmasks</a>,
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/constructive algorithms" style="text-decoration: none;" class="notice" title="Constructive algorithms">constructive algorithms</a>,
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/868/C"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/868/problem/C"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x1767</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/868/B">
+                868B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/868/B">
+Race Against Time                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/868/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/868/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x2093</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/868/A">
+                868A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/868/A">
+Bark to Unlock                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/strings" style="text-decoration: none;" class="notice" title="Prefix- and Z-functions, suffix structures, Knuth–Morris–Pratt algorithm, etc">strings</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/868/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/868/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x3476</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/867/A">
+                867A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/867/A">
+Between the Offices                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/867/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/867/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x3981</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/865/G">
+                865G
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/865/G">
+Flowers and Chocolate                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/combinatorics" style="text-decoration: none;" class="notice" title="Combinatorics">combinatorics</a>,
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>,
+                        <a href="/problemset/tags/matrices" style="text-decoration: none;" class="notice" title="Matrix multiplication, determinant, Cramer's rule, systems of linear equations">matrices</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/865/G"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/865/problem/G"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x18</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/865/F">
+                865F
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/865/F">
+Egg Roulette                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/bitmasks" style="text-decoration: none;" class="notice" title="Bitmasks">bitmasks</a>,
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/divide and conquer" style="text-decoration: none;" class="notice" title="Divide and Conquer">divide and conquer</a>,
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>,
+                        <a href="/problemset/tags/meet-in-the-middle" style="text-decoration: none;" class="notice" title="Meet-in-the-middle">meet-in-the-middle</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/865/F"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/865/problem/F"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x10</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/865/E">
+                865E
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/865/E">
+Hex Dyslexia                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/bitmasks" style="text-decoration: none;" class="notice" title="Bitmasks">bitmasks</a>,
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/graphs" style="text-decoration: none;" class="notice" title="Graphs">graphs</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/865/E"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/865/problem/E"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x14</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/865/D">
+                865D
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/865/D">
+Buy Low Sell High                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/constructive algorithms" style="text-decoration: none;" class="notice" title="Constructive algorithms">constructive algorithms</a>,
+                        <a href="/problemset/tags/data structures" style="text-decoration: none;" class="notice" title="Heaps, binary search trees, segment trees, hash tables, etc">data structures</a>,
+                        <a href="/problemset/tags/greedy" style="text-decoration: none;" class="notice" title="Greedy algorithms">greedy</a>,
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/865/D"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/865/problem/D"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x659</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/865/C">
+                865C
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/865/C">
+Gotta Go Fast                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/binary search" style="text-decoration: none;" class="notice" title="Binary search">binary search</a>,
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/865/C"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/865/problem/C"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x265</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/865/B">
+                865B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/865/B">
+Ordering Pizza                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/binary search" style="text-decoration: none;" class="notice" title="Binary search">binary search</a>,
+                        <a href="/problemset/tags/sortings" style="text-decoration: none;" class="notice" title="Sortings, orderings">sortings</a>,
+                        <a href="/problemset/tags/ternary search" style="text-decoration: none;" class="notice" title="Ternary search">ternary search</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/865/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/865/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x999</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/865/A">
+                865A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/865/A">
+Save the problem!                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/constructive algorithms" style="text-decoration: none;" class="notice" title="Constructive algorithms">constructive algorithms</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/865/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/865/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x2653</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/864/F">
+                864F
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/864/F">
+Cities Excursions                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/dfs and similar" style="text-decoration: none;" class="notice" title="Dfs and similar">dfs and similar</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/864/F"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/864/problem/F"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x264</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/864/E">
+                864E
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/864/E">
+Fire                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/sortings" style="text-decoration: none;" class="notice" title="Sortings, orderings">sortings</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/864/E"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/864/problem/E"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x1475</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/864/D">
+                864D
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/864/D">
+Make a Permutation!                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/greedy" style="text-decoration: none;" class="notice" title="Greedy algorithms">greedy</a>,
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/864/D"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/864/problem/D"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x3080</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/864/C">
+                864C
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/864/C">
+Bus                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/greedy" style="text-decoration: none;" class="notice" title="Greedy algorithms">greedy</a>,
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/864/C"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/864/problem/C"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x3421</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/864/B">
+                864B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/864/B">
+Polycarp and Letters                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/864/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/864/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x4822</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/864/A">
+                864A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/864/A">
+Fair Game                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>,
+                        <a href="/problemset/tags/sortings" style="text-decoration: none;" class="notice" title="Sortings, orderings">sortings</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/864/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/864/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x5605</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/863/G">
+                863G
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/863/G">
+Graphic Settings                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/863/G"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/863/problem/G"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x9</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/863/F">
+                863F
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/863/F">
+Almost Permutation                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/flows" style="text-decoration: none;" class="notice" title="Graph network flows">flows</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/863/F"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/863/problem/F"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x219</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/863/E">
+                863E
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/863/E">
+Turn Off The TV                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/data structures" style="text-decoration: none;" class="notice" title="Heaps, binary search trees, segment trees, hash tables, etc">data structures</a>,
+                        <a href="/problemset/tags/sortings" style="text-decoration: none;" class="notice" title="Sortings, orderings">sortings</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/863/E"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/863/problem/E"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x679</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/863/D">
+                863D
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/863/D">
+Yet Another Array Queries Problem                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/data structures" style="text-decoration: none;" class="notice" title="Heaps, binary search trees, segment trees, hash tables, etc">data structures</a>,
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/863/D"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/863/problem/D"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x996</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/863/C">
+                863C
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/863/C">
+1-2-3                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/graphs" style="text-decoration: none;" class="notice" title="Graphs">graphs</a>,
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/863/C"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/863/problem/C"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x985</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/863/B">
+                863B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/863/B">
+Kayaking                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/greedy" style="text-decoration: none;" class="notice" title="Greedy algorithms">greedy</a>,
+                        <a href="/problemset/tags/sortings" style="text-decoration: none;" class="notice" title="Sortings, orderings">sortings</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/863/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/863/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x2067</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/863/A">
+                863A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/863/A">
+Quasi-palindrome                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/863/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/863/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x3883</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/862/F">
+                862F
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/862/F">
+Mahmoud and Ehab and the final stage                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/constructive algorithms" style="text-decoration: none;" class="notice" title="Constructive algorithms">constructive algorithms</a>,
+                        <a href="/problemset/tags/data structures" style="text-decoration: none;" class="notice" title="Heaps, binary search trees, segment trees, hash tables, etc">data structures</a>,
+                        <a href="/problemset/tags/strings" style="text-decoration: none;" class="notice" title="Prefix- and Z-functions, suffix structures, Knuth–Morris–Pratt algorithm, etc">strings</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/862/F"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/862/problem/F"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x41</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/862/E">
+                862E
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/862/E">
+Mahmoud and Ehab and the function                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/binary search" style="text-decoration: none;" class="notice" title="Binary search">binary search</a>,
+                        <a href="/problemset/tags/data structures" style="text-decoration: none;" class="notice" title="Heaps, binary search trees, segment trees, hash tables, etc">data structures</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/862/E"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/862/problem/E"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x589</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/862/D">
+                862D
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/862/D">
+Mahmoud and Ehab and the binary string                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/binary search" style="text-decoration: none;" class="notice" title="Binary search">binary search</a>,
+                        <a href="/problemset/tags/divide and conquer" style="text-decoration: none;" class="notice" title="Divide and Conquer">divide and conquer</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/862/D"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/862/problem/D"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x792</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/862/C">
+                862C
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/862/C">
+Mahmoud and Ehab and the xor                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/constructive algorithms" style="text-decoration: none;" class="notice" title="Constructive algorithms">constructive algorithms</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/862/C"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/862/problem/C"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x1993</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/862/B">
+                862B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/862/B">
+Mahmoud and Ehab and the bipartiteness                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/dfs and similar" style="text-decoration: none;" class="notice" title="Dfs and similar">dfs and similar</a>,
+                        <a href="/problemset/tags/graphs" style="text-decoration: none;" class="notice" title="Graphs">graphs</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/862/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/862/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x3842</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/862/A">
+                862A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/862/A">
+Mahmoud and Ehab and the MEX                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/862/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/862/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x5467</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/860/E">
+                860E
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/860/E">
+Arkady and a Nobody-men                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/data structures" style="text-decoration: none;" class="notice" title="Heaps, binary search trees, segment trees, hash tables, etc">data structures</a>,
+                        <a href="/problemset/tags/dfs and similar" style="text-decoration: none;" class="notice" title="Dfs and similar">dfs and similar</a>,
+                        <a href="/problemset/tags/trees" style="text-decoration: none;" class="notice" title="Trees">trees</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/860/E"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/860/problem/E"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x105</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/859/G">
+                859G
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/859/G">
+Circle of Numbers                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/859/G"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/859/problem/G"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x48</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/859/F">
+                859F
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/859/F">
+Ordering T-Shirts                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/greedy" style="text-decoration: none;" class="notice" title="Greedy algorithms">greedy</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/859/F"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/859/problem/F"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x55</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/859/E">
+                859E
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/859/E">
+Desk Disorder                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/combinatorics" style="text-decoration: none;" class="notice" title="Combinatorics">combinatorics</a>,
+                        <a href="/problemset/tags/dfs and similar" style="text-decoration: none;" class="notice" title="Dfs and similar">dfs and similar</a>,
+                        <a href="/problemset/tags/dsu" style="text-decoration: none;" class="notice" title="Disjoint set union">dsu</a>,
+                        <a href="/problemset/tags/graphs" style="text-decoration: none;" class="notice" title="Graphs">graphs</a>,
+                        <a href="/problemset/tags/trees" style="text-decoration: none;" class="notice" title="Trees">trees</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/859/E"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/859/problem/E"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x723</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/859/D">
+                859D
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/859/D">
+Third Month Insanity                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/probabilities" style="text-decoration: none;" class="notice" title="Probabilities, expected values, statistics, random variables, etc">probabilities</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/859/D"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/859/problem/D"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x527</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/859/C">
+                859C
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/859/C">
+Pie Rules                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/games" style="text-decoration: none;" class="notice" title="Games, Sprague–Grundy theorem">games</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/859/C"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/859/problem/C"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x2051</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/859/B">
+                859B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/859/B">
+Lazy Security Guard                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/859/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/859/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x3250</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/859/A">
+                859A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/859/A">
+Declined Finalists                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/greedy" style="text-decoration: none;" class="notice" title="Greedy algorithms">greedy</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/859/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/859/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x3661</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/858/F">
+                858F
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/858/F">
+Wizard's Tour                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/constructive algorithms" style="text-decoration: none;" class="notice" title="Constructive algorithms">constructive algorithms</a>,
+                        <a href="/problemset/tags/dfs and similar" style="text-decoration: none;" class="notice" title="Dfs and similar">dfs and similar</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/858/F"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/858/problem/F"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x351</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/858/E">
+                858E
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/858/E">
+Tests Renumeration                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/858/E"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/858/problem/E"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x309</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/858/D">
+                858D
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/858/D">
+Polycarp's phone book                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/data structures" style="text-decoration: none;" class="notice" title="Heaps, binary search trees, segment trees, hash tables, etc">data structures</a>,
+                        <a href="/problemset/tags/sortings" style="text-decoration: none;" class="notice" title="Sortings, orderings">sortings</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/858/D"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/858/problem/D"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x1777</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/858/C">
+                858C
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/858/C">
+Did you mean...                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/greedy" style="text-decoration: none;" class="notice" title="Greedy algorithms">greedy</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/858/C"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/858/problem/C"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x2664</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/858/B">
+                858B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/858/B">
+Which floor?                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/858/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/858/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x2108</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/858/A">
+                858A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/858/A">
+k-rounding                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/number theory" style="text-decoration: none;" class="notice" title="Number theory: Euler function, GCD, divisibility, etc">number theory</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/858/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/858/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x3732</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/856/F">
+                856F
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/856/F">
+To Play or not to Play                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/856/F"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/856/problem/F"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x9</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/856/E">
+                856E
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/856/E">
+Satellites                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/856/E"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/856/problem/E"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x21</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/856/D">
+                856D
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/856/D">
+Masha and Cactus                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/856/D"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/856/problem/D"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x122</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/856/C">
+                856C
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/856/C">
+Eleventh Birthday                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/combinatorics" style="text-decoration: none;" class="notice" title="Combinatorics">combinatorics</a>,
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/856/C"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/856/problem/C"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x137</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/856/B">
+                856B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/856/B">
+Similar Words                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/strings" style="text-decoration: none;" class="notice" title="Prefix- and Z-functions, suffix structures, Knuth–Morris–Pratt algorithm, etc">strings</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/856/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/856/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x186</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/856/A">
+                856A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/856/A">
+Set Theory                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/constructive algorithms" style="text-decoration: none;" class="notice" title="Constructive algorithms">constructive algorithms</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/856/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/856/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x575</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/855/G">
+                855G
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/855/G">
+Harry Vs Voldemort                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/855/G"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/855/problem/G"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x14</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/855/F">
+                855F
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/855/F">
+Nagini                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/data structures" style="text-decoration: none;" class="notice" title="Heaps, binary search trees, segment trees, hash tables, etc">data structures</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/855/F"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/855/problem/F"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x63</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/855/E">
+                855E
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/855/E">
+Salazar Slytherin's Locket                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/bitmasks" style="text-decoration: none;" class="notice" title="Bitmasks">bitmasks</a>,
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/855/E"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/855/problem/E"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x482</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/855/D">
+                855D
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/855/D">
+Rowena Ravenclaw's Diadem                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/trees" style="text-decoration: none;" class="notice" title="Trees">trees</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/855/D"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/855/problem/D"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x269</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/855/C">
+                855C
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/855/C">
+Helga Hufflepuff's Cup                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/trees" style="text-decoration: none;" class="notice" title="Trees">trees</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/855/C"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/855/problem/C"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x788</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/855/B">
+                855B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/855/B">
+Marvolo Gaunt's Ring                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/data structures" style="text-decoration: none;" class="notice" title="Heaps, binary search trees, segment trees, hash tables, etc">data structures</a>,
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/855/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/855/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x2617</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/855/A">
+                855A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/855/A">
+Tom Riddle's Diary                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/855/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/855/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x4534</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/854/B">
+                854B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/854/B">
+Maxim Buys an Apartment                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/constructive algorithms" style="text-decoration: none;" class="notice" title="Constructive algorithms">constructive algorithms</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/854/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/854/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x4967</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/854/A">
+                854A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/854/A">
+Fraction                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/constructive algorithms" style="text-decoration: none;" class="notice" title="Constructive algorithms">constructive algorithms</a>,
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/854/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/854/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x6177</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/853/E">
+                853E
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/853/E">
+Lada Malina                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/data structures" style="text-decoration: none;" class="notice" title="Heaps, binary search trees, segment trees, hash tables, etc">data structures</a>,
+                        <a href="/problemset/tags/geometry" style="text-decoration: none;" class="notice" title="Geometry, computational geometry">geometry</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/853/E"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/853/problem/E"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x20</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/853/D">
+                853D
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/853/D">
+Michael and Charging Stations                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/binary search" style="text-decoration: none;" class="notice" title="Binary search">binary search</a>,
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/853/D"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/853/problem/D"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x284</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/853/C">
+                853C
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/853/C">
+Boredom                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/data structures" style="text-decoration: none;" class="notice" title="Heaps, binary search trees, segment trees, hash tables, etc">data structures</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/853/C"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/853/problem/C"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x759</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/853/B">
+                853B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/853/B">
+Jury Meeting                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/greedy" style="text-decoration: none;" class="notice" title="Greedy algorithms">greedy</a>,
+                        <a href="/problemset/tags/sortings" style="text-decoration: none;" class="notice" title="Sortings, orderings">sortings</a>,
+                        <a href="/problemset/tags/two pointers" style="text-decoration: none;" class="notice" title="Two pointers">two pointers</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/853/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/853/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x1634</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/853/A">
+                853A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/853/A">
+Planning                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/greedy" style="text-decoration: none;" class="notice" title="Greedy algorithms">greedy</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/853/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/853/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x3678</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/852/I">
+                852I
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/852/I">
+Dating                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/dfs and similar" style="text-decoration: none;" class="notice" title="Dfs and similar">dfs and similar</a>,
+                        <a href="/problemset/tags/graphs" style="text-decoration: none;" class="notice" title="Graphs">graphs</a>,
+                        <a href="/problemset/tags/trees" style="text-decoration: none;" class="notice" title="Trees">trees</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/852/I"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/852/problem/I"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x227</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/852/H">
+                852H
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/852/H">
+Bob and stages                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/geometry" style="text-decoration: none;" class="notice" title="Geometry, computational geometry">geometry</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/852/H"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/852/problem/H"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x32</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/852/G">
+                852G
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/852/G">
+Bathroom terminal                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/852/G"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/852/problem/G"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x694</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/852/F">
+                852F
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/852/F">
+Product transformation                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/combinatorics" style="text-decoration: none;" class="notice" title="Combinatorics">combinatorics</a>,
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>,
+                        <a href="/problemset/tags/number theory" style="text-decoration: none;" class="notice" title="Number theory: Euler function, GCD, divisibility, etc">number theory</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/852/F"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/852/problem/F"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x293</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/852/E">
+                852E
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/852/E">
+Casinos and travel                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/852/E"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/852/problem/E"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x396</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/852/D">
+                852D
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/852/D">
+Exploration plan                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/binary search" style="text-decoration: none;" class="notice" title="Binary search">binary search</a>,
+                        <a href="/problemset/tags/flows" style="text-decoration: none;" class="notice" title="Graph network flows">flows</a>,
+                        <a href="/problemset/tags/graph matchings" style="text-decoration: none;" class="notice" title="Graph matchings, König's theorem, vertex cover of bipartite graph">graph matchings</a>,
+                        <a href="/problemset/tags/shortest paths" style="text-decoration: none;" class="notice" title="Shortest paths on weighted and unweighted graphs">shortest paths</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/852/D"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/852/problem/D"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x279</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/852/C">
+                852C
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/852/C">
+Property                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/greedy" style="text-decoration: none;" class="notice" title="Greedy algorithms">greedy</a>,
+                        <a href="/problemset/tags/sortings" style="text-decoration: none;" class="notice" title="Sortings, orderings">sortings</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/852/C"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/852/problem/C"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x179</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/852/B">
+                852B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/852/B">
+Neural Network country                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/matrices" style="text-decoration: none;" class="notice" title="Matrix multiplication, determinant, Cramer's rule, systems of linear equations">matrices</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/852/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/852/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x451</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/852/A">
+                852A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/852/A">
+Digits                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>,
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/852/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/852/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x167</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/851/B">
+                851B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/851/B">
+Arpa and an exam about geometry                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/geometry" style="text-decoration: none;" class="notice" title="Geometry, computational geometry">geometry</a>,
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/851/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/851/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x3128</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/851/A">
+                851A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/851/A">
+Arpa and a research in Mexican wave                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/851/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/851/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x5168</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/850/F">
+                850F
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/850/F">
+Rainbow Balls                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/850/F"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/850/problem/F"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x38</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/850/E">
+                850E
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/850/E">
+Random Elections                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/bitmasks" style="text-decoration: none;" class="notice" title="Bitmasks">bitmasks</a>,
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/fft" style="text-decoration: none;" class="notice" title="Fast Fourier transform">fft</a>,
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/850/E"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/850/problem/E"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x79</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/850/D">
+                850D
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/850/D">
+Tournament Construction                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/graphs" style="text-decoration: none;" class="notice" title="Graphs">graphs</a>,
+                        <a href="/problemset/tags/greedy" style="text-decoration: none;" class="notice" title="Greedy algorithms">greedy</a>,
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/850/D"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/850/problem/D"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x107</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/850/C">
+                850C
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/850/C">
+Arpa and a game with Mojtaba                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/bitmasks" style="text-decoration: none;" class="notice" title="Bitmasks">bitmasks</a>,
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/games" style="text-decoration: none;" class="notice" title="Games, Sprague–Grundy theorem">games</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/850/C"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/850/problem/C"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x567</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/850/B">
+                850B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/850/B">
+Arpa and a list of numbers                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/number theory" style="text-decoration: none;" class="notice" title="Number theory: Euler function, GCD, divisibility, etc">number theory</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/850/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/850/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x1038</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/850/A">
+                850A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/850/A">
+Five Dimensional Points                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/850/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/850/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x2107</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/849/B">
+                849B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/849/B">
+Tell Your World                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/brute force" style="text-decoration: none;" class="notice" title="Brute force">brute force</a>,
+                        <a href="/problemset/tags/geometry" style="text-decoration: none;" class="notice" title="Geometry, computational geometry">geometry</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/849/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/849/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x2162</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/849/A">
+                849A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/849/A">
+Odds and Ends                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/849/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/849/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x4993</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/848/E">
+                848E
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/848/E">
+Days of Floral Colours                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/combinatorics" style="text-decoration: none;" class="notice" title="Combinatorics">combinatorics</a>,
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/fft" style="text-decoration: none;" class="notice" title="Fast Fourier transform">fft</a>,
+                        <a href="/problemset/tags/math" style="text-decoration: none;" class="notice" title="Mathematics including integration, differential equations, etc">math</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/848/E"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/848/problem/E"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x8</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/848/D">
+                848D
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/848/D">
+Shake It!                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/combinatorics" style="text-decoration: none;" class="notice" title="Combinatorics">combinatorics</a>,
+                        <a href="/problemset/tags/dp" style="text-decoration: none;" class="notice" title="Dynamic programming">dp</a>,
+                        <a href="/problemset/tags/flows" style="text-decoration: none;" class="notice" title="Graph network flows">flows</a>,
+                        <a href="/problemset/tags/graphs" style="text-decoration: none;" class="notice" title="Graphs">graphs</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/848/D"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/848/problem/D"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x58</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/848/C">
+                848C
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/848/C">
+Goodbye Souvenir                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/data structures" style="text-decoration: none;" class="notice" title="Heaps, binary search trees, segment trees, hash tables, etc">data structures</a>,
+                        <a href="/problemset/tags/divide and conquer" style="text-decoration: none;" class="notice" title="Divide and Conquer">divide and conquer</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/848/C"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/848/problem/C"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x304</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/848/B">
+                848B
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/848/B">
+Rooter's Song                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/constructive algorithms" style="text-decoration: none;" class="notice" title="Constructive algorithms">constructive algorithms</a>,
+                        <a href="/problemset/tags/data structures" style="text-decoration: none;" class="notice" title="Heaps, binary search trees, segment trees, hash tables, etc">data structures</a>,
+                        <a href="/problemset/tags/geometry" style="text-decoration: none;" class="notice" title="Geometry, computational geometry">geometry</a>,
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>,
+                        <a href="/problemset/tags/sortings" style="text-decoration: none;" class="notice" title="Sortings, orderings">sortings</a>,
+                        <a href="/problemset/tags/two pointers" style="text-decoration: none;" class="notice" title="Two pointers">two pointers</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/848/B"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/848/problem/B"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x1028</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/848/A">
+                848A
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/848/A">
+From Y to Y                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/constructive algorithms" style="text-decoration: none;" class="notice" title="Constructive algorithms">constructive algorithms</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/848/A"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/848/problem/A"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x3180</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/847/M">
+                847M
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/847/M">
+Weather Tomorrow                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/implementation" style="text-decoration: none;" class="notice" title="Implementation problems, programming technics, simulation">implementation</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/847/M"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/847/problem/M"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x2781</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/847/L">
+                847L
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/847/L">
+Berland SU Computer Network                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/dfs and similar" style="text-decoration: none;" class="notice" title="Dfs and similar">dfs and similar</a>,
+                        <a href="/problemset/tags/hashing" style="text-decoration: none;" class="notice" title="Hashing, hashtables">hashing</a>,
+                        <a href="/problemset/tags/trees" style="text-decoration: none;" class="notice" title="Trees">trees</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/847/L"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/847/problem/L"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x176</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="id">
+                <a href="/problemset/problem/847/K">
+                847K
+                </a>
+            </td>
+            <td>
+                <div style="float: left;">
+                    <a href="/problemset/problem/847/K">
+Travel Cards                    </a>
+                </div>
+                <div style="float: right; font-size: 1.1rem; padding-top: 1px; text-align: right;">
+                        <a href="/problemset/tags/sortings" style="text-decoration: none;" class="notice" title="Sortings, orderings">sortings</a>
+                </div>
+            </td>
+            <td class="act">
+                <span class="act-item">
+                <a href="/problemset/submit/847/K"><img src="http://st.codeforces.com/s/55245/images/icons/submit-22x22.png" title="Submit" alt="Submit"/></a>
+                </span>
+
+            </td>
+            <td style="font-size: 1.1rem;">
+                    <a title="Participants solved the problem" href="/problemset/status/847/problem/K"><img style="vertical-align:middle;" src="http://st.codeforces.com/s/55245/images/icons/user.png"/>&nbsp;x856</a>
+            </td>
+        </tr>
+            </table>
+            </div>
+        </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+                // Create new ':containsIgnoreCase' selector for search
+                jQuery.expr[':'].containsIgnoreCase = function(a, i, m) {
+                    return jQuery(a).text().toUpperCase()
+                            .indexOf(m[3].toUpperCase()) >= 0;
+                };
+
+                if (window.updateDatatableFilter == undefined) {
+                    window.updateDatatableFilter = function(i) {
+                        var parent = $(i).parent().parent().parent().parent();
+                        $("tr.no-items", parent).remove();
+                        $("tr", parent).hide().removeClass('visible');
+                        var text = $(i).val();
+                        if (text) {
+                            $("tr" + ":containsIgnoreCase('" + text + "')", parent).show().addClass('visible');
+                        } else {
+                            parent.find(".rowCount").text("");
+                            $("tr", parent).show().addClass('visible');
+                        }
+
+                        var found = false;
+                        var visibleRowCount = 0;
+                        $("tr", parent).each(function () {
+                            if (!found) {
+                                if ($(this).find("th").size() > 0) {
+                                    $(this).show().addClass('visible');
+                                    found = true;
+                                }
+                            }
+                            if ($(this).hasClass('visible')) {
+                                visibleRowCount++;
+                            }
+                        });
+                        if (text) {
+                            parent.find(".rowCount").text("Matches: " + (visibleRowCount - (found ? 1 : 0)));
+                        }
+                        if (visibleRowCount == (found ? 1 : 0)) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo($(parent).find('table'));
+                        }
+                        $(parent).find("tr td").removeClass("dark");
+                        $(parent).find("tr.visible:odd td").addClass("dark");
+                    }
+
+                    $(".datatable .closed").click(function () {
+                        var parent = $(this).parent();
+                        $(this).hide();
+                        $(".filter", parent).fadeIn(function () {
+                            $("input", parent).val("").focus().css("border", "1px solid #aaa");
+                        });
+                    });
+
+                    $(".datatable .opened").click(function () {
+                        var parent = $(this).parent().parent();
+                        $(".filter", parent).fadeOut(function () {
+                            $(".closed", parent).show();
+                            $("input", parent).val("").each(function () {
+                                window.updateDatatableFilter(this);
+                            });
+                        });
+                    });
+
+                    $(".datatable .filter input").keyup(function(e) {
+                        window.updateDatatableFilter(this);
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+
+                    $(".datatable table").each(function () {
+                        var found = false;
+                        $("tr", this).each(function () {
+                            if (!found && $(this).find("th").size() == 0) {
+                                found = true;
+                            }
+                        });
+                        if (!found) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo(this);
+                        }
+                    });
+
+                    // Applies styles to datatables.
+                    $(".datatable").each(function () {
+                        $(this).find("tr:first th").addClass("top");
+                        $(this).find("tr:last td").addClass("bottom");
+                        $(this).find("tr:odd td").addClass("dark");
+                        $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                        $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                    });
+
+                    $(".datatable table.tablesorter").each(function () {
+                        $(this).bind("sortEnd", function () {
+                            $(".datatable").each(function () {
+                                $(this).find("th, td")
+                                    .removeClass("top").removeClass("bottom")
+                                    .removeClass("left").removeClass("right")
+                                    .removeClass("dark");
+                                $(this).find("tr:first th").addClass("top");
+                                $(this).find("tr:last td").addClass("bottom");
+                                $(this).find("tr:odd td").addClass("dark");
+                                $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                                $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                            });
+                        });
+                    });
+                }
+        });
+    </script>
+
+
+<div class="pagination">
+    <ul>
+            <span class="inactive">&larr;</span>
+        <li>
+                <span class="page-index active" pageIndex="1"><a href="/problemset/page/1">1</a></span>
+        </li>
+        <li>
+                <span class="page-index" pageIndex="2"><a href="/problemset/page/2">2</a></span>
+        </li>
+        <li>
+                <span class="page-index" pageIndex="3"><a href="/problemset/page/3">3</a></span>
+        </li>
+        <li>
+                ...
+        </li>
+        <li>
+                <span class="page-index" pageIndex="37"><a href="/problemset/page/37">37</a></span>
+        </li>
+        <li>
+                <span class="page-index" pageIndex="38"><a href="/problemset/page/38">38</a></span>
+        </li>
+            <li><a href="/problemset/page/2" class="arrow">&rarr;</a></li>
+    </ul>
+</div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+function handlePaginationKeyboardEvent(right) {
+    var pageIndex = parseInt($(".pagination").find("span.active").attr("pageIndex"));
+    if (right) {
+        pageIndex++;
+    } else {
+        pageIndex--;
+    }
+    $(".pagination").find("span[pageIndex=" + pageIndex + "]").each(function () {
+        Codeforces.redirect($(this).find("a").attr("href"));
+    });
+}
+$(document).keydown(function (e) {
+     var code = (e.keyCode ? e.keyCode : e.which);
+     if (e.ctrlKey) {
+        if (code == 37 || code == 39) {
+            handlePaginationKeyboardEvent(code == 39);
+        }
+     }
+});
+        });
+    </script>
+                </div>
+        </div>
+            <br style="clear: both;"/>
+            <div id="footer">
+                <div><a href="http://codeforces.com/">Codeforces</a> (c) Copyright 2010-2017 Mike Mirzayanov</div>
+                <div>The only programming contests Web 2.0 platform</div>
+                    <div>Server time: <span class="format-timewithseconds" data-locale="en">Oct/10/2017 06:03:03</span> (c3).</div>
+                    <div>Desktop version, switch to <a rel="nofollow" class="switchToMobile" href="?mobile=true">mobile version</a>.</div>
+                <div class="smaller"><a href="/privacy">Privacy Policy</a></div>
+
+            </div>
+        <script type="text/javascript">
+            $(function() {
+                $(".switchToMobile").click(function() {
+                    Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", "true"));
+                    return false;
+                });
+                $(".switchToDesktop").click(function() {
+                    Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", "false"));
+                    return false;
+                });
+            });
+        </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if ($(window).width() < 1600) {
+                $('.button-up').css('width', '30px').css('line-height', '30px').css('font-size', '20px');
+            }
+
+            if ($(window).width() >= 1200) {
+                $ (window).scroll (function () {
+                    if ($ (this).scrollTop () > 100) {
+                        $ ('.button-up').fadeIn();
+                    } else {
+                        $ ('.button-up').fadeOut();
+                    }
+                });
+
+                $('.button-up').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500);
+                    return false;
+                });
+
+                $('.button-up').hover(function () {
+                    $(this).animate({
+                        'opacity':'1'
+                    }).css({'background-color':'#e7ebf0','color':'#6a86a4'});
+                }, function () {
+                    $(this).animate({
+                        'opacity':'0.7'
+                    }).css({'background':'none','color':'#d3dbe4'});;
+                });
+            }
+            Codeforces.focusOnError();
+        });
+    </script>
+
+        <div class="userListsFacebox" style="display:none;">
+            <div style="padding: 0.5em; width: 600px; max-height: 200px; overflow-y: auto">
+<div class="datatable"
+     
+     style="background-color: #E1E1E1; padding-bottom: 3px;">
+            <div class="lt">&nbsp;</div>
+            <div class="rt">&nbsp;</div>
+            <div class="lb">&nbsp;</div>
+            <div class="rb">&nbsp;</div>
+
+            <div style="padding: 4px 0 0 6px;font-size:1.4rem;position:relative;">
+                User lists
+
+                <div style="position:absolute;right:0.25em;top:0.35em;">
+                    <span style="padding:0;position:relative;bottom:2px;" class="rowCount"></span>
+
+                    <img class="closed" src="http://st.codeforces.com/s/55245/images/icons/control.png"/>
+
+                    <span class="filter" style="display:none;">
+                        <img class="opened" src="http://st.codeforces.com/s/55245/images/icons/control-270.png"/>
+                        <input style="padding:0;position:relative;bottom:2px;border:1px solid #aaa;height:17px;font-size:1.3rem;"/>
+                    </span>
+                </div>
+            </div>
+            <div style="background-color: white;margin:0.3em 3px 0 3px;position:relative;">
+            <div class="ilt">&nbsp;</div>
+            <div class="irt">&nbsp;</div>
+            <table class="">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+            </table>
+            </div>
+        </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+                // Create new ':containsIgnoreCase' selector for search
+                jQuery.expr[':'].containsIgnoreCase = function(a, i, m) {
+                    return jQuery(a).text().toUpperCase()
+                            .indexOf(m[3].toUpperCase()) >= 0;
+                };
+
+                if (window.updateDatatableFilter == undefined) {
+                    window.updateDatatableFilter = function(i) {
+                        var parent = $(i).parent().parent().parent().parent();
+                        $("tr.no-items", parent).remove();
+                        $("tr", parent).hide().removeClass('visible');
+                        var text = $(i).val();
+                        if (text) {
+                            $("tr" + ":containsIgnoreCase('" + text + "')", parent).show().addClass('visible');
+                        } else {
+                            parent.find(".rowCount").text("");
+                            $("tr", parent).show().addClass('visible');
+                        }
+
+                        var found = false;
+                        var visibleRowCount = 0;
+                        $("tr", parent).each(function () {
+                            if (!found) {
+                                if ($(this).find("th").size() > 0) {
+                                    $(this).show().addClass('visible');
+                                    found = true;
+                                }
+                            }
+                            if ($(this).hasClass('visible')) {
+                                visibleRowCount++;
+                            }
+                        });
+                        if (text) {
+                            parent.find(".rowCount").text("Matches: " + (visibleRowCount - (found ? 1 : 0)));
+                        }
+                        if (visibleRowCount == (found ? 1 : 0)) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo($(parent).find('table'));
+                        }
+                        $(parent).find("tr td").removeClass("dark");
+                        $(parent).find("tr.visible:odd td").addClass("dark");
+                    }
+
+                    $(".datatable .closed").click(function () {
+                        var parent = $(this).parent();
+                        $(this).hide();
+                        $(".filter", parent).fadeIn(function () {
+                            $("input", parent).val("").focus().css("border", "1px solid #aaa");
+                        });
+                    });
+
+                    $(".datatable .opened").click(function () {
+                        var parent = $(this).parent().parent();
+                        $(".filter", parent).fadeOut(function () {
+                            $(".closed", parent).show();
+                            $("input", parent).val("").each(function () {
+                                window.updateDatatableFilter(this);
+                            });
+                        });
+                    });
+
+                    $(".datatable .filter input").keyup(function(e) {
+                        window.updateDatatableFilter(this);
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+
+                    $(".datatable table").each(function () {
+                        var found = false;
+                        $("tr", this).each(function () {
+                            if (!found && $(this).find("th").size() == 0) {
+                                found = true;
+                            }
+                        });
+                        if (!found) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo(this);
+                        }
+                    });
+
+                    // Applies styles to datatables.
+                    $(".datatable").each(function () {
+                        $(this).find("tr:first th").addClass("top");
+                        $(this).find("tr:last td").addClass("bottom");
+                        $(this).find("tr:odd td").addClass("dark");
+                        $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                        $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                    });
+
+                    $(".datatable table.tablesorter").each(function () {
+                        $(this).bind("sortEnd", function () {
+                            $(".datatable").each(function () {
+                                $(this).find("th, td")
+                                    .removeClass("top").removeClass("bottom")
+                                    .removeClass("left").removeClass("right")
+                                    .removeClass("dark");
+                                $(this).find("tr:first th").addClass("top");
+                                $(this).find("tr:last td").addClass("bottom");
+                                $(this).find("tr:odd td").addClass("dark");
+                                $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                                $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                            });
+                        });
+                    });
+                }
+        });
+    </script>
+            </div>
+        </div>
+        <script type="application/javascript">
+            $(function() {
+                $(".userListMarker").click(function() {
+                    $.post("/data/lists", {action: "findTouched"}, function(json) {
+                        Codeforces.facebox(".userListsFacebox");
+                        var tbody = $("#facebox tbody");
+                        tbody.empty();
+                        for (var i in json) {
+                            tbody.append(
+                                    $("<tr></tr>").append(
+                                            $("<td></td>").attr("data-readKey", json[i].readKey).text(json[i].name)
+                                    )
+                            );
+                        }
+                        Codeforces.updateDatatables();
+                        tbody.find("td").css("cursor", "pointer").click(function() {
+                            document.location = Codeforces.updateUrlParameter(document.location.href, "list", $(this).attr("data-readKey"));
+                        });
+                    }, "json");
+                });
+            });
+        </script>
+</body>
+</html>

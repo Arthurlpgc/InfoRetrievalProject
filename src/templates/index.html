@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coding Questions Search</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+      .container {
+        max-width: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+      <h1>Coding Questions Search</h1>
+      <br>
+      <form method='POST' action='/'>
+        <div class=".col-sm-4">
+        <h4>Plain Text Query</h4>
+        <div class="form-group">
+          <input type="text" name="query" class="form-control" id="text" placeholder="Search by text..." style="max-width: 300px;">
+        </div>
+        <button type="submit" name="plain" class="btn btn-default">Submit</button>
+        <br>
+      </div>
+        <div class=".col-sm-8">
+          <h4>Structured Query</h4>
+          <h6>Title</h6>
+          <div class="form-group">
+            <input type="text" name="query_title" class="form-control" id="title" placeholder="Search by title..." style="max-width: 300px;">
+          </div>
+          <h6>Statement</h6>
+          <div class="form-group">
+            <input type="text" name="query_statement" class="form-control" id="title" placeholder="Search by statement..." style="max-width: 300px;">
+            <br>
+          <button type="submit" name="structured" class="btn btn-default">Submit</button>
+          </form>
+        </div>
+      </div>
+      </div>
+      {% block content %}
+
+      {% endblock content %}
+
+    </div>
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script>
+    var monkeyList = new List('test-list', {
+      valueNames: ['list-group-item'],
+      page: 5,
+      pagination: true
+    });
+    </script>
+  </body>
+</html>

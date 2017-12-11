@@ -50,6 +50,8 @@ class PlainTextRanker():
             self.idf[key] = 1 + math.log(self.numberDocs/len(docs))
 
     def getRank(self, query, tfIdf):
+        unmap = lambda lista: [item for sublist in lista for item in sublist]
+
         query = [word for word in query.lower().split(' ')]
         #gets the list of relevant documents for this query
         relevantDocs = []
@@ -84,7 +86,7 @@ class PlainTextRanker():
             rank += self.cossineSimilarity(vector, queryVector)
             ranks.append((doc, rank))
         return ranks
-    
+
     def tfIdfRank(self, relevantDocs, queryVector):
         ranks = []
         for doc in relevantDocs:
@@ -97,8 +99,8 @@ class PlainTextRanker():
             ranks.append((doc, rank))
         return ranks
 
-       
-    
+
+
     def cossineSimilarity(self, a, b):
         if(math.fabs((math.sqrt(self.dotProduct(a, a)) * math.sqrt(self.dotProduct(b, b)))) < 0.0001):
             return 0
@@ -109,8 +111,3 @@ class PlainTextRanker():
         for i in range(0, len(a)):
             ans += a[i] * b[i]
         return ans
-
-
-        
-    
-        

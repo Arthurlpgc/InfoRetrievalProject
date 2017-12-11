@@ -67,7 +67,10 @@ class StructuredRanker():
         for word in statement:
             if(word in self.index):
                 relevantDocs += self.index[word]
+
+        # relevantDocs = [item for sublist in relevantDocs for item in sublist]
         relevantDocs = list(set(relevantDocs))
+
         #creates the vector space for this query
         return self.rankDocumentAtTime(relevantDocs, title, statement, tfIdf)
 
@@ -98,7 +101,7 @@ class StructuredRanker():
                 rank += self.weights[attribute] * self.cossineSimilarity(vector, queryVector[attribute])
             ranks.append((doc, rank))
         return ranks
-    
+
     def tfIdfRank(self, relevantDocs, queryVector):
         ranks = []
         for doc in relevantDocs:
@@ -116,8 +119,8 @@ class StructuredRanker():
             ranks.append((doc, rank))
         return ranks
 
-       
-    
+
+
     def cossineSimilarity(self, a, b):
         if(math.fabs((math.sqrt(self.dotProduct(a, a)) * math.sqrt(self.dotProduct(b, b)))) < 0.0001):
             return 0
@@ -128,8 +131,3 @@ class StructuredRanker():
         for i in range(0, len(a)):
             ans += a[i] * b[i]
         return ans
-
-
-        
-    
-        
