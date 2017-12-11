@@ -21,10 +21,10 @@ while(True):
         print('\n-- New Query --')
         title = input('Title: ')
         statement = input('Statement: ')
-        rank = structuredRanker.getStructuredRank(title, statement)
+        rank = structuredRanker.getStructuredRank(title, statement, True)
         print(rank)
     elif(ans == '2'):
         print('\n-- New Query --')
         query = input('Query: ')
-        rank = plainTextRanker.getRank(query, tfIdf=False)
+        rank = plainTextRanker.getRank(query, True)
         print(rank)
