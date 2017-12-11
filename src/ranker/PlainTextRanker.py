@@ -60,6 +60,7 @@ class PlainTextRanker():
                 relevantDocs += self.index[(word+'.title')]
             if((word+'.statement') in self.index):
                 relevantDocs += self.index[(word+'.statement')]
+
         relevantDocs = list(set(relevantDocs))
         #creates the vector space for this query
         return self.rankDocumentAtTime(relevantDocs, query, tfIdf)

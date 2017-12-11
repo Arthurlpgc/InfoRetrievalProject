@@ -13,15 +13,15 @@ class SpearmanCorrelation():
 structuredQueries = [
     {'title': 'Forbidden Indices',
      'statement': 'You are given a string consisting of'},
-    
+
     {'title': 'Beautiful Divisors',
      'statement': 'Luba learned about'}
 ]
 
 queries = ['Chef wants to prepare a Cook-Off contest with 5 problems chosen from a set of  N  problems',
-            'the petya and of you maximize the income', 
-            'Dynamic Programming', 
-            'help ivan maximize', 
+            'the petya and of you maximize the income',
+            'Dynamic Programming',
+            'help ivan maximize',
             'petya and the required tree']
 
 ranker = PlainTextRanker('indexes/indexNot Shortened.json')
