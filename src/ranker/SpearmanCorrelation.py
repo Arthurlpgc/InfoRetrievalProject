@@ -6,7 +6,7 @@ class SpearmanCorrelation():
     def __init__(self, rank1, rank2):
         self.rank1 = list(map(lambda x: x[0], rank1))
         self.rank2 = list(map(lambda x: x[0], rank2))
-    
+
     def get(self):
         return spearmanr(self.rank1, self.rank2)[0]
 
@@ -27,7 +27,7 @@ queries = ['Chef wants to prepare a Cook-Off contest with 5 problems chosen from
 ranker = PlainTextRanker('indexes/indexNot Shortened.json')
 structuredRanker = StructuredRanker('indexes/indexNot Shortened.json')
 
-file = open("ranker/SpearmanLog.txt", "w")
+# file = open("ranker/SpearmanLog.txt", "w")
 
 
 for query in queries:
