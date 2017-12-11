@@ -46,4 +46,3 @@ for query in structuredQueries:
     file.write('title:{}\nstatement:{}\n'.format(query['title'], query['statement']))
     file.write(str(spearman.get()))
     file.write('\n\n')
->>>>>>> master
